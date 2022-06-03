@@ -1,0 +1,74 @@
+{% load bootstrap5 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The SmartUni Demo">
+
+        {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+
+
+    <title>Title</title>
+
+</head>
+
+<body>
+
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+                    <a class="nav-link " href="/">Start</a>
+                </li>
+
+        </ul>
+    </div>
+    <div class="mx-auto order-0">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+
+        </ul>
+    </div>
+    </nav>
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+
+      </a>
+
+
+
+
+
+    <main class="">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
+
+      </div>
+
+      <div class="ms-sm-auto">
+        {# display messages #}
+        {% bootstrap_messages %}
+        {# the block 'content' will be filled by the individual page templates #}
+        {% block content %}No content{% endblock %}
+      </div>
+    </main>
+
+
+    {% bootstrap_javascript %}
+
+
+
+
+
+</body>
+</html>
