@@ -1,0 +1,30 @@
+{% extends "learning_environment/lesson.html" %}
+{% load bootstrap5 %}
+{% load static %}
+
+
+<div class="card " style="width: 50rem; margin-top: 5vh">
+
+    <div class="card-body">
+        <h5 class="card-title">{{ Task.title }} </h5>
+        <p class="card-text"></p>
+        {{ Task.text_element }}
+        <div class="d-flex flex-row justify-content-around">
+            {{ Task.question }}
+
+
+            <form>
+                {% csrf_token %}
+                {{ form.singlechoice }}
+                <button type="submit" class="form-group col-4 btn btn-primary mt-4"
+                        style="display: block; margin-left: auto; margin-right: 24px;">Save All
+                </button>
+            </form>
+            <div class="p-2">{{ op }} </div>
+
+
+        </div>
+    </div>
+
+</div>
+

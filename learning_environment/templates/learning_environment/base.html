@@ -6,13 +6,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The SmartUni Demo">
+    <meta name="description" content="">
 
     {# Load CSS and JavaScript #}
     {% bootstrap_css %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
 
-    <title>Title</title>
+
+    <title>iPaca</title>
 
 </head>
 
@@ -20,15 +21,15 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-xl">
-      <a class="navbar-brand" href="#"><i class="bi-bank2 text-light"></i> IPACA </a>
+        <a class="navbar-brand" href="{% url 'home' %}"><i class="bi-bank2 text-light"></i> IPACA </a>
 
 
-      <div class="collapse navbar-collapse" id="navbarsExample07XL">
+        <div class="collapse navbar-collapse" id="navbarsExample07XL">
 
 
-      </div>
+        </div>
     </div>
-  </nav>
+</nav>
 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
 
 </a>
@@ -39,11 +40,22 @@
 
     </div>
 
-    <div class="ms-sm-auto">
-        {# display messages #}
-        {% bootstrap_messages %}
-        {# the block 'content' will be filled by the individual page templates #}
-        {% block content %}No content{% endblock %}
+    <div class=" row ms-sm-auto">
+
+
+        <div class="col-md-2">
+            {# space for side content #}
+        </div>
+
+        <div class="col-md-8">
+            {# display messages #}
+            {% bootstrap_messages %}
+            {# the block 'content' will be filled by the individual page templates #}
+            {% block content %}No content{% endblock %}
+        </div>
+        <div class="col-md-2">
+            {# space for side content #}
+        </div>
     </div>
 </main>
 
