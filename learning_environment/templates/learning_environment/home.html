@@ -4,18 +4,21 @@
 
     <div class="container-fluid ">
 
-        <div class="row ">
+
+
             <div class="d-flex justify-content-center">
-                <h1> iPaca: learning academic english</h1>
+
             </div>
 
 
 
-            <div class="card">
-
+            <div class="card text-center shadow rounded">
+        <div class="card-header">
+            <h1> iPaca: learning academic english</h1>
+        </div>
                 <div class="card-body">
                     <p class="card-text">
-                        iPaca helps you to refine you academic english skills by providing you a carefully selected
+                        iPaca helps you to refine your academic english skills by providing you a carefully selected
                         little
                         tasks.
                         By doing a task everyday you can significantly improve your academic english skills and have and
@@ -26,14 +29,13 @@
 
 
                 <div class="d-flex justify-content-center">
-                    <button class="btn btn-primary" target="{% url 'lesson' %}" style=" margin: 1vh"> Begin</button>
+                    <a class="btn btn-primary" href="{% url 'nexttask' %}" style="margin: 1vh"> Begin</a>
                 </div>
             </div>
 
 
 
         </div>
-    </div>
 
 
 

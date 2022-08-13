@@ -19,20 +19,35 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-xl">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-image: linear-gradient(to bottom,#91042c,#ab0533);"" >
+    <div class="container-xl justify-content-around">
         <a class="navbar-brand" href="{% url 'home' %}"><i class="bi-bank2 text-light"></i> IPACA </a>
 
 
-        <div class="collapse navbar-collapse" id="navbarsExample07XL">
+        <div>
+            {% if user.is_authenticated %}
+                <div class="container ">
+                    <ul class="nav">
+                        <li class="nav-item"><p style="color: white"> Hi {{ user.username }}! </p></li>
+
+                        <li class="nav-item"><a class="btn btn-secondary " href="{% url 'logout' %}">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+            {% else %}
+                <div class="container justify-content-around">
+
+                      <a class="btn btn-primary" href="{% url 'login' %}">Log In</a>
+
+                        <a class="btn btn-warning" href="{% url 'signup' %}">Sign up</a>
 
 
+
+                </div>
+            {% endif %}
         </div>
     </div>
 </nav>
-<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-
-</a>
 
 
 <main class="">
