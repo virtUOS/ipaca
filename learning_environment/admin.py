@@ -15,4 +15,5 @@ admin.site.register(TaskOrder)
 admin.site.register(Task)
 admin.site.register(Answer)
 admin.site.register(TaskAnswer)
+admin.site.register(LessonOrder)
 # Register your models here.

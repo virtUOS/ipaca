@@ -7,11 +7,10 @@ urlpatterns = [
     # Buildin
     path("accounts/", include("django.contrib.auth.urls")),
 
-
     # Selfmade
     path('', views.home, name='home'),
-    path('nexttask/',views.nexttask, name='nexttask'),
+    path('nexttask/', views.nexttask, name='nexttask'),
     path("signup/", SignUpView.as_view(), name="signup"),
-
+    path("update/", views.update_learner_relations, name="update")
 
 ]

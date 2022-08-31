@@ -6,37 +6,56 @@
 
 {% block content %}
 
-    <h1>
-        {{ lesson.name }}
-
-    </h1>
-    {% if task.paragraph_shown %}
-        {{ lesson.paragraph }}
-    {% endif %}
     <div class="container-fluid">
 
 
         <div class="d-flex justify-content-center">
 
-            <div class="card " style=" margin-top: 5vh">
+            <div class="card shadow rounded " style=" margin-top: 5vh">
+
+
+                <div class="card-header">
+                    <h1>{{ lesson.name }} </h1>
+
+                </div>
+                <div class="card-body">
+                    <p class="card-text">
+                        {% if task.paragraph_shown %}
+                            {{ lesson.paragraph }}
+                        {% endif %}
+                    </p>
+                    <div class="d-flex flex-row justify-content-around">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+
+
+        <div class="d-flex justify-content-center">
+
+            <div class="card shadow rounded " style=" margin-top: 5vh">
+
 
                 <div class="card-body">
-                    <h5 class="card-title">{{ task.title }} </h5>
-                    <p class="card-text"></p>
+
+                    <h5 class="card-title">Task: {{ task.title }} </h5>
 
                     <div class="d-flex flex-row justify-content-around">
-                        {{ task.question }}
-                        <br>
+                        <div class="card-text">
+                            {{ task.question }}
+                        </div>
 
 
-
+                        <div class="card-text">
                             {% csrf_token %}
-                            {{ form|crispy }}
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                            {% crispy form %}
 
 
 
-
+                        </div>
                     </div>
                 </div>
 

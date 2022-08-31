@@ -133,5 +133,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # auth user
 AUTH_USER_MODEL = 'learning_environment.User'
 
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "update"
 LOGOUT_REDIRECT_URL = "/"
