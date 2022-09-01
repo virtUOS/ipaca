@@ -43,7 +43,7 @@ def nexttask(request):
         if request.method == 'POST':
             form = SingleChoiceForm(request.POST)
             if form.is_valid():
-                current_answer = form.cleaned_data['answers']
+                current_answer = form.cleaned_data['answers'][0]
                 Learner_Task.objects.get(learner=protagonist, task=current_task).answer = current_answer
                 Learner_Task.objects.get(learner=protagonist, task=current_task).open = False
                 Learner_Task.objects.get(learner=protagonist, task=current_task).correct = TaskAnswer.objects.get(
