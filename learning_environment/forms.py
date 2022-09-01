@@ -47,4 +47,4 @@ class SingleChoiceForm(forms.ModelForm):
     class Meta:
         model = SingleChoice
         fields = ('answers',)
-        widgets = {'answers': forms.RadioSelect}
+        #widgets = {'answers': forms.RadioSelect}
