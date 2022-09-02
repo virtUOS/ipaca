@@ -63,9 +63,7 @@ class SingleChoice(Task):
     Task.interaction = models.CharField(max_length=100, choices=[('SC', 'single choice')])
     question = models.TextField()
 
-    def __str__(self):
-        """String for representing the Model object."""
-        return self.Task.title
+
 
 class TaskAnswer(models.Model):
     '''

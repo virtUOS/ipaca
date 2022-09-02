@@ -28,7 +28,7 @@ class CustomUserCreationForm(UserCreationForm):
         fields = ('username', 'password1', 'password2')
 
 
-class SingleChoiceForm(forms.ModelForm):
+class SingleChoiceForm(forms.Form):
     '''
         Generates the form for a Single choice question
     '''
@@ -36,15 +36,9 @@ class SingleChoiceForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper(self)
-        #self.helper.form_id = 'id-singleChoiceForm'
+
         self.helper.form_method = 'post'
 
         self.helper.add_input(Submit('submit', 'Submit'))
 
-
-
-
-    class Meta:
-        model = SingleChoice
-        fields = ('answers',)
-        #widgets = {'answers': forms.RadioSelect}
+    answers = forms.ModelChoiceField(queryset=Answer.objects.all(), widget=forms.RadioSelect())

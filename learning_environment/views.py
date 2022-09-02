@@ -39,24 +39,23 @@ def nexttask(request):
 
     if current_task.interaction == 'SC':
         current_task = SingleChoice.objects.get(title=current_task.title)
+        form = SingleChoiceForm(request.POST)
 
+        form.fields['answers'].queryset = Answer.objects.filter(
+            id__in=TaskAnswer.objects.filter(task=current_task).values_list('answer',
+                                                                            flat=True))
         if request.method == 'POST':
-            form = SingleChoiceForm(request.POST)
             if form.is_valid():
-                current_answer = form.cleaned_data['answers'][0]
-                Learner_Task.objects.get(learner=protagonist, task=current_task).answer = current_answer
-                Learner_Task.objects.get(learner=protagonist, task=current_task).open = False
-                Learner_Task.objects.get(learner=protagonist, task=current_task).correct = TaskAnswer.objects.get(
-                    task=current_task, answer=current_answer).value == 1
-
-
+                current_answer = form.cleaned_data['answers']
+                Learner_Task.objects.filter(learner=protagonist, task=current_task).update(answer = current_answer)
+                Learner_Task.objects.filter(learner=protagonist, task=current_task).update(open = False)
+                Learner_Task.objects.filter(learner=protagonist, task=current_task).update(correct = TaskAnswer.objects.get(
+                    task=current_task, answer=current_answer).value == 1)
                 return redirect('home')
 
 
 
 
-        else:
-            form = SingleChoiceForm()
 
         context = {
             'lesson': current_lesson,
