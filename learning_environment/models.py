@@ -5,11 +5,16 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     '''
     This User is used to possibly change the authentication down the line
+    (The Learner model should be used to build further connections with the tasks)
     '''
     pass
 
 
-class Answer(models.Model):
+class Answer(models.Model):#
+    '''
+    Model for the answers to a task only contains content which is the representation of the task.
+    is connected with a through model to Task which manages the relation
+    '''
     content = models.TextField(null=True)
 
     def __str__(self):
@@ -52,11 +57,11 @@ class Task(models.Model):
 
 class SingleChoice(Task):
     '''
-    A task,
+    A specialized task,
 
     question: store the instructions or questions given to the Learner, e.g., "Choose the fruit from the list"
-    option: multiple options seperated by | ,e.g., "Potato | Apple | Carrot"
-    answer: denotes for every option whether it is True: 1 or False: 0 ,e.g., " 0 | 1 | 0"
+
+
 
     '''
 
@@ -128,7 +133,7 @@ class TaskOrder(models.Model):
     order = models.IntegerField()
 
     class Meta:
-        unique_together = ['task', 'lesson']
+        unique_together = [['lesson','order'],['task', 'lesson']]
 
     def __str__(self):
         """String for representing the Model object."""
@@ -165,6 +170,8 @@ class LessonOrder(models.Model):
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     order = models.IntegerField()
 
+    class Meta:
+        unique_together = ['module','order']
     def __str__(self):
         """String for representing the Model object."""
         return self.module.name + '_' + self.lesson.name
@@ -182,6 +189,7 @@ class Learner_Lesson(models.Model):
 
     class Meta:
         unique_together = ['learner', 'lesson']
+
 
     def __str__(self):
         """String for representing the Model object."""
