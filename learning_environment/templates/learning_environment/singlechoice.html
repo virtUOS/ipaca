@@ -6,15 +6,17 @@
 
 {% block content %}
 
-    <div class="container-fluid" xmlns="http://www.w3.org/1999/html">
+    <div class="container-fluid">
 
 
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center row">
 
-            <h1>{{ lesson.name }} </h1>
+             <div class="text-center border-bottom" style=" margin-bottom: 5vh">
+                <h1>{{ lesson.name }} </h1>
+             </div>
 
             {% if task.paragraph_shown %}
-                <div class="card shadow rounded " style=" margin-top: 5vh">
+                <div class="card shadow rounded " >
 
 
                     <div class="card-body">
@@ -23,27 +25,20 @@
                             {{ lesson.paragraph }}
 
                         </p>
-                        <div class="d-flex flex-row justify-content-around">
-                        </div>
+
                     </div>
                 </div>
             {% endif %}
-        </div>
-    </div>
 
-    <div class="container-fluid">
-
-
-        <div class="d-flex justify-content-center">
 
             <div class="card shadow rounded " style=" margin-top: 5vh">
 
 
                 <div class="card-body">
 
-                    <h5 class="card-title">Task: {{ task.title }} </h5>
+                    <h5 class="card-title"> <b>Task: {{ task.title }} </b> </h5>
 
-                    <div class="d-flex flex-row justify-content-around">
+                    <div class="d-flex row justify-content-around">
                         <div class="card-text">
                             {{ task.question }}
                         </div>

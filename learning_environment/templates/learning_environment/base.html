@@ -26,12 +26,11 @@
 
         <div>
             {% if user.is_authenticated %}
-                <div class="container ">
+                <div class="container justify-content-around">
                     <ul class="nav">
-                        <li class="nav-item "><p style="color: white;margin-right: 10px; "> Hi {{ user.username }}! </p></li>
+                        <li class="nav-item"><h5 class="m-2" style="color: white; "> Reading session of: {{ user.username }} </h5></li>
 
-                        <li class="nav-item"><a class="btn btn-secondary " href="{% url 'logout' %}">Log Out</a>
-                        </li>
+                        <li class="nav-item"><a class="btn btn-secondary " href="{% url 'logout' %}">Log Out</a></li>
                     </ul>
                 </div>
             {% else %}
