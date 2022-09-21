@@ -1,0 +1,38 @@
+<p class="card-text">{{ task.question }}</p>
+
+{% if mode == 'solve' %}
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="task" value="{{ task.id }}">
+        {% for o in task.content %}
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="solution-{{ task.id }}-{{ forloop.counter0 }}" id="task-{{ task.id }}-{{ forloop.counter0 }}">
+                <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}">
+                  {{ o.text }}
+                </label>
+            </div>
+        {% endfor %}
+        <div style="margin-top: 2em">
+            <button type="submit" class="btn btn-secondary">Check!</button>
+        </div>
+    </form>
+{% else %}
+    {% for o in task.content %}
+        <div class="form-check">
+            <input class="form-check-input"
+                   type="checkbox" name="solution-{{ task.id }}-{{ forloop.counter0 }}"
+                   id="task-{{ task.id }}-{{ forloop.counter0 }}"
+                   value="{{ forloop.counter0 }}"
+                   disabled="disabled"
+                   {% if o.checked %}checked="checked"{% endif %}>
+            <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}" disabled="disabled">
+                {{ o.text }}
+            {% if o.checked %}
+                {% if o.feedback %}
+                    <br><i>{{ o.feedback }}</i>
+                {% endif %}
+            {% endif %}
+            </label>
+        </div>
+    {% endfor %}
+{% endif %}

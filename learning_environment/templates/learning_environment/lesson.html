@@ -5,13 +5,10 @@
 
 {% block content %}
 
-
-
-
-
-
-
-
-
+{% if task.interaction == 'SC' %}
+    {% include 'learning_environment/partials/sc.html' %}
+{% elif task.interaction == 'MC' %}
+    {% include 'learning_environment/partials/mc.html' %}
+{% endif %}
 
 {% endblock %}

@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-
+import json5
+from learning_environment.its.tasks import TASK_TYPES, Json5ParseException
 
 # TODO docstrings!
 
@@ -10,10 +11,73 @@ class User(AbstractUser):
     '''
     pass
 
+class Lesson(models.Model):
+    '''
+    A selected collection of task
+    Comes which has a paragraph
 
-class Answer(models.Model):
-    content = models.TextField(null=True)
+    name: unique identifier
+    paragraph: piece of written academic text to read
+    tasks: tasks belonging to the lesson
+    '''
+    name = models.CharField(max_length=255)
+    lesson_id = models.SlugField(max_length=64)
+    author = models.CharField(max_length=256)
+    text = models.TextField()
+    text_source = models.CharField(max_length=1024, null=True)
+    text_licence = models.CharField(max_length=1024, null=True)
+    text_url = models.URLField(null=True)
+    json5 = models.TextField(null=True)
+    # tasks = models.ManyToManyField(Task, through='TaskOrder')
 
+    @classmethod
+    def check_json5(cls, lesson_json5):
+        """Check if a JSON5 representation of a lesson is valid."""
+        try:
+            lesson = json5.loads(lesson_json5)
+        except json5.JsonDecodeError as e:
+            raise Json5ParseException("Error in JSON5 code, line {}, column {}. Error message: '{}'".format(e.lineno, e.colno, e.msg))
+
+        # Checks
+        for lesson_field in ["name", "id", "text", "text_source", "text_licence", "text_url", "author", "tasks"]:
+            if lesson_field not in lesson:
+                raise Json5ParseException('Field "{}" is missing'.format(lesson_field))
+            if not lesson[lesson_field]:
+                raise Json5ParseException('Field "{}" is empty'.format(lesson_field))
+        task_num = 0
+        for t in lesson["tasks"]:
+            task_num += 1
+            Task.check_json5(t, task_num)
+        return True
+
+
+    @classmethod
+    def create_from_json5(cls, lesson_json5):
+        cls.check_json5(lesson_json5)
+
+        lesson = json5.loads(lesson_json5)
+
+        # delete old lesson, all its tasks and progress if it already exists
+        # TODO: This is most probably not suited for production use! Replace by activation status for lessons
+        try:
+            Lesson.objects.get(lesson_id=lesson["id"]).delete()
+        except Lesson.DoesNotExist:
+            pass
+
+        l = Lesson(name=lesson["name"],
+                   lesson_id=lesson["id"],
+                   author=lesson["author"],
+                   text=lesson["text"],
+                   text_source=lesson["text_source"],
+                   text_licence=lesson["text_licence"],
+                   text_url=lesson["text_url"],
+                   json5=lesson_json5)
+        l.save()
+
+        for task in lesson["tasks"]:
+            Task.create_from_json5(task, l)
+
+        return l
 
 class Task(models.Model):
     '''
@@ -33,125 +97,73 @@ class Task(models.Model):
     ]
 
     INTERACTION_TYPE = [
-        ('SC', 'single choice')  # TODO add future types
+        ('SC', 'single choice'),
+        ('MC', 'multiple choice'),
+        ('GAP', 'fill-in/select the gap'),
     ]
 
+    name = models.CharField(max_length=256)
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     interaction = models.CharField(max_length=100, choices=INTERACTION_TYPE, default=('SC', 'single choice'))
-
     type = models.CharField(max_length=100, choices=TASK_TYPE)
-
-    # TODO Clean up description/text element/question
-    title = models.CharField(max_length=255, unique=True)
-    paragraph_shown = models.BooleanField(default=False)
-    answers = models.ManyToManyField(Answer, through='TaskAnswer')
-
-
-class SingleChoice(Task):
-    '''
-    A task,
-
-    question: store the instructions or questions given to the Learner, e.g., "Choose the fruit from the list"
-    option: multiple options seperated by | ,e.g., "Potato | Apple | Carrot"
-    answer: denotes for every option whether it is True: 1 or False: 0 ,e.g., " 0 | 1 | 0"
-
-    '''
-
-    Task.interaction = models.CharField(max_length=100, choices=[('SC', 'single choice')])
+    primary = models.BooleanField(default=True)
+    show_lesson_text = models.BooleanField(default=True)
     question = models.TextField()
+    content = models.JSONField()
 
+    @classmethod
+    def check_json5(cls, task_json5, task_num=0):
 
-class TaskAnswer(models.Model):
-    task = models.ForeignKey(Task, on_delete=models.CASCADE)
-    answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
+        for task_field in [("name", str, "a string"),
+                           ("type", ['R', 'GS', 'V'], "'R', 'GS', 'V'"),
+                           ("interaction", TASK_TYPES.keys(), ','.join(TASK_TYPES.keys())),
+                           ("primary", bool, "true or false"),
+                           ("show_lesson_text", bool, "true or false"),
+                           ("question", str, "a string")]:
+            if task_field[0] not in task_json5:
+                raise Json5ParseException(
+                    'Field "{}" is missing for task {}'.format(task_field[0], task_num))
+            if isinstance(task_field[1], type) and not isinstance(task_json5[task_field[0]], task_field[1]):
+                raise Json5ParseException(
+                    'Field "{}" for task {} has wrong type, it has to be {}'.format(
+                        task_field[0], task_num, task_field[2]))
+            elif isinstance(task_field[1], list) and task_json5[task_field[0]] not in task_field[1]:
+                raise Json5ParseException('Field "{}" for task {} has wrong value, it has to be one of {}'.format(
+                    task_field[0], task_num, task_field[2]))
 
-    feedback = models.TextField(null=True)
-    value = models.IntegerField()
+        # its.tasks.TASK_TYPES is a dictionary with short names as keys and classes as values
+        # these classes have a check_json5 class method
+        TASK_TYPES[task_json5['interaction']].check_json5(task_json5, task_num)
 
-    class Meta:
-        unique_together = ['task', 'answer']
+        return True
 
+    @classmethod
+    def create_from_json5(cls, task, lesson):
+        content = TASK_TYPES[task['interaction']].get_content_from_json5(task)
+        t = Task(name=task["name"],
+                 type=task["type"],
+                 interaction=task["interaction"],
+                 primary=task["primary"],
+                 show_lesson_text=task["show_lesson_text"],
+                 question=task["question"],
+                 content=content,
+                 lesson=lesson
+                 )
+        t.save()
+        return t
 
-class Lesson(models.Model):
-    '''
-    A selected collection of task
-    Comes which has a paragraph
-
-    name: unique identifier
-    paragraph: piece of written academic text to read
-    tasks: tasks belonging to the lesson
-    '''
-    name = models.CharField(max_length=255, unique=True)
-    paragraph = models.TextField()
-    tasks = models.ManyToManyField(Task, through='TaskOrder')
-
-
-class Learner(User):
-    '''
-    The User which uses the app
-    '''
-
-    # user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
-    tasks = models.ManyToManyField(Task, through='Learner_Task')
-    lessons = models.ManyToManyField(Lesson, through='Learner_Lesson')
-
-
-class TaskOrder(models.Model):
-    '''
-    connection between lesson and task
-    Each task and lesson can only be match once
-
-    order: in which order should the task be done
-    '''
+class UserLesson(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+    started = models.DateTimeField(auto_now_add=True)
+    finished = models.DateTimeField(null=True)
+
+    class Meta:
+        unique_together = ['user', 'lesson']
+
+class Solution(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
-    order = models.IntegerField()
-
-    class Meta:
-        unique_together = ['task', 'lesson']
-
-
-class Module(models.Model):
-    '''
-    The 3 main modules. Biggest building block of the learning environment
-    '''
-
-    LEVEL = [
-        ('1', 'Textbook'),
-        ('2', 'General texts'),
-        ('3', 'Spezialized Texts')
-    ]
-
-    level = models.CharField(max_length=100, choices=LEVEL)
-    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
-
-
-class Learner_Lesson(models.Model):
-    '''
-    Connection between the Learner and Lessons
-
-    open: Can the Leaner do this Lesson?
-    order: in which order are the lessons presented
-    '''
-    learner = models.ForeignKey(Learner, on_delete=models.CASCADE)
-    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
-    open = models.BooleanField(default=True)
-    order = models.IntegerField()
-
-    class Meta:
-        unique_together = ['learner', 'lesson']
-
-
-class Learner_Task(models.Model):
-    '''
-    Connection between the Learner and Tasks
-
-    open: Can the Leaner do this Task?
-
-    '''
-    learner = models.ForeignKey(Learner, on_delete=models.CASCADE)
-    task = models.ForeignKey(Task, on_delete=models.CASCADE)
-    open = models.BooleanField(default=True)
-    correct = models.BooleanField(null=True)
-
-    class Meta:
-        unique_together = ['learner', 'task']
+    timestamp = models.DateTimeField(auto_now_add=True)
+    solved = models.BooleanField()
+    analysis = models.JSONField()

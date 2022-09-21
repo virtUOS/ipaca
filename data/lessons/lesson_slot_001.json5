@@ -1,0 +1,105 @@
+// Lesson tt-001
+// a test lesson, no meaningful content.
+{
+  name: "NAME OF LESSON 1",  // the name that's also shown to the users
+  id: "lesson-slot-001",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p>Since about 2010, one-to-one computing and cloud-based computing has come to dominate school computing. \
+         In many schools, students carry Chromebooks with them, and sometimes they take them home. \
+         (While the market share of educational computing devices is difficult to ascertain, estimates are that \
+         Chromebooks represent over 60% of the devices purchased for school users.) Google Workspaces provide most \
+         students with productivity applications, and student information systems (including grade books), library \
+         card catalogs, and learning management systems are web-based, so students access them from home and school. \
+         Because those systems are based in the cloud, robust, reliable, and secure networks are essential to school \
+         functions.</p> \
+         <p>While the move to cloud-based computing has many benefits for students, teachers, and IT professionals, \
+         it has introduced inequity into education. The “digital divide” has been used to describe the inequitable \
+         access to digital learning for generations. Originally, it was used to describe the fact that marginalized \
+         populations attended schools with fewer computing devices. It has also been used to describe inequitable \
+         access to high-quality instruction with digital tools. As cloud-computing became ubiquitous it described \
+         inequitable access to network connections to use those resources away from the school. The problem was \
+         particularly acute during the remote teaching necessitated by the pandemic in 2020.</p>",
+  text_source: "unknown - TODO",
+  text_licence: "unknown - TODO",
+  text_url: "unknown - TODO",
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "NAME OF TASK 1.R.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Decide if the information in the statement is True, False or Not Given according to the information in the reading passage.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "Students are not allowed to take electronic devices  to classrooms.",
+            correct: false,
+            feedback: "The correct answer is False because the text says  ‘In many schools, students carry Chromebooks with them’"
+          },
+          {
+            text: "Some services are accessible only in school.",
+            correct: false,
+            feedback: "The correct answer is False because the text says ‘... student information systems (including grade books), library card catalogs, and learning management systems are web-based, so students access them from home and school’"
+          },
+          {
+            text: "The term  'digital divide' was invented by schools.",
+            correct: false,
+            feedback: "The correct answer is False because the text doesn’t mention where the origin of the term comes from."
+          },
+          {
+            text: "Not all students have an equal opportunity to use technology.",
+            correct: true,
+            feedback: "The correct answer is True because the text says ‘marginalized populations attended schools with fewer computing devices. It has also been used to describe inequitable access to high-quality instruction with digital tools’."
+          },
+        ]
+      },
+      {
+        name: "NAME OF TASK 2",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Choose the options that apply:</p> \
+        <p>Since about 2010, one-to-one computing and cloud-based computing _1_ to dominate school computing</p> \
+        <p>Because those systems _2_ in the cloud, robust, reliable, and secure networks are essential to school functions.</p> \
+        <p>Originally, it _3_ to describe the fact that marginalized populations attended schools with fewer computing devices.</p> \
+        <p>As cloud-computing became ubiquitous it _4_ inequitable access to network connections to use those resources away from the school.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text:  "has come", correct: true, feedback: "The correct answer is ‘has come’. When ’since’ introduces \
+                                                           an action or event at a point of time in the past, we can \
+                                                           use the past simple or present perfect after since and the \
+                                                           present perfect in the main clause."},
+            { text:  "came", correct: false, feedback: "The correct answer is ‘has come’. When ’since’ introduces \
+                                                           an action or event at a point of time in the past, we can \
+                                                           use the past simple or present perfect after since and the \
+                                                           present perfect in the main clause."},
+            { text:  "comes", correct: false, feedback: "The correct answer is ‘has come’. When ’since’ introduces \
+                                                           an action or event at a point of time in the past, we can \
+                                                           use the past simple or present perfect after since and the \
+                                                           present perfect in the main clause."},
+            ],
+          _2_: [
+            { text: "based", correct: false, feedback: "The correct answer is ‘are based’. The passive voice is used when we focus on the object of the sentence." },
+            { text: "were based", correct: false, feedback: "The correct answer is ‘are based’. The passive voice is used when we focus on the object of the sentence." },
+            { text: "are based", correct: true, feedback: "The correct answer is ‘are based’. The passive voice is used when we focus on the object of the sentence." },
+          ],
+          _3_: [
+            { text:  "has been used", correct:  false, feedback:  "The correct answer is ‘was used’. The passive voice is used when we focus on the object of the sentence. In this sentence, we use the past simple tense indicated by the word ‘originally’ which in this case means ‘in the beginning; when something first existed’."},
+            { text:  "was used", correct:  true, feedback:  "The correct answer is ‘was used’. The passive voice is used when we focus on the object of the sentence. In this sentence, we use the past simple tense indicated by the word ‘originally’ which in this case means ‘in the beginning; when something first existed’."},
+            { text:  "is used", correct:  false, feedback:  "The correct answer is ‘was used’. The passive voice is used when we focus on the object of the sentence. In this sentence, we use the past simple tense indicated by the word ‘originally’ which in this case means ‘in the beginning; when something first existed’."},
+          ],
+          _4_: [
+            { text:  "is described", correct:  false, feedback: "The correct answer is ‘described’. We use the Past Simple to describe a sequence of events in chronological order."},
+            { text:  "was described", correct:  false, feedback: "The correct answer is ‘described’. We use the Past Simple to describe a sequence of events in chronological order."},
+            { text:  "described", correct:  true, feedback: "The correct answer is ‘described’. We use the Past Simple to describe a sequence of events in chronological order."},
+          ]
+        }, // end of gap list
+      }, // end of task 2
+
+    ] // end of tasks
+
+} // end of lesson

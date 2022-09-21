@@ -1,0 +1,53 @@
+{% extends "learning_environment/base.html" %}
+{% load bootstrap5 %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+    <h1>
+        {{ lesson.name }}
+
+    </h1>
+    {% if task.paragraph_shown %}
+        {{ lesson.paragraph }}
+    {% endif %}
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <div class="card " style=" margin-top: 5vh">
+                <div class="card-body">
+                    <h5 class="card-title">{{ task.title }} </h5>
+                    {% if msg %}
+                        <p class="card-text" style="color:red">{{ msg }}</p>
+                    {% endif %}
+                    {% if task.show_lesson_text %}
+                        <div class="lesson-text">
+                            <blockquote>
+                                {{ task.lesson.text | safe }}
+                                <cite>{{ task.lesson.text_source }}</cite>
+                            </blockquote>
+                        </div>
+                        <h4>Lesson reading text</h4>
+                    {% endif %}
+                    {% if task.interaction == 'SC' %}
+                        {% include 'learning_environment/partials/sc.html' %}
+                    {% elif task.interaction == 'MC' %}
+                        {% include 'learning_environment/partials/mc.html' %}
+                    {% elif task.interaction == 'GAP' %}
+                        {% include 'learning_environment/partials/gaps.html' %}
+                    {% endif %}
+                    {% if mode == 'result' %}
+                        <p style="margin-top: 2em">
+                            <a href="{% url 'practice' %}" class="btn btn-primary">Next task</a> &nbsp;
+                            {% if not solved %}
+                                <a href="{% url 'practice' %}?redo={{ task.id }}" class="btn btn-primary">Try again</a>
+                            {% endif %}
+                        </p>
+                    {% endif %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
