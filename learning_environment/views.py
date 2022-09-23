@@ -7,17 +7,18 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormView
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 from .forms import *
 from .models import Lesson, Task, Solution
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 
 
-class SignUpView(generic.CreateView):
+class SignUpView(SuccessMessageMixin, generic.CreateView):
     form_class = CustomUserCreationForm
     success_url = reverse_lazy("login")
     template_name = "registration/signup.html"
-
+    success_message = "User was created successfully. You may now log in."
 
 @login_required
 def practice(request):
