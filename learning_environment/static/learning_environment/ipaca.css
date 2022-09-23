@@ -72,3 +72,8 @@ body {
 .lesson-text blockquote cite:before {
     content: "\2014 \2009";
 }
+
+
+textarea {
+    font-family: Consolas, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", monospace;
+}

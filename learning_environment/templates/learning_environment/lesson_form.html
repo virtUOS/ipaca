@@ -1,0 +1,62 @@
+{% extends "learning_environment/base.html" %}
+{% load bootstrap5 %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>Create new lesson</h1>
+
+    <hr>
+<form method="post" class="form">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <p><a href="#" class="btn btn-secondary" id="fill-example">Fill with example</a></p>
+    <input type="submit" class="btn btn-primary" value="Save">
+</form>
+
+    <p>&nbsp;</p>
+{% endblock %}
+
+{% block js %}
+var example='// Lesson example code \n'+
+' {\n'+
+'   name: "What is a lesson?",  // the name that\'s also shown to the users\n'+
+'   id: "lesson-xx-001",        // an internal id, will never be shown, but important to identify the lesson\n'+
+'   author: "John Doe",    // used for documentation, will not be shown to the user\n'+
+'   version: 1,                 // if you revise your lesson, give it a higher version number each time\n'+
+'   text: "Lessons are the most fundamental building blocks of IPACA content.",\n'+
+'   text_source: "Anonymous",\n'+
+'   text_licence: "CC0",\n'+
+'   text_url: "http://ipaca.de",\n'+
+'   tasks: [  // the list of tasks for this lesson\n'+
+'     { // task 1: primary reading task\n'+
+'       name:  "What is a lession?",\n'+
+'       type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary\n'+
+'       interaction: "SC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select or fill in the gaps\n'+
+'       primary: true,      // the primary task will be shown first, non-primary tasks are for repitition\n'+
+'       show_lesson_text: true,  // Shall we show the lesson reading text? true/false\n'+
+'       question:  "Which of the following claims is correct?",  // the question to be displayed\n'+
+'       choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)\n'+
+'         {\n'+
+'           text:  "A lesson is a building block",\n'+
+'           correct: true,\n'+
+'           feedback:  "You got it!"\n'+
+'         },\n'+
+'         {\n'+
+'           text:  "A lesson is a chocolate drink",\n'+
+'           correct: false,\n'+
+'           feedback:  "No. No. No. You can\'t drink a lesson!"\n'+
+'         },\n'+
+'         {\n'+
+'           text:  "A lesson is a very loud noise",\n'+
+'           correct: false,\n'+
+'           feedback:  "AAAARGH! No.",\n'+
+'         },\n'+
+'       ]  // end of list of choices\n'+
+'     },  // end of task 1\n'+
+'  ],  // end of task list\n'+
+' } // end of lesson dictionary\n';
+
+$('#fill-example').click( function () { $('#id_json5').val($('#id_json5').val()+example)});
+
+{% endblock %}

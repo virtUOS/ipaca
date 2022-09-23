@@ -39,6 +39,7 @@ class SCTask():
 
         chosen = int(solution.get('solution-{}'.format(self.task.id), -1))
         analysis['solution'] = chosen
+        context['chosen'] = chosen
         if chosen == -1:
             context['mode'] = "solve"  # display to try again
         else:

@@ -28,15 +28,17 @@ class Lesson(models.Model):
     text_licence = models.CharField(max_length=1024, null=True)
     text_url = models.URLField(null=True)
     json5 = models.TextField(null=True)
-    # tasks = models.ManyToManyField(Task, through='TaskOrder')
 
     @classmethod
     def check_json5(cls, lesson_json5):
         """Check if a JSON5 representation of a lesson is valid."""
         try:
             lesson = json5.loads(lesson_json5)
-        except json5.JsonDecodeError as e:
-            raise Json5ParseException("Error in JSON5 code, line {}, column {}. Error message: '{}'".format(e.lineno, e.colno, e.msg))
+        except ValueError as err:
+            raise Json5ParseException("Error in JSON5 code Error message: '{}'".format(err))
+
+        if not isinstance(lesson, dict):
+            raise Json5ParseException("Lesson code must be a dictionary.")
 
         # Checks
         for lesson_field in ["name", "id", "text", "text_source", "text_licence", "text_url", "author", "tasks"]:

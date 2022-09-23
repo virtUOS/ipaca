@@ -15,7 +15,7 @@
     <tr>
         <td>{{ task.id }}</td>
         <td>{{ task.name }}</td>
-        <td>{{ task.lesson.name }}({{ task.lesson.id }})</td>
+        <td>{{ task.lesson.name }} (ID: {{ task.lesson.lesson_id }})</td>
         <td>{{ task.interaction }}</td>
         <td>
             <a class="btn btn-secondary" href="{% url 'practice' %}?redo={{ task.id }}">Run</a>

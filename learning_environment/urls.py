@@ -17,6 +17,7 @@ urlpatterns = [
     # Backstage
     path('backstage/tasklist', views.TaskListView.as_view(), name='tasklist'),
     path('backstage/lesson/<int:pk>', views.LessonDetailView.as_view(), name='lessondetail'),
+    path('backstage/lesson/create', views.LessonCreateView.as_view(), name='lessoncreate'),
     path('backstage/dashboard/learner', views.learner_dashboard, name='learner_dashboard'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -74,17 +74,25 @@
     </div>
     <footer class="footer">
         <div class="container">
-            Backstage commands:
-            <a href="{%  url 'tasklist' %}">List all tasks</a> &nbsp; &middot; &nbsp;
-            <a href="{%  url 'learner_dashboard' %}">Learner Dashboard</a>
+            {% if request.user.is_authenticated %}
+                Backstage commands:
+                <a href="{%  url 'tasklist' %}">List all tasks</a>  &middot;
+                <a href="{%  url 'lessoncreate' %}">Create new lesson</a>  &middot;
+                <a href="{%  url 'learner_dashboard' %}">Learner Dashboard</a>
+            {% endif %}
         </div>
     </footer>
 
 </main>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
 {% bootstrap_javascript %}
 
+<script>
+    {% block js %}
+    {% endblock %}
+</script>
 
 </body>
 </html>

@@ -1,12 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.views import generic
 from django.http import HttpResponseBadRequest, HttpResponseServerError
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import FormView
+from django.contrib import messages
 from .forms import *
-from .models import Lesson
+from .models import Lesson, Task, Solution
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 
@@ -68,6 +70,21 @@ class TaskListView(ListView):
 class LessonDetailView(DetailView):
     """Show details for a single lesson (esp. JSON5)"""
     model = Lesson
+
+class LessonCreateView(FormView):
+
+    def post(self, request):
+        form = LessonCreationForm(request.POST)
+        if form.is_valid():
+            l = Lesson.create_from_json5(form.cleaned_data.get('json5'))
+            messages.info(request, "Lesson {} successfully created.".format(l.lesson_id))
+            return redirect('home')
+        else:
+            msg = form.errors
+        return render(request, 'learning_environment/lesson_form.html', locals())
+    def get(self, reguest):
+        form = LessonCreationForm()
+        return render(reguest, 'learning_environment/lesson_form.html', locals())
 
 def learner_dashboard(request):
     """Prepare data for learner's own dashboard and show it."""
