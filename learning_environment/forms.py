@@ -3,7 +3,7 @@ from  crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 from django.contrib.auth.forms import UserCreationForm
 from learning_environment.models import User, Lesson
-from .its.tasks import Json5ParseException
+from learning_environment.its.base import Json5ParseException
 import json5
 
 

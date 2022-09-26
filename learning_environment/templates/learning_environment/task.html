@@ -36,6 +36,8 @@
                         {% include 'learning_environment/partials/mc.html' %}
                     {% elif task.interaction == 'GAP' %}
                         {% include 'learning_environment/partials/gaps.html' %}
+                    {% elif task.interaction == 'MARK' %}
+                        {% include 'learning_environment/partials/mark.html' %}
                     {% endif %}
                     {% if mode == 'result' %}
                         <p style="margin-top: 2em">
@@ -50,4 +52,10 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block js %}
+    {% if task.interaction == 'MARK' %}
+        {% include 'learning_environment/partials/mark.js' %}
+    {% endif %}
 {% endblock %}

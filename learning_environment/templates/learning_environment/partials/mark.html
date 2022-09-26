@@ -1,0 +1,30 @@
+<p class="card-text"><b>{{ task.question }}</b></p>
+{% for m in task.content.markers.items %}
+     <p class="card-text" {% if mode != 'solve' %}style='color:grey'{% endif %}><span class="choosemarker mark{{ m.0 }}" data-marker="{{ m.0 }}">&nbsp;</span> &nbsp; {{ m.1.description }}</p>
+{% endfor %}
+
+{% if mode == 'solve' %}
+    <form method="post" class="form-inline">
+        {% csrf_token %}
+        <div class="lesson-text">
+            <blockquote class="marktext">
+                {{ task.content.marktext_html|safe }}
+            </blockquote>
+        </div>
+        <input type="hidden" name="task" value="{{ task.id }}">
+        <input type="hidden" name="solution" id="solution_dict">
+        <div style="margin-top: 2em">
+            <button type="submit" class="btn btn-secondary">Check!</button>
+        </div>
+    </form>
+{% else %}
+    <div class="lesson-text">
+        <blockquote class="marktext">
+            {{ feedback_text|safe }}
+        </blockquote>
+    </div>
+    <p>You correctly marked {{ num_correct }} of {{ num_total }} words.</p>
+    {% if num_additional > 0 %}
+        <p>You incorrectly marked {{ num_additional }} word{% if num_additional != 1 %}s{% endif %}.</p>
+    {% endif %}
+{% endif %}

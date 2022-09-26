@@ -1,5 +1,4 @@
-# from learning_environment.models import Json5ParseException
-
+from learning_environment.its.base import Json5ParseException
 
 class SCTask():
     """A single choice task."""

@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 import json5
-from learning_environment.its.tasks import TASK_TYPES, Json5ParseException
+from learning_environment.its.base import Json5ParseException
+from learning_environment.its.tasks import TASK_TYPES
 
 # TODO docstrings!
 
