@@ -8,7 +8,6 @@ urlpatterns = [
     # Buildin
     path("accounts/", include("django.contrib.auth.urls")),
 
-
     # Selfmade
     path('', views.home, name='home'),
     path('myhome/', views.myhome, name='myhome'),
@@ -20,6 +19,7 @@ urlpatterns = [
     path('backstage/lesson/<int:pk>', views.LessonDetailView.as_view(), name='lessondetail'),
     path('backstage/lesson/create', views.LessonCreateView.as_view(), name='lessoncreate'),
     path('backstage/dashboard/learner', views.learner_dashboard, name='learner_dashboard'),
+    path('backstage/dashboard/global', views.global_dashboard, name='global_dashboard'),
     path('backstage/reset', views.learner_reset, name='learner_reset'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

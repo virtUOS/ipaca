@@ -1,0 +1,27 @@
+{% extends "learning_environment/base.html" %}
+{% load bootstrap5 %}
+{% load static %}
+
+{% block content %}
+    <h1>Global Dashboard</h1>
+
+    <p>Users have worked on {{ num_solutions }} tasks so far.</p>
+    <p>Correctness: {{ tasks_correctness }} %</p>
+    <table class="table">
+        <tr><th>Timestamp</th>
+            <th>User</th>
+            <th>Task Name</th>
+            <th>Correct?</th>
+            <th>Analysis</th>
+        </tr>
+    {% for solution in solutions %}
+        <tr>
+            <td>{{ solution.timestamp }}</td>
+            <td>{{ solution.user.username }}</td>
+            <td>{{ solution.task.name }}</td>
+            <td>{{ solution.solved }}</td>
+            <td>{{ solution.analysis }}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
