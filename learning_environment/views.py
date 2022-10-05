@@ -9,7 +9,7 @@ from django.views.generic.edit import FormView
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from .forms import *
-from .models import Lesson, Task, Solution
+from .models import Lesson, Task, Solution, LearnerStatus, Profile, User
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 
@@ -22,31 +22,66 @@ class SignUpView(SuccessMessageMixin, generic.CreateView):
 
 @login_required
 def practice(request):
+    """Display a task for practicing."""
 
     context = {'mode': 'solve'}
 
-    if request.method == 'POST':  # analyze solution
+    # start a lesson
+    if request.method == 'POST' and 'start' in request.POST:
+        if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
+            return redirect('myhome')
+        request.session['current_lesson_todo'].pop(0)  # remove the start item
+        request.session.modified = True
+        tutor = Tutormodel(request.user)
+        try:
+            (state, lesson, task) = tutor.next_task(request)
+        except NoTaskAvailableError:
+            return HttpResponseServerError("Error: No task available!")
+        context['state'] = state
+    # finish a lesson
+    elif request.method == 'POST' and 'finish' in request.POST:
+        if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
+            # TODO: message
+            return redirect('myhome')
+        if request.session['current_lesson_todo'][0] != 'WRAPUP':  # if we didn't finish a lesson, we have corrupt state
+            # TODO: message
+            return redirect('myhome')
+        request.user.profile.level += 1  # advance a level
+        request.user.save()
+        return redirect('myhome')
+    # analyze a solution
+    elif request.method == 'POST':
         try:
             task = Task.objects.get(pk=int(request.POST['task']))
         except (KeyError, Task.DoesNotExist):
             return HttpResponseBadRequest("Invalid Task ID")
         # Evaluate solution
         learnermodel = Learnermodel(request.user)
-        context.update(learnermodel.update(task, request.POST))
-    elif 'redo' in request.GET:  # show last task again
+        analysis, learnermodel_context = learnermodel.update(task, request.POST)
+        context.update(learnermodel_context)
+        if analysis.get('solved', False):  # we solved a task, so we remove its type from the session todo list
+            request.session['current_lesson_todo'].pop(0)
+            request.session.modified = True
+
+        lesson = task.lesson
+        context['state'] = context['mode']
+    elif 'redo' in request.GET:  # show a task again
         try:
             task = Task.objects.get(pk=int(request.GET['redo']))
         except KeyError:
             return HttpResponseBadRequest("Error: No such ID")
+        lesson = task.lesson
+        context['state'] = context['mode']
     else:  # fetch new task and show it
         tutor = Tutormodel(request.user)
         try:
-            task = tutor.next_task()
+            (state, lesson, task) = tutor.next_task(request)
         except NoTaskAvailableError:
             return HttpResponseServerError("Error: No task available!")
+        context['state'] = state
 
     context['task'] = task
-    context['lesson'] = task.lesson
+    context['lesson'] = lesson
     # Pass all information to template and display page
     return render(request, 'learning_environment/task.html', context=context)
 
@@ -54,7 +89,29 @@ def practice(request):
 # basic view login NOT required
 def home(request):
     page = 'home'  # for highlighting current page
+    if request.user.is_authenticated:
+        return redirect('myhome')
     return render(request, 'learning_environment/home.html', locals())
+
+
+# basic view for authenticated users
+def myhome(request):
+    page = 'myhome'  # for highlighting current page
+    try:
+        request.user.save()
+    except Profile.DoesNotExist:
+        p = Profile(user=request.user)
+        p.save()
+    try:
+        del request.session['current_lesson']
+    except KeyError:
+        pass
+    try:
+        del request.session['current_lesson_todo']
+    except KeyError:
+        pass
+    levels = Lesson.objects.all().order_by('lesson_id')
+    return render(request, 'learning_environment/myhome.html', locals())
 
 
 class TaskListView(ListView):
@@ -100,3 +157,11 @@ def learner_dashboard(request):
 
     return render(request, 'learning_environment/learner_dashboard.html', locals())  # pass all local variable to template
 
+def learner_reset(request):
+    if request.user.is_authenticated:
+        request.user.profile.level = 0
+        request.user.save()
+        messages.info(request, "Levels have been reset for user {}".format(request.user.username))
+        return redirect("myhome")
+    else:
+        return redirect("home")

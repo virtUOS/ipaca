@@ -7,55 +7,76 @@
 {% block content %}
 
     <h1>
-        {{ lesson.name }}
-
+        {{ lesson.name }} {% if task %}&mdash; {{ task.get_type_display }} task {% endif %}
     </h1>
-    {% if task.paragraph_shown %}
-        {{ lesson.paragraph }}
-    {% endif %}
-    <div class="container-fluid">
-        <div class="d-flex justify-content-center">
-            <div class="card " style=" margin-top: 5vh">
-                <div class="card-body">
-                    <h5 class="card-title">{{ task.title }} </h5>
-                    {% if msg %}
-                        <p class="card-text" style="color:red">{{ msg }}</p>
-                    {% endif %}
-                    {% if task.show_lesson_text %}
-                        <div class="lesson-text">
-                            <blockquote>
-                                {{ task.lesson.text | safe }}
-                                <cite>{{ task.lesson.text_source }}</cite>
-                            </blockquote>
-                        </div>
-                        <h4>Lesson reading text</h4>
-                    {% endif %}
-                    {% if task.interaction == 'SC' %}
-                        {% include 'learning_environment/partials/sc.html' %}
-                    {% elif task.interaction == 'MC' %}
-                        {% include 'learning_environment/partials/mc.html' %}
-                    {% elif task.interaction == 'GAP' %}
-                        {% include 'learning_environment/partials/gaps.html' %}
-                    {% elif task.interaction == 'MARK' %}
-                        {% include 'learning_environment/partials/mark.html' %}
-                    {% endif %}
-                    {% if mode == 'result' %}
-                        <p style="margin-top: 2em">
-                            <a href="{% url 'practice' %}" class="btn btn-primary">Next task</a> &nbsp;
-                            {% if not solved %}
-                                <a href="{% url 'practice' %}?redo={{ task.id }}" class="btn btn-primary">Try again</a>
-                            {% endif %}
-                        </p>
-                    {% endif %}
-                </div>
 
+    {# Display "Start lesson" screen #}
+    {% if mode != 'result' and state == 'START' %}
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="lesson" value="{{ lesson.id }}">
+            <input type="hidden" name="start" value="start">
+            <button type="submit" class="btn btn-primary">Start lesson</button>
+        </form>
+    {# Display "Lesson Finished" screen #}
+    {% elif mode != 'result' and state == 'WRAPUP' %}
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h2>Congratulations! You finished the lesson!</h2>
+        <p>&nbsp;</p>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="lesson" value="{{ lesson.id }}">
+            <input type="hidden" name="finish" value="finish">
+            <button type="submit" class="btn btn-primary">Finish!</button>
+        </form>
+    {% else %}
+        {% if task.paragraph_shown %}
+            {{ lesson.paragraph }}
+        {% endif %}
+        <div class="container-fluid">
+            <div class="justify-content-center">
+                <div class="row">
+                    <div class="card " style=" margin-top: 5vh">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ task.title }} </h5>
+                            {% if msg %}
+                                <p class="card-text" style="color:red">{{ msg }}</p>
+                            {% endif %}
+                            {% if task.show_lesson_text %}
+                                <div class="lesson-text">
+                                    <blockquote>
+                                        {{ task.lesson.text | safe }}
+                                        <cite>{{ task.lesson.text_source }}</cite>
+                                    </blockquote>
+                                </div>
+                                <h4>Lesson reading text</h4>
+                            {% endif %}
+                            {% include task.get_template %}
+                            {% if mode == 'result' %}
+                                <p style="margin-top: 2em">
+                                    {% if not solved %}
+                                        <a href="{% url 'practice' %}" class="btn btn-primary">Try again</a> &nbsp;
+                                    {% else %}
+                                        <a href="{% url 'practice' %}" class="btn btn-primary">Go on!</a>
+                                    {% endif %}
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    {% endif %}
 {% endblock %}
 
 {% block js %}
-    {% if task.interaction == 'MARK' %}
-        {% include 'learning_environment/partials/mark.js' %}
+    {% if task.get_additional_js %}
+        {% include task.get_additional_js %}
     {% endif %}
 {% endblock %}

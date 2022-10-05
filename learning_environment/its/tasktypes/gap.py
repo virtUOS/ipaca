@@ -4,6 +4,8 @@ import re
 class GapTask():
     """A fill-in-the-gap task."""
 
+    template = 'learning_environment/partials/gaps.html'
+
     @classmethod
     def check_json5(cls, task_json5, task_num):
         if 'gaps' not in task_json5 or not isinstance(task_json5['gaps'], dict):

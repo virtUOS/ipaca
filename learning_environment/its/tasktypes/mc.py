@@ -3,6 +3,8 @@ from learning_environment.its.base import Json5ParseException
 class MCTask():
     """A multiple choice task."""
 
+    template = 'learning_environment/partials/mc.html'
+
     def __init__(self, task):
         self.task = task
 

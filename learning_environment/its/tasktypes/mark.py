@@ -18,6 +18,9 @@ class MarkTask():
             }
     """
 
+    template = 'learning_environment/partials/mark.html'
+    additional_js = 'learning_environment/partials/mark.js'
+
     @classmethod
     def check_json5(cls, task_json5, task_num):
         """Check if json5 structure for a mark-the-word task is valid.

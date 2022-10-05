@@ -3,6 +3,8 @@ from learning_environment.its.base import Json5ParseException
 class SCTask():
     """A single choice task."""
 
+    template = 'learning_environment/partials/sc.html'
+
     @classmethod
     def check_json5(cls, task_json5, task_num=0):
         if "choices" not in task_json5:

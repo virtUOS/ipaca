@@ -1,26 +1,43 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-import json5
 from learning_environment.its.base import Json5ParseException
-from learning_environment.its.tasks import TASK_TYPES
+from learning_environment.its.tasks import TaskTypeFactory
+#from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+import json5
 
-# TODO docstrings!
 
 class User(AbstractUser):
-    '''
+    """
     This User is used to possibly change the authentication down the line
-    '''
+    """
     pass
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    level = models.IntegerField(default=0)
+    nickname = models.CharField(default="Llama", max_length=64)
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
+
+
 class Lesson(models.Model):
-    '''
+    """
     A selected collection of task
     Comes which has a paragraph
 
     name: unique identifier
     paragraph: piece of written academic text to read
     tasks: tasks belonging to the lesson
-    '''
+    """
     name = models.CharField(max_length=255)
     lesson_id = models.SlugField(max_length=64)
     author = models.CharField(max_length=256)
@@ -53,7 +70,6 @@ class Lesson(models.Model):
             Task.check_json5(t, task_num)
         return True
 
-
     @classmethod
     def create_from_json5(cls, lesson_json5):
         cls.check_json5(lesson_json5)
@@ -67,23 +83,24 @@ class Lesson(models.Model):
         except Lesson.DoesNotExist:
             pass
 
-        l = Lesson(name=lesson["name"],
-                   lesson_id=lesson["id"],
-                   author=lesson["author"],
-                   text=lesson["text"],
-                   text_source=lesson["text_source"],
-                   text_licence=lesson["text_licence"],
-                   text_url=lesson["text_url"],
-                   json5=lesson_json5)
-        l.save()
+        lsn = Lesson(name=lesson["name"],
+                     lesson_id=lesson["id"],
+                     author=lesson["author"],
+                     text=lesson["text"],
+                     text_source=lesson["text_source"],
+                     text_licence=lesson["text_licence"],
+                     text_url=lesson["text_url"],
+                     json5=lesson_json5)
+        lsn.save()
 
         for task in lesson["tasks"]:
-            Task.create_from_json5(task, l)
+            Task.create_from_json5(task, lsn)
 
-        return l
+        return lsn
+
 
 class Task(models.Model):
-    '''
+    """
     There are multiple Tasks within a lesson
     The Tasks are subclassed according to their interaction type
 
@@ -92,7 +109,7 @@ class Task(models.Model):
     type: which of the three different types does the task have, useful for later defining order
     title: the unique identifier of the Task
     paragraph_shown: if true the paragraph for the corresponding lesson will be displayed
-    '''
+    """
     TASK_TYPE = [
         ('R', 'Reading'),
         ('GS', 'Grammar/Style'),
@@ -119,7 +136,7 @@ class Task(models.Model):
 
         for task_field in [("name", str, "a string"),
                            ("type", ['R', 'GS', 'V'], "'R', 'GS', 'V'"),
-                           ("interaction", TASK_TYPES.keys(), ','.join(TASK_TYPES.keys())),
+                           ("interaction", TaskTypeFactory.shortcuts(), ','.join(TaskTypeFactory.shortcuts())),
                            ("primary", bool, "true or false"),
                            ("show_lesson_text", bool, "true or false"),
                            ("question", str, "a string")]:
@@ -134,15 +151,14 @@ class Task(models.Model):
                 raise Json5ParseException('Field "{}" for task {} has wrong value, it has to be one of {}'.format(
                     task_field[0], task_num, task_field[2]))
 
-        # its.tasks.TASK_TYPES is a dictionary with short names as keys and classes as values
-        # these classes have a check_json5 class method
-        TASK_TYPES[task_json5['interaction']].check_json5(task_json5, task_num)
+        # fetch the class for that interaction and let it check the json5 content
+        TaskTypeFactory.getClass(task_json5['interaction']).check_json5(task_json5, task_num)
 
         return True
 
     @classmethod
     def create_from_json5(cls, task, lesson):
-        content = TASK_TYPES[task['interaction']].get_content_from_json5(task)
+        content = TaskTypeFactory.getClass(task['interaction']).get_content_from_json5(task)
         t = Task(name=task["name"],
                  type=task["type"],
                  interaction=task["interaction"],
@@ -155,6 +171,15 @@ class Task(models.Model):
         t.save()
         return t
 
+    def get_template(self):
+        return TaskTypeFactory.getClass(self.interaction).template
+
+    def get_additional_js(self):
+        try:
+            return TaskTypeFactory.getClass(self.interaction).additional_js
+        except AttributeError:
+            return ''
+
 class UserLesson(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
@@ -164,9 +189,14 @@ class UserLesson(models.Model):
     class Meta:
         unique_together = ['user', 'lesson']
 
+
 class Solution(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
     solved = models.BooleanField()
     analysis = models.JSONField()
+
+class LearnerStatus(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    current_lesson = models.ForeignKey(Lesson, null=True, on_delete=models.SET_NULL)

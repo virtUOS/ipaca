@@ -36,13 +36,8 @@
                 </div>
             {% else %}
                 <div class="container justify-content-around">
-
-                      <a class="btn btn-primary" href="{% url 'login' %}">Log In</a>
-
-                        <a class="btn btn-warning" href="{% url 'signup' %}">Sign up</a>
-
-
-
+                    <a class="btn btn-primary" href="{% url 'login' %}">Log In</a>
+                    <a class="btn btn-warning" href="{% url 'signup' %}">Sign up</a>
                 </div>
             {% endif %}
         </div>
@@ -52,16 +47,12 @@
 
 <main class="">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ">
-
     </div>
 
     <div class=" row ms-sm-auto">
-
-
         <div class="col-md-2">
             {# space for side content #}
         </div>
-
         <div class="col-md-8">
             {# display messages #}
             {% bootstrap_messages %}
@@ -75,10 +66,11 @@
     <footer class="footer">
         <div class="container">
             {% if request.user.is_authenticated %}
-                Backstage commands:
+                Commands:
                 <a href="{%  url 'tasklist' %}">List all tasks</a>  &middot;
                 <a href="{%  url 'lessoncreate' %}">Create new lesson</a>  &middot;
-                <a href="{%  url 'learner_dashboard' %}">Learner Dashboard</a>
+                <a href="{%  url 'learner_dashboard' %}">Learner Dashboard</a>  &middot;
+                <a href="{%  url 'learner_reset' %}">Level reset</a>
             {% endif %}
         </div>
     </footer>

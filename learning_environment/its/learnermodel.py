@@ -4,7 +4,7 @@ The learner model maintains a model about a given learner's competencies.
 
 """
 
-from .tasks import TASK_TYPES
+from .tasks import TaskTypeFactory
 from learning_environment.models import Solution
 
 class Learnermodel:
@@ -20,9 +20,11 @@ class Learnermodel:
         """Updates the learner model by analyzing the solution for a task.
 
         task: Task object
-        solution: Dictionary with solution (usually form data from POST request)"""
+        solution: Dictionary with solution (usually form data from POST request)
 
-        analyzer = TASK_TYPES[task.interaction](task)
+        Return a tuple of analysis dictionary and context dictionary"""
+
+        analyzer = TaskTypeFactory.getObject(task)
         (analysis, context) = analyzer.analyze_solution(solution)
 
         # Save solution and analysis to database
@@ -34,4 +36,4 @@ class Learnermodel:
             context['msg'] = "Congratulation! That's correct!"
         else:
             context['msg'] = "Oh no, that's not correct."
-        return context
+        return analysis, context

@@ -101,7 +101,7 @@
       }, // end of task 2
       {  // task 3: mark the words
         name: "Find the synonyms",
-        type: "GS",
+        type: "V",
         interaction: "MARK",
         primary: true,
         show_lesson_text: false,
