@@ -116,15 +116,9 @@ class Task(models.Model):
         ('V', 'Vocabulary')
     ]
 
-    INTERACTION_TYPE = [
-        ('SC', 'single choice'),
-        ('MC', 'multiple choice'),
-        ('GAP', 'fill-in/select the gap'),
-    ]
-
     name = models.CharField(max_length=256)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
-    interaction = models.CharField(max_length=100, choices=INTERACTION_TYPE, default=('SC', 'single choice'))
+    interaction = models.CharField(max_length=10)
     type = models.CharField(max_length=100, choices=TASK_TYPE)
     primary = models.BooleanField(default=True)
     show_lesson_text = models.BooleanField(default=True)
