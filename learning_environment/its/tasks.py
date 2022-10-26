@@ -14,12 +14,14 @@ import learning_environment.its.tasktypes.sc as sc
 import learning_environment.its.tasktypes.mc as mc
 import learning_environment.its.tasktypes.gap as gap
 import learning_environment.its.tasktypes.mark as mark
+import learning_environment.its.tasktypes.short as short
 
 # short names of active task types and their classes
 _TASK_TYPES = {'SC': sc.SCTask,
               'MC': mc.MCTask,
               'GAP': gap.GapTask,
-              'MARK': mark.MarkTask}
+              'MARK': mark.MarkTask,
+              'SHORT': short.ShortTask}
 
 class TaskTypeFactory:
     """Picks the proper class or creates or proper object for a given interaction type or database Task object."""

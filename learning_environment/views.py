@@ -9,7 +9,7 @@ from django.views.generic.edit import FormView
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from .forms import *
-from .models import Lesson, Task, Solution, LearnerStatus, Profile, User
+from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 
@@ -38,6 +38,7 @@ def practice(request):
         except NoTaskAvailableError:
             return HttpResponseServerError("Error: No task available!")
         context['state'] = state
+
     # finish a lesson
     elif request.method == 'POST' and 'finish' in request.POST:
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
@@ -46,9 +47,18 @@ def practice(request):
         if request.session['current_lesson_todo'][0] != 'WRAPUP':  # if we didn't finish a lesson, we have corrupt state
             # TODO: message
             return redirect('myhome')
-        request.user.profile.level += 1  # advance a level
-        request.user.save()
+
+        # increase level for current series
+        current_lesson_series = request.session.get('lesson_series', 'General')
+        try:
+            psl = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series)
+            psl.level += 1
+            psl.save()
+        except ProfileSeriesLevel.DoesNotExist:
+            ProfileSeriesLevel.objects.create(user=request.user, series=current_lesson_series, level=1)
+
         return redirect('myhome')
+
     # analyze a solution
     elif request.method == 'POST':
         try:
@@ -102,6 +112,8 @@ def myhome(request):
     except Profile.DoesNotExist:
         p = Profile(user=request.user)
         p.save()
+
+    # delete chosen lesson from session
     try:
         del request.session['current_lesson']
     except KeyError:
@@ -110,7 +122,29 @@ def myhome(request):
         del request.session['current_lesson_todo']
     except KeyError:
         pass
-    levels = Lesson.objects.all().order_by('lesson_id')
+
+    # Lesson series
+    all_lesson_series = sorted([x['series'] for x in Lesson.objects.values('series').distinct()])
+
+    # set series from GET parameter (if valid)
+    if 'series' in request.GET:
+        s = request.GET['series']
+        if s in all_lesson_series:
+            request.session['lesson_series'] = s
+
+    try:
+        series = request.session['lesson_series']
+    except KeyError:
+        request.session['lesson_series'] = 'General'
+        series = 'General'
+
+    # determine current level (and create if necessary)
+    psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series=series)
+    current_level = psl.level
+
+    # pick all levels for chosen lesson series
+    levels = Lesson.objects.filter(series = series).order_by('lesson_id')
+
     return render(request, 'learning_environment/myhome.html', locals())
 
 
@@ -168,9 +202,14 @@ def global_dashboard(request):
 
 def learner_reset(request):
     if request.user.is_authenticated:
-        request.user.profile.level = 0
-        request.user.save()
-        messages.info(request, "Levels have been reset for user {}".format(request.user.username))
+        current_lesson_series = request.session.get('lesson_series', 'General')
+        try:
+            psl = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series)
+            psl.level = 0
+            psl.save()
+            messages.info(request, "Level for series {} has been reset for user {}".format(current_lesson_series, request.user.username))
+        except ProfileSeriesLevel.DoesNotExist:
+            pass
         return redirect("myhome")
     else:
         return redirect("home")

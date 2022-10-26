@@ -5,7 +5,7 @@ The tutor model is able to determine appropriate actions for a given learner. (E
 """
 
 import random
-from learning_environment.models import Lesson, Task
+from learning_environment.models import Lesson, Task, ProfileSeriesLevel
 
 
 class NoTaskAvailableError(Exception):
@@ -27,6 +27,9 @@ class Tutormodel:
 
         order = ['START', 'R', 'GS', 'V', 'WRAPUP']
 
+        # determine the current lesson series
+        series = request.session.get('lesson_series', 'General')
+
         # pick a lesson
         current_lesson_id = request.session.get('current_lesson', None)
         if current_lesson_id:
@@ -35,7 +38,7 @@ class Tutormodel:
             except Lesson.DoesNotExist:
                 raise Exception("Lesson from session does not exist: {}!".format(current_lesson_id))
         else:
-            lesson = self.start_lesson()
+            lesson = self.start_lesson(series)
             request.session['current_lesson'] = lesson.id
             request.session['current_lesson_todo'] = order[:]
             request.session.modified = True
@@ -63,7 +66,12 @@ class Tutormodel:
         # task = Task.objects.all()[random.randint(0, num_tasks-1)]
         # return task
 
-    def start_lesson(self):
-        current_level = self.learner.profile.level
-        lesson = Lesson.objects.all().order_by("lesson_id")[current_level]
+    def start_lesson(self, series):
+        try:
+            current_level = ProfileSeriesLevel.objects.get(user=self.learner, series=series).level
+        except ProfileSeriesLevel.DoesNotExist:
+            ProfileSeriesLevel.objects.create(user=self.learner, series=series, level=0)
+            current_level = 0
+
+        lesson = Lesson.objects.filter(series=series).order_by("lesson_id")[current_level]
         return lesson

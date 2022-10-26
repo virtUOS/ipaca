@@ -14,19 +14,33 @@ class User(AbstractUser):
     """
     pass
 
+
 class Profile(models.Model):
+    """A profile extends the djanog user class with additional fields, like a nickname"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    level = models.IntegerField(default=0)
     nickname = models.CharField(default="Llama", max_length=64)
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
+    """Automatically create a profile if a user is created"""
     if created:
         Profile.objects.create(user=instance)
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
+    """Automatically save the profile if the user data is saved"""
     instance.profile.save()
+
+
+class ProfileSeriesLevel(models.Model):
+    """A user's level within a series"""
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    series = models.CharField(max_length=256, default='General')
+    level = models.IntegerField(default=0)
+
+    class Meta:
+        unique_together = ('user', 'series')  # ensure there's only one level per user per series
+
 
 
 class Lesson(models.Model):
@@ -40,6 +54,7 @@ class Lesson(models.Model):
     """
     name = models.CharField(max_length=255)
     lesson_id = models.SlugField(max_length=64)
+    series = models.CharField(max_length=255, default='General')
     author = models.CharField(max_length=256)
     text = models.TextField()
     text_source = models.CharField(max_length=1024, null=True)
@@ -59,11 +74,18 @@ class Lesson(models.Model):
             raise Json5ParseException("Lesson code must be a dictionary.")
 
         # Checks
+        # Mandatory fields
         for lesson_field in ["name", "id", "text", "text_source", "text_licence", "text_url", "author", "tasks"]:
             if lesson_field not in lesson:
                 raise Json5ParseException('Field "{}" is missing'.format(lesson_field))
             if not lesson[lesson_field]:
                 raise Json5ParseException('Field "{}" is empty'.format(lesson_field))
+
+        # Optional fields must not be empty
+        for lesson_field in ["series"]:
+            if lesson_field in lesson and not lesson[lesson_field]:
+                raise Json5ParseException('Field "{}" is empty'.format(lesson_field))
+
         task_num = 0
         for t in lesson["tasks"]:
             task_num += 1
@@ -91,7 +113,10 @@ class Lesson(models.Model):
                      text_licence=lesson["text_licence"],
                      text_url=lesson["text_url"],
                      json5=lesson_json5)
+        if 'series' in lesson:
+            lsn.series = lesson['series']
         lsn.save()
+
 
         for task in lesson["tasks"]:
             Task.create_from_json5(task, lsn)
