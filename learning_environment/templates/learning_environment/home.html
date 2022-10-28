@@ -25,7 +25,11 @@
                 <div class="d-flex justify-content-center">
                     <div class="card-body">
                         <p class="card-text">
+                        {% if user.is_authenticated %}
                             <a class="btn btn-primary" href="{% url 'myhome' %}" style="margin: 1vh"> Begin</a>
+                        {% else %}
+                            <a class="btn btn-primary" href="{% url 'login' %}" style="margin: 1vh"> Begin</a>
+                        {% endif %}
                         </p>
                     </div>
                 </div>
