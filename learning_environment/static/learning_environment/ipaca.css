@@ -90,3 +90,43 @@ textarea {
 .mark9 { background-color: #a8140e; }
 .choosemarker { display: inline-block; width: 4em; border: 3px solid white; }
 .choosemarker-chosen { border: 3px solid red; }
+
+
+.btn {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* Boostrap Buttons Styling */
+
+.btn-primary {
+  font-size: 18px;
+  color: #ffe7a0;
+  line-height: 20px;
+  border: 2px solid #ffc107;
+  border-radius: 40px;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-primary:hover {
+  color: #FFF;
+  background: #ffdb6d;
+  border: 2px solid #ffc107;
+}
+
+/* To Do change warning button */
+.btn-warning {
+  font-size: 18px;
+  color: #ffe7a0;
+  line-height: 20px;
+  border: 2px solid #ffc107;
+  border-radius: 40px;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.btn-warning:hover {
+  color: #FFF;
+  background: #ffdb6d;
+  border: 2px solid #ffc107;
+}
