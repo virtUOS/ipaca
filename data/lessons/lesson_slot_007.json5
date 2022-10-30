@@ -282,15 +282,15 @@
         primary: true,
         show_lesson_text: false,
         question: "In each line, find the odd one out from the list and mark it by clicking on it:",
-        marktext: "</p>To show sequence we use: firstly, secondly, first, second, third, #1#briefly, then, finally.</p> \
-        </p>To reinforce or add ideas we use: moreover, #2#compared, besides, also, in addition, furthermore.</p>\
-        </p>To give examples we use: for instance, such as, in particular, #3#hence,  for example.</p> \
-        </p>To show cause we use: because, #4#accordingly, due to, as, since.</p> \
-        </p>To show results we use: as a result, consequently, therefore,#5#too.</p> \
-        </p>To show alternatives we use: #6#generally, alternatively, otherwise, instead.</p>\
-        </p>To show contrast we use: nevertheless, #7#similarly, however, nonetheless, on the other hand, in contrast. </p>\
-        </p>To emphasise we say: as a matter of fact,  in fact, #8#likewise, actually, indeed.</p> \
-        </p>To correct we say: rather, to be more precise, #9#notwithstanding.</p> ",
+        marktext: "<p>To show sequence we use: firstly, secondly, first, second, third, #1#briefly, then, finally.</p> \
+        <p>To reinforce or add ideas we use: moreover, #2#compared, besides, also, in addition, furthermore.</p>\
+        <p>To give examples we use: for instance, such as, in particular, #3#hence,  for example.</p> \
+        <p>To show cause we use: because, #4#accordingly, due to, as, since.</p> \
+        <p>To show results we use: as a result, consequently, therefore,#5#too.</p> \
+        <p>To show alternatives we use: #6#generally, alternatively, otherwise, instead.</p>\
+        <p>To show contrast we use: nevertheless, #7#similarly, however, nonetheless, on the other hand, in contrast. </p>\
+        <p>To emphasise we say: as a matter of fact,  in fact, #8#likewise, actually, indeed.</p> \
+        <p>To correct we say: rather, to be more precise, #9#notwithstanding.</p> ",
         markers: {
           '1': {
             description: 'does not show sequence',

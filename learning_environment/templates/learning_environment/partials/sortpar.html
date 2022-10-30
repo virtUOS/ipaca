@@ -1,0 +1,20 @@
+<p class="card-text">{{ task.question }}</p>
+
+{# TODO: add drag and drop funcitonality #}
+
+{% if mode == 'solve' %}
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="task" value="{{ task.id }}">
+        {% for o in task.content %}
+            <p>{{o.text}}</p>
+        {% endfor %}
+        <div style="margin-top: 2em">
+            <button type="submit" class="btn btn-secondary">Check!</button>
+        </div>
+    </form>
+{% else %}
+    {% for o in task.content %}
+        {{o.text }}
+    {% endfor %}
+{% endif %}
