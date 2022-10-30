@@ -98,7 +98,7 @@ textarea {
 }
 /* Boostrap Buttons Styling */
 
-.btn-primary {
+.btn-outline-primary {
   font-size: 18px;
   color: #ffe7a0;
   line-height: 20px;
@@ -108,14 +108,14 @@ textarea {
   transition: all 0.3s ease 0s;
 }
 
-.btn-primary:hover {
+.btn-outline-primary:hover {
   color: #FFF;
   background: #ffdb6d;
   border: 2px solid #ffc107;
 }
 
 /* To Do change warning button */
-.btn-warning {
+.btn-outline-warning {
   font-size: 18px;
   color: #ffe7a0;
   line-height: 20px;
@@ -125,7 +125,7 @@ textarea {
   transition: all 0.3s ease 0s;
 }
 
-.btn-warning:hover {
+.btn-outline-warning:hover {
   color: #FFF;
   background: #ffdb6d;
   border: 2px solid #ffc107;
