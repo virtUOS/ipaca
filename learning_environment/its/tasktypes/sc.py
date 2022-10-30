@@ -25,8 +25,7 @@ class SCTask():
                 correct_choices += 1
         if correct_choices != 1:
             raise Json5ParseException(
-                "Task {} in lesson {} has {} choices marked as correct, but you need exactly 1.".format(task_num, filename,
-                                                                                                        correct_choices))
+                "Task {} has {} choices marked as correct, but you need exactly 1.".format(task_num, correct_choices))
     @classmethod
     def get_content_from_json5(cls, task_json5, task_num=0):
         return task_json5['choices']
