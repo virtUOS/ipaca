@@ -8,7 +8,7 @@
   text: "Lessons are the most fundamental building blocks of IPACA content.",
   text_source: "Tobias Thelen",
   text_licence: "CC0",
-  text_url: "http://uos.de",
+  text_url: "http://www.virtuos.uos.de",
   tasks: [  // the list of tasks for this lesson
     { // task 1: primary reading task
       name:  "What is a lesson?",
