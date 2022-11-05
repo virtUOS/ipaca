@@ -63,11 +63,11 @@ class MarkTask():
     def get_content_from_json5(cls, task, task_num=0):
         """Take a checked json5 structure and convert it into databse representation."""
 
-        global __mark_cnt  # helper variable for counting words in the markertext
+        __mark_cnt=0  # helper variable for counting words in the markertext
 
         def refcnt(mobj):
             """Helper function to be called by regex substitution, using a counter"""
-            global __mark_cnt
+            nonlocal __mark_cnt
             # each word in the HTML version of the text is wrapped in a span with additional info, e.g.
             # <span data-wordcnt='0'>We</span>
             span = "<span data-wordcnt='{}'>{}</span>".format(__mark_cnt, mobj[0])

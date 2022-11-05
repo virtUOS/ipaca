@@ -13,6 +13,11 @@
     {# Display "Start lesson" screen #}
     {% if mode != 'result' and state == 'START' %}
         <p>&nbsp;</p>
+        {% if lesson.start %}
+            <div>
+                {{lesson.start}}
+            </div>
+        {% endif %}
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
@@ -24,10 +29,15 @@
         </form>
     {# Display "Lesson Finished" screen #}
     {% elif mode != 'result' and state == 'WRAPUP' %}
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
         <h2>Congratulations! You finished the lesson!</h2>
+        <p>&nbsp;</p>
+        {% if lesson.wrapup %}
+            <div>
+                {{lesson.wrapup}}
+            </div>
+        {% endif %}
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
         <p>&nbsp;</p>
         <form method="post">
             {% csrf_token %}
