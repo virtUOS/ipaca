@@ -29,7 +29,6 @@ body {
     padding: 0 15px;
 }
 
-
 .link-unstyled, .link-unstyled:link, .link-unstyled:hover {
   color: inherit;
   text-decoration: inherit;
@@ -122,6 +121,7 @@ textarea {
     font-family: Consolas, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", monospace;
 }
 
+/* color markers */
 
 .mark1 { background-color: #fff2a8; }
 .mark2 { background-color: #a8d1ff; }
@@ -135,3 +135,28 @@ textarea {
 .choosemarker { display: inline-block; width: 4em; border: 3px solid white; }
 .choosemarker-chosen { border: 3px solid red; }
 
+/* sortable lists */
+
+/* (A) LIST STYLES */
+.slist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: move;
+}
+.slist li {
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #dfdfdf;
+  background: #f5f5f5;
+}
+
+/* (B) DRAG-AND-DROP HINT */
+.slist li.hint {
+  border: 1px solid #ffc49a;
+  background: #feffb4;
+}
+.slist li.active {
+  border: 1px solid #6c70e2;
+  background: #e7efff;
+}
