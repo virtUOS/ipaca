@@ -6,8 +6,9 @@ html {
 }
 body {
     margin-bottom: 60px; /* Margin bottom by footer height */
-    margin-right: 60px;
 }
+
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -133,6 +134,7 @@ h1-var {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 textarea {
     font-family: Consolas, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", monospace;
 }
@@ -176,3 +178,4 @@ textarea {
   border: 1px solid #6c70e2;
   background: #e7efff;
 }
+
