@@ -30,8 +30,9 @@
                         <form method="post">
                         {% csrf_token %}
                         {{ form|crispy }}
-                        <button type="submit" class="btn btn-primary">Sign Up</button>
-
+                            <div class="form-group">
+                                  <button type="submit" class="btn btn-login btn-signup">Sign Up</button>
+                            </div>
                         </form>
                     </div>
                  </div>
