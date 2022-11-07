@@ -2,13 +2,90 @@
 
 {% block content %}
 
-    <div class="container-fluid ">
+<header class="navbar">
+    <div class="navbar me-auto">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <span><img src="/static/img/logo.svg" class="img-fluid"></span> </a>
+    </div>
+
+    <div class="navbar ms-auto">
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="..." alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>USER</strong>
+          </a>
+          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
+            <li><a class="dropdown-item" href="#">Log out</a></li>
+          </ul>
+        </div>
+    </div>
+</header>
 
 
+    <div class="container-fluid" style="background: #F9F9FB;">
+        <div class="row">
+            <nav class="col-3" style="background:white">
 
-            <div class="d-flex justify-content-center">
+<div class="d-flex flex-column flex-shrink-0 p-3" style=" width: 25vw;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+        {# TO DO Add icon img#}
+        {# <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> #}
+    </a>
+
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a href="#" class="nav-link link-dark" aria-current="page">
+            {# TO DO Add icon img#}
+            Dashboard
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-item collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                {# TO DO Add icon img#}
+                Tasks
+            </a>
+
+            <div class="collapse" id="dashboard-collapse" style="">
+                <ul class="">
+                    <li><a href="#" class="link-dark rounded">Academic</a></li>
+                    <li><a href="#" class="link-dark rounded">General</a></li>
+                </ul>
+            </div>
+        </li>
+
+        <li>
+            <a href="#" class="nav-link link-dark">
+              {# TO DO Add icon img#}
+              Results
+            </a>
+        </li>
+
+    </ul>
+</div>
+            </nav>
+        <div class="col">
+            <div class="row">
+
+            <div class="col-md-4 mt-md-0">
+            <div class="card-dashboard">
+                {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
+                CARD1
+            </div>
 
             </div>
+            <div class="col-md-4 mt-md-0 mt-4">
+            <div class="card-dashboard">
+             CARD2
+            </div>
+
+            </div>
+            <div class="col-md-4 mt-md-0 mt-4">
+            <div class="card-dashboard">
+            CARD3
+            </div>
+            </div>
+
 
 
 
@@ -52,8 +129,8 @@
                     </div>
                 </div>
             </div>
-
-
+        </div>
+        </div>
 
         </div>
 
