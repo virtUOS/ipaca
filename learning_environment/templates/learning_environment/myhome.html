@@ -11,11 +11,11 @@
     <div class="navbar ms-auto">
         <div class="dropdown">
           <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="..." alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>USER</strong>
+            <img src="/static/img/profile_avatar.svg" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>Hello, {{ user.username }}!</strong>
           </a>
           <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
-            <li><a class="dropdown-item" href="#">Log out</a></li>
+            <li><a class="dropdown-item" href="{% url 'logout' %}">Log out</a></li>
           </ul>
         </div>
     </div>
