@@ -8,6 +8,7 @@
 {% block content %}
 
     <div class="row justify-content-evenly">
+
         <div class="col" style="margin-left:50px;">
             {# space for left side content #}
             <img src="/static/img/login_img.svg" class="img-fluid">
@@ -19,7 +20,7 @@
                 <a class="link-secondary" href="{% url 'signup' %}" style="margin:1vw; color:#009A3F;"> Register now</a>
             </div>
 
-            <div class="card" style="border: none; margin-top: 22vh;">
+            <div class="card" style="background:transparent; border: none; margin-top: 22vh;">
                 <div class="card-header" style="border-bottom:none; background-color:transparent;" align="center">
                     <h2>Log In to IPACA</h2>
                     <span style="font-size: 18px;">Glad to see you again!</span>
@@ -44,7 +45,17 @@
 
         </div>
     </div>
+    </div>
 
+<style>
+   body{
+    background: url({% static 'img/background_purple.svg'%}) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz--background-size:cover;
+    -o--background-size:cover;
+    background-size: cover;
+   }
+</style>
 
 {% endblock %}
 

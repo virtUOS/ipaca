@@ -15,7 +15,7 @@
             <strong>Hello, {{ user.username }}!</strong>
           </a>
           <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
-            <li><a class="dropdown-item" href="{% url 'logout' %}">Log out</a></li>
+            <li><a class="dropdown-item ms-auto" href="{% url 'logout' %}">Log out</a></li>
           </ul>
         </div>
     </div>
@@ -70,7 +70,7 @@
                         {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
 
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            CARD1 (Time spent)
+                            Time spent
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,8 @@
                 <div class="col-md-4 mt-md-0 mt-4">
                     <div class="d-flex card-dashboard gradient-purple">
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            CARD2 (num_tasks {{ num_tasks }})
+                            <span style="font-size: 40px;">{{ num_tasks }}</span>
+                            <span> Tasks completed</span>
                         </div>
                     </div>
                 </div>
@@ -86,7 +87,8 @@
                 <div class="col-md-4 mt-md-0 mt-4">
                     <div class="d-flex card-dashboard gradient-green">
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            CARD3 (tasks_correctness {{ tasks_correctness }} %)
+                            <span style="font-size: 40px;">{{ tasks_correctness }}% </span>
+                            <span> Correctness </span>
                         </div>
                     </div>
                 </div>
@@ -101,15 +103,15 @@
                     </div>
 
                     <div class="justify-content-between" >
-                        <ul>
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
+                        <ul class="ul-3col">
+                            <li class="list-group-item">TASK NAME</li>
+                            <li class="list-group-item">PERCENTAGE</li>
+                            <li class="list-group-item">ACTION BUTTON</li>
                         </ul>
-                        <ul>
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
+                        <ul class="ul-3col">
+                            <li class="list-group-item">TASK NAME</li>
+                            <li class="list-group-item">PERCENTAGE</li>
+                            <li class="list-group-item">ACTION BUTTON</li>
                         </ul>
                     </div>
                 </div>

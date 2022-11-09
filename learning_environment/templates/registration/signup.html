@@ -19,7 +19,7 @@
                 <a class="link-secondary" href="{% url 'login' %}" style="margin:1vw; color:#009A3F;"> Log in here</a>
             </div>
 
-            <div class="card" style="border: none; margin-top: 22vh;">
+            <div class="card" style="background:transparent; border: none; margin-top: 22vh;">
                 <div class="card-header" style="border-bottom:none; background-color:transparent;" align="center">
                     <h2>Sign up to IPACA</h2>
                     <span style="font-size: 18px;">Glad to meet you!</span>
@@ -41,5 +41,14 @@
         </div>
     </div>
 
+<style>
+   body{
+    background: url({% static 'img/background_green.svg'%}) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz--background-size:cover;
+    -o--background-size:cover;
+    background-size: cover;
+   }
+</style>
 
 {% endblock %}
