@@ -2,62 +2,125 @@
 
 {% block content %}
 
-    <div class="container-fluid ">
+<header class="navbar">
+    <div class="navbar me-auto">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <span><img src="/static/img/logo.svg" class="img-fluid"></span> </a>
+    </div>
 
-
-
-            <div class="d-flex justify-content-center">
-
-            </div>
-
-
-
-            <div class="card text-center shadow rounded">
-        <div class="card-header">
-            <h1> iPaca: learning academic english</h1>
+    <div class="navbar ms-auto">
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/static/img/profile_avatar.svg" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>Hello, {{ user.username }}!</strong>
+          </a>
+          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
+            <li><a class="dropdown-item ms-auto" href="{% url 'logout' %}">Log out</a></li>
+          </ul>
         </div>
-                <div class="card-body">
-                    <p class="card-text">
-                        iPaca helps you to refine your academic english skills by providing you a carefully selected
-                        little tasks.
-                        By doing a task everyday you can significantly improve your academic english skills and have and
-                        easy
-                        way through your university career.
-                    </p>
-                    <p class="card-text">
-                        <b>Attention: This is a rudimentary test version that does not contain meaningful content yet!</b>
-                    </p>
+    </div>
+</header>
+
+
+<div class="container-fluid" style="background: #F9F9FB;">
+    <div class="row">
+
+        <nav class="col-3" style="background:white">
+            <div class="d-flex flex-column flex-shrink-0 p-3" style=" width: 25vw;">
+
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link link-dark" aria-current="page">
+                        {# TO DO Add icon img#}
+                        {# <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> #}
+                        My Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-item collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                            {# TO DO Add icon img#}
+                            Tasks
+                        </a>
+
+                        <div class="collapse" id="dashboard-collapse" style="">
+                            <ul class="">
+                                <li><a href="#" class="link-dark rounded">Academic</a></li>
+                                <li><a href="#" class="link-dark rounded">General</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link link-dark">
+                          {# TO DO Add icon img#}
+                          Results
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <div class="col">
+            {# Dashboard cards #}
+            <div class="row" style="margin-top:10px">
+                <div class="col-md-4 mt-md-0">
+                    <div class="d-flex card-dashboard gradient-yellow">
+                        {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
+
+                        <div class="d-flex card-body align-items-center justify-content-center">
+                            Time spent
+                        </div>
+                    </div>
                 </div>
 
-                <div class="d-flex justify-content-center">
-                    <div class="card-body">
-                        <p class="card-text">You are in level {{ psl.level }} for series '{{ series }}'.</p>
-                        {% for level in levels %}
-                            <p class="card-text">
-                                {% if forloop.counter0 == current_level %}
-                                    <a class="btn btn-primary" href="{% url 'practice' %}" style="margin: 1vh">{{ level.lesson_id }}</a>
-                                {% elif forloop.counter0 < current_level %}
-                                {% elif forloop.counter0 < current_level %}
-                                    <button class="btn btn-success" style="margin: 1vh">{{ level.lesson_id }}</button>
-                                {% else %}
-                                    <button class="btn btn-outline-secondary" disabled style="margin: 1vh">{{ level.lesson_id }}</button>
-                                {% endif %}
-                            </p>
-                        {% endfor %}
-                        <p>Switch series:
-                            {% for s in all_lesson_series %}
-                                <a href="?series={{ s }}">{{ s }}</a> {% if not forloop.last %}&middot;{% endif %}
-                            {% endfor %}
-                        </p>
+                <div class="col-md-4 mt-md-0 mt-4">
+                    <div class="d-flex card-dashboard gradient-purple">
+                        <div class="d-flex card-body align-items-center justify-content-center">
+                            <span style="font-size: 40px;">{{ num_tasks }}</span>
+                            <span> Tasks completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mt-md-0 mt-4">
+                    <div class="d-flex card-dashboard gradient-green">
+                        <div class="d-flex card-body align-items-center justify-content-center">
+                            <span style="font-size: 40px;">{{ tasks_correctness }}% </span>
+                            <span> Correctness </span>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            {# Display Tasks #}
 
+
+                <div class="card" style="margin-top:10px; border-radius:15px">
+                    <div class="me-auto">
+                        <h4> Tasks </h4>
+                    </div>
+
+                    <div class="justify-content-between" >
+                        <ul class="ul-3col">
+                            <li class="list-group-item">TASK NAME</li>
+                            <li class="list-group-item">PERCENTAGE</li>
+                            <li class="list-group-item">ACTION BUTTON</li>
+                        </ul>
+                        <ul class="ul-3col">
+                            <li class="list-group-item">TASK NAME</li>
+                            <li class="list-group-item">PERCENTAGE</li>
+                            <li class="list-group-item">ACTION BUTTON</li>
+                        </ul>
+                    </div>
+                </div>
 
         </div>
 
+        </div>
 
+    </div>
 
 
 {% endblock %}

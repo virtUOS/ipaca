@@ -3,25 +3,59 @@
 {% load bootstrap5 %}
 {% load static %}
 
+
+
 {% block content %}
-    <div class="card shadow rounded">
-        <div class="card-header">
-            <h2>Log In</h2>
+
+    <div class="row justify-content-evenly">
+
+        <div class="col" style="margin-left:50px;">
+            {# space for left side content #}
+            <img src="/static/img/login_img.svg" class="img-fluid">
         </div>
-        <div class="card-body">
-        </div>
-        <div class="container">
-            <form method="post">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button type="submit" class="btn btn-primary ">Log In</button>
-                <span class="col text-center"> New to Ipaca?
-                    <a class="link-secondary" href="{% url 'signup' %}" style="margin: 1vh"> Sign Up</a>
-                </span>
-            </form>
+
+        <div class="col-4" style="margin-right:10vw;">
+            {# space for right side content #}
+            <div class="text-right" style="color: #0A125E;"> New to Ipaca?
+                <a class="link-secondary" href="{% url 'signup' %}" style="margin:1vw; color:#009A3F;"> Register now</a>
+            </div>
+
+            <div class="card" style="background:transparent; border: none; margin-top: 22vh;">
+                <div class="card-header" style="border-bottom:none; background-color:transparent;" align="center">
+                    <h2>Log In to IPACA</h2>
+                    <span style="font-size: 18px;">Glad to see you again!</span>
+                </div>
+
+                <div class="card-body">
+                    <div class="container">
+                        <form method="post">
+                            {% csrf_token %}
+                      {#  {% bootstrap_form form%} #}
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="username" placeholder="Enter Username" required="required">
+                            </div>
+                              <div class="form-group">
+                                  <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+                              </div>
+                            <button type="submit" class="btn btn-login">Log In</button>
+                        </form>
+                    </div>
+                 </div>
+            </div>
+
         </div>
     </div>
+    </div>
 
-
+<style>
+   body{
+    background: url({% static 'img/background_purple.svg'%}) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz--background-size:cover;
+    -o--background-size:cover;
+    background-size: cover;
+   }
+</style>
 
 {% endblock %}
+
