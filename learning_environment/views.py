@@ -150,6 +150,15 @@ def myhome(request):
     # pick all levels for chosen lesson series
     levels = Lesson.objects.filter(series = series).order_by('lesson_id')
 
+    solutions = Solution.objects.filter(user=request.user).order_by('timestamp')  # all solutions from current user
+    num_tasks = solutions.count()  # how tasks did this user try
+    correct_solutions = Solution.objects.filter(user=request.user,
+                                                solved=True).count()  # how many of them were correct?
+    if num_tasks > 0:  # calculate percentage of correct tasks (or 0 if no tasks)
+        tasks_correctness = correct_solutions / num_tasks * 100.0
+    else:
+        tasks_correctness = 0.0
+
     return render(request, 'learning_environment/myhome.html', locals())
 
 

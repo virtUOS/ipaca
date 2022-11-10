@@ -6,8 +6,9 @@ html {
 }
 body {
     margin-bottom: 60px; /* Margin bottom by footer height */
-    margin-right: 60px;
 }
+
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -84,7 +85,12 @@ body {
 .btn {
     margin: 20px;
     border-radius: 50px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
 /* Boostrap Buttons Styling */
 .btn-primary {
     font-size: 18px;
@@ -114,6 +120,21 @@ body {
     color:#FFFFFF;
 }
 
+.btn-login {
+    font-size: 18px;
+    background: #FF814B;
+    box-shadow: 0px 15px 50px rgba(255, 129, 75, 0.4);
+    border-radius: 40px;
+    padding: 10px;
+    width:100%;
+    height: 45px;
+    margin: 20px 10px;
+}
+
+.btn-signup {
+    background: #009A3F;
+    box-shadow: 0px 15px 50px rgba(0, 164, 67, 0.4);
+}
 
 h1 {
     font-size: 72px;
@@ -133,6 +154,7 @@ h1-var {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 textarea {
     font-family: Consolas, Monaco, "Bitstream Vera Sans Mono", "Lucida Console", monospace;
 }
@@ -175,4 +197,43 @@ textarea {
 .slist li.active {
   border: 1px solid #6c70e2;
   background: #e7efff;
+}
+
+/* override Bootstrap*/
+.form-control {
+    border-radius:40px !important;
+    height: 45px;
+    margin:10px;
+}
+
+.card-dashboard {
+    height: 125px;
+    width: 100%;
+    box-shadow: 0px 13px 21px rgba(255, 129, 75, 0.2);
+    border-radius: 30px;
+}
+
+.gradient-yellow {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(60deg, rgba(255, 140, 33, 0.7) 13.4%, rgba(255, 224, 64, 0.7) 86.6%);
+}
+
+.gradient-purple {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(60deg, rgba(61, 115, 235, 0.8) 13.4%, rgba(222, 143, 255, 0.8) 86.6%);
+}
+
+.gradient-green {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(60deg, #84FAE2 13.4%, #8FBAF4 86.6%);
+}
+
+
+.card-dashboard:hover{
+     transform: scale(1.05);
+     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.ul-3col {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    border:none;
 }
