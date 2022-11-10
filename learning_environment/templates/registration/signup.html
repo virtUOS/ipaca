@@ -28,8 +28,8 @@
                 <div class="card-body">
                     <div class="container">
                         <form method="post">
-                        {% csrf_token %}
-                        {{ form|crispy }}
+                            {% csrf_token %}
+                            {% bootstrap_form form label_class='form-label'%}
                             <div class="form-group">
                                   <button type="submit" class="btn btn-login btn-signup">Sign Up</button>
                             </div>
