@@ -29,7 +29,7 @@
                     <div class="container">
                         <form method="post">
                             {% csrf_token %}
-                            {% bootstrap_form form label_class='form-label'%}
+                            {% bootstrap_form form form_show_labels=False %}
                             <div class="form-group">
                                   <button type="submit" class="btn btn-login btn-signup">Sign Up</button>
                             </div>

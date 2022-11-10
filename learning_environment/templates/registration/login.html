@@ -30,8 +30,7 @@
                     <div class="container">
                         <form method="post">
                             {% csrf_token %}
-                            {% _form form label_class='form-label'%}
-
+                            {% bootstrap_form form form_show_labels=False %}
                             <button type="submit" class="btn btn-login">Log In</button>
                         </form>
                     </div>
