@@ -1,0 +1,48 @@
+// Lesson tt-001
+// a test lesson, no meaningful content.
+{
+  name: "MARCIMARC LESSON",  // the name that's also shown to the users
+  id: "lesson-slot-009",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
+  author: "Marcimarc",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "Test text",
+  text_source: "unknown - TODO",
+  text_licence: "unknown - TODO",
+  text_url: "unknown - TODO",
+    tasks: [  // the list of tasks for this lesson
+      {n B
+        // task 1: primary reading task
+        name: "IN THE NAME OF Marcimarc",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Decide if the information in the statement is True, False or Not Given according to the information in the reading passage.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "Markimark.",
+            correct: false,
+            feedback: "Two K's ?? Are you crazy?’"
+          },
+          {
+            text: "Marcimark",
+            correct: false,
+            feedback: "Still one K to many, try again.’"
+          },
+          {
+            text: "Markimarc",
+            correct: false,
+            feedback: "Nope, what do you want with the K's??."
+          },
+          {
+            text: "Marcimarc",
+            correct: true,
+            feedback: "Whooop Whooop. C rules’."
+          },
+        ]
+      },
+      
+    ] // end of tasks
+
+} // end of lesson
