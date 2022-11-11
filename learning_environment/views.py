@@ -159,6 +159,13 @@ def myhome(request):
     else:
         tasks_correctness = 0.0
 
+    if Solution.objects.filter(user=request.user, solved=False).exists():
+        wrong_solutions = Solution.objects.filter(user=request.user, solved=False)
+
+    else:
+        wrong_solutions = None
+
+
     return render(request, 'learning_environment/myhome.html', locals())
 
 

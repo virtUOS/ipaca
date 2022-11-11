@@ -99,22 +99,43 @@
 
                 <div class="card" style="margin-top:10px; border-radius:15px">
                     <div class="me-auto">
-                        <h4> Tasks </h4>
+                        <h4>  Review Tasks </h4>
                     </div>
 
                     <div class="justify-content-between" >
-                        <ul class="ul-3col">
-                            <li class="list-group-item">TASK NAME</li>
-                            <li class="list-group-item">PERCENTAGE</li>
-                            <li class="list-group-item">ACTION BUTTON</li>
-                        </ul>
-                        <ul class="ul-3col">
-                            <li class="list-group-item">TASK NAME</li>
-                            <li class="list-group-item">PERCENTAGE</li>
-                            <li class="list-group-item">ACTION BUTTON</li>
-                        </ul>
+
+                            {% for solution in wrong_solutions %}
+
+                                <ul class="ul-3col">
+                                    <li class="list-group-item">{{ solution.task.lesson.lesson_id }}</li>
+                                    <li class="list-group-item">
+                                        <a href="{% url 'practice' %}" style="margin: 1vh">Practice</a>
+                                    </li>
+                                </ul>
+
+                            {% endfor %}
                     </div>
+
+                    <div class="justify-content-between" >
+                        <div class="me-auto">
+                        <h4>  New Tasks </h4>
+                    </div>
+                        <ul class="ul-3col">
+                            <li class="list-group-item">TASK NAME</li>
+                            <li class="list-group-item">PERCENTAGE</li>
+                            <li class="list-group-item">ACTION BUTTON</li>
+                        </ul>
+                        <ul class="ul-3col">
+                            <li class="list-group-item">TASK NAME</li>
+                            <li class="list-group-item">PERCENTAGE</li>
+                            <li class="list-group-item">ACTION BUTTON</li>
+                        </ul>
+
+                    </div>
+
+
                 </div>
+
 
         </div>
 
