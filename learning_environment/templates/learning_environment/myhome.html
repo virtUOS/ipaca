@@ -70,7 +70,7 @@
                         {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
 
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            Time spent
+                            <span style="font-size: 35px; color: white; text-align: center;">{{ num_hours}} <br>Time spent</span>
                         </div>
                     </div>
                 </div>
@@ -78,8 +78,8 @@
                 <div class="col-md-4 mt-md-0 mt-4">
                     <div class="d-flex card-dashboard gradient-purple">
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 40px;">{{ num_tasks }}</span>
-                            <span> Tasks completed</span>
+                            <span style="font-size: 35px; color: white; text-align: center;">{{ num_tasks}} <br> Tasks completed</span>
+                        
                         </div>
                     </div>
                 </div>
@@ -87,8 +87,7 @@
                 <div class="col-md-4 mt-md-0 mt-4">
                     <div class="d-flex card-dashboard gradient-green">
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 40px;">{{ tasks_correctness }}% </span>
-                            <span> Correctness </span>
+                            <span style="font-size: 35px; color: white; text-align: center;">{{ tasks_correct_responses }} % <br>Correct Responses</span>
                         </div>
                     </div>
                 </div>
