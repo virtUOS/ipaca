@@ -1,9 +1,4 @@
 from learning_environment.its.base import Json5ParseException
-#nltk.download('punkt')
-import nltk 
-from nltk.stem import WordNetLemmatizer
-
-lemmatizer = WordNetLemmatizer()
 
 class ShortTask():
     """A single choice task."""
@@ -27,19 +22,7 @@ class ShortTask():
         context = {}
         analysis = {}
 
-        #It is funnier task
         given_answer = solution.get('answer', None)
-
-        # tokenize: ["It", "is", "funnier", "task"]
-        tokenized_answer = nltk.word_tokenize(given_answer)
-
-        #lemmatize: 
-        lemmatized_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_answer]
-        lemmatized_answer
-        #It is the funniest task
-         
-        for word in given_answer if 
-
         if self.task.content == given_answer:
             analysis['solved'] = True
         else:
