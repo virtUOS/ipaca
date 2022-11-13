@@ -29,7 +29,7 @@
           {
             text: "Statement Number two.",
             correct: false,
-            feedback: "This statement is False because the text says  ‘cdef’"
+            feedback: "This statement is False because the text says ‘cdef’"
           },
           {
             text: "Statement Number Three.",
