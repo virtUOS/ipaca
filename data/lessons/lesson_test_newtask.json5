@@ -18,6 +18,7 @@
       show_lesson_text: true,  // Shall we show the lesson reading text? true/false
       question:  "Give a definition of the term 'lesson'",  // the question to be displayed
       answer: "A lesson is a collection of tasks"
+  
     },  // end of task 1
   ],  // end of list of tasks
 } // end of lesson

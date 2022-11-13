@@ -75,7 +75,10 @@ class GapTask():
                     for o in self.task.content[i]['options']:
                         if o['text'] == sol and o['correct']:
                             gap_solved = True
+                            o['feedback'] = "Congrats!"
                             break
+                    o['feedback'] = "False, stupid bitch!"
+                o['feedback'] = "Tick something, stupid bitch!"
                 self.task.content[i]['solved'] = gap_solved  # TODO: Find a proper solution, this is monkey patching...
                 self.task.content[i]['solution'] = sol  # TODO: Find a proper solution, this is monkey patching...
                 if not gap_solved:

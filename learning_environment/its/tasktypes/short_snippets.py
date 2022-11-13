@@ -41,6 +41,8 @@ class ShortTask():
         # !starts at 0
         s_error = {}
 
+
+
         #snippets: It, are, funny, the, funniest, is, funnier, task
         #User input: It is funnier task
         user_answer = solution.get('answer', None)
@@ -98,8 +100,6 @@ class ShortTask():
 
 
         """
-    
-
         #lemmatize: 
         lemmatized_user_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_user_answer]
         lemmatized_right_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_right_answer]
@@ -119,13 +119,21 @@ class ShortTask():
         print("all_in: ")
         print(all_in)
 
-        
-        # happytransformer(lemmatized user answer)
-        ht_output = happy_tt.generate_text(tokenized_user_answer, args=beam_settings)
-
-        # definiere wie ähnlich ht und right_answer sein müssen
-        # vergleiche ht und right_answer genau 
         """
+        
+        no_error_feedbacks = "Congratulations! There was no mistake." 
+        error_feedback = "You had " + errortypes['spelling'] +" spelling errors and " + errortypes['grammar'] +" gramar errors."
+
+        if errortypes['grammar'] > 0:
+            extra_feedback = "You had a in the following word"  
+
+        for i in range(len(self.task.content)):  # iterate over list of text parts and gaps
+            for o in self.task.content[i]['options']:
+                o['answer'] = right_answer 
+                
+                o['feedback'] = feedback
+
+
         if user_answer != right_answer:
             analysis['solved'] = False
             context['mode'] = "result"  # display to try again

@@ -57,18 +57,9 @@
         gaps: {
           mode: 'select',
           _1_: [
-            { text:  "smaller", correct: true, feedback: "The correct answer is ‘smaller’. When ’since’ introduces \
-                                                           an action or event at a point of time in the past, we can \
-                                                           use the past simple or present perfect after since and the \
-                                                           present perfect in the main clause."},
-            { text:  "the smallest", correct: false, feedback: "The correct answer is ‘smaller’. When ’since’ introduces \
-                                                           an action or event at a point of time in the past, we can \
-                                                           use the past simple or present perfect after since and the \
-                                                           present perfect in the main clause"},
-            { text:  "small", correct: false, feedback: "The correct answer is ‘smaller’. When ’since’ introduces \
-                                                           an action or event at a point of time in the past, we can \
-                                                           use the past simple or present perfect after since and the \
-                                                           present perfect in the main clause"},
+            { text:  "smaller", correct: true, feedback: ""},
+            { text:  "the smallest", correct: false, feedback: ""},
+            { text:  "small", correct: false, feedback: ""},
             ],
           _2_: [
             { text: "bad", correct: false, feedback: "The correct answer is ‘worse’ because .... " },
