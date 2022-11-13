@@ -11,7 +11,7 @@
   text_licence: "unknown - TODO",
   text_url: "unknown - TODO",
     tasks: [  // the list of tasks for this lesson
-      {n B
+      {
         // task 1: primary reading task
         name: "IN THE NAME OF Marcimarc",
         type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary

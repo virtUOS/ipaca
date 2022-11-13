@@ -1,5 +1,9 @@
-from learning_environment.its.base import Json5ParseException
 import re
+
+from happytransformer import HappyTextToText, TTSettings, HappyWordPrediction
+
+from learning_environment.its.base import Json5ParseException
+
 
 class GapTask():
     """A fill-in-the-gap task."""
@@ -61,16 +65,30 @@ class GapTask():
 
     def __init__(self, task):
         self.task = task
+        self.happy_tt = HappyTextToText("T5", "vennify/t5-base-grammar-correction")
+        self.happy_wp = HappyWordPrediction()
+        self.beam_settings = TTSettings(num_beams=5, min_length=1, max_length=100)
+
 
     def analyze_solution(self, solution):
         analysis = {'solved': True, 'solution': {}}
         context = {'mode': 'result'}
-        print("Hello")
+        print("HELLO")
+        print(self.task.content) 
         for i in range(len(self.task.content)):  # iterate over list of text parts and gaps
             if 'name' in self.task.content[i]:  # if it's a gap
                 sol = solution.get('solution-{}-{}'.format(self.task.id, self.task.content[i]['name']), ['---'])
                 analysis['solution'][self.task.content[i]['name']] = sol
                 gap_solved = False
+                sentence_start = self.task.content[i-1]['text'].split('<br>')[1] if '<br>' in self.task.content[i-1]['text'] else self.task.content[i-1]['text']
+                sentence_end = self.task.content[i+1]['text'].split('<br>')[0] if '<br>' in self.task.content[i+1]['text'] else self.task.content[i+1]['text']
+                full_sentence = (sentence_start + sol + sentence_end).strip()
+                correct_sentence = self.happy_tt.generate_text(full_sentence, args=self.beam_settings)
+                mask_sentence = sentence_start + " [MASK] " + sentence_end
+                completed_sentence = self.happy_wp.predict_mask(mask_sentence)
+                print(full_sentence)
+                print(correct_sentence)
+                print(completed_sentence)
                 if sol != '---':
                     for o in self.task.content[i]['options']:
                         if o['text'] == sol and o['correct']:
