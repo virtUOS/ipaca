@@ -4,7 +4,7 @@
   id: "lesson-grammar",        // an internal id, will never be shown, but important to identify the lesson
   series: 'Academic English',
   author: "Lena",    // used for documentation, will not be shown to the user
-  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  version: 1.1,                 // if you revise your lesson, give it a higher version number each time
   text: "Gaston is ____ (strong) man in town.",
   text_source: "unknown - TODO",
   text_licence: "unknown - TODO",
