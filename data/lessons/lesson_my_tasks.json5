@@ -1,0 +1,75 @@
+// Lesson tt-001
+// a test lesson, no meaningful content.
+{
+  name: "Group 6 Vocab Tasks",  // the name that's also shown to the users
+  id: "lesson-slot-010",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
+  author: "Pauli",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "hey",
+  text_source: "unknown - TODO",
+  text_licence: "unknown - TODO",
+  text_url: "unknown - TODO",
+    tasks: [  // the list of tasks for this lesson
+        { 
+            // Task 1: Select the vocabs
+            name: "Read the text and fill the gaps with the given idioms",
+            type: "V",
+            interaction: "SMARTGAP",
+            primary: false,
+            show_lesson_text: false,
+            question: "I like mais cream, its a _1_ snack. <br>\
+                        When there are sprinkles on it, its even _2_ .<br>\
+                        But ice cream cake is simply _3_ .",
+            gaps: {
+            mode: 'select',
+            _1_: [
+                { text: "good", correct: true, feedback: "Corect" },
+                { text: "better", correct: false, feedback: "Wrong, you need the basic form here" },
+                { text: "the best", correct: false, feedback: "Wrong, you need the basic form here'." },
+            ],
+            _2_ : [
+                { text: "good", correct: false, feedback: "Wrong, you need a comparative here" },
+                { text: "better", correct: true, feedback: "Corect" },
+                { text: "the best", correct: false, feedback: "Wrong, you need a comparative here.'." },
+            ],
+            _3_: [
+                { text: "good", correct: false, feedback: "Wrong, you need a superlative here." },
+                { text: "better", correct: false, feedback: "No. It's not a fresh green wood." },
+                { text: "the best", correct: true, feedback: "Corect'." },
+            ],
+
+            }  // end of gaps
+        },  // end of task 4
+
+        {  
+            // task 2: mark the words
+            name: "Match the idioms with their meanings",
+            type: "V",
+            interaction: "MARK",
+            primary: true,
+            show_lesson_text: false,
+            question: "Match the idioms with their meanings and mark them by clicking on them after selecting one of the words.",
+            marktext: "#1#big <br>\
+            #2#gap <br>\
+            #3#radio <br>\
+            #4#cake ",
+            markers: {
+            '1': {
+                description: 'of considerable size or extent',
+            },
+            '2': {
+                description: 'a break or hole in an object or between two objects',
+            },
+            '3': {
+                description: 'the transmission and reception of electromagnetic waves of radio frequency, especially those carrying sound messages',
+            },
+            '4': {
+                description: 'an item of soft sweet food made from a mixture of flour, fat, eggs, sugar, and other ingredients, baked and sometimes iced or decorated.',
+            }
+            } // end of markers list
+        } // end of task 3
+      
+    ] // end of tasks
+
+} // end of lesson

@@ -16,11 +16,13 @@ import learning_environment.its.tasktypes.gap as gap
 import learning_environment.its.tasktypes.mark as mark
 import learning_environment.its.tasktypes.short as short
 import learning_environment.its.tasktypes.short_snippets as short_snippets
+import learning_environment.its.tasktypes.my_smart_gap as smartgap
 
 # short names of active task types and their classes
 _TASK_TYPES = {'SC': sc.SCTask,
               'MC': mc.MCTask,
               'GAP': gap.GapTask,
+              'SMARTGAP': smartgap.GapTask,
               'MARK': mark.MarkTask,
               'SHORT': short.ShortTask,
               'SHORT_SNIPPETS': short_snippets.ShortTask}
