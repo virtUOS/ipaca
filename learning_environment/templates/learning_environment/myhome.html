@@ -1,7 +1,9 @@
 {% extends "learning_environment/base.html" %}
-
 {% block content %}
 
+</head>
+
+<body id="myhome">
 <header class="navbar">
     <div class="navbar me-auto">
         <a class="navbar-brand" href="{% url 'home' %}">
@@ -14,7 +16,7 @@
             <img src="/static/img/profile_avatar.svg" alt="" width="32" height="32" class="rounded-circle me-2">
             <strong>Hello, {{ user.username }}!</strong>
           </a>
-          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
+          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
             <li><a class="dropdown-item ms-auto" href="{% url 'logout' %}">Log out</a></li>
           </ul>
         </div>
@@ -31,19 +33,39 @@
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
                         <a href="#" class="nav-link link-dark" aria-current="page">
-                        {# TO DO Add icon img#}
+                        <img id ="dash_img" src= "/static/img/dashb_icon.svg" alt "Dashboard" style ="margin-left: 2px; width: 26px; height: 24px;" onclick="changeImage()">
+                        <script>
+                            function changeImage(){
+                                let displayImage = document.getElementById("dash_img")
+                            if(displayImage.src.match("/static/img/dashb_icon.svg")) {
+                                displayImage.src = "/static/img/dashb1_icon.svg" 
+                            } else {
+                                displayImage.src="/static/img/dashb_icon.svg"
+                            }                         
+                        }
+                        </script>
                         {# <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> #}
-                        My Home
+                        <span style="font-size:16px; vertical-align: middle; margin-left: 3px;"> Dashboard</span>
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-item collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                            {# TO DO Add icon img#}
-                            Tasks
+                    <li class="nav-item";>
+                        <a class="nav-item collapsed" data-bs-toggle="collapse" data-bs-target="#tasks-collapse" aria-expanded="false">
+                            <img id ="book_img" src= "/static/img/book_dashboard.svg" alt "Book" ; style ="width: 26px; height: 24px;" onclick="changeImage2()">
+                            <script>
+                                function changeImage2(){
+                                    let displayImage = document.getElementById("book_img")
+                                if(displayImage.src.match("/static/img/book_dashboard.svg")) {
+                                    displayImage.src = "/static/img/book1_dashboard.svg"
+                                }   else {
+                                    displayImage.src="/static/img/book_dashboard.svg"
+                                }                         
+                            }
+                            </script>
+                            <span style="font-size:16px; vertical-align: middle; color:black; margin-left: 4px;"> Tasks </span>
                         </a>
 
-                        <div class="collapse" id="dashboard-collapse" style="">
+                        <div class="collapse" id="tasks-collapse" style="margin-left: 20px;">
                             <ul class="">
                                 <li><a href="#" class="link-dark rounded">Academic</a></li>
                                 <li><a href="#" class="link-dark rounded">General</a></li>
@@ -52,10 +74,28 @@
                     </li>
 
                     <li>
-                        <a href="#" class="nav-link link-dark">
-                          {# TO DO Add icon img#}
-                          Results
+                    <li class="nav-item";>
+                        <a class="nav-item collapsed" data-bs-toggle="collapse" data-bs-target="#results-collapse" aria-expanded="false">
+                            <img id = "trophy_img" src= "/static/img/trophy_dashboard.svg" alt "Trophy"; style="width: 26px; height: 24px;" onclick="changeImage3()">
+                            <script>
+                                function changeImage3(){
+                                    let displayImage = document.getElementById("trophy_img")
+                                if(displayImage.src.match("/static/img/trophy_dashboard.svg")) {
+                                    displayImage.src = "/static/img/trophy1_dashboard.svg"
+                                }   else {
+                                    displayImage.src="/static/img/trophy_dashboard.svg"
+                                }                         
+                            }
+                            </script>
+                            
+                            <span style="font-size:16px; vertical-align: middle; color:black; margin-left: 4px;">Results</span>
                         </a>
+                        <div class="collapse" id="results-collapse" style="margin-left: 20px;">
+                            <ul class="">
+                                <li><a href="#" class="link-dark rounded">Personal</a></li>
+                                <li><a href="#" class="link-dark rounded">Global</a></li>
+                            </ul>
+                        </div>
                     </li>
 
                 </ul>
@@ -70,7 +110,8 @@
                         {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
 
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 35px; color: white; text-align: center;">{{ num_hours}} <br>Time spent</span>
+                            <span style="font-size: 40px; color: white; text-align: center;position: absolute;">{{ num_hours}}</span>
+                                <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Tasks Completed</span>   
                         </div>
                     </div>
                 </div>
@@ -78,16 +119,17 @@
                 <div class="col-md-4 mt-md-0 mt-4">
                     <div class="d-flex card-dashboard gradient-purple">
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 35px; color: white; text-align: center;">{{ num_tasks}} <br> Tasks completed</span>
-                        
-                        </div>
+                            <span style="font-size: 40px; color: white; text-align: center; position: absolute;">{{ num_tasks}} </span>
+                                <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Tasks completed</span>   
+                            </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 mt-md-0 mt-4">
                     <div class="d-flex card-dashboard gradient-green">
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 35px; color: white; text-align: center;">{{ tasks_correct_responses }} % <br>Correct Responses</span>
+                            <span style="font-size: 40px; color: white; text-align: center; position:absolute;">{{ tasks_correct_responses }} % </span>
+                                <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Correct Responses</span>
                         </div>
                     </div>
                 </div>
@@ -120,6 +162,6 @@
         </div>
 
     </div>
-
+    </body>
 
 {% endblock %}
