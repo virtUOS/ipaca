@@ -9,6 +9,14 @@
     {% include 'learning_environment/partials/sc.html' %}
 {% elif task.interaction == 'MC' %}
     {% include 'learning_environment/partials/mc.html' %}
+{% elif task.interaction == 'SHORT' %}
+    {% include 'learning_environment/partials/short.html' %}
+{% elif task.interaction == 'MARK' %}
+    {% include 'learning_environment/partials/mark.html' %}
+{% elif task.interaction == 'GAP' %}
+    {% include 'learning_environment/partials/gap.html' %}
+{% elif task.interaction == 'SHORT_SNIPPETS' %}
+    {% include 'learning_environment/partials/short.html' %}
 {% endif %}
 
 {% endblock %}

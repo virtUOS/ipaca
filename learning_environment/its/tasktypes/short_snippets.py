@@ -121,24 +121,23 @@ class ShortTask():
 
         """
         
-        no_error_feedbacks = "Congratulations! There was no mistake." 
-        error_feedback = "You had " + errortypes['spelling'] +" spelling errors and " + errortypes['grammar'] +" gramar errors."
-
-        if errortypes['grammar'] > 0:
-            extra_feedback = "You had a in the following word"  
-
-        for i in range(len(self.task.content)):  # iterate over list of text parts and gaps
-            for o in self.task.content[i]['options']:
-                o['answer'] = right_answer 
-                
-                o['feedback'] = feedback
-
-
-        if user_answer != right_answer:
-            analysis['solved'] = False
-            context['mode'] = "result"  # display to try again
-        else:
+         
+       #error_feedback = "You had " + errortypes['spelling'] +" spelling errors and " + errortypes['grammar'] +" gramar errors."
+        if sum(errortypes.values()) == 0 :
+            feedback = "Congratulations! There was no mistake."
             analysis['solved'] = True
+        
+        else:
+            feedback = ""  
+            for errortype in s_error:
+                if errortype > 0:
+                    feedback = "You had an error"
+                    analysis['solved'] = False
+                    context['mode'] = "result" 
+        
+        context['feedback'] = feedback # display to try again 
+                
+
 
          #It is the funniest task
 

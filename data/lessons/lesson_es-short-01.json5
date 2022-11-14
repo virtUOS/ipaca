@@ -5,6 +5,9 @@
   author: "Emilly Sidaine",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
   text: "Snippets: It, is, funnier, the, funniest, tree, task",
+  text_source: "Emilly Sidaine",
+  text_licence: "CC0",
+  text_url: "http://www.virtuos.uos.de",
   tasks: [  // the list of tasks for this lesson
     { // task 1: snippets task
       name:  "Snippets",
@@ -14,7 +17,7 @@
       show_lesson_text: true,  // Shall we show the lesson reading text? true/false
       question:  "Write a correct sentence with the help of the given snippets",  // the question to be displayed
       answer: ""
-      feedback: ""
+
     },  // end of task 1
   ],  // end of list of tasks
 } // end of lesson
