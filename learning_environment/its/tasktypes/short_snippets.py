@@ -76,10 +76,6 @@ class ShortTask():
         print("right: ")
         print(right_answer)
         tokenized_right_answer = nltk.word_tokenize(right_answer)
-        print("tok_right: ")
-        print(tokenized_right_answer)
-        print("tok_user: ")
-        print(tokenized_user_answer)
 
 
         if(len(tokenized_user_answer) == len(tokenized_right_answer)):
@@ -99,7 +95,7 @@ class ShortTask():
 
 
 
-        """
+        
         #lemmatize: 
         lemmatized_user_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_user_answer]
         lemmatized_right_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_right_answer]
@@ -110,25 +106,25 @@ class ShortTask():
         print(lemmatized_right_answer)
 
         #check whether all words in the solution are also in the user solution
-        all_in = True
-        while all_in == True:
-            for word in lemmatized_right_answer:
-                if word not in lemmatized_user_answer:
-                    all_in = False
-        
-        print("all_in: ")
-        print(all_in)
+        snippets_in = 0
+        enough_words_used = True
+        for word in word_snippets:
+            if word in lemmatized_user_answer:
+                snippets_in += 1
+        if snippets_in < 3:
+            enough_words_used = False
 
-        """
+    
+        print("enough words used? ")
+        print(enough_words_used)
         
          
        #error_feedback = "You had " + errortypes['spelling'] +" spelling errors and " + errortypes['grammar'] +" gramar errors."
-        if sum(errortypes.values()) == 0 :
+        if errortypes['spelling'] + errortypes['grammar'] == 0 :
             feedback = "Congratulations! There was no mistake."
             analysis['solved'] = True
         
-        else:
-            feedback = ""  
+        else:  
             for errortype in s_error:
                 if errortype > 0:
                     feedback = "You had an error"
