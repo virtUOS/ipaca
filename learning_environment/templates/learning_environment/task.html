@@ -49,6 +49,10 @@
                                 <p class="card-text" style="color:red">{{ msg }}</p>
                             {% endif %}
                             {% if task.show_lesson_text %}
+                            {% if task.interaction == 'SHORT_SNIPPETS' %}
+                                <div class="lesson-text">
+                                    <p style="padding: 10px; border: 2px solid black;">{{ task.lesson.text | safe }}</p>
+                            {%else%}
                                 <div class="lesson-text">
                                     <blockquote>
                                         {{ task.lesson.text | safe }}
@@ -56,6 +60,7 @@
                                     </blockquote>
                                 </div>
                                 <h4>Lesson reading text</h4>
+                            {% endif %}
                             {% endif %}
                             {% include task.get_template %}
                             {% if mode == 'result' %}
