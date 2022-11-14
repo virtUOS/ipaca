@@ -15,6 +15,7 @@ import learning_environment.its.tasktypes.mc as mc
 import learning_environment.its.tasktypes.gap as gap
 import learning_environment.its.tasktypes.mark as mark
 import learning_environment.its.tasktypes.short as short
+import learning_environment.its.tasktypes.short_snippets as short_snippets
 import learning_environment.its.tasktypes.my_smart_gap as smartgap
 
 # short names of active task types and their classes
@@ -23,7 +24,8 @@ _TASK_TYPES = {'SC': sc.SCTask,
               'GAP': gap.GapTask,
               'SMARTGAP': smartgap.GapTask,
               'MARK': mark.MarkTask,
-              'SHORT': short.ShortTask}
+              'SHORT': short.ShortTask,
+              'SHORT_SNIPPETS': short_snippets.ShortTask}
 
 class TaskTypeFactory:
     """Picks the proper class or creates or proper object for a given interaction type or database Task object."""
