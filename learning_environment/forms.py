@@ -9,18 +9,16 @@ import json5
 
 class CustomUserCreationForm(UserCreationForm):
     password1 = forms.CharField(
-        label='Password',
-        widget=forms.PasswordInput(attrs={'style': 'border-radius: 40px;'})
+        widget=forms.PasswordInput(attrs={'style': 'border-radius: 40px;', 'placeholder': 'Password'})
     )
     password2 = forms.CharField(
-        label='Password Confirmation',
-        widget=forms.PasswordInput(attrs={'style': 'border-radius: 40px;'})
+        widget=forms.PasswordInput(attrs={'style': 'border-radius: 40px;', 'placeholder': 'Password Confirmation'})
     )
     class Meta:
         model = User
         fields = ('username', 'password1', 'password2')
         widgets = {
-            'username': forms.TextInput(attrs={'style': 'border-radius: 40px;'}),
+            'username': forms.TextInput(attrs={'style': 'border-radius: 40px;', 'placeholder': 'Username'}),
         }
 
 class LessonCreationForm(forms.Form):

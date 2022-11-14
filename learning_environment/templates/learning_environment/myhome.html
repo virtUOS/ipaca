@@ -70,7 +70,7 @@
                         {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
 
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            Time spent
+                            <span style="font-size: 35px; color: white; text-align: center;">{{ num_hours}} <br>Time spent</span>
                         </div>
                     </div>
                 </div>
@@ -78,8 +78,8 @@
                 <div class="col-md-4 mt-md-0 mt-4">
                     <div class="d-flex card-dashboard gradient-purple">
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 40px;">{{ num_tasks }}</span>
-                            <span> Tasks completed</span>
+                            <span style="font-size: 35px; color: white; text-align: center;">{{ num_tasks}} <br> Tasks completed</span>
+                        
                         </div>
                     </div>
                 </div>
@@ -87,8 +87,7 @@
                 <div class="col-md-4 mt-md-0 mt-4">
                     <div class="d-flex card-dashboard gradient-green">
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 40px;">{{ tasks_correctness }}% </span>
-                            <span> Correctness </span>
+                            <span style="font-size: 35px; color: white; text-align: center;">{{ tasks_correctness }} % <br>Correct Responses</span>
                         </div>
                     </div>
                 </div>
@@ -99,22 +98,43 @@
 
                 <div class="card" style="margin-top:10px; border-radius:15px">
                     <div class="me-auto">
-                        <h4> Tasks </h4>
+                        <h4>  Review Tasks </h4>
                     </div>
 
                     <div class="justify-content-between" >
-                        <ul class="ul-3col">
-                            <li class="list-group-item">TASK NAME</li>
-                            <li class="list-group-item">PERCENTAGE</li>
-                            <li class="list-group-item">ACTION BUTTON</li>
-                        </ul>
-                        <ul class="ul-3col">
-                            <li class="list-group-item">TASK NAME</li>
-                            <li class="list-group-item">PERCENTAGE</li>
-                            <li class="list-group-item">ACTION BUTTON</li>
-                        </ul>
+
+                            {% for solution in wrong_solutions %}
+
+                                <ul class="ul-3col">
+                                    <li class="list-group-item">{{ solution.task.lesson.lesson_id }}</li>
+                                    <li class="list-group-item">
+                                        <a href="{% url 'practice' %}" style="margin: 1vh">Practice</a>
+                                    </li>
+                                </ul>
+
+                            {% endfor %}
                     </div>
+
+                    <div class="justify-content-between" >
+                        <div class="me-auto">
+                        <h4>  New Tasks </h4>
+                    </div>
+                        <ul class="ul-3col">
+                            <li class="list-group-item">TASK NAME</li>
+                            <li class="list-group-item">PERCENTAGE</li>
+                            <li class="list-group-item">ACTION BUTTON</li>
+                        </ul>
+                        <ul class="ul-3col">
+                            <li class="list-group-item">TASK NAME</li>
+                            <li class="list-group-item">PERCENTAGE</li>
+                            <li class="list-group-item">ACTION BUTTON</li>
+                        </ul>
+
+                    </div>
+
+
                 </div>
+
 
         </div>
 
