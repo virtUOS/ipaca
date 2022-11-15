@@ -1,6 +1,7 @@
 #from learning_environment.its.base import Json5ParseException
-#nltk.download('punkt')
+
 import nltk 
+#nltk.download('punkt')
 from nltk.stem import WordNetLemmatizer
 from spellchecker import SpellChecker
 from happytransformer import HappyTextToText, TTSettings
