@@ -1,0 +1,61 @@
+// lesson 2
+// level A1-A2
+// paraphrase tasks
+{
+    name: "SHORT_A_Tryout",
+    id: "lesson-slot-222",
+    author: "Fabienne Finas",
+    version: 1,
+    series: "Adaptive Pretest",
+    text: "Paraphrase the last sentence. Use the words given in brackets. You don't have to use punctuation marks at the end of the sentence. e.g. She lives in a house. It's in front of the park. (near) Answer: It's near the park",
+    text_source: "Group 7",
+    text_licence: "CC0",
+    text_url: "http://ipaca.de",
+    tasks: [  // the list of tasks for this lesson
+      { // task 1
+        name:  "Paraphrase 01",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: true,
+        question:  "It's Anna's birthday on Friday. I have to get a present. (must)",
+        answer: "I must get a present"
+      },
+      { // task 2
+        name:  "Paraphrase 02",
+        type: "GS",
+        interaction: "SHORT",
+        primary: true,
+        show_lesson_text: true,
+        question:  "I felt really tired, so I stayed at home. (because)",
+        answer: "I stayed at home because I felt really tired"
+      },
+      { // task 3
+        name:  "Paraphrase 03",
+        type: "GS",
+        interaction: "SHORT",
+        primary: true,
+        show_lesson_text: true,
+        question:  "She lives in a house. It's in front of the park. (near)",
+        answer: "It's near the park"
+      },
+      { // task 4
+        name:  "Paraphrase 04",
+        type: "GS",
+        interaction: "SHORT",
+        primary: true,
+        show_lesson_text: true,
+        question:  "We ate dinner at a restaurant yesterday. We had fish and chips. (enjoy)",
+        answer: "We enjoyed some fish and chips"
+      },
+      { // task 5
+        name:  "Paraphrase 05",
+        type: "GS",
+        interaction: "SHORT",
+        primary: true,
+        show_lesson_text: true,
+        question:  "He usually wears a red sweater. (to like)",
+        answer: "He usually likes to wear a red sweater."
+      }
+    ],  // end of list of tasks
+  } // end of lesson

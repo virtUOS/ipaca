@@ -1,0 +1,69 @@
+{
+    name: "important cell organelles",
+    id: "lesson-xyz-001",
+    author: "Fabienne Finas",
+    version: 1,
+    text: "Cell organelles are the subunits of cells. A few well-known ones include the Mitochondrion, the Nucleus, and the Ribosome. The Mitochondrion is the powerhouse of the cell. The Nucleus contains the genome. The Ribosome is responsible for protein synthesis.",
+    text_source: "Anonymous",
+    text_licence: "CC0",
+    text_url: "http://ipaca.de",
+    tasks: [
+      {
+        name:  "What is a cell organelle?",
+        type: "R",
+        interaction: "SC",
+        primary: true,
+        show_lesson_text: true,
+        question:  "Which of the following claims is correct?",
+        choices: [
+          {
+            text:  "A cell organelle is a subunit of the cell",
+            correct: true,
+            feedback:  "You got it!"
+          },
+          {
+            text:  "A cell organelle is a protein",
+            correct: false,
+            feedback:  "No. No. No. Proteins are amino acid chains that are synthesized by the ribosome."
+          },
+          {
+            text:  "A cell organelle is a fluid",
+            correct: false,
+            feedback:  "AAAARGH! No."
+          }
+        ]
+      },
+      {
+      name: "Pick the correct cell organelles",
+      type: "V",
+      interaction: "GAP",
+      primary: true,
+      show_lesson_text: false,
+      question: "The _1_ contains the genome. The _2_ is the powerhouse of the cell. The _3_ is responsible for protein synthesis.",
+      gaps: {
+        mode: "select",
+          _1_: [
+              { text: "Ribosome", correct: false, feedback: "No, but it has to do with amino acid sequences as well." },
+              { text: "Golgi", correct: false, feedback: "No, that's not its function."},
+              { text: "Nucleus", correct: true, feedback: "Ah, yes. The good old genome container. A fine choice!" },
+              { text: "Mitochondrion", correct: false, feedback: "No. Less power, more containing, my friend." },
+              { text: "Lysosome", correct: false, feedback: "No, that's the waste disposal system."}
+          ],
+          _2_ : [
+              { text: "Ribosome", correct: false, feedback: "No. More power, less synthesizing." },
+              { text: "Golgi", correct: false, feedback: "Argh... No, that's not its function."},
+              { text: "Nucleus", correct: false, feedback: "No! Ditch the container! Aerobic respiration, that's the good stuff!" },
+              { text: "Mitochondrion", correct: true, feedback: "Ah, yes. I see you are a person of culture as well. Look at you, knowing biology classics. Well chosen!" },
+              { text: "Lysosome", correct: false, feedback: "No, that's the waste disposal system."}
+          ],
+          _3_:  [
+              { text: "Ribosome", correct: true, feedback: "Yes! The synthesizer (not the electrophone ;) )!" },
+              { text: "Golgi", correct: false, feedback: "No, that's not its function."},
+              { text: "Nucleus", correct: false, feedback: "No, more RNA less DNA" },
+              { text: "Mitochondrion", correct: false, feedback: "No. No. No. Production yes, but not of energy." },
+              { text: "Lysosome", correct: false, feedback: "No, that's the waste disposal system."}
+          ]
+      }
+      }
+   ]
+}
