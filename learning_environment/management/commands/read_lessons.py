@@ -22,3 +22,4 @@ class Command(BaseCommand):
                 num_lessons_created += 1
 
         self.stdout.write(self.style.SUCCESS('Successfully created {} lessons.'.format(num_lessons_created)))
+        
