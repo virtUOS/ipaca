@@ -14,7 +14,7 @@
 
             <div class="card text-center shadow rounded">
         <div class="card-header">
-            <h1> iPaca: learning academic english</h1>
+            <h1> iPaca: learning academic engrish :></h1>
         </div>
                 <div class="card-body">
                     <p class="card-text">
@@ -38,6 +38,7 @@
                                     <a class="btn btn-primary" href="{% url 'practice' %}" style="margin: 1vh">{{ level.lesson_id }}</a>
                                 {% elif forloop.counter0 < current_level %}
                                 {% elif forloop.counter0 < current_level %}
+                                <!-- <p>Lesson author: {{level.author}}</p> -->
                                     <button class="btn btn-success" style="margin: 1vh">{{ level.lesson_id }}</button>
                                 {% else %}
                                     <button class="btn btn-outline-secondary" disabled style="margin: 1vh">{{ level.lesson_id }}</button>

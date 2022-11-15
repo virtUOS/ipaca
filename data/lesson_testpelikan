@@ -1,0 +1,32 @@
+// Lesson ap-007_A
+// a lesson 7A.
+{
+  name: "NAME OF LESSON 7_A",  // the name that's also shown to the users
+  id: "lesson-slot-007_A",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Adriane Pelikan",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p> Many students find it easier to learn music theory when they practice a lot. In other words, physically creating sounds by playing a musical instrument (such as the piano) helps you to better visualize and listen to the music you are writing down or studying.\ This allows students to understand the relationship between different steps more quickly. <p> 
+  When you sit at the piano, it is important to sit up straight, keeping your head over your shoulders, which should be kept down. Your elbows should be a comfortable distance from your body, and your fingers should remain arched (as if you were pulling a library book off of a shelf). Keep your knees and wrists flexible (not stiff), and keep your feet flat on the ground unless you are using the pedals. 
+  Learning to play notes on the piano is one easy way to be with music in touch. You may find access to a piano keyboard (acoustic or electronic) at your school. Another option is to download a free piano app that you can play on your phone, such as Tiny Piano. Notice that the keyboard has both white keys and black keys. The black keys are grouped into sets of either three or two.
+  <p>",
+  text_source: "Open music theory - part 2",
+  text_licence: "CC BY",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/open-music-theory",
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "NAME OF TASK 7.R.7a",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Read the text and mark which statements are true(T) or false(F):",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "To learn music theory, many students prefer to read a lot ", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "To better visualize the music it is important to practice a lot ", correct: true, feedback: "This answer is correct\" },
+          { text: "The keyboard has both red keys and green keys  ", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "You can download a piano app for some money ", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "You need to sit up straight at the piano  ", correct: true, feedback: "This answer is correct\" },
+        ]
+      }, // end of task 1 
+    ] 
