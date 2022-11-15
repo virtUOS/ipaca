@@ -24,6 +24,8 @@
   text_source: "unknown - TODO",
   text_licence: "unknown - TODO",
   text_url: "unknown - TODO",
+  introduction: "",  // optional introductory text for the lesson's start page TODO
+  conclusion: "", // optional concluding text for the lesson's wrap up page TODO
     tasks: [  // the list of tasks for this lesson
       {
         // task 1: primary reading task
