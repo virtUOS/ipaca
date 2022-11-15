@@ -115,7 +115,8 @@
             interaction: "GAP", 
             primary: true, 
             show_lesson_text: false, 
-            question: "I can't talk. I _1_ (to do) my homework right now.",
+            question: "<p>I can't talk. I _1_ (to do) my homework right now.</p>\
+            <p>Hallo</p>\",
             gaps: {
                 mode: 'fillin',
                 _1_: [ 
