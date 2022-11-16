@@ -1,11 +1,12 @@
 {% extends "learning_environment/base.html" %}
 {% block content %}
 
-<body id="myhome">
-    <header class="navbar">
+<body id="myhome" style="background-color:#f8f9fa;">
+    <header class="navbar" style="background-color: white;">
         <div class="navbar me-auto">
             <a class="navbar-brand" href="{% url 'home' %}">
                 <span><img src="/static/img/logo.svg" class="img-fluid"></span> </a>
+            <input type="text" placeholder="Search" style="border-radius: 15px; border: none; background-color:#f8f9fa; height:40px; width:250px; margin-left:260px;margin-top: 20px; padding:20px;">
         </div>
     
         <div class="navbar ms-auto">
@@ -36,7 +37,7 @@
 <div class="container-fluid" style="background: #F9F9FB;">
     <div class="row">
 
-        <nav class="col-3" style="background:white">
+        <nav class="col-3" style="background:white; margin-top: -12px;">
             <div class="d-flex flex-column flex-shrink-0 p-3" style=" width: 25vw;">
 
                 <ul class="nav nav-pills flex-column mb-auto">
@@ -56,6 +57,7 @@
                         {# <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> #}
                         <span style="font-size:16px; vertical-align: middle; margin-left: 3px;"> Dashboard</span>
                         </a>
+        
                     </li>
 
                     <li class="nav-item";>
@@ -99,6 +101,7 @@
                             
                             <span style="font-size:16px; vertical-align: middle; color:black; margin-left: 4px;">Results</span>
                         </a>
+
                         <div class="collapse" id="results-collapse" style="margin-left: 20px;">
                             <ul class="">
                                 <li><a href="#" class="link-dark rounded">Personal</a></li>
@@ -110,12 +113,12 @@
                 </ul>
             </div>
         </nav>
-
-        <div class="col">
+        <div class="col" style="margin-left: 10px;">
             {# Dashboard cards #}
+            <div class="card" style="margin-top:10px; border-radius:15px; width: auto; padding-left: 25px; padding-top: 25px; padding-bottom: 25px; border: none">
             <div class="row" style="margin-top:10px">
                 <div class="col-md-4 mt-md-0">
-                    <div class="d-flex card-dashboard gradient-yellow">
+                    <div class="d-flex card-dashboard gradient-yellow" style="width:300px; margin-left: 24px;">
                         {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
 
                         <div class="d-flex card-body align-items-center justify-content-center">
@@ -126,7 +129,7 @@
                 </div>
 
                 <div class="col-md-4 mt-md-0 mt-4">
-                    <div class="d-flex card-dashboard gradient-purple">
+                    <div class="d-flex card-dashboard gradient-purple" style="width:300px; margin-left: 3%;">
                         <div class="d-flex card-body align-items-center justify-content-center">
                             <span style="font-size: 40px; color: white; text-align: center; position: absolute;">{{ num_tasks}} </span>
                                 <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Tasks completed</span>   
@@ -135,21 +138,22 @@
                 </div>
 
                 <div class="col-md-4 mt-md-0 mt-4">
-                    <div class="d-flex card-dashboard gradient-green">
-                        <div class="d-flex card-body align-items-center justify-content-center">
+                    <div class="d-flex card-dashboard gradient-green" style="width:300px; margin-right: 22px; ">
+                        <div class="d-flex card-body align-items-center justify-content-center" >
                             <span style="font-size: 40px; color: white; text-align: center; position:absolute;">{{ tasks_correct_responses }} % </span>
                                 <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Correct Responses</span>
                         </div>
                     </div>
                 </div>
             </div>
+            </div>
 
             {# Display Tasks #}
 
 
-                <div class="card" style="margin-top:10px; border-radius:15px">
+                <div class="card" style="margin-top:10px; border-radius:15px; border: none;">
                     <div class="me-auto">
-                        <h4> Tasks </h4>
+                        <h4 style="padding:20px; font-weight: bold;">Reccomended Tasks </h4>
                     </div>
 
                     <div class="justify-content-between" >
