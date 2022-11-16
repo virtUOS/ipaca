@@ -2,48 +2,81 @@
 
 {% block content %}
 
-<header class="navbar">
-    <div class="navbar me-auto">
-        <a class="navbar-brand" href="{% url 'home' %}">
-            <span><img src="/static/img/logo.svg" class="img-fluid"></span> </a>
-    </div>
-
-    <div class="navbar ms-auto">
-        <div class="dropdown">
-          <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/static/img/profile_avatar.svg" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>Hello, {{ user.username }}!</strong>
-          </a>
-          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
-            <li><a class="dropdown-item ms-auto" href="{% url 'logout' %}">Log out</a></li>
-          </ul>
+<body id="myhome" style="background-color:#f8f9fa;">
+    <header class="navbar" style="background-color: white;">
+        <div class="navbar me-auto">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <span><img src="/static/img/logo.svg" class="img-fluid"></span> </a>
+            <input type="text" placeholder="Search" style="border-radius: 15px; border: none; background-color:#f8f9fa; height:40px; width:250px; margin-left:260px;margin-top: 20px; padding:20px;">
         </div>
-    </div>
-</header>
+
+        <div class="navbar ms-auto">
+            <div class="dropdown">
+                <img src = "/static/img/drop_down_icon.svg" style=" position: fixed; top: 60px; right: 35px;"data-bs-toggle="dropdown" aria-expanded="false">
+                <strong>Hello, {{ user.username }}!</strong>
+                <img src="/static/img/profile_avatar.svg" alt="" style=" width: 32px; height:32; margin-right: 50px; class:"rounded-circle me-2">
+              </a>
+              <ul class="dropdown-menu text-small shadow" style="width: 170px; border-radius: 10px; padding-left: 15px; padding-top: 10px;" aria-labelledby="dropdownUser2">
+                <img src = "/static/img/drop_down_icon2.svg" style=" position: fixed; top: 90px; right: 25px;"data-bs-toggle="dropdown" aria-expanded="false">
+                <strong>Hello, {{ user.username }}!</strong>
+                <img src="/static/img/profile_avatar.svg" alt="" style="width: 32px; height:32; margin-right: 40px; class:"rounded-circle me-2">
+                <li><a class="logout" href="{% url 'logout' %}" style=" margin: 15px; border-radius: 50px !important; color:white;"><img src = "/static/img/exit_icon.svg" style="margin-right: 5px;"> Logout</a></li>
+              </ul>
+              <style>
+                .logout{
+                    background-color:#D9D9D9;
+                }
+                .logout:hover{
+                    background-color: #1C009C!important;
+                }
+              </style>
+            </div>
+        </div>
+    </header>
 
 
 <div class="container-fluid" style="background: #F9F9FB;">
     <div class="row">
 
-        <nav class="col-3" style="background:white">
+        <nav class="col-3" style="background:white; margin-top: -12px;">
             <div class="d-flex flex-column flex-shrink-0 p-3" style=" width: 25vw;">
 
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
                         <a href="#" class="nav-link link-dark" aria-current="page">
-                        {# TO DO Add icon img#}
+                        <img id ="dash_img" src= "/static/img/dashb_icon.svg" alt "Dashboard" style ="margin-left: 2px; width: 26px; height: 24px;" onclick="changeImage()">
+                        <script>
+                            function changeImage(){
+                                let displayImage = document.getElementById("dash_img")
+                            if(displayImage.src.match("/static/img/dashb_icon.svg")) {
+                                displayImage.src = "/static/img/dashb1_icon.svg"
+                            } else {
+                                displayImage.src="/static/img/dashb_icon.svg"
+                            }
+                        }
+                        </script>
                         {# <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> #}
-                        My Home
+                        <span style="font-size:16px; vertical-align: middle; margin-left: 3px;"> Dashboard</span>
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-item collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-                            {# TO DO Add icon img#}
-                            Tasks
+                    <li class="nav-item";>
+                        <a class="nav-item collapsed" data-bs-toggle="collapse" data-bs-target="#tasks-collapse" aria-expanded="false">
+                            <img id ="book_img" src= "/static/img/book_dashboard.svg" alt "Book" ; style ="width: 26px; height: 24px;" onclick="changeImage2()">
+                            <script>
+                                function changeImage2(){
+                                    let displayImage = document.getElementById("book_img")
+                                if(displayImage.src.match("/static/img/book_dashboard.svg")) {
+                                    displayImage.src = "/static/img/book1_dash.svg"
+                                }   else {
+                                    displayImage.src="/static/img/book_dashboard.svg"
+                                }
+                            }
+                            </script>
+                            <span style="font-size:16px; vertical-align: middle; color:black; margin-left: 4px;"> Tasks </span>
                         </a>
 
-                        <div class="collapse" id="dashboard-collapse" style="">
+                        <div class="collapse" id="tasks-collapse" style="margin-left: 20px;">
                             <ul class="">
                                 <li><a href="#" class="link-dark rounded">Academic</a></li>
                                 <li><a href="#" class="link-dark rounded">General</a></li>
@@ -52,52 +85,75 @@
                     </li>
 
                     <li>
-                        <a href="#" class="nav-link link-dark">
-                          {# TO DO Add icon img#}
-                          Results
+                    <li class="nav-item";>
+                        <a class="nav-item collapsed" data-bs-toggle="collapse" data-bs-target="#results-collapse" aria-expanded="false">
+                            <img id = "trophy_img" src= "/static/img/trophy_dashboard.svg" alt "Trophy"; style="width: 26px; height: 24px;" onclick="changeImage3()">
+                            <script>
+                                function changeImage3(){
+                                    let displayImage = document.getElementById("trophy_img")
+                                if(displayImage.src.match("/static/img/trophy_dashboard.svg")) {
+                                    displayImage.src = "/static/img/trophy1_dash.svg"
+                                }   else {
+                                    displayImage.src="/static/img/trophy_dashboard.svg"
+                                }
+                            }
+                            </script>
+
+                            <span style="font-size:16px; vertical-align: middle; color:black; margin-left: 4px;">Results</span>
                         </a>
+
+                        <div class="collapse" id="results-collapse" style="margin-left: 20px;">
+                            <ul class="">
+                                <li><a href="#" class="link-dark rounded">Personal</a></li>
+                                <li><a href="#" class="link-dark rounded">Global</a></li>
+                            </ul>
+                        </div>
                     </li>
 
                 </ul>
             </div>
         </nav>
-
-        <div class="col">
+        <div class="col" style="margin-left: 10px;">
             {# Dashboard cards #}
+            <div class="card" style="margin-top:10px; border-radius:15px; width: auto; padding-left: 25px; padding-top: 25px; padding-bottom: 25px; border: none">
             <div class="row" style="margin-top:10px">
                 <div class="col-md-4 mt-md-0">
-                    <div class="d-flex card-dashboard gradient-yellow">
+                    <div class="d-flex card-dashboard gradient-yellow" style="width:300px; margin-left: 24px;">
                         {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
 
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 35px; color: white; text-align: center;">{{ num_hours}} <br>Time spent</span>
+                            <span style="font-size: 40px; color: white; text-align: center;position: absolute;">{{ num_hours}}</span>
+                                <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Tasks Completed</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 mt-md-0 mt-4">
-                    <div class="d-flex card-dashboard gradient-purple">
+                    <div class="d-flex card-dashboard gradient-purple" style="width:300px; margin-left: 3%;">
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 35px; color: white; text-align: center;">{{ num_tasks}} <br> Tasks completed</span>
-                        
-                        </div>
+                            <span style="font-size: 40px; color: white; text-align: center; position: absolute;">{{ num_tasks}} </span>
+                                <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Tasks completed</span>
+                            </div>
                     </div>
                 </div>
 
                 <div class="col-md-4 mt-md-0 mt-4">
-                    <div class="d-flex card-dashboard gradient-green">
-                        <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 35px; color: white; text-align: center;">{{ tasks_correctness }} % <br>Correct Responses</span>
+                    <div class="d-flex card-dashboard gradient-green" style="width:300px; margin-right: 22px; ">
+                        <div class="d-flex card-body align-items-center justify-content-center" >
+                            <span style="font-size: 40px; color: white; text-align: center; position:absolute;">{{ tasks_correct_responses }} % </span>
+                                <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Correct Responses</span>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
 
             {# Display Tasks #}
 
 
-                <div class="card" style="margin-top:10px; border-radius:15px">
+                <div class="card" style="margin-top:10px; border-radius:15px; border: none;">
                     <div class="me-auto">
+                        <h4 style="padding:20px; font-weight: bold;">Reccomended Tasks </h4>
                         <h4>  Review Tasks </h4>
                     </div>
 
@@ -129,18 +185,14 @@
                             <li class="list-group-item">PERCENTAGE</li>
                             <li class="list-group-item">ACTION BUTTON</li>
                         </ul>
-
                     </div>
-
-
                 </div>
-
 
         </div>
 
         </div>
 
     </div>
-
+    </body>
 
 {% endblock %}
