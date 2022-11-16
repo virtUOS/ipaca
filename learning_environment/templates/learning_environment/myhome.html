@@ -4,24 +4,25 @@
 </head>
 
 <body id="myhome">
-<header class="navbar">
-    <div class="navbar me-auto">
-        <a class="navbar-brand" href="{% url 'home' %}">
-            <span><img src="/static/img/logo.svg" class="img-fluid"></span> </a>
-    </div>
-
-    <div class="navbar ms-auto">
-        <div class="dropdown">
-          <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/static/img/profile_avatar.svg" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>Hello, {{ user.username }}!</strong>
-          </a>
-          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-            <li><a class="dropdown-item ms-auto" href="{% url 'logout' %}">Log out</a></li>
-          </ul>
+    <header class="navbar">
+        <div class="navbar me-auto">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <span><img src="/static/img/logo.svg" class="img-fluid"></span> </a>
         </div>
-    </div>
-</header>
+    
+        <div class="navbar ms-auto">
+            <div class="dropdown">
+                <img src = "/static/img/drop_down_icon.svg" style=" position: fixed; top: 60px; right: 35px;"data-bs-toggle="dropdown" aria-expanded="false">
+                <strong>Hello, {{ user.username }}!<a style="padding:8px;"> </a></strong>
+                <img src="/static/img/profile_avatar.svg" alt="" style=" width: 32px; height:32; margin-right: 50px; class="rounded-circle me-2">
+              </a>
+              <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item ms-auto" href="{% url 'logout' %}">Log out</a></li>
+
+              </ul>
+            </div>
+        </div>
+    </header>
 
 
 <div class="container-fluid" style="background: #F9F9FB;">
