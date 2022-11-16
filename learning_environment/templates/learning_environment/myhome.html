@@ -43,36 +43,16 @@
 
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link link-dark" aria-current="page">
-                        <img id ="dash_img" src= "/static/img/dashb_icon.svg" alt "Dashboard" style ="margin-left: 2px; width: 26px; height: 24px;" onclick="changeImage()">
-                        <script>
-                            function changeImage(){
-                                let displayImage = document.getElementById("dash_img")
-                            if(displayImage.src.match("/static/img/dashb_icon.svg")) {
-                                displayImage.src = "/static/img/dashb1_icon.svg"
-                            } else {
-                                displayImage.src="/static/img/dashb_icon.svg"
-                            }
-                        }
-                        </script>
+                        <a href="#" class="nav-item i-plain" aria-current="page">
+                            <i class="bi bi-columns-gap" style="font-size:16px;"></i>
                         {# <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> #}
-                        <span style="font-size:16px; vertical-align: middle; margin-left: 3px;"> Dashboard</span>
+                        <span style="font-size:16px; color:black; vertical-align: middle; margin-left: 4px;"> My Home</span>
                         </a>
                     </li>
 
-                    <li class="nav-item";>
-                        <a class="nav-item collapsed" data-bs-toggle="collapse" data-bs-target="#tasks-collapse" aria-expanded="false">
-                            <img id ="book_img" src= "/static/img/book_dashboard.svg" alt "Book" ; style ="width: 26px; height: 24px;" onclick="changeImage2()">
-                            <script>
-                                function changeImage2(){
-                                    let displayImage = document.getElementById("book_img")
-                                if(displayImage.src.match("/static/img/book_dashboard.svg")) {
-                                    displayImage.src = "/static/img/book1_dash.svg"
-                                }   else {
-                                    displayImage.src="/static/img/book_dashboard.svg"
-                                }
-                            }
-                            </script>
+                    <li class="nav-item">
+                        <a class="nav-item i-plain" data-bs-toggle="collapse" data-bs-target="#tasks-collapse" aria-expanded="false">
+                            <i class="bi bi-book" style="font-size:16px;"></i>
                             <span style="font-size:16px; vertical-align: middle; color:black; margin-left: 4px;"> Tasks </span>
                         </a>
 
@@ -85,21 +65,10 @@
                     </li>
 
                     <li>
-                    <li class="nav-item";>
-                        <a class="nav-item collapsed" data-bs-toggle="collapse" data-bs-target="#results-collapse" aria-expanded="false">
-                            <img id = "trophy_img" src= "/static/img/trophy_dashboard.svg" alt "Trophy"; style="width: 26px; height: 24px;" onclick="changeImage3()">
-                            <script>
-                                function changeImage3(){
-                                    let displayImage = document.getElementById("trophy_img")
-                                if(displayImage.src.match("/static/img/trophy_dashboard.svg")) {
-                                    displayImage.src = "/static/img/trophy1_dash.svg"
-                                }   else {
-                                    displayImage.src="/static/img/trophy_dashboard.svg"
-                                }
-                            }
-                            </script>
-
-                            <span style="font-size:16px; vertical-align: middle; color:black; margin-left: 4px;">Results</span>
+                    <li class="nav-item">
+                        <a class="nav-item  i-plain" data-bs-toggle="collapse" data-bs-target="#results-collapse" aria-expanded="false">
+                            <i class="bi bi-trophy" style="font-size:16px;"></i>
+                            <span style="font-size:16px; color: black; vertical-align: middle; margin-left: 4px;">Results</span>
                         </a>
 
                         <div class="collapse" id="results-collapse" style="margin-left: 20px;">
@@ -122,8 +91,8 @@
                         {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
 
                         <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 40px; color: white; text-align: center;position: absolute;">{{ num_hours}}</span>
-                                <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Tasks Completed</span>
+                            <span style="font-size: 40px; color: white; text-align: center;position: absolute;">{# TO DO num_hours #}</span>
+                                <span style ="font-size: 20px; color: black; text-align:center; position: relative; padding-top: 70px;">Hours spent</span>
                         </div>
                     </div>
                 </div>
@@ -140,7 +109,7 @@
                 <div class="col-md-4 mt-md-0 mt-4">
                     <div class="d-flex card-dashboard gradient-green" style="width:300px; margin-right: 22px; ">
                         <div class="d-flex card-body align-items-center justify-content-center" >
-                            <span style="font-size: 40px; color: white; text-align: center; position:absolute;">{{ tasks_correct_responses }} % </span>
+                            <span style="font-size: 40px; color: white; text-align: center; position:absolute;">{{ tasks_correctness }} % </span>
                                 <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Correct Responses</span>
                         </div>
                     </div>
@@ -151,10 +120,9 @@
             {# Display Tasks #}
 
 
-                <div class="card" style="margin-top:10px; border-radius:15px; border: none;">
+            <div class="card" style="margin-top:10px; border-radius:15px; border: none;">
                     <div class="me-auto">
-                        <h4 style="padding:20px; font-weight: bold;">Reccomended Tasks </h4>
-                        <h4>  Review Tasks </h4>
+                        <h4 style="padding:20px; font-weight: bold;"> Review Tasks </h4>
                     </div>
 
                     <div class="justify-content-between" >
@@ -174,25 +142,26 @@
                     <div class="justify-content-between" >
                         <div class="me-auto">
                         <h4>  New Tasks </h4>
+                        </div>
+                            <ul class="ul-3col">
+                                <li class="list-group-item">TASK NAME</li>
+                                <li class="list-group-item">PERCENTAGE</li>
+                                <li class="list-group-item">ACTION BUTTON</li>
+                            </ul>
+                            <ul class="ul-3col">
+                                <li class="list-group-item">TASK NAME</li>
+                                <li class="list-group-item">PERCENTAGE</li>
+                                <li class="list-group-item">ACTION BUTTON</li>
+                            </ul>
+                        </div>
                     </div>
-                        <ul class="ul-3col">
-                            <li class="list-group-item">TASK NAME</li>
-                            <li class="list-group-item">PERCENTAGE</li>
-                            <li class="list-group-item">ACTION BUTTON</li>
-                        </ul>
-                        <ul class="ul-3col">
-                            <li class="list-group-item">TASK NAME</li>
-                            <li class="list-group-item">PERCENTAGE</li>
-                            <li class="list-group-item">ACTION BUTTON</li>
-                        </ul>
-                    </div>
-                </div>
-
-        </div>
-
         </div>
 
     </div>
+
+    </div>
+
+
     </body>
 
 {% endblock %}

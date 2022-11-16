@@ -241,3 +241,19 @@ textarea {
 .form-labels {
     display:none;
 }
+
+.i-plain {
+    color: gray;
+    border-radius: 4px;
+}
+ .i-plain:hover {
+     background-color: transparent !important;
+     color: darkblue;
+     border-left: 10px solid darkblue;
+}
+
+.i-plain:active {
+     background-color: transparent !important;
+     color: darkblue;
+     border-left: 10px solid darkblue;
+}

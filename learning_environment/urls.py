@@ -13,6 +13,8 @@ urlpatterns = [
     path('myhome/', views.myhome, name='myhome'),
     path('practice/', views.practice, name='practice'),
     path("signup/", SignUpView.as_view(), name="signup"),
+#    path('academic_english/', views.academic_tasks, name='academic_english'),
+ #   path('general_english/', views.academic_tasks, name='academic_english'),
 
     # Backstage
     path('backstage/tasklist', views.TaskListView.as_view(), name='tasklist'),
