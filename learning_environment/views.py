@@ -12,6 +12,7 @@ from .forms import *
 from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
+from .its.tutormodel_pretest import TutormodelPretest
 
 
 class SignUpView(SuccessMessageMixin, generic.CreateView):
@@ -32,7 +33,11 @@ def practice(request):
             return redirect('myhome')
         request.session['current_lesson_todo'].pop(0)  # remove the start item
         request.session.modified = True
-        tutor = Tutormodel(request.user)
+        series = request.session.get("lesson_series", "General")
+        if series == "Adaptive Pretest": # TODO nachgucken
+            tutor = TutormodelPretest(request.user) 
+        else:
+            tutor = Tutormodel(request.user)
         try:
             (state, lesson, task) = tutor.next_task(request)
         except NoTaskAvailableError:
@@ -70,7 +75,11 @@ def practice(request):
         analysis, learnermodel_context = learnermodel.update(task, request.POST)
         context.update(learnermodel_context)
         if analysis.get('solved', False):  # we solved a task, so we remove its type from the session todo list
-            request.session['current_lesson_todo'].pop(0)
+            context['solved'] = True
+            if current_lesson_series == "Adaptive Pretest":
+                request.session["current_lesson_correct"]+=1 
+            if 'current_lesson_todo' in request.session and len(request.session['current_lesson_todo']) > 0:
+                request.session['current_lesson_todo'].pop(0)
             request.session.modified = True
 
         lesson = task.lesson
@@ -83,7 +92,10 @@ def practice(request):
         lesson = task.lesson
         context['state'] = context['mode']
     else:  # fetch new task and show it
-        tutor = Tutormodel(request.user)
+        if series == "Adaptive Pretest": # TODO nachgucken
+            tutor = TutormodelPretest(request.user) 
+        else:
+            tutor = Tutormodel(request.user)
         try:
             (state, lesson, task) = tutor.next_task(request)
         except NoTaskAvailableError:
