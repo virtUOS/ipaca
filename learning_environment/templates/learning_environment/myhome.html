@@ -1,8 +1,6 @@
 {% extends "learning_environment/base.html" %}
 {% block content %}
 
-</head>
-
 <body id="myhome">
     <header class="navbar">
         <div class="navbar me-auto">
@@ -13,13 +11,20 @@
         <div class="navbar ms-auto">
             <div class="dropdown">
                 <img src = "/static/img/drop_down_icon.svg" style=" position: fixed; top: 60px; right: 35px;"data-bs-toggle="dropdown" aria-expanded="false">
-                <strong>Hello, {{ user.username }}!<a style="padding:8px;"> </a></strong>
-                <img src="/static/img/profile_avatar.svg" alt="" style=" width: 32px; height:32; margin-right: 50px; class="rounded-circle me-2">
+                <strong>Hello, {{ user.username }}!</strong>
+                <img src="/static/img/profile_avatar.svg" alt="" style=" width: 32px; height:32; margin-right: 50px; class:"rounded-circle me-2">
               </a>
-              <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                <li><a class="dropdown-item ms-auto" href="{% url 'logout' %}">Log out</a></li>
-
+              <ul class="dropdown-menu text-small shadow" style="width: 170px; border-radius: 10px; padding-left: 15px; padding-top: 10px;" aria-labelledby="dropdownUser2">
+                <img src = "/static/img/drop_down_icon2.svg" style=" position: fixed; top: 90px; right: 25px;"data-bs-toggle="dropdown" aria-expanded="false">
+                <strong>Hello, {{ user.username }}!</strong>
+                <img src="/static/img/profile_avatar.svg" alt="" style="width: 32px; height:32; margin-right: 40px; class:"rounded-circle me-2">
+                <li><a class="logout" href="{% url 'logout' %}" style=" margin: 15px; border-radius: 50px !important; color:white;"><img src = "/static/img/exit_icon.svg" style="margin-right: 5px;"> Logout</a></li>
               </ul>
+              <style>
+                .logout:hover{
+                    background-color: #1C009C!important;
+                }
+              </style>
             </div>
         </div>
     </header>
