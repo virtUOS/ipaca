@@ -7,19 +7,19 @@
         <div class="navbar me-auto">
             <a class="navbar-brand" href="{% url 'home' %}">
                 <span><img src="/static/img/logo.svg" class="img-fluid"></span> </a>
-            <input type="text" placeholder="Search" style="border-radius: 15px; border: none; background-color:#f8f9fa; height:40px; width:250px; margin-left:260px;margin-top: 20px; padding:20px;">
+            <input type="text" placeholder="Search" style="border-radius: 15px; border: none; background-color:#f8f9fa;height:40px; width:250px; margin-left:260px;margin-top: 20px; padding:20px;">
         </div>
 
         <div class="navbar ms-auto">
             <div class="dropdown">
-                <img src = "/static/img/drop_down_icon.svg" style=" position: fixed; top: 60px; right: 35px;"data-bs-toggle="dropdown" aria-expanded="false">
+                <img src = "/static/img/drop_down_icon.svg" style="position: fixed; top: 60px; right: 35px;"data-bs-toggle="dropdown" aria-expanded="false">
                 <strong>Hello, {{ user.username }}!</strong>
-                <img src="/static/img/profile_avatar.svg" alt="" style=" width: 32px; height:32; margin-right: 50px; class:"rounded-circle me-2">
+                <img src="/static/img/profile_avatar.svg"  style="width: 32px; height:32; margin-right: 50px;">
               </a>
               <ul class="dropdown-menu text-small shadow" style="width: 170px; border-radius: 10px; padding-left: 15px; padding-top: 10px;" aria-labelledby="dropdownUser2">
-                <img src = "/static/img/drop_down_icon2.svg" style=" position: fixed; top: 90px; right: 25px;"data-bs-toggle="dropdown" aria-expanded="false">
+                <img src = "/static/img/drop_down_icon2.svg" style="position: fixed; top: 90px; right: 25px;" data-bs-toggle="dropdown" aria-expanded="false">
                 <strong>Hello, {{ user.username }}!</strong>
-                <img src="/static/img/profile_avatar.svg" alt="" style="width: 32px; height:32; margin-right: 40px; class:"rounded-circle me-2">
+                <img src="/static/img/profile_avatar.svg" style="width: 32px; height:32; margin-right: 40px;">
                 <li><a class="logout" href="{% url 'logout' %}" style=" margin: 15px; border-radius: 50px !important; color:white;"><img src = "/static/img/exit_icon.svg" style="margin-right: 5px;"> Logout</a></li>
               </ul>
               <style>
@@ -84,12 +84,11 @@
         </nav>
         <div class="col" style="margin-left: 10px;">
             {# Dashboard cards #}
-            <div class="card" style="margin-top:10px; border-radius:15px; width: auto; padding-left: 25px; padding-top: 25px; padding-bottom: 25px; border: none">
-            <div class="row" style="margin-top:10px">
+            <div class="card" style="border-radius:15px; width: auto; padding: 25px; border:none;">
+            <div class="row" >
                 <div class="col-md-4 mt-md-0">
-                    <div class="d-flex card-dashboard gradient-yellow" style="width:300px; margin-left: 24px;">
+                    <div class="d-flex card-dashboard gradient-yellow" style="width:auto; margin: auto;">
                         {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
-
                         <div class="d-flex card-body align-items-center justify-content-center">
                             <span style="font-size: 40px; color: white; text-align: center;position: absolute;">{# TO DO num_hours #}</span>
                                 <span style ="font-size: 20px; color: black; text-align:center; position: relative; padding-top: 70px;">Hours spent</span>
@@ -98,7 +97,7 @@
                 </div>
 
                 <div class="col-md-4 mt-md-0 mt-4">
-                    <div class="d-flex card-dashboard gradient-purple" style="width:300px; margin-left: 3%;">
+                    <div class="d-flex card-dashboard gradient-purple" style="width:auto; margin:auto;">
                         <div class="d-flex card-body align-items-center justify-content-center">
                             <span style="font-size: 40px; color: white; text-align: center; position: absolute;">{{ num_tasks}} </span>
                                 <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Tasks completed</span>
@@ -107,7 +106,7 @@
                 </div>
 
                 <div class="col-md-4 mt-md-0 mt-4">
-                    <div class="d-flex card-dashboard gradient-green" style="width:300px; margin-right: 22px; ">
+                    <div class="d-flex card-dashboard gradient-green" style="width:auto; margin:auto; ">
                         <div class="d-flex card-body align-items-center justify-content-center" >
                             <span style="font-size: 40px; color: white; text-align: center; position:absolute;">{{ tasks_correctness }} % </span>
                                 <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Correct Responses</span>
