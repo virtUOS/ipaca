@@ -136,6 +136,19 @@ body {
     box-shadow: 0px 15px 50px rgba(0, 164, 67, 0.4);
 }
 
+.btn-practice {
+    color: #FFFFFF;
+    border-radius: 80px;
+    font-size: 18px;
+    color: #fff;
+    padding: 4px 28px;
+    gap: 10px;
+    width: 150px;
+    height: 40px;
+    margin: 20px;
+    background: linear-gradient(294.49deg, rgba(255, 110, 127, 0.8) -122.6%, rgba(28, 0, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), #FFFFFF;
+}
+
 h1 {
     font-size: 72px;
     font-weight: bold;
@@ -238,6 +251,13 @@ textarea {
     border:none;
 }
 
+.ul-2col {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    border:none;
+}
+
 .form-labels {
     display:none;
 }
@@ -255,3 +275,4 @@ textarea {
      background-color: transparent !important;
      border-left: 10px solid darkblue;
 }
+

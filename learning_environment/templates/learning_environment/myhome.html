@@ -125,14 +125,14 @@
                         <h4 style="padding:20px; font-weight: bold;"> Review Tasks </h4>
                     </div>
 
-                    <div class="justify-content-between" >
+                    <div class="justify-content-between" style="border:none;">
 
                             {% for solution in wrong_solutions %}
 
-                                <ul class="ul-3col">
-                                    <li class="list-group-item">{{ solution.task.lesson.lesson_id }}</li>
-                                    <li class="list-group-item">
-                                        <a href="{% url 'practice' %}" style="margin: 1vh">Practice</a>
+                                <ul class="ul-2col">
+                                    <li class="list-group-item" style="border:none;">{{ solution.task.lesson.lesson_id }}</li>
+                                    <li class="list-group-item" style="border:none;">
+                                        <a class='btn-practice' href="{% url 'practice' %}" style="text-decoration:none; color: white;">Practice</a>
                                     </li>
                                 </ul>
 
@@ -141,18 +141,18 @@
 
                     <div class="justify-content-between" >
                         <div class="me-auto">
-                        <h4>  New Tasks </h4>
+                        <h4 style="padding:20px; font-weight: bold;"> New Tasks </h4>
                         </div>
-                            <ul class="ul-3col">
-                                <li class="list-group-item">TASK NAME</li>
-                                <li class="list-group-item">PERCENTAGE</li>
-                                <li class="list-group-item">ACTION BUTTON</li>
-                            </ul>
-                            <ul class="ul-3col">
-                                <li class="list-group-item">TASK NAME</li>
-                                <li class="list-group-item">PERCENTAGE</li>
-                                <li class="list-group-item">ACTION BUTTON</li>
-                            </ul>
+                            {% for task in new_tasks %}
+
+                                <ul class="ul-2col">
+                                    <li class="list-group-item" style="border:none;">{{ task.lesson.lesson_id }}</li>
+                                    <li class="list-group-item" style="border:none;">
+                                        <a class='btn btn-primary' href="{% url 'practice' %}" style="margin: 1vh">Practice</a>
+                                    </li>
+                                </ul>
+
+                            {% endfor %}
                         </div>
                     </div>
         </div>
