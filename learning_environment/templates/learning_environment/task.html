@@ -3,6 +3,36 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block header %}
+
+        <header class="navbar" style="background:white; padding:none; margin:none">
+            <span><img src="/static/img/logo.svg" class="img-fluid"></span>
+
+        <div class="navbar ms-auto">
+            <div class="dropdown">
+                <img src = "/static/img/drop_down_icon.svg" style="position: fixed; top: 60px; right: 35px;"data-bs-toggle="dropdown" aria-expanded="false">
+                <strong>Hello, {{ user.username }}!</strong>
+                <img src="/static/img/profile_avatar.svg"  style="width: 32px; height:32; margin-right: 50px;">
+              </a>
+              <ul class="dropdown-menu text-small shadow" style="width: 170px; border-radius: 10px; padding-left: 15px; padding-top: 10px;" aria-labelledby="dropdownUser2">
+                <img src = "/static/img/drop_down_icon2.svg" style="position: fixed; top: 90px; right: 25px;" data-bs-toggle="dropdown" aria-expanded="false">
+                <strong>Hello, {{ user.username }}!</strong>
+                <img src="/static/img/profile_avatar.svg" style="width: 32px; height:32; margin-right: 40px;">
+                <li><a class="logout" href="{% url 'logout' %}" style=" margin: 15px; border-radius: 50px !important; color:white;"><img src = "/static/img/exit_icon.svg" style="margin-right: 5px;"> Logout</a></li>
+              </ul>
+              <style>
+                .logout{
+                    background-color:#D9D9D9;
+                }
+                .logout:hover{
+                    background-color: #1C009C!important;
+                }
+              </style>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
 
 {% block content %}
 
@@ -49,6 +79,7 @@
         {% if task.paragraph_shown %}
             {{ lesson.paragraph }}
         {% endif %}
+
         <div class="container-fluid">
             <div class="justify-content-center">
                 <div class="row">
@@ -83,6 +114,17 @@
             </div>
         </div>
     {% endif %}
+
+<style>
+   body{
+    background: url({% static 'img/task_background.svg'%}) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz--background-size:cover;
+    -o--background-size:cover;
+    background-size: cover;
+   }
+</style>
+
 {% endblock %}
 
 {% block js %}
@@ -90,3 +132,4 @@
         {% include task.get_additional_js %}
     {% endif %}
 {% endblock %}
+
