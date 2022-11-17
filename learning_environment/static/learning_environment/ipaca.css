@@ -248,12 +248,10 @@ textarea {
 }
  .i-plain:hover {
      background-color: transparent !important;
-     color: darkblue;
      border-left: 10px solid darkblue;
 }
 
 .i-plain:active {
      background-color: transparent !important;
-     color: darkblue;
      border-left: 10px solid darkblue;
 }
