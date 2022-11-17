@@ -40,5 +40,8 @@ class LessonCreationForm(forms.Form):
         return cd
 
 
+class AutomaticLessonCreationForm(forms.Form):
+    text = forms.CharField(widget=forms.Textarea)
+
 
 

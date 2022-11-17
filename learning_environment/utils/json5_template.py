@@ -1,6 +1,6 @@
 template = {
   'name': "Automatically Generated Task",  # the name that's also shown to the users
-  'id': "xy",        # an internal id, will never be shown, but important to identify the lesson
+  'id': "xyznew",        # an internal id, will never be shown, but important to identify the lesson
   'series': 'Automatically Generated Task',
   'author': "User Me",    # used for documentation, will not be shown to the user
   'version': 1,                 # if you revise your lesson, give it a higher version number each time

@@ -15,6 +15,8 @@ from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 
+from .utils.pipeline import AutomaticJson
+
 
 class SignUpView(SuccessMessageMixin, generic.CreateView):
     form_class = CustomUserCreationForm
@@ -234,3 +236,44 @@ def learner_reset(request):
         return redirect("myhome")
     else:
         return redirect("home")
+
+
+# class AutomaticLessonCreateView (LoginRequiredMixin, FormView):
+#
+#
+#     def post(self, request):
+#         form = AutomaticLessonCreationForm(request.POST)
+#         if form.is_valid():
+#             print('hi')
+#             text = form.cleaned_data.get('text')
+#             AutomaticJson.text_to_json5(text)
+#             return redirect('home')
+#         else:
+#             msg = form.errors
+#         return render(request, 'learning_environment/lesson_form.html', locals())
+#
+#     def get(self, request):
+#         print('hi')
+#         form = AutomaticLessonCreationForm()
+#         return render(request, 'learning_environment/automatic_lesson_form.html', locals())
+
+def automatic_lesson_create(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        print('form submitted')
+        # create a form instance and populate it with data from the request:
+        form = AutomaticLessonCreationForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            text = form.cleaned_data.get('text')
+            AutomaticJson.text_to_json5(text)
+            return redirect('home')
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = AutomaticLessonCreationForm()
+
+    return render(request, 'learning_environment/automatic_lesson_form.html', locals())
