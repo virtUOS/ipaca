@@ -18,9 +18,8 @@
                 {{ part.text|safe }}
             {% endif %}
         {% endfor %}
-        <div style="margin-top: 2em">
-            <button type="submit" class="btn btn-secondary">Check!</button>
-        </div>
+        <button type="submit" class="btn btn-secondary" style="padding: 0;float:right; margin: 0; width: 8em; height: 3.2em; background-color: #1C009C;"><span style="font-size: 18px;">Check!</span></button>
+        
     </form>
 {% else %}
     {% for part in task.content %}
@@ -48,3 +47,27 @@
     {% endfor %}
 
 {% endif %}
+
+<style>
+    .card{
+        margin:0 auto;
+        width: 60em;
+        height: auto;
+        border-radius: 2.5em;
+        padding: 2em;
+        padding-bottom:2em ;
+    }
+    form.form-inline{
+        font-size:20px;
+
+    }
+    h3{
+        font-size: 4em;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        margin-top: 1em;
+        margin-bottom: 4em;
+    }
+
+</style>

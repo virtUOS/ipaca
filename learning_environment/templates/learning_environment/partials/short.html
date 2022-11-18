@@ -4,11 +4,35 @@
     <form method="post">
         {% csrf_token %}
         <input type="hidden" name="task" value="{{ task.id }}">
-        <p><input type="text" size="30" name="answer"></p>
-        <div style="margin-top: 2em">
-            <button type="submit" class="btn btn-secondary">Check!</button>
-        </div>
+        <p><input type="text" size="30" name="answer" style="border-radius: 10px; margin-top:1em; width:50em;"></p>
+        <button type="submit" class="btn btn-secondary" style="margin-bottom:0.1em; float:right; width: 8em; height: 3.2em; background-color: #1C009C;"><span style="font-size: 18px;">Check!</span></button>
     </form>
 {% else %}
     <p>The correct answer is: {{ task.content }}.</p>
 {% endif %}
+
+<style>
+    .card{
+        margin-top: 5vh; 
+        border-radius: 50px; 
+        width: 80rem; 
+        height: auto;
+        margin: 0 auto;
+    
+
+    }
+    h3{
+        font-size: 3.5em;
+        color:black;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        
+
+    }
+
+    .lesson-test{
+
+    }
+</style>

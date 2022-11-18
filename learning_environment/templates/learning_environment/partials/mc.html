@@ -1,20 +1,35 @@
-<p class="card-text">{{ task.question }}</p>
+<p class="card-text" style="margin-left:30%; font-size: 20px; vertical-align: middle;">{{ task.question }}</p>
 
 {% if mode == 'solve' %}
     <form method="post">
         {% csrf_token %}
-        <input type="hidden" name="task" value="{{ task.id }}">
+        <input type="hidden" name="task" value="{{ task.id }} ">
         {% for o in task.content %}
-            <div class="form-check">
+            <div class="form-check"style="padding-left:0;">
                 <input class="form-check-input" type="checkbox" name="solution-{{ task.id }}-{{ forloop.counter0 }}" id="task-{{ task.id }}-{{ forloop.counter0 }}">
-                <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}">
+                <div class="card-answer" style="margin-left:20px;">
+                <div class="card" style="border-radius: 10px; height: 5em; padding: 1em; margin-bottom: 2em; width:30em; left: 30%;"<label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}"> 
                   {{ o.text }}
                 </label>
             </div>
+            </div>
         {% endfor %}
         <div style="margin-top: 2em">
-            <button type="submit" class="btn btn-secondary">Check!</button>
+            <button type="submit" class="btn btn-secondary";">Check!</button>
         </div>
+        <style>
+            .form-check .form-check-input{
+                position: relative;
+                border-radius: 10px;
+                width:1.6em;
+                height: 1.5em;
+                vertical-align: middle;
+                
+            
+            
+            }
+           
+        </style>
     </form>
 {% else %}
     {% for o in task.content %}
