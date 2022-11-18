@@ -269,7 +269,13 @@ def automatic_lesson_create(request):
             # ...
             # redirect to a new URL:
             text = form.cleaned_data.get('text')
-            AutomaticJson.text_to_json5(text)
+            name = form.cleaned_data.get('name')
+            text_source= form.cleaned_data.get('text_source')
+            text_licence = form.cleaned_data.get('text_licence')
+            text_url = form.cleaned_data.get('text_url')
+
+
+            AutomaticJson.text_to_json5(text,name,text_source,text_licence,text_url)
             return redirect('home')
 
     # if a GET (or any other method) we'll create a blank form

@@ -5,6 +5,8 @@ import json5
 from learning_environment.models import Lesson
 from learning_environment.its.base import Json5ParseException
 
+
+
 class Command(BaseCommand):
     help = 'Closes the specified poll for voting'
 

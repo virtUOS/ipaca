@@ -1,12 +1,27 @@
+import json
+import random
+
 from .json5_template import template, task
 import json5
 from pathlib import Path
 from .nlp_models import NLP_Model
 from textblob import TextBlob
+from learning_environment.management.commands.read_lessons import Command
+
 
 
 class AutomaticJson():
     nlp_model = NLP_Model()
+
+    @staticmethod
+    def stop_word_removal(noun_phrases):
+        base = Path(__file__).parents[2]
+        path = '/learning_environment/utils/stop_words/stop_words_english.json'
+        #stopwords =json.load('stop_words/stop_words_english.json')
+        with open(str(base)+path) as j:
+            stop_words = json.load(j)
+            print()
+
 
     @staticmethod
     def noun_phrase_extraction(text):
@@ -14,7 +29,20 @@ class AutomaticJson():
         return text.noun_phrases
 
     @classmethod
-    def text_to_json5(cls, text, answer=None):
+    def text_to_json5(cls, text,name, text_source,text_licence,text_url,answer=None, number_questions=10):
+
+
+        template['text'] = text
+        template['name'] = name
+        template['id'] = name.lower().replace(' ', '_')
+
+        template['text_source'] = text_source
+
+        template['text_licence'] = text_licence
+
+        template['text_url'] = text_url
+
+
 
         # read in text
         # text = "this is an example text. Let's create a question out of this."
@@ -23,34 +51,50 @@ class AutomaticJson():
         AutomaticJson.text = text
         # select sentence to generate question
         ## for now, we choose a random noun
-        answer = 'Skills'
+
+        clean_answers = random.sample([*set(AutomaticJson.noun_phrase_extraction(text))],k=number_questions)
+
+
+
+        for a in clean_answers:
+            answer = a
+            question = AutomaticJson.nlp_model.get_question(answer=answer, context=text)
+            question = question.strip("<pad>").strip('</s>')
+            print(question)
+            print(answer)
+
 
         # generate question(based on answer? Noun?)
         # nlp_model = NLP_Model()
 
-        question = AutomaticJson.nlp_model.get_question(answer=answer, context=text)
-        question = question.strip("<pad>").strip('</s>')
-        print(question)
+        # question = AutomaticJson.nlp_model.get_question(answer=answer, context=text)
+        # question = question.strip("<pad>").strip('</s>')
+        # print(question)
 
 
 
         # insert into template and safe as Json5
 
 
-        template['text'] = text
+
         task['question'] = question
         task['answer'] = answer
 
         template['tasks'] = [task]
 
         base = Path(__file__).parents[2]
-        filename = str(base) + "/data/lessons/lesson_b_test_01_nlp.json5"
+        path = "/data/lessons/lesson_automatic_"+name.lower().replace()+".json5"
+        filename = str(base) + path
 
 
         with open(filename, "w") as fp:
             json5.dump(template, fp)
 
-        print()
+        create_lesson = Command()
+        create_lesson.handle()
+
+
+
 
 
 

@@ -42,6 +42,10 @@ class LessonCreationForm(forms.Form):
 
 class AutomaticLessonCreationForm(forms.Form):
     text = forms.CharField(widget=forms.Textarea)
+    name = forms.CharField()
+    text_source = forms.CharField()
+    text_licence = forms.CharField()
+    text_url = forms.URLField()
 
 
 
