@@ -62,15 +62,15 @@ class TutormodelPretest:
         while complete == False: # NEW
             request.session.modified = True
             #if next_type == 'START': # Start- und Endseite anzeigen
-             #   return next_type, lesson, None
+                #return next_type, lesson, None
             #elif next_type == 'WRAPUP':
-             #   return next_type, lesson, None
+                #return next_type, lesson, None
             #else:  # pick random task of fitting type
-            tasks = Task.objects.filter(lesson=lesson)
-            cnt = tasks.count()
-            tasks[r].remove() # NEW
-            r = random.randint(0, cnt-1) # NEW Sonst mit if und ner 2. Liste
-            task = tasks[r] # TODO random Aufgabe wählen, vorher bearbeitete Aufgaben rausnehmen
-            return "R", lesson, task
+                #tasks = Task.objects.filter(lesson=lesson)
+                #cnt = tasks.count()
+                #tasks[r].remove() # NEW
+                #r = random.randint(0, cnt-1) # NEW Sonst mit if und ner 2. Liste
+                #task = tasks[r] # TODO random Aufgabe wählen, vorher bearbeitete Aufgaben rausnehmen
+                #return "R", lesson, task
 
        # return "Your current level is: " lesson.id #NEW
