@@ -73,4 +73,4 @@ class TutormodelPretest:
             task = tasks[r] # TODO random Aufgabe wählen, vorher bearbeitete Aufgaben rausnehmen
             return "R", lesson, task
 
-        return "Your current level is: " lesson.id #NEW
+       # return "Your current level is: " lesson.id #NEW
