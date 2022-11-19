@@ -250,3 +250,11 @@ def learner_reset(request):
         return redirect("myhome")
     else:
         return redirect("home")
+
+def academic_series(request):
+
+    return render(request, 'learning_environment/academic_series.html', locals())  # pass all local variable to template
+
+def general_series(request):
+
+    return render(request, 'learning_environment/general_series.html', locals())  # pass all local variable to template

@@ -88,75 +88,15 @@
         <div class="col" style="margin-left: 10px;">
             {# Dashboard cards #}
             <div class="card" style="border-radius:15px; width: auto; padding: 25px; border:none;">
-            <div class="row" >
-                <div class="col-md-4 mt-md-0">
-                    <div class="d-flex card-dashboard gradient-yellow" style="width:auto; margin: auto;">
-                        {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
-                        <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 40px; color: white; text-align: center;position: absolute;">{# TO DO num_hours #}</span>
-                                <span style ="font-size: 20px; color: black; text-align:center; position: relative; padding-top: 70px;">Hours spent</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-md-0 mt-4">
-                    <div class="d-flex card-dashboard gradient-purple" style="width:auto; margin:auto;">
-                        <div class="d-flex card-body align-items-center justify-content-center">
-                            <span style="font-size: 40px; color: white; text-align: center; position: absolute;">{{ num_tasks}} </span>
-                                <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Tasks completed</span>
-                            </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-md-0 mt-4">
-                    <div class="d-flex card-dashboard gradient-green" style="width:auto; margin:auto; ">
-                        <div class="d-flex card-body align-items-center justify-content-center" >
-                            <span style="font-size: 40px; color: white; text-align: center; position:absolute;">{{ tasks_correctness }} % </span>
-                                <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Correct Responses</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
 
             {# Display Tasks #}
 
+            </div>
 
-            <div class="card" style="margin-top:10px; border-radius:15px; border: none;">
-                    <div class="me-auto">
-                        <h4 style="padding:20px; font-weight: bold;"> Review Tasks </h4>
-                    </div>
 
-                    <div class="justify-content-between" style="border:none;">
 
-                            {% for solution in wrong_solutions %}
 
-                                <ul class="ul-2col">
-                                    <li class="list-group-item" style="border:none;">{{ solution.task.lesson.lesson_id }}</li>
-                                    <li class="list-group-item" style="border:none;">
-                                        <a class='btn-practice' href="{% url 'practice' %}" style="text-decoration:none; color: white;">Practice</a>
-                                    </li>
-                                </ul>
-
-                            {% endfor %}
-                    </div>
-
-                    <div class="justify-content-between" >
-                        <div class="me-auto">
-                        <h4 style="padding:20px; font-weight: bold;"> New Tasks </h4>
-                        </div>
-                            {% for task in new_tasks %}
-
-                                <ul class="ul-2col">
-                                    <li class="list-group-item" style="border:none;">{{ task.lesson.lesson_id }}</li>
-                                    <li class="list-group-item" style="border:none;">
-                                        <a class='btn btn-primary' href="{% url 'practice' %}" style="margin: 1vh">Practice</a>
-                                    </li>
-                                </ul>
-
-                            {% endfor %}
-                        </div>
-                    </div>
+            </div>
         </div>
 
     </div>
