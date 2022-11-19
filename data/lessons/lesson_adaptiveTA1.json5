@@ -22,7 +22,7 @@
   text_url: "unknown - TODO",
     tasks: [  // the list of tasks for this lesson
       {
-        name:  "Playing the piano",
+      name:  "Playing the piano",
       type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
       interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
       primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
@@ -94,6 +94,7 @@
           }
         } // end of markers list
       } // end of task 2
+
     ] // end of tasks
 
 } // end of lesson

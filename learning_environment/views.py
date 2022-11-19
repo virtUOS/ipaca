@@ -34,7 +34,7 @@ def practice(request):
         request.session['current_lesson_todo'].pop(0)  # remove the start item
         request.session.modified = True
         series = request.session.get("lesson_series", "General")
-        if series == "Adaptive Pretest": # TODO nachgucken
+        if series == "Adaptive Pretest": 
             tutor = TutormodelPretest(request.user) 
         else:
             tutor = Tutormodel(request.user)
@@ -92,7 +92,7 @@ def practice(request):
         lesson = task.lesson
         context['state'] = context['mode']
     else:  # fetch new task and show it
-        if series == "Adaptive Pretest": # TODO nachgucken
+        if series == "Adaptive Pretest": 
             tutor = TutormodelPretest(request.user) 
         else:
             tutor = Tutormodel(request.user)
@@ -102,6 +102,8 @@ def practice(request):
             return HttpResponseServerError("Error: No task available!")
         context['state'] = state
 
+    if series == "Adaptive Pretest": #NEW
+        request.session['done'] += 1 #NEW
     context['task'] = task
     context['lesson'] = lesson
     # Pass all information to template and display page
