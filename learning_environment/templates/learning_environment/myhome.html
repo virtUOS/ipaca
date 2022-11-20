@@ -1,13 +1,10 @@
 {% extends "learning_environment/base.html" %}
-
-
-
-
+{% load static %}
 
 
 {% block content %}
 
-<body id="myhome" style="background-color:#f8f9fa;">
+< id="myhome" style="background-color:#f8f9fa;">
 
          <header class="navbar" style="background-color: white;">
         <div class="navbar me-auto">
@@ -133,7 +130,15 @@
                             {% for task in wrong_tasks %}
 
                                     <ul class="ul-3col">
-                                        <li class="list-group-item" style="border:none;">{{ task.id }}</li>
+                                        <li class="list-group-item" style="border:none;">
+                                            {% if task.type == 'GS' %}
+                                                <span><img src="/static/img/icon_grammar.svg" class="img-fluid" style="width:3em; height:3em;"></span>
+                                            {% elif task.type == 'V' %}
+                                                <span><img src="/static/img/icon_vocabulary.svg" class="img-fluid" style="width:3em; height:3em;"></span>
+                                            {% elif task.type == 'R' %}
+                                                <span><img src="/static/img/icon_reading.svg" class="img-fluid" style="width:3em; height:3em;"></span>
+                                            {% endif %}
+                                            {{ task.id }}</li>
                                         <li class="list-group-item" style="border:none;">{{ task.name }}</li>
                                         <li class="list-group-item" style="border:none;">
                                             <a class='btn-practice' href="{% url 'practice' %}?redo={{ task.id }}" style="text-decoration:none; color: white;">Practice</a>
@@ -165,8 +170,9 @@
 
     </div>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    </body>
+
     <script>
     $("#icon-book").click(function() {
         $(this).find('i').toggleClass('bi-book-fill');
@@ -178,5 +184,5 @@
         $(this).find('i').toggleClass('bi-trophy');
     });
     </script>
-
+ </body>
 {% endblock %}
