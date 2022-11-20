@@ -2,23 +2,11 @@
 {% load bootstrap5 %}
 {% load static %}
 
-
 {% block content %}
-    <!-- anychart -->
-    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
-    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-data-adapter.min.js"></script>
-
-    <!-- anychart CSS -->
-    <link href="https://cdn.anychart.com/releases/8.11.0/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
-    <link href="https://cdn.anychart.com/releases/8.11.0/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
-
     <h1>The Global Dashboard</h1>
 
     <p>Users have worked on {{ num_solutions }} tasks so far.</p>
     <p>Correctness: {{ tasks_correctness }} %</p>
-
-    <div id="chart_container" style="height: 20rem"></div>
-
     <table class="table">
         <tr><th>Timestamp</th>
             <th>User</th>
@@ -36,12 +24,4 @@
         </tr>
     {% endfor %}
     </table>
-
-    <script>
-        anychart.onDocumentReady(function() {
-            var chart = anychart.fromJson({{ chartData | safe }});
-            chart.draw();
-        });
-    </script>
 {% endblock %}
-
