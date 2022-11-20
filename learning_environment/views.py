@@ -252,9 +252,16 @@ def learner_reset(request):
         return redirect("home")
 
 def academic_series(request):
+    psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series='Academic')
+    current_level = psl.level
+    lessons = Lesson.objects.filter(series='Academic English').order_by('lesson_id')
+    paginate_by = 25  # 25 entries max per page
 
     return render(request, 'learning_environment/academic_series.html', locals())  # pass all local variable to template
 
 def general_series(request):
-
+    psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series='General')
+    current_level = psl.level
+    lessons = Lesson.objects.filter(series='General').order_by('lesson_id')
+    paginate_by = 25  # 25 entries max per page
     return render(request, 'learning_environment/general_series.html', locals())  # pass all local variable to template
