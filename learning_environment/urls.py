@@ -13,8 +13,7 @@ urlpatterns = [
     path('myhome/', views.myhome, name='myhome'),
     path('practice/', views.practice, name='practice'),
     path("signup/", SignUpView.as_view(), name="signup"),
-#    path('academic_english/', views.academic_tasks, name='academic_english'),
- #   path('general_english/', views.academic_tasks, name='academic_english'),
+
 
     # Backstage
     path('backstage/tasklist', views.TaskListView.as_view(), name='tasklist'),
@@ -23,6 +22,8 @@ urlpatterns = [
     path('backstage/lesson/delete/<int:pk>', views.LessonDeleteView.as_view(), name='lessondelete'),
     path('backstage/dashboard/learner', views.learner_dashboard, name='learner_dashboard'),
     path('backstage/dashboard/global', views.global_dashboard, name='global_dashboard'),
+    path('backstage/series/academic', views.academic_series, name='academic_series'),
+    path('backstage/series/general', views.general_series, name='general_series'),
     path('backstage/reset', views.learner_reset, name='learner_reset'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
