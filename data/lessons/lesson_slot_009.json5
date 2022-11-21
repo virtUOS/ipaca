@@ -415,7 +415,7 @@
       },
       {
         // task 13: gap filling for main tenses
-        name: "Modal Verbs 9.GS.4",
+        name: "Modal Verbs 9.GS.3",
         type: "GS",
         interaction: "GAP",
         primary: true,
@@ -478,50 +478,50 @@
         primary: true,
         show_lesson_text: false,
         question: "<p>Read a sentence and fill the gaps</p>\
-        <p>In England you _1_ drive on the left side of the road but in other European countries you _2_ .</p>",
+        <p>You mustn't/shouldn't _1_  touch the oven. It's very hot and you might _2_ hurt yourself..</p>",
         gaps: {
           mode: 'select',
           _1_: [
             {
-              text: 'must not',
+              text: 'should',
               correct: false,
               feedback: 'No, that\'s not correct.'
             },
             {
-              text: 'has to',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'have not',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'is to',
+              text: 'should not',
               correct: true,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'should',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'should not',
+              correct: false,
               feedback: 'The correct answer is ‘must’'
             },
           ],
           _2_: [
             {
+              text: 'might',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'might',
+              correct: true,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'might not',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
               text: 'must',
               correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'have to',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'have to',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'is to',
-              correct: true,
               feedback: 'must, must not'
             },
           ]
