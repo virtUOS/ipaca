@@ -144,11 +144,12 @@ def myhome(request):
         series = 'General'
 
     # determine current level (and create if necessary)
-    psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series=series)
-    current_level = psl.level
+    # psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series=series)
+    # current_level = psl.level
 
     # pick all levels for chosen lesson series
-    levels = Lesson.objects.filter(series = series).order_by('lesson_id')
+    # levels = Lesson.objects.filter(series = series).order_by('lesson_id')
+
 
     solutions = Solution.objects.filter(user=request.user).order_by('timestamp')  # all solutions from current user
     num_tasks = solutions.count()  # how tasks did this user try
@@ -161,9 +162,12 @@ def myhome(request):
 
     if Solution.objects.filter(user=request.user, solved=False).exists():
         wrong_solutions = Solution.objects.filter(user=request.user, solved=False)
+        # get unique task id of wrong solutions
+        wrong_solutions_unique = [x['task'] for x in wrong_solutions.values('task').distinct()]
+        wrong_tasks = Task.objects.filter(id__in=wrong_solutions_unique)
 
     else:
-        wrong_solutions = None
+        wrong_tasks = None
 
 
     return render(request, 'learning_environment/myhome.html', locals())
@@ -250,3 +254,18 @@ def learner_reset(request):
         return redirect("myhome")
     else:
         return redirect("home")
+
+def academic_series(request):
+    psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series='Academic')
+    current_level = psl.level
+    lessons = Lesson.objects.filter(series='Academic English').order_by('lesson_id')
+    paginate_by = 25  # 25 entries max per page
+
+    return render(request, 'learning_environment/academic_series.html', locals())  # pass all local variable to template
+
+def general_series(request):
+    psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series='General')
+    current_level = psl.level
+    lessons = Lesson.objects.filter(series='General').order_by('lesson_id')
+    paginate_by = 25  # 25 entries max per page
+    return render(request, 'learning_environment/general_series.html', locals())  # pass all local variable to template
