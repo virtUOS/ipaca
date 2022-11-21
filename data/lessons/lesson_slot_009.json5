@@ -1,0 +1,637 @@
+// Lesson ev-09
+// a new lesson 9.
+{
+  name: "DESIGN MODEL",  // the name that's also shown to the users
+  id: "design-model-009",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Julia Afanasieva and Sviatoslav Baklazhko",    // used for documentation, will not be shown to the user
+  version: 9,                 // if you revise your lesson, give it a higher version number each time
+  series: "Academic English",
+  text: "<p>Training is invaluable and often required in most industries. To stay competitive,\
+    leadership must be focused on keeping their employees up-to-date on the latest industry standards\
+     and compliant with new regulations. Companies know that it takes time to train employees and time\
+      is money. However, many companies do not invest enough time in allowing their employees to be strong\
+      digital learners which leads to consequences in the workplace, such as, uninformed workers causing costly\
+      workplace errors.</p> \
+    <p>The benefits of digital learning for employers are vast, depending on how they choose/allow the use of\
+          this type of education. It is a cost-effective benefit as a one-time investment in a digital training course,\
+           and can add training for their entire workforce while supplying consistent information to all employees.\
+            For example, by utilizing computer-based trainings or videos for newly hired employees, companies can provide\
+             training with little effort, consistent messages, and on-demand learning as needed, saving the company money and time.\
+              The result is a well-prepared workforce ready to do the job at hand with the latest industry knowledge.</p>\
+    <p>The old-school way of training employees is to put them in a classroom and show a slide presentation while droning on\
+     about the material. Many companies still invest in this type of learning as they feel it works for them. However, employees\
+      do not find it interesting enough to pay attention and the instructors grow tired of teaching the same material over and over.\
+       Another traditional way of educating workers is on-the-job training (OJT). Although this can be far more valuable than classroom training,\
+        OJT is not often consistent. One mentor may teach how he would do the job while another may show a completely different way.\
+         Digital learning addresses these issues of consistency and helps ensure a systematic way of learning for new and existing employees.</p>",
+  text_source: "Evidence-based Software Engineering",
+  text_licence: "CC BY-SA",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/1089",
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "NAME OF TASK 9.R.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "What should the company management focus on so that employees are competitive?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "on good services",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "on keeping their employees modern industry standards",
+            correct: true,
+            feedback: "The correct answer is True."
+          },
+          {
+            text: "on a good attitude towards customers",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "on self-education",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+        ]
+      },
+      {
+        // task 2: primary reading task
+        name: "NAME OF TASK 9.R.2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "What is the mistake of many companies today?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "they do not respect their employees ",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "they do not invest enough money in their employees to be strong digital learners",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "they do not invest enough time in their employees to be strong digital learners",
+            correct: true,
+            feedback: "The correct answer is True."
+          },
+          {
+            text: "they do not support the ideas of their employees",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+        ]
+      },
+      {
+        // task 3: primary reading task
+        name: "NAME OF TASK 9.R.3",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "What determines the choice of benefits of digital learning for employers?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "in what way they choose the use of determined type of education ",
+            correct: true,
+            feedback: "The correct answer is True."
+          },
+          {
+            text: "certification of instructors",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "taking into account the interests of employees ",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "the choice depends on the field of work",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+        ]
+      },
+      {
+        // task 4: primary reading task
+        name: "NAME OF TASK 9.R.4",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "What is the result of utilizing computer-based trainings or videos for newly hired employees?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "well-trained personnel with old-school knowledge",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "well-trained workforce with distracted attention personnel",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "well-trained personnel with newfangled knowledge",
+            correct: true,
+            feedback: "The correct answer is True."
+          },
+          {
+            text: "waste of time, workforce can start working without any preparation",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+        ]
+      },
+      {
+        // task 5: primary reading task
+        name: "NAME OF TASK 9.R.5",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "What are the disadvantages of old-school way of training employees?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "waste of time",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "disinterested employees, tired instructors ",
+            correct: true,
+            feedback: "The correct answer is True."
+          },
+          {
+            text: "waste of time and money",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "waste of time",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+        ]
+      },
+      {
+        // task 6
+        name: "NAME OF TASK 9.V.1",
+        type: "V", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question: "<p>What does it mean?</p>\
+         <p>“The benefits of digital learning for employers are vast...”</p>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "There are a lot of benefits of digital learning for employers",
+            correct: true,
+            feedback: "The correct answer is True."
+          },
+          {
+            text: "There are no benefits of digital learning for workers",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "There are only five types of benefits",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "Benefits of digital learning for employers don’t exist",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+        ]
+      },
+      {
+        // task 7
+        name: "NAME OF TASK 9.V.2",
+        type: "V", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question: "<p>Сhoose synonyms for the highlighted word in the fragment:</p>\
+         <p>“… uninformed workers causing costly workplace errors.”</p>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "eduneducated, unknowledgeable, untaught, well-prepared",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "eduneducated, untaught, schooled, unenlighten",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "unenlighten, eduneducated, knowledgeable, untaught",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "unenlighten, eduneducated, unknowledgeable, untaught",
+            correct: true,
+            feedback: "The correct answer is False."
+          },
+        ]
+      },
+      {
+        // task 8
+        name: "NAME OF TASK 9.V.3",
+        type: "V", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question: "<p>Сhoose an antonym for the highlighted word in the fragment:</p>\
+         <p>“It is a ____cost-effective_____ benefit...”</p>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "well-paid",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "worthwhile",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "unconscionable ",
+            correct: true,
+            feedback: "The correct answer is True."
+          },
+          {
+            text: "remunerative",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+        ]
+      },
+      {
+        // task 9
+        name: "NAME OF TASK 9.V.4",
+        type: "V", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question: "<p>How would a rephrase look like?</p>\
+        <p>“…a well-prepared workforce ready to do the job at hand...”</p>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "a highly trained workforce not ready to work",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "a highly trained labour that is ready to start working process",
+            correct: true,
+            feedback: "The correct answer is True."
+          },
+          {
+            text: "a well-prepared workforce that will be ready to do the job in 2 weeks ",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "well-awarded workforce ready to do the job",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+        ]
+      },
+      {
+        // task 10
+        name: "NAME OF TASK 9.V.5",
+        type: "V", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question: "<p>What does it mean?</p>\
+        <p>“The old-school way of training employees...”</p>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "The way of training is obsolete ",
+            correct: true,
+            feedback: "The correct answer is True."
+          },
+          {
+            text: "The way of training is voguish",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "The way of training is prevalent",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+          {
+            text: "The way of training is excessive",
+            correct: false,
+            feedback: "The correct answer is False."
+          },
+        ]
+      },
+      {
+        // task 11: gap filling for main tenses
+        name: "Modal Verbs 9.GS.1",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Complete the sentences with a modal verb</p>\
+        <p>According to the weather report it  _1_ rain today, but I’m not so sure about it.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'might',
+              correct: true,
+              feedback: 'The correct answer is ‘might rain today’.'
+            },
+            {
+              text: 'is able to',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'needs',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'is to',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 12: gap filling for main tenses
+        name: "Modal Verbs 9.GS.2",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Read a sentence and fill the gaps</p>\
+        <p>He _1_ to the doctor when he started feeling ill. Now it’s going to take longer for him to recover.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: "should have goneb",
+              correct: true,
+              feedback: "The correct answer is 'should have gone'."
+            },
+            {
+              text: "should be gone",
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: "should go",
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: "need to go",
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 13: gap filling for main tenses
+        name: "Modal Verbs 9.GS.4",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Read a sentence and fill the gaps</p>\
+        <p>In England you _1_ drive on the left side of the road but in other European countries you _2_ .</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'must not',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'has to',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'have not',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'is to',
+              correct: true,
+              feedback: 'The correct answer is ‘must’'
+            },
+          ],
+          _2_: [
+            {
+              text: 'must',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'have to',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'have to',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'is to',
+              correct: true,
+              feedback: 'must, must not'
+            },
+          ]
+        },
+      },
+      {
+        // task 14: gap filling for main tenses
+        name: "Modal Verbs 9.GS.4",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Read a sentence and fill the gaps</p>\
+        <p>In England you _1_ drive on the left side of the road but in other European countries you _2_ .</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'must not',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'has to',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'have not',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'is to',
+              correct: true,
+              feedback: 'The correct answer is ‘must’'
+            },
+          ],
+          _2_: [
+            {
+              text: 'must',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'have to',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'have to',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'is to',
+              correct: true,
+              feedback: 'must, must not'
+            },
+          ]
+        },
+      },
+      {
+        // task 15: gap filling for main tenses
+        name: "Modal Verbs 9.GS.5",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Read a sentence and fill the gaps</p>\
+        <p>Mike  _1_ left the house. His cell phone is still here, and he never leaves without it.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'can have',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'cannot have had',
+              correct: true,
+              feedback: 'The correct answer is ‘cannot have had’'
+            },
+            {
+              text: 'can not have',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'cannot have',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 16: gap filling for main tenses
+        name: "Modal Verbs 9.GS.6",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Read a sentence and fill the gaps</p>\
+        <p>Leaving the house today without an umbrella _1_ such a good idea. It looks like it's going to rain in the afternoon.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'is to be',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'might be',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'might not be',
+              correct: true,
+              feedback: 'The correct answer is ‘might not be’.'
+            },
+            {
+              text: 'might',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 17: gap filling for main tenses
+        name: "Modal Verbs 9.GS.7",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Read a sentence and fill the gaps</p>\
+        <p>Nobody was able to tell the police who that man was, so he _1_ be someone from here.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'can',
+              correct: false,
+              feedback: "No, that\'s not correct."
+            },
+            {
+              text: 'could',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'can not',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'cannot',
+              correct: true,
+              feedback: 'The correct answer is ‘cannot’.'
+            },
+          ],
+        },
+      }
+
+    ] // end of tasks
+} // end of lesson
