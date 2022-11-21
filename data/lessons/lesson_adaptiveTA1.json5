@@ -1,4 +1,4 @@
-// a test lesson, no meaningful content.
+// 3 lesson
 {
   name: "Level A",  // the name that's also shown to the users
   id: "level-A",        // an internal id, will never be shown, but important to identify the lesson
