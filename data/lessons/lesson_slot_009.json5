@@ -478,7 +478,7 @@
         primary: true,
         show_lesson_text: false,
         question: "<p>Read a sentence and fill the gaps</p>\
-        <p>You mustn't/shouldn't _1_  touch the oven. It's very hot and you might _2_ hurt yourself..</p>",
+        <p>You  _1_  touch the oven. It's very hot and you  _2_ hurt yourself..</p>",
         gaps: {
           mode: 'select',
           _1_: [
@@ -490,7 +490,7 @@
             {
               text: 'should not',
               correct: true,
-              feedback: 'No, that\'s not correct.'
+              feedback: 'The correct answer is ‘should not’'
             },
             {
               text: 'should',
@@ -500,7 +500,7 @@
             {
               text: 'should not',
               correct: false,
-              feedback: 'The correct answer is ‘must’'
+              feedback: 'No, that\'s not correct.'
             },
           ],
           _2_: [
@@ -512,7 +512,7 @@
             {
               text: 'might',
               correct: true,
-              feedback: 'No, that\'s not correct.'
+              feedback: 'The correct answer is ‘might’'
             },
             {
               text: 'might not',
@@ -522,7 +522,7 @@
             {
               text: 'must',
               correct: false,
-              feedback: 'must, must not'
+              feedback: 'No, that\'s not correct.'
             },
           ]
         },
