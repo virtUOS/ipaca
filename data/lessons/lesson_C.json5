@@ -177,7 +177,7 @@
         },
       },
       {
-        // task : gap filling for past tenses
+        // task 6: gap filling for past tenses
         name: "Past tenses",
         type: "GS",
         interaction: "GAPFILL",

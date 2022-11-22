@@ -112,26 +112,10 @@
                 mode: 'fillin',
                 _1_: [ 
 			        { text: "am doing", correct: true, feedback: "Yes. That's correct!" }
-		        ] 
+		          ] 
             } 
-        }
-        ]
-},
-// lesson 2
-// level A1-A2
-// paraphrase tasks
-{
-    name: "level A",
-    id: "level-A",
-    author: "Fabienne Finas",
-    version: 1,
-    series: "Adaptive Pretest",
-    text: "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p>",
-    text_source: "Group 7",
-    text_licence: "CC0",
-    text_url: "http://ipaca.de",
-    tasks: [  // the list of tasks for this lesson
-      { // task 1
+        },
+        { // task 1
         name:  "Paraphrase 01",
         type: "GS", // grammar task
         interaction: "SHORT", // open answer field for short free answers
@@ -178,9 +162,6 @@
       }
     ],  // end of list of tasks
 }, // end of lesson
-// lesson 3
-// level A1-A2
-// reading and vocabulary tasks
 {
   name: "Level A",  // the name that's also shown to the users
   id: "level-A",        // an internal id, will never be shown, but important to identify the lesson
@@ -245,7 +226,7 @@
         interaction: "MARK",
         primary: true,
         show_lesson_text: false,
-        question: "In the text, find the words according to the following definitions:",
+        question: "In the text, find the words according to the following definitions (If there are multiple possiblilities, choose the first occurence):",
         marktext: "<p>Many students find it easier to learn music theory when they practice a lot. In other words,</p>
         <p>physically creating #2#sounds by playing a musical instrument (such as the #1#piano) helps you to better</p>
         <p>#5#visualize and listen to the music you are writing down or studying. This allows students to</p>
@@ -255,12 +236,12 @@
         <p>should remain arched (as if you were pulling a library book off of a shelf). Keep your knees and wrists</p>
         <p>flexible (not stiff), and keep your feet flat on the ground unless you are using the #3#pedals.</p>
         <p>Learning to play notes on the piano is one easy way to be with music in touch. You may find access</p>
-        <p>to a piano keyboard (acoustic or electronic) at your school. Another option is to download a free piano app</p>
-        <p>that you can play on your phone, such as Tiny Piano. Notice that the #4#keyboard has both white keys and black</p>
-        <p>keys. The black keys are grouped into sets of either three or two.</p>", // could be a problem since there are piano multiple times
+        <p>to a piano #4#keyboard (acoustic or electronic) at your school. Another option is to download a free piano app</p>
+        <p>that you can play on your phone, such as Tiny Piano. Notice that the keyboard has both white keys and black</p>
+        <p>keys. The black keys are grouped into sets of either three or two.</p>", 
         markers: {
           '1': {
-            description: 'a large musical instrument with a row of black and white keys that are pressed to play notes', // could be a problem since there are piano 
+            description: 'a large musical instrument with a row of black and white keys that are pressed to play notes', 
           },
           '2': {
             description: 'something that you can hear or that can be heard',
@@ -269,12 +250,13 @@
             description: 'a part on a piano or organ that you press with your foot', 
           },
           '4': {
-            description: 'the set of keys on a piano' //multiple times keyboard
+            description: 'the set of keys on a piano' 
           },
           '5': {
             description: 'to imagine or remember someone or something by forming a picture in your mind '
           }
         } // end of markers list
       } // end of task 2
-    ] // end of tasks
-} // end of lesson
+
+     ] // end of tasks
+}
