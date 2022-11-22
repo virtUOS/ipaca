@@ -19,7 +19,7 @@
                 <div class="collapse" id="tasks-collapse" style="margin-left: 20px;">
                     <ul class="">
                         <li><a href="{% url 'academic_series' %}" class="link-dark rounded">Academic</a></li>
-                        <li><a href="{% url 'general_series' %}">General</a></li>
+                        <li><a href="{% url 'general_series' %}" class="link-dark rounded">General</a></li>
                     </ul>
                 </div>
             </li>
@@ -45,14 +45,41 @@
 
 
 
+
 <script>
-$("#icon-book").click(function() {
-    $(this).find('i').toggleClass('bi-book-fill');
-    $(this).find('i').toggleClass('bi-book');
+$(function () {
+
+    const buttonCollapse1 = $("#tasks-collapse");
+    const buttonCollapse2 = $("#results-collapse");
+
+    buttonCollapse1.on("shown.bs.collapse", function () {
+        sessionStorage.setItem("buttonCollapse1", "show");
+    });
+    buttonCollapse2.on("shown.bs.collapse", function () {
+        sessionStorage.setItem("buttonCollapse2", "show");
+    });
+
+
+    buttonCollapse1.on("hidden.bs.collapse", function () {
+        sessionStorage.setItem("buttonCollapse1", "hide");
+    });
+    buttonCollapse2.on("hidden.bs.collapse", function () {
+        sessionStorage.setItem("buttonCollapse2", "hide");
+    });
+
+
+    const button1 = sessionStorage.getItem("buttonCollapse1");
+    if (button1 === "show") {
+        buttonCollapse1.collapse("show");
+    } else {
+        buttonCollapse1.collapse("hide");
+    }
+    const button2 = sessionStorage.getItem("buttonCollapse2");
+    if (button2 === "show") {
+        buttonCollapse2.collapse("show");
+    } else {
+        buttonCollapse2.collapse("hide");
+    }
 });
 
-$("#icon-trophy").click(function() {
-    $(this).find('i').toggleClass('bi-trophy-fill');
-    $(this).find('i').toggleClass('bi-trophy');
-});
 </script>
