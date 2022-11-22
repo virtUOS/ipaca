@@ -80,7 +80,7 @@
         show_lesson_text: false,
         question: "In the text, find the words according to the following definitions:",
         marktext: "At what age should a child have social media? \
-         So what age is too young for a social media presence? I interviewed a Freshman at The University \
+         So what age is too young for a social media #2#presence? I interviewed a Freshman at The University \
          of Arizona to share her first experiences with social media, and get her take on how young is too \
          young. \
          Amara (a pseudonym) is 18 years old, and has an iPhone just like every other college student her \
@@ -90,7 +90,7 @@
          the only phone she wanted was an iphone, where it is extremely easy to access social media, she \
          was not allowed a phone until she turned 16. This was difficult for Amara for a few reasons, the \
          first being she couldn’t contact her parents after school when they needed to pick her up, she \
-         couldn’t talk to her friends outside of school, and she always #1#felt very out of the loop. Vine was \
+         couldn’t talk to her friends outside of school, and she always #1#felt #1#very #1#out #1#of #1#the #1#loop. Vine was \
          very big the year all of Amara’s friends started getting phones and when they would all talk about \
          the latest videos she couldn’t participate in any of the conversations. Amara’s parents valued their \
          young daughter’s privacy over her social life, and at the time this upset Amara very much, but now as \
@@ -100,7 +100,7 @@
          normal kids stuff. This is why I believe that parents should wait as long as possible to get their \
          kids phones, because every child should have those experiences of making plans with friend’s in person, \
          and playing together outside of school. Kids need the experience of being kids, before they should have \
-         any #2#presence on social media. Amara’s parents were also worried of any harm that may have come to their \
+         any presence on social media. Amara’s parents were also worried of any harm that may have come to their \
          daughter if she had had a phone at a younger age. Cyberbullying is so common, and it is so easy for kids \
          to be mean behind a screen. Younger kids especially think it’s ok to say hurtful things over the phone \
          because they can’t see the other person, so they think it’s no big deal. Kids should not be active on \
@@ -111,7 +111,7 @@
             description: 'to have or not have the special knowledge or power that belongs to a particular group of people', // more than 1 word!!!
           },
           '2': {
-            description: 'the fact of being in a place', // multiple times
+            description: 'the fact of being in a place', 
           },
           '3': {
             description: 'fully grown and developed', 
