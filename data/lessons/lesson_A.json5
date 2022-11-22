@@ -5,11 +5,22 @@
     author: "Fabienne Finas",
     version: 1,
     series: "Adaptive Pretest",
-    text: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p>",
-    text_source: "Group 7",
+    text: "<p>Many students find it easier to learn music theory when they practice a lot. In other words,</p>
+    <p>physically creating sounds by playing a musical instrument (such as the piano) helps you to better</p>
+    <p>visualize and listen to the music you are writing down or studying. This allows students to</p>
+    <p>understand the relationship between different steps more quickly.</p>
+    <p>When you sit at the piano, it is important to sit up straight, keeping your head over your shoulders,</p>
+    <p>which should be kept down. Your elbows should be a comfortable distance from your body, and your fingers</p>
+    <p>should remain arched (as if you were pulling a library book off of a shelf). Keep your knees and wrists</p>
+    <p>flexible (not stiff), and keep your feet flat on the ground unless you are using the pedals.</p>
+    <p>Learning to play notes on the piano is one easy way to be with music in touch. You may find access</p>
+    <p>to a piano keyboard (acoustic or electronic) at your school. Another option is to download a free piano app</p>
+    <p>that you can play on your phone, such as Tiny Piano. Notice that the keyboard has both white keys and black</p>
+    <p>keys. The black keys are grouped into sets of either three or two.</p>"
     text_licence: "CC-BY-SA",
-    text_url: "http://ipaca.de",
-      tasks: [  // the list of tasks for this fill in the gap lesson
+    text_url: "https://open.umn.edu/opentextbooks/textbooks/open-music-theory",
+      tasks: [
+        // gap tasks
         { // task 1
             name: "fill the gap 01", 
             type: "GS", 
@@ -111,72 +122,58 @@
 			        { text: "am doing", correct: true, feedback: "Yes. That's correct!" }
 		        ] 
             } 
-        }
-        ]
-},
-// lesson 2
-// level A1-A2
-// paraphrase tasks
-{
-    name: "level A",
-    id: "level-A",
-    author: "Fabienne Finas",
-    version: 1,
-    series: "Adaptive Pretest",
-    text: "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p>",
-    text_source: "Group 7",
-    text_licence: "CC0",
-    text_url: "http://ipaca.de",
-    tasks: [  // the list of tasks for this lesson
-      { // task 1
+        },
+        // paraphrase tasks
+        { // task 8
         name:  "Paraphrase 01",
         type: "GS", // grammar task
         interaction: "SHORT", // open answer field for short free answers
         primary: true,
         show_lesson_text: true,
-        question:  "It's Anna's birthday on Friday. I have to get a present. (must)",
+        question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>It's Anna's birthday on Friday. I have to get a present. (must)</p>",
         answer: "I must get a present"
       },
-      { // task 2
+      { // task 9
         name:  "Paraphrase 02",
         type: "GS",
         interaction: "SHORT",
         primary: true,
         show_lesson_text: true,
-        question:  "I felt really tired, so I stayed at home. (because)",
+        question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>I felt really tired, so I stayed at home. (because)</p>",
         answer: "I stayed at home because I felt really tired"
       },
-      { // task 3
+      { // task 10
         name:  "Paraphrase 03",
         type: "GS",
         interaction: "SHORT",
         primary: true,
         show_lesson_text: true,
-        question:  "She lives in a house. It's in front of the park. (near)",
+        question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>She lives in a house. It's in front of the park. (near)</p>",
         answer: "It's near the park"
       },
-      { // task 4
+      { // task 11
         name:  "Paraphrase 04",
         type: "GS",
         interaction: "SHORT",
         primary: true,
         show_lesson_text: true,
-        question:  "We ate dinner at a restaurant yesterday. We had fish and chips. (enjoy)",
+        question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>We ate dinner at a restaurant yesterday. We had fish and chips. (enjoy)</p>",
         answer: "We enjoyed some fish and chips"
       },
-      { // task 5
+      { // task 12
         name:  "Paraphrase 05",
         type: "GS",
         interaction: "SHORT",
         primary: true,
         show_lesson_text: true,
-        question:  "He usually wears a red sweater. (to like)",
+        question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>He usually wears a red sweater. (to like)</p>",
         answer: "He usually likes to wear a red sweater."
       }
-    ],  // end of list of tasks
-}, // end of lesson
-// lesson 3
-// level A1-A2
+        ]
+},
+
+
+
 // reading and vocabulary tasks
 {
   name: "Level A",  // the name that's also shown to the users
