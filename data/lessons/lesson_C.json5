@@ -1,4 +1,3 @@
-// a test lesson, no meaningful content.
 {
   name: "Level C1",  // the name that's also shown to the users
   id: "level-C",        // an internal id, will never be shown, but important to identify the lesson
@@ -81,26 +80,26 @@
         interaction: "MARK",
         primary: true,
         show_lesson_text: false,
-        question: "In the text, find the words according to the following definitions:",
+        question: "In the text, find the words according to the following definitions (If there are multiple occurences, choose the first one):",
         marktext: "Physical activity and personality \
          One personal factor that has received much attention and has the potential for broad reaching \
          adaptations to current physical activity theory and practice is personality. Currently the \
          cumulative evidence supports a modest relationship between personality and physical activity. \
          In particular, self-reported physical activity has a reliable, yet small positive association with \
-         Extroversion and Conscientiousness and a small negative relationship with Neuroticism. Much of the \
+         Extroversion and #1#Conscientiousness and a small negative relationship with Neuroticism. Much of the \
          research to support these relationships is cross-sectional, yet there is a growing evidence base to \
          show that personality can affect physical activity over time using longitudinal designs. \
          Interestingly, some evidence even supports a beneficial effect of physical activity on personality \
          change over time. \
          How personality may influence physical activity has also seen considerable research attention. There \
          is a body of evidence that personality traits may play a role in social cognitive constructs such as \
-         attitudes, enjoyment, self-efficacy, barriers/motives, and intention. #1#Conscientiousness, in \
+         attitudes, enjoyment, self-efficacy, barriers/motives, and intention. Conscientiousness, in \
          particular, has been shown to influence whether people are likely to follow through with intentions, \
          and may contribute to what is known as the intention-behavior gap. Personality is also linked to physical \
          activity choices and preferences. For example, it has been established that higher intensity aerobic \
          activities are more likely to be performed by #2#extroverts. The relationships between general symptoms of \
-         mental distress and physical activity are dependent on personality characteristics. Individuals with \
-         personality profiles that put them at higher risk for mental #3#distress may benefit from greater levels \
+         mental #3#distress and physical activity are dependent on personality characteristics. Individuals with \
+         personality profiles that put them at higher risk for mental distress may benefit from greater levels \
          of fitness and physical activity participation. Less work has been done among populations with clinical \
          mental disorders, which are frequently comorbid with chronic illness, highlighting the need for continued \
          work in this direction. \
@@ -114,13 +113,13 @@
          adapted physical activity promotion strategies.", 
         markers: {
           '1': {
-            description: 'The quality of working hard and being careful', // multiple times
+            description: 'The quality of working hard and being careful',
           },
           '2': {
             description: 'energetic people who enjoys being with other people', 
           },
           '3': {
-            description: 'A feeling of extreme worry, sadness, or pain', //multiple times
+            description: 'A feeling of extreme worry, sadness, or pain', 
           },
           '4': {
             description: 'Something that blocks you so that movement, going forward, or action is prevented or made more difficult'

@@ -226,7 +226,7 @@
         interaction: "MARK",
         primary: true,
         show_lesson_text: false,
-        question: "In the text, find the words according to the following definitions (If there are multiple possiblilities, choose the first occurence):",
+        question: "In the text, find the words according to the following definitions (If there are multiple occurences, choose the first one):",
         marktext: "<p>Many students find it easier to learn music theory when they practice a lot. In other words,</p>
         <p>physically creating #2#sounds by playing a musical instrument (such as the #1#piano) helps you to better</p>
         <p>#5#visualize and listen to the music you are writing down or studying. This allows students to</p>
