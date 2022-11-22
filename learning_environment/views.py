@@ -26,7 +26,7 @@ def practice(request):
     """Display a task for practicing."""
 
     context = {'mode': 'solve'}
-
+    current_lesson_series = request.session.get('lesson_series', 'General')
     # start a lesson
     if request.method == 'POST' and 'start' in request.POST:
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
@@ -92,7 +92,7 @@ def practice(request):
         lesson = task.lesson
         context['state'] = context['mode']
     else:  # fetch new task and show it
-        if series == "Adaptive Pretest": 
+        if current_lesson_series == "Adaptive Pretest": 
             tutor = TutormodelPretest(request.user) 
         else:
             tutor = Tutormodel(request.user)
@@ -102,7 +102,7 @@ def practice(request):
             return HttpResponseServerError("Error: No task available!")
         context['state'] = state
 
-    if series == "Adaptive Pretest": #NEW
+    if current_lesson_series == "Adaptive Pretest": #NEW
         request.session['done'] += 1 #NEW
     context['task'] = task
     context['lesson'] = lesson

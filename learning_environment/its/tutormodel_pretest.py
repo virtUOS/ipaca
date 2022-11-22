@@ -34,7 +34,7 @@ class TutormodelPretest:
             except Lesson.DoesNotExist:
                 raise Exception("Lesson from session does not exist: {}!".format(current_lesson_id))
         else:
-            lesson = Lesson.object.get(id="level-A", series="Adaptive Pretest")
+            lesson = Lesson.objects.get(lesson_id="level-A", series="Adaptive Pretest")
             request.session['current_lesson'] = lesson.id
             request.session['done'] = 0 # NEW Zählt erledigte Aufgaben
             request.session['current_lesson_correct'] = 0 # zählt wie viele Aufgaben korrekt gelöst wurden
@@ -51,7 +51,7 @@ class TutormodelPretest:
                 next_level = "level-C" #TODO was passiert nach level C?
             elif lesson.id == "level-C":
                 complete = True #NEW
-            lesson = Lesson.object.get(id=next_level, series="Adaptive Pretest")
+            lesson = Lesson.objects.get(lesson_id=next_level, series="Adaptive Pretest")
             request.session['current_lesson'] = lesson.id
             request.session['current_lesson_correct'] = 0 # zählt wie viele Aufgaben korrekt gelöst wurden
             request.session.modified = True
@@ -59,18 +59,23 @@ class TutormodelPretest:
         
         # 3. in einer lesson, nächste Aufgabe presentieren 
         # pick a task
-        while complete == False: # NEW
+    
+        request.session.modified = True
+        next_type = "R"
+        tasks = request.session.get("tasks", None)
+        if not tasks:
+            next_type = "START" 
+            tasks = Task.objects.filter(lesson=lesson)
+        if next_type == 'START': # Start- und Endseite anzeigen
+            return next_type, lesson, None
+        elif next_type == 'WRAPUP':
+            return next_type, lesson, None
+        else:  # pick random task of fitting type
+            cnt = tasks.count()
+            r = random.randint(0, cnt-1) # NEW Sonst mit if und ner 2. Liste
+            task = tasks[r] # TODO random Aufgabe wählen, vorher bearbeitete Aufgaben rausnehmen
+            del tasks[r] 
             request.session.modified = True
-            #if next_type == 'START': # Start- und Endseite anzeigen
-                #return next_type, lesson, None
-            #elif next_type == 'WRAPUP':
-                #return next_type, lesson, None
-            #else:  # pick random task of fitting type
-                #tasks = Task.objects.filter(lesson=lesson)
-                #cnt = tasks.count()
-                #tasks[r].remove() # NEW
-                #r = random.randint(0, cnt-1) # NEW Sonst mit if und ner 2. Liste
-                #task = tasks[r] # TODO random Aufgabe wählen, vorher bearbeitete Aufgaben rausnehmen
-                #return "WRAPUP", lesson, task #message at the end -> task.html
+            return "R", lesson, task #message at the end -> task.html
 
        # return "Your current level is: " lesson.id #NEW

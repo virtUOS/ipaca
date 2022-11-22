@@ -41,7 +41,7 @@
       { // reading task:
         name:  "Personality",
         type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
-        interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAP = fill in the gaps
         primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // Shall we show the lesson reading text? true/false
         question:  "Which of the following answers are correct?",  // the question to be displayed
@@ -128,20 +128,20 @@
             description: 'The act of starting to use a plan or system'
           }
         } // end of markers list
-      } // end of task 2
+      }, // end of task 2
       // fill the gaps tasks
       {
         // task 3: gap filling for past tenses
         name: "Past tenses",
         type: "GS",
-        interaction: "GAPFILL",
+        interaction: "GAP",
         primary: true,
         show_lesson_text: false,
         question: "<p>I wish you _1_ (not move) to another city. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [
-            { text: 'did not move', correct: ture, feedback: "Yes, that's correct!"},
+            { text: 'did not move', correct: true, feedback: "Yes, that's correct!"},
             { text: 'would not move', correct: false, feedback: "Yes, that's correct!"},
           ],
         },
@@ -150,7 +150,7 @@
         // task 4: gap filling for past tenses
         name: "Past tenses",
         type: "GS",
-        interaction: "GAPFILL",
+        interaction: "GAP",
         primary: true,
         show_lesson_text: false,
         question: "<p>If only he _1_ (study) harder when he was at university.  </p>",
@@ -165,7 +165,7 @@
         // task 5: gap filling for past tenses
         name: "Past tenses",
         type: "GS",
-        interaction: "GAPFILL",
+        interaction: "GAP",
         primary: true,
         show_lesson_text: false,
         question: "<p>I wish you _1_ (not take) my phone without asking.</p>",
@@ -180,7 +180,7 @@
         // task 6: gap filling for past tenses
         name: "Past tenses",
         type: "GS",
-        interaction: "GAPFILL",
+        interaction: "GAP",
         primary: true,
         show_lesson_text: false,
         question: "<p>She is in the USA now, she works there. You _1_ (cannot see) her here, in Ukraine.</p>",
@@ -195,7 +195,7 @@
         // task 7: gap filling for past tenses
         name: "Past tenses",
         type: "GS",
-        interaction: "GAPFILL",
+        interaction: "GAP",
         primary: true,
         show_lesson_text: false,
         question: "<p>If you _1_ (study) biology, you would be an awesome doctor now.</p>",
@@ -210,7 +210,7 @@
         // task 8: gap filling for past tenses
         name: "Past tenses",
         type: "GS",
-        interaction: "GAPFILL",
+        interaction: "GAP",
         primary: true,
         show_lesson_text: false,
         question: "<p>If I wasn't working this evening, I _1_ (visit) your birthday party yesterday.</p>",
@@ -225,7 +225,7 @@
         // task 9: gap filling for past tenses
         name: "Past tenses",
         type: "GS",
-        interaction: "GAPFILL",
+        interaction: "GAP",
         primary: true,
         show_lesson_text: false,
         question: "<p>If he was singing at the concert tomorrow, he _1_ (rehearse) now.</p>",

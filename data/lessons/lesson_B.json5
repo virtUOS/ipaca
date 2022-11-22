@@ -1,6 +1,6 @@
 // vocab task
 {
-  name:1,  // the name that's also shown to the users
+  name: "1",  // the name that's also shown to the users
   id: "level-B",        // an internal id, will never be shown, but important to identify the lesson
   series: 'Adaptive Pretest',
   author: "Adriane Pelikan, Aura Kampf",    // used for documentation, will not be shown to the user
@@ -37,16 +37,16 @@
   text_url: "unknown - TODO",
     tasks: [  // the list of tasks for this lesson
       {
-        name: 2,
+        name: "2",
       type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
-      interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAP = fill in the gaps
       primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
       show_lesson_text: true,  // Shall we show the lesson reading text? true/false
       question:  "Which of the following answers are correct?",  // the question to be displayed
       choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
         {
           text:  "Amara was not allowed to have a phone as she could register on social media effortlessly.",
-          correct: ture,
+          correct: true,
           feedback:  "True!"
         },
         {
@@ -116,7 +116,7 @@
           description: 'fully grown and developed', 
         },
         '4': {
-          description: 'strongly limiting someone's freedom to behave as they wish, or likely to severely punish someone if they do not obey'
+          description: 'strongly limiting someone\'s freedom to behave as they wish, or likely to severely punish someone if they do not obey'
         },
         '5': {
           description: 'correctly, or in a satisfactory way'
@@ -125,24 +125,24 @@
     }, 
     {
       // task 3: gap filling - level B
-      name: 3,
+      name: "3",
       type: "GS",
-      interaction: "GAPFILL",
+      interaction: "GAP",
       primary: true,
       show_lesson_text: false,
       question: "<p>You were driving too fast. You _1_ (could) crashed the car. </p>",
       gaps: {
         mode: 'fillin',
         _1_: [
-          { text: 'could have', correct: ture, feedback: "Yes, that's correct!"},
+          { text: 'could have', correct: true, feedback: "Yes, that's correct!"},
         ],
       },
     },
     {
       // task 4: gap filling for past tenses
-      name: 4,
+      name: "4",
       type: "GS",
-      interaction: "GAPFILL",
+      interaction: "GAP",
       primary: true,
       show_lesson_text: false,
       question: "<p> This dress is overpriced. I can't afford _1_ it. (to buy)    </p>",
@@ -155,9 +155,9 @@
     },
     {
       // task 5: gap filling for past tenses
-      name: 5,
+      name: "5",
       type: "GS",
-      interaction: "GAPFILL",
+      interaction: "GAP",
       primary: true,
       show_lesson_text: false,
       question: "<p> When father came home, his daughter _1_  asleep. (to fall) </p>",
@@ -171,9 +171,9 @@
     },
     {
       // task : gap filling
-      name: 6,
+      name: "6",
       type: "GS",
-      interaction: "GAPFILL",
+      interaction: "GAP",
       primary: true,
       show_lesson_text: false,
       question: "<p> You look so tired. I _1_ my project for 4 hours. (to do) </p>",
@@ -186,12 +186,12 @@
     },
     {
       // task 7: gap filling
-      name: 7,
+      name: "7",
       type: "GS",
-      interaction: "GAPFILL",
+      interaction: "GAP",
       primary: true,
       show_lesson_text: false,
-      question: "<p> Your sister reads fictional books, ... she? (to do) </p>",
+      question: "<p> Your sister reads fictional books, _1_ she? (to do) </p>",
       gaps: {
         mode: 'fillin',
         _1_: [
@@ -201,12 +201,12 @@
     },
     {
       // task 8: gap filling
-      name: 8,
+      name: "8",
       type: "GS",
-      interaction: "GAPFILL",
+      interaction: "GAP",
       primary: true,
       show_lesson_text: false,
-      question: "<p> My sister is coming at 6 p.m. I... cooking by then. (to finish) </p>",
+      question: "<p> My sister is coming at 6 p.m. I _1_ cooking by then. (to finish) </p>",
       gaps: {
         mode: 'fillin',
         _1_: [
@@ -217,9 +217,9 @@
     },
     {
       // task 9: gap filling
-      name: 9,
+      name: "9",
       type: "GS",
-      interaction: "GAPFILL",
+      interaction: "GAP",
       primary: true,
       show_lesson_text: false,
       question: "<p> I've stopped _1_ fast-food, as I have problems with my stomach. (to eat)  </p>",
@@ -231,17 +231,17 @@
       },
     },
     { // task 10: primary reading task
-      name: 10,
+      name: "10",
       type: "R",         
       interaction: "SHORT",  
       primary: true,     
       show_lesson_text: false, 
-      question:  "<p> Paraphrase the sentence. Use the inversion with negative adverbials. </p> <p> Use the words given in brackets. "Stay here", she said. (me) </p>",  
+      question:  "<p> Paraphrase the sentence. Use the inversion with negative adverbials. </p> <p> Use the words given in brackets. 'Stay here', she said. (me) </p>",  
       answer: "Stay here she said to me."
     },  // end of task 10
 
     { // task 11: primary reading task
-      name:  11,
+      name:  "11",
       type: "R",         
       interaction: "SHORT",  
       primary: true,     
@@ -251,7 +251,7 @@
     },  // end of task 11
 
     { // task 12: primary reading task
-      name:  12,
+      name:  "12",
       type: "R",         
       interaction: "SHORT",  
       primary: true,     
@@ -261,7 +261,7 @@
     },  // end of task 12
 
     { // task 13: primary reading task
-      name: 13,
+      name: "13",
       type: "R",         
       interaction: "SHORT",  
       primary: true,     
@@ -271,7 +271,7 @@
     },  // end of task 13
 
      { // task 14: primary reading task
-      name:  14,
+      name:  "14",
       type: "R",         
       interaction: "SHORT",  
       primary: true,     
