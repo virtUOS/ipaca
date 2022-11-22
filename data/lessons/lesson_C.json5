@@ -40,12 +40,12 @@
     tasks: [  // the list of tasks for this lesson
       { // reading task:
         name:  "Personality",
-      type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
-      interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
-      primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
-      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
-      question:  "Which of the following answers are correct?",  // the question to be displayed
-      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question:  "Which of the following answers are correct?",  // the question to be displayed
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
         {
           text:  "Personality is considered insignificant factor in the sphere of physical activity theory and practice.",
           correct: false,
