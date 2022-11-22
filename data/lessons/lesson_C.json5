@@ -3,7 +3,7 @@
   id: "level-C",        // an internal id, will never be shown, but important to identify the lesson
   series: 'Adaptive Pretest',
   author: "Aura Kampf",    // used for documentation, will not be shown to the user
-  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  version: 1,              // if you revise your lesson, give it a higher version number each time
   text: "<p> Physical activity and personality \
          One personal factor that has received much attention and has the potential for broad reaching \
          adaptations to current physical activity theory and practice is personality. Currently the \
@@ -38,7 +38,7 @@
   text_licence: "CC BY",
   text_url: "https://open.umn.edu/opentextbooks/textbooks/essentials-of-exercise-and-sport-psychology-an-open-access-textbook",
     tasks: [  // the list of tasks for this lesson
-      {
+      { // reading task:
         name:  "Personality",
       type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
       interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
@@ -73,7 +73,7 @@
         },
       ]  // end of list of choices
     },  // end of task 1
-
+      // mark the word task:
       {  // task 2: mark the words
         name: "Definitions",
         type: "V",
@@ -129,6 +129,7 @@
           }
         } // end of markers list
       } // end of task 2
+      // fill the gaps tasks
       {
         // task 3: gap filling for past tenses
         name: "Past tenses",
@@ -235,6 +236,7 @@
           ],
         },
       },
+      // paraphrasing tasks
       { // task 10: primary reading task
         name:  "Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets.",
         type: "R",         
