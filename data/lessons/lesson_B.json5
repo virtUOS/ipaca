@@ -32,9 +32,9 @@
          because they can’t see the other person, so they think it’s no big deal. Kids should not be active on \
          social media until they are mature enough to use it properly. Kids should enjoy their childhood while \
          it lasts, and then enjoy all the good of social media when they are old enough to appreciate it.</p>",
-  text_source: "unknown - TODO",
-  text_licence: "unknown - TODO",
-  text_url: "unknown - TODO",
+  text_source: "Humans R Social Media – Open Textbook Edition 1",
+  text_licence: "CC0",
+  text_url: "https://opentextbooks.library.arizona.edu/hrsm/",
     tasks: [  // the list of tasks for this lesson
       {
         name: "2",
