@@ -46,7 +46,7 @@
       choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
         {
           text:  "Amara was not allowed to have a phone as she could register on social media effortlessly.",
-          correct: ture,
+          correct: true,
           feedback:  "True!"
         },
         {
@@ -117,7 +117,7 @@
             description: 'fully grown and developed', 
           },
           '4': {
-            description: 'strongly limiting someone's freedom to behave as they wish, or likely to severely punish someone if they do not obey'
+            description: "strongly limiting someone's freedom to behave as they wish, or likely to severely punish someone if they do not obey"
           },
           '5': {
             description: 'correctly, or in a satisfactory way'

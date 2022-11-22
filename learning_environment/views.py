@@ -29,14 +29,14 @@ def practice(request):
     current_lesson_series = request.session.get('lesson_series', 'General')
     # start a lesson
     if request.method == 'POST' and 'start' in request.POST:
-        if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
-            return redirect('myhome')
-        request.session['current_lesson_todo'].pop(0)  # remove the start item
-        request.session.modified = True
         series = request.session.get("lesson_series", "General")
         if series == "Adaptive Pretest": 
             tutor = TutormodelPretest(request.user) 
         else:
+            if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
+               return redirect('myhome')
+            request.session['current_lesson_todo'].pop(0)  # remove the start item
+            request.session.modified = True
             tutor = Tutormodel(request.user)
         try:
             (state, lesson, task) = tutor.next_task(request)

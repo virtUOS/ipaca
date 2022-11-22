@@ -24,10 +24,11 @@ class TutormodelPretest:
         Returns tuple:
         (STATE, lesson, task)
         """
-        
+
         # 1. gucken, ob noch keine lesson gestartet wurde, dann lesson A
         # pick a lesson
         current_lesson_id = request.session.get('current_lesson', None) #schon in einem level?
+
         if current_lesson_id:
             try:
                 lesson = Lesson.objects.get(pk=current_lesson_id)
@@ -38,6 +39,7 @@ class TutormodelPretest:
             request.session['current_lesson'] = lesson.id
             request.session['done'] = 0 # NEW Zählt erledigte Aufgaben
             request.session['current_lesson_correct'] = 0 # zählt wie viele Aufgaben korrekt gelöst wurden
+            request.session['tasks'] = None
             request.session.modified = True
 
         # 2. wenn eine Lesson beendet wird, nächste lesson starten
@@ -59,22 +61,19 @@ class TutormodelPretest:
         
         # 3. in einer lesson, nächste Aufgabe presentieren 
         # pick a task
-    
         request.session.modified = True
         next_type = "R"
         tasks = request.session.get("tasks", None)
         if not tasks:
             next_type = "START" 
-            tasks = Task.objects.filter(lesson=lesson)
+            tasks = list(Task.objects.filter(lesson=lesson).values_list('id', flat=True))  # get list of task ids (we need ids becuse we cannot store a queryset in the session)
+            request.session['tasks'] = tasks
         if next_type == 'START': # Start- und Endseite anzeigen
             return next_type, lesson, None
         elif next_type == 'WRAPUP':
             return next_type, lesson, None
         else:  # pick random task of fitting type
-            cnt = tasks.count()
-            r = random.randint(0, cnt-1) # NEW Sonst mit if und ner 2. Liste
-            task = tasks[r] # TODO random Aufgabe wählen, vorher bearbeitete Aufgaben rausnehmen
-            del tasks[r] 
+            task = Task.objects.get(pk=tasks.pop(random.randrange(len(tasks))))  # pick and remove a random task id from list, fetch Task object from database
             request.session.modified = True
             return "R", lesson, task #message at the end -> task.html
 
