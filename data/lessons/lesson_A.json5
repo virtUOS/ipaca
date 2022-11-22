@@ -5,9 +5,9 @@
     author: "Fabienne Finas",
     version: 1,
     series: "Adaptive Pretest",
-    text: "Please fill in the gaps in chronological using the words in parentheses. e.g. My teacher... (hate) me! Answer: My teacher hates me!",
+    text: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p>",
     text_source: "Group 7",
-    text_licence: "CC0",
+    text_licence: "CC-BY-SA",
     text_url: "http://ipaca.de",
       tasks: [  // the list of tasks for this fill in the gap lesson
         { // task 1
@@ -16,7 +16,7 @@
             interaction: "GAP", 
             primary: true, 
             show_lesson_text: false, 
-            question: "Somebody asks you how you like London. Your response: I _1_ (to live) in London. The city is very beautiful but noisy!",
+            question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>Somebody asks you how you like London.</p><p>Your response: I _1_ (to live) in London. The city is very beautiful but noisy!</p>",
             // I don't think their "have lived" is immediately obvious so I included multiple possible options
             gaps: { 
                 mode: 'fillin',
@@ -33,7 +33,7 @@
             interaction: "GAP", 
             primary: true, 
             show_lesson_text: false, 
-            question: "I _1_ (not like) spiders. They are so scary!",
+            question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>I _1_ (not like) spiders. They are so scary!</p>",
             gaps: {
                 mode: 'fillin',
                 _1_: [ 
@@ -48,7 +48,7 @@
             interaction: "GAP", 
             primary: true, 
             show_lesson_text: false, 
-            question: "You know, my parents _1_ (to come) to me yesterday. I'm so happy about it.",
+            question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>You know, my parents _1_ (to come) to me yesterday. I'm so happy about it.</p>",
             gaps: {
                 mode: 'fillin',
                 _1_: [ 
@@ -62,7 +62,7 @@
         interaction: "GAP", 
         primary: true, 
         show_lesson_text: false, 
-        question: "What _1_ you doing (to do) this time last year?",
+        question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>What _1_ you doing (to do) this time last year?</p>",
         gaps: {
             mode: 'fillin',
             _1_: [ 
@@ -76,7 +76,7 @@
             interaction: "GAP", 
             primary: true, 
             show_lesson_text: false, 
-            question: "I enjoy _1_ (to travel).",
+            question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>I enjoy _1_ (to travel).</p>",
             gaps: {
                 mode: 'fillin',
                 _1_: [ 
@@ -90,7 +90,7 @@
             interaction: "GAP", 
             primary: true, 
             show_lesson_text: false, 
-            question: "_1_ (to be) there any chairs?",
+            question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>_1_ (to be) there any chairs?</p>",
             gaps: {
                 mode: 'fillin',
                 _1_: [ 
@@ -104,7 +104,7 @@
             interaction: "GAP", 
             primary: true, 
             show_lesson_text: false, 
-            question: "I can't talk. I _1_ (to do) my homework right now.",
+            question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>I can't talk. I _1_ (to do) my homework right now.</p>",
             gaps: {
                 mode: 'fillin',
                 _1_: [ 
