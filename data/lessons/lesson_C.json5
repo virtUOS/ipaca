@@ -34,9 +34,9 @@
          more work is required to understand genetic, cognitive, and affective mechanisms, developmental \
          associations across extended periods of time, and the development and implementation of personality \
          adapted physical activity promotion strategies.</p>",
-  text_source: "unknown - TODO",
-  text_licence: "unknown - TODO",
-  text_url: "unknown - TODO",
+  text_source: "Essentials of Exercise and Sport Psychology: An Open Access Textbook",
+  text_licence: "CC BY",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/essentials-of-exercise-and-sport-psychology-an-open-access-textbook",
     tasks: [  // the list of tasks for this lesson
       {
         name:  "Personality",
