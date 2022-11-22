@@ -16,17 +16,23 @@ class AutomaticJson():
     @staticmethod
     def stop_word_removal(noun_phrases):
         base = Path(__file__).parents[2]
+        # Stop words were taken from www.countwordsfree.com
         path = '/learning_environment/utils/stop_words/stop_words_english.json'
         #stopwords =json.load('stop_words/stop_words_english.json')
         with open(str(base)+path) as j:
             stop_words = json.load(j)
+            filtered_nouns = [w for w in noun_phrases if not w in stop_words]
+            return filtered_nouns
+
             print()
 
 
     @staticmethod
     def noun_phrase_extraction(text):
+
         text = TextBlob(text)
-        return text.noun_phrases
+        nouns_cleaned= AutomaticJson.stop_word_removal(text.noun_phrases)
+        return nouns_cleaned
 
     @classmethod
     def text_to_json5(cls, text,name, text_source,text_licence,text_url,answer=None, number_questions=10):
@@ -80,15 +86,17 @@ class AutomaticJson():
         task['question'] = question
         task['answer'] = answer
 
-        template['tasks'] = [task]
+        # template['tasks'] = [task]
+        template['tasks'].append(task)
 
         base = Path(__file__).parents[2]
-        path = "/data/lessons/lesson_automatic_"+name.lower().replace()+".json5"
+        path = "/data/lessons/lesson_automatic_"+name.lower().replace(" ","_" )+".json5"
         filename = str(base) + path
 
 
         with open(filename, "w") as fp:
             json5.dump(template, fp)
+            print()
 
         create_lesson = Command()
         create_lesson.handle()
