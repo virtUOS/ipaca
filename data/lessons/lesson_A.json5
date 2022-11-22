@@ -2,7 +2,7 @@
 {
     name: "level A",
     id: "level-A",
-    author: "Fabienne Finas und Aura Kampf",
+    author: "Fabienne Finas, Aura Kampf",
     version: 1,
     series: "Adaptive Pretest",
     text: "<p>Many students find it easier to learn music theory when they practice a lot. In other words,</p>
