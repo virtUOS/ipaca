@@ -38,50 +38,7 @@
 <div class="container-fluid" style="background: #F9F9FB;">
     <div class="row">
 
-        <nav class="col-3" style="background:white; margin-top: -12px;">
-            <div class="d-flex flex-column flex-shrink-0 p-3" style=" width: 25vw;">
-
-                <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item">
-                        <a href="{% url 'myhome' %}" class="nav-item i-plain" aria-current="page">
-                            <i class="fa-solid fa-house"></i>
-                        {# <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> #}
-                        <span style="font-size:16px; color:black; vertical-align: middle; margin-left: 4px;"> My Home</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="i-plain" id='icon-book' data-bs-toggle="collapse" data-bs-target="#tasks-collapse" aria-expanded="false">
-                            <i class="bi-book" style="font-size:16px;"></i>
-                            <span style="font-size:16px; vertical-align: middle; color:black; margin-left: 4px;"> Tasks </span>
-                        </a>
-
-                        <div class="collapse" id="tasks-collapse" style="margin-left: 20px;">
-                            <ul class="">
-                                <li><a href="{% url 'academic_series' %}" class="link-dark rounded">Academic</a></li>
-                                <li><a href="{% url 'general_series' %}">General</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                    <li class="nav-item">
-                        <a class="nav-item  i-plain" id='icon-trophy' data-bs-toggle="collapse" data-bs-target="#results-collapse" aria-expanded="false">
-                            <i class="bi bi-trophy" style="font-size:16px;"></i>
-                            <span style="font-size:16px; color: black; vertical-align: middle; margin-left: 4px;">Results</span>
-                        </a>
-
-                        <div class="collapse" id="results-collapse" style="margin-left: 20px;">
-                            <ul class="">
-                                <li><a href="{% url 'learner_dashboard' %}" class="link-dark rounded">Personal</a></li>
-                                <li><a href="{% url 'global_dashboard' %}" class="link-dark rounded">Global</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
+            {% include "learning_environment/nav.html" %}
 
 
         <div class="col" style="margin-left: 18px; padding:0;">
@@ -118,19 +75,9 @@
 </div>
 
 </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <script>
-    $("#icon-book").click(function() {
-        $(this).find('i').toggleClass('bi-book-fill');
-        $(this).find('i').toggleClass('bi-book');
-    });
 
-    $("#icon-trophy").click(function() {
-        $(this).find('i').toggleClass('bi-trophy-fill');
-        $(this).find('i').toggleClass('bi-trophy');
-    });
-    </script>
+
 
  </body>
 {% endblock %}
