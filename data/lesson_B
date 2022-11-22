@@ -1,0 +1,232 @@
+// vocab task
+{
+  name:"Level B1",  // the name that's also shown to the users
+  id: "level-B",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Adaptive Pretest',
+  author: "Adriane Pelikan",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p> At what age should a child have social media? \
+         So what age is too young for a social media presence? I interviewed a Freshman at The University \
+         of Arizona to share her first experiences with social media, and get her take on how young is too \
+         young. \
+         Amara (a pseudonym) is 18 years old, and has an iPhone just like every other college student her \
+         age, but the difference between her, and many other of these students is that she didn’t even have \
+         a phone until she was 16 in her Sophomore year of high school. Amara’s parents were very strict \
+         about phones and didn’t want their only child active on social media at such a young age, and since \
+         the only phone she wanted was an iphone, where it is extremely easy to access social media, she \
+         was not allowed a phone until she turned 16. This was difficult for Amara for a few reasons, the \
+         first being she couldn’t contact her parents after school when they needed to pick her up, she \
+         couldn’t talk to her friends outside of school, and she always felt very out of the loop. Vine was \
+         very big the year all of Amara’s friends started getting phones and when they would all talk about \
+         the latest videos she couldn’t participate in any of the conversations. Amara’s parents valued their \
+         young daughter’s privacy over her social life, and at the time this upset Amara very much, but now as \
+         she’s older she feels happy that she had different experiences than her classmates. \
+         While other kids talked only through their phones, Amara had to meet up with her friends in person, \
+         and she had to have the childhood experiences her classmates never would. She played outside, and did \
+         normal kids stuff. This is why I believe that parents should wait as long as possible to get their \
+         kids phones, because every child should have those experiences of making plans with friend’s in person, \
+         and playing together outside of school. Kids need the experience of being kids, before they should have \
+         any presence on social media. Amara’s parents were also worried of any harm that may have come to their \
+         daughter if she had had a phone at a younger age. Cyberbullying is so common, and it is so easy for kids \
+         to be mean behind a screen. Younger kids especially think it’s ok to say hurtful things over the phone \
+         because they can’t see the other person, so they think it’s no big deal. Kids should not be active on \
+         social media until they are mature enough to use it properly. Kids should enjoy their childhood while \
+         it lasts, and then enjoy all the good of social media when they are old enough to appreciate it.</p>",
+  text_source: "unknown - TODO",
+  text_licence: "unknown - TODO",
+  text_url: "unknown - TODO",
+    tasks: [  // the list of tasks for this lesson
+      {
+        name:  "B2",
+      type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+      interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+      question:  "Which of the following answers are correct?",  // the question to be displayed
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        {
+          text:  "Amara was not allowed to have a phone as she could register on social media effortlessly.",
+          correct: ture,
+          feedback:  "True!"
+        },
+        {
+          text:  "Amanda felt upset because of not having phone",
+          correct: true,
+          feedback:  "True!"
+        },
+        {
+          text:  "Author claims that there is no difference whether kids use social media or not",
+          correct: false,
+          feedback:  "Wrong! There seems to be a big difference as claimed by the author",
+        },
+        {
+          text:  "Kids are more often tend to be rough on the Internet",
+          correct: true,
+          feedback:  "True",
+        },
+        {
+          text:  "Author comments that kids are able to value social media",
+          correct: false,
+          feedback:  "Wrong! The author clearly states that kids should not be active on social media",
+        },
+      ]  // end of list of choices
+    }
+    {
+      // task 3: gap filling - level B
+      name: "B3",
+      type: "GS",
+      interaction: "GAPFILL",
+      primary: true,
+      show_lesson_text: false,
+      question: "<p>You were driving too fast. You _1_ (could) crashed the car. </p>",
+      gaps: {
+        mode: 'fillin',
+        _1_: [
+          { text: 'could have', correct: ture, feedback: "Yes, that's correct!"},
+        ],
+      },
+    },
+    {
+      // task 4: gap filling for past tenses
+      name: "B4",
+      type: "GS",
+      interaction: "GAPFILL",
+      primary: true,
+      show_lesson_text: false,
+      question: "<p> This dress is overpriced. I can't afford _1_ it. (to buy)    </p>",
+      gaps: {
+        mode: 'fillin',
+        _1_: [
+          { text: 'to buy', correct: true, feedback: "Correct!"},
+        ],
+      },
+    },
+    {
+      // task 5: gap filling for past tenses
+      name: "B5",
+      type: "GS",
+      interaction: "GAPFILL",
+      primary: true,
+      show_lesson_text: false,
+      question: "<p> When father came home, his daughter _1_  asleep. (to fall) </p>",
+      gaps: {
+        mode: 'fillin',
+        _1_: [
+          { text: 'had fallen', correct: true, feedback: "Correct!"},
+          { text: 'has fallen', correct: true, feedback: "Correct!"},
+        ],
+      },
+    },
+    {
+      // task : gap filling
+      name: "B6",
+      type: "GS",
+      interaction: "GAPFILL",
+      primary: true,
+      show_lesson_text: false,
+      question: "<p> You look so tired. I _1_ my project for 4 hours. (to do) </p>",
+      gaps: {
+        mode: 'fillin',
+        _1_: [
+          { text: 'have been doing', correct: true, feedback: "Correct!"},
+        ],
+      },
+    },
+    {
+      // task 7: gap filling
+      name: "B7",
+      type: "GS",
+      interaction: "GAPFILL",
+      primary: true,
+      show_lesson_text: false,
+      question: "<p> Your sister reads fictional books, ... she? (to do) </p>",
+      gaps: {
+        mode: 'fillin',
+        _1_: [
+          { text: 'doesn`t', correct: true, feedback: "Correct!"},
+        ],
+      },
+    },
+    {
+      // task 8: gap filling
+      name: "B8",
+      type: "GS",
+      interaction: "GAPFILL",
+      primary: true,
+      show_lesson_text: false,
+      question: "<p> My sister is coming at 6 p.m. I... cooking by then. (to finish) </p>",
+      gaps: {
+        mode: 'fillin',
+        _1_: [
+          { text: 'have to', correct: true, feedback: "Correct!"},
+          { text: 'have finished', correct: true, feedback: "Correct!"},
+        ],
+      },
+    },
+    {
+      // task 9: gap filling
+      name: B9,
+      type: "GS",
+      interaction: "GAPFILL",
+      primary: true,
+      show_lesson_text: false,
+      question: "<p> I've stopped _1_ fast-food, as I have problems with my stomach. (to eat)  </p>",
+      gaps: {
+        mode: 'fillin',
+        _1_: [
+          { text: 'eating', correct: true, feedback: "Correct!"},
+        ],
+      },
+    },
+    { // task 10: primary reading task
+      name: B10,
+      type: "R",         
+      interaction: "SHORT",  
+      primary: true,     
+      show_lesson_text: false, 
+      question:  "<p> Paraphrase the sentence. Use the inversion with negative adverbials. </p> <p> Use the words given in brackets. "Stay here", she said. (me) </p>",  
+      answer: "Stay here she said to me."
+    },  // end of task 10
+
+    { // task 11: primary reading task
+      name:  B11,
+      type: "R",         
+      interaction: "SHORT",  
+      primary: true,     
+      show_lesson_text: false, 
+      question:  "<p> Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets. </p>,<P> My mother is 55. She is into dancing. </p>",  
+      answer: "My mother, who is 55, is into dancing."
+    },  // end of task 11
+
+    { // task 12: primary reading task
+      name:  B12,
+      type: "R",         
+      interaction: "SHORT",  
+      primary: true,     
+      show_lesson_text: false, 
+      question:  "<p>Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets</p><p> Tom started cooking an hour ago. (has been) </p>",  
+      answer: "Tom has been cooking an hour ago."
+    },  // end of task 12
+
+    { // task 13: primary reading task
+      name: B13,
+      type: "R",         
+      interaction: "SHORT",  
+      primary: true,     
+      show_lesson_text: false, 
+      question:  "<P>Paraphrase the sentence. Use the inversion with negative adverbials.</p><p> Use the words given in brackets. He could not make a salad. He forgot to buy some tomatoes (because) </p>",  
+      answer: "He couldn't make a salad because he had forgotten to buy some tomatoes."
+    },  // end of task 13
+
+     { // task 14: primary reading task
+      name:  B14,
+      type: "R",         
+      interaction: "SHORT",  
+      primary: true,     
+      show_lesson_text: false, 
+      question:  "<p>Paraphrase the sentence. Use the inversion with negative adverbials. </p><p> Use the words given in brackets. We went to this village every summer (used to)</p>",  
+      answer: "We used to go to this village every summer."
+    },  // end of task 14
+  ] // end of tasks
+
+} // end of lesson

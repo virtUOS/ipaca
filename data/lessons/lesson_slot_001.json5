@@ -1,141 +1,129 @@
-// Lesson tt-001
-// a test lesson, no meaningful content.
+// vocab task
 {
-  name: "NAME OF LESSON 1",  // the name that's also shown to the users
-  id: "lesson-slot-001",        // an internal id, will never be shown, but important to identify the lesson
-  series: 'Academic English',
-  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  name: "Level B1",  // the name that's also shown to the users
+  id: "level-B",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Adaptive Pretest',
+  author: "Aura Kampf",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
-  text: "<p>Since about 2010, one-to-one computing and cloud-based computing has come to dominate school computing. \
-         In many schools, students carry Chromebooks with them, and sometimes they take them home. \
-         (While the market share of educational computing devices is difficult to ascertain, estimates are that \
-         Chromebooks represent over 60% of the devices purchased for school users.) Google Workspaces provide most \
-         students with productivity applications, and student information systems (including grade books), library \
-         card catalogs, and learning management systems are web-based, so students access them from home and school. \
-         Because those systems are based in the cloud, robust, reliable, and secure networks are essential to school \
-         functions.</p> \
-         <p>While the move to cloud-based computing has many benefits for students, teachers, and IT professionals, \
-         it has introduced inequity into education. The “digital divide” has been used to describe the inequitable \
-         access to digital learning for generations. Originally, it was used to describe the fact that marginalized \
-         populations attended schools with fewer computing devices. It has also been used to describe inequitable \
-         access to high-quality instruction with digital tools. As cloud-computing became ubiquitous it described \
-         inequitable access to network connections to use those resources away from the school. The problem was \
-         particularly acute during the remote teaching necessitated by the pandemic in 2020.</p>",
+  text: "<p> At what age should a child have social media? \
+         So what age is too young for a social media presence? I interviewed a Freshman at The University \
+         of Arizona to share her first experiences with social media, and get her take on how young is too \
+         young. \
+         Amara (a pseudonym) is 18 years old, and has an iPhone just like every other college student her \
+         age, but the difference between her, and many other of these students is that she didn’t even have \
+         a phone until she was 16 in her Sophomore year of high school. Amara’s parents were very strict \
+         about phones and didn’t want their only child active on social media at such a young age, and since \
+         the only phone she wanted was an iphone, where it is extremely easy to access social media, she \
+         was not allowed a phone until she turned 16. This was difficult for Amara for a few reasons, the \
+         first being she couldn’t contact her parents after school when they needed to pick her up, she \
+         couldn’t talk to her friends outside of school, and she always felt very out of the loop. Vine was \
+         very big the year all of Amara’s friends started getting phones and when they would all talk about \
+         the latest videos she couldn’t participate in any of the conversations. Amara’s parents valued their \
+         young daughter’s privacy over her social life, and at the time this upset Amara very much, but now as \
+         she’s older she feels happy that she had different experiences than her classmates. \
+         While other kids talked only through their phones, Amara had to meet up with her friends in person, \
+         and she had to have the childhood experiences her classmates never would. She played outside, and did \
+         normal kids stuff. This is why I believe that parents should wait as long as possible to get their \
+         kids phones, because every child should have those experiences of making plans with friend’s in person, \
+         and playing together outside of school. Kids need the experience of being kids, before they should have \
+         any presence on social media. Amara’s parents were also worried of any harm that may have come to their \
+         daughter if she had had a phone at a younger age. Cyberbullying is so common, and it is so easy for kids \
+         to be mean behind a screen. Younger kids especially think it’s ok to say hurtful things over the phone \
+         because they can’t see the other person, so they think it’s no big deal. Kids should not be active on \
+         social media until they are mature enough to use it properly. Kids should enjoy their childhood while \
+         it lasts, and then enjoy all the good of social media when they are old enough to appreciate it.</p>",
   text_source: "unknown - TODO",
   text_licence: "unknown - TODO",
   text_url: "unknown - TODO",
     tasks: [  // the list of tasks for this lesson
       {
-        // task 1: primary reading task
-        name: "NAME OF TASK 1.R.1",
-        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
-        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
-        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
-        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
-        question: "Decide if the information in the statement is True, False or Not Given according to the information in the reading passage.",
-        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          {
-            text: "Students are not allowed to take electronic devices  to classrooms.",
-            correct: false,
-            feedback: "The correct answer is False because the text says  ‘In many schools, students carry Chromebooks with them’"
-          },
-          {
-            text: "Some services are accessible only in school.",
-            correct: false,
-            feedback: "The correct answer is False because the text says ‘... student information systems (including grade books), library card catalogs, and learning management systems are web-based, so students access them from home and school’"
-          },
-          {
-            text: "The term  'digital divide' was invented by schools.",
-            correct: false,
-            feedback: "The correct answer is False because the text doesn’t mention where the origin of the term comes from."
-          },
-          {
-            text: "Not all students have an equal opportunity to use technology.",
-            correct: true,
-            feedback: "The correct answer is True because the text says ‘marginalized populations attended schools with fewer computing devices. It has also been used to describe inequitable access to high-quality instruction with digital tools’."
-          },
-        ]
-      },
-      {
-        name: "NAME OF TASK 2",
-        type: "GS",
-        interaction: "GAP",
-        primary: true,
-        show_lesson_text: false,
-        question: "<p>Choose the options that apply:</p> \
-        <p>Since about 2010, one-to-one computing and cloud-based computing _1_ to dominate school computing</p> \
-        <p>Because those systems _2_ in the cloud, robust, reliable, and secure networks are essential to school functions.</p> \
-        <p>Originally, it _3_ to describe the fact that marginalized populations attended schools with fewer computing devices.</p> \
-        <p>As cloud-computing became ubiquitous it _4_ inequitable access to network connections to use those resources away from the school.</p>",
-        gaps: {
-          mode: 'select',
-          _1_: [
-            { text:  "has come", correct: true, feedback: "The correct answer is ‘has come’. When ’since’ introduces \
-                                                           an action or event at a point of time in the past, we can \
-                                                           use the past simple or present perfect after since and the \
-                                                           present perfect in the main clause."},
-            { text:  "came", correct: false, feedback: "The correct answer is ‘has come’. When ’since’ introduces \
-                                                           an action or event at a point of time in the past, we can \
-                                                           use the past simple or present perfect after since and the \
-                                                           present perfect in the main clause."},
-            { text:  "comes", correct: false, feedback: "The correct answer is ‘has come’. When ’since’ introduces \
-                                                           an action or event at a point of time in the past, we can \
-                                                           use the past simple or present perfect after since and the \
-                                                           present perfect in the main clause."},
-            ],
-          _2_: [
-            { text: "based", correct: false, feedback: "The correct answer is ‘are based’. The passive voice is used when we focus on the object of the sentence." },
-            { text: "were based", correct: false, feedback: "The correct answer is ‘are based’. The passive voice is used when we focus on the object of the sentence." },
-            { text: "are based", correct: true, feedback: "The correct answer is ‘are based’. The passive voice is used when we focus on the object of the sentence." },
-          ],
-          _3_: [
-            { text:  "has been used", correct:  false, feedback:  "The correct answer is ‘was used’. The passive voice is used when we focus on the object of the sentence. In this sentence, we use the past simple tense indicated by the word ‘originally’ which in this case means ‘in the beginning; when something first existed’."},
-            { text:  "was used", correct:  true, feedback:  "The correct answer is ‘was used’. The passive voice is used when we focus on the object of the sentence. In this sentence, we use the past simple tense indicated by the word ‘originally’ which in this case means ‘in the beginning; when something first existed’."},
-            { text:  "is used", correct:  false, feedback:  "The correct answer is ‘was used’. The passive voice is used when we focus on the object of the sentence. In this sentence, we use the past simple tense indicated by the word ‘originally’ which in this case means ‘in the beginning; when something first existed’."},
-          ],
-          _4_: [
-            { text:  "is described", correct:  false, feedback: "The correct answer is ‘described’. We use the Past Simple to describe a sequence of events in chronological order."},
-            { text:  "was described", correct:  false, feedback: "The correct answer is ‘described’. We use the Past Simple to describe a sequence of events in chronological order."},
-            { text:  "described", correct:  true, feedback: "The correct answer is ‘described’. We use the Past Simple to describe a sequence of events in chronological order."},
-          ]
-        }, // end of gap list
-      }, // end of task 2
-      {  // task 3: mark the words
-        name: "Find the synonyms",
+        name:  "Social Media",
+      type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+      interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+      question:  "Which of the following answers are correct?",  // the question to be displayed
+      choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+        {
+          text:  "Amara was not allowed to have a phone as she could register on social media effortlessly.",
+          correct: ture,
+          feedback:  "True!"
+        },
+        {
+          text:  "Amanda felt upset because of not having phone",
+          correct: true,
+          feedback:  "True!"
+        },
+        {
+          text:  "Author claims that there is no difference whether kids use social media or not",
+          correct: false,
+          feedback:  "Wrong! There seems to be a big difference as claimed by the author",
+        },
+        {
+          text:  "Kids are more often tend to be rough on the Internet",
+          correct: true,
+          feedback:  "True",
+        },
+        {
+          text:  "Author comments that kids are able to value social media",
+          correct: false,
+          feedback:  "Wrong! The author clearly states that kids should not be active on social media",
+        },
+      ]  // end of list of choices
+    },  // end of task 1
+
+      {  // task 2: mark the words
+        name: "Definitions",
         type: "V",
         interaction: "MARK",
         primary: true,
         show_lesson_text: false,
-        question: "In the text, find the synonyms for the following words and mark them by clicking on them after selecting one of the words.",
-        marktext: "Since about 2010, one-to-one computing and cloud-based computing has come to dominate school computing. \
-        In many schools, students carry Chromebooks with them, and sometimes they take them home. (While the market share of \
-        educational computing devices is difficult to #1#ascertain, estimates are that Chromebooks represent over 60% of the \
-        devices #2#purchased for school users.) Google Workspaces provide most students with productivity applications, \
-        and student information systems (including grade books), library card catalogs, and learning management systems \
-        are web-based, so students access them from home and school. Because those systems are based in the cloud, #3#robust, \
-        reliable, and secure networks are essential to school functions. \
-        While the move to cloud-based computing has many benefits for students, teachers, and IT professionals, it has \
-        introduced inequity into education. The 'digital divide' has been used to describe the inequitable access to \
-        digital learning for generations. Originally, it was used to describe the fact that marginalized populations \
-        attended schools with fewer computing devices. It has also been used to describe inequitable access to \
-        high-quality instruction with digital tools. As cloud-computing became ubiquitous it described inequitable \
-        access to network connections to use those resources away from the school. The problem was particularly \
-        #4#acute during the remote teaching necessitated by the pandemic in 2020.",
+        question: "In the text, find the words according to the following definitions:",
+        marktext: "At what age should a child have social media? \
+         So what age is too young for a social media presence? I interviewed a Freshman at The University \
+         of Arizona to share her first experiences with social media, and get her take on how young is too \
+         young. \
+         Amara (a pseudonym) is 18 years old, and has an iPhone just like every other college student her \
+         age, but the difference between her, and many other of these students is that she didn’t even have \
+         a phone until she was 16 in her Sophomore year of high school. Amara’s parents were very #4#strict \
+         about phones and didn’t want their only child active on social media at such a young age, and since \
+         the only phone she wanted was an iphone, where it is extremely easy to access social media, she \
+         was not allowed a phone until she turned 16. This was difficult for Amara for a few reasons, the \
+         first being she couldn’t contact her parents after school when they needed to pick her up, she \
+         couldn’t talk to her friends outside of school, and she always #1#felt very out of the loop. Vine was \
+         very big the year all of Amara’s friends started getting phones and when they would all talk about \
+         the latest videos she couldn’t participate in any of the conversations. Amara’s parents valued their \
+         young daughter’s privacy over her social life, and at the time this upset Amara very much, but now as \
+         she’s older she feels happy that she had different experiences than her classmates. \
+         While other kids talked only through their phones, Amara had to meet up with her friends in person, \
+         and she had to have the childhood experiences her classmates never would. She played outside, and did \
+         normal kids stuff. This is why I believe that parents should wait as long as possible to get their \
+         kids phones, because every child should have those experiences of making plans with friend’s in person, \
+         and playing together outside of school. Kids need the experience of being kids, before they should have \
+         any #2#presence on social media. Amara’s parents were also worried of any harm that may have come to their \
+         daughter if she had had a phone at a younger age. Cyberbullying is so common, and it is so easy for kids \
+         to be mean behind a screen. Younger kids especially think it’s ok to say hurtful things over the phone \
+         because they can’t see the other person, so they think it’s no big deal. Kids should not be active on \
+         social media until they are #3#mature enough to use it #5#properly. Kids should enjoy their childhood while \
+         it lasts, and then enjoy all the good of social media when they are old enough to appreciate it.", 
         markers: {
           '1': {
-            description: 'determine',
+            description: 'to have or not have the special knowledge or power that belongs to a particular group of people', // more than 1 word!!!
           },
           '2': {
-            description: 'bought',
+            description: 'the fact of being in a place', // multiple times
           },
           '3': {
-            description: 'strong',
+            description: 'fully grown and developed', 
           },
           '4': {
-            description: 'extreme',
+            description: 'strongly limiting someone's freedom to behave as they wish, or likely to severely punish someone if they do not obey'
+          },
+          '5': {
+            description: 'correctly, or in a satisfactory way'
           }
         } // end of markers list
-      } // end of task 3
+      } // end of task 2
     ] // end of tasks
 
 } // end of lesson
