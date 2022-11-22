@@ -71,6 +71,6 @@ class TutormodelPretest:
                 #tasks[r].remove() # NEW
                 #r = random.randint(0, cnt-1) # NEW Sonst mit if und ner 2. Liste
                 #task = tasks[r] # TODO random Aufgabe wählen, vorher bearbeitete Aufgaben rausnehmen
-                #return "R", lesson, task
+                #return "WRAPUP", lesson, task #message at the end -> task.html
 
        # return "Your current level is: " lesson.id #NEW
