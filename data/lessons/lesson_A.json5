@@ -266,7 +266,7 @@
             description: 'a part on a piano or organ that you press with your foot', 
           },
           '4': {
-            description: 'the set of keys on a piano' //multiple times keyboard
+            description: 'the set of keys on a piano'
           },
           '5': {
             description: 'to imagine or remember someone or something by forming a picture in your mind '
