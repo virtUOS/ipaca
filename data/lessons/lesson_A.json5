@@ -1,209 +1,177 @@
-// lesson 1
 // level A1-A2
-// gap tasks
-// there is still an error somewhere (maybe the if in task 4 is the problem?)
 {
-    name: "level A",
-    id: "level-A",
-    author: "Fabienne Finas",
-    version: 1,
-    series: "Adaptive Pretest",
-    text: "Please fill in the gaps in chronological using the words in parentheses. e.g. My teacher... (hate) me! Answer: My teacher hates me!",
-    text_source: "Group 7",
-    text_licence: "CC0",
-    text_url: "http://ipaca.de",
-      tasks: [  // the list of tasks for this fill in the gap lesson
-        { // task 1
-            name: "fill the gap 01", 
-            type: "GS", 
-            interaction: "GAP", 
-            primary: true, 
-            show_lesson_text: false, 
-            question: "Somebody asks you how you like London. Your response: I _1_ (to live) in London. The city is very beautiful but noisy!",
-            // I don't think their "have lived" is immediately obvious so I included multiple possible options
-            gaps: { 
-                mode: 'fillin',
-                _1_: [ 
-			        { text: "live", correct: true, feedback: "Yes. That's correct!" },
-                    { text: "have lived", correct: true, feedback: "Yes. That's correct!" },
-                    { text: "have been living", correct: true, feedback: "Yes. That's correct!" } 
-		        ] 
-            } 
-        },
-        { // task 2
-            name: "fill the gap 02", 
-            type: "GS", 
-            interaction: "GAP", 
-            primary: true, 
-            show_lesson_text: false, 
-            question: "I _1_ (not like) spiders. They are so scary!",
-            gaps: {
-                mode: 'fillin',
-                _1_: [ 
-			        { text: "don't", correct: true, feedback: "Yes. That's correct!" },
-                    { text: "do not", correct: true, feedback: "Yes. That's correct!" }
-		        ] 
-            } 
-        },
-        { // task 3
-            name: "fill the gap 03", 
-            type: "GS", 
-            interaction: "GAP", 
-            primary: true, 
-            show_lesson_text: false, 
-            question: "You know, my parents _1_ (to come) to me yesterday. I'm so happy about it.",
-            gaps: {
-                mode: 'fillin',
-                _1_: [ 
-			        { text: "came", correct: true, feedback: "Yes. That's correct!" }
-		        ] 
-            } 
-        },
-        { // task 4
-        name: "fill the gap 04", 
-        type: "GS", 
-        interaction: "GAP", 
-        primary: true, 
-        show_lesson_text: false, 
-        question: "What _1_ you doing (to do) this time last year?",
-        gaps: {
-            mode: 'fillin',
-            _1_: [ 
-                { text: "were", correct: true, feedback: "Yes. That's correct!" }
-            ]
-        } 
-        },
-        { // task 5
-            name: "fill the gap 05", 
-            type: "GS", 
-            interaction: "GAP", 
-            primary: true, 
-            show_lesson_text: false, 
-            question: "I enjoy _1_ (to travel).",
-            gaps: {
-                mode: 'fillin',
-                _1_: [ 
-			        { text: "traveling", correct: true, feedback: "Yes. That's correct!" }
-		        ] 
-            } 
-        },
-        { // task 6
-            name: "fill the gap 06", 
-            type: "GS", 
-            interaction: "GAP", 
-            primary: true, 
-            show_lesson_text: false, 
-            question: "_1_ (to be) there any chairs?",
-            gaps: {
-                mode: 'fillin',
-                _1_: [ 
-			        { text: "Are", correct: true, feedback: "Yes. That's correct!" }
-		        ] 
-            } 
-        },
-        { // task 7
-            name: "fill the gap 07", 
-            type: "GS", 
-            interaction: "GAP", 
-            primary: true, 
-            show_lesson_text: false, 
-            question: "I can't talk. I _1_ (to do) my homework right now.",
-            gaps: {
-                mode: 'fillin',
-                _1_: [ 
-			        { text: "am doing", correct: true, feedback: "Yes. That's correct!" }
-		        ] 
-            } 
-        }
-        ]
-},
-// lesson 2
-// level A1-A2
-// paraphrase tasks
-{
-    name: "level A",
-    id: "level-A",
-    author: "Fabienne Finas",
-    version: 1,
-    series: "Adaptive Pretest",
-    text: "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p>",
-    text_source: "Group 7",
-    text_licence: "CC0",
-    text_url: "http://ipaca.de",
-    tasks: [  // the list of tasks for this lesson
+  name: "level A",
+  id: "level-A",
+  author: "Fabienne Finas und Aura Kampf",
+  version: 1,
+  series: "Adaptive Pretest",
+  text: "<p>Many students find it easier to learn music theory when they practice a lot. In other words,</p>
+  <p>physically creating sounds by playing a musical instrument (such as the piano) helps you to better</p>
+  <p>visualize and listen to the music you are writing down or studying. This allows students to</p>
+  <p>understand the relationship between different steps more quickly.</p>
+  <p>When you sit at the piano, it is important to sit up straight, keeping your head over your shoulders,</p>
+  <p>which should be kept down. Your elbows should be a comfortable distance from your body, and your fingers</p>
+  <p>should remain arched (as if you were pulling a library book off of a shelf). Keep your knees and wrists</p>
+  <p>flexible (not stiff), and keep your feet flat on the ground unless you are using the pedals.</p>
+  <p>Learning to play notes on the piano is one easy way to be with music in touch. You may find access</p>
+  <p>to a piano keyboard (acoustic or electronic) at your school. Another option is to download a free piano app</p>
+  <p>that you can play on your phone, such as Tiny Piano. Notice that the keyboard has both white keys and black</p>
+  <p>keys. The black keys are grouped into sets of either three or two.</p>",
+  text_source: "Open Music Theory - Version 2",
+  text_licence: "CC-BY-SA",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/open-music-theory",
+    tasks: [
+      // fill the gap task
       { // task 1
-        name:  "Paraphrase 01",
-        type: "GS", // grammar task
-        interaction: "SHORT", // open answer field for short free answers
-        primary: true,
-        show_lesson_text: true,
-        question:  "It's Anna's birthday on Friday. I have to get a present. (must)",
-        answer: "I must get a present"
+          name: "fill the gap 01", 
+          type: "GS", 
+          interaction: "GAP", 
+          primary: true, 
+          show_lesson_text: false, 
+          question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>Somebody asks you how you like London.</p><p>Your response: I _1_ (to live) in London. The city is very beautiful but noisy!</p>",
+          // I don't think their "have lived" is immediately obvious so I included multiple possible options
+          gaps: { 
+              mode: 'fillin',
+              _1_: [ 
+            { text: "live", correct: true, feedback: "Yes. That's correct!" },
+                  { text: "have lived", correct: true, feedback: "Yes. That's correct!" },
+                  { text: "have been living", correct: true, feedback: "Yes. That's correct!" } 
+          ] 
+          } 
       },
       { // task 2
-        name:  "Paraphrase 02",
-        type: "GS",
-        interaction: "SHORT",
-        primary: true,
-        show_lesson_text: true,
-        question:  "I felt really tired, so I stayed at home. (because)",
-        answer: "I stayed at home because I felt really tired"
+          name: "fill the gap 02", 
+          type: "GS", 
+          interaction: "GAP", 
+          primary: true, 
+          show_lesson_text: false, 
+          question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>I _1_ (not like) spiders. They are so scary!</p>",
+          gaps: {
+              mode: 'fillin',
+              _1_: [ 
+            { text: "don't", correct: true, feedback: "Yes. That's correct!" },
+                  { text: "do not", correct: true, feedback: "Yes. That's correct!" }
+          ] 
+          } 
       },
       { // task 3
-        name:  "Paraphrase 03",
-        type: "GS",
-        interaction: "SHORT",
-        primary: true,
-        show_lesson_text: true,
-        question:  "She lives in a house. It's in front of the park. (near)",
-        answer: "It's near the park"
+          name: "fill the gap 03", 
+          type: "GS", 
+          interaction: "GAP", 
+          primary: true, 
+          show_lesson_text: false, 
+          question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>You know, my parents _1_ (to come) to me yesterday. I'm so happy about it.</p>",
+          gaps: {
+              mode: 'fillin',
+              _1_: [ 
+            { text: "came", correct: true, feedback: "Yes. That's correct!" }
+          ] 
+          } 
       },
       { // task 4
-        name:  "Paraphrase 04",
-        type: "GS",
-        interaction: "SHORT",
-        primary: true,
-        show_lesson_text: true,
-        question:  "We ate dinner at a restaurant yesterday. We had fish and chips. (enjoy)",
-        answer: "We enjoyed some fish and chips"
+      name: "fill the gap 04", 
+      type: "GS", 
+      interaction: "GAP", 
+      primary: true, 
+      show_lesson_text: false, 
+      question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>What _1_ you doing (to do) this time last year?</p>",
+      gaps: {
+          mode: 'fillin',
+          _1_: [ 
+              { text: "were", correct: true, feedback: "Yes. That's correct!" }
+          ]
+      } 
       },
       { // task 5
-        name:  "Paraphrase 05",
-        type: "GS",
-        interaction: "SHORT",
-        primary: true,
-        show_lesson_text: true,
-        question:  "He usually wears a red sweater. (to like)",
-        answer: "He usually likes to wear a red sweater."
-      }
-    ],  // end of list of tasks
-}, // end of lesson
-// lesson 3
-// level A1-A2
-// reading and vocabulary tasks
-{
-  name: "Level A",  // the name that's also shown to the users
-  id: "level-A",        // an internal id, will never be shown, but important to identify the lesson
-  series: 'Adaptive Pretest',
-  author: "Aura Kampf",    // used for documentation, will not be shown to the user
-  version: 1,                 // if you revise your lesson, give it a higher version number each time
-  text: "<p>Many students find it easier to learn music theory when they practice a lot. In other words,</p>
-         <p>physically creating sounds by playing a musical instrument (such as the piano) helps you to better</p>
-         <p>visualize and listen to the music you are writing down or studying. This allows students to</p>
-         <p>understand the relationship between different steps more quickly.</p>
-         <p>When you sit at the piano, it is important to sit up straight, keeping your head over your shoulders,</p>
-         <p>which should be kept down. Your elbows should be a comfortable distance from your body, and your fingers</p>
-         <p>should remain arched (as if you were pulling a library book off of a shelf). Keep your knees and wrists</p>
-         <p>flexible (not stiff), and keep your feet flat on the ground unless you are using the pedals.</p>
-         <p>Learning to play notes on the piano is one easy way to be with music in touch. You may find access</p>
-         <p>to a piano keyboard (acoustic or electronic) at your school. Another option is to download a free piano app</p>
-         <p>that you can play on your phone, such as Tiny Piano. Notice that the keyboard has both white keys and black</p>
-         <p>keys. The black keys are grouped into sets of either three or two.</p>",
-  text_source: "unknown - TODO",
-  text_licence: "unknown - TODO",
-  text_url: "unknown - TODO",
-    tasks: [  // the list of tasks for this lesson
-      {
+          name: "fill the gap 05", 
+          type: "GS", 
+          interaction: "GAP", 
+          primary: true, 
+          show_lesson_text: false, 
+          question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>I enjoy _1_ (to travel).</p>",
+          gaps: {
+              mode: 'fillin',
+              _1_: [ 
+            { text: "traveling", correct: true, feedback: "Yes. That's correct!" }
+          ] 
+          } 
+      },
+      { // task 6
+          name: "fill the gap 06", 
+          type: "GS", 
+          interaction: "GAP", 
+          primary: true, 
+          show_lesson_text: false, 
+          question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>_1_ (to be) there any chairs?</p>",
+          gaps: {
+              mode: 'fillin',
+              _1_: [ 
+            { text: "Are", correct: true, feedback: "Yes. That's correct!" }
+          ] 
+          } 
+      },
+      { // task 7
+          name: "fill the gap 07", 
+          type: "GS", 
+          interaction: "GAP", 
+          primary: true, 
+          show_lesson_text: false, 
+          question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>I can't talk. I _1_ (to do) my homework right now.</p>",
+          gaps: {
+              mode: 'fillin',
+              _1_: [ 
+            { text: "am doing", correct: true, feedback: "Yes. That's correct!" }
+          ] 
+          } 
+      },
+      // paraphrasing tasks
+      { // task 8
+      name:  "Paraphrase 01",
+      type: "GS", // grammar task
+      interaction: "SHORT", // open answer field for short free answers
+      primary: true,
+      show_lesson_text: false,
+      question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>It's Anna's birthday on Friday. I have to get a present. (must)</p>",
+      answer: "I must get a present"
+    },
+    { // task 9
+      name:  "Paraphrase 02",
+      type: "GS",
+      interaction: "SHORT",
+      primary: true,
+      show_lesson_text: false,
+      question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>I felt really tired, so I stayed at home. (because)</p>",
+      answer: "I stayed at home because I felt really tired"
+    },
+    { // task 10
+      name:  "Paraphrase 03",
+      type: "GS",
+      interaction: "SHORT",
+      primary: true,
+      show_lesson_text: false,
+      question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>She lives in a house. It's in front of the park. (near)</p>",
+      answer: "It's near the park"
+    },
+    { // task 11
+      name:  "Paraphrase 04",
+      type: "GS",
+      interaction: "SHORT",
+      primary: true,
+      show_lesson_text: false,
+      question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>We ate dinner at a restaurant yesterday. We had fish and chips. (enjoy)</p>",
+      answer: "We enjoyed some fish and chips"
+    },
+    { // task 12
+      name:  "Paraphrase 05",
+      type: "GS",
+      interaction: "SHORT",
+      primary: true,
+      show_lesson_text: false,
+      question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>He usually wears a red sweater. (to like)</p>",
+      answer: "He usually likes to wear a red sweater."
+    },
+    // multiple choice tasks
+    { // task 13
       name:  "Playing the piano",
       type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
       interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
@@ -237,44 +205,44 @@
           feedback:  "Wrong! Obviously the keyboard has black and white keys",
         },
       ]  // end of list of choices
-    },  // end of task 1
-
-      {  // task 2: mark the words
-        name: "Definitions",
-        type: "V",
-        interaction: "MARK",
-        primary: true,
-        show_lesson_text: false,
-        question: "In the text, find the words according to the following definitions:",
-        marktext: "<p>Many students find it easier to learn music theory when they practice a lot. In other words,</p>
-        <p>physically creating #2#sounds by playing a musical instrument (such as the #1#piano) helps you to better</p>
-        <p>#5#visualize and listen to the music you are writing down or studying. This allows students to</p>
-        <p>understand the relationship between different steps more quickly.</p>
-        <p>When you sit at the piano, it is important to sit up straight, keeping your head over your shoulders,</p>
-        <p>which should be kept down. Your elbows should be a comfortable distance from your body, and your fingers</p>
-        <p>should remain arched (as if you were pulling a library book off of a shelf). Keep your knees and wrists</p>
-        <p>flexible (not stiff), and keep your feet flat on the ground unless you are using the #3#pedals.</p>
-        <p>Learning to play notes on the piano is one easy way to be with music in touch. You may find access</p>
-        <p>to a piano keyboard (acoustic or electronic) at your school. Another option is to download a free piano app</p>
-        <p>that you can play on your phone, such as Tiny Piano. Notice that the #4#keyboard has both white keys and black</p>
-        <p>keys. The black keys are grouped into sets of either three or two.</p>", // could be a problem since there are piano multiple times
-        markers: {
-          '1': {
-            description: 'a large musical instrument with a row of black and white keys that are pressed to play notes', // could be a problem since there are piano 
-          },
-          '2': {
-            description: 'something that you can hear or that can be heard',
-          },
-          '3': {
-            description: 'a part on a piano or organ that you press with your foot', 
-          },
-          '4': {
-            description: 'the set of keys on a piano' //multiple times keyboard
-          },
-          '5': {
-            description: 'to imagine or remember someone or something by forming a picture in your mind '
-          }
-        } // end of markers list
-      } // end of task 2
-    ] // end of tasks
-} // end of lesson
+    },
+    // mark the word tasks
+    {  // task 14
+      name: "Definitions",
+      type: "V",
+      interaction: "MARK",
+      primary: true,
+      show_lesson_text: false,
+      question: "In the text, find the words according to the following definitions (if there are multiple occurences choose the first one):",
+      marktext: "<p>Many students find it easier to learn music theory when they practice a lot. In other words,</p>
+      <p>physically creating #2#sounds by playing a musical instrument (such as the #1#piano) helps you to better</p>
+      <p>#5#visualize and listen to the music you are writing down or studying. This allows students to</p>
+      <p>understand the relationship between different steps more quickly.</p>
+      <p>When you sit at the piano, it is important to sit up straight, keeping your head over your shoulders,</p>
+      <p>which should be kept down. Your elbows should be a comfortable distance from your body, and your fingers</p>
+      <p>should remain arched (as if you were pulling a library book off of a shelf). Keep your knees and wrists</p>
+      <p>flexible (not stiff), and keep your feet flat on the ground unless you are using the #3#pedals.</p>
+      <p>Learning to play notes on the piano is one easy way to be with music in touch. You may find access</p>
+      <p>to a piano keyboard (acoustic or electronic) at your school. Another option is to download a free piano app</p>
+      <p>that you can play on your phone, such as Tiny Piano. Notice that the #4#keyboard has both white keys and black</p>
+      <p>keys. The black keys are grouped into sets of either three or two.</p>", // could be a problem since there are piano multiple times
+      markers: {
+        '1': {
+          description: 'a large musical instrument with a row of black and white keys that are pressed to play notes', // could be a problem since there are piano 
+        },
+        '2': {
+          description: 'something that you can hear or that can be heard',
+        },
+        '3': {
+          description: 'a part on a piano or organ that you press with your foot', 
+        },
+        '4': {
+          description: 'the set of keys on a piano' //multiple times keyboard
+        },
+        '5': {
+          description: 'to imagine or remember someone or something by forming a picture in your mind '
+        }
+      } // end of markers list
+    }
+  ]
+}
