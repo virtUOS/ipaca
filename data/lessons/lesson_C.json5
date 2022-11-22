@@ -80,7 +80,7 @@
         interaction: "MARK",
         primary: true,
         show_lesson_text: false,
-        question: "In the text, find the words according to the following definitions (If there are multiple occurences, choose the first one):",
+        question: "In the text, find the words according to the following definitions (If there are multiple occurences choose the first one):",
         marktext: "Physical activity and personality \
          One personal factor that has received much attention and has the potential for broad reaching \
          adaptations to current physical activity theory and practice is personality. Currently the \
