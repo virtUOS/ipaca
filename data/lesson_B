@@ -1,6 +1,6 @@
 // vocab task
 {
-  name:"Level B1",  // the name that's also shown to the users
+  name:1,  // the name that's also shown to the users
   id: "level-B",        // an internal id, will never be shown, but important to identify the lesson
   series: 'Adaptive Pretest',
   author: "Adriane Pelikan",    // used for documentation, will not be shown to the user
@@ -37,7 +37,7 @@
   text_url: "unknown - TODO",
     tasks: [  // the list of tasks for this lesson
       {
-        name:  "B2",
+        name: 2,
       type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
       interaction: "MC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
       primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
@@ -73,7 +73,7 @@
     }
     {
       // task 3: gap filling - level B
-      name: "B3",
+      name: 3,
       type: "GS",
       interaction: "GAPFILL",
       primary: true,
@@ -88,7 +88,7 @@
     },
     {
       // task 4: gap filling for past tenses
-      name: "B4",
+      name: 4,
       type: "GS",
       interaction: "GAPFILL",
       primary: true,
@@ -103,7 +103,7 @@
     },
     {
       // task 5: gap filling for past tenses
-      name: "B5",
+      name: 5,
       type: "GS",
       interaction: "GAPFILL",
       primary: true,
@@ -119,7 +119,7 @@
     },
     {
       // task : gap filling
-      name: "B6",
+      name: 6,
       type: "GS",
       interaction: "GAPFILL",
       primary: true,
@@ -134,7 +134,7 @@
     },
     {
       // task 7: gap filling
-      name: "B7",
+      name: 7,
       type: "GS",
       interaction: "GAPFILL",
       primary: true,
@@ -149,7 +149,7 @@
     },
     {
       // task 8: gap filling
-      name: "B8",
+      name: 8,
       type: "GS",
       interaction: "GAPFILL",
       primary: true,
@@ -165,7 +165,7 @@
     },
     {
       // task 9: gap filling
-      name: B9,
+      name: 9,
       type: "GS",
       interaction: "GAPFILL",
       primary: true,
@@ -179,7 +179,7 @@
       },
     },
     { // task 10: primary reading task
-      name: B10,
+      name: 10,
       type: "R",         
       interaction: "SHORT",  
       primary: true,     
@@ -189,7 +189,7 @@
     },  // end of task 10
 
     { // task 11: primary reading task
-      name:  B11,
+      name:  11,
       type: "R",         
       interaction: "SHORT",  
       primary: true,     
@@ -199,7 +199,7 @@
     },  // end of task 11
 
     { // task 12: primary reading task
-      name:  B12,
+      name:  12,
       type: "R",         
       interaction: "SHORT",  
       primary: true,     
@@ -209,7 +209,7 @@
     },  // end of task 12
 
     { // task 13: primary reading task
-      name: B13,
+      name: 13,
       type: "R",         
       interaction: "SHORT",  
       primary: true,     
@@ -219,7 +219,7 @@
     },  // end of task 13
 
      { // task 14: primary reading task
-      name:  B14,
+      name:  14,
       type: "R",         
       interaction: "SHORT",  
       primary: true,     
