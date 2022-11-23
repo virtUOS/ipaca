@@ -45,14 +45,14 @@ class TutormodelPretest:
         # 2. wenn eine Lesson beendet wird, nächste lesson starten
         num_tasks = Task.objects.filter(lesson=lesson).count() # num of tasks in level
         if request.session['done'] / num_tasks == 1:# NEW
-            complete = True
+            next_type = 'WRAPUP'
         if request.session['current_lesson_correct'] / num_tasks > 2/3:
-            if lesson.id == "level-A":
+            if request.session['current_lesson'] == "level-A":
                 next_level = "level-B"
             elif lesson.id == "level-B":
                 next_level = "level-C" #TODO was passiert nach level C?
             elif lesson.id == "level-C":
-                complete = True #NEW
+                next_type = 'WRAPUP'
             lesson = Lesson.objects.get(lesson_id=next_level, series="Adaptive Pretest") # problem
             request.session['current_lesson'] = lesson.id
             request.session['current_lesson_correct'] = 0 # zählt wie viele Aufgaben korrekt gelöst wurden
