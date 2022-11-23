@@ -1,87 +1,18 @@
 {% extends "learning_environment/base.html" %}
-{% load static %}
 
 
 {% block content %}
 
+
 <body id="myhome" style="background-color:#f8f9fa;">
 
-         <header class="navbar" style="background-color: white;">
-        <div class="navbar me-auto">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <span><img src="/static/img/logo.svg" class="img-fluid"></span> </a>
-            <input type="text" placeholder="Search" style="border-radius: 15px; border: none; background-color:#f8f9fa; height:40px; width:250px; margin-left:260px;margin-top: 20px; padding:20px;">
-        </div>
-
-        <div class="navbar ms-auto">
-
-            <div class="dropdown" style="display:flex">
-                <strong style="padding-left:2em; padding-right:1em; padding-top:0.5em;">Hello, {{ user.username }}!</strong>
-                <img src="/static/img/profile_avatar.svg" style="width: 32px; height:32px;">
-                    <img src = "/static/img/drop_down_icon.svg" data-bs-toggle="dropdown" aria-expanded="false">
-
-              <ul class="dropdown-menu text-small shadow" style="border-radius: 10px;" aria-labelledby="dropdownUser2">
-                <li><a class="logout" href="{% url 'logout' %}" style=" margin: 15px; border-radius: 50px !important; color:white;"><img src = "/static/img/exit_icon.svg" style="margin-right: 5px;"> Logout</a></li>
-              </ul>
-              <style>
-                .logout{
-                    background-color:#D9D9D9;
-                }
-                .logout:hover{
-                    background-color: #1C009C!important;
-                }
-              </style>
-            </div>
-        </div>
-    </header>
+ {% include "learning_environment/header.html" %}
 
 <div class="container-fluid" style="background: #F9F9FB;">
     <div class="row">
 
-        <nav class="col-3" style="background:white; margin-top: -12px;">
-            <div class="d-flex flex-column flex-shrink-0 p-3" style=" width: 25vw;">
+        {% include "learning_environment/nav.html" %}
 
-                <ul class="nav nav-pills flex-column mb-auto">
-                    <li class="nav-item">
-                        <a href="{% url 'myhome' %}" class="nav-item i-plain" aria-current="page">
-                            <i class="fa-solid fa-house"></i>
-                        {# <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> #}
-                        <span style="font-size:16px; color:black; vertical-align: middle; margin-left: 4px;"> My Home</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="i-plain" id='icon-book' data-bs-toggle="collapse" data-bs-target="#tasks-collapse" aria-expanded="false">
-                            <i class="bi-book" style="font-size:16px;"></i>
-                            <span style="font-size:16px; vertical-align: middle; color:black; margin-left: 4px;"> Tasks </span>
-                        </a>
-
-                        <div class="collapse" id="tasks-collapse" style="margin-left: 20px;">
-                            <ul class="">
-                                <li><a href="{% url 'academic_series' %}" class="link-dark rounded">Academic</a></li>
-                                <li><a href="{% url 'general_series' %}">General</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                    <li class="nav-item">
-                        <a class="nav-item  i-plain" id='icon-trophy' data-bs-toggle="collapse" data-bs-target="#results-collapse" aria-expanded="false">
-                            <i class="bi bi-trophy" style="font-size:16px;"></i>
-                            <span style="font-size:16px; color: black; vertical-align: middle; margin-left: 4px;">Results</span>
-                        </a>
-
-                        <div class="collapse" id="results-collapse" style="margin-left: 20px;">
-                            <ul class="">
-                                <li><a href="{% url 'learner_dashboard' %}" class="link-dark rounded">Personal</a></li>
-                                <li><a href="{% url 'global_dashboard' %}" class="link-dark rounded">Global</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
         <div class="col" style="margin-left: 18px; padding:0;">
             {# Dashboard cards #}
             <div class="card" style="border-radius:15px; width: auto; padding: 25px; border:none;">
@@ -171,18 +102,8 @@
     </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <script>
-    $("#icon-book").click(function() {
-        $(this).find('i').toggleClass('bi-book-fill');
-        $(this).find('i').toggleClass('bi-book');
-    });
 
-    $("#icon-trophy").click(function() {
-        $(this).find('i').toggleClass('bi-trophy-fill');
-        $(this).find('i').toggleClass('bi-trophy');
-    });
-    </script>
+
  </body>
 {% endblock %}

@@ -277,7 +277,7 @@ textarea {
     color: darkblue;
     border-radius: 4px;
 }
- .i-plain:hover {
+ .i-plain:active {
      background-color: transparent !important;
      border-left: 10px solid darkblue;
 }
