@@ -9,34 +9,7 @@
 
 <body style="background-color:#f8f9fa;">
 
-         <header class="navbar" style="background-color: white;">
-        <div class="navbar me-auto">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <span><img src="/static/img/logo.svg" alt='' class="img-fluid"></span> </a>
-            <input type="text" placeholder="Search" style="border-radius: 15px; border: none; background-color:#f8f9fa; height:40px; width:250px; margin-left:260px;margin-top: 20px; padding:20px;">
-        </div>
-
-        <div class="navbar ms-auto">
-
-            <div class="dropdown" style="display:flex">
-                <strong style="padding-left:2em; padding-right:1em; padding-top:0.5em;">Hello, {{ user.username }}!</strong>
-                <img src="/static/img/profile_avatar.svg" style="width: 32px; height:32px;">
-                    <img src = "/static/img/drop_down_icon.svg" data-bs-toggle="dropdown" aria-expanded="false">
-
-              <ul class="dropdown-menu text-small shadow" style="border-radius: 10px;" aria-labelledby="dropdownUser2">
-                <li><a class="logout" href="{% url 'logout' %}" style=" margin: 15px; border-radius: 50px !important; color:white;"><img src = "/static/img/exit_icon.svg" style="margin-right: 5px;"> Logout</a></li>
-              </ul>
-              <style>
-                .logout{
-                    background-color:#D9D9D9;
-                }
-                .logout:hover{
-                    background-color: #1C009C!important;
-                }
-              </style>
-            </div>
-        </div>
-    </header>
+   {% include "learning_environment/header.html" %}
 
 <div class="container-fluid" style="background: #F9F9FB;">
     <div class="row">

@@ -156,7 +156,7 @@ def myhome(request):
     correct_solutions = Solution.objects.filter(user=request.user,
                                                 solved=True).count()  # how many of them were correct?
     if num_tasks > 0:  # calculate percentage of correct tasks (or 0 if no tasks)
-        tasks_correctness = correct_solutions / num_tasks * 100.0
+        tasks_correctness = round(correct_solutions / num_tasks * 100.0, 2)
     else:
         tasks_correctness = 0.0
 
