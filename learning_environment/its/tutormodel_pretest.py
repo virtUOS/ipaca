@@ -53,7 +53,7 @@ class TutormodelPretest:
                 next_level = "level-C" #TODO was passiert nach level C?
             elif lesson.id == "level-C":
                 complete = True #NEW
-            lesson = Lesson.objects.get(lesson_id=next_level, series="Adaptive Pretest")
+            lesson = Lesson.objects.get(lesson_id=next_level, series="Adaptive Pretest") # problem
             request.session['current_lesson'] = lesson.id
             request.session['current_lesson_correct'] = 0 # zählt wie viele Aufgaben korrekt gelöst wurden
             request.session.modified = True
