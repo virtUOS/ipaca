@@ -1,4 +1,5 @@
-<p class="card-text" style="margin-left:30%; font-size: 20px; vertical-align: middle;">{{ task.question }}</p>
+<div class="card-choice">
+<p class="card-text">{{ task.question }}</p>
 
 {% if mode == 'solve' %}
     <form method="post">
@@ -7,28 +8,85 @@
         {% for o in task.content %}
             <div class="form-check"style="padding-left:0;">
                 <input class="form-check-input" type="checkbox" name="solution-{{ task.id }}-{{ forloop.counter0 }}" id="task-{{ task.id }}-{{ forloop.counter0 }}">
-                <div class="card-answer" style="margin-left:20px;">
-                <div class="card" style="border-radius: 10px; height: 5em; padding: 1em; margin-bottom: 2em; width:30em; left: 30%;"<label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}"> 
+                <div class="card-choices" style="margin-left:20px;">
+                <div class="card-answer" "<label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}"> 
                   {{ o.text }}
                 </label>
-            </div>
             </div>
         {% endfor %}
         <div style="margin-top: 2em">
             <button type="submit" class="btn btn-secondary";">Check!</button>
         </div>
+    </div>
         <style>
             .form-check .form-check-input{
                 position: relative;
                 border-radius: 10px;
                 width:1.6em;
                 height: 1.5em;
-                vertical-align: middle;
                 
-            
-            
             }
-           
+
+            .card{
+               
+            margin:0 auto;
+            width: 60em;
+            height: 60em;
+            padding: 0 ;
+        }
+        .row{
+            width: 100%;
+            float:left;
+    
+        }
+
+        .card-answer{
+            position: relative;
+            width: auto;
+            border: 0.5px solid;
+            margin-top: 0.5em;
+            height: 4em;
+            padding: 0.8em;
+        }
+        
+        .card-choice{
+
+            border-radius: 2em;
+            float:right;
+            left: 55%;
+            top: 25%;
+            background-color: white;
+            position: fixed;
+            padding: 4em;
+        
+
+        }
+        .container{
+            width:auto;
+            right:40%;
+            float:left;
+            display: flex;
+            overflow: hidden;
+            border-radius: 0.5em;
+            
+            
+            
+        }
+
+        .lesson-text{
+            padding: 0;
+            margin-left: 0;
+            overflow-y:scroll;
+            scroll-b
+        }
+
+        .container-fluid{
+            margin-left: 0;
+        }
+        
+    
+        
+        
         </style>
     </form>
 {% else %}

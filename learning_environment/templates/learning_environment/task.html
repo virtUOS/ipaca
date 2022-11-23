@@ -55,7 +55,7 @@
             <input type="hidden" name="lesson" value="{{ lesson.id }}">
             <input type="hidden" name="start" value="start">
             <button type="submit" class="btn btn-primary">Start lesson</button>
-        </form>
+    </div>
     
     {# Display "Lesson Finished" screen #}
     {% elif mode != 'result' and state == 'WRAPUP' %}
@@ -79,10 +79,10 @@
         {% if task.paragraph_shown %}
             {{ lesson.paragraph }}
         {% endif %}
-        <div class="container-fluid">
+        <div class="container">
             <div class="justify-content-center" >
                 <div class="row">
-                    <div class="card " style=" padding: 1em;"">
+                    <div class="card " style=" padding: 1em;">
                         <div class="card-body" style=margin: 0 auto;">
                             <h5 class="card-title">{{ task.title }} </h5>
                             {% if msg %}
@@ -126,6 +126,8 @@
    p{
     margin: 0 40px;
    }
+
+
    
 </style>
 
