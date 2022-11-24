@@ -29,6 +29,7 @@ def practice(request):
     context = {'mode': 'solve'}
 
     # start a lesson
+
     if request.method == 'POST' and 'start' in request.POST:
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             return redirect('myhome')
@@ -87,6 +88,25 @@ def practice(request):
             return HttpResponseBadRequest("Error: No such ID")
         lesson = task.lesson
         context['state'] = context['mode']
+
+    elif 'lesson' in request.GET:  # show a new lesson
+        try:
+            lesson = Lesson.objects.get(pk=int(request.GET['lesson']))
+            task = Task.objects.filter(lesson=lesson).first()
+        except KeyError:
+            return HttpResponseBadRequest("Error: No such Lesson")
+        #request.session['current_lesson'] = lesson.id
+        #request.session.modified = True
+        #tutor = Tutormodel(request.user)
+
+        #try:
+        #    (state, lesson, task) = tutor.next_task(request)
+        #except NoTaskAvailableError:
+        #    return HttpResponseServerError("Error: No task available!")
+
+        context['state'] = context['mode']
+
+
     else:  # fetch new task and show it
         tutor = Tutormodel(request.user)
         try:
@@ -168,6 +188,9 @@ def myhome(request):
 
     else:
         wrong_tasks = None
+    id_lessons = [s.task.lesson.lesson_id for s in solutions]
+
+    new_lessons = Lesson.objects.all().exclude(lesson_id__in=id_lessons).order_by('lesson_id')
 
 
     return render(request, 'learning_environment/myhome.html', locals())

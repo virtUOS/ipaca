@@ -52,7 +52,7 @@
 
             <div class="card" style="margin-top:10px; border-radius:15px; border: none;">
                     <div class="me-auto">
-                        <h4 style="padding:20px; font-weight: bold;"> Review Tasks </h4>
+                        <h4 style="padding:20px; font-weight: bold;"> Review Mistakes </h4>
                     </div>
 
                     <div class="justify-content-between" style="border:none;">
@@ -81,15 +81,16 @@
 
                     <div class="justify-content-between" >
                         <div class="me-auto">
-                        <h4 style="padding:20px; font-weight: bold;"> New Tasks </h4>
+                        <h4 style="padding:20px; font-weight: bold;"> New Lessons </h4>
                         </div>
-                            {% for task in new_tasks %}
+                            {% for lesson in new_lessons %}
 
-                                <ul class="ul-2col">
-                                    <li class="list-group-item" style="border:none;">{{ task.lesson.lesson_id }}</li>
+                                <ul class="ul-3col">
+                                    <li class="list-group-item" style="border:none;">{{ lesson.lesson_id }}</li>
+                                    <li class="list-group-item" style="border:none;">{{ lesson.name }}</li>
                                     <li class="list-group-item" style="border:none;">
-                                        <a class='btn btn-primary' href="{% url 'practice' %}" style="margin: 1vh">Practice</a>
-                                    </li>
+                                            <a class='btn-practice' href="{% url 'practice' %}?lesson={{ lesson.id }}" style="text-decoration:none; color: white;">Start</a>
+                                        </li>
                                 </ul>
 
                             {% endfor %}

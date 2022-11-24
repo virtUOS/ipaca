@@ -32,6 +32,7 @@ class Tutormodel:
 
         # pick a lesson
         current_lesson_id = request.session.get('current_lesson', None)
+        print("current_lesson_id:", current_lesson_id)
         if current_lesson_id:
             try:
                 lesson = Lesson.objects.get(pk=current_lesson_id)
