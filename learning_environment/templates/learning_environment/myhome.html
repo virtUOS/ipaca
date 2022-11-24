@@ -55,23 +55,22 @@
                         <h4 style="padding:20px; font-weight: bold;"> Review Mistakes </h4>
                     </div>
 
-                    <div class="justify-content-between" style="border:none;">
-
+                    <div class="justify-content-between" >
 
                             {% for task in wrong_tasks %}
 
                                     <ul class="ul-3col">
-                                        <li class="list-group-item" style="border:none;">
+                                        <li class="list-group-item" style="border:none; padding:0; margin-left:1em;">
                                             {% if task.type == 'GS' %}
-                                                <span><img src="/static/img/icon_grammar.svg" class="img-fluid" style="width:3em; height:3em;"></span>
+                                                <span><img src="/static/img/icon_grammar.svg" class="img-fluid" style=" height:3em;"></span>
                                             {% elif task.type == 'V' %}
-                                                <span><img src="/static/img/icon_vocabulary.svg" class="img-fluid" style="width:3em; height:3em;"></span>
+                                                <span><img src="/static/img/icon_vocabulary.svg" class="img-fluid" style="height:3em;"></span>
                                             {% elif task.type == 'R' %}
-                                                <span><img src="/static/img/icon_reading.svg" class="img-fluid" style="width:3em; height:3em;"></span>
+                                                <span><img src="/static/img/icon_reading.svg" class="img-fluid" style="height:3em;"></span>
                                             {% endif %}
                                             {{ task.id }}</li>
-                                        <li class="list-group-item" style="border:none;">{{ task.name }}</li>
-                                        <li class="list-group-item" style="border:none;">
+                                        <li class="list-group-item" style="border:none; vertical-align: middle;">{{ task.name }}</li>
+                                        <li class="list-group-item" style="border:none">
                                             <a class='btn-practice' href="{% url 'practice' %}?redo={{ task.id }}" style="text-decoration:none; color: white;">Practice</a>
                                         </li>
                                     </ul>
@@ -89,8 +88,8 @@
                                     <li class="list-group-item" style="border:none;">{{ lesson.lesson_id }}</li>
                                     <li class="list-group-item" style="border:none;">{{ lesson.name }}</li>
                                     <li class="list-group-item" style="border:none;">
-                                            <a class='btn-practice' href="{% url 'practice' %}?lesson={{ lesson.id }}" style="text-decoration:none; color: white;">Start</a>
-                                        </li>
+                                        <a class='btn-practice' href="{% url 'practice' %}?lesson={{ lesson.id }}" style="text-decoration:none; color: white;">Start</a>
+                                    </li>
                                 </ul>
 
                             {% endfor %}

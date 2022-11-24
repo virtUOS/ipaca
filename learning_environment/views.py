@@ -95,8 +95,7 @@ def practice(request):
             task = Task.objects.filter(lesson=lesson).first()
         except KeyError:
             return HttpResponseBadRequest("Error: No such Lesson")
-        #request.session['current_lesson'] = lesson.id
-        #request.session.modified = True
+
         #tutor = Tutormodel(request.user)
 
         #try:
