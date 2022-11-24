@@ -18,6 +18,7 @@
             <button type="submit" class="btn btn-secondary";">Check!</button>
         </div>
     </div>
+</form>
         <style>
             .form-check .form-check-input{
                 position: relative;
@@ -27,13 +28,7 @@
                 
             }
 
-            .card{
-               
-            margin:0 auto;
-            width: 60em;
-            height: 60em;
-            padding: 0 ;
-        }
+        
         .row{
             width: 100%;
             float:left;
@@ -42,7 +37,7 @@
 
         .card-answer{
             position: relative;
-            width: auto;
+            width: 25em;
             border: 0.5px solid;
             margin-top: 0.5em;
             height: 4em;
@@ -51,6 +46,7 @@
         
         .card-choice{
 
+            width: 40em;
             border-radius: 2em;
             float:right;
             left: 55%;
@@ -58,6 +54,7 @@
             background-color: white;
             position: fixed;
             padding: 4em;
+            
         
 
         }
@@ -66,7 +63,6 @@
             right:40%;
             float:left;
             display: flex;
-            overflow: hidden;
             border-radius: 0.5em;
             
             
@@ -77,18 +73,32 @@
             padding: 0;
             margin-left: 0;
             overflow-y:scroll;
-            scroll-b
+        
         }
 
         .container-fluid{
             margin-left: 0;
+            padding-left:0;
+            padding-top:0;
         }
         
-    
+        header.navbar{
+            margin-bottom: 0;
+        }
+        h3{
+            margin-top:0;
+            margin-bottom:0;
+            display:none;
+        }
+
+        p{
+            width: 25em;
+        }
+
         
         
         </style>
-    </form>
+    
 {% else %}
     {% for o in task.content %}
         <div class="form-check">
