@@ -51,7 +51,7 @@
                             {% if task.show_lesson_text %}
                             {% if task.interaction == 'SHORT_SNIPPETS' %}
                                 <div class="lesson-text">
-                                    <p style="padding: 10px; border: 2px solid black;">{{ task.lesson.text | safe }}</p>
+                                    <h5>{{ task.lesson.text | safe }}</h5>
                             {%else%}
                                 <div class="lesson-text">
                                     <blockquote>

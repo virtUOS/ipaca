@@ -18,7 +18,7 @@
             interaction: "SMARTGAP",
             primary: false,
             show_lesson_text: false,
-            question: "I like ice cream, its a _1_ snack. <br>\
+            question: "I like mais cream, its a _1_ snack. <br>\
                         When there are sprinkles on it, its even _2_ .<br>\
                         But ice cream cake is simply _3_ .",
             gaps: {
