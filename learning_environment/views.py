@@ -89,27 +89,19 @@ def practice(request):
         lesson = task.lesson
         context['state'] = context['mode']
 
-    elif 'lesson' in request.GET:  # show a new lesson
-        try:
-            lesson = Lesson.objects.get(pk=int(request.GET['lesson']))
-            task = Task.objects.filter(lesson=lesson).first()
-        except KeyError:
-            return HttpResponseBadRequest("Error: No such Lesson")
-
-        #tutor = Tutormodel(request.user)
-
-        #try:
-        #    (state, lesson, task) = tutor.next_task(request)
-        #except NoTaskAvailableError:
-        #    return HttpResponseServerError("Error: No task available!")
-
-        context['state'] = context['mode']
-
-
     else:  # fetch new task and show it
+
+        start_new_lesson = None
+        if 'lesson' in request.GET:  # explicitly start a specific lession by using the ?lesson=<id> parameter
+            try:
+                start_new_lesson = Lesson.objects.get(pk=int(request.GET['lesson']))
+            except KeyError:
+                return HttpResponseBadRequest("Error: No such Lesson")
+
         tutor = Tutormodel(request.user)
         try:
-            (state, lesson, task) = tutor.next_task(request)
+            # either continue with standard tutor model or explicitly start a specific lesson
+            (state, lesson, task) = tutor.next_task(request, start_new_lesson)
         except NoTaskAvailableError:
             return HttpResponseServerError("Error: No task available!")
         context['state'] = state
