@@ -51,6 +51,24 @@
 
 
             <div class="card" style="margin-top:10px; border-radius:15px; border: none;">
+
+                <div class="justify-content-between" >
+                        <div class="me-auto">
+                        <h4 style="padding:20px; font-weight: bold;"> New Lessons </h4>
+                        </div>
+                            {% for lesson in new_lessons %}
+
+                                <ul class="ul-3col">
+                                    <li class="list-group-item" style="border:none;">{{ lesson.lesson_id }}</li>
+                                    <li class="list-group-item" style="border:none;">{{ lesson.name }}</li>
+                                    <li class="list-group-item" style="border:none;">
+                                        <a class='btn-new' href="{% url 'practice' %}?lesson={{ lesson.id }}" style="text-decoration:none; color: white;">Start</a>
+                                    </li>
+                                </ul>
+
+                            {% endfor %}
+                    </div>
+                <div class="justify-content-between">
                     <div class="me-auto">
                         <h4 style="padding:20px; font-weight: bold;"> Review Mistakes </h4>
                     </div>
@@ -71,30 +89,16 @@
                                             {{ task.id }}</li>
                                         <li class="list-group-item" style="border:none; vertical-align: middle;">{{ task.name }}</li>
                                         <li class="list-group-item" style="border:none">
-                                            <a class='btn-practice' href="{% url 'practice' %}?redo={{ task.id }}" style="text-decoration:none; color: white;">Practice</a>
+                                            <a class='btn-redo' href="{% url 'practice' %}?redo={{ task.id }}" style="text-decoration:none; color: white;">Retry</a>
                                         </li>
                                     </ul>
 
                             {% endfor %}
                     </div>
+                </div>
 
-                    <div class="justify-content-between" >
-                        <div class="me-auto">
-                        <h4 style="padding:20px; font-weight: bold;"> New Lessons </h4>
-                        </div>
-                            {% for lesson in new_lessons %}
 
-                                <ul class="ul-3col">
-                                    <li class="list-group-item" style="border:none;">{{ lesson.lesson_id }}</li>
-                                    <li class="list-group-item" style="border:none;">{{ lesson.name }}</li>
-                                    <li class="list-group-item" style="border:none;">
-                                        <a class='btn-practice' href="{% url 'practice' %}?lesson={{ lesson.id }}" style="text-decoration:none; color: white;">Start</a>
-                                    </li>
-                                </ul>
-
-                            {% endfor %}
-                        </div>
-                    </div>
+            </div>
         </div>
 
     </div>
