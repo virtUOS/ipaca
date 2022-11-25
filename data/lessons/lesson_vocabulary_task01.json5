@@ -1,14 +1,13 @@
-// Lesson tt-001
-// a test lesson, no meaningful content.
+// Lesson Vocabulary Task 01 - Hardcode
 {
   name: "Group 6 Vocab Tasks",  // the name that's also shown to the users
-  id: "lesson-slot-012",        // an internal id, will never be shown, but important to identify the lesson
+  id: "lesson-slot-013",        // an internal id, will never be shown, but important to identify the lesson
   series: 'Academic English',
   author: "Pauli",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
-  text: "hey",
-  text_source: "unknown - TODO",
-  text_licence: "unknown - TODO",
+  text: "Vocabs",
+  text_source: "Halyna Kovalenko, Drozd YaroslavaFedorenko Dmytro,Kulinich Olha",
+  text_licence: "cc-by",
   text_url: "unknown - TODO",
     tasks: [  // the list of tasks for this lesson
         {  
@@ -19,14 +18,14 @@
             primary: false,
             show_lesson_text: false,
             question: "Match the idioms with their meanings and mark them by clicking on them after selecting one of the words.",
-            marktext: "<p>#1#to-have-bigger-fish-to-fry<\p> \
-            <p>#2#the-biggest-frog-in-the-puddle<\p> \
-            #3#higher-than-a-cat's-back  <br>\
+            marktext: "#1#to-have-bigger-fish-to-fry <br>\
+            #2#the-biggest-frog-in-the-puddle <br>\
+            #3#higher-than-a-cat-'-s-back  <br>\
             #4#the-greatest-thing-since-sliced-bread <br>\
             #5#best-of-a-bad-lot <br>\
             #6#further-along-the-road <br>\
             #7#elder-statesman <br>\
-            #8#at-(one's)-earliest-convenience ",
+            #8#at-(-one-'-s-)-earliest-convenience ",
             markers: {
             '1': {
                 description: "To have more important or more interesting things to do or attend to.",
