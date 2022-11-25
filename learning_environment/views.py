@@ -14,6 +14,7 @@ from .forms import *
 from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
+from django.utils import timezone
 
 
 class SignUpView(SuccessMessageMixin, generic.CreateView):

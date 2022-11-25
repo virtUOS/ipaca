@@ -276,4 +276,29 @@ textarea {
      border-left: 10px solid darkblue;
 }
 
+ .date-card{
+  border:1px solid #ddd;
+  width:80px;
+  padding:10px;
+  display:flex;
+  align-items:center;
 
+         background: #393939;
+    border-radius: 15px;
+}
+
+.date-card .day{
+  font-size:24px;
+  margin:0px 5px;
+  color:#2ab6b6;
+}
+
+.date-card .month{
+    font-size:10px;
+  font-weight:bold;
+    color:white;
+}
+.date-card .year{
+    font-size:10px;
+    color:white;
+}

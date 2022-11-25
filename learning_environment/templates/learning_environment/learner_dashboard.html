@@ -34,9 +34,23 @@
                         </tr>
                     {% for solution in solutions %}
                         <tr>
-                            <td>{{ solution.timestamp}}</td>
+                            <td>
+                                <div class="date-card">
+                                  <div class="day">{{ solution.timestamp.day}}</div>
+                                  <div>
+                                     <div class="month">{{ solution.timestamp.month}}</div>
+                                    <div class="year">{{ solution.timestamp.year}}</div>
+                                  </div>
+                                </div>
+                                {{ solution.timestamp.time}}</td>
                             <td>{{ solution.task.name }}</td>
-                            <td>{{ solution.solved }}</td>
+                            <td>
+                                {% if solution.solved%}
+                                <i class="bi bi-check-circle-fill fa-2x" style="color:darkgreen;"></i>
+                                {% else %}
+                                <i class="bi bi-x-circle-fill fa-2x" style="color:darkred;"></i>
+                                {% endif %}
+                            </td>
                             <td>{{ solution.analysis }}</td>
                         </tr>
                     {% endfor %}
