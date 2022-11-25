@@ -1,0 +1,60 @@
+// Lesson tt-001
+// a test lesson, no meaningful content.
+{
+  name: "Group 6 Vocab Tasks",  // the name that's also shown to the users
+  id: "lesson-slot-012",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
+  author: "Pauli",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "hey",
+  text_source: "unknown - TODO",
+  text_licence: "unknown - TODO",
+  text_url: "unknown - TODO",
+    tasks: [  // the list of tasks for this lesson
+        {  
+            // task 2: mark the words
+            name: "Match the idioms with their meanings",
+            type: "V",
+            interaction: "MARK",
+            primary: false,
+            show_lesson_text: false,
+            question: "Match the idioms with their meanings and mark them by clicking on them after selecting one of the words.",
+            marktext: "<p>#1#to-have-bigger-fish-to-fry<\p> \
+            <p>#2#the-biggest-frog-in-the-puddle<\p> \
+            #3#higher-than-a-cat's-back  <br>\
+            #4#the-greatest-thing-since-sliced-bread <br>\
+            #5#best-of-a-bad-lot <br>\
+            #6#further-along-the-road <br>\
+            #7#elder-statesman <br>\
+            #8#at-(one's)-earliest-convenience ",
+            markers: {
+            '1': {
+                description: "To have more important or more interesting things to do or attend to.",
+            },
+            '2': {
+                description: "The most powerful, influential, knowledgeable, or experienced person within a small group.",
+            },
+            '3': {
+                description: "Very expensive",
+            },
+            '4': {
+                description: "A humorous and hyperbolic statement indicating one's belief that something is excellent, especially something new and innovative.",
+            },
+            '5': {
+                description: "A person or thing in a group that is slightly better or more desirable than anything or anyone else in the group, even though none of the options available are desirable.",
+            },
+            '6': {
+                description: "In the future",
+            },
+            '7': {
+                description: "One who is experienced and successful in a particular area",
+            },
+            '8': {
+                description: "As soon as one is able to do something",
+            }
+            } // end of markers list
+        } // end of task 3
+      
+    ] // end of tasks
+
+} // end of lesson
