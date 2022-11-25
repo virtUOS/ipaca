@@ -65,7 +65,6 @@ class GapTask():
     def analyze_solution(self, solution):
         analysis = {'solved': True, 'solution': {}}
         context = {'mode': 'result'}
-        print("Hello")
         for i in range(len(self.task.content)):  # iterate over list of text parts and gaps
             if 'name' in self.task.content[i]:  # if it's a gap
                 sol = solution.get('solution-{}-{}'.format(self.task.id, self.task.content[i]['name']), ['---'])
