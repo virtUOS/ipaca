@@ -1,14 +1,14 @@
-<p class="card-text">{{ task.question }}</p>
+<p class="card-text" >{{ task.question }}</p>
 
 {% if mode == 'solve' %}
     <form method="post">
         {% csrf_token %}
         <input type="hidden" name="task" value="{{ task.id }}">
-        <p><input type="text" size="30" name="answer"></p>
+        <p><input type="text" size="50" name="answer"></p>
         <div style="margin-top: 2em">
             <button type="submit" class="btn btn-secondary">Check!</button>
         </div>
     </form>
 {% else %}
-    <p>{{ feedback }}.</p>
+<p> "{{ corrected_user_underlined }}" is not correct. </p>
 {% endif %}
