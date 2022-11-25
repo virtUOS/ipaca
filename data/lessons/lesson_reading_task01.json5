@@ -1,0 +1,76 @@
+// Reading task group 6.2
+{
+  name: "Reading Group 6.2 Task 01",  // the name that's also shown to the users
+  id: "lesson-slot-015",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
+  author: "Pauli",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "Reading task 01",
+  text_source: "Halyna Kovalenko, Drozd YaroslavaFedorenko Dmytro,Kulinich Olha",
+  text_licence: "cc-by",
+  text_url: "unknown - TODO",
+    tasks: [  // the list of tasks for this lesson
+        { // task 1: Fill in the gaps
+            name:  "Fill in the gaps",
+            type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+            interaction: "GAP",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+            primary: false,      // the primary task will be shown first, non-primary tasks are for repitition
+            show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+            question:  "Read the text and type the correct adjective form <br>\
+                        How much do you think you know about poisonous animals? Probably, not too much. <br>\
+                        _1_  frogs will be presented to you in this text, luckily not face to face. <br>\
+                        That _2_ creature in the picture is the phantasmal poison frog, that can be met in one of _3_corners of the world – Ecuador. <br>\
+                        Its other name is a poison dart frog and the reason for this will be explained later. Due to their _4_ natural habitat, this species is considered as endangered or vulnerable according to IUCN. <br>\
+                        These frogs tend to live in the leaf litter on the floor of tropical rainforests, particularly near streams and really _5_ areas. <br>\
+                        Phantasmals can also be found in banana and cacao plantations, that makes them _6_ for people, who work on these lands. <br>\
+                        Coming back to its name, we should have a look at the South American history. <br>\
+                        Local pristine tribes used to use the frog’s skin secretion to poison their arrows and darts for hunting which was quite _7_ . <br>\
+                        The next issue to be revealed is actually phantasmal’s poison. An _8_ fact about it is that its poison is produced by frog’s diet that consists of _9_ insects and spiders. <br>\
+                        Consequently, in zoos dart frogs are not poisonous at all as their diet is controlled. Phantasmal frogs are also known as the _10_ fathers. Male frogs care for eggs and tadpoles, carrying them on their backs for 6-12 weeks. <br>\
+                        These cute vivid amphibians, that grow only up to 4 centimeters, can easily enchant you, but be really _11_ with them as it is only 2 micrograms of their poison needed to kill an adult. <br>\
+                        According to current data, this species is one of _12_ in the whole world.",  // the question to be displayed
+            gaps: {
+              mode: 'fillin',
+              _1_: [
+                { text: "the most dangerous", correct: true, feedback: "Correct" },
+              ],
+              _2_: [
+                {text: "tiny", correct: true, feedback: "Correct"},
+              ],
+              _3_: [
+                {text: "the farthest", correct: true, feedback: "Correct"},
+              ],
+              _4_: [
+                {text: "limited", correct: true, feedback: "Correct"},
+              ],
+              _5_: [
+                {text: "wet", correct: true, feedback: "Correct"},
+              ],
+              _6_: [
+                {text: "more hazardous ", correct: true, feedback: "Correct"},
+              ],
+              _7_: [
+                {text: "effective", correct: true, feedback: "Correct"},
+              ],
+              _8_: [
+                {text: "interesting", correct: true, feedback: "Correct"},
+              ],
+              _9_: [
+                {text: "poisonous", correct: true, feedback: "Correct"},
+              ],
+              _10_: [
+                {text: "best", correct: true, feedback: "Correct"},
+              ],
+              _11_: [
+                {text: "careful", correct: true, feedback: "Correct"},
+              ],
+              _12_: [
+                {text: "the most toxic", correct: true, feedback: "Correct"},
+              ],
+            },  
+
+          // 
+        }  // end of task 1
+    ] // end of tasks
+
+} // end of lesson
