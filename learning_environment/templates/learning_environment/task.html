@@ -69,13 +69,12 @@
                                         <cite>{{ task.lesson.text_source }}</cite>
                                     
                                 </div>
-                                
                             {% endif %}
                             {% include task.get_template %}
                             {% if mode == 'result' %}
-                                <p>
+                                <p style="margin-top: 2em;">
                                     {% if not solved %}
-                                        <a href="{% url 'practice' %}" class="btn btn-primary">Try again</a> &nbsp;
+                                        <a href="{% url 'practice' %}"?redo={{ task.id }}" class="btn btn-primary">Try again</a> &nbsp;
                                     {% else %}
                                         <a href="{% url 'practice' %}" class="btn btn-primary">Go on!</a>
                                     {% endif %}
@@ -89,6 +88,7 @@
     {% endif %}
 
 <style>
+    
    body{
     background: url({% static 'img/task_background.svg'%}) no-repeat center center fixed;
     -webkit-background-size:cover;

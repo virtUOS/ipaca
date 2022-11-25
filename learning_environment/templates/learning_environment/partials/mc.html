@@ -1,4 +1,5 @@
-<div class="card-choice">
+<div class="container-right" style="float:right; width: auto; display: flex; background-color: red; position: absolute; ">
+    <div class="card-choice">
     <p class="card-text">{{ task.question }}</p>
 
     {% if mode == 'solve' %}
@@ -10,7 +11,8 @@
                     <input class="form-check-input" type="checkbox" name="solution-{{ task.id }}-{{ forloop.counter0 }}" id="task-{{ task.id }}-{{ forloop.counter0 }}">
                     <div class="card-answer" "<label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}"> 
                       {{ o.text }}
-                    </label></div>
+                    </label>
+                </div>
         {% endfor %}
         <div style="margin-top: 2em">
             <button type="submit" class="btn btn-secondary" style="margin-bottom:0.1em; float:right; width: 8em; height: 3.2em; background-color: #1C009C;">Check!</button>
@@ -18,14 +20,18 @@
     </form>
         
         <style>
+
           .form-check .form-check-input{
             position: relative;
             border-radius: 15px;
+            vertical-align: middle;
             width:2.2em;
             height: 2.2em;
             border: 2.5px solid rgba(216, 216, 216, 0.872);
             top:30px;
             left: 5em;
+            margin-top:0.7em;
+            margin-bottom: 0.7em;
             z-index: 999;
 
         }
@@ -39,7 +45,8 @@
         margin:0 auto;
         width: 60em;
         height: 60em;
-        padding: 0 ;
+        padding: 0 
+        
 
         }
 
@@ -55,17 +62,16 @@
         border-radius:1.5em;
         border: 1px solid #dfdfdf;
         background-color: white;
-        height: fir-content;
+        height: 5em;
         align-items: center;
         display: flex;
         padding-left: 6em;
         padding-right: 2em;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
+        padding-top: 1em;
+        padding-bottom: 1em;
         top:1.5em;
         margin: 1em auto;
         }
-
 
     
         .card-choice{
@@ -83,7 +89,7 @@
     
     
         .container{
-        width:auto;
+        width: 30em;
         right:40%;
         float:left;
         display: flex;
@@ -142,5 +148,6 @@
             {% endif %}
             </label>
         </div>
+    </div>
     {% endfor %}
 {% endif %}
