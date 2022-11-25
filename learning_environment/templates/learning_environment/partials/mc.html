@@ -1,103 +1,128 @@
 <div class="card-choice">
-<p class="card-text">{{ task.question }}</p>
+    <p class="card-text">{{ task.question }}</p>
 
-{% if mode == 'solve' %}
-    <form method="post">
-        {% csrf_token %}
-        <input type="hidden" name="task" value="{{ task.id }} ">
-        {% for o in task.content %}
-            <div class="form-check"style="padding-left:0;">
-                <input class="form-check-input" type="checkbox" name="solution-{{ task.id }}-{{ forloop.counter0 }}" id="task-{{ task.id }}-{{ forloop.counter0 }}">
-                <div class="card-choices" style="margin-left:20px;">
-                <div class="card-answer" "<label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}"> 
-                  {{ o.text }}
-                </label>
-            </div>
+    {% if mode == 'solve' %}
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="task" value="{{ task.id }} ">
+            {% for o in task.content %}
+                <div class="form-check"style="padding-left:0;">
+                    <input class="form-check-input" type="checkbox" name="solution-{{ task.id }}-{{ forloop.counter0 }}" id="task-{{ task.id }}-{{ forloop.counter0 }}">
+                    <div class="card-answer" "<label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}"> 
+                      {{ o.text }}
+                    </label></div>
         {% endfor %}
         <div style="margin-top: 2em">
-            <button type="submit" class="btn btn-secondary";">Check!</button>
+            <button type="submit" class="btn btn-secondary" style="margin-bottom:0.1em; float:right; width: 8em; height: 3.2em; background-color: #1C009C;">Check!</button>
         </div>
-    </div>
-</form>
-        <style>
-            .form-check .form-check-input{
-                position: relative;
-                border-radius: 10px;
-                width:1.6em;
-                height: 1.5em;
-                
-            }
-
+    </form>
         
+        <style>
+          .form-check .form-check-input{
+            position: relative;
+            border-radius: 15px;
+            width:2.2em;
+            height: 2.2em;
+            border: 2.5px solid rgba(216, 216, 216, 0.872);
+            top:30px;
+            left: 5em;
+            z-index: 999;
+
+        }
+
+        .form-check{
+            padding: 0;
+        }
+
+        .card{
+           
+        margin:0 auto;
+        width: 60em;
+        height: 60em;
+        padding: 0 ;
+
+        }
+
         .row{
-            width: 100%;
-            float:left;
-    
+        width: 100%;
+        float:left;
+
         }
 
         .card-answer{
-            position: relative;
-            width: 25em;
-            border: 0.5px solid;
-            margin-top: 0.5em;
-            height: 4em;
-            padding: 0.8em;
+        position: relative;
+        width: 30em;
+        border-radius:1.5em;
+        border: 1px solid #dfdfdf;
+        background-color: white;
+        height: fir-content;
+        align-items: center;
+        display: flex;
+        padding-left: 6em;
+        padding-right: 2em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        top:1.5em;
+        margin: 1em auto;
         }
-        
+
+
+    
         .card-choice{
-
-            width: 40em;
-            border-radius: 2em;
-            float:right;
-            left: 55%;
-            top: 25%;
-            background-color: white;
-            position: fixed;
-            padding: 4em;
-            
-        
-
+        width:40em;
+        height:fit-content;
+        border-radius: 2em;
+        float:right;
+        left: 58%;
+        top: 25%;
+        position: fixed;
+        padding: 4em;
+        background-color: #EDEBF7;
+        padding-bottom:2em;
         }
+    
+    
         .container{
-            width:auto;
-            right:40%;
-            float:left;
-            display: flex;
-            border-radius: 0.5em;
-            
-            
-            
+        width:auto;
+        right:40%;
+        float:left;
+        display: flex;
+        border-radius: 0.5em;
+        
+    
         }
 
         .lesson-text{
-            padding: 0;
-            margin-left: 0;
-            overflow-y:scroll;
-        
+        padding: 0;
+        margin-left: 0;
+    
         }
 
         .container-fluid{
-            margin-left: 0;
-            padding-left:0;
-            padding-top:0;
+        margin-left: 0;
+        padding-left:0;
+        padding-top:0;
         }
-        
+    
         header.navbar{
-            margin-bottom: 0;
+        margin-bottom: 0;
         }
+    
         h3{
-            margin-top:0;
-            margin-bottom:0;
-            display:none;
+        margin-top:0;
+        margin-bottom:0;
+        display:none;
         }
 
-        p{
-            width: 25em;
+        .card-text{
+        font-weight: bold;
+        font-size: 18px;
+        padding-bottom: 0;
         }
 
         
         
-        </style>
+    </style>
     
 {% else %}
     {% for o in task.content %}

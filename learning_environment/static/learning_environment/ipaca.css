@@ -108,6 +108,8 @@ body {
     color: #fff;
     padding: 16px 50px;
     margin: 20px;
+    width:4em;
+    height: 3em;
     background: linear-gradient(294.49deg, rgba(255, 110, 127, 0.8) -122.6%, rgba(28, 0, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), #FFFFFF;
 }
 
