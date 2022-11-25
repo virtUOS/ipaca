@@ -1,0 +1,91 @@
+// Lesson es-short-02
+{
+  name: "Grammar with smart snippets",  // the name that's also shown to the users
+  id: "es-short-02",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Emilly Sidaine",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "Write a grammatically correct sentence with the help of the given snippets.<br> Note, that sometimes the form of the adjective has to be adjusted.",
+  text_source: "Emilly Sidaine",
+  text_licence: "CC0",
+  text_url: "http://www.virtuos.uos.de",
+  tasks: [  // the list of tasks for this lesson
+    { // task 01: 
+      name:  "Smart Snippets",
+      type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+      interaction: "SHORT_SNIPPETS",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+      question:  "city / Berlin / large / is / Germany / in ",  // the question to be displayed
+      answer: ""
+      
+    },  // end of task 01
+
+    { // task 02: 
+      name:  "Smart Snippets",
+      type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+      interaction: "SHORT_SNIPPETS",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+      question:  "my/ I/ bought/ car/ have/ Since/ little/ money/ before/ than/ had/ I",  // the question to be displayed
+      answer: ""
+      
+    },  // end of task 02
+
+    { // task 03: 
+      name:  "Smart Snippets",
+      type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+      interaction: "SHORT_SNIPPETS",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+      question:  "job/ getting/ After/ this/ busy/ became/ she",  // the question to be displayed
+      answer: " "
+      
+    },  // end of task 03
+
+    { // task 04: 
+      name:  "Smart Snippets",
+      type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+      interaction: "SHORT_SNIPPETS",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+      question:  "have/ tiny/ This/ bird/ is/ I/ seen/ ever",  // the question to be displayed
+      answer: " "
+      
+    },  // end of task 04
+
+    { // task 05: 
+      name:  "Smart Snippets",
+      type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+      interaction: "SHORT_SNIPPETS",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+      question:  "ring/ in/ stock/ Unfortunately/ do/ have/ not/ narrow/ wedding/ we/ a ",  // the question to be displayed
+      answer: ""
+      
+    },  // end of task 05
+
+    { // task 06: 
+      name:  "Smart Snippets",
+      type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+      interaction: "SHORT_SNIPPETS",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+      question:  "naughty/ in/ always/ He/ school/ was/ student ",  // the question to be displayed
+      answer: " "
+      
+    },  // end of task 06
+
+    { // task 07: 
+      name:  "Smart Snippets",
+      type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+      interaction: "SHORT_SNIPPETS",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+      question:  "week/ hot/ the/ summer/ whole/ be/ This/ of/ will ",  // the question to be displayed
+      answer: ""
+      
+    },  // end of task 07
+    
+  ],  // end of list of tasks
+} // end of lesson
+

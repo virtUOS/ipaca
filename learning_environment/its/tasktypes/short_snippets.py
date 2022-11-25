@@ -1,4 +1,4 @@
-#from learning_environment.its.base import Json5ParseException
+from learning_environment.its.base import Json5ParseException
 #nltk.download('punkt')
 import nltk 
 from nltk.stem import WordNetLemmatizer
