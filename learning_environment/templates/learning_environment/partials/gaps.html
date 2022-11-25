@@ -5,12 +5,12 @@
         {% for part in task.content %}
             {% if part.name %}
                 {% if part.mode == 'fillin' %}
-                    <input type="text" name="solution-{{ task.id }}-{{ part.name }}" size="15">
+                    <input type="text" name="solution-{{ task.id }}-{{ part.name }} size="15">
                 {% elif part.mode == 'select' %}
                     <select class="form-select" name="solution-{{ task.id }}-{{ part.name }}" size="1" id="solution-{{ task.id }}-{{ part.name }}" style="width:10em;display:inline-block;margin-bottom:0.5em;margin-top:0.5em;">
                         <option value="---" selected="selected">---</option>
                         {% for o in part.options %}
-                            <option value="{{ o.text }}">{{ o.text }}</option>
+                            <option value="{{ o.text }} ">{{ o.text }}</option>
                         {% endfor %}
                     </select>
                 {% endif %}
@@ -37,7 +37,7 @@
             {% if part.solution and part.solution != '---' %}
                 {% for o in part.options %}
                     {% if o.text == part.solution %}
-                        <span class="feedbackbox"><i>{% if part.solved %}✓{% else %}✗{% endif %} {{ o.feedback }}</i></span>
+                        <span class="feedbackbox" style="position: absolute; bottom: 6.5em; left: 16em; "><i>{% if part.solved %}✓{% else %}✗{% endif %} {{ o.feedback }}</i></span>
                     {% endif %}
                 {% endfor %}
             {% endif %}
@@ -50,12 +50,13 @@
 
 <style>
     .card{
-        margin:0 auto;
+        margin: 0 auto;
         width: 60em;
-        height: auto;
+        height: fit-content;
         border-radius: 2.5em;
         padding: 2em;
         padding-bottom:2em ;
+        
     }
     form.form-inline{
         font-size:20px;
@@ -67,7 +68,28 @@
         color: black;
         font-weight: bold;
         margin-top: 1em;
-        margin-bottom: 4em;
+        margin-bottom: 2em;
     }
 
+    .btn-primary{
+        width:4em;
+        height: 3em;
+        float: right;
+    }
+
+    p{
+        font-size:18px;
+    }
+
+    .form-select{
+        max-width:fit-content;
+        border-radius: 2em;
+        font-size: 16px;
+        
+    }
+
+
+    i{
+        color: red;
+    }
 </style>

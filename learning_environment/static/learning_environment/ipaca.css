@@ -194,7 +194,7 @@ textarea {
 .mark7 { background-color: #7efff5; }
 .mark8 { background-color: #c1b001; }
 .mark9 { background-color: #a8140e; }
-.choosemarker { display: inline-block; width: 4em; border: 3px solid white; }
+.choosemarker { display: inline-block; width: 4em; border: 3px solid white; margin-left:2em;}
 .choosemarker-chosen { border: 3px solid red; }
 
 /* sortable lists */
