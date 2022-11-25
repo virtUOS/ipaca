@@ -221,6 +221,10 @@ textarea {
     margin:10px;
 }
 
+.form-text {
+    margin-left:45px;
+}
+
 .card-dashboard {
     height: 125px;
     width: 100%;
