@@ -75,7 +75,7 @@
                             {% if mode == 'result' %}
                                 <p style="margin-top: 2em">
                                     {% if not solved %}
-                                        <a href="{% url 'practice' %}" class="btn btn-primary">Try again</a> &nbsp;
+                                        <a href="{% url 'practice' %}?redo={{ task.id }}" class="btn btn-primary">Try again</a> &nbsp;
                                     {% else %}
                                         <a href="{% url 'practice' %}" class="btn btn-primary">Go on!</a>
                                     {% endif %}
