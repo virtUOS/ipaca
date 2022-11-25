@@ -1,0 +1,65 @@
+// Grammar lesson group 6.2
+{
+  name: "Grammar Group 6.2",  // the name that's also shown to the users
+  id: "lesson-slot-011",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
+  author: "Lena + Pauli",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "IgnoreMe",
+  text_source: "Halyna Kovalenko, Drozd YaroslavaFedorenko Dmytro,Kulinich Olha",
+  text_licence: "cc-by",
+  text_url: "unknown - TODO",
+    tasks: [  // the list of tasks for this lesson
+        { // task 1: Fill in the gaps
+            name:  "Fill in the gaps",
+            type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+            interaction: "SMARTGAP",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+            primary: false,      // the primary task will be shown first, non-primary tasks are for repitition
+            show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+            question:  "1. It is not always _1_ (bright) students who perform well in tests. <br>\
+                        2. He is much _2_ (self-confident) than he used to be. <br>\
+                        3. Most people are _3_ (well off) than their parents were. <br>\
+                        4. There is nothing _4_ (irritating) than a crying child. <br>\
+                        5. If you were _5_ (tidy) and _6_ (well-organized) than you are, you would not keep losing things. <br>\
+                        6. This film is _7_ (little) interesting than the previous one. <br>\
+                        7. _8_ (clever)solution to any problem is usually _9_ (simple) one. <br>\
+                        8. You’re _10_ (sun-tanned) than I am. ",  // the question to be displayed
+            gaps: {
+              mode: 'fillin',
+              _1_: [
+                { text: "the brightest", correct: true, feedback: "y" },
+              ],
+              _2_: [
+                {text: "more self-confident", correct: true, feedback: "y"},
+              ],
+              _3_: [
+                {text: "better-off", correct: true, feedback: "y"},
+              ],
+              _4_: [
+                {text: "more irritating", correct: true, feedback: "y"},
+              ],
+              _5_: [
+                {text: "tidier", correct: true, feedback: "y"},
+              ],
+              _6_: [
+                {text: "better-organized", correct: true, feedback: "y"},
+              ],
+              _7_: [
+                {text: "less", correct: true, feedback: "y"},
+              ],
+              _8_: [
+                {text: "the cleverest", correct: true, feedback: "y"},
+              ],
+              _9_: [
+                {text: "the simplest", correct: true, feedback: "y"},
+              ],
+              _10_: [
+                {text: "more sun-tanned", correct: true, feedback: "y"},
+              ],
+            },  
+
+          // 
+        }  // end of task 1
+    ] // end of tasks
+
+} // end of lesson

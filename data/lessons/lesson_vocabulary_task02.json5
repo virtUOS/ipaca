@@ -1,0 +1,94 @@
+// Lesson Vocabulary Task 02 - Hardcode
+{
+  name: "Group 6 Vocab Tasks",  // the name that's also shown to the users
+  id: "lesson-slot-014",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
+  author: "Pauli",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "Vocabs",
+  text_source: "Halyna Kovalenko, Drozd YaroslavaFedorenko Dmytro,Kulinich Olha",
+  text_licence: "cc-by",
+  text_url: "unknown - TODO",
+    tasks: [  // the list of tasks for this lesson
+        { 
+            // Task 1: Select the vocabs
+            name: "Read the text and fill the gaps with the given idioms",
+            type: "V",
+            interaction: "GAP",
+            primary: false,
+            show_lesson_text: false,
+            question: "<strong>Tips for newly employed</strong> <br>\
+                        You have got a job of an office worker and tomorrow is going to be your first day of working in a new team? If so, we suggest you the tips that might be helpful. <br>\
+                        Firstly, you should establish relations with your boss. He/she is _1_ ; therefore, your career development and salary will directly depend on him/her. <br>\
+                        Secondly, you should recognize _2_ in the team. It is usually a person who has worked there for a long time and is a real expert. Such worker could help you to settle in a new place and bring you up to speed. You will be lucky if he/she turns to be an altruist who is always ready to help. This means that if you ask a question, your coworker will try to answer _3_ . At the same time be ready to meet the person who always _4_ so when you ask him/her for help, your colleague will definitely say that he/she must do something else and cannot solve your problem now. <br>\
+                        Thirdly, it is not excluded that all the members of the team will not be kind, easy-going and helpful so you may need to choose the person who is _5_ and build relationships with him/her. <br>\
+                        The main thing is to remember that the first impression can be deceptive and perhaps a person, who seemed to be completely different from you, will become your friend _6_ . ",
+            gaps: {
+            mode: 'select',
+            _1_: [
+                { text: "higher than a cat's back", correct: false, feedback: "Wrong" },
+                { text: "the best of a bad lot", correct: false, feedback: "Wrong" },
+                { text: "have/has bigger fish to fry", correct: false, feedback: "Wrong" },
+                { text: "at his/her earliest convenience ", correct: false, feedback: "Wrong" },
+                { text: "elder statesman", correct: false, feedback: "Wrong" },
+                { text: "the greatest thing since sliced bread", correct: false, feedback: "Wrong" },
+                { text: "the biggest frog in the puddle", correct: true, feedback: "Correct" },
+                { text: "further along the road", correct: false, feedback: "Wrong" },
+            ],
+            _2_ : [
+                { text: "higher than a cat's back", correct: false, feedback: "Wrong" },
+                { text: "the best of a bad lot", correct: false, feedback: "Wrong" },
+                { text: "have/has bigger fish to fry", correct: false, feedback: "Wrong" },
+                { text: "at his/her earliest convenience ", correct: false, feedback: "Wrong" },
+                { text: "elder statesman", correct: true, feedback: "Correct" },
+                { text: "the greatest thing since sliced bread", correct: false, feedback: "Wrong" },
+                { text: "the biggest frog in the puddle", correct: false, feedback: "Wrong" },
+                { text: "further along the road", correct: false, feedback: "Wrong" },
+            ],
+            _3_: [
+                { text: "higher than a cat's back", correct: false, feedback: "Wrong" },
+                { text: "the best of a bad lot", correct: false, feedback: "Wrong" },
+                { text: "have/has bigger fish to fry", correct: false, feedback: "Wrong" },
+                { text: "at his/her earliest convenience ", correct: true, feedback: "Correct" },
+                { text: "elder statesman", correct: false, feedback: "Wrong" },
+                { text: "the greatest thing since sliced bread", correct: false, feedback: "Wrong" },
+                { text: "the biggest frog in the puddle", correct: false, feedback: "Wrong" },
+                { text: "further along the road", correct: false, feedback: "Wrong" },
+            ],
+            _4_: [
+                { text: "higher than a cat's back", correct: false, feedback: "Wrong" },
+                { text: "the best of a bad lot", correct: false, feedback: "Wrong" },
+                { text: "have/has bigger fish to fry", correct: true, feedback: "Correct" },
+                { text: "at his/her earliest convenience ", correct: false, feedback: "Wrong" },
+                { text: "elder statesman", correct: false, feedback: "Wrong" },
+                { text: "the greatest thing since sliced bread", correct: false, feedback: "Wrong" },
+                { text: "the biggest frog in the puddle", correct: false, feedback: "Wrong" },
+                { text: "further along the road", correct: false, feedback: "Wrong" },
+            ],
+            _5_: [
+                { text: "higher than a cat's back", correct: false, feedback: "Wrong" },
+                { text: "the best of a bad lot", correct: true, feedback: "Correct" },
+                { text: "have/has bigger fish to fry", correct: false, feedback: "Wrong" },
+                { text: "at his/her earliest convenience ", correct: false, feedback: "Wrong" },
+                { text: "elder statesman", correct: false, feedback: "Wrong" },
+                { text: "the greatest thing since sliced bread", correct: false, feedback: "Wrong" },
+                { text: "the biggest frog in the puddle", correct: false, feedback: "Wrong" },
+                { text: "further along the road", correct: false, feedback: "Wrong" },
+            ],
+            _6_: [
+                { text: "higher than a cat's back", correct: false, feedback: "Wrong" },
+                { text: "the best of a bad lot", correct: false, feedback: "Wrong" },
+                { text: "have/has bigger fish to fry", correct: false, feedback: "Wrong" },
+                { text: "at his/her earliest convenience ", correct: false, feedback: "Wrong" },
+                { text: "elder statesman", correct: false, feedback: "Wrong" },
+                { text: "the greatest thing since sliced bread", correct: false, feedback: "Wrong" },
+                { text: "the biggest frog in the puddle", correct: false, feedback: "Wrong" },
+                { text: "further along the road", correct: true, feedback: "Correct" },
+            ],
+
+            }  // end of gaps
+        },  // end of task 4
+      
+    ] // end of tasks
+
+} // end of lesson

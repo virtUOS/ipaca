@@ -78,13 +78,15 @@ class MarkTask():
 
         # wrap all words in spans and add their index as data-attribute
         __mark_cnt = 0  # reset counter
-        marktext_html = re.sub(r"([\w-]+)", refcnt, marktext_clean)
+        #marktext_html = re.sub(r"([\w-]+)", refcnt, marktext_clean)
+        marktext_html = re.sub(r"((?<!<)[\w-]+(?!>))", refcnt, marktext_clean)
 
         # create a dictionary of words to mark
         # key = mark group (1-9)
         # value = list of word indices for this group
         marks = {'1':[], '2':[], '3':[], '4':[], '5':[], '6':[], '7':[], '8':[], '9':[]}
-        words = re.findall(r"(#([1-9])#)?([\w-]+)", task['marktext'])  # find all words potentially including marks
+        #words = re.findall(r"(#([1-9])#)?([\w-]+)", task['marktext'])  # find all words potentially including marks
+        words = re.findall(r"(#([1-9])#)?((?<!<)[\w-]+(?!>))", task['marktext'])  # find all words potentially including marks
         for widx in range(len(words)):
             w = words[widx]
             # w is, according to regex: ('#1#' or '', the number or '', the word)

@@ -17,6 +17,8 @@
     {% include 'learning_environment/partials/gap.html' %}
 {% elif task.interaction == 'SHORT_SNIPPETS' %}
     {% include 'learning_environment/partials/short.html' %}
+    {% elif task.interaction == 'SMART_GAP' %}
+    {% include 'learning_environment/partials/gap.html' %}
 {% endif %}
 
 {% endblock %}
