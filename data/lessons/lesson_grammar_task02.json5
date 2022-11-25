@@ -4,7 +4,7 @@
   id: "es-short-02",        // an internal id, will never be shown, but important to identify the lesson
   author: "Emilly Sidaine",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
-  text: "Write a grammatically correct sentence with the help of the given snippets.<br> Note, that sometimes the form of the adjective has to be adjusted.",
+  text: "Write a grammatically correct sentence with the help of the given snippets.<br> Note, that sometimes the form of the adjective has to be adjusted.<br>",
   text_source: "Emilly Sidaine",
   text_licence: "CC0",
   text_url: "http://www.virtuos.uos.de",
