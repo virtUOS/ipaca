@@ -1,0 +1,105 @@
+// Reading Task Group 6.2
+{
+  name: "Reading Group 6.2 Task 02",  // the name that's also shown to the users
+  id: "lesson-slot-016",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
+  author: "Pauli",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p><strong>Negative environmental impacts of tourism and ways to reduce them</strong></p>\
+         <p>People have been travelling around the world throughout all of their history. Tourism and travelling have always\
+         been seen as one of the best ways of spending our spare time. And due to the technological and general progress, it is\
+         really easy today to be a welcomed, or not so, guest at any corner of our planet. </p>\
+         <p>However, not everyone thinks about possible environmental, economic or any other consequences of tourism. \
+         We really have to assess our actions and decisions not only in our native country, but while travelling as well. \
+         And the reasons for that are more essential that you could imagine.</p>\
+         <p>To begin with, we should think about one of the problems, that is at the core in our society today – \
+         a carbon footprint. Of course, all of us know for sure, that we must reduce the use of fossil fuels, the number \
+         of vehicles and carbon emissions in any possible way. Though, the statistics shows that about 8% of the Earth’s \
+         total carbon emissions are caused by tourism and people, who simply don’t care about it on their holidays. All the \
+         land, air or water transport, that carries travelers daily causes a huge climate change and leads to permanent \
+         consequences for a wildlife. </p>\
+         <p>The next, not less important, issue is a water overuse. The residents of more developed countries might have \
+         forgotten that there are still people who struggle with clear and drinking water. Comparing the use of water in hotels \
+         and living houses, you can be unpleasantly surprised as the difference is vast. Tourists are wasting water resources \
+         daily and no one actually thinks about it, because anybody wants to just get away from it all, even global problems, \
+         on their vacation. </p>\
+         <p>Luckily, environmental experts managed to outline several ways on how to reduce your negative impact while \
+         travelling. Firstly, people should take any opportunity to reduce their use of vehicles on holidays. There is a \
+         vast range of options, beginning with bicycles and electro-cars and up to spending more time in each of your \
+         destinations instead of endless smaller trips to different locations of your vacation place. It gives one of the \
+         biggest benefits for a traveler – you can have enough time to soak up all the local atmosphere and culture without \
+         any rush. The next advice is do not be wasteful. Some of us don’t realize how much we can do for our planet without \
+         washing our vacation towels and clothes daily. Additionally, you can reuse any plastic item you buy, saving ocean and \
+         land biodiversity. </p>\
+         <p>Following these easiest tips, any tourist can reduce their environmental influence up to zero without a loss of \
+         vacation’s quality. The solution to this enormous modern problem is smaller and simpler than you thought, isn’t it? \
+         Remember it before booking your next trip. </p>",
+  text_source: "Halyna Kovalenko, Drozd YaroslavaFedorenko Dmytro,Kulinich Olha",
+  text_licence: "cc-by",
+  text_url: "unknown - TODO",
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "NAME OF TASK 1.R.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Read the text and tick 5 true statements about it.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "Travelling has recently become popular among wealthy people.",
+            correct: false,
+            feedback: "Wrong"
+          },
+          {
+            text: "Having enough time for looking around your vacation place is a significant benefit",
+            correct: true,
+            feedback: "Correct"
+          },
+          {
+            text: "About 8% of an overall water use is caused by tourism and travelling.",
+            correct: false,
+            feedback: "Wrong"
+          },
+          {
+            text: "Today, travelling is easier due to advanced technology and progress.",
+            correct: true,
+            feedback: "Correct"
+          },
+          {
+            text: "You can help wildlife and land biodiversity by choosing an eco-friendly transport.",
+            correct: true,
+            feedback: "Correct"
+          },
+          {
+            text: "A modern tourism doesn’t cause severe consequences for the environment.",
+            correct: false,
+            feedback: "Wrong"
+          },
+          {
+            text: "It is absolutely possible to be a conscious tourist without a vacation’s quality loss.",
+            correct: true,
+            feedback: "Correct"
+          },
+          {
+            text: "The difference between the use of water by hotels and residential houses is minor.",
+            correct: false,
+            feedback: "Wrong"
+          },
+          {
+            text: "Daily washing your vacation items doesn’t really affect our water resources.",
+            correct: false,
+            feedback: "Wrong"
+          },
+          {
+            text: "The text gives advice on how to be a conscious tourist.",
+            correct: true,
+            feedback: "Correct"
+          },
+        ]
+      } // end of task 1
+      
+    ] // end of tasks
+
+} // end of lesson
