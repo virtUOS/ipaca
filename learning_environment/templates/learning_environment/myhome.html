@@ -13,7 +13,7 @@
 
         {% include "learning_environment/nav.html" %}
 
-        <div class="col" style="margin-left: 18px; padding:0;">
+        <div class="col" style="margin-left: 18px; margin-top: 18px; padding:0;">
             {# Dashboard cards #}
             <div class="card" style="border-radius:15px; width: auto; padding: 25px; border:none;">
             <div class="row" >
@@ -52,6 +52,7 @@
 
             <div class="card" style="margin-top:10px; border-radius:15px; border: none;">
 
+
                 <div class="justify-content-between" >
                         <div class="me-auto">
                         <h4 style="padding:20px; font-weight: bold;"> New Lessons </h4>
@@ -59,7 +60,19 @@
                             {% for lesson in new_lessons %}
 
                                 <ul class="ul-3col">
-                                    <li class="list-group-item" style="border:none;">{{ lesson.lesson_id }}</li>
+                                    <li class="list-group-item" style=" border:none; padding:0; margin-left:1em; width:100%; height:100%; display:inline-block;">
+                                        <div class="row align-items-center">
+                                        <div class="col-1">
+                                            <div class="icon-number" style="width:3em; height:3em; text-align: center; vertical-align:middle;">
+                                            <span class="num">{{ lesson.id }}</span>
+                                            </div>
+                                        </div>
+                                         <div class="col">
+                                        <span style="height:100%; padding-left:1.5em;">
+                                            {{ lesson.lesson_id }}</span>
+                                         </div>
+                                        </div>
+                                    </li>
                                     <li class="list-group-item" style="border:none;">{{ lesson.name }}</li>
                                     <li class="list-group-item" style="border:none;">
                                         <a class='btn-new' href="{% url 'practice' %}?lesson={{ lesson.id }}" style="text-decoration:none; color: white;">Start</a>

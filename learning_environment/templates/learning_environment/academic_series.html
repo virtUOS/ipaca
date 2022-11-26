@@ -16,7 +16,7 @@
 
             {% include "learning_environment/nav.html" %}
 
-        <div class="col" style="margin-left: 18px; padding:0;">
+        <div class="col" style="margin-left: 18px; margin-top: 18px; padding:0;">
             {# Dashboard cards #}
             <div class="card" style="border-radius:15px; width: auto; padding: 25px; border:none;">
 
@@ -28,7 +28,7 @@
                                 <li class="list-group-item" style="border:none;">{{ lesson.lesson_id }} </li>
                                 <li class="list-group-item" style="border:none;">{{ lesson.name }} </li>
                                 <li class="list-group-item" style="border:none;">
-                                    <a class='btn-practice' href="{% url 'practice' %}?lesson={{ lesson.id }}" style="text-decoration:none; color: white;">Start</a>
+                                    <a class='btn-new' href="{% url 'practice' %}?lesson={{ lesson.id }}" style="text-decoration:none; color: white;">Start</a>
                                 </li>
                              </ul>
                         {% endfor %}

@@ -182,7 +182,7 @@ def myhome(request):
         wrong_tasks = None
     id_lessons = [s.task.lesson.lesson_id for s in solutions]
 
-    new_lessons = Lesson.objects.all().exclude(lesson_id__in=id_lessons).order_by('lesson_id')
+    new_lessons = Lesson.objects.all().exclude(lesson_id__in=id_lessons).order_by('id')
 
 
     return render(request, 'learning_environment/myhome.html', locals())
