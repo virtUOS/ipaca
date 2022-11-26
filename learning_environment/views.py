@@ -19,6 +19,7 @@ import time
 import datetime
 from itertools import groupby
 from operator import itemgetter
+from .anychart import *
 
 class SignUpView(SuccessMessageMixin, generic.CreateView):
     form_class = CustomUserCreationForm
@@ -296,265 +297,90 @@ def global_dashboard(request):
     }
 
     # Create JSON chart config
-    # from example: https://www.anychart.com/products/anychart/gallery/Column_Charts/Stacked_Column_Chart.php
-    chart = {
-        "chart": {
-            "container": "chart_container",
-            "type": "column",
-            "zIndex": 0,
-            "enabled": True,
-            "title": "Test",
-            "baseline": 0,
-            "barGroupsPadding": 0.8,
-            "barsPadding": 0.4,
-            "xScale": 0,
-            "yScale": 1,
-            "palette": {
-                "type": "distinct",
-                "items": [
-                    "#8fce00",
-                    "#f44336"
-                ]
-            },
-            "series":[
-                correct_series,
-                incorrect_series
-            ],
-            "xAxes": [
-                {
-                    "enabled": True,
-                    "drawFirstLabel": True,
-                    "drawLastLabel": True,
-                    "overlapMode": "no-overlap",
-                    "stroke": "#CECECE",
-                    "orientation": "bottom",
-                    "title": {
-                        "fontSize": 13,
-                        "fontFamily": "Verdana, Helvetica, Arial, sans-serif",
-                        "fontColor": "#545f69",
-                        "fontOpacity": 1,
-                        "vAlign": "top",
-                        "hAlign": "center",
-                        "align": "center",
-                        "text": "Date",
-                    },
-                    "labels": {
-                        "zIndex": 35,
-                        "enabled": True
-                    },
-                    "minorLabels": {
-                        "zIndex": 35,
-                        "enabled": True
-                    },
-                    "ticks": {
-                        "zIndex": 35,
-                        "enabled": True,
-                        "stroke": "#CECECE",
-                        "length": 6,
-                        "position": "outside"
-                    },
-                    "minorTicks": {
-                        "zIndex": 35,
-                        "enabled": True,
-                        "stroke": "#EAEAEA",
-                        "length": 4,
-                        "position": "outside"
-                    },
-                    "scale": 0
-                }
-            ],
-            "yAxes": [
-                {
-                    "enabled": True,
-                    "drawFirstLabel": True,
-                    "drawLastLabel": True,
-                    "overlapMode": "no-overlap",
-                    "stroke": "#CECECE",
-                    "orientation": "left",
-                    "title": {
-                        "zIndex": 35,
-                        "enabled": True,
-                        "fontSize": 13,
-                        "fontFamily": "Verdana, Helvetica, Arial, sans-serif",
-                        "fontColor": "#545f69",
-                        "fontOpacity": 1,
-                        "vAlign": "top",
-                        "hAlign": "center",
-                        "align": "center",
-                        "text": "Num Solutions",
-                    },
-                    "labels": {
-                        "zIndex": 35,
-                        "enabled": True,
-                        "format": "{%Value}{groupsSeparator: }"
-                    },
-                    "minorLabels": {
-                        "zIndex": 35,
-                        "enabled": False
-                    },
-                    "ticks": {
-                        "zIndex": 35,
-                        "enabled": True,
-                        "stroke": "#CECECE",
-                        "length": 6,
-                        "position": "outside"
-                    },
-                    "minorTicks": {
-                        "zIndex": 35,
-                        "enabled": False,
-                        "stroke": "#EAEAEA",
-                        "length": 4,
-                        "position": "outside"
-                    },
-                    "scale": 1
-                }
-            ],
-            "scales": [
-                {
-                    "type": "date-time",
-                    "inverted": False,
-                    "ticks": {
-                        "interval": "P1Y"
-                    },
-                    "minorTicks": {
-                        "interval": "P1M"
-                    },
-                    "mode": "discrete"
-                },
-                {
-                    "type": "linear",
-                    "inverted": False,
-                    "maximum": None,
-                    "minimum": None,
-                    "minimumGap": 0.1,
-                    "maximumGap": 0.1,
-                    "softMinimum": 0,
-                    "softMaximum": None,
-                    "alignMinimum": True,
-                    "alignMaximum": True,
-                    "maxTicksCount": 1000,
-                    "ticks": {
-                        "mode": "linear",
-                        "base": 0,
-                        "allowFractional": True,
-                        "minCount": 4,
-                        "maxCount": 6
-                    },
-                    "minorTicks": {
-                        "mode": "linear",
-                        "base": 0,
-                        "allowFractional": True,
-                        "count": 5
-                    },
-                    "stackMode": "value",
-                    "stackDirection": "direct",
-                    "stickToZero": True,
-                    "comparisonMode": "none"
-                }
-            ],
-            "xScroller": {
-                "zIndex": 35,
-                "enabled": True,
-                "height": 16,
-                "minHeight": None,
-                "maxHeight": None,
-                "orientation": "bottom",
-                "inverted": False,
-                "autoHide": False,
-                "fill": "#f7f7f7",
-                "selectedFill": "#ddd",
-                "outlineStroke": "none",
-                "allowRangeChange": True,
-                "thumbs": {
-                    "normal": {
-                        "fill": "#E9E9E9",
-                        "stroke": "#7c868e"
-                    },
-                    "hovered": {
-                        "fill": "#ffffff",
-                        "stroke": "#757575"
-                    },
-                    "enabled": True,
-                    "autoHide": False
-                },
-                "position": "after-axes"
-            },
-            "xZoom": {
-                "startValue": "2022-1-1",
-                "endValue": "2023-1-1",
-                "continuous": True
-            },
-            "legend": {
-                "zIndex": 200,
-                "enabled": True,
-                "fontSize": 13,
-                "fontFamily": "Verdana, Helvetica, Arial, sans-serif",
-                "fontColor": "#7c868e",
-                "fontOpacity": 1,
-                "vAlign": "bottom",
-                "hAlign": "start",
-                "textOverflow": "...",
-                "selectable": False,
-                "disablePointerEvents": False,
-                "useHtml": False,
-                "inverted": False,
-                "itemsLayout": "horizontal",
-                "iconSize": 15,
-                "position": "top",
-                "positionMode": "outside",
-                "drag": False,
-                "itemsHAlign": "left",
-                "itemsSpacing": 15,
-                "itemsSourceMode": "default",
-                "hoverCursor": "pointer",
-                "iconTextSpacing": 5,
-                "align": "center",
-                "margin": {
-                    "left": 0,
-                    "top": 0,
-                    "bottom": 0,
-                    "right": 0
-                },
-                "padding": {
-                    "left": 0,
-                    "top": 0,
-                    "bottom": 20,
-                    "right": 0
-                },
-                "paginator": {
-                    "zIndex": 30,
-                    "enabled": True,
-                    "fontSize": 12,
-                    "fontFamily": "Verdana, Helvetica, Arial, sans-serif",
-                    "fontColor": "#545f69",
-                    "fontOpacity": 1,
-                    "vAlign": "top",
-                    "hAlign": "start",
-                    "textOverflow": "",
-                    "selectable": False,
-                    "disablePointerEvents": False,
-                    "useHtml": False,
-                    "orientation": "right",
-                    "layout": "horizontal",
-                    "padding": {
-                        "left": 5,
-                        "top": 0,
-                        "bottom": 0,
-                        "right": 0
-                    },
-                    "margin": {
-                        "left": 0,
-                        "top": 0,
-                        "bottom": 0,
-                        "right": 0
-                    }
-                },
-            },
+    chart = createBarChartConfig("solutions_bar_chart_container", [correct_series, incorrect_series])
+
+
+    # Extract only the timestamp/solved values and convert to list
+    category_data = list(solutions.values('timestamp', 'task'))
+
+    print(Task.objects.filter(id=49).values('type'))
     
-        }
-    }
+    
+    # random data generation (delete_later)
+    for i in range(1500):
+        import random
+        import datetime
+        start = datetime.datetime.strptime('1/1/2020 1:30 PM', '%m/%d/%Y %I:%M %p')
+        end = datetime.datetime.strptime('1/1/2023 4:50 AM', '%m/%d/%Y %I:%M %p')
+        delta = end - start
+        int_delta = (delta.days * 24 * 60 * 60) + delta.seconds
+        random_second = random.randrange(int_delta)
+        randDate = start + datetime.timedelta(seconds=random_second)
+        randTask = random.randint(1, 70)
+        data_entry = {"timestamp": randDate, "task": randTask}
+        category_data.append(data_entry)
+    
+    # Group data by days and count the categories
+    grouped_data = {}
+    for data in category_data:
+        # Convert datetime to YEAR-MONTH-DAY string
+        day_string = data["timestamp"].strftime("%Y-%m-%d")
+        data["timestamp"] = day_string
+
+        # Init dictionary if not already present
+        if day_string not in grouped_data: 
+            grouped_data[day_string] = {'Reading': 0, 'Grammar': 0, 'Vocabulary': 0}
+
+        # Get Task type
+        task_type = list(Task.objects.filter(id=data["task"]).values('type'))[0]["type"]
+
+        # Count correct/incorrect solutions 
+        if task_type == 'R':
+            grouped_data[day_string]["Reading"] += 1
+        elif task_type == 'GS':
+            grouped_data[day_string]["Grammar"] += 1
+        elif task_type == 'V':
+            grouped_data[day_string]["Vocabulary"] += 1
+
+    # Reorder the grouped data by categories for anychart graph
+    reading_data = ["Reading", 0]
+    grammar_data = ["Grammar", 0]
+    vocabulary_data = ["Vocabulary", 0]
+    newest_reading_data = ["Reading", 0]
+    newest_grammar_data = ["Grammar", 0]
+    newest_vocabulary_data = ["Vocabulary", 0]
+
+    today = datetime.datetime.today()
+    last_week_day = today - datetime.timedelta(days=7)
+    print(today)
+    print(last_week_day) 
+    for timestamp_day in grouped_data:
+
+        reading_data[1] += grouped_data[timestamp_day]["Reading"]
+        grammar_data[1] += grouped_data[timestamp_day]["Grammar"]
+        vocabulary_data[1] += grouped_data[timestamp_day]["Vocabulary"]
+
+        data_date = datetime.datetime.strptime(timestamp_day, "%Y-%m-%d").date()
+        last_week_date = last_week_day.date()        
+        is_older_than_a_week = last_week_date > data_date
+
+        print("data_date: ", data_date)
+        print("last_week_date: ", last_week_date)
+        print("is_older_than_a_week: ", is_older_than_a_week)
+
+        if not is_older_than_a_week:
+            newest_reading_data[1] += grouped_data[timestamp_day]["Reading"]
+            newest_grammar_data[1] += grouped_data[timestamp_day]["Grammar"]
+            newest_vocabulary_data[1] += grouped_data[timestamp_day]["Vocabulary"]
+    
+    allPieData = [reading_data, grammar_data, vocabulary_data]
+    newestPieData = [newest_reading_data, newest_grammar_data, newest_vocabulary_data]
+    allPieChart = createDonutChartConfig("All Categories", "all_category_pie_chart_container", allPieData)
+    newestPieChart = createDonutChartConfig("Last Week Categories", "newest_category_pie_chart_container", newestPieData)
     context = {
-        "chartData": json.dumps(chart), 
+        "solutionsBarChartData": json.dumps(chart),
+        "allCategoryPieChartData": json.dumps(allPieChart),
+        "newestCategoryPieChartData": json.dumps(newestPieChart),
         "solutions": solutions, 
         "num_solutions": num_solutions,
         "correct_solutions": correct_solutions,

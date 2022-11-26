@@ -17,7 +17,9 @@
     <p>Users have worked on {{ num_solutions }} tasks so far.</p>
     <p>Correctness: {{ tasks_correctness }} %</p>
 
-    <div id="chart_container" style="height: 20rem"></div>
+    <div id="solutions_bar_chart_container" style="height: 20rem"></div>
+    <div id="all_category_pie_chart_container" style="height: 20rem"></div>
+    <div id="newest_category_pie_chart_container" style="height: 20rem"></div>
 
     <table class="table">
         <tr><th>Timestamp</th>
@@ -39,8 +41,14 @@
 
     <script>
         anychart.onDocumentReady(function() {
-            var chart = anychart.fromJson({{ chartData | safe }});
+            var chart = anychart.fromJson({{ solutionsBarChartData | safe }});
             chart.draw();
+
+            var allPieChart = anychart.fromJson({{ allCategoryPieChartData | safe }});
+            allPieChart.draw();
+
+            var newestPieChart = anychart.fromJson({{ newestCategoryPieChartData | safe }});
+            newestPieChart.draw();
         });
     </script>
 {% endblock %}
