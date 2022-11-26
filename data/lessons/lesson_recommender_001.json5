@@ -1,0 +1,420 @@
+// Lesson ev-001
+// a new lesson 1.
+{
+  name: "Lesson Recommender 1a",  // the name that's also shown to the users
+  id: "lesson-own-001",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p><strong>A</strong> On social media platforms, media consumers have the ability to add their <strong>input</strong> and criticism, and this is an important function for users. Not only do we have a say as audience members in the content we would like to see, read and hear, but we also have an important role to play in society as voting citizens holding their elected officials <strong>accountable</strong>.</p>\
+  <p><strong>B</strong> If social media platforms were only filled with mass media content, individual user comments, and their own homegrown content, digitally networked communication would be complex enough, but there are other forces at work. Rogue individuals, hacker networks and botnets — computers programmed to create false social media accounts, websites and other digital properties — can contribute content alongside messages produced by <strong>professionals</strong> and legitimate online community members. False presences on social media channels can <strong>amplify</strong> hate and misinformation and can stoke <strong>animosity</strong> between groups in a hyper-partisan media age.</p>\
+  <p><strong>C</strong> Around the world, societies have democratized mass communication, but in many ways, agreeing on a shared narrative or even a shared list of facts is more difficult than ever. Users create filter bubbles for themselves where they mostly hear the voices and information that they want to hear. This has the potential to create <strong>opposing</strong> worldviews where users with different viewpoints not only have differing opinions, but they also have in mind completely different sets of facts creating different images about what is happening in the world and how society should operate.</p>",
+  text_source: "Media, Society, Culture and You",
+  text_licence: "CC BY-SA",
+  text_url: "https://press.rebus.community/mscy",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading, Scanning",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: false, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Choose a paragraph in which was mentioned that: Despite the availability of many information resources, people tend to consume information appropriate for them.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "A",
+            correct: false,
+            feedback: "The correct answer is C because the text says ‘societies have democratized mass communication… Users create filter bubbles for themselves where they mostly hear the voices and information that they want to hear.’"
+          },
+          {
+            text: "B",
+            correct: false,
+            feedback: "The correct answer is C because the text says ‘societies have democratized mass communication… Users create filter bubbles for themselves where they mostly hear the voices and information that they want to hear.’"
+          },
+          {
+            text: "C",
+            correct: true,
+            feedback: "The correct answer is C because the text says ‘societies have democratized mass communication… Users create filter bubbles for themselves where they mostly hear the voices and information that they want to hear.’"
+          },
+        ]
+      },
+      {
+        // Type 1, task 2
+        name: "Reading, Scanning",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: false, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Choose a paragraph in which was mentioned that: People can freely express their opinion online.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "A",
+            correct: true,
+            feedback: "The correct answer is A because the text says ‘On social media platforms, media consumers have the ability to add their input and criticism’"
+          },
+          {
+            text: "B",
+            correct: false,
+            feedback: "The correct answer is A because the text says ‘On social media platforms, media consumers have the ability to add their input and criticism’"
+          },
+          {
+            text: "C",
+            correct: false,
+            feedback: "The correct answer is A because the text says ‘On social media platforms, media consumers have the ability to add their input and criticism’"
+          },
+        ]
+      },
+      {
+        // Type 1, task 3
+        name: "Reading, Scanning",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: false, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Choose a paragraph in which was mentioned that: Distortion of information can be caused by cybercrime.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "A",
+            correct: false,
+            feedback: "The correct answer is B because the text says ‘Rogue individuals, hacker networks and botnets … can contribute content alongside messages produced by … legitimate online community members. False presences on social media channels can amplify hate and misinformation’"
+          },
+          {
+            text: "B",
+            correct: true,
+            feedback: "The correct answer is B because the text says ‘Rogue individuals, hacker networks and botnets … can contribute content alongside messages produced by … legitimate online community members. False presences on social media channels can amplify hate and misinformation’"
+          },
+          {
+            text: "C",
+            correct: false,
+            feedback: "The correct answer is B because the text says ‘Rogue individuals, hacker networks and botnets … can contribute content alongside messages produced by … legitimate online community members. False presences on social media channels can amplify hate and misinformation’"
+          },
+        ]
+      },
+      {
+        // Type 2, task 1
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question: "Choose the wrong variant",
+        choices: [
+          {
+            text: "We have a say as audience members in the content we would like to see, to read and hear",
+            correct: true,
+            feedback: "Answer A is wrong, as parallel structure with infinitive follow the same pattern and are formed using one of the following structures:\nto V + to V + to V\nto V + V\nIn this case a structure ‘to V + to V + V’ was used.\n"
+          },
+          {
+            text: "We have a say as audience members in the content we would like to see, to read and to hear.",
+            correct: false,
+            feedback: "Answer A is wrong, as parallel structure with infinitive follow the same pattern and are formed using one of the following structures:\nto V + to V + to V\nto V + V\nIn this case a structure ‘to V + to V + V’ was used.\n"
+          },
+          {
+            text: "We have a say as audience members in the content we would like to see, read and hear.",
+            correct: false,
+            feedback: "Answer A is wrong, as parallel structure with infinitive follow the same pattern and are formed using one of the following structures:\nto V + to V + to V\nto V + V\nIn this case a structure ‘to V + to V + V’ was used.\n"
+          },
+          {
+            text: "We have a say as audience members in the content we would like to see, read or hear.",
+            correct: false,
+            feedback: "Answer A is wrong, as parallel structure with infinitive follow the same pattern and are formed using one of the following structures:\nto V + to V + to V\nto V + V\nIn this case a structure ‘to V + to V + V’ was used.\n"
+          },
+        ]
+      },
+      {
+        // Type 2, task 2
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question: "Choose the right variant",
+        choices: [
+          {
+            text: "Not only do we have a say as audience members in the content we would like to see, read and hear, but we also having an important role to play in society.",
+            correct: false,
+            feedback: "Answer B is correct, as in sentence A parallel structure with Correlative Conjunctions was formed incorrect (infinitive + gerund) and in sentence C the pattern doesn’t follow word order."
+          },
+          {
+            text: "Not only do we have a say as audience members in the content we would like to see, read and hear, but we also have an important role to play in society.",
+            correct: true,
+            feedback: "Answer B is correct, as in sentence A parallel structure with Correlative Conjunctions was formed incorrect (infinitive + gerund) and in sentence C the pattern doesn’t follow word order."
+          },
+          {
+            text: "Not only do we have a say as audience members in the content we would like to see, read and hear, but we have also an important role to play in society.",
+            correct: false,
+            feedback: "Answer B is correct, as in sentence A parallel structure with Correlative Conjunctions was formed incorrect (infinitive + gerund) and in sentence C the pattern doesn’t follow word order."
+          },
+        ]
+      },
+      {
+        // Type 2, task 3
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question: "Choose the wrong variant",
+        choices: [
+          {
+            text: "These types of computers were programmed to create false social media accounts, websites and other digital properties.",
+            correct: false,
+            feedback: "Answer C is wrong, as parallel structure with infinitive follow the same pattern and they are formed using one of the following structures\nto V + to V + to V\nto V + V\nIn this case a structure ‘to V + V + to V’ was used.\n"
+          },
+          {
+            text: "These types of computers were programmed to create false social media accounts, to design websites and to track other digital properties.",
+            correct: false,
+            feedback: "Answer C is wrong, as parallel structure with infinitive follow the same pattern and they are formed using one of the following structures\nto V + to V + to V\nto V + V\nIn this case a structure ‘to V + V + to V’ was used.\n"
+          },
+          {
+            text: "These types of computers were programmed to create false social media accounts, design websites and to track other digital properties.",
+            correct: true,
+            feedback: "Answer C is wrong, as parallel structure with infinitive follow the same pattern and they are formed using one of the following structures\nto V + to V + to V\nto V + V\nIn this case a structure ‘to V + V + to V’ was used.\n"
+          },
+        ]
+      },
+      {
+        // Type 2, task 4
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question: "Choose the wrong variant",
+        choices: [
+          {
+            text: "False presences on social media channels can amplify hate and misinformation.",
+            correct: false,
+            feedback: "Answer C is wrong, as noun parallel structure cannot be used with -ing form."
+          },
+          {
+            text: "False presences on social media channels can amplify hate or misinformation.",
+            correct: false,
+            feedback: "Answer C is wrong, as noun parallel structure cannot be used with -ing form."
+          },
+          {
+            text: "False presences on social media channels can amplify hate and misinforming.",
+            correct: true,
+            feedback: "Answer C is wrong, as noun parallel structure cannot be used with -ing form."
+          },
+        ]
+      },
+      {
+        // Type 2, task 5
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question: "Choose the right variant",
+        choices: [
+          {
+            text: "Users with different viewpoints not only have differing opinions, but they also have in mind completely different sets of facts.",
+            correct: true,
+            feedback: "Correct, as parallel structure with Correlative Conjunction follows the same pattern."
+          },
+          {
+            text: "Users with different viewpoints not only have differing opinions, but they also having in mind completely different sets of facts.",
+            correct: false,
+            feedback: "A parallel structure with Correlative Conjunctions is formed incorrect (infinitive + gerund)."
+          },
+          {
+            text: "Users with different viewpoints not only have differing opinions, but they have also in mind completely different sets of facts.",
+            correct: false,
+            feedback: "Wrong, as a parallel structure broke up idiom ‘have in mind’"
+          },
+          {
+            text: "Users with different viewpoints have not only differing opinions, but they also have in mind completely different sets of facts.",
+            correct: false,
+            feedback: "A parallel structure is formed incorrect, as correlative conjunction is not before the start of the structure"
+          }
+        ]
+      },
+      {
+        // Type 2, task 6
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question: "Choose the wrong variant",
+        choices: [
+          {
+            text: "False presences on social media channels can amplify hate and can stoke animosity.",
+            correct: false,
+            feedback: "Answer C is wrong, as parallel structure with modal verbs follow the same pattern and they are formed using one of the following structures\nmodal verb + V + V\nmodal verb + V + modal verb + V\nIn this case a structure ‘modal verb + V + Ving’ was used.\n"
+          },
+          {
+            text: "False presences on social media channels can amplify hate or stoke animosity.",
+            correct: false,
+            feedback: "Answer C is wrong, as parallel structure with modal verbs follow the same pattern and they are formed using one of the following structures\nmodal verb + V + V\nmodal verb + V + modal verb + V\nIn this case a structure ‘modal verb + V + Ving’ was used.\n"
+          },
+          {
+            text: "False presences on social media channels can amplify hate and stoking animosity.",
+            correct: true,
+            feedback: "Answer C is wrong, as parallel structure with modal verbs follow the same pattern and they are formed using one of the following structures\nmodal verb + V + V\nmodal verb + V + modal verb + V\nIn this case a structure ‘modal verb + V + Ving’ was used.\n"
+          },
+          {
+            text: "False presences on social media channels can amplify hate and may stoke animosity.",
+            correct: false,
+            feedback: "Answer C is wrong, as parallel structure with modal verbs follow the same pattern and they are formed using one of the following structures\nmodal verb + V + V\nmodal verb + V + modal verb + V\nIn this case a structure ‘modal verb + V + Ving’ was used.\n"
+          }
+        ]
+      },
+      {
+        // Type 2, task 7
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question: "Choose the right variant",
+        choices: [
+          {
+            text: "A It creates different images about what is happening in the world and how society should operate.",
+            correct: true,
+            feedback: "Answer A is correct, as parallel structures with Clauses are formed using the same type of structure. Variants B and C are formed with clauses and nouns."
+          },
+          {
+            text: "It creates different images about world events and how society should operate.",
+            correct: false,
+            feedback: "Answer A is correct, as parallel structures with Clauses are formed using the same type of structure. Variants B and C are formed with clauses and nouns."
+          },
+          {
+            text: "It creates different images about what is happening in the world and operation of society.",
+            correct: false,
+            feedback: "Answer A is correct, as parallel structures with Clauses are formed using the same type of structure. Variants B and C are formed with clauses and nouns."
+          },
+        ]
+      },
+      {
+        // Type 3, task 1
+        name: "Vocabulary Issues",
+        type: "V",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Decide if the words 'Input and Contribution' are synonyms or antonyms according to the meaning of one of them in the text",
+        choices: [
+          {
+            text: "Synonyms",
+            correct: true,
+            feedback: ""
+          },
+          {
+            text: "Antonyms",
+            correct: false,
+            feedback: ""
+          }
+        ]
+      },
+      {
+        // Type 3, task 2
+        name: "Vocabulary Issues",
+        type: "V",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Decide if the words 'Accountable and Responsible' are synonyms or antonyms according to the meaning of one of them in the text",
+        choices: [
+          {
+            text: "Synonyms",
+            correct: true,
+            feedback: ""
+          },
+          {
+            text: "Antonyms",
+            correct: false,
+            feedback: ""
+          }
+        ]
+      },
+      {
+        // Type 3, task 3
+        name: "Vocabulary Issues",
+        type: "V",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Decide if the words 'Professionals and Amateurs' are synonyms or antonyms according to the meaning of one of them in the text",
+        choices: [
+          {
+            text: "Synonyms",
+            correct: false,
+            feedback: ""
+          },
+          {
+            text: "Antonyms",
+            correct: true,
+            feedback: ""
+          }
+        ]
+      },
+      {
+        // Type 3, task 4
+        name: "Vocabulary Issues",
+        type: "V",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Decide if the words 'Amplify and Escalate' are synonyms or antonyms according to the meaning of one of them in the text",
+        choices: [
+          {
+            text: "Synonyms",
+            correct: true,
+            feedback: ""
+          },
+          {
+            text: "Antonyms",
+            correct: false,
+            feedback: ""
+          }
+        ]
+      },
+      {
+        // Type 3, task 5
+        name: "Vocabulary Issues",
+        type: "V",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Decide if the words 'Animosity and Benevolence' are synonyms or antonyms according to the meaning of one of them in the text",
+        choices: [
+          {
+            text: "Synonyms",
+            correct: false,
+            feedback: ""
+          },
+          {
+            text: "Antonyms",
+            correct: true,
+            feedback: ""
+          }
+        ]
+      },
+      {
+        // Type 3, task 6
+        name: "Vocabulary Issues",
+        type: "V",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Decide if the words 'Opposing and Congruent' are synonyms or antonyms according to the meaning of one of them in the text",
+        choices: [
+          {
+            text: "Synonyms",
+            correct: false,
+            feedback: ""
+          },
+          {
+            text: "Antonyms",
+            correct: true,
+            feedback: ""
+          }
+        ]
+      }
+    ] // end of tasks
+
+} // end of lesson
