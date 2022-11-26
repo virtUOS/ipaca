@@ -1,5 +1,6 @@
-<div class='card-choice'>
-    <p class="card-text">{{ task.question }}</p>
+<div class="card-choice">
+
+<p class="card-text">{{ task.question }}</p>
 
 {% if mode == 'solve' %}
     <form method="post">
@@ -7,13 +8,15 @@
         <input type="hidden" name="task" value="{{ task.id }}">
         {% for o in task.content %}
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="solution-{{ task.id }}-{{ forloop.counter0 }}" id="task-{{ task.id }}-{{ forloop.counter0 }}">
+                <input class="form-check-input" type="checkbox" name="solution-{{ task.id }}-{{ forloop.counter0 }}" id="task-{{ task.id }}-{{ forloop.counter0 }}">
+                <div class="card-answer">
                 <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}">
                   {{ o.text }}
                 </label>
+                </div>
             </div>
         {% endfor %}
-        <div>
+        <div style="margin-top: 2em">
             <button type="submit" class="btn btn-secondary" style="margin-bottom:0.1em; float:right; width: 8em; height: 3.2em; background-color: #1C009C;">Check!</button>
         </div>
     </form>
@@ -26,6 +29,7 @@
                    value="{{ forloop.counter0 }}"
                    disabled="disabled"
                    {% if o.checked %}checked="checked"{% endif %}>
+        <div class="card-answer">
             <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}" disabled="disabled">
                 {{ o.text }}
             {% if o.checked %}
@@ -35,41 +39,53 @@
             {% endif %}
             </label>
         </div>
+        </div>
     {% endfor %}
 {% endif %}
-
-        <style>
-
-        .form-check-input{
-            border-radius: 15px;
-            transform: scale(1.5);
-            border: 2px solid rgba(216, 216, 216, 0.872);
-
-        }
+</div>
 
 
-        .card-choice{
-        margin:2em;
-        height:fit-content;
-        border-radius: 2em;
-        float:right;
-        padding: 3em;
-        background-color: #EDEBF7;
-        }
+<style>
+
+.form-check-input{
+    border-radius: 15px;
+    transform: scale(1.5);
+    border: 2px solid rgba(216, 216, 216, 0.872);
+
+}
+
+    .card-choice{
+        width: 80%;
+    margin:auto;
+    height:fit-content;
+    border-radius: 2em;
+    padding: 3em;
+    background-color: #EDEBF7;
+    }
+
+.card-answer{
+    width: 70%;
+    border-radius:1.5em;
+    border: 1px solid #dfdfdf;
+    background-color: white;
+    height: auto;
+    padding: 0.5em;
+    margin: 1em auto;
+}
 
 
 
-        h3{
-        margin-top:0;
-        margin-bottom:0;
-        display:none;
-        }
+h3{
+margin-top:0;
+margin-bottom:0;
+display:none;
+}
 
-        .card-text{
-        font-weight: bold;
-        font-size: 18px;
-        padding-bottom: 0;
-        }
+.card-text{
+font-weight: bold;
+font-size: 18px;
+padding-bottom: 0;
+}
 
 
-    </style>
+</style>
