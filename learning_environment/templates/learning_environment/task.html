@@ -12,7 +12,7 @@
 
     <h3>
         {{ lesson.name }}{% if task %}: {{ task.get_type_display }} Task {% endif %}
-    </h3> 
+    </h3>
     {# Display "Start lesson" screen #}
     {% if mode != 'result' and state == 'START' %}
         <p>&nbsp;</p>
@@ -29,8 +29,7 @@
             <input type="hidden" name="lesson" value="{{ lesson.id }}">
             <input type="hidden" name="start" value="start">
             <button type="submit" class="btn btn-primary">Start lesson</button>
-    </div>
-    
+        </form>
     {# Display "Lesson Finished" screen #}
     {% elif mode != 'result' and state == 'WRAPUP' %}
         <h2>Congratulations! You finished the lesson!</h2>
@@ -64,17 +63,17 @@
                             {% endif %}
                             {% if task.show_lesson_text %}
                                 <div class="lesson-text" style="border:none; font-size:18px;">
-                                    
+
                                         {{ task.lesson.text | safe }}
                                         <cite>{{ task.lesson.text_source }}</cite>
-                                    
+
                                 </div>
                             {% endif %}
                             {% include task.get_template %}
                             {% if mode == 'result' %}
                                 <p style="margin-top: 2em;">
                                     {% if not solved %}
-                                        <a href="{% url 'practice' %}"?redo={{ task.id }}" class="btn btn-primary">Try again</a> &nbsp;
+                                        <a href="{% url 'practice' %}?redo={{ task.id }}" class="btn btn-primary">Try again</a> &nbsp;
                                     {% else %}
                                         <a href="{% url 'practice' %}" class="btn btn-primary">Go on!</a>
                                     {% endif %}
@@ -88,7 +87,6 @@
     {% endif %}
 
 <style>
-    
    body{
     background: url({% static 'img/task_background.svg'%}) no-repeat center center fixed;
     -webkit-background-size:cover;
@@ -99,11 +97,11 @@
 
    p{
     margin: 0 40px;
-    
+
    }
 
 
-   
+
 </style>
 
 {% endblock %}

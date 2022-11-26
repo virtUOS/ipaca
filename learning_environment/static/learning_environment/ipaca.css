@@ -148,7 +148,7 @@ body {
     box-shadow: 0px 15px 50px rgba(0, 164, 67, 0.4);
 }
 
-.btn-practice {
+.btn-new {
     color: #FFFFFF;
     border-radius: 80px;
     font-size: 18px;
@@ -159,6 +159,19 @@ body {
     height: 40px;
     margin: 20px;
     background: linear-gradient(294.49deg, rgba(255, 110, 127, 0.8) -122.6%, rgba(28, 0, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), #FFFFFF;
+}
+
+.btn-redo {
+    color: #FFFFFF;
+    border-radius: 80px;
+    font-size: 18px;
+    color: #fff;
+    padding: 4px 28px;
+    gap: 10px;
+    width: 150px;
+    height: 40px;
+    margin: 20px;
+    background: linear-gradient(294.49deg, rgba(110, 255, 114, 0.8) -122.6%, rgba(0, 151, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
 }
 
 h1 {
@@ -261,6 +274,7 @@ textarea {
     -moz-column-count: 3;
     column-count: 3;
     border:none;
+    white-space:nowrap;
 }
 
 .ul-2col {
@@ -268,7 +282,9 @@ textarea {
     -moz-column-count: 2;
     column-count: 2;
     border:none;
+    white-space:nowrap;
 }
+
 
 .form-labels {
     display:none;
@@ -283,4 +299,30 @@ textarea {
      border-left: 10px solid darkblue;
 }
 
+ .date-card{
+  border:1px solid #ddd;
+  width:80px;
+  padding:10px;
+  display:flex;
+  align-items:center;
 
+         background: #393939;
+    border-radius: 15px;
+}
+
+.date-card .day{
+  font-size:24px;
+  margin:0px 5px;
+  color:#2ab6b6;
+}
+
+.date-card .month{
+    font-size:10px;
+  font-weight:bold;
+    color:white;
+}
+
+.date-card .year{
+    font-size:10px;
+    color:white;
+}

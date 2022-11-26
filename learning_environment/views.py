@@ -14,6 +14,7 @@ from .forms import *
 from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
+from django.utils import timezone
 
 
 class SignUpView(SuccessMessageMixin, generic.CreateView):
@@ -29,6 +30,7 @@ def practice(request):
     context = {'mode': 'solve'}
 
     # start a lesson
+
     if request.method == 'POST' and 'start' in request.POST:
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             return redirect('myhome')
@@ -87,10 +89,20 @@ def practice(request):
             return HttpResponseBadRequest("Error: No such ID")
         lesson = task.lesson
         context['state'] = context['mode']
+
     else:  # fetch new task and show it
+
+        start_new_lesson = None
+        if 'lesson' in request.GET:  # explicitly start a specific lession by using the ?lesson=<id> parameter
+            try:
+                start_new_lesson = Lesson.objects.get(pk=int(request.GET['lesson']))
+            except KeyError:
+                return HttpResponseBadRequest("Error: No such Lesson")
+
         tutor = Tutormodel(request.user)
         try:
-            (state, lesson, task) = tutor.next_task(request)
+            # either continue with standard tutor model or explicitly start a specific lesson
+            (state, lesson, task) = tutor.next_task(request, start_new_lesson)
         except NoTaskAvailableError:
             return HttpResponseServerError("Error: No task available!")
         context['state'] = state
@@ -168,6 +180,9 @@ def myhome(request):
 
     else:
         wrong_tasks = None
+    id_lessons = [s.task.lesson.lesson_id for s in solutions]
+
+    new_lessons = Lesson.objects.all().exclude(lesson_id__in=id_lessons).order_by('lesson_id')
 
 
     return render(request, 'learning_environment/myhome.html', locals())
@@ -225,7 +240,7 @@ def learner_dashboard(request):
     num_tasks = solutions.count()  # how tasks did this user try
     correct_solutions = Solution.objects.filter(user=request.user, solved=True).count()  # how many of them were correct?
     if num_tasks > 0:  # calculate percentage of correct tasks (or 0 if no tasks)
-        tasks_correctness = correct_solutions / num_tasks * 100.0
+        tasks_correctness = round(correct_solutions / num_tasks * 100.0,2)
     else:
         tasks_correctness = 0.0
     return render(request, 'learning_environment/learner_dashboard.html', locals())  # pass all local variable to template
@@ -235,7 +250,7 @@ def global_dashboard(request):
     num_solutions = solutions.count()  # how tasks did this user try
     correct_solutions = Solution.objects.filter(solved=True).count()  # how many of them were correct?
     if num_solutions > 0:  # calculate percentage of correct tasks (or 0 if no tasks)
-        tasks_correctness = correct_solutions / num_solutions * 100.0
+        tasks_correctness = round(correct_solutions / num_solutions * 100.0,2)
     else:
         tasks_correctness = 0.0
     return render(request, 'learning_environment/global_dashboard.html', locals())  # pass all local variable to template

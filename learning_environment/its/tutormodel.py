@@ -19,8 +19,10 @@ class Tutormodel:
         learner: User object"""
         self.learner = learner
 
-    def next_task(self, request):
+    def next_task(self, request, start_new_lesson=None):
         """Pick a next task for the learner.
+        request: Django request object (especially holding the session distionary request.session
+        start_new_lesson: None for normal tutormodel operation OR a lesson object for explicitly starting a new lesson
         Returns tuple:
         (STATE, lesson, task)
         """
@@ -32,13 +34,17 @@ class Tutormodel:
 
         # pick a lesson
         current_lesson_id = request.session.get('current_lesson', None)
-        if current_lesson_id:
+        print("current_lesson_id:", current_lesson_id)
+        if current_lesson_id and not start_new_lesson:  # go on with a running lesson
             try:
                 lesson = Lesson.objects.get(pk=current_lesson_id)
             except Lesson.DoesNotExist:
                 raise Exception("Lesson from session does not exist: {}!".format(current_lesson_id))
         else:
-            lesson = self.start_lesson(series)
+            if not start_new_lesson:
+                lesson = self.start_lesson(series)  # let tutormodel pick a new lesson
+            else:
+                lesson = start_new_lesson  # start the lesson expicitly passed
             request.session['current_lesson'] = lesson.id
             request.session['current_lesson_todo'] = order[:]
             request.session.modified = True
