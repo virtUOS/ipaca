@@ -1,5 +1,5 @@
 {
-  name: "Level C1",  // the name that's also shown to the users
+  name: "Level C",  // the name that's also shown to the users
   id: "level-C",        // an internal id, will never be shown, but important to identify the lesson
   series: 'Adaptive Pretest',
   author: "Aura Kampf",    // used for documentation, will not be shown to the user
@@ -132,12 +132,12 @@
       // fill the gaps tasks
       {
         // task 3: gap filling for past tenses
-        name: "Past tenses",
+        name: "fill the gap 01",
         type: "GS",
         interaction: "GAP",
         primary: true,
         show_lesson_text: false,
-        question: "<p>I wish you _1_ (not move) to another city. </p>",
+        question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>I wish you _1_ (not move) to another city. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -148,12 +148,12 @@
       },
       {
         // task 4: gap filling for past tenses
-        name: "Past tenses",
+        name: "fill the gap 02",
         type: "GS",
         interaction: "GAP",
         primary: true,
         show_lesson_text: false,
-        question: "<p>If only he _1_ (study) harder when he was at university.  </p>",
+        question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>If only he _1_ (study) harder when he was at university.  </p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -163,12 +163,12 @@
       },
       {
         // task 5: gap filling for past tenses
-        name: "Past tenses",
+        name: "fill the gap 03",
         type: "GS",
         interaction: "GAP",
         primary: true,
         show_lesson_text: false,
-        question: "<p>I wish you _1_ (not take) my phone without asking.</p>",
+        question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>I wish you _1_ (not take) my phone without asking.</p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -178,12 +178,12 @@
       },
       {
         // task 6: gap filling for past tenses
-        name: "Past tenses",
+        name: "fill the gap 04",
         type: "GS",
         interaction: "GAP",
         primary: true,
         show_lesson_text: false,
-        question: "<p>She is in the USA now, she works there. You _1_ (cannot see) her here, in Ukraine.</p>",
+        question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>She is in the USA now, she works there. You _1_ (cannot see) her here, in Ukraine.</p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -193,12 +193,12 @@
       },
       {
         // task 7: gap filling for past tenses
-        name: "Past tenses",
+        name: "fill the gap 05",
         type: "GS",
         interaction: "GAP",
         primary: true,
         show_lesson_text: false,
-        question: "<p>If you _1_ (study) biology, you would be an awesome doctor now.</p>",
+        question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>If you _1_ (study) biology, you would be an awesome doctor now.</p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -208,12 +208,12 @@
       },
       {
         // task 8: gap filling for past tenses
-        name: "Past tenses",
+        name: "fill the gap 06",
         type: "GS",
         interaction: "GAP",
         primary: true,
         show_lesson_text: false,
-        question: "<p>If I wasn't working this evening, I _1_ (visit) your birthday party yesterday.</p>",
+        question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>If I wasn't working this evening, I _1_ (visit) your birthday party yesterday.</p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -223,12 +223,12 @@
       },
       {
         // task 9: gap filling for past tenses
-        name: "Past tenses",
+        name: "fill the gap 07",
         type: "GS",
         interaction: "GAP",
         primary: true,
         show_lesson_text: false,
-        question: "<p>If he was singing at the concert tomorrow, he _1_ (rehearse) now.</p>",
+        question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>If he was singing at the concert tomorrow, he _1_ (rehearse) now.</p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -238,52 +238,52 @@
       },
       // paraphrasing tasks
       { // task 10: primary reading task
-        name:  "Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets.",
+        name:  "Paraphrase 01",
         type: "R",         
         interaction: "SHORT",  
         primary: true,     
         show_lesson_text: false, 
-        question:  "I have been to Kyiv. (Never)",  
+        question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>I have been to Kyiv. (Never)</p>",  
         answer: "I have never been to Kyiv."
       },  // end of task 10
 
       { // task 11: primary reading task
-        name:  "Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets.",
+        name:  "Paraphrase 02",
         type: "R",         
         interaction: "SHORT",  
         primary: true,     
         show_lesson_text: false, 
-        question:  "Children do their homework without being reminded. (Seldom)",  
+        question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>Children do their homework without being reminded. (Seldom)</p>",  
         answer: "Seldomly, children do their homework without being reminded."
       },  // end of task 11
 
       { // task 12: primary reading task
-        name:  "Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets.",
+        name:  "Paraphrase 03",
         type: "R",         
         interaction: "SHORT",  
         primary: true,     
         show_lesson_text: false, 
-        question:  "I will buy this cake again. (Never)",  
+        question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>I will buy this cake again. (Never)</p>",  
         answer: "I will never buy this cake again."
       },  // end of task 12
 
       { // task 13: primary reading task
-        name:  "Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets.",
+        name:  "Paraphrase 04",
         type: "R",         
         interaction: "SHORT",  
         primary: true,     
         show_lesson_text: false, 
-        question:  "You should press this foremost button. (On no account)",  
+        question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>You should press this foremost button. (On no account)</p>",  
         answer: "On no account should you press this foremost button."
       },  // end of task 13
 
        { // task 14: primary reading task
-        name:  "Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets.",
+        name:  "Paraphrase 05",
         type: "R",         
         interaction: "SHORT",  
         primary: true,     
         show_lesson_text: false, 
-        question:  "He had worked hard and managed to pass the exam. (Only by)",  
+        question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>He had worked hard and managed to pass the exam. (Only by)</p>",  
         answer: "Only by working hard did he manage to pass the exam."
       },  // end of task 14
     ] // end of tasks
