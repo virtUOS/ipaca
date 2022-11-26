@@ -30,7 +30,7 @@
                         <tr><th>Timestamp</th>
                             <th>Task Name</th>
                             <th>Correct?</th>
-                            <th>Analysis</th>
+                            {# <th>Analysis</th> #}
                         </tr>
                     {% for solution in solutions %}
                         <tr>
@@ -42,16 +42,16 @@
                                     <div class="year">{{ solution.timestamp.year}}</div>
                                   </div>
                                 </div>
-                                {{ solution.timestamp.time}}</td>
-                            <td>{{ solution.task.name }}</td>
-                            <td>
+                            </td>
+                            <td style="vertical-align: middle;">{{ solution.task.name }}</td>
+                            <td style="vertical-align: middle;">
                                 {% if solution.solved%}
                                 <i class="bi bi-check-circle-fill fa-2x" style="color:darkgreen;"></i>
                                 {% else %}
                                 <i class="bi bi-x-circle-fill fa-2x" style="color:darkred;"></i>
                                 {% endif %}
                             </td>
-                            <td>{{ solution.analysis }}</td>
+                       {#  <td style="text-align: center;vertical-align: middle;">{{ solution.analysis }}</td> #}
                         </tr>
                     {% endfor %}
                     </table>

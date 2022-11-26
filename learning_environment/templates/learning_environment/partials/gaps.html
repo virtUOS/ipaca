@@ -1,4 +1,5 @@
-{% if mode == 'solve' %}
+<div class="card">
+    {% if mode == 'solve' %}
     <form method="post" class="form-inline">
         {% csrf_token %}
         <input type="hidden" name="task" value="{{ task.id }}">
@@ -48,3 +49,42 @@
     {% endfor %}
 
 {% endif %}
+</div>
+
+<style>
+    .card{
+        width: 80%;
+        margin: 8% auto;
+        height: fit-content;
+        border-radius: 2.5em;
+        padding: 2em;
+    }
+   
+    h3{
+        font-size: 4em;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        margin-top: 1em;
+        margin-bottom: 2em;
+    }
+
+
+    p{
+        font-size:18px;
+    }
+
+    .form-select{
+        max-width:fit-content;
+        border-radius: 2em;
+        font-size: 16px;
+        
+    }
+
+
+    i{
+        color: red;
+    }
+
+
+</style>

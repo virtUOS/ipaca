@@ -30,12 +30,12 @@
         {% block header %}{% endblock %}
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding:0;">
     {% block content %}No content{% endblock %}
     </div>
 
-    <footer class="footer" style="background-color: white;">
-        <div class="container" style="background-color:white; margin-left:400px; font-size: 15px; font-weight: bold;">
+    <footer class="footer">
+        <div class="container-footer" style="background-color:white; bottom:0; padding-left: 30%;left: 0; right:0; font-size: 15px; font-weight: bold; width: 100%; position: absolute;">
             {% if request.user.is_authenticated %}
                 Commands:
                 <a href="{%  url 'tasklist' %}">List all tasks</a>  &middot;

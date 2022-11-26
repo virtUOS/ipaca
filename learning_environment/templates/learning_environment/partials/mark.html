@@ -1,6 +1,7 @@
-<p class="card-text"><b>{{ task.question }}</b></p>
+<div class="card">
+<p class="card-text" style="padding-right: 2rem;"><b>{{ task.question }}</b></p>
 {% for m in task.content.markers.items %}
-     <p class="card-text" {% if mode != 'solve' %}style='color:grey'{% endif %}><span class="choosemarker mark{{ m.0 }}" data-marker="{{ m.0 }}">&nbsp;</span> &nbsp; {{ m.1.description }}</p>
+     <div class="card-text"{% if mode != 'solve' %}style='color:grey;'{% endif %}><span class="choosemarker mark{{ m.0 }}" data-marker="{{ m.0 }}">&nbsp;</span> &nbsp; {{ m.1.description }}</div>
 {% endfor %}
 
 {% if mode == 'solve' %}
@@ -13,9 +14,7 @@
         </div>
         <input type="hidden" name="task" value="{{ task.id }}">
         <input type="hidden" name="solution" id="solution_dict">
-        <div style="margin-top: 2em">
-            <button type="submit" class="btn btn-secondary">Check!</button>
-        </div>
+        <button type="submit" class="btn btn-secondary" style="margin-bottom:0.1em; float:right; width: 8em; height: 3.2em; background-color: #1C009C;"><span style="font-size: 18px;">Check!</span></button>
     </form>
 {% else %}
     <div class="lesson-text">
@@ -28,3 +27,42 @@
         <p>You incorrectly marked {{ num_additional }} word{% if num_additional != 1 %}s{% endif %}.</p>
     {% endif %}
 {% endif %}
+</div>
+
+<style>
+    .card{
+            padding:2em;
+            border-radius: 50px; 
+            width: 60rem; 
+            height: fit-content;
+            margin: 5vh auto;
+
+    }
+    
+    h3{
+        font-size: 3.5em;
+        color:black;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .btn-primary{
+        width:4em;
+        height: 3em;
+        float: right;
+    }
+
+    .card-text{
+        margin-left:2em;
+        
+    }
+
+    p{
+        margin-left: 2em;
+       
+    }
+
+   
+</style>

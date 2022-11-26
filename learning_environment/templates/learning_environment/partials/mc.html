@@ -1,4 +1,5 @@
-<p class="card-text">{{ task.question }}</p>
+<div class='card-choice'>
+    <p class="card-text">{{ task.question }}</p>
 
 {% if mode == 'solve' %}
     <form method="post">
@@ -6,14 +7,14 @@
         <input type="hidden" name="task" value="{{ task.id }}">
         {% for o in task.content %}
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="solution-{{ task.id }}-{{ forloop.counter0 }}" id="task-{{ task.id }}-{{ forloop.counter0 }}">
+                <input class="form-check-input" type="radio" name="solution-{{ task.id }}-{{ forloop.counter0 }}" id="task-{{ task.id }}-{{ forloop.counter0 }}">
                 <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}">
                   {{ o.text }}
                 </label>
             </div>
         {% endfor %}
-        <div style="margin-top: 2em">
-            <button type="submit" class="btn btn-secondary">Check!</button>
+        <div>
+            <button type="submit" class="btn btn-secondary" style="margin-bottom:0.1em; float:right; width: 8em; height: 3.2em; background-color: #1C009C;">Check!</button>
         </div>
     </form>
 {% else %}
@@ -36,3 +37,39 @@
         </div>
     {% endfor %}
 {% endif %}
+
+        <style>
+
+        .form-check-input{
+            border-radius: 15px;
+            transform: scale(1.5);
+            border: 2px solid rgba(216, 216, 216, 0.872);
+
+        }
+
+
+        .card-choice{
+        margin:2em;
+        height:fit-content;
+        border-radius: 2em;
+        float:right;
+        padding: 3em;
+        background-color: #EDEBF7;
+        }
+
+
+
+        h3{
+        margin-top:0;
+        margin-bottom:0;
+        display:none;
+        }
+
+        .card-text{
+        font-weight: bold;
+        font-size: 18px;
+        padding-bottom: 0;
+        }
+
+
+    </style>

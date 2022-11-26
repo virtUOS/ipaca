@@ -144,7 +144,7 @@ class Task(models.Model):
     """
     TASK_TYPE = [
         ('R', 'Reading'),
-        ('GS', 'Grammar/Style'),
+        ('GS', 'Grammar'),
         ('V', 'Vocabulary')
     ]
 

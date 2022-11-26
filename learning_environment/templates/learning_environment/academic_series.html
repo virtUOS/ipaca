@@ -28,7 +28,7 @@
                                 <li class="list-group-item" style="border:none;">{{ lesson.lesson_id }} </li>
                                 <li class="list-group-item" style="border:none;">{{ lesson.name }} </li>
                                 <li class="list-group-item" style="border:none;">
-                                    <a class='btn-practice' href="{% url 'practice' %}" style="text-decoration:none; color: white;">Start</a>
+                                    <a class='btn-practice' href="{% url 'practice' %}?lesson={{ lesson.id }}" style="text-decoration:none; color: white;">Start</a>
                                 </li>
                              </ul>
                         {% endfor %}

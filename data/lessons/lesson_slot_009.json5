@@ -318,7 +318,7 @@
         interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
         primary: true, // the primary task will be shown first, non-primary tasks are for repetition
         show_lesson_text: false,  // Shall we show the lesson reading text? true/false
-        question: "<p>What does it mean?</p>\
+        question: "<h3>What does it mean?</h3>\
         <p>“The old-school way of training employees...”</p>",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
           {

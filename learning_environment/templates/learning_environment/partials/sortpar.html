@@ -1,4 +1,5 @@
 {% load extras %}
+<div class="card">
 <p class="card-text">{{ task.question }}</p>
 
 {% if mode == 'solve' %}
@@ -8,13 +9,11 @@
         <input type="hidden" name="solution" id="solution" value="">
         <ul id="sortlist">
             {% for o in task.content.paragraphs|shuffle %}
-            <li data-paragraph-id="{{o.id}}">{{o.paragraph}}</li>
+           <li data-paragraph-id="{{o.id}}">{{o.paragraph}}</li>
             {% endfor %}
         </ul>
-        <div style="margin-top: 2em">
-            <button type="submit" class="btn btn-secondary">Check!</button>
-        </div>
-    </form>
+    <button type="submit" class="btn btn-secondary" style="margin-bottom:0.1em; float:right; width: 8em; height: 3.2em; background-color: #1C009C;"><span style="font-size: 18px;">Check!</span></button>
+</form>
 {% else %}  {# show solution #}
     <ul class="slist">
         {% for o in solution %}
@@ -26,3 +25,29 @@
         {% endfor %}
     </ul>
 {% endif %}
+</div>
+
+<style>
+    .card{
+        border-radius: 50px;
+        height: auto;
+        margin: 5vh auto;
+
+    }
+    h3{
+        font-size: 3.5em;
+        color:black;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        
+
+    }
+    .card-text{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    }
+
+</style>

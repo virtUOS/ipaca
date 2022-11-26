@@ -10,9 +10,10 @@
 
 {% block content %}
 
-    <h1>
-        {{ lesson.name }} {% if task %}&mdash; {{ task.get_type_display }} task {% endif %}
-    </h1>
+
+    <h3 style="background:white; padding:20px; margin:0;">
+        {{ lesson.name }}{% if task %}: {{ task.get_type_display }} Task {% endif %}
+    </h3>
 
     {# Display "Start lesson" screen #}
     {% if mode != 'result' and state == 'START' %}
@@ -53,39 +54,47 @@
         {% if task.paragraph_shown %}
             {{ lesson.paragraph }}
         {% endif %}
-        <div class="container-fluid">
-            <div class="justify-content-center">
-                <div class="row">
-                    <div class="card " style=" margin-top: 5vh">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ task.title }} </h5>
-                            {% if msg %}
-                                <p class="card-text" style="color:red">{{ msg }}</p>
-                            {% endif %}
+
+            <div class="justify-content-center" style="background:transparent;">
+
+ {#                  <div class="card " style=" padding: 1em;">#}
+ {#                    <div class="card-body" style="margin: 0 auto;">#}
+
+                            {# LESSON TEXT #}
+                    <div class="row align-items-center" style="background:transparent;">
                             {% if task.show_lesson_text %}
-                                <div class="lesson-text">
-                                    <blockquote>
-                                        {{ task.lesson.text | safe }}
-                                        <cite>{{ task.lesson.text_source }}</cite>
-                                    </blockquote>
-                                </div>
-                                <h4>Lesson reading text</h4>
+
+
+                            <h5 class="card-title" style="margin:0;">{{ task.title }}</h5>
+
+                                 <div class="col-6 my-auto" style="background:white; height:100vh;">
+                                    <div class="lesson-text" style="padding:30px; border:none; font-size:18px; border-radius:0;">
+
+                                            {{ task.lesson.text | safe }}
+                                            <cite>{{ task.lesson.text_source }}</cite>
+                                    </div>
+                                 </div>
+                            {% endif %}
+                        <div class="col">
+                            {% if msg %}
+                                <p class="card-text" style="bottom:0; color: red;">{{ msg }}</p>
                             {% endif %}
                             {% include task.get_template %}
                             {% if mode == 'result' %}
-                                <p style="margin-top: 2em">
-                                    {% if not solved %}
-                                        <a href="{% url 'practice' %}" class="btn btn-primary">Try again</a> &nbsp;
-                                    {% else %}
-                                        <a href="{% url 'practice' %}" class="btn btn-primary">Go on!</a>
-                                    {% endif %}
+                                <p style="margin-top: 2em;">
+
+                                        <a href="{% url 'practice' %}" class="btn btn-primary">Next</a>
+
                                 </p>
                             {% endif %}
+                        </div>
+
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
     {% endif %}
 
 <style>
@@ -96,6 +105,11 @@
     -o--background-size:cover;
     background-size: cover;
    }
+
+
+
+
+
 </style>
 
 {% endblock %}
