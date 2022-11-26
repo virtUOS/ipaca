@@ -13,6 +13,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import *
 from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
+from .its.smart_tutormodel import SmartTutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 
 
@@ -34,7 +35,20 @@ def practice(request):
             return redirect('myhome')
         request.session['current_lesson_todo'].pop(0)  # remove the start item
         request.session.modified = True
-        tutor = Tutormodel(request.user)
+
+        # pick a lesson
+        current_lesson_id = request.session.get('current_lesson', None)
+        if current_lesson_id:
+            try:
+                lesson = Lesson.objects.get(pk=current_lesson_id)
+            except Lesson.DoesNotExist:
+                raise Exception("Lesson from session does not exist: {}!".format(current_lesson_id))
+
+        if lesson.tutor_mode is "S":
+            tutor = SmartTutormodel(request.user)
+        else:
+            tutor = Tutormodel(request.user)
+
         try:
             (state, lesson, task) = tutor.next_task(request)
         except NoTaskAvailableError:

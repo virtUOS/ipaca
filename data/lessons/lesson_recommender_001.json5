@@ -273,7 +273,7 @@
         question: "Choose the right variant",
         choices: [
           {
-            text: "A It creates different images about what is happening in the world and how society should operate.",
+            text: "It creates different images about what is happening in the world and how society should operate.",
             correct: true,
             feedback: "Answer A is correct, as parallel structures with Clauses are formed using the same type of structure. Variants B and C are formed with clauses and nouns."
           },

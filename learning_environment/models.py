@@ -63,6 +63,7 @@ class Lesson(models.Model):
     start = models.TextField(null=True)  # text to be displayed before the lesson starts
     wrapup = models.TextField(null=True)  # text to be displyed after the lesson has been finished
     json5 = models.TextField(null=True)
+    tutor_mode = models.CharField(max_length=10, null=True)
 
     @classmethod
     def check_json5(cls, lesson_json5):
@@ -107,14 +108,27 @@ class Lesson(models.Model):
         except Lesson.DoesNotExist:
             pass
 
-        lsn = Lesson(name=lesson["name"],
-                     lesson_id=lesson["id"],
-                     author=lesson["author"],
-                     text=lesson["text"],
-                     text_source=lesson["text_source"],
-                     text_licence=lesson["text_licence"],
-                     text_url=lesson["text_url"],
-                     json5=lesson_json5)
+        if "tutor_mode" in lesson:
+            lsn = Lesson(name=lesson["name"],
+                         lesson_id=lesson["id"],
+                         author=lesson["author"],
+                         text=lesson["text"],
+                         text_source=lesson["text_source"],
+                         text_licence=lesson["text_licence"],
+                         text_url=lesson["text_url"],
+                         tutor_mode=lesson["tutor_mode"],
+                         json5=lesson_json5)
+
+        else:
+            lsn = Lesson(name=lesson["name"],
+                         lesson_id=lesson["id"],
+                         author=lesson["author"],
+                         text=lesson["text"],
+                         text_source=lesson["text_source"],
+                         text_licence=lesson["text_licence"],
+                         text_url=lesson["text_url"],
+                         json5=lesson_json5)
+
         if 'series' in lesson:
             lsn.series = str(lesson['series'])
         if 'start' in lesson:
