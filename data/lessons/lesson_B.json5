@@ -130,7 +130,7 @@
       interaction: "GAP",
       primary: true,
       show_lesson_text: false,
-      question: "<p>You were driving too fast. You _1_ (could) crashed the car. </p>",
+      question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p>You were driving too fast. You _1_ (could) crashed the car. </p>",
       gaps: {
         mode: 'fillin',
         _1_: [
@@ -145,7 +145,7 @@
       interaction: "GAP",
       primary: true,
       show_lesson_text: false,
-      question: "<p> This dress is overpriced. I can't afford _1_ it. (to buy)    </p>",
+      question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p> This dress is overpriced. I can't afford _1_ it. (to buy)    </p>",
       gaps: {
         mode: 'fillin',
         _1_: [
@@ -160,7 +160,7 @@
       interaction: "GAP",
       primary: true,
       show_lesson_text: false,
-      question: "<p> When father came home, his daughter _1_  asleep. (to fall) </p>",
+      question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p> When father came home, his daughter _1_  asleep. (to fall) </p>",
       gaps: {
         mode: 'fillin',
         _1_: [
@@ -176,7 +176,7 @@
       interaction: "GAP",
       primary: true,
       show_lesson_text: false,
-      question: "<p> You look so tired. I _1_ my project for 4 hours. (to do) </p>",
+      question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p> You look so tired. I _1_ my project for 4 hours. (to do) </p>",
       gaps: {
         mode: 'fillin',
         _1_: [
@@ -191,7 +191,7 @@
       interaction: "GAP",
       primary: true,
       show_lesson_text: false,
-      question: "<p> Your sister reads fictional books, _1_ she? (to do) </p>",
+      question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p> Your sister reads fictional books, _1_ she? (to do) </p>",
       gaps: {
         mode: 'fillin',
         _1_: [
@@ -206,7 +206,7 @@
       interaction: "GAP",
       primary: true,
       show_lesson_text: false,
-      question: "<p> My sister is coming at 6 p.m. I _1_ cooking by then. (to finish) </p>",
+      question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p> My sister is coming at 6 p.m. I _1_ cooking by then. (to finish) </p>",
       gaps: {
         mode: 'fillin',
         _1_: [
@@ -222,7 +222,7 @@
       interaction: "GAP",
       primary: true,
       show_lesson_text: false,
-      question: "<p> I've stopped _1_ fast-food, as I have problems with my stomach. (to eat)  </p>",
+      question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p> I've stopped _1_ fast-food, as I have problems with my stomach. (to eat)  </p>",
       gaps: {
         mode: 'fillin',
         _1_: [
