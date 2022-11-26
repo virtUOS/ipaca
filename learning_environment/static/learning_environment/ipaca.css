@@ -351,6 +351,6 @@ textarea {
 }
 
 .table td {
-   text-align: center;
+    border:none;
     vertical-align: middle;
 }
