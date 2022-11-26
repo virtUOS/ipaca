@@ -67,12 +67,12 @@
 
                             <h5 class="card-title" style="margin:0;">{{ task.title }}</h5>
 
-                                 <div class="col-6" style="background:white; height:100%;">
-                                <div class="lesson-text" style="padding:20px; border:none; font-size:18px; border-radius:0;">
+                                 <div class="col-6 my-auto" style="background:white; height:100vh;">
+                                    <div class="lesson-text" style="padding:30px; border:none; font-size:18px; border-radius:0;">
 
-                                        {{ task.lesson.text | safe }}
-                                        <cite>{{ task.lesson.text_source }}</cite>
-                                </div>
+                                            {{ task.lesson.text | safe }}
+                                            <cite>{{ task.lesson.text_source }}</cite>
+                                    </div>
                                  </div>
                             {% endif %}
                         <div class="col">

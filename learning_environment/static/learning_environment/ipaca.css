@@ -61,10 +61,9 @@ body {
 }
 
 .lesson-text {
-
-  border: 1px grey solid;
-  border-radius: 10px;
-
+    margin:0 auto;
+    border: 1px grey solid;
+    border-radius: 10px;
 }
 
 .lesson-text blockquote {
