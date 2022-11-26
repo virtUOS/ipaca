@@ -1,23 +1,29 @@
+<div class="card align-items-center">
+    <div style="width:80%;">
 <p class="card-text">{{ task.question }}</p>
 
 {% if mode == 'solve' %}
-    <form method="post">
+
+    <form class=method="post">
         {% csrf_token %}
+
         <input type="hidden" name="task" value="{{ task.id }}">
-        <p><input type="text" size="30" name="answer" style="border-radius: 10px; margin-top:1em; width:50em;"></p>
+        <p><input type="text" size="30" name="answer" style="border-radius: 10px; margin-top:1em; width:100%;"></p>
         <button type="submit" class="btn btn-secondary" style="margin-bottom:0.1em; float:right; width: 8em; height: 3.2em; background-color: #1C009C;"><span style="font-size: 18px;">Check!</span></button>
+        </div>
     </form>
 {% else %}
     <p>The correct answer is: {{ task.content }}.</p>
 {% endif %}
+</div>
 
 <style>
     .card{
-        margin-top: 5vh; 
+
         border-radius: 50px; 
-        width: 80rem; 
+        width: auto;
         height: auto;
-        margin: 0 auto;
+        margin: 5vh auto;
     
 
     }
@@ -32,7 +38,9 @@
 
     }
 
-    .lesson-test{
-
+    .card-text{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
     }
 </style>

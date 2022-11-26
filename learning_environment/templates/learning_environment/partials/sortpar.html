@@ -1,4 +1,5 @@
 {% load extras %}
+<div class="card">
 <p class="card-text">{{ task.question }}</p>
 
 {% if mode == 'solve' %}
@@ -24,13 +25,13 @@
         {% endfor %}
     </ul>
 {% endif %}
+</div>
+
 <style>
     .card{
-        margin-top: 5vh; 
-        border-radius: 50px; 
-        width: 60rem; 
+        border-radius: 50px;
         height: auto;
-        margin: 0 auto;
+        margin: 5vh auto;
 
     }
     h3{
@@ -43,9 +44,10 @@
         
 
     }
-    .slist li{
-        border-radius: 5em;
-        background-color: rgba(6, 148, 11, 0.351);
- 
+    .card-text{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    }
 
 </style>

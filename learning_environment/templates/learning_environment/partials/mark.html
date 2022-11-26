@@ -1,3 +1,4 @@
+<div class="card">
 <p class="card-text" style="padding-right: 2rem;"><b>{{ task.question }}</b></p>
 {% for m in task.content.markers.items %}
      <div class="card-text"{% if mode != 'solve' %}style='color:grey;'{% endif %}><span class="choosemarker mark{{ m.0 }}" data-marker="{{ m.0 }}">&nbsp;</span> &nbsp; {{ m.1.description }}</div>
@@ -26,15 +27,16 @@
         <p>You incorrectly marked {{ num_additional }} word{% if num_additional != 1 %}s{% endif %}.</p>
     {% endif %}
 {% endif %}
+</div>
 
 <style>
     .card{
-            margin-top: 5vh; 
+            padding:2em;
             border-radius: 50px; 
             width: 60rem; 
             height: fit-content;
-            margin: 0 auto;
-    
+            margin: 5vh auto;
+
     }
     
     h3{

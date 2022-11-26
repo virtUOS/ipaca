@@ -1,16 +1,17 @@
-{% if mode == 'solve' %}
+<div class="card">
+    {% if mode == 'solve' %}
     <form method="post" class="form-inline">
         {% csrf_token %}
         <input type="hidden" name="task" value="{{ task.id }}">
         {% for part in task.content %}
             {% if part.name %}
                 {% if part.mode == 'fillin' %}
-                    <input type="text" name="solution-{{ task.id }}-{{ part.name }} size="15">
+                    <input type="text" name="solution-{{ task.id }}-{{ part.name }}" size="15">
                 {% elif part.mode == 'select' %}
                     <select class="form-select" name="solution-{{ task.id }}-{{ part.name }}" size="1" id="solution-{{ task.id }}-{{ part.name }}" style="width:10em;display:inline-block;margin-bottom:0.5em;margin-top:0.5em;">
                         <option value="---" selected="selected">---</option>
                         {% for o in part.options %}
-                            <option value="{{ o.text }} ">{{ o.text }}</option>
+                            <option value="{{ o.text }}">{{ o.text }}</option>
                         {% endfor %}
                     </select>
                 {% endif %}
@@ -18,8 +19,9 @@
                 {{ part.text|safe }}
             {% endif %}
         {% endfor %}
-        <button type="submit" class="btn btn-secondary" style="padding: 0;float:right; margin: 0; width: 8em; height: 3.2em; background-color: #1C009C;"><span style="font-size: 18px;">Check!</span></button>
-        
+        <div style="margin-top: 2em">
+            <button type="submit" class="btn btn-secondary">Check!</button>
+        </div>
     </form>
 {% else %}
     {% for part in task.content %}
@@ -37,7 +39,7 @@
             {% if part.solution and part.solution != '---' %}
                 {% for o in part.options %}
                     {% if o.text == part.solution %}
-                        <span class="feedbackbox" style="position: absolute; bottom: 6.5em; left: 16em; "><i>{% if part.solved %}✓{% else %}✗{% endif %} {{ o.feedback }}</i></span>
+                        <span class="feedbackbox"><i>{% if part.solved %}✓{% else %}✗{% endif %} {{ o.feedback }}</i></span>
                     {% endif %}
                 {% endfor %}
             {% endif %}
@@ -47,6 +49,7 @@
     {% endfor %}
 
 {% endif %}
+</div>
 
 <style>
     .card{
@@ -90,7 +93,5 @@
         color: red;
     }
 
-    
-    
 
 </style>

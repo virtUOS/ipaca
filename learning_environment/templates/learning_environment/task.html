@@ -10,9 +10,11 @@
 
 {% block content %}
 
-    <h3>
+
+    <h3 style="background:white; padding:20px; margin:0;">
         {{ lesson.name }}{% if task %}: {{ task.get_type_display }} Task {% endif %}
     </h3>
+
     {# Display "Start lesson" screen #}
     {% if mode != 'result' and state == 'START' %}
         <p>&nbsp;</p>
@@ -52,22 +54,30 @@
         {% if task.paragraph_shown %}
             {{ lesson.paragraph }}
         {% endif %}
-        <div class="container">
-            <div class="justify-content-center" >
-                <div class="row">
-                    <div class="card " style=" padding: 1em;">
-                        <div class="card-body" style="margin: 0 auto;">
-                            <h5 class="card-title">{{ task.title }} </h5>
-                            {% if msg %}
-                                <p class="card-text" style="bottom:0; color: red;">{{ msg }}</p>
-                            {% endif %}
+
+            <div class="justify-content-center" style="background:transparent;">
+
+ {#                  <div class="card " style=" padding: 1em;">#}
+ {#                    <div class="card-body" style="margin: 0 auto;">#}
+
+                            {# LESSON TEXT #}
+                    <div class="row align-items-center" style="background:transparent;">
                             {% if task.show_lesson_text %}
-                                <div class="lesson-text" style="border:none; font-size:18px;">
+
+
+                            <h5 class="card-title" style="margin:0;">{{ task.title }}</h5>
+
+                                 <div class="col-6" style="background:white; height:100%;">
+                                <div class="lesson-text" style="padding:20px; border:none; font-size:18px; border-radius:0;">
 
                                         {{ task.lesson.text | safe }}
                                         <cite>{{ task.lesson.text_source }}</cite>
-
                                 </div>
+                                 </div>
+                            {% endif %}
+                        <div class="col">
+                            {% if msg %}
+                                <p class="card-text" style="bottom:0; color: red;">{{ msg }}</p>
                             {% endif %}
                             {% include task.get_template %}
                             {% if mode == 'result' %}
@@ -80,10 +90,13 @@
                                 </p>
                             {% endif %}
                         </div>
+
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
     {% endif %}
 
 <style>
@@ -95,10 +108,7 @@
     background-size: cover;
    }
 
-   p{
-    margin: 0 40px;
 
-   }
 
 
 
