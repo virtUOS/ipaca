@@ -26,8 +26,9 @@ class TutormodelPretest:
         """
 
         # 1. gucken, ob noch keine lesson gestartet wurde, dann lesson A
+        # 1. check if a lesson has been started yet, if not, start lesson A
         # pick a lesson
-        current_lesson_id = request.session.get('current_lesson', None) #schon in einem level?
+        current_lesson_id = request.session.get('current_lesson', None) # Is a lesson started already?
 
         if current_lesson_id:
             try:
@@ -37,29 +38,31 @@ class TutormodelPretest:
         else:
             lesson = Lesson.objects.get(lesson_id="level-A", series="Adaptive Pretest")
             request.session['current_lesson'] = lesson.id
-            request.session['done'] = 0 # NEW Zählt erledigte Aufgaben
-            request.session['current_lesson_correct'] = 0 # zählt wie viele Aufgaben korrekt gelöst wurden
+            request.session['done'] = 0 # NEW Counts completed tasks
+            request.session['current_lesson_correct'] = 0 # counts how many tasks have been solved correctly
             request.session['tasks'] = None
             request.session.modified = True
 
         # 2. wenn eine Lesson beendet wird, nächste lesson starten
+        # 2. when a lesson ends, start next lesson
         num_tasks = Task.objects.filter(lesson=lesson).count() # num of tasks in level
-        if request.session['done'] / num_tasks == 1:# NEW
+        if request.session['done'] / num_tasks == 1:# NEW If 100% of all level tasks have been completed WrapUp
             next_type = 'WRAPUP'
         if request.session['current_lesson_correct'] / num_tasks > 2/3:
             if request.session['current_lesson'] == "level-A":
                 next_level = "level-B"
             elif lesson.id == "level-B":
-                next_level = "level-C" #TODO was passiert nach level C?
+                next_level = "level-C" 
             elif lesson.id == "level-C":
                 next_type = 'WRAPUP'
             lesson = Lesson.objects.get(lesson_id=next_level, series="Adaptive Pretest") # problem
             request.session['current_lesson'] = lesson.id
-            request.session['current_lesson_correct'] = 0 # zählt wie viele Aufgaben korrekt gelöst wurden
+            request.session['current_lesson_correct'] = 0 # counts how many tasks hav been solved correctly, set back to zero for the new level
             request.session.modified = True
 
         
         # 3. in einer lesson, nächste Aufgabe presentieren 
+        # 3. in a lesson, present the next task
         # pick a task
         request.session.modified = True
         next_type = "R"
