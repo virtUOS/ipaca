@@ -228,22 +228,22 @@
           {
             text: "eduneducated, unknowledgeable, untaught, well-prepared",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "eduneducated, untaught, schooled, unenlighten",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "'No, that\'s not correct.'"
           },
           {
             text: "unenlighten, eduneducated, knowledgeable, untaught",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "'No, that\'s not correct.'"
           },
           {
             text: "unenlighten, eduneducated, unknowledgeable, untaught",
             correct: true,
-            feedback: "The correct answer is False."
+            feedback: "That is correct."
           },
         ]
       },
@@ -490,29 +490,15 @@
             {
               text: 'should not',
               correct: true,
-              feedback: 'The correct answer is ‘should not’'
+              feedback: 'That is correct'
             },
-            {
-              text: 'should',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'should not',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
+
           ],
           _2_: [
             {
               text: 'might',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'might',
               correct: true,
-              feedback: 'The correct answer is ‘might’'
+              feedback: 'That is correct'
             },
             {
               text: 'might not',
