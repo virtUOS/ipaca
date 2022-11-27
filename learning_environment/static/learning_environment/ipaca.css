@@ -250,6 +250,10 @@ textarea {
     display:none;
 }
 
+.mb-3 .invalid-feedback {
+    margin-left:15px;
+}
+
 .card-dashboard {
     height: 125px;
     width: 100%;
