@@ -28,15 +28,14 @@ class SmartTutormodel:
             WHERE l.tutor_mode = "S"')
         rows = cur.fetchall()
         task_ids = [x[0] for x in rows]
-        difficulty = {}
+        difficulty = []
         for id in task_ids:
             cur.execute(f"SELECT solved FROM learning_environment_solution WHERE task_id = {id}")
             rows = cur.fetchall()
-            correct = [x[0] for x in rows if x == 1]
+            correct = [x[0] for x in rows if x[0] == 1]
             share = len(correct) / len(rows)
             difficulty.append({"id": id, "share":share})
         difficulty = sorted(difficulty, key=lambda x: x["share"])
-        print("Difficulty: ", difficulty)
         return difficulty
 
     def __get_user_levels(self, connection):
@@ -48,7 +47,7 @@ class SmartTutormodel:
         for id in user_ids:
             cur.execute(f"SELECT solved FROM learning_environment_solution level WHERE user_id = {id}")
             rows = cur.fetchall()
-            correct = [x[0] for x in rows if x == 1]
+            correct = [x[0] for x in rows if x[0] == 1]
             share = len(correct) / len(rows)
             levels.append({"id": id, "share":share})
         levels = sorted(levels, key=lambda x: x["share"])
@@ -88,22 +87,25 @@ class SmartTutormodel:
                 if user["id"] == self.learner.id:
                     user_level = ind / len(user_levels)
 
-            task_id = task_difficulties[int((1 - user_level) * len(task_difficulties))]["id"]
+            task_id = task_difficulties[int((1 - user_level) * len(task_difficulties)) - 1]["id"]
+            print(task_id)
 
-            next_type = request.session['current_lesson_todo'][0]
-            request.session.modified = True
-            if next_type == 'START':
-                return next_type, lesson, None
-            elif next_type == 'WRAPUP':
-                return next_type, lesson, None
-            else:  # pick random task of fitting type
-                tasks = Task.objects.filter(lesson=lesson, type=next_type)
-                cnt = tasks.count()
-                if cnt == 0:
-                    request.session['current_lesson_todo'].pop(0)  # if we don't have such a task, remove it
-                    continue  # next state
-                task = tasks[random.randint(0, cnt-1)]
-                return next_type, lesson, task
+            break
+
+            # next_type = request.session['current_lesson_todo'][0]
+            # request.session.modified = True
+            # if next_type == 'START':
+            #     return next_type, lesson, None
+            # elif next_type == 'WRAPUP':
+            #     return next_type, lesson, None
+            # else:  # pick random task of fitting type
+            #     tasks = Task.objects.filter(lesson=lesson, type=next_type)
+            #     cnt = tasks.count()
+            #     if cnt == 0:
+            #         request.session['current_lesson_todo'].pop(0)  # if we don't have such a task, remove it
+            #         continue  # next state
+            #     task = tasks[random.randint(0, cnt-1)]
+            #     return next_type, lesson, task
 
         # num_tasks = Task.objects.filter(lesson=lesson).count()
         # if num_tasks == 0:
