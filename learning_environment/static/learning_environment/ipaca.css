@@ -304,10 +304,7 @@ textarea {
     color: darkblue;
     border-radius: 4px;
 }
- .i-plain:active {
-     background-color: transparent !important;
-     border-left: 10px solid darkblue;
-}
+
 
  .date-card{
   border:1px solid #ddd;
@@ -356,14 +353,14 @@ textarea {
 }
 
 
-.nav-item{
-    border-left: 5px white;
-}
-
 nav .nav-active {
     border-left: 5px solid darkblue;
 }
 
 .bold {
     font-weight:bold;
+}
+
+.sub-item{
+    padding-left:30px;
 }
