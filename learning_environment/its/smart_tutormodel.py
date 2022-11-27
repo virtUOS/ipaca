@@ -6,6 +6,7 @@ The tutor model is able to determine appropriate actions for a given learner. (E
 
 import random
 from learning_environment.models import Lesson, Task, ProfileSeriesLevel
+import sqlite3
 
 
 class NoTaskAvailableError(Exception):
@@ -19,15 +20,50 @@ class SmartTutormodel:
         learner: User object"""
         self.learner = learner
 
+    def __get_tasks_level(self, connection):
+        cur = connection.cursor()
+        cur.execute(f'SELECT DISTINCT(s.task_id) FROM learning_environment_solution s \
+            LEFT JOIN learning_environment_task t ON t.id = s.task_id \
+            LEFT JOIN learning_environment_lesson l ON l.id = t.lesson_id \
+            WHERE l.tutor_mode = "S"')
+        rows = cur.fetchall()
+        task_ids = [x[0] for x in rows]
+        difficulty = {}
+        for id in task_ids:
+            cur.execute(f"SELECT solved FROM learning_environment_solution WHERE task_id = {id}")
+            rows = cur.fetchall()
+            correct = [x[0] for x in rows if x == 1]
+            share = len(correct) / len(rows)
+            difficulty.append({"id": id, "share":share})
+        difficulty = sorted(difficulty, key=lambda x: x["share"])
+        print("Difficulty: ", difficulty)
+        return difficulty
+
+    def __get_user_levels(self, connection):
+        cur = connection.cursor()
+        cur.execute(f"SELECT DISTINCT(user_id) FROM learning_environment_solution")
+        rows = cur.fetchall()
+        user_ids = [x[0] for x in rows]
+        levels = []
+        for id in user_ids:
+            cur.execute(f"SELECT solved FROM learning_environment_solution level WHERE user_id = {id}")
+            rows = cur.fetchall()
+            correct = [x[0] for x in rows if x == 1]
+            share = len(correct) / len(rows)
+            levels.append({"id": id, "share":share})
+        levels = sorted(levels, key=lambda x: x["share"])
+        return levels
+
     def next_task(self, request):
         """Pick a next task for the learner.
         Returns tuple:
         (STATE, lesson, task)
         """
 
+        con = sqlite3.connect("db.sqlite3")
+
         order = ['START', 'R', 'R', 'GS', 'V', 'WRAPUP']
 
-        # determine the current lesson series
         series = request.session.get('lesson_series', 'General')
 
         # pick a lesson
@@ -45,6 +81,15 @@ class SmartTutormodel:
 
         # pick a task
         while 1:
+            task_difficulties = self.__get_tasks_level(con)
+            user_levels = self.__get_user_levels(con)
+            user_level = 0
+            for ind, user in enumerate(user_levels):
+                if user["id"] == self.learner.id:
+                    user_level = ind / len(user_levels)
+
+            task_id = task_difficulties[int((1 - user_level) * len(task_difficulties))]["id"]
+
             next_type = request.session['current_lesson_todo'][0]
             request.session.modified = True
             if next_type == 'START':
