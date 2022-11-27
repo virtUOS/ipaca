@@ -4,7 +4,7 @@
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
                 <a href="{% url 'myhome' %}" class="nav-item i-plain" aria-current="page">
-                    <i class="fa-solid fa-house"></i>
+                    <i class="bi bi-house-door"></i>
                 {# <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> #}
                 <span style="font-size:16px; color:black; vertical-align: middle; margin-left: 4px;"> My Home</span>
                 </a>
@@ -17,14 +17,14 @@
                 </a>
 
                 <div class="collapse" id="tasks-collapse" style="margin-left: 20px;">
-                    <ul class="">
-                        <li><a href="{% url 'academic_series' %}" class="link-dark rounded">Academic</a></li>
-                        <li><a href="{% url 'general_series' %}" class="link-dark rounded">General</a></li>
-                    </ul>
+                    <div class="">
+                        <div><a href="{% url 'academic_series' %}" class="link-dark rounded">Academic</a></div>
+                        <div><a href="{% url 'general_series' %}" class="link-dark rounded">General</a></div>
+                    </div>
                 </div>
             </li>
 
-            <li>
+
             <li class="nav-item">
                 <a class="nav-item  i-plain" id='icon-trophy' data-bs-toggle="collapse" data-bs-target="#results-collapse" aria-expanded="false">
                     <i class="bi bi-trophy" style="font-size:16px;"></i>
@@ -32,10 +32,10 @@
                 </a>
 
                 <div class="collapse" id="results-collapse" style="margin-left: 20px;">
-                    <ul class="">
-                        <li><a href="{% url 'learner_dashboard' %}" class="link-dark rounded">Personal</a></li>
-                        <li><a href="{% url 'global_dashboard' %}" class="link-dark rounded">Global</a></li>
-                    </ul>
+                    <div class="">
+                        <div><a href="{% url 'learner_dashboard' %}" class="link-dark rounded">Personal</a></div>
+                        <div><a href="{% url 'global_dashboard' %}" class="link-dark rounded">Global</a></div>
+                    </div>
                 </div>
             </li>
 
@@ -55,3 +55,24 @@ $("#icon-trophy").click(function() {
 });
 </script>
 
+
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('bold');
+                $(this).parents('li').find($('span')).addClass('bold');
+                $(this).parents('li').addClass('nav-active');
+                $(this).parents('li').find($('.collapse')).addClass('show')
+                console.log($(this).parents('li').find($('.collapse')))
+
+                var oldClass = $(this).parents('li').find($('i')).attr('class');
+                console.log(oldClass)
+                var newClass = oldClass + '-fill'
+                 console.log(newClass)
+                $(this).parents('li').find($('i')).removeClass(oldClass);
+                $(this).parents('li').find($('i')).addClass(newClass);
+            }
+        });
+    });
+</script>

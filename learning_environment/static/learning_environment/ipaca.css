@@ -354,3 +354,16 @@ textarea {
     border:none;
     vertical-align: middle;
 }
+
+
+.nav-item{
+    border-left: 5px white;
+}
+
+nav .nav-active {
+    border-left: 5px solid darkblue;
+}
+
+.bold {
+    font-weight:bold;
+}
