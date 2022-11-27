@@ -1,5 +1,4 @@
 {% load extras %}
-<div class="card-choice">
 <p class="card-text">{{ task.question }}</p>
 
 {% if mode == 'solve' %}
@@ -29,15 +28,10 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
         {% endfor %}
     </ul>
 {% endif %}
-</div>
+
 
 <style>
-    .card{
-        border-radius: 50px;
-        height: auto;
-        margin: 5vh auto;
 
-    }
     h3{
         font-size: 3.5em;
         color:black;
@@ -45,13 +39,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);
         font-weight: bold;
         margin-top: 1em;
         margin-bottom: 1em;
-        
+    }
 
-    }
-    .card-text{
-    font-weight: bold;
-    font-size: 18px;
-    padding: 20px;
-    }
 
 </style>
