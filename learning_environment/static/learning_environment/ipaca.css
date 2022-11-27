@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-
+    font-size:1.5em;
 }
 
 .navbar {
@@ -98,7 +98,6 @@ body {
 
 
 .btn {
-    margin: 20px;
     border-radius: 50px !important;
     display: flex;
     flex-direction: row;
@@ -107,7 +106,7 @@ body {
 }
 
 /* Boostrap Buttons Styling */
-.btn-primary {
+.btn-start {
     font-size: 18px;
     color: #fff;
     padding: 16px 50px;
@@ -115,11 +114,26 @@ body {
     background: linear-gradient(294.49deg, rgba(255, 110, 127, 0.8) -122.6%, rgba(28, 0, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), #FFFFFF;
 }
 
-.btn-primary:hover {
+.btn-start:hover {
     color: #FFFFFF;
     opacity: 0.8;
 }
 
+.btn-primary {
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(294.49deg, rgba(255, 110, 127, 0.8) -122.6%, rgba(28, 0, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), #FFFFFF;
+}
+
+.btn-padding {
+    padding: 16px 50px;
+}
+
+.check-btn {
+    font-size: 18px;
+    color: #fff;
+    background: #1C009C;
+}
 
 .continue-btn {
     font-size: 18px;
@@ -246,8 +260,18 @@ textarea {
     margin:10px;
 }
 
-.form-text {
-    margin-left:45px;
+.form-check-label{
+    font-weight:normal;
+    margin:0;
+    padding: 2px;
+}
+
+.mb-3 .form-text {
+    display:none;
+}
+
+.mb-3 .invalid-feedback {
+    margin-left:15px;
 }
 
 .card-dashboard {
@@ -361,3 +385,38 @@ nav .nav-active {
 .sub-item{
     padding-left:30px;
 }
+
+
+
+.card-choice{
+    width: 80%;
+    margin:8% auto;
+    height:fit-content;
+    border-radius: 2em;
+    padding: 3em;
+    background-color: #EDEBF7;
+
+}
+
+.card-answer{
+    width: 70%;
+    border-radius:1.5em;
+    border: 1px solid #dfdfdf;
+    background-color: white;
+    height: auto;
+    padding: 0.5em;
+    margin: 1em auto;
+}
+
+p .card-text{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+div .card-text{
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 0;
+}
+

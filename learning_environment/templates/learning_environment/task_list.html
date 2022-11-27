@@ -3,7 +3,13 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block header %}
+{% include "learning_environment/header.html" %}
+{% endblock %}
+
 {% block content %}
+     <div class="row align-items-center justify-content-center" style="background:transparent;">
+        <div class="card-choice" style="margin:2em;">
     <table class="table">
         <tr><th><a href="?ordering={% if request.GET.ordering == 'id' %}-{% endif %}id" class="link-unstyled">ID {% if request.GET.ordering == 'id' %}▲{% else %}▼{% endif %}</a></th>
             <th><a href="?ordering={% if request.GET.ordering == 'name' %}-{% endif %}name" class="link-unstyled">Name {% if request.GET.ordering == 'name' %}▲{% else %}▼{% endif %}</a></th>
@@ -19,14 +25,14 @@
             onclick='if (confirm("Do you really want to delete the entire lesson {{task.lesson.name}}?") == false) this.preventDefault()'>Delete</a> </td>
         <td>{{ task.interaction }}</td>
         <td>
-            <a class="btn btn-secondary" href="{% url 'practice' %}?redo={{ task.id }}">Run</a>
-            <a class="btn btn-secondary" href="{% url 'lessondetail' task.lesson.id %}">JSON5</a>
+            <a class="btn btn-secondary" href="{% url 'practice' %}?redo={{ task.id }}" style="margin:0.1em auto;">Run</a>
+            <a class="btn btn-secondary" href="{% url 'lessondetail' task.lesson.id %}" style="margin:0.1em auto;">JSON5</a>
         </td>
     </tr>
 {% endfor %}
     </table>
 
-<div class="pagination">
+<div class="pagination text-center" style="width:100%; font-size:15px;">
     <span class="step-links">
         {% if page_obj.has_previous %}
             <a href="?page=1">&laquo; first</a>
@@ -43,4 +49,6 @@
         {% endif %}
     </span>
 </div>
+        </div>
+     </div>
 {% endblock %}

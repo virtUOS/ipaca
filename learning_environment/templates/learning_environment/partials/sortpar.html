@@ -1,5 +1,4 @@
 {% load extras %}
-<div class="card">
 <p class="card-text">{{ task.question }}</p>
 
 {% if mode == 'solve' %}
@@ -12,7 +11,9 @@
            <li data-paragraph-id="{{o.id}}">{{o.paragraph}}</li>
             {% endfor %}
         </ul>
-    <button type="submit" class="btn btn-secondary" style="margin-bottom:0.1em; float:right; width: 8em; height: 3.2em; background-color: #1C009C;"><span style="font-size: 18px;">Check!</span></button>
+           <div style="width:33%; margin:0 auto;">
+            <button type="submit" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(255, 110, 127, 0.8) -122.6%, rgba(28, 0, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);">Check!</button>
+        </div>
 </form>
 {% else %}  {# show solution #}
     <ul class="slist">
@@ -25,29 +26,4 @@
         {% endfor %}
     </ul>
 {% endif %}
-</div>
 
-<style>
-    .card{
-        border-radius: 50px;
-        height: auto;
-        margin: 5vh auto;
-
-    }
-    h3{
-        font-size: 3.5em;
-        color:black;
-        text-align: center;
-        font-weight: bold;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        
-
-    }
-    .card-text{
-    font-weight: bold;
-    font-size: 18px;
-    padding: 20px;
-    }
-
-</style>
