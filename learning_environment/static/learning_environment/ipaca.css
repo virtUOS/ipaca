@@ -246,8 +246,8 @@ textarea {
     margin:10px;
 }
 
-.form-text {
-    margin-left:45px;
+.mb-3 .form-text {
+    display:none;
 }
 
 .card-dashboard {
