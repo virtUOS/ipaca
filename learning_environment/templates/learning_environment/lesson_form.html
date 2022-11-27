@@ -3,18 +3,28 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% block content %}
-<h1>Create new lesson</h1>
+{% block header %}
+{% include "learning_environment/header.html" %}
+{% endblock %}
 
+{% block content %}
+
+    <div class="row align-items-center justify-content-center" style="background:transparent;">
+        <div class="card-choice" style="margin:2em;">
+            <h2>Create new lesson</h2>
     <hr>
 <form method="post" class="form">
     {% csrf_token %}
     {{ form|crispy }}
+    <div style="width:33%; margin:0 auto;">
     <p><a href="#" class="btn btn-secondary" id="fill-example">Fill with example</a></p>
-    <input type="submit" class="btn btn-primary" value="Save">
+    <input type="submit" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(255, 110, 127, 0.8) -122.6%, rgba(28, 0, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);" value="Save">
+    </div>
 </form>
 
     <p>&nbsp;</p>
+        </div>
+    </div>
 {% endblock %}
 
 {% block js %}

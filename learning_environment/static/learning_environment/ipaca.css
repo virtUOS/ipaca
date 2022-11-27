@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-
+    font-size:1.5em;
 }
 
 .navbar {
@@ -372,6 +372,7 @@ textarea {
     border:none;
     vertical-align: middle;
 }
+
 
 nav .nav-active {
     border-left: 5px solid darkblue;
