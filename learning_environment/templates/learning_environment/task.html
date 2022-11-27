@@ -17,24 +17,36 @@
 
     {# Display "Start lesson" screen #}
     {% if mode != 'result' and state == 'START' %}
-        <p>&nbsp;</p>
-        {% if lesson.start %}
+
+
+        <div class="row align-items-center justify-content-center" style="background:transparent;">
+        <div class="card-choice">
+
+            {% if lesson.start %}
             <div>
                 {{lesson.start}}
             </div>
-        {% endif %}
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
+            {% endif %}
+            <h2 class="text-center">Are you ready? Let's get started!</h2>
+            <p>&nbsp;</p>
         <form method="post">
             {% csrf_token %}
             <input type="hidden" name="lesson" value="{{ lesson.id }}">
             <input type="hidden" name="start" value="start">
-            <button type="submit" class="btn btn-primary btn-padding">Start lesson</button>
+            <div style="width:33%; margin:0 auto;">
+            <button type="submit" class="btn btn-primary btn-padding" style="width:100%;">Start lesson</button>
+            </div>
         </form>
+        </div>
+        </div>
+
+        <p>&nbsp;</p>
+
     {# Display "Lesson Finished" screen #}
     {% elif mode != 'result' and state == 'WRAPUP' %}
-        <h2>Congratulations! You finished the lesson!</h2>
+        <div class="row align-items-center justify-content-center" style="background:transparent;">
+        <div class="card-choice">
+        <h2 class="text-center">Congratulations! You finished the lesson!</h2>
         <p>&nbsp;</p>
         {% if lesson.wrapup %}
             <div>
@@ -42,14 +54,17 @@
             </div>
         {% endif %}
         <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
+
         <form method="post">
             {% csrf_token %}
             <input type="hidden" name="lesson" value="{{ lesson.id }}">
             <input type="hidden" name="finish" value="finish">
-            <button type="submit" class="btn btn-primary">Finish!</button>
+            <div style="width:33%; margin:0 auto;">
+            <button type="submit" class="btn btn-primary btn-padding" style="width:100%; background: linear-gradient(294.49deg, rgba(132, 110, 255, 0.8) -122.6%, rgba(0, 156, 2, 0.8) 91.23%, rgba(255, 191, 199, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);">Exit</button>
+            </div>
         </form>
+        </div>
+        </div>
     {% else %}
         {% if task.paragraph_shown %}
             {{ lesson.paragraph }}
@@ -98,8 +113,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);">Back</a>
                                         <a href="{% url 'practice' %}?redo={{ task.id }}" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(110, 255, 114, 0.8) -122.6%, rgba(0, 151, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%),
 linear-gradient(0deg, #FFFFFF, #FFFFFF);">Try again</a> &nbsp;
                                     {% else %}
-                                        <a href="{% url 'practice' %}" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(132, 110, 255, 0.8) -122.6%, rgba(0, 156, 2, 0.8) 91.23%, rgba(255, 191, 199, 0.8) 175.87%),
-linear-gradient(0deg, #FFFFFF, #FFFFFF);">Go on</a>
+                                        <a href="{% url 'practice' %}" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(132, 110, 255, 0.8) -122.6%, rgba(0, 156, 2, 0.8) 91.23%, rgba(255, 191, 199, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);">Go on</a>
                                     {% endif %}
                                 {% endif %}
                                 </div>
