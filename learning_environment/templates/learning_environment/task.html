@@ -30,7 +30,7 @@
             {% csrf_token %}
             <input type="hidden" name="lesson" value="{{ lesson.id }}">
             <input type="hidden" name="start" value="start">
-            <button type="submit" class="btn btn-primary">Start lesson</button>
+            <button type="submit" class="btn btn-primary btn-padding">Start lesson</button>
         </form>
     {# Display "Lesson Finished" screen #}
     {% elif mode != 'result' and state == 'WRAPUP' %}
@@ -64,7 +64,6 @@
                     <div class="row align-items-center" style="background:transparent;">
                             {% if task.show_lesson_text %}
 
-
                             <h5 class="card-title" style="margin:0;">{{ task.title }}</h5>
 
                                  <div class="col-6 my-auto" style="background:white; min-height: 100vh;">
@@ -76,27 +75,37 @@
                                  </div>
                             {% endif %}
                         <div class="col">
+
+                        <div class="card-choice">
                             {% if msg %}
-                                <p class="card-text" style="bottom:0; color: red;">{{ msg }}</p>
+                                <p class="card-text" style="color: red;">{{ msg }}</p>
                             {% endif %}
+
                             {% include task.get_template %}
+
                             {% if mode == 'result' %}
-                                <p style="margin-top: 2em;">
+                                <div style="width:33%; margin:0 auto;">
                                 {% if review %}
                                     {% if not solved %}
-                                        <a href="{% url 'practice' %}?redo={{ task.id }}&review=True" class="btn btn-primary">Try again</a> &nbsp;
+                                        <a href="{% url 'practice' %}?redo={{ task.id }}&review=True" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(110, 255, 114, 0.8) -122.6%, rgba(0, 151, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);">Try again</a> &nbsp;
                                     {% else %}
-                                        <a href="{% url 'myhome' %}" class="btn btn-primary">Back</a>
+                                        <a href="{% url 'myhome' %}" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(132, 110, 255, 0.8) -122.6%, rgba(0, 156, 2, 0.8) 91.23%, rgba(255, 191, 199, 0.8) 175.87%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);">Back</a>
                                     {% endif %}
                                 {% else %}
                                     {% if not solved %}
-                                        <a href="{% url 'practice' %}?redo={{ task.id }}" class="btn btn-primary">Try again</a> &nbsp;
+                                        <a href="{% url 'practice' %}?redo={{ task.id }}" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(110, 255, 114, 0.8) -122.6%, rgba(0, 151, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);">Try again</a> &nbsp;
                                     {% else %}
-                                        <a href="{% url 'practice' %}" class="btn btn-primary">Go on</a>
+                                        <a href="{% url 'practice' %}" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(132, 110, 255, 0.8) -122.6%, rgba(0, 156, 2, 0.8) 91.23%, rgba(255, 191, 199, 0.8) 175.87%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);">Go on</a>
                                     {% endif %}
                                 {% endif %}
-                                </p>
+                                </div>
                             {% endif %}
+                        </div>
+
                         </div>
 
                         </div>
@@ -115,10 +124,6 @@
     -o--background-size:cover;
     background-size: cover;
    }
-
-
-
-
 
 </style>
 
