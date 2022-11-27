@@ -32,19 +32,16 @@
             <div class="card-answer">
             <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}" disabled="disabled">
                 {{ o.text }}
-
-
-
             </label>
-
+            {% if forloop.counter0 == chosen %}
+                {% if o.feedback %}
+                    <br><p style="color:red;">{{ o.feedback }}</p>
+                {% endif %}
+            {% endif %}
             </div>
 
         </div>
-                                                {% if forloop.counter0 == chosen %}
-                       {% if o.feedback %}
-                   <br><p style="color:red;">{{ o.feedback }}</p>
-                {% endif %}
-                 {% endif %}
+
 
     {% endfor %}
 {% endif %}
