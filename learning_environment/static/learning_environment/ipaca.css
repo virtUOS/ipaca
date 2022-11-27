@@ -134,14 +134,14 @@ body {
 }
 
 .continue-btn:hover {
-    background: #FF814B;
+    background: #ef7e4b;
     color:#FFFFFF;
 }
 
 .btn-login {
     font-size: 18px;
     background: #FF814B;
-    box-shadow: 0px 15px 50px rgba(255, 129, 75, 0.4);
+    box-shadow: 0 15px 50px rgba(255, 129, 75, 0.4);
     border-radius: 40px;
     padding: 10px;
     width:100%;
@@ -151,7 +151,7 @@ body {
 
 .btn-signup {
     background: #009A3F;
-    box-shadow: 0px 15px 50px rgba(0, 164, 67, 0.4);
+    box-shadow: 0 15px 50px rgba(0, 164, 67, 0.4);
 }
 
 .btn-new {
@@ -256,7 +256,7 @@ textarea {
 .card-dashboard {
     height: 125px;
     width: 100%;
-    box-shadow: 0px 13px 21px rgba(255, 129, 75, 0.2);
+    box-shadow: 0 13px 21px rgba(255, 129, 75, 0.2);
     border-radius: 30px;
 }
 
@@ -322,7 +322,7 @@ textarea {
 
 .date-card .day{
   font-size:24px;
-  margin:0px 5px;
+  margin:0 5px;
   color:#2ab6b6;
 }
 
@@ -341,12 +341,12 @@ textarea {
     border:1px solid #ddd;
     background: #393939;
     border-radius: 50%;
-    margin:0px !important;
+    margin:0 !important;
 }
 
 .icon-number .num{
   font-size:24px;
-  margin:0px;
+  margin:0;
   color:white;
 }
 

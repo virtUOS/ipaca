@@ -14,7 +14,6 @@ from .forms import *
 from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
-from django.utils import timezone
 
 
 class SignUpView(SuccessMessageMixin, generic.CreateView):
@@ -30,6 +29,8 @@ def practice(request):
     context = {'mode': 'solve'}
 
     # start a lesson
+    if 'review' in request.GET:
+        context['review'] = True
 
     if request.method == 'POST' and 'start' in request.POST:
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
@@ -89,6 +90,7 @@ def practice(request):
             return HttpResponseBadRequest("Error: No such ID")
         lesson = task.lesson
         context['state'] = context['mode']
+
 
     else:  # fetch new task and show it
 

@@ -82,11 +82,19 @@
                             {% include task.get_template %}
                             {% if mode == 'result' %}
                                 <p style="margin-top: 2em;">
+                                {% if review %}
+                                    {% if not solved %}
+                                        <a href="{% url 'practice' %}?redo={{ task.id }}&review=True" class="btn btn-primary">Try again</a> &nbsp;
+                                    {% else %}
+                                        <a href="{% url 'myhome' %}" class="btn btn-primary">Back</a>
+                                    {% endif %}
+                                {% else %}
                                     {% if not solved %}
                                         <a href="{% url 'practice' %}?redo={{ task.id }}" class="btn btn-primary">Try again</a> &nbsp;
                                     {% else %}
-                                        <a href="{% url 'practice' %}" class="btn btn-primary">Go on!</a>
+                                        <a href="{% url 'practice' %}" class="btn btn-primary">Go on</a>
                                     {% endif %}
+                                {% endif %}
                                 </p>
                             {% endif %}
                         </div>

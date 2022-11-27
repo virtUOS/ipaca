@@ -93,7 +93,7 @@
                                             {{ task.id }}</li>
                                         <li class="list-group-item" style="border:none; vertical-align: middle;">{{ task.name }}</li>
                                         <li class="list-group-item" style="border:none">
-                                            <a class='btn-redo' href="{% url 'practice' %}?redo={{ task.id }}" style="text-decoration:none; color: white;">Retry</a>
+                                            <a class='btn-redo' href="{% url 'practice' %}?redo={{ task.id }}&review=True" style="text-decoration:none; color: white;">Retry</a>
                                         </li>
                                     </ul>
 
