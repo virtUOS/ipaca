@@ -478,7 +478,7 @@
         primary: true,
         show_lesson_text: false,
         question: "<p>Read a sentence and fill the gaps</p>\
-        <p>You  _1_  touch the oven. It's very hot and you  _2_ hurt yourself..</p>",
+        <p>You  _1_  touch the oven. It’s very hot and you  _2_ hurt yourself..</p>",
         gaps: {
           mode: 'select',
           _1_: [
