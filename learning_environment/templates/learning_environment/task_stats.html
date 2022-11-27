@@ -1,0 +1,21 @@
+{% extends "learning_environment/base.html" %}
+{% load bootstrap5 %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>{{ lesson.name }}</h1>
+
+    <p>Number of attempts: {{ number_attempts }}</p>
+    <p>Average attempts before solution: {{ average_attempts }}</p>
+    <p>Successful Users: {{ successful_users }}</p>
+    <p>Min/Max Test Score: {{ min_score }} {{ max_score }}</p>
+    <hr>
+
+<pre>
+    {{ lesson.json5 }}
+</pre>
+    <hr>
+    <p><a class="btn btn-secondary" href="{% url 'tasklist' %}">Back to list of tasks</a></p>
+    <p>&nbsp;</p>
+{% endblock %}

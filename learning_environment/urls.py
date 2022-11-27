@@ -16,6 +16,7 @@ urlpatterns = [
 
     # Backstage
     path('backstage/tasklist', views.TaskListView.as_view(), name='tasklist'),
+    path('backstage/task_stats/<int:pk>', views.task_stats, name='task_stats'),
     path('backstage/lesson/<int:pk>', views.LessonDetailView.as_view(), name='lessondetail'),
     path('backstage/lesson/create', views.LessonCreateView.as_view(), name='lessoncreate'),
     path('backstage/lesson/delete/<int:pk>', views.LessonDeleteView.as_view(), name='lessondelete'),

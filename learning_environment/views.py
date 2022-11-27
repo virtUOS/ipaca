@@ -215,6 +215,20 @@ def learner_dashboard(request):
         tasks_correctness = 0.0
     return render(request, 'learning_environment/learner_dashboard.html', locals())  # pass all local variable to template
 
+def task_stats(request, pk):
+    task_id =  pk
+    print(Task.objects.filter(id=task_id).values())
+
+    solutions = Solution.objects.all()
+    print(solutions.values().filter(task_id=task_id).values("timestamp", "user_id"))
+    number_attempts = 10
+    average_attempts = 10
+    successful_users = 10
+    min_score = 10
+    max_score = 10
+    return render(request, 'learning_environment/task_stats.html', locals())  # pass all local variable to template
+
+
 def global_dashboard(request):
     solutions = Solution.objects.all().order_by('timestamp')  # all solutions
     num_solutions = solutions.count()  # how tasks did this user try

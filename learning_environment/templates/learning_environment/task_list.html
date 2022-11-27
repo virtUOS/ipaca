@@ -21,6 +21,7 @@
         <td>
             <a class="btn btn-secondary" href="{% url 'practice' %}?redo={{ task.id }}">Run</a>
             <a class="btn btn-secondary" href="{% url 'lessondetail' task.lesson.id %}">JSON5</a>
+            <a class="btn btn-secondary" href="{% url 'task_stats' task.id %}">Stats</a>
         </td>
     </tr>
 {% endfor %}
