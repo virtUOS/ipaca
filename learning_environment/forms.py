@@ -55,8 +55,10 @@ class EvalLessonForm(forms.Form):
     text_licence = forms.CharField(widget=forms.HiddenInput())
     text_url = forms.URLField(widget=forms.HiddenInput())
 
-    def __init__(self, q_and_a, *args, **kwargs):
+    def __init__(self, q_and_a=[], *args, **kwargs):
         super(EvalLessonForm, self).__init__(*args, **kwargs)
+
+        self.num_questions = forms.IntegerField(initial=len(q_and_a), widget=forms.HiddenInput())
 
         for i, q_a in enumerate(q_and_a):
             q = q_a[0]

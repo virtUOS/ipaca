@@ -8,6 +8,7 @@ from pathlib import Path
 from .nlp_models import NLP_Model
 from textblob import TextBlob
 from learning_environment.management.commands.read_lessons import Command
+import copy
 
 
 class AutomaticJson():
@@ -31,7 +32,7 @@ class AutomaticJson():
         return nouns_cleaned
 
     @staticmethod
-    def generate_q_a(text, name, text_source, text_licence, text_url, answer=None, number_questions=10):
+    def generate_q_a(text, number_questions=3):
         """
         Generates number_questions questions and answers and returns a list of tuples [(question,answer)... number_question]
         """
@@ -47,18 +48,19 @@ class AutomaticJson():
         for a in clean_answers:
             answer = a
             question = AutomaticJson.nlp_model.get_question(answer=answer, context=text)
+            question = question.strip("<pad>").strip('</s>').strip(' question: ')
 
             q_a.append((question, a))
         return q_a
 
     @classmethod
-    def create_json5(cls, data, text, name, text_source, text_licence, text_url, answer=None, number_questions=10):
+    def create_json5(cls, data):
         """
         Creates a json5 representation of a lesson.
         data: dictionary that contains all the fields needed to create json5 representation of the lesson
         """
 
-        template = TEMPLATE.copy()
+        template = copy.deepcopy(TEMPLATE)
 
         template['text'] = data['text']
         template['name'] = data['name']
@@ -70,8 +72,8 @@ class AutomaticJson():
 
         template['text_url'] = data['text_url']
 
-        for q, a in data['task']:
-            task = TASK.copy()
+        for q, a in data['tasks']:
+            task = copy.deepcopy(TASK)
             task['question'] = q
             task['answer'] = a
             template['tasks'].append(task)
@@ -82,7 +84,6 @@ class AutomaticJson():
 
         with open(filename, "w") as fp:
             json5.dump(template, fp)
-            print(template)
 
         # saves automatic lessons to the database
         create_lesson = Command()

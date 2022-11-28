@@ -4,13 +4,12 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-
     <h3>Please fill in the questions and answers you want to use:</h3>
 
-   <form action=" {% url 'eval_lesson' %}" method="POST" id="text_form">
-    {% csrf_token %}
-  {% crispy eval_lesson_form %}
-    <input type="submit" value="Submit" form="text_form">
+    <form action=" {% url 'eval_lesson' %}" method="POST" id="eval_lesson_form">
+        {% csrf_token %}
+        {% crispy eval_lesson_form %}
+    <input type="submit" value="Submit" form="eval_lesson_form">
 </form>
 
 {% endblock %}
