@@ -214,18 +214,18 @@
         primary: true,
         show_lesson_text: false,
         question: "In the text, find the words according to the following definitions (if there are multiple occurences choose the first one):",
-        marktext: "<p>Many students find it easier to learn music theory when they practice a lot. In other words,</p>\
-        <p>physically creating #2#sounds by playing a musical instrument (such as the #1#piano) helps you to better</p>\
-        <p>#5#visualize and listen to the music you are writing down or studying. This allows students to</p>\
-        <p>understand the relationship between different steps more quickly.</p>\
-        <p>When you sit at the piano, it is important to sit up straight, keeping your head over your shoulders,</p>\
-        <p>which should be kept down. Your elbows should be a comfortable distance from your body, and your fingers</p>\
-        <p>should remain arched (as if you were pulling a library book off of a shelf). Keep your knees and wrists</p>\
-        <p>flexible (not stiff), and keep your feet flat on the ground unless you are using the #3#pedals.</p>\
-        <p>Learning to play notes on the piano is one easy way to be with music in touch. You may find access</p>\
-        <p>to a piano #4#keyboard (acoustic or electronic) at your school. Another option is to download a free piano app</p>\
-        <p>that you can play on your phone, such as Tiny Piano. Notice that the keyboard has both white keys and black</p>\
-        <p>keys. The black keys are grouped into sets of either three or two.</p>", // could be a problem since there are piano multiple times
+        marktext: "Many students find it easier to learn music theory when they practice a lot. In other words,\
+        physically creating #2#sounds by playing a musical instrument (such as the #1#piano) helps you to better\
+        #5#visualize and listen to the music you are writing down or studying. This allows students to\
+        understand the relationship between different steps more quickly.\
+        When you sit at the piano, it is important to sit up straight, keeping your head over your shoulders,\
+        which should be kept down. Your elbows should be a comfortable distance from your body, and your fingers\
+        should remain arched (as if you were pulling a library book off of a shelf). Keep your knees and wrists\
+        flexible (not stiff), and keep your feet flat on the ground unless you are using the #3#pedals.\
+        Learning to play notes on the piano is one easy way to be with music in touch. You may find access\
+        to a piano #4#keyboard (acoustic or electronic) at your school. Another option is to download a free piano app\
+        that you can play on your phone, such as Tiny Piano. Notice that the keyboard has both white keys and black\
+        keys. The black keys are grouped into sets of either three or two.", // could be a problem since there are piano multiple times
         markers: {
           '1': {
             description: 'a large musical instrument with a row of black and white keys that are pressed to play notes', // could be a problem since there are piano 
