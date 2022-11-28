@@ -142,7 +142,7 @@
           mode: 'fillin',
           _1_: [
             { text: 'did not move', correct: true, feedback: "Yes, that's correct!"},
-            { text: 'would not move', correct: false, feedback: "Yes, that's correct!"},
+            { text: 'would not move', correct: true, feedback: "Yes, that's correct!"},
           ],
         },
       },
