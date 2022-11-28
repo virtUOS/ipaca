@@ -32,12 +32,12 @@ class TutormodelPretest:
 
         if current_lesson_id:
             try:
-                lesson = Lesson.objects.get(pk=current_lesson_id)
+                lesson = Lesson.objects.get(lesson_id=current_lesson_id)
             except Lesson.DoesNotExist:
                 raise Exception("Lesson from session does not exist: {}!".format(current_lesson_id))
         else:
             lesson = Lesson.objects.get(lesson_id="level-A", series="Adaptive Pretest")
-            request.session['current_lesson'] = lesson.id
+            request.session['current_lesson'] = lesson.lesson_id
             request.session['done'] = 0 # NEW Counts completed tasks
             request.session['current_lesson_correct'] = 0 # counts how many tasks have been solved correctly
             request.session['tasks'] = None
@@ -45,29 +45,33 @@ class TutormodelPretest:
 
         # 2. wenn eine Lesson beendet wird, nächste lesson starten
         # 2. when a lesson ends, start next lesson
+        next_type = None
         num_tasks = Task.objects.filter(lesson=lesson).count() # num of tasks in level
-        if request.session['done'] / num_tasks == 1:# NEW If 100% of all level tasks have been completed WrapUp
-            next_type = 'WRAPUP'
+        print(request.session['current_lesson'], request.session['current_lesson_correct'], request.session['done'], num_tasks)
         if request.session['current_lesson_correct'] / num_tasks > 2/3:
             if request.session['current_lesson'] == "level-A":
                 next_level = "level-B"
-            elif lesson.id == "level-B":
-                next_level = "level-C" 
-            elif lesson.id == "level-C":
+            elif request.session['current_lesson'] == "level-B":
+                next_level= "level-C" 
+            elif request.session['current_lesson'] == "level-C":
                 next_type = 'WRAPUP'
-            lesson = Lesson.objects.get(lesson_id=next_level, series="Adaptive Pretest") # problem
-            request.session['current_lesson'] = lesson.id
-            request.session['current_lesson_correct'] = 0 # counts how many tasks hav been solved correctly, set back to zero for the new level
-            request.session.modified = True
+            if next_type != 'WRAPUP':
+                lesson = Lesson.objects.get(lesson_id=next_level, series="Adaptive Pretest") # problem
+                request.session['current_lesson'] = lesson.lesson_id
+                request.session['tasks'] = None
+                request.session['current_lesson_correct'] = 0 # counts how many tasks hav been solved correctly, set back to zero for the new level
+                request.session.modified = True
+        elif request.session['tasks'] == []:# NEW If 100% of all level tasks have been completed WrapUp
+            next_type = 'WRAPUP'
 
         
         # 3. in einer lesson, nächste Aufgabe presentieren 
         # 3. in a lesson, present the next task
         # pick a task
         request.session.modified = True
-        next_type = "R"
+        #next_type = "R"
         tasks = request.session.get("tasks", None)
-        if not tasks:
+        if not tasks and next_type != 'WRAPUP':
             next_type = "START" 
             tasks = list(Task.objects.filter(lesson=lesson).values_list('id', flat=True))  # get list of task ids (we need ids becuse we cannot store a queryset in the session)
             request.session['tasks'] = tasks
