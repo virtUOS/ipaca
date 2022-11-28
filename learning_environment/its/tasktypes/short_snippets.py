@@ -1,29 +1,35 @@
 from learning_environment.its.base import Json5ParseException
 import nltk 
 #nltk.download('punkt')
+#nltk.download('wordnet')
+#nltk.download('omw-1.4')
 from nltk.stem import WordNetLemmatizer
 from spellchecker import SpellChecker
 from happytransformer import HappyTextToText, TTSettings
 
+#neuer pip install command:
+import spacy
+# Download mit: python -m spacy download en_core_web_sm
 
 
 #TODO:
-# schöner machen in rot oder so
 # Fehler von Thelen für Präsi wegbekommen
 # kommentieren
 # code aufräumen
 # install dokument erstellen, vllt allg doku, requirements?
 
-#neuer pip install command:
-import spacy
 
-# Download mit: python -m spacy download en_core_web_sm
+# Definitions
 sp = spacy.load('en_core_web_sm')
 spell = SpellChecker()
 lemmatizer = WordNetLemmatizer()
 
+
+
 class ShortTask():
-    """A single choice task."""
+    """
+    A full sentence answering task.
+    """
 
     template = 'learning_environment/partials/short.html'
 
@@ -44,8 +50,13 @@ class ShortTask():
 
 
     # number of syllables check function
-    # source: https://stackoverflow.com/questions/46759492/syllable-count-in-python
+    
     def syllable_count(word):
+        '''
+        Counts the number of syllables of a given word.
+        
+        source: https://stackoverflow.com/questions/46759492/syllable-count-in-python
+        '''
         word = word.lower()
         count = 0
         vowels = "aeiouy"
@@ -59,7 +70,6 @@ class ShortTask():
         if count == 0:
             count += 1
         return count
-
 
 
     def adj_to_rule(grammar_error_adj):
@@ -184,7 +194,12 @@ class ShortTask():
         print(right_answer)
         tokenized_right_answer = nltk.word_tokenize(right_answer)
 
+        
 
+        '''
+        Lenght error detection
+        '''
+        # no lenght error was detected
         if(len(tokenized_user_answer) == len(tokenized_right_answer)):
             for i in range(len(tokenized_user_answer)):
                 user_word = tokenized_user_answer[i]
@@ -192,7 +207,8 @@ class ShortTask():
                 if right_word != user_word:
                         errortypes['grammar'] += 1
                         s_error[user_word] = 'grammar_error'
-        
+
+        # user answer is too short, needed argumets are missing
         elif(len(tokenized_user_answer) <= len(tokenized_right_answer)):
             errortypes['length'] += 1
             missing_word = []
@@ -213,9 +229,40 @@ class ShortTask():
             missing_word_feedback = "It seems like you missed " + missing_words_str + "."
             context['missing_word_feedback'] = missing_word_feedback 
 
+        # user answer is too long, wrong arguments were added
         else:
             errortypes['length'] += 1
-            #TODO: Wrong additional words? 
+
+            additional_word = []
+            
+            count_of_appear_user = {}
+            count_of_appear_right = {}
+            for word in tokenized_user_answer:
+                if word not in count_of_appear_user.keys():
+                    count_of_appear_user[word] = tokenized_user_answer.count(word)
+            for word in tokenized_right_answer:
+                if word not in count_of_appear_right.keys():
+                    count_of_appear_right[word] = tokenized_right_answer.count(word)
+
+            for word in count_of_appear_user.keys():
+                if word not in count_of_appear_right.keys():
+                    additional_word.append(word)
+                elif count_of_appear_user[word] > count_of_appear_right[word]:
+                    additional_word.append(word)            
+
+            if len(additional_word) >= 2:
+                additional_words_str = " The words " 
+                for i in range(len(additional_word)):
+                    if i == 0:
+                        additional_words_str += "'" + additional_word[i] + "'"
+                    else:
+                        additional_words_str += " and '" + additional_word[i] + "'"
+                
+            else:
+                additional_words_str = "The word '" + additional_word[0] + "'"
+
+            additional_word_feedback = additional_words_str + " might not belong in this sentence."
+            context['additional_word_feedback'] = additional_word_feedback 
 
         
 
@@ -267,6 +314,10 @@ class ShortTask():
             success_feedback = "Congratulations! There was no mistake."
             context['success_feedback'] = success_feedback
             analysis['solved'] = True
+
+            correct = True
+            analysis['correct'] = correct
+            context['correct'] = correct
         
         else:  
             #underlined_word = "\u0332".join(word + " ")
@@ -276,6 +327,10 @@ class ShortTask():
             context['user_answer'] = user_answer
             
             context['correct_feedback'] = "A correct solution would be '"+ right_answer + "'."
+
+            correct = False
+            analysis['correct'] = correct
+            context['correct'] = correct
 
 
 
