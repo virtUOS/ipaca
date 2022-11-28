@@ -1,4 +1,4 @@
-<p class="card-text"><b>{{ task.question }}</b></p>
+<p class="card-text"><b>{{ task.question|safe }}</b></p>
 {% for m in task.content.markers.items %}
      <p class="card-text" {% if mode != 'solve' %}style='color:grey'{% endif %}><span class="choosemarker mark{{ m.0 }}" data-marker="{{ m.0 }}">&nbsp;</span> &nbsp; {{ m.1.description }}</p>
 {% endfor %}
