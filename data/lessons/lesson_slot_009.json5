@@ -40,22 +40,22 @@
           {
             text: "on good services",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "on keeping their employees modern industry standards",
             correct: true,
-            feedback: "The correct answer is True."
+            feedback: "That is correct."
           },
           {
             text: "on a good attitude towards customers",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "on self-education",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
         ]
       },
@@ -71,22 +71,22 @@
           {
             text: "they do not respect their employees ",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "they do not invest enough money in their employees to be strong digital learners",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "they do not invest enough time in their employees to be strong digital learners",
             correct: true,
-            feedback: "The correct answer is True."
+            feedback: "That is correct."
           },
           {
             text: "they do not support the ideas of their employees",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
         ]
       },
@@ -102,22 +102,22 @@
           {
             text: "in what way they choose the use of determined type of education ",
             correct: true,
-            feedback: "The correct answer is True."
+            feedback: "That is correct."
           },
           {
             text: "certification of instructors",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "taking into account the interests of employees ",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "the choice depends on the field of work",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
         ]
       },
@@ -133,22 +133,22 @@
           {
             text: "well-trained personnel with old-school knowledge",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "well-trained workforce with distracted attention personnel",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "well-trained personnel with newfangled knowledge",
             correct: true,
-            feedback: "The correct answer is True."
+            feedback: "That is correct."
           },
           {
             text: "waste of time, workforce can start working without any preparation",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
         ]
       },
@@ -164,22 +164,22 @@
           {
             text: "waste of time",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "disinterested employees, tired instructors ",
             correct: true,
-            feedback: "The correct answer is True."
+            feedback: "That is correct."
           },
           {
             text: "waste of time and money",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "waste of time",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
         ]
       },
@@ -190,60 +190,28 @@
         interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
         primary: true, // the primary task will be shown first, non-primary tasks are for repetition
         show_lesson_text: false,  // Shall we show the lesson reading text? true/false
-        question: "What does it mean?\
+        question: "<p>What does it mean?</p>\
          <p>“The benefits of digital learning for employers are vast...”</p>",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
           {
             text: "There are a lot of benefits of digital learning for employers",
             correct: true,
-            feedback: "The correct answer is True."
+            feedback: "That is correct."
           },
           {
             text: "There are no benefits of digital learning for workers",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "There are only five types of benefits",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "Benefits of digital learning for employers don’t exist",
             correct: false,
-            feedback: "The correct answer is False."
-          },
-        ]
-      },
-      {
-        // task 6
-        name: "NAME OF TASK 9.V.11",
-        type: "V", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
-        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
-        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
-        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
-        question: "<p>Choose the option that applies:</p>\
-        <p>Software systems are part of a world-wide economic system that _1_ for several hundred years.</p>",
-        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          {
-            text: "There are a lot of benefits of digital learning for employers",
-            correct: true,
-            feedback: "The correct answer is True."
-          },
-          {
-            text: "There are no benefits of digital learning for workers",
-            correct: false,
-            feedback: "The correct answer is False."
-          },
-          {
-            text: "There are only five types of benefits",
-            correct: false,
-            feedback: "The correct answer is False."
-          },
-          {
-            text: "Benefits of digital learning for employers don’t exist",
-            correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
         ]
       },
@@ -260,22 +228,22 @@
           {
             text: "eduneducated, unknowledgeable, untaught, well-prepared",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "eduneducated, untaught, schooled, unenlighten",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "'No, that\'s not correct.'"
           },
           {
             text: "unenlighten, eduneducated, knowledgeable, untaught",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "'No, that\'s not correct.'"
           },
           {
             text: "unenlighten, eduneducated, unknowledgeable, untaught",
             correct: true,
-            feedback: "The correct answer is False."
+            feedback: "That is correct."
           },
         ]
       },
@@ -292,22 +260,22 @@
           {
             text: "well-paid",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "worthwhile",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "unconscionable ",
             correct: true,
-            feedback: "The correct answer is True."
+            feedback: "That is correct."
           },
           {
             text: "remunerative",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
         ]
       },
@@ -324,22 +292,22 @@
           {
             text: "a highly trained workforce not ready to work",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "a highly trained labour that is ready to start working process",
             correct: true,
-            feedback: "The correct answer is True."
+            feedback: "That is correct."
           },
           {
             text: "a well-prepared workforce that will be ready to do the job in 2 weeks ",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "well-awarded workforce ready to do the job",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
         ]
       },
@@ -356,22 +324,22 @@
           {
             text: "The way of training is obsolete ",
             correct: true,
-            feedback: "The correct answer is True."
+            feedback: "That is correct."
           },
           {
             text: "The way of training is voguish",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "The way of training is prevalent",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
           {
             text: "The way of training is excessive",
             correct: false,
-            feedback: "The correct answer is False."
+            feedback: "No, that\'s not correct."
           },
         ]
       },
@@ -390,7 +358,7 @@
             {
               text: 'might',
               correct: true,
-              feedback: 'The correct answer is ‘might rain today’.'
+              feedback: 'That is correct.'
             },
             {
               text: 'is able to',
@@ -425,7 +393,7 @@
             {
               text: "should have goneb",
               correct: true,
-              feedback: "The correct answer is 'should have gone'."
+              feedback: "That is correct."
             },
             {
               text: "should be gone",
@@ -475,7 +443,7 @@
             {
               text: 'is to',
               correct: true,
-              feedback: 'The correct answer is ‘must’'
+              feedback: 'That is correct.'
             },
           ],
           _2_: [
@@ -497,7 +465,7 @@
             {
               text: 'is to',
               correct: true,
-              feedback: 'must, must not'
+              feedback: 'That is correct.'
             },
           ]
         },
@@ -510,7 +478,7 @@
         primary: true,
         show_lesson_text: false,
         question: "<p>Read a sentence and fill the gaps</p>\
-        <p>You  _1_  touch the oven. It's very hot and you  _2_ hurt yourself..</p>",
+        <p>You  _1_  touch the oven. It’s very hot and you  _2_ hurt yourself..</p>",
         gaps: {
           mode: 'select',
           _1_: [
@@ -522,29 +490,15 @@
             {
               text: 'should not',
               correct: true,
-              feedback: 'The correct answer is ‘should not’'
+              feedback: 'That is correct.'
             },
-            {
-              text: 'should',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'should not',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
+
           ],
           _2_: [
             {
               text: 'might',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'might',
               correct: true,
-              feedback: 'The correct answer is ‘might’'
+              feedback: 'That is correct.'
             },
             {
               text: 'might not',
@@ -579,7 +533,7 @@
             {
               text: 'cannot have had',
               correct: true,
-              feedback: 'The correct answer is ‘cannot have had’'
+              feedback: 'That is correct.'
             },
             {
               text: 'can not have',
@@ -619,7 +573,7 @@
             {
               text: 'might not be',
               correct: true,
-              feedback: 'The correct answer is ‘might not be’.'
+              feedback: 'That is correct.'
             },
             {
               text: 'might',
@@ -659,7 +613,7 @@
             {
               text: 'cannot',
               correct: true,
-              feedback: 'The correct answer is ‘cannot’.'
+              feedback: 'That is correct.'
             },
           ],
         },
