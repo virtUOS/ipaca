@@ -144,6 +144,7 @@ class ShortTask():
         word_snippets_str = self.task.question.replace(" ", "")
         word_snippets = word_snippets_str.split("/")
         
+        print("snippets:")
         print(word_snippets)
 
         #make sure it ends with a dot
@@ -216,7 +217,6 @@ class ShortTask():
             errortypes['length'] += 1
             #TODO: Wrong additional words? 
 
-
         
 
         print(errortypes)
@@ -224,14 +224,15 @@ class ShortTask():
 
 
         user_adj_sen = sp(right_answer)
+        adj_exists = False
         for i in range(len(tokenized_right_answer)):
             tag = spacy.explain(user_adj_sen[i].tag_)
             if(tag.split(",")[0] == "adjective"):
+                adj_exists = True
                 if s_error[tokenized_right_answer[i]] is not None:
                     adj_feedback = ShortTask.adj_to_rule(tokenized_right_answer[i])
                     context['adj_feedback'] = adj_feedback 
-
-            
+        context['adj_exists_feedback'] = adj_exists 
 
 
 
@@ -240,21 +241,24 @@ class ShortTask():
         lemmatized_user_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_user_answer]
         lemmatized_right_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_right_answer]
         print(lemmatized_right_answer)
+        print("lem_user:")
         print(lemmatized_user_answer)
+
         #check whether all words in the solution are also in the user solution
         snippets_in = 0
         enough_words_used = True
         for word in word_snippets:
-            if word in lemmatized_user_answer:
+            if word.lower() in lemmatized_user_answer:
                 snippets_in += 1
         if snippets_in < 3:
             enough_words_used = False
+            context['enough_snippets_feedback'] = enough_words_used 
+
 
     
         print("enough words used? ")
         print(enough_words_used)
 
-        #TODO: feedback, use at least 3 snippets.
         #TODO: feedback, use at least one adjective.
         
          

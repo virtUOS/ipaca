@@ -12,9 +12,21 @@
 {% else %}
     {% if solved %}
         <p> {{ success_feedback }} </p>
+        {% if enough_snippets_feedback == False %}
+        <p> However please use at least three of the given snippets. </p>
+        {% endif %}
+        {% if adj_exists == False %}
+        <p> Though, please use at least one adjective next time. </p>
+        {% endif %}
     {% else %}
         <p> '{{ user_answer }}' is not correct. </p>
         <p> {{spelling_correction_feedback}} <br> {{adj_feedback}} <br> {{missing_word_feedback}}</p>
         <p> {{ correct_feedback }} </p>
+        {% if enough_snippets_feedback == False %}
+        <p> Please use at least three of the given snippets next time. </p>
         {% endif %}
-{% endif %}
+        {% if adj_exists == False %}
+        <p> Please use at least one adjective next time. </p>
+        {% endif %}
+    {% endif %}
+{% endif %}  
