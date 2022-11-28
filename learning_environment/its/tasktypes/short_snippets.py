@@ -301,9 +301,15 @@ class ShortTask():
             print(tag)
             if(tag.split(",")[0] == "adjective"):
                 adj_exists = True
-                if s_error[spelling_replacements[tokenized_right_answer[i]]] is not None:
-                    adj_feedback = ShortTask.adj_to_rule(tokenized_right_answer[i])
-                    context['adj_feedback'] = adj_feedback 
+                if len(spelling_replacements) > 0:
+                    if s_error[spelling_replacements[tokenized_right_answer[i]]] is not None:
+                        adj_feedback = ShortTask.adj_to_rule(tokenized_right_answer[i])
+                        context['adj_feedback'] = adj_feedback 
+                else:
+                    if s_error[tokenized_right_answer[i]] is not None:
+                        adj_feedback = ShortTask.adj_to_rule(tokenized_right_answer[i])
+                        context['adj_feedback'] = adj_feedback 
+
         context['adj_exists_feedback'] = adj_exists 
 
 
