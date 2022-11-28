@@ -20,20 +20,26 @@ class SmartTutormodel:
         learner: User object"""
         self.learner = learner
 
-    def __get_tasks_level(self, connection):
+    def __get_tasks_level(self, connection, task_type, lesson):
         cur = connection.cursor()
-        cur.execute(f'SELECT DISTINCT(s.task_id) FROM learning_environment_solution s \
-            LEFT JOIN learning_environment_task t ON t.id = s.task_id \
-            LEFT JOIN learning_environment_lesson l ON l.id = t.lesson_id \
-            WHERE l.tutor_mode = "S"')
+        cur.execute(f"SELECT DISTINCT(id) FROM learning_environment_task \
+            WHERE type = '{task_type}' AND lesson_id = {lesson}")
+        # cur.execute(f'SELECT DISTINCT(s.task_id) FROM learning_environment_solution s \
+        #     LEFT JOIN learning_environment_task t ON t.id = s.task_id \
+        #     LEFT JOIN learning_environment_lesson l ON l.id = t.lesson_id \
+        #     WHERE l.tutor_mode = "S"')
         rows = cur.fetchall()
         task_ids = [x[0] for x in rows]
+        print("Rows", rows)
         difficulty = []
         for id in task_ids:
             cur.execute(f"SELECT solved FROM learning_environment_solution WHERE task_id = {id}")
             rows = cur.fetchall()
             correct = [x[0] for x in rows if x[0] == 1]
-            share = len(correct) / len(rows)
+            if len(rows) == 0:
+                share = 0
+            else:
+                share = len(correct) / len(rows)
             difficulty.append({"id": id, "share":share})
         difficulty = sorted(difficulty, key=lambda x: x["share"])
         return difficulty
@@ -80,7 +86,8 @@ class SmartTutormodel:
 
         # pick a task
         while 1:
-            task_difficulties = self.__get_tasks_level(con)
+            next_type = request.session['current_lesson_todo'][0]
+            task_difficulties = self.__get_tasks_level(con, next_type, current_lesson_id)
             user_levels = self.__get_user_levels(con)
             user_level = 0
             for ind, user in enumerate(user_levels):
@@ -88,9 +95,8 @@ class SmartTutormodel:
                     user_level = ind / len(user_levels)
 
             task_id = task_difficulties[int((1 - user_level) * len(task_difficulties)) - 1]["id"]
-            print(task_id)
-
-            break
+            task = Task.objects.get(pk=task_id)
+            return next_type, lesson, task
 
             # next_type = request.session['current_lesson_todo'][0]
             # request.session.modified = True
