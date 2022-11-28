@@ -17,6 +17,7 @@ import spacy
 # kommentieren
 # code aufräumen
 # install dokument erstellen, vllt allg doku, requirements?
+# alle grammar errors ausgeben (auch wenn nicht adjektiv)
 
 
 # Definitions
@@ -143,12 +144,14 @@ class ShortTask():
 
         #counts the errortpes
         errortypes = {'spelling': 0, 'grammar': 0, 'length': 0}
-
+        spelling_replacements= {}
 
 
         #snippets: It, are, funny, the, funniest, is, funnier, task
         #User input: It is funnier task
         user_answer = solution.get('answer', None)
+        print("User answer:")
+        print(user_answer)
 
         # get the snippets to use
         word_snippets_str = self.task.question.replace(" ", "")
@@ -164,14 +167,15 @@ class ShortTask():
     
         # tokenize: ["It", "is", "funnier", "task"]
         tokenized_user_answer = nltk.word_tokenize(user_answer)
+        print("Tokenized user answer: ")
+        print(tokenized_user_answer)
 
 
 
-        # gives the words's position in which the error type ocurrs
-        # !starts at 0
         s_error = dict.fromkeys(tokenized_user_answer)
         spelling_array= []
         #Spelling Correction
+        user_answer_corr = user_answer
         for i in range(len(tokenized_user_answer)):
             tok_word = tokenized_user_answer[i]
             # if word is unknown, then it is not spelled correctly and hence will remain in the array
@@ -179,20 +183,34 @@ class ShortTask():
                 # replace the incorrect word with the `most likely` substitution
                 corr_word = spell.correction(tok_word)
                 tokenized_user_answer[i] = corr_word
-                user_answer_corr = user_answer.replace(tok_word, corr_word)
+                user_answer_corr = user_answer_corr.replace(tok_word, corr_word)
+                spelling_replacements[corr_word] = tok_word
+                print("replacements: ")
+                print(spelling_replacements)
+                print("user answer corr: ")
+                print(user_answer_corr)
                 spelling_array.append("You typed '" + tok_word + "' did you mean '" + corr_word + "'?")
                 errortypes['spelling'] += 1
                 s_error[tok_word] = 'spelling_error'
                 spelling_correction_feedback = ' '.join(spelling_array)
+                print("spelling correction feedback: ")
+                print(spelling_correction_feedback)
                 context ['spelling_correction_feedback'] = spelling_correction_feedback
-            else:
-                user_answer_corr = user_answer
+        #if errortypes['spelling'] == 0:
+        #   user_answer_corr = user_answer
+        #  print("user answer corr im else: ")
+        # print(user_answer_corr)
+
+        print("user answer corr nach if- else: ")
+        print(user_answer_corr)
 
         #generate right answer with happy transformer
         right_answer = self.happy_tt.generate_text(user_answer_corr, args=self.beam_settings).text
-        print("corrected: ")
+        print("right answer: ")
         print(right_answer)
         tokenized_right_answer = nltk.word_tokenize(right_answer)
+        print("tokenized right answer: ")
+        print(tokenized_right_answer)
 
         
 
@@ -212,9 +230,14 @@ class ShortTask():
         elif(len(tokenized_user_answer) <= len(tokenized_right_answer)):
             errortypes['length'] += 1
             missing_word = []
+            missing_comma = False
             for word in tokenized_right_answer:
                 if word not in tokenized_user_answer:
-                    missing_word.append(word)
+                    if word != ",":
+                        missing_word.append(word)
+                    else: 
+                        missing_comma = True
+                        context['missing_comma_feedback'] = missing_comma
             if len(missing_word) >= 2:
                 missing_words_str = " the words " 
                 for i in range(len(missing_word)):
@@ -223,11 +246,11 @@ class ShortTask():
                     else:
                         missing_words_str += " and '" + missing_word[i] + "'"
                     
-            else:
+            elif(len(missing_word) > 0):
                 missing_words_str = "the word '" + missing_word[0] + "'"
-
-            missing_word_feedback = "It seems like you missed " + missing_words_str + "."
-            context['missing_word_feedback'] = missing_word_feedback 
+                missing_word_feedback = "It seems like you missed " + missing_words_str + "."
+                context['missing_word_feedback'] = missing_word_feedback 
+            
 
         # user answer is too long, wrong arguments were added
         else:
@@ -274,9 +297,11 @@ class ShortTask():
         adj_exists = False
         for i in range(len(tokenized_right_answer)):
             tag = spacy.explain(user_adj_sen[i].tag_)
+            print(user_adj_sen[i])
+            print(tag)
             if(tag.split(",")[0] == "adjective"):
                 adj_exists = True
-                if s_error[tokenized_right_answer[i]] is not None:
+                if s_error[spelling_replacements[tokenized_right_answer[i]]] is not None:
                     adj_feedback = ShortTask.adj_to_rule(tokenized_right_answer[i])
                     context['adj_feedback'] = adj_feedback 
         context['adj_exists_feedback'] = adj_exists 
@@ -287,8 +312,10 @@ class ShortTask():
         #lemmatize: 
         lemmatized_user_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_user_answer]
         lemmatized_right_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_right_answer]
+
+        print("lem right answer: ")
         print(lemmatized_right_answer)
-        print("lem_user:")
+        print("lem_user: ")
         print(lemmatized_user_answer)
 
         #check whether all words in the solution are also in the user solution
@@ -306,7 +333,6 @@ class ShortTask():
         print("enough words used? ")
         print(enough_words_used)
 
-        #TODO: feedback, use at least one adjective.
         
          
        #error_feedback = "You had " + errortypes['spelling'] +" spelling errors and " + errortypes['grammar'] +" gramar errors."
