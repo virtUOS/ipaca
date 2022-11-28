@@ -25,16 +25,19 @@ _TASK_TYPES = {'SC': sc.SCTask,
               'SHORT': short.ShortTask,
               'SORTPAR': sortpar.SortParTask}
 
+
 class TaskTypeFactory:
     """Picks the proper class or creates or proper object for a given interaction type or database Task object."""
     @classmethod
     def shortcuts(cls):
         """Returns a list of all registered interaction type shortcuts. Used for validating json5 representations."""
         return _TASK_TYPES.keys()
+
     @classmethod
     def getClass(cls, interaction):
         """Returns the class fitting the interaction shortcut."""
         return _TASK_TYPES[interaction]
+
     @classmethod
     def getObject(cls, task):
         """Returns an object fitting the Task object's interaction type."""
