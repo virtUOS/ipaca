@@ -215,9 +215,14 @@ class ShortTask():
         elif(len(tokenized_user_answer) <= len(tokenized_right_answer)):
             errortypes['length'] += 1
             missing_word = []
+            missing_comma = False
             for word in tokenized_right_answer:
                 if word not in tokenized_user_answer:
-                    missing_word.append(word)
+                    if word != ",":
+                        missing_word.append(word)
+                    else: 
+                        missing_comma = True
+                        context['missing_comma_feedback'] = missing_comma
             if len(missing_word) >= 2:
                 missing_words_str = " the words " 
                 for i in range(len(missing_word)):
@@ -226,11 +231,11 @@ class ShortTask():
                     else:
                         missing_words_str += " and '" + missing_word[i] + "'"
                     
-            else:
+            elif(len(missing_word) > 0):
                 missing_words_str = "the word '" + missing_word[0] + "'"
-
-            missing_word_feedback = "It seems like you missed " + missing_words_str + "."
-            context['missing_word_feedback'] = missing_word_feedback 
+                missing_word_feedback = "It seems like you missed " + missing_words_str + "."
+                context['missing_word_feedback'] = missing_word_feedback 
+            
 
         else:
             errortypes['length'] += 1

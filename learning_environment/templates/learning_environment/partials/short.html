@@ -28,5 +28,8 @@
         {% if adj_exists_feedback == False %}
         <p> Please use at least one adjective next time. </p>
         {% endif %}
+        {% if missing_comma_feedback == True %}
+        <p> Check the solution, there is at least one comma missing </p>
+        {% endif %}
     {% endif %}
 {% endif %}  
