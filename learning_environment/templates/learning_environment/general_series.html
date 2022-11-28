@@ -13,10 +13,12 @@
 
 <div class="container-fluid" style="background: #F9F9FB;">
     <div class="row">
+    <div class="row flex-nowrap">
 
         {% include "learning_environment/nav.html" %}
 
         <div class="col" style="margin-left: 18px; margin-top: 18px; padding:0;">
+        {% include "learning_environment/hamburger_offcanvas.html" %}
             {# Dashboard cards #}
             <div class="card" style="border-radius:15px; width: auto; padding: 25px; border:none;">
                 <div class="card-body">
@@ -40,6 +42,7 @@
 
             </div>
         </div>
+    </div>
 
     </div>
 
