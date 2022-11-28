@@ -10,5 +10,11 @@
         </div>
     </form>
 {% else %}
-<p> "{{ corrected_user_underlined }}" is not correct. </p>
+    {% if solved %}
+        <p> {{ success_feedback }} </p>
+    {% else %}
+        <p> '{{ user_answer }}' is not correct. </p>
+        <p> {{spelling_correction_feedback}} <br> {{adj_feedback}} <br> {{missing_word_feedback}}</p>
+        <p> {{ correct_feedback }} </p>
+        {% endif %}
 {% endif %}
