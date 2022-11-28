@@ -1,4 +1,6 @@
-# basic view login NOT required
+"""
+View elements for the different home screens.
+"""
 from django.shortcuts import render, redirect
 
 from learning_environment.models import Lesson, ProfileSeriesLevel, Profile
