@@ -10,9 +10,9 @@ from learning_environment.its.base import Json5ParseException
 class Command(BaseCommand):
     help = 'Closes the specified poll for voting'
 
-    def handle(self, *args, **options):
+    def handle(self, lesson_name='*', *args, **options):
         num_lessons_created = 0
-        for filename in glob.glob("data/lessons/lesson_*.json5"):
+        for filename in glob.glob(f"data/lessons/lesson_{lesson_name}.json5"):
             with open(filename, "r", encoding="UTF-8") as f:
                 lesson_json5 = f.read()
                 try:

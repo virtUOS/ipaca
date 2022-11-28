@@ -266,12 +266,6 @@ def automatic_lesson_create(request):
         # check whether it's valid:
         if form.is_valid():
 
-            # text = form.cleaned_data.get('text')
-            # name = form.cleaned_data.get('name')
-            # text_source= form.cleaned_data.get('text_source')
-            # text_licence = form.cleaned_data.get('text_licence')
-            # text_url = form.cleaned_data.get('text_url')
-
             data = {
                 'text': form.cleaned_data.get('text'),
                 'name': form.cleaned_data.get('name'),
@@ -282,7 +276,7 @@ def automatic_lesson_create(request):
 
             q_and_a = AutomaticJson.generate_q_a(text=data['text'])
 
-            eval_lesson_form = EvalLessonForm(q_and_a=q_and_a, initial=data) #questions=questions, answers=answers)
+            eval_lesson_form = EvalLessonForm(q_and_a=q_and_a, initial=data)
 
             return render(request, 'learning_environment/eval_lesson_form.html',
                           context={'eval_lesson_form': eval_lesson_form})
@@ -298,8 +292,6 @@ def eval_lesson_form(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         print("Process POST request!!!")
-        # create a form instance and populate it with data from the request:
-        # form = EvalLessonForm(initial=request.POST)
 
         data = {
             'text': request.POST['text'],
@@ -319,38 +311,34 @@ def eval_lesson_form(request):
         data['tasks'] = q_and_a
 
         # form = EvalLessonForm(q_and_a=q_and_a, initial=data)
-
-        # num_questions = request.POST["num_questions"]
-        # print(num_questions)
-
-        # check whether it's valid:
+        #
+        # # check whether it's valid:
         # if form.is_valid():
-            # print("form is valid")
-            # process the data in form.cleaned_data as required
-
-            # tasks = []
+        #     print("form is valid")
+        #
+        #     tasks = []
             # for i in range(form.cleaned_data.get('num_questions')):
             #     q = form.cleaned_data.get(f'Question {i+1}')
             #     a = form.cleaned_data.get(f'Answer {i+1}')
             #     tasks.append((q, a))
 
             # data = {
-           #     'text': form.cleaned_data.get('text'),
-             #   'name': form.cleaned_data.get('name'),
-           #     'text_source': form.cleaned_data.get('text_source'),
-           #     'text_licence': form.cleaned_data.get('text_licence'),
+            #    'text': form.cleaned_data.get('text'),
+            #    'name': form.cleaned_data.get('name'),
+            #    'text_source': form.cleaned_data.get('text_source'),
+            #    'text_licence': form.cleaned_data.get('text_licence'),
             #    'text_url': form.cleaned_data.get('text_url'),
-           #     'tasks': tasks
-           # }
+            #    'tasks': tasks
+            # }
 
-        AutomaticJson.create_json5(data=data)
+        if all(data.values()):
+            AutomaticJson.create_json5(data=data)
 
         # redirect back to home:
         return redirect('myhome')
 
     # if a GET (or any other method) we'll create a blank form
     else:
-        print("I am here!!!!")
         eval_lesson_form = EvalLessonForm()
 
     return render(request, 'learning_environment/eval_lesson_form.html', locals())

@@ -72,19 +72,22 @@ class AutomaticJson():
 
         template['text_url'] = data['text_url']
 
+        primary = True
         for q, a in data['tasks']:
             task = copy.deepcopy(TASK)
             task['question'] = q
             task['answer'] = a
+            task['primary'] = primary
             template['tasks'].append(task)
+            primary = False
 
         base = Path(__file__).parents[2]
-        path = "/data/lessons/lesson_automatic_" + data['name'].lower().replace(" ", "_") + ".json5"
+        path = "/data/lessons/lesson_automatic_" + template['id'] + ".json5"
         filename = str(base) + path
 
         with open(filename, "w") as fp:
-            json5.dump(template, fp)
+            json5.dump(template, fp,  indent=2)
 
         # saves automatic lessons to the database
         create_lesson = Command()
-        create_lesson.handle()
+        create_lesson.handle(lesson_name="automatic_" + template['id'])
