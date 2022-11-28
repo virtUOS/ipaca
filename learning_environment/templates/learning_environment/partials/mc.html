@@ -1,4 +1,4 @@
-<p class="card-text">{{ task.question }}</p>
+<p class="card-text">{{ task.question|safe }}</p>
 
 {% if mode == 'solve' %}
     <form method="post">
