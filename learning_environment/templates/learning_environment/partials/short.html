@@ -20,7 +20,7 @@
         {% endif %}
     {% else %}
         <p style="color:red"> '{{ user_answer }}' is not correct. </p>
-        <p> {{spelling_correction_feedback}} <br> {{adj_feedback}} <br> {{missing_word_feedback}}</p>
+        <p> {{spelling_correction_feedback}} <br> {{adj_feedback}} <br> {{missing_word_feedback}} <br> {{additional_word_feedback}}</p>
         <p> {{ correct_feedback }} </p>
         {% if enough_snippets_feedback == False %}
         <p> Please use at least three of the given snippets next time. </p>
