@@ -48,4 +48,19 @@ class AutomaticLessonCreationForm(forms.Form):
     text_url = forms.URLField()
 
 
+class EvalLessonForm(forms.Form):
+    text = forms.CharField(widget=forms.Textarea)
+    name = forms.CharField(widget=forms.HiddenInput())
+    text_source = forms.CharField(widget=forms.HiddenInput())
+    text_licence = forms.CharField(widget=forms.HiddenInput())
+    text_url = forms.URLField(widget=forms.HiddenInput())
+
+    def __init__(self, q_and_a, *args, **kwargs):
+        super(EvalLessonForm, self).__init__(*args, **kwargs)
+
+        for i, q_a in enumerate(q_and_a):
+            q = q_a[0]
+            a = q_a[1]
+            self.fields[f'Question {i+1}'] = forms.CharField(initial=q, max_length=100)
+            self.fields[f'Answer {i+1}'] = forms.CharField(initial=a, max_length=100)
 

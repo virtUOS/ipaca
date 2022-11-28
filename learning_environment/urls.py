@@ -19,6 +19,7 @@ urlpatterns = [
     path('backstage/lesson/<int:pk>', views.LessonDetailView.as_view(), name='lessondetail'),
     path('backstage/lesson/create', views.LessonCreateView.as_view(), name='lessoncreate'),
     path('backstage/lesson/automatic_create', views.automatic_lesson_create, name='automatic_lessoncreate'),
+    path('backstage/lesson/eval_lesson', views.eval_lesson_form, name='eval_lesson'),
     path('backstage/lesson/delete/<int:pk>', views.LessonDeleteView.as_view(), name='lessondelete'),
     path('backstage/dashboard/learner', views.learner_dashboard, name='learner_dashboard'),
     path('backstage/dashboard/global', views.global_dashboard, name='global_dashboard'),

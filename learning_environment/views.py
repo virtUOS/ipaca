@@ -260,7 +260,6 @@ def learner_reset(request):
 def automatic_lesson_create(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
-        print('form submitted')
         # create a form instance and populate it with data from the request:
         form = AutomaticLessonCreationForm(request.POST)
         # check whether it's valid:
@@ -274,12 +273,61 @@ def automatic_lesson_create(request):
             text_licence = form.cleaned_data.get('text_licence')
             text_url = form.cleaned_data.get('text_url')
 
+            #AutomaticJson.text_to_json5(text,name,text_source,text_licence,text_url)
+            # [questions, answers] = AutomaticJson.generate_q_and_a(text)
+            data = {
+                'text': text,
+                'name': name,
+                'text_source': text_source,
+                'text_licence': text_licence,
+                'text_url': text_url
+            }
+            q_and_a = [
+                ('question 1', 'answer 1'),
+                ("What is happening?", '42')
+            ]
+            eval_lesson_form = EvalLessonForm(q_and_a=q_and_a, initial=data) #questions=questions, answers=answers)
+            # return redirect('eval_lesson', context= {'eval_lesson_form':eval_lesson_form})
+            return render(request, 'learning_environment/eval_lesson_form.html',
+                          context={'eval_lesson_form': eval_lesson_form})
 
-            AutomaticJson.text_to_json5(text,name,text_source,text_licence,text_url)
-            return redirect('home')
+            # return redirect('home')
 
     # if a GET (or any other method) we'll create a blank form
     else:
         form = AutomaticLessonCreationForm()
 
     return render(request, 'learning_environment/automatic_lesson_form.html', locals())
+
+
+def eval_lesson_form(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = EvalLessonForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required
+            # ...
+            # redirect to a new URL:
+            text = form.cleaned_data.get('text')
+            name = form.cleaned_data.get('name')
+            text_source= form.cleaned_data.get('text_source')
+            text_licence = form.cleaned_data.get('text_licence')
+            text_url = form.cleaned_data.get('text_url')
+
+            #questions =
+            #answers =
+
+            # AutomaticJson.text_to_json5(text,name,text_source,text_licence,text_url)
+            # AutomaticJson.create_json5(text, name, text_source, text_licence, text_url, questions, answers)
+
+            return redirect('home')
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = EvalLessonForm()
+
+    return render(request, 'learning_environment/eval_lesson_form.html', locals())
+
+    return None
