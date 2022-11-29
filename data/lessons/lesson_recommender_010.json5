@@ -1,0 +1,294 @@
+                            {
+  name: "Why we study finance",  // the name that's also shown to the users
+  id: "lesson-recommender-010",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p>Finance is the lubricant that keeps our economy running smoothly. Issuing a mortgage can be profitable for a bank, but it also allows people to live in their own homes and to pay for them over time. Do MasterCard, Venmo, and PayPal make money when you use their product? Sure, but think how much more convenient and safer it is to carry a card or use an app instead of cash. In addition, these services allow you to easily track where and how you spend your money. A well-regulated and independent financial system is important to capital-based economies. Our smoothly functioning financial system has removed us from the days of strictly bartering to our system today, where transactions are as simple as a tap on your mobile phone.</p>\
+  <p>There are any number of professional and personal reasons to study finance. A search of the internet provides a long list of finance-related professions. Interviews with senior managers reveal that an understanding of financial tools and concepts is an important consideration in hiring new employees. Financial skills are among the most important tools for advancement toward greater responsibility and remuneration. Government and work-guaranteed pension benefits are growing less common and less generous, meaning individuals must take greater responsibility for their personal financial well-being now and at retirement.</p>",
+  text_source: "Why we study finance",
+  text_licence: "CC BY 4.0",
+  text_url: "https://openstax.org/books/principles-finance/pages/1-1-what-is-finance",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading, Scanning",
+        type: "R",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Decide if the information in the statement is True or False according to the information in the reading passage.</p>\
+        <p>1. It is finance that ensures the operation of our economy. _1_</p>\
+        <p>2. Issuing a mortgage is not profitable for the bank, but it is beneficial for people because they can live in houses, and pay for them over time. _2_</p>\
+        <p>3. It's safer and more convenient to use cards like MasterCard, Venmo and PayPal than to carry cash. _3_</p>\
+        <p>4. Understanding of financial instruments and concepts does not play an important role in hiring. _4_</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True” because the text says “Finance is the lubricant that keeps our economy running smoothly.”."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True” because the text says “Finance is the lubricant that keeps our economy running smoothly.”."
+            }
+          ],
+          _2_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “False” because the text says “Issuing a mortgage can be profitable for a bank, but it also allows people to live in their own homes and to pay for them over time.”."
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False” because the text says “Issuing a mortgage can be profitable for a bank, but it also allows people to live in their own homes and to pay for them over time.”."
+            }
+          ],
+          _3_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True” because the text says  “Do MasterCard, Venmo, and PayPal make money when you use their product? Sure, but think how much more convenient and safer it is to carry a card or use an app instead of cash.”."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True” because the text says  “Do MasterCard, Venmo, and PayPal make money when you use their product? Sure, but think how much more convenient and safer it is to carry a card or use an app instead of cash.”."
+            }
+          ],
+          _4_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “False” because the text says “Interviews with senior managers reveal that an understanding of financial tools and concepts is an important consideration in hiring new employees.”."
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False” because the text says “Interviews with senior managers reveal that an understanding of financial tools and concepts is an important consideration in hiring new employees.”."
+            }
+          ]
+        },
+      },
+      {
+        // Type 2, task 1
+        name: "Vocabulary Issues",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their definitions.</p><p>\
+        1. a principle or idea <br>\
+        2. (the management of) a supply of money <br>\
+        3. a helpful or good effect, or something intended to help <br>\
+        4. the system of trade and industry by which the wealth of a country is made and used <br>\
+        5. a single person or thing, especially when compared to the group or set to which they belong <br>\
+        6. a subject or problem that people are thinking and talking about</p>",
+        paragraphs: ["Concept","Finance","Benefit","Economy","Individual","IndiIssuevidual"],
+      },
+      {
+        // Type 3, task 1
+        name: "Main tenses",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose correct variant</p>\
+        <p>Finance is the lubricant that \
+        _1_ our economy running smoothly. Issuing a mortgage can be profitable for a bank, but it also \
+        _2_ people to live in their own homes and to pay for them over time. Do MasterCard, Venmo, and PayPal \
+        _3_ money when you use their product? Sure, but think how much more convenient and safer it is to carry a card or use an app instead of cash. In addition, these services \
+        _4_ you to easily track where and how you \
+        _5_ your money. A well-regulated and independent financial system is important to capital-based economies. Our smoothly functioning financial system \
+        _6_ us from the days of strictly bartering to our system today, where transactions are as simple as a tap on your mobile phone.</p>\
+        <p>There are any number of professional and personal reasons to study finance. A search of the internet \
+        _7_ a long list of finance-related professions. Interviews with senior managers \
+        _8_ that an understanding of financial tools and concepts is an important consideration in hiring new employees. Financial skills are among the most important tools for advancement toward greater responsibility and remuneration. Government and work-guaranteed pension benefits are growing less common and less generous, meaning individuals must take greater responsibility for their personal financial well-being now and at retirement.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "keep",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is keeping",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are keeping",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "keeps",
+              correct: true,
+              feedback: "That's correct, because we use the present simple for general truths and laws of nature. We usually add an -s to the third person singular in affirmative."
+            }
+          ],
+          _2_: [
+            {
+              text: "allows",
+              correct: true,
+              feedback: "That's correct, because we use the present simple for permanent states, repeated actions and daily routines. We usually add an -s to the third person singular in affirmative."
+            },
+            {
+              text: "has allowed",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is allowing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are allowing",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _3_: [
+            {
+              text: "makes",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "make",
+              correct: true,
+              feedback: "That's correct, because we use the present simple for permanent states, repeated actions and daily routines."
+            },
+            {
+              text: "are making",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has maked",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "allows",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "allow",
+              correct: true,
+              feedback: "That's correct, because we use the present simple for permanent states, repeated actions and daily routines."
+            },
+            {
+              text: "is allowing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has allowed",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _5_: [
+            {
+              text: "spend",
+              correct: true,
+              feedback: "That's correct, because we use the present simple for permanent states, repeated actions and daily routines."
+            },
+            {
+              text: "spends",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are spending",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is spending",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _6_: [
+            {
+              text: "remove",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has remove",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has been removing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has removed",
+              correct: true,
+              feedback: "That's correct, because we use the present perfect for an action which has recently finished and whose result is visible in the present."
+            }
+          ],
+          _7_: [
+            {
+              text: "provide",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "provides",
+              correct: true,
+              feedback: "That's correct, because we use the present simple for permanent states, repeated actions and daily routines. We usually add an -s to the third person singular in affirmative."
+            },
+            {
+              text: "is providing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has provided",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _8_: [
+            {
+              text: "is revealing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has revealed",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has been revealed",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "reveal",
+              correct: true,
+              feedback: "That's correct, because we use the present simple for permanent states, repeated actions and daily routines."
+            }
+          ],
+        },
+      }
+    ] // end of tasks
+
+} // end of lesson
