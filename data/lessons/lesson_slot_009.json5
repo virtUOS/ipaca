@@ -191,7 +191,7 @@
         primary: true, // the primary task will be shown first, non-primary tasks are for repetition
         show_lesson_text: false,  // Shall we show the lesson reading text? true/false
         question: "<p>What does it mean?</p>\
-         <p>“The benefits of digital learning for employers are vast...”</p>",
+         <em>“The benefits of digital learning for employers are vast...”</em>",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
           {
             text: "There are a lot of benefits of digital learning for employers",
@@ -223,7 +223,7 @@
         primary: true, // the primary task will be shown first, non-primary tasks are for repetition
         show_lesson_text: false,  // Shall we show the lesson reading text? true/false
         question: "<p>Сhoose synonyms for the highlighted word in the fragment:</p>\
-         <p>“… uninformed workers causing costly workplace errors.”</p>",
+         <em>“… uninformed workers causing costly workplace errors.”</em>",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
           {
             text: "eduneducated, unknowledgeable, untaught, well-prepared",
@@ -236,12 +236,12 @@
             feedback: "'No, that\'s not correct.'"
           },
           {
-            text: "unenlighten, eduneducated, knowledgeable, untaught",
+            text: "unenlightend, eduneducated, knowledgeable, untaught",
             correct: false,
             feedback: "'No, that\'s not correct.'"
           },
           {
-            text: "unenlighten, eduneducated, unknowledgeable, untaught",
+            text: "unenlightend, eduneducated, unknowledgeable, untaught",
             correct: true,
             feedback: "That is correct."
           },
@@ -255,7 +255,7 @@
         primary: true, // the primary task will be shown first, non-primary tasks are for repetition
         show_lesson_text: false,  // Shall we show the lesson reading text? true/false
         question: "<p>Сhoose an antonym for the highlighted word in the fragment:</p>\
-         <p>“It is a ____cost-effective_____ benefit...”</p>",
+         <p>“It is a <u>cost-effective</u> benefit...”</p>",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
           {
             text: "well-paid",
@@ -287,7 +287,7 @@
         primary: true, // the primary task will be shown first, non-primary tasks are for repetition
         show_lesson_text: false,  // Shall we show the lesson reading text? true/false
         question: "<p>How would a rephrase look like?</p>\
-        <p>“…a well-prepared workforce ready to do the job at hand...”</p>",
+        <em>“…a well-prepared workforce ready to do the job at hand...”</em>",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
           {
             text: "a highly trained workforce not ready to work",
@@ -318,8 +318,8 @@
         interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
         primary: true, // the primary task will be shown first, non-primary tasks are for repetition
         show_lesson_text: false,  // Shall we show the lesson reading text? true/false
-        question: "<h3>What does it mean?</h3>\
-        <p>“The old-school way of training employees...”</p>",
+        question: "<p>What does it mean?</p>\
+        <em>“The old-school way of training employees...”</em>",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
           {
             text: "The way of training is obsolete ",
@@ -391,7 +391,7 @@
           mode: 'select',
           _1_: [
             {
-              text: "should have goneb",
+              text: "should have gone",
               correct: true,
               feedback: "That is correct."
             },
@@ -441,7 +441,7 @@
               feedback: 'No, that\'s not correct.'
             },
             {
-              text: 'is to',
+              text: 'must',
               correct: true,
               feedback: 'That is correct.'
             },
@@ -458,12 +458,7 @@
               feedback: 'No, that\'s not correct.'
             },
             {
-              text: 'have to',
-              correct: false,
-              feedback: 'No, that\'s not correct.'
-            },
-            {
-              text: 'is to',
+              text: 'must not',
               correct: true,
               feedback: 'That is correct.'
             },
