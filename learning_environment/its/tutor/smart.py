@@ -20,7 +20,7 @@ class SmartTutorModel(BaseTutorModel):
             request.session['current_lesson_todo'].pop(0)
             next_type, task = self._get_next_step(request, lesson)
         else:
-            user_levels = self._get_user_levels()
+            user_levels = self._get_user_levels(next_type)
 
             current_user_level = 0
             for ind, user in enumerate(user_levels):
@@ -53,8 +53,8 @@ class SmartTutorModel(BaseTutorModel):
         return task_difficulties
 
     @staticmethod
-    def _get_user_levels():
-        query_set = Solution.objects.values('user', 'solved').annotate(count=Count('id')).order_by('user', 'solved')
+    def _get_user_levels(next_type: str):
+        query_set = Solution.objects.values('user', 'solved').filter(type=next_type).annotate(count=Count('id')).order_by('user', 'solved')
         levels = []
 
         correct_answers = 0
