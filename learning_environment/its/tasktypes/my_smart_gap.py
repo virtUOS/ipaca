@@ -6,7 +6,6 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from spellchecker import SpellChecker
 from happytransformer import HappyTextToText, TTSettings, HappyWordPrediction
-from short_snippets import syllable_count, adj_to_rule
 
 from learning_environment.its.base import Json5ParseException
 
@@ -152,10 +151,10 @@ class GapTask():
                         vow_count += stem_adj.count(v)
                     if (vow_count <= 1) and (stem_adj[-1] not in vowels) and (stem_adj[-2] in vowels): # one vowel and one consonant at end
                         feedback_rule = stem_adj + '-' + stem_adj + stem_adj[-1] + 'er-' + stem_adj + stem_adj[-1] + 'est'
-                        feedback_rule = "Adjectives with one vowel and ending with one constant are formed by doubling the last constant and adding -er for comparatives and -est for superlatives, e.g. " + feedback_rule
+                        feedback_rule = "Adjectives with one vowel and ending with one consonant are formed by doubling the last consonant and adding -er for comparatives and -est for superlatives, e.g. " + feedback_rule
                     else: # more than one vowel oder more than one consonant at end
                         feedback_rule = stem_adj + '-' + stem_adj + 'er-' + stem_adj + 'est'
-                        feedback_rule = "Adjectives with one syllable, not ending with -e and with more than one vowel or ending with more than one constant are formed by adding -er for comparatives and -est for superlatives, e.g. " + feedback_rule
+                        feedback_rule = "Adjectives with one syllable, not ending with -e and with more than one vowel or ending with more than one consonant are formed by adding -er for comparatives and -est for superlatives, e.g. " + feedback_rule
 
             elif (syl_count >= 2):
                 # 5. two or more syllables
@@ -174,7 +173,8 @@ class GapTask():
     def analyze_solution(self, solution):
         analysis = {'solved': True, 'solution': {}}
         context = {'mode': 'result'}
-        print(self.task.content) 
+       
+    
         for i in range(len(self.task.content)):  # iterate over list of text parts and gaps
             if 'name' in self.task.content[i]:  # if it's a gap
                 sol = solution.get('solution-{}-{}'.format(self.task.id, self.task.content[i]['name']), ['---'])
@@ -185,79 +185,137 @@ class GapTask():
                 full_sentence = (sentence_start + sol + sentence_end).strip() #full sentence includes users gap choice
                 print(full_sentence)
 
-                errortypes = {'spelling': 0, 'grammar': 0, 'length': 0}
-                tokenized_user_answer = nltk.word_tokenize(full_sentence)
-                s_error = dict.fromkeys(tokenized_user_answer)
-                print("Tokenized user answer: ")
-                print(tokenized_user_answer)
+        errortypes = {'spelling': 0, 'grammar': 0, 'length': 0}
+        tokenized_user_answer = nltk.word_tokenize(full_sentence)
+        s_error = dict.fromkeys(tokenized_user_answer)
+        print("Tokenized user answer: ")
+        print(tokenized_user_answer)
 
-                spelling_replacements= {}
-                spelling_array= []
-                #Spelling Correction
-                user_answer_corr = full_sentence
-                for i in range(len(tokenized_user_answer)):
-                    tok_word = tokenized_user_answer[i]
-                    # if word is unknown, then it is not spelled correctly and hence will remain in the array
-                    if len(spell.unknown([tok_word])) > 0:
-                        # replace the incorrect word with the `most likely` substitution
-                        corr_word = spell.correction(tok_word)
-                        tokenized_user_answer[i] = corr_word
-                        user_answer_corr = user_answer_corr.replace(tok_word, corr_word)
-                        spelling_replacements[corr_word] = tok_word
-                        print("replacements: ")
-                        print(spelling_replacements)
-                        print("user answer corr: ")
-                        print(user_answer_corr)
-                        spelling_array.append("You typed '" + tok_word + "' did you mean '" + corr_word + "'?")
-                        errortypes['spelling'] += 1
-                        s_error[tok_word] = 'spelling_error'
-                        spelling_correction_feedback = ' '.join(spelling_array)
-                        print("spelling correction feedback: ")
-                        print(spelling_correction_feedback)
-                        context ['spelling_correction_feedback'] = spelling_correction_feedback
+        spelling_replacements= {}
+        spelling_array= []
+        #Spelling Correction
+        user_answer_corr = full_sentence
+        for i in range(len(tokenized_user_answer)):
+            tok_word = tokenized_user_answer[i]
+            # if word is unknown, then it is not spelled correctly and hence will remain in the array
+            if len(spell.unknown([tok_word])) > 0:
+                # replace the incorrect word with the `most likely` substitution
+                corr_word = spell.correction(tok_word)
+                tokenized_user_answer[i] = corr_word
+                user_answer_corr = user_answer_corr.replace(tok_word, corr_word)
+                spelling_replacements[corr_word] = tok_word
+                print("replacements: ")
+                print(spelling_replacements)
+                print("user answer corr: ")
+                print(user_answer_corr)
+                spelling_array.append("You typed '" + tok_word + "' did you mean '" + corr_word + "'?")
+                errortypes['spelling'] += 1
+                s_error[tok_word] = 'spelling_error'
+                spelling_correction_feedback = ' '.join(spelling_array)
+                print("spelling correction feedback: ")
+                print(spelling_correction_feedback)
+                context ['spelling_correction_feedback'] = spelling_correction_feedback
+
+        #generate right answer with happy transformer
+        right_answer = self.happy_tt.generate_text(user_answer_corr, args=self.beam_settings).text
+        print("right answer: ")
+        print(right_answer)
+        tokenized_right_answer = nltk.word_tokenize(right_answer)
+        print("tokenized right answer: ")
+        print(tokenized_right_answer)
+
+        #search adjective
+        user_adj_sen = sp(right_answer)
+        adj_exists = False
+        for i in range(len(tokenized_right_answer)):
+            tag = spacy.explain(user_adj_sen[i].tag_)
+            if(tag.split(",")[0] == "adjective"):
+                adj_exists = True
+                if len(spelling_replacements) > 0:
+                    if s_error[spelling_replacements[tokenized_right_answer[i]]] is not None:
+                        adj_feedback = GapTask.adj_to_rule(tokenized_right_answer[i])
+                        context['adj_feedback'] = adj_feedback 
+                else:
+                    if s_error[tokenized_right_answer[i]] is not None:
+                        adj_feedback = GapTask.adj_to_rule(tokenized_right_answer[i])
+                        context['adj_feedback'] = adj_feedback 
+
+        context['adj_exists_feedback'] = adj_exists       
 
 
-                user_adj_sen = sp(right_answer)
-                adj_exists = False
-                for i in range(len(tokenized_right_answer)):
-                    tag = spacy.explain(user_adj_sen[i].tag_)
-                    print(user_adj_sen[i])
-                    print(tag)
-                    if(tag.split(",")[0] == "adjective"):
-                        adj_exists = True
-                        if len(spelling_replacements) > 0:
-                            if s_error[spelling_replacements[tokenized_right_answer[i]]] is not None:
-                                adj_feedback = GapTask.adj_to_rule(tokenized_right_answer[i])
-                                context['adj_feedback'] = adj_feedback 
-                        else:
-                            if s_error[tokenized_right_answer[i]] is not None:
-                                adj_feedback = GapTask.adj_to_rule(tokenized_right_answer[i])
-                                context['adj_feedback'] = adj_feedback 
 
-                context['adj_exists_feedback'] = adj_exists       
+        #lemmatize: 
+        lemmatized_user_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_user_answer]
+        lemmatized_right_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_right_answer]
 
+        print("lem right answer: ")
+        print(lemmatized_right_answer)
+        print("lem_user: ")
+        print(lemmatized_user_answer)
 
+        adj_in_paranthese = []
+        #check whether all words in the solution are also in the user solution
+        for i in range(len(tokenized_user_answer)):
+            if tokenized_user_answer[i] == "(":
+                if len(tokenized_user_answer) >= i+2:
+                    adj_in_paranthese.append(tokenized_user_answer[i+1])
+        print("adj in par: ")
+        print(adj_in_paranthese)
 
+        adj_used = False
+        for word in lemmatized_right_answer:
+            for i in adj_in_paranthese:
+                if word in adj_in_paranthese:
+                    adj_used = True
+        
+        context['adj_used_feedback'] = adj_used 
 
-                #generate right answer with happy transformer
-                right_answer = self.happy_tt.generate_text(user_answer_corr, args=self.beam_settings).text
-                print("right answer: ")
-                print(right_answer)
-                tokenized_right_answer = nltk.word_tokenize(right_answer)
-                print("tokenized right answer: ")
-                print(tokenized_right_answer)
+    
+        print("adj_used_feedback ")
+        print(adj_used)
+
+        if sol != '---':
+            
+            if sum(errortypes.values()) == 0 :
+                for o in self.task.content[i]['options']:
+                    o['feedback'] = "Congratulations! There was no mistake."
+                    context['success_feedback'] = o['feedback']
+                    analysis['solved'] = True
+                    gap_solved = True
+
+                    correct = True
+                    analysis['correct'] = correct
+                    context['correct'] = correct
                 
-                if sol != '---':
-                    for o in self.task.content[i]['options']:
-                        o['text'] = right_answer
-                        if o['text'] == sol and o['correct']:
-                            gap_solved = True
-                            break
-                self.task.content[i]['solved'] = gap_solved  # TODO: Find a proper solution, this is monkey patching...
-                self.task.content[i]['solution'] = sol  # TODO: Find a proper solution, this is monkey patching...
-                if not gap_solved:
-                    analysis['solved'] = False
+            
+            self.task.content[i]['solved'] = gap_solved  
+            self.task.content[i]['solution'] = right_answer
 
+            if not gap_solved:  
+                analysis['solved'] = False
+                context['mode'] = "result" 
+                context['user_answer'] = full_sentence
+                
+                context['correct_feedback'] = "A correct solution would be '"+ right_answer + "'."
+
+                correct = False
+                analysis['correct'] = correct
+
+        
+
+
+        """
+        if sol != '---':
+            for o in self.task.content[i]['options']:
+                o['text'] = right_answer
+                if o['text'] == sol and o['correct']:
+                    gap_solved = True
+                    break
+        self.task.content[i]['solved'] = gap_solved  # TODO: Find a proper solution, this is monkey patching...
+        self.task.content[i]['solution'] = sol  # TODO: Find a proper solution, this is monkey patching...
+        if not gap_solved:
+            analysis['solved'] = False
+        """
         return (analysis, context)
 
 

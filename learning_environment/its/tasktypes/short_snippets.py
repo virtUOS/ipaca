@@ -53,7 +53,7 @@ class ShortTask():
 
     # number of syllables check function
     
-    def syllable_count(word):
+    def syllable_count(word): 
         '''
         Counts the number of syllables of a given word.
         
@@ -119,10 +119,10 @@ class ShortTask():
                         vow_count += stem_adj.count(v)
                     if (vow_count <= 1) and (stem_adj[-1] not in vowels) and (stem_adj[-2] in vowels): # one vowel and one consonant at end
                         feedback_rule = stem_adj + '-' + stem_adj + stem_adj[-1] + 'er-' + stem_adj + stem_adj[-1] + 'est'
-                        feedback_rule = "Adjectives with one vowel and ending with one constant are formed by doubling the last constant and adding -er for comparatives and -est for superlatives, e.g. " + feedback_rule
+                        feedback_rule = "Adjectives with one vowel and ending with one consonant are formed by doubling the last consonant and adding -er for comparatives and -est for superlatives, e.g. " + feedback_rule
                     else: # more than one vowel oder more than one consonant at end
                         feedback_rule = stem_adj + '-' + stem_adj + 'er-' + stem_adj + 'est'
-                        feedback_rule = "Adjectives with one syllable, not ending with -e and with more than one vowel or ending with more than one constant are formed by adding -er for comparatives and -est for superlatives, e.g. " + feedback_rule
+                        feedback_rule = "Adjectives with one syllable, not ending with -e and with more than one vowel or ending with more than one consonant are formed by adding -er for comparatives and -est for superlatives, e.g. " + feedback_rule
 
             elif (syl_count >= 2):
                 # 5. two or more syllables
@@ -225,8 +225,11 @@ class ShortTask():
                 user_word = tokenized_user_answer[i]
                 right_word = tokenized_right_answer[i]
                 if right_word != user_word:
-                        errortypes['grammar'] += 1
-                        s_error[user_word] = 'grammar_error'
+                    spelling_replacements[right_word] = user_word
+                    print("replacements: ")
+                    print(spelling_replacements)    
+                    errortypes['grammar'] += 1
+                    s_error[user_word] = 'grammar_error'
 
         # user answer is too short, needed argumets are missing
         elif(len(tokenized_user_answer) <= len(tokenized_right_answer)):
@@ -369,12 +372,6 @@ class ShortTask():
 
 
         #context['feedback'] = feedback # display to try again 
-        
-         
-         
-        
-
-        
 
         return (analysis, context)
 
