@@ -23,7 +23,7 @@
 
     <style>
 
-    @media only screen and (min-width: 701px) {
+    @media only screen and (min-width: 961px) {
       /* hide the hamburger */
       .hamburger {
         display: none;
@@ -35,7 +35,7 @@
     }
     /* if browser window is small (max-width) */
 
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 960px) {
       /* show everything with the hamburger class */
       .hamburger {
         display: block;
@@ -51,19 +51,20 @@
 </head>
 
 <body id="base">
-<div style="padding-bottom: 70px;">
+
 
 <main class="">
     <div class=" ">
         {% block header %}{% endblock %}
     </div>
 
-    <div class="" style="padding:0;">
+    <div class="container-fluid" style="padding:0;">
     {% block content %}No content{% endblock %}
     </div>
 
-    <footer class="footer" style="display:none;">
-        <div class="container-footer" style="background-color:white; bottom:0; padding-left: 30%;left: 0; right:0; font-size: 15px; font-weight: bold; width: 100%; position: absolute;">
+    {% if request.user.is_superuser %}
+    <footer class="footer">
+        <div class="container-footer text-center bold" style="background-color:white; line-height: 1em; padding:1.5em;">
             {% if request.user.is_authenticated %}
                 Commands:
                 <a href="{%  url 'tasklist' %}">List all tasks</a>  &middot;
@@ -74,6 +75,7 @@
             {% endif %}
         </div>
     </footer>
+    {% endif %}
 
 </main>
 
@@ -86,7 +88,7 @@
     {% block js %}
     {% endblock %}
 </script>
-</div>
+
 
 </body>
 </html>
