@@ -333,9 +333,12 @@ def eval_lesson_form(request):
 
         if all(data.values()):
             AutomaticJson.create_json5(data=data)
+            # redirect back to home:
+            return redirect('myhome')
+        else:
+            messages.info(request, "Make sure all fields are complete")
 
-        # redirect back to home:
-        return redirect('myhome')
+
 
     # if a GET (or any other method) we'll create a blank form
     else:

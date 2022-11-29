@@ -73,8 +73,10 @@ class AutomaticJson():
         template['text_url'] = data['text_url']
 
         primary = True
-        for q, a in data['tasks']:
+        for i,(q, a) in enumerate(data['tasks']):
             task = copy.deepcopy(TASK)
+
+            task['name'] = data['name'] + f" task {i}"
             task['question'] = q
             task['answer'] = a
             task['primary'] = primary
