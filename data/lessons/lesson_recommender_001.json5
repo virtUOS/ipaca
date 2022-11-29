@@ -2,7 +2,7 @@
   name: "Media, Society, Culture and You - Part 1",  // the name that's also shown to the users
   id: "lesson-recommender-001",        // an internal id, will never be shown, but important to identify the lesson
   author: "Robin Gratz",    // used for documentation, will not be shown to the user
-  version: 2,                 // if you revise your lesson, give it a higher version number each time
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
   series: "Recommender",
   text: "<p><strong>A</strong> On social media platforms, media consumers have the ability to add their <strong>input</strong> and criticism, and this is an important function for users. Not only do we have a say as audience members in the content we would like to see, read and hear, but we also have an important role to play in society as voting citizens holding their elected officials <strong>accountable</strong>.</p>\
   <p><strong>B</strong> If social media platforms were only filled with mass media content, individual user comments, and their own homegrown content, digitally networked communication would be complex enough, but there are other forces at work. Rogue individuals, hacker networks and botnets — computers programmed to create false social media accounts, websites and other digital properties — can contribute content alongside messages produced by <strong>professionals</strong> and legitimate online community members. False presences on social media channels can <strong>amplify</strong> hate and misinformation and can stoke <strong>animosity</strong> between groups in a hyper-partisan media age.</p>\
@@ -14,7 +14,7 @@
     tasks: [  // the list of tasks for this lesson
       {
         // Type 1, task 1
-        name: "Reading, Scanning",
+        name: "Choose wisely",
         type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
         interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
         primary: false, // the primary task will be shown first, non-primary tasks are for repetition
@@ -40,7 +40,7 @@
       },
       {
         // Type 1, task 2
-        name: "Reading, Scanning",
+        name: "Choose wisely",
         type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
         interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
         primary: false, // the primary task will be shown first, non-primary tasks are for repetition
@@ -66,7 +66,7 @@
       },
       {
         // Type 1, task 3
-        name: "Reading, Scanning",
+        name: "Choose wisely",
         type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
         interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
         primary: false, // the primary task will be shown first, non-primary tasks are for repetition
@@ -92,7 +92,7 @@
       },
       {
         // Type 2, task 1
-        name: "Main Tenses",
+        name: "Parallel structures with infinitives",
         type: "GS",
         interaction: "SC",
         primary: false,
@@ -123,7 +123,7 @@
       },
       {
         // Type 2, task 2
-        name: "Main Tenses",
+        name: "Parallel structures with correlative conjunctions",
         type: "GS",
         interaction: "SC",
         primary: false,
@@ -149,7 +149,7 @@
       },
       {
         // Type 2, task 3
-        name: "Main Tenses",
+        name: "Parallel structures with infinitives",
         type: "GS",
         interaction: "SC",
         primary: false,
@@ -175,7 +175,7 @@
       },
       {
         // Type 2, task 4
-        name: "Main Tenses",
+        name: "Parallel structures with nouns",
         type: "GS",
         interaction: "SC",
         primary: false,
@@ -201,7 +201,7 @@
       },
       {
         // Type 2, task 5
-        name: "Main Tenses",
+        name: "Parallel structures with correlative conjunctions",
         type: "GS",
         interaction: "SC",
         primary: false,
@@ -232,7 +232,7 @@
       },
       {
         // Type 2, task 6
-        name: "Main Tenses",
+        name: "Parallel structures with modal verbs",
         type: "GS",
         interaction: "SC",
         primary: false,
@@ -263,7 +263,7 @@
       },
       {
         // Type 2, task 7
-        name: "Main Tenses",
+        name: "Parallel structures with clauses",
         type: "GS",
         interaction: "SC",
         primary: false,
@@ -289,7 +289,7 @@
       },
       {
         // Type 3, task 1
-        name: "Vocabulary Issues",
+        name: "Synonym or antonym?",
         type: "V",
         interaction: "SC",
         primary: false,
@@ -310,7 +310,7 @@
       },
       {
         // Type 3, task 2
-        name: "Vocabulary Issues",
+        name: "Synonym or antonym?",
         type: "V",
         interaction: "SC",
         primary: false,
@@ -331,7 +331,7 @@
       },
       {
         // Type 3, task 3
-        name: "Vocabulary Issues",
+        name: "Synonym or antonym?",
         type: "V",
         interaction: "SC",
         primary: false,
@@ -352,7 +352,7 @@
       },
       {
         // Type 3, task 4
-        name: "Vocabulary Issues",
+        name: "Synonym or antonym?",
         type: "V",
         interaction: "SC",
         primary: false,
@@ -373,7 +373,7 @@
       },
       {
         // Type 3, task 5
-        name: "Vocabulary Issues",
+        name: "Synonym or antonym?",
         type: "V",
         interaction: "SC",
         primary: false,
@@ -394,7 +394,7 @@
       },
       {
         // Type 3, task 6
-        name: "Vocabulary Issues",
+        name: "Synonym or antonym?",
         type: "V",
         interaction: "SC",
         primary: false,
