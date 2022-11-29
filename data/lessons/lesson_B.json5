@@ -195,7 +195,7 @@
       gaps: {
         mode: 'fillin',
         _1_: [
-          { text: 'doesn`t', correct: true, feedback: "Correct!"},
+          { text: "doesn't", correct: true, feedback: "Correct!"},
         ],
       },
     },
