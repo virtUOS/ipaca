@@ -1,0 +1,253 @@
+                            {
+  name: "Introduction to anthropology",  // the name that's also shown to the users
+  id: "lesson-recommender-011",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p><strong>A</strong> Anthropology, the study of humanity, is guided by a central narrative and set of research commitments. Anthropology aims to overcome bias by examining cultures as complex, integrated products of specific environmental and historical conditions. Anthropologists use many different research strategies in their efforts to represent people from cultures very different from their own.</p>\
+  <p><strong>B</strong> Anthropology explores controversial topics that may challenge individual assumptions and values. The goal is to understand the full experience of humanity, including elements that may seem unfamiliar or uncomfortable. Anthropology teaches a set of skills for setting aside personal perspectives and keeping an open mind while learning about the diversity of human practices and ideas.</p>\
+  <p><strong>C</strong> Anthropologists call this process of acquiring our particular culture enculturation. All humans go through this process. It is natural to value the particular knowledge gained through our own process of enculturation because we could not survive without it. It is natural to respect the instruction of our parents and teachers who want us to do well in life. It is good to be proud of who we are and where we came from. However, just as egocentrism is tiresome, it can be harmful for people to consider their own culture so superior that they cannot appreciate the unique qualities and accomplishments of other cultures. When people are so convinced that their own culture is more advanced, morally superior, efficient, or just plain better than any other culture, we call that ethnocentrism. When people are ethnocentric, they do not value the perspectives of people from other cultures, and they do not bother to learn about or consider other ways of doing things.</p>",
+  text_source: "Introduction to anthropology",
+  text_licence: "CC BY 4.0",
+  text_url: "https://openstax.org/details/books/introduction-anthropology",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading, Scanning",
+        type: "R",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Choose a paragraph in which was mentioned that</p>\
+        <p>1. Controversial issues are explored by anthropology, and its purpose arises from understanding the whole human experience. _1_</p>\
+        <p>2. It is quite normal and natural to value the knowledge gained through experience and to respect the instructions of parents who only want the best for us. _2_</p>\
+        <p>3. By studying cultures, anthropology seeks to overcome bias. _3_</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "A",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "B",
+              correct: true,
+              feedback: "That's correct, because the text says “Anthropology explores controversial topics…; The goal is to understand the full experience of humanity”"
+            },
+            {
+              text: "C",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _2_: [
+            {
+              text: "A",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "B",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "C",
+              correct: true,
+              feedback: "That's correct, because the text says “It is natural to value the particular knowledge gained through our own process of enculturation…; It is natural to respect the instruction of our parents and teachers who want us to do well in life”."
+            }
+          ],
+          _3_: [
+            {
+              text: "A",
+              correct: true,
+              feedback: "That's correct, because the text says “Anthropology aims to overcome bias by examining cultures as complex”."
+            },
+            {
+              text: "B",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "C",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ]
+        },
+      },
+      {
+        // Type 2, task 1
+        name: "Vocabulary Issues",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their antonyms:</p><p>\
+        1. bias <br>\
+        2. diversity <br>\
+        3. controversial <br>\
+        4. to survive <br>\
+        5. to appreciate <br>\
+        6. unique <br>\
+        7. to convince</p>",
+        paragraphs: ["objectivity","similarity","definite","to die","to depreciate","common","to discourage"],
+      },
+      {
+        // Type 3, task 1
+        name: "To Infinitive",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose correct variant</p>\
+        <p>Anthropology, the study of humanity, is guided by a central narrative and set of research commitments. Anthropology aims \
+        _1_ bias by examining cultures as complex, integrated products of specific environmental and historical conditions. Anthropologists use many different research strategies in their efforts \
+        _2_ people from cultures very different from their own.</p>\
+        <p>Anthropology explores controversial topics that may challenge individual assumptions and values. The goal is to understand the full experience of humanity, including elements that may seem unfamiliar or uncomfortable. Anthropology teaches a set of skills for setting aside personal perspectives and keeping an open mind while learning about the diversity of human practices and ideas.</p>\
+        <p>Anthropologists call this process of acquiring our particular culture enculturation. All humans go through this process. It is natural \
+        _3_ the particular knowledge gained through our own process of enculturation because we could not survive without it. It is natural \
+        _4_ the instruction of our parents and teachers who want us to do well in life. It is good \
+        _5_ who we are and where we came from. However, just as egocentrism is tiresome, it can be harmful for people \
+        _6_ their own culture so superior that they cannot appreciate the unique qualities and accomplishments of other cultures. When people are so convinced that their own culture is more advanced, morally superior, efficient, or just plain better than any other culture, we call that ethnocentrism. When people are ethnocentric, they do not value the perspectives of people from other cultures, and they do not bother to learn about or consider other ways of doing things.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "to be overcoming",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to have overcome",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to overcome",
+              correct: true,
+              feedback: "That's correct, because it is refers to the present. It means that it is present infinitive."
+            },
+            {
+              text: "overcoming",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _2_: [
+            {
+              text: "representing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to have represent",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to be representing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to represent",
+              correct: true,
+              feedback: "That's correct, because it is refers to the present. It means that it is present infinitive."
+            }
+          ],
+          _3_: [
+            {
+              text: "to value",
+              correct: true,
+              feedback: "That's correct, because it is refers to the present. It means that it is present infinitive."
+            },
+            {
+              text: "to have value",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "valuing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to be valuing",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "respecting",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to respect",
+              correct: true,
+              feedback: "That's correct, because it is refers to the present. It means that it is present infinitive."
+            },
+            {
+              text: "to have respect",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to be respecting",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _5_: [
+            {
+              text: "to be proud of",
+              correct: true,
+              feedback: "That's correct, because it is refers to the present. It means that it is present infinitive."
+            },
+            {
+              text: "to proud of",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to be prouding of",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to have proud of",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _6_: [
+            {
+              text: "to have consider",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "considering",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to be considering",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to consider",
+              correct: true,
+              feedback: "That's correct, because it is refers to the present. It means that it is present infinitive."
+            }
+          ]
+        },
+      }
+    ] // end of tasks
+
+} // end of lesson
