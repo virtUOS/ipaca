@@ -238,26 +238,12 @@ def learner_reset(request):
         return redirect("home")
 
 
-# class AutomaticLessonCreateView (LoginRequiredMixin, FormView):
-#
-#
-#     def post(self, request):
-#         form = AutomaticLessonCreationForm(request.POST)
-#         if form.is_valid():
-#             print('hi')
-#             text = form.cleaned_data.get('text')
-#             AutomaticJson.text_to_json5(text)
-#             return redirect('home')
-#         else:
-#             msg = form.errors
-#         return render(request, 'learning_environment/lesson_form.html', locals())
-#
-#     def get(self, request):
-#         print('hi')
-#         form = AutomaticLessonCreationForm()
-#         return render(request, 'learning_environment/automatic_lesson_form.html', locals())
-
 def automatic_lesson_create(request):
+    """
+    This view processes the form for the automatic lesson creation
+    and generates questions and answers based on a text.
+    """
+
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
@@ -266,6 +252,7 @@ def automatic_lesson_create(request):
         # check whether it's valid:
         if form.is_valid():
 
+            # extract data from form
             data = {
                 'text': form.cleaned_data.get('text'),
                 'name': form.cleaned_data.get('name'),
@@ -273,9 +260,10 @@ def automatic_lesson_create(request):
                 'text_licence': form.cleaned_data.get('text_licence'),
                 'text_url': form.cleaned_data.get('text_url')
             }
-
+            # generate questions and answers
             q_and_a = AutomaticJson.generate_q_a(text=data['text'])
 
+            # propose the tasks to the user for human evaluation
             eval_lesson_form = EvalLessonForm(q_and_a=q_and_a, initial=data)
 
             return render(request, 'learning_environment/eval_lesson_form.html',
@@ -289,10 +277,15 @@ def automatic_lesson_create(request):
 
 
 def eval_lesson_form(request):
+    """
+    This view processes the evaluated data by the user and
+    creates a lessons based on that
+    """
+
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
-        print("Process POST request!!!")
 
+        # extract lesson data
         data = {
             'text': request.POST['text'],
             'name': request.POST['name'],
@@ -300,6 +293,7 @@ def eval_lesson_form(request):
             'text_licence': request.POST['text_licence'],
             'text_url': request.POST['text_url']
         }
+        # extract task data (Questions and Answers)
         q_and_a = []
         i = 1
         for key in request.POST.keys():
@@ -310,39 +304,18 @@ def eval_lesson_form(request):
                 i = i+1
         data['tasks'] = q_and_a
 
-        # form = EvalLessonForm(q_and_a=q_and_a, initial=data)
-        #
-        # # check whether it's valid:
-        # if form.is_valid():
-        #     print("form is valid")
-        #
-        #     tasks = []
-            # for i in range(form.cleaned_data.get('num_questions')):
-            #     q = form.cleaned_data.get(f'Question {i+1}')
-            #     a = form.cleaned_data.get(f'Answer {i+1}')
-            #     tasks.append((q, a))
-
-            # data = {
-            #    'text': form.cleaned_data.get('text'),
-            #    'name': form.cleaned_data.get('name'),
-            #    'text_source': form.cleaned_data.get('text_source'),
-            #    'text_licence': form.cleaned_data.get('text_licence'),
-            #    'text_url': form.cleaned_data.get('text_url'),
-            #    'tasks': tasks
-            # }
-
+        # check if all values are given
         if all(data.values()):
+            # create lessons
             AutomaticJson.create_json5(data=data)
             # redirect back to home:
             return redirect('myhome')
         else:
+            # inform the user to fill in all fields
             messages.info(request, "Make sure all fields are complete")
-
-
 
     # if a GET (or any other method) we'll create a blank form
     else:
         eval_lesson_form = EvalLessonForm()
 
     return render(request, 'learning_environment/eval_lesson_form.html', locals())
-

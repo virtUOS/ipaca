@@ -50,6 +50,7 @@ LICENCES_CHOICES =(
 )
 
 class AutomaticLessonCreationForm(forms.Form):
+    """ form for the automatic lesson creation """
     text = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'This text will be used to automatically generate questions'}))
     name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Title of the lesson'}))
     text_source = forms.CharField()
@@ -58,6 +59,7 @@ class AutomaticLessonCreationForm(forms.Form):
 
 
 class EvalLessonForm(forms.Form):
+    """ form for the lesson evaluation """
     text = forms.CharField(widget=forms.Textarea)
     name = forms.CharField(widget=forms.HiddenInput())
     text_source = forms.CharField(widget=forms.HiddenInput())
@@ -67,9 +69,9 @@ class EvalLessonForm(forms.Form):
     def __init__(self, q_and_a=[], *args, **kwargs):
         super(EvalLessonForm, self).__init__(*args, **kwargs)
 
+        # dynamically add fields for each question and answer pair
         for i, q_a in enumerate(q_and_a):
             q = q_a[0]
             a = q_a[1]
             self.fields[f'Question {i+1}'] = forms.CharField(initial=q, max_length=100)
             self.fields[f'Answer {i+1}'] = forms.CharField(initial=a, max_length=100)
-
