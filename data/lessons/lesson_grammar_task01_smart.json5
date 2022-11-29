@@ -1,0 +1,148 @@
+// Grammar lesson group 6.2
+{
+  name: "Grammar Group 6.2",  // the name that's also shown to the users
+  id: "lesson-slot-20",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
+  author: "Lena + Pauli + Emilly",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "IgnoreMe",
+  text_source: "EFL",
+  text_licence: "cc-by",
+  text_url: "unknown - TODO",
+    tasks: [  // the list of tasks for this lesson
+      { // task 01: 
+        name:  "Smart Gap",
+        type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SMARTGAP",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question:  "It is not always _1_ students who perform well in tests. (bright)",  // the question to be displayed
+        gaps: {
+              mode: 'fillin',
+              _1_: [
+                { text: "", correct: true, feedback: "" },
+                ],
+              },
+          
+      },  // end of task 01
+
+      { // task 02: 
+        name:  "Smart Gap",
+        type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SMARTGAP",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question:  "He is much _2_ than he used to be. (self-confident)",  // the question to be displayed
+        gaps: {
+              mode: 'fillin',
+              _2_: [
+                { text: "", correct: true, feedback: "" },
+                ],
+              },
+        
+      },  // end of task 02
+
+      { // task 03: 
+        name:  "Smart Gap",
+        type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SMARTGAP",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question:  "Most people are _3_ than their parents were. (well off)",  // the question to be displayed
+        gaps: {
+              mode: 'fillin',
+              _3_: [
+                { text: "", correct: true, feedback: "" },
+                ],
+              },
+        
+      },  // end of task 03
+
+      { // task 04: 
+        name:  "Smart Gap",
+        type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SMARTGAP",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question:  "There is nothing _4_  than a crying child. (irritating)",  // the question to be displayed
+        gaps: {
+              mode: 'fillin',
+              _4_: [
+                { text: "", correct: true, feedback: "" },
+                ],
+              },
+        
+      },  // end of task 04
+
+      { // task 05: 
+        name:  "Smart Gap",
+        type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SMARTGAP",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question:  "If you were _5_ and _6_ than you are, you would not keep losing things. (tidy), (well-organized)",  // the question to be displayed
+        gaps: {
+              mode: 'fillin',
+              _5_: [
+                { text: "", correct: true, feedback: "" },
+                ],
+              _6_: [
+                { text: "", correct: true, feedback: "" },
+                ],
+            },
+        
+      },  // end of task 05
+
+      { // task 06: 
+        name:  "Smart Gap",
+        type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SMARTGAP",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question:  "This film is _7_ interesting than the previous one. (little)",  // the question to be displayed
+        gaps: {
+              mode: 'fillin',
+              _7_: [
+                { text: "", correct: true, feedback: "" },
+                ],
+              },
+        
+      },  // end of task 06
+
+      { // task 07: 
+        name:  "Smart Gap",
+        type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SMARTGAP",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question:  "_8_ solution to any problem is usually _9_ one. (clever), (simple)",  // the question to be displayed
+        gaps: {
+              mode: 'fillin',
+              _8_: [
+                { text: "", correct: true, feedback: "" },
+                ],
+              _9_: [
+                { text: "", correct: true, feedback: "" },
+                ],
+              },
+        
+      },  // end of task 07
+
+      { // task 08: 
+        name:  "Smart Gap",
+        type: "GS",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SMARTGAP",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question:  "You’re _10_ than I am. (sun-tanned)",  // the question to be displayed
+        gaps: {
+              mode: 'fillin',
+              _10_: [
+                { text: "", correct: true, feedback: "" },
+                ],
+              },
+        
+      },  // end of task 08
+    ] // end of tasks
+
+} // end of lesson

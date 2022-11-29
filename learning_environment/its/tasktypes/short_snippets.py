@@ -7,9 +7,10 @@ from nltk.stem import WordNetLemmatizer
 from spellchecker import SpellChecker
 from happytransformer import HappyTextToText, TTSettings
 
+# 'en_core_web_sm' download mit: python -m spacy download en_core_web_sm
 #neuer pip install command:
 import spacy
-# Download mit: python -m spacy download en_core_web_sm
+
 
 
 #TODO:
@@ -144,6 +145,7 @@ class ShortTask():
 
         #counts the errortpes
         errortypes = {'spelling': 0, 'grammar': 0, 'length': 0}
+        #stores which word wa replaced by which corrected word
         spelling_replacements= {}
 
 
@@ -233,12 +235,12 @@ class ShortTask():
             missing_comma = False
             for word in tokenized_right_answer:
                 if word not in tokenized_user_answer:
-                    if word != ",":
+                    if word != ",": #if a comma is missing
                         missing_word.append(word)
                     else: 
                         missing_comma = True
                         context['missing_comma_feedback'] = missing_comma
-            if len(missing_word) >= 2:
+            if len(missing_word) >= 2: # if multiple words are missing
                 missing_words_str = " the words " 
                 for i in range(len(missing_word)):
                     if i == 0:

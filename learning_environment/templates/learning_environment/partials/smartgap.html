@@ -1,0 +1,50 @@
+{% if mode == 'solve' %}
+    <form method="post" class="form-inline">
+        {% csrf_token %}
+        <input type="hidden" name="task" value="{{ task.id }}">
+        {% for part in task.content %}
+            {% if part.name %}
+                {% if part.mode == 'fillin' %}
+                    <input type="text" name="solution-{{ task.id }}-{{ part.name }}" size="15">
+                {% elif part.mode == 'select' %}
+                    <select class="form-select" name="solution-{{ task.id }}-{{ part.name }}" size="1" id="solution-{{ task.id }}-{{ part.name }}" style="width:10em;display:inline-block;margin-bottom:0.5em;margin-top:0.5em;">
+                        <option value="---" selected="selected">---</option>
+                        {% for o in part.options %}
+                            <option value="{{ o.text }}">{{ o.text }}</option>
+                        {% endfor %}
+                    </select>
+                {% endif %}
+            {% else %}
+                {{ part.text|safe }}
+            {% endif %}
+        {% endfor %}
+        <div style="margin-top: 2em">
+            <button type="submit" class="btn btn-secondary">Check!</button>
+        </div>
+    </form>
+{% else %}
+    {% for part in task.content %}
+        {% if part.name %}
+            {% if part.mode == 'fillin' %}
+                <input type="text" name="solution-{{ task.id }}-{{ part.name }}" size="15" value="solution" disabled="disabled">
+            {% elif part.mode == 'select' %}
+                <select class="form-select" name="solution-{{ task.id }}-{{ part.name }}" size="1" id="solution-{{ task.id }}-{{ part.name }}" style="width:10em;display:inline-block;margin-bottom:0.5em;margin-top:0.5em;"  disabled="disabled">
+                    <option value="---">---</option>
+                    {% for o in part.options %}
+                        <option value="{{ o.text }}" {% if part.solution == o.text %}selected{% endif %}>{{ o.text }}</option>
+                    {% endfor %}
+                </select>
+            {% endif %}
+            {% if part.solution and part.solution != '---' %}
+                {% for o in part.options %}
+                    {% if o.text == part.solution %}
+                        <span class="feedbackbox"><i>{% if part.solved %}✓{% else %}✗{% endif %} {{ o.feedback }}</i></span>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% else %}
+            {{ part.text|safe }}
+        {% endif %}
+    {% endfor %}
+
+{% endif %}
