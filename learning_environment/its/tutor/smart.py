@@ -14,23 +14,22 @@ class SmartTutorModel(BaseTutorModel):
     def _select_task(self, lesson, next_type, request) -> Tuple[str, Task]:
         task = None
         task_difficulties = self._get_task_difficulties(lesson, next_type)
-        print(task_difficulties)
+
         if len(task_difficulties) == 0:
             # if we don't have such a task, remove it
             request.session['current_lesson_todo'].pop(0)
             next_type, task = self._get_next_step(request, lesson)
         else:
             user_levels = self._get_user_levels()
-            print(user_levels)
+
             current_user_level = 0
             for ind, user in enumerate(user_levels):
                 if user["id"] == self.learner.id:
                     current_user_level = ind / len(user_levels)
                     break
-            print(current_user_level)
+
             # select task id accordingly to skill of user and estimated task difficulty
             index = int((1 - current_user_level) * len(task_difficulties) - 1)
-            print(f"Index: {index}, Num_Tasks: {len(task_difficulties)}")
             task_id = task_difficulties[index]["id"]
             task = Task.objects.get(pk=task_id)
 
