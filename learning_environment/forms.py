@@ -40,11 +40,20 @@ class LessonCreationForm(forms.Form):
         return cd
 
 
+
+LICENCES_CHOICES =(
+    ("PD/CC0", "PD/CC0"),
+    ("CC-BY", "CC-BY"),
+    ("CC-BY-SA", "CC-BY-SA"),
+    ("No Licence", "No Licence"),
+
+)
+
 class AutomaticLessonCreationForm(forms.Form):
-    text = forms.CharField(widget=forms.Textarea)
-    name = forms.CharField()
+    text = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'This text will be used to automatically generate questions'}))
+    name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Title of the lesson'}))
     text_source = forms.CharField()
-    text_licence = forms.CharField()
+    text_licence = forms.ChoiceField(choices = LICENCES_CHOICES)
     text_url = forms.URLField()
 
 

@@ -4,12 +4,20 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h3>Please fill in the questions and answers you want to use:</h3>
+
+
+    <section>
+
+        <h3 class="text-center">Lesson Evaluation</h3>
+    <p class="lead p-md-2">Please evaluate the generated lesson and submit to publish it.</p>
+
+
+    </section>
 
     <form action=" {% url 'eval_lesson' %}" method="POST" id="eval_lesson_form">
         {% csrf_token %}
         {% crispy eval_lesson_form %}
-    <input type="submit" value="Submit" form="eval_lesson_form">
+    <input type="submit" value="Submit" form="eval_lesson_form" class="btn btn-primary">
 </form>
 
 {% endblock %}

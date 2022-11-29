@@ -5,12 +5,17 @@
 
 {% block content %}
 
-    <h3>This text will be used to automatically generate questions.</h3>
+    <section>
+        <h3 class="mb-md-4 text-center">Generate a lesson.</h3>
+    <p class="lead p-md-2">Please fill out the form below. Once you submit the information, a set of
+        questions and answers will be automatically generated. Then you will have the chance to evaluate and modify them. </p>
 
-   <form  method="POST" id="text_form">
+    </section>
+
+   <form  method="POST" id="text_form" class="">
     {% csrf_token %}
   {% crispy form %}
-    <input type="submit" value="Submit" form="text_form">
+    <input type="submit" value="Submit" form="text_form" class="btn btn-primary">
 </form>
 
 {% endblock %}
