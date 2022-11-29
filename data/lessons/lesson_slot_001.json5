@@ -1,7 +1,4 @@
-// Lesson ev-001
-// a new lesson 1.
-{
-  name: "NAME OF LESSON 1a",  // the name that's also shown to the users
+ name: "NAME OF LESSON 1a",  // the name that's also shown to the users
   id: "lesson-slot-001",        // an internal id, will never be shown, but important to identify the lesson
   author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
