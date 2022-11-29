@@ -1,0 +1,282 @@
+                            {
+  name: "Modernism",  // the name that's also shown to the users
+  id: "lesson-recommender-012",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p>Modernism refers to a global movement in society and culture that from the early decades of the twentieth century sought a new alignment with the experience and values of modern industrial life. Building on late nineteenth-century precedents, artists around the world used new imagery, materials and techniques to create artworks that they felt better reflected the realities and hopes of modern societies.</p>\
+  <p>The terms modernism and modern art are generally used to describe the succession of art movements that critics and historians have identified since the realism of Gustav Courbet and culminating in abstract art and its developments in the 1960s.</p>\
+  <p>Although many different styles are encompassed by the term, there are certain underlying principles that define modernist art: A rejection of history and conservative values (such as realistic depiction of subjects); innovation and experimentation with form (the shapes, colours and lines that make up the work) with a tendency to abstraction; and an emphasis on materials, techniques and processes. Modernism has also been driven by various social and political agendas. These were often utopian, and modernism was in general associated with ideal visions of human life and society and a belief in progress.</p>\
+  <p>By the 1960s modernism had become a dominant idea of art, and a particularly narrow theory of modernist painting had been formulated by the highly influential American critic Clement Greenberg. A reaction then took place which was quickly identified as postmodernism.</p>",
+  text_source: "Modernism",
+  text_licence: "CC BY-SA",
+  text_url: "https://www.tate.org.uk/art/art-terms/m/modernism",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading, Scanning",
+        type: "R",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Decide if the information in the statement is True or False according to the information in the reading passage.</p>\
+        <p>1. Modernism is an international movement in culture that arose in the 19th century. _1_</p>\
+        <p>2. Critics use the term “modernism” to describe the succession of art movements. _2_</p>\
+        <p>3. The term \"modernism\" covers different styles. _3_</p>\
+        <p>4. American critic Clement Greenberg formulated the theory of postmodern painting. _4_</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “False” because the text says “Modernism refers to a global movement in society and culture that from the early decades of the twentieth century…”."
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False” because the text says “Modernism refers to a global movement in society and culture that from the early decades of the twentieth century…”."
+            }
+          ],
+          _2_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True” because the text says “The terms modernism and modern art are generally used to describe the succession of art movements that critics and historians have identified…”."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True” because the text says “The terms modernism and modern art are generally used to describe the succession of art movements that critics and historians have identified…”."
+            }
+          ],
+          _3_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True” because the text says  “Although many different styles are encompassed by the term…”"
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True” because the text says  “Although many different styles are encompassed by the term…”"
+            }
+          ],
+          _4_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “False” because the text says “…and a particularly narrow theory of modernist painting had been formulated by the highly influential American critic Clement Greenberg.”."
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False” because the text says “…and a particularly narrow theory of modernist painting had been formulated by the highly influential American critic Clement Greenberg.”."
+            }
+          ]
+        },
+      },
+      {
+        // Type 3, task 1
+        name: "Main tenses",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose correct variant</p>\
+        <p>Modernism \
+        _1_ to a global movement in society and culture that from the early decades of the twentieth century \
+        _2_ a new alignment with the experience and values of modern industrial life. Building on late nineteenth-century precedents, artists around the world \
+        _3_ new imagery, materials and techniques to create artworks that they \
+        _4_ better reflected the realities and hopes of modern societies.</p>\
+        <p>The terms modernism and modern art are generally used to describe the succession of art movements that critics and historians \
+        _5_ since the realism of Gustav Courbet and culminating in abstract art and its developments in the 1960s.</p>\
+        <p>Although many different styles are encompassed by the term, there are certain underlying principles that define modernist art: A rejection of history and conservative values (such as realistic depiction of subjects); innovation and experimentation with form (the shapes, colours and lines that make up the work) with a tendency to abstraction; and an emphasis on materials, techniques and processes. Modernism has been driven by various social and political agendas. These \
+        _6_ often utopian, and modernism \
+        _7_ in general associated with ideal visions of human life and society and a belief in progress.</p>\
+        <p>By the 1960s modernism \
+        _8_ a dominant idea of art, and a particularly narrow theory of modernist painting had been formulated by the highly influential American critic Clement Greenberg. A reaction then took place which was quickly identified as postmodernism.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "are refering",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "refers",
+              correct: true,
+              feedback: "That's correct, because we use the present simple for general truths."
+            },
+            {
+              text: "has refered",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "refer",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _2_: [
+            {
+              text: "seek",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "seeked",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "seeks",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "sought",
+              correct: true,
+              feedback: "That's correct, because we use the past simple for an action which happened at a definite time in the past. The time is stated, already known or implied. Seek is an irregular verb."
+            }
+          ],
+          _3_: [
+            {
+              text: "used",
+              correct: true,
+              feedback: "That's correct, because we use the past simple for an action which happened at a definite time in the past. The time is stated, already known or implied."
+            },
+            {
+              text: "use",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "was using",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are using",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "feel",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "felt",
+              correct: true,
+              feedback: "That's correct, because we use the past simple for an action which happened at a definite time in the past. The time is stated, already known or implied. Feel is an irregular verb."
+            },
+            {
+              text: "are feeling",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "feeled",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _5_: [
+            {
+              text: "identified",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has identified",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "was identifying",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "have identified",
+              correct: true,
+              feedback: "That's correct, because we use the present perfect for an action which started in the past and continues up to the present. In this case, we often use for and since. The structure is S + have/has + V3."
+            }
+          ],
+          _6_: [
+            {
+              text: "was",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "been",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "were",
+              correct: true,
+              feedback: "That's correct, because we use the past simple for past habits or states which are now finished."
+            }
+          ],
+          _7_: [
+            {
+              text: "was",
+              correct: true,
+              feedback: "That's correct, because we use the past simple for past habits or states which are now finished."
+            },
+            {
+              text: "are",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "been",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "were",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _8_: [
+            {
+              text: "had become",
+              correct: true,
+              feedback: "That's correct, because we use the past perfect for an action which happened before another past action. The structure is S + had + V3."
+            },
+            {
+              text: "has become",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "become",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "became",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ]
+        },
+      }
+    ] // end of tasks
+
+} // end of lesson
