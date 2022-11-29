@@ -54,7 +54,7 @@ class SmartTutorModel(BaseTutorModel):
 
     @staticmethod
     def _get_user_levels(next_type: str):
-        query_set = Solution.objects.values('user', 'solved').filter(type=next_type).annotate(count=Count('id')).order_by('user', 'solved')
+        query_set = Solution.objects.values('user', 'solved').filter(task__type=next_type).annotate(count=Count('id')).order_by('user', 'solved')
         levels = []
 
         correct_answers = 0
