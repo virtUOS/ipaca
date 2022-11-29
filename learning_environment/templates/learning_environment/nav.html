@@ -1,3 +1,4 @@
+
 <nav class="col-3" style="background:white; margin-top: 0px; padding-top:12px;">
     <div class="d-flex flex-column flex-shrink-0 p-3" style=" width: 25vw;">
 
@@ -5,7 +6,6 @@
             <li class="nav-item">
                 <a href="{% url 'myhome' %}" class="nav-item i-plain" aria-current="page">
                     <i class="bi bi-house-door" style="font-size:22px;"></i>
-                {# <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> #}
                 <span style="font-size:18px; color:black; vertical-align: middle; margin-left: 4px;"> My Home</span>
                 </a>
             </li>
@@ -42,7 +42,20 @@
     </div>
 </nav>
 
+
+
 <script>
+
+    $("#icon-book").click(function() {
+        $(this).find('i').toggleClass('bi-book-fill');
+        $(this).find('i').toggleClass('bi-book');
+    });
+
+    $("#icon-trophy").click(function() {
+        $(this).find('i').toggleClass('bi-trophy-fill');
+        $(this).find('i').toggleClass('bi-trophy');
+    });
+
     $(function(){
         $('a').each(function(){
             if ($(this).prop('href') == window.location.href) {
