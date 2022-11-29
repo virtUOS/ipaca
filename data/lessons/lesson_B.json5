@@ -236,8 +236,8 @@
       interaction: "SHORT",  
       primary: true,     
       show_lesson_text: false, 
-      question:  "<p> Paraphrase the sentence. Use the inversion with negative adverbials. </p> <p> Use the words given in brackets. 'Stay here', she said. (me) </p>",  
-      answer: "Stay here she said to me."
+      question:  "<p> Paraphrase the sentence. Use the inversion with negative adverbials. </p><p>You don't have to use punctuation marks at the end of the sentence.</p> <p> Use the words given in brackets. 'Stay here', she said. (me) </p>",  
+      answer: "Stay here she said to me"
     },  // end of task 10
 
     { // task 11: primary reading task
@@ -246,8 +246,8 @@
       interaction: "SHORT",  
       primary: true,     
       show_lesson_text: false, 
-      question:  "<p> Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets. </p>,<P> My mother is 55. She is into dancing. </p>",  
-      answer: "My mother, who is 55, is into dancing."
+      question:  "<p> Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets. </p><p>You don't have to use punctuation marks at the end of the sentence.</p><P> My mother is 55. She is into dancing. </p>",  
+      answer: "My mother, who is 55, is into dancing"
     },  // end of task 11
 
     { // task 12: primary reading task
@@ -256,8 +256,8 @@
       interaction: "SHORT",  
       primary: true,     
       show_lesson_text: false, 
-      question:  "<p>Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets</p><p> Tom started cooking an hour ago. (has been) </p>",  
-      answer: "Tom has been cooking an hour ago."
+      question:  "<p>Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p> Tom started cooking an hour ago. (has been) </p>",  
+      answer: "Tom has been cooking an hour ago"
     },  // end of task 12
 
     { // task 13: primary reading task
@@ -266,8 +266,8 @@
       interaction: "SHORT",  
       primary: true,     
       show_lesson_text: false, 
-      question:  "<P>Paraphrase the sentence. Use the inversion with negative adverbials.</p><p> Use the words given in brackets. He could not make a salad. He forgot to buy some tomatoes (because) </p>",  
-      answer: "He couldn't make a salad because he had forgotten to buy some tomatoes."
+      question:  "<P>Paraphrase the sentence. Use the inversion with negative adverbials.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p> Use the words given in brackets. He could not make a salad. He forgot to buy some tomatoes (because) </p>",  
+      answer: "He couldn't make a salad because he had forgotten to buy some tomatoes"
     },  // end of task 13
 
      { // task 14: primary reading task
@@ -276,8 +276,8 @@
       interaction: "SHORT",  
       primary: true,     
       show_lesson_text: false, 
-      question:  "<p>Paraphrase the sentence. Use the inversion with negative adverbials. </p><p> Use the words given in brackets. We went to this village every summer (used to)</p>",  
-      answer: "We used to go to this village every summer."
+      question:  "<p>Paraphrase the sentence. Use the inversion with negative adverbials. </p><p>You don't have to use punctuation marks at the end of the sentence.</p><p> Use the words given in brackets. We went to this village every summer (used to)</p>",  
+      answer: "We used to go to this village every summer"
     },  // end of task 14
   ] // end of tasks
 
