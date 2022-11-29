@@ -1,0 +1,265 @@
+                            {
+  name: "The Arab Spring",  // the name that's also shown to the users
+  id: "lesson-recommender-008",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "Not used",
+  text_source: "The Arab Spring",
+  text_licence: "CC BY-SA",
+  text_url: "https://www.coursehero.com/study-guides/boundless-worldhistory/the-middle-east-and-north-africa-in-the-21st-century/",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading, Scanning",
+        type: "R",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Look through the text and fill in the missing parts of the sentences into the text.</p>\
+        <p>The Arab Spring was a revolutionary wave of both violent and non-violent demonstrations, protests, riots, coups, and civil wars in North Africa and the Middle East that _1_. The Tunisian Revolution effect spread strongly to five other countries: Libya, Egypt, Yemen, Syria, and Iraq.</p>\
+        <p>Analysts have pointed to a number of complex factors behind the movement, including issues such _2_, and a number of demographic structural factors, such as a large percentage of educated but dissatisfied youth.</p>\
+        <p>In the wake of the Arab Spring protests, a considerable amount of attention has been focused _3_ in allowing citizens to bypass state-operated media channels.</p>\
+        <p>Facebook, Twitter, and other major social media played _4_. Nine out of ten Egyptians and Tunisians responded to a poll that they used Facebook to organize protests and spread awareness. In Egypt, young men referred to themselves as “the Facebook generation.” Furthermore, 28% of Egyptians and 29% of Tunisians from the same poll said that blocking Facebook greatly hindered and/or disrupted communication. During the protests, people created pages on Facebook to raise awareness about alleged crimes against humanity, such as police brutality in the Egyptian Revolution.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "on the role of social media and digital technologies",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "as authoritarianism, human rights violations, political corruption, economic decline, unemployment, extreme poverty",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: " a key role in the movement of Egyptian and Tunisian activists in particular",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "began in 2010 with the Tunisian Revolution",
+              correct: true,
+              feedback: "That's correct. We can understand this by the determiner “that”"
+            }
+          ],
+          _2_: [
+            {
+              text: "on the role of social media and digital technologies",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "as authoritarianism, human rights violations, political corruption, economic decline, unemployment, extreme poverty",
+              correct: true,
+              feedback: "That's correct. We can understand this by the determiner “such as”."
+            },
+            {
+              text: " a key role in the movement of Egyptian and Tunisian activists in particular",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "began in 2010 with the Tunisian Revolution",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _3_: [
+            {
+              text: "on the role of social media and digital technologies",
+              correct: true,
+              feedback: "That's correct. We can understand this by the phrasal verb “focus on”."
+            },
+            {
+              text: "as authoritarianism, human rights violations, political corruption, economic decline, unemployment, extreme poverty",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: " a key role in the movement of Egyptian and Tunisian activists in particular",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "began in 2010 with the Tunisian Revolution",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "on the role of social media and digital technologies",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "as authoritarianism, human rights violations, political corruption, economic decline, unemployment, extreme poverty",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: " a key role in the movement of Egyptian and Tunisian activists in particular",
+              correct: true,
+              feedback: "That's correct. We can understand this by the phrase “play a role”."
+            },
+            {
+              text: "began in 2010 with the Tunisian Revolution",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ]
+        },
+      },
+      {
+        // Type 2, task 1
+        name: "Grammar and Style",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose correct tense, form of the verb.</p>\
+        <p>The Arab Spring _1_ a revolutionary wave of both violent and non-violent demonstrations, protests, riots, coups, and civil wars in North Africa and the Middle East that _2_ in 2010 with the Tunisian Revolution. The Tunisian Revolution effect _3_ strongly to five other countries: Libya, Egypt, Yemen, Syria, and Iraq.</p>\
+        <p>Facebook, Twitter, and other major social media _4_ a key role in the movement of Egyptian and Tunisian activists in particular. Nine out of ten Egyptians and Tunisians _5_ to a poll that they used Facebook to organize protests and spread awareness. In Egypt, young men _6_ to themselves as “the Facebook generation.”</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "was",
+              correct: true,
+              feedback: "That's correct. We use the past simple for an action which happened at a definite time in the past. The time is stated, already known or implied. The correct form of the verb ‘to be’ in the past tense is ‘was/were’, and since we have a singular subject, the correct use is ‘was’."
+            },
+            {
+              text: "were",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "been",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _2_: [
+            {
+              text: "begin",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "began",
+              correct: true,
+              feedback: "That's correct. We use the past simple for an action which happened at a definite time in the past. The time is stated, already known or implied. The correct past tense form of ‘begin’ is ‘began’."
+            },
+            {
+              text: "begun",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _3_: [
+            {
+              text: "spread",
+              correct: true,
+              feedback: "That's correct. We use the past simple for an action which happened at a definite time in the past. The time is stated, already known or implied. And since in the sentence the subject does the action, not the action is done on the subject, we use the active voice."
+            },
+            {
+              text: "is spread",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "was spread",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "play",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "played",
+              correct: true,
+              feedback: "That's correct. We use the past simple for an action which happened at a definite time in the past. The time is stated, already known or implied. And since in the sentence the subject does the action, not the action is done on the subject, we use the active voice."
+            },
+            {
+              text: "were played",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _5_: [
+            {
+              text: "respond",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "responded",
+              correct: true,
+              feedback: "That's correct. We use the past simple for an action which happened at a definite time in the past. The time is stated, already known or implied. And since in the sentence the subject does the action, not the action is done on the subject, we use the active voice."
+            },
+            {
+              text: "were responded",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _6_: [
+            {
+              text: "refer",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "referred",
+              correct: true,
+              feedback: "That's correct. We use the past simple for an action which happened at a definite time in the past. The time is stated, already known or implied. And since in the sentence the subject does the action, not the action is done on the subject, we use the active voice."
+            },
+            {
+              text: "were referred",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ]
+        },
+      },
+      {
+        // Type 3, task 1
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the adjectives and nouns.</p><p>\
+        1. complex <br>\
+        2. human <br>\
+        3. extreme <br>\
+        4. large <br>\
+        5. considerable</p>",
+        paragraphs: ["factors","rights","poverty","percentage","amount"],
+      },
+      {
+        // Type 3, task 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the nouns with their definitions.</p><p>\
+        1. a subject or problem that people are thinking and talking about <br>\
+        2. when something becomes less in amount, importance, quality, or strength <br>\
+        3. knowledge that something exists, or understanding of a situation or subject at the present time based on information or experience <br>\
+        4. the act or process of changing a situation or event, or of changing the way something happens or is done <br>\
+        5. the act or faculty of attending, especially by directing the mind to an object</p>",
+        paragraphs: ["issue","decline","awareness","movement","attention"],
+      }
+    ] // end of tasks
+
+} // end of lesson
