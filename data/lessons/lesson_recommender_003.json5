@@ -1,0 +1,325 @@
+{
+  name: "Volume",
+  id: "lesson-recommender-003",
+  author: "Kai Dönnebrink",
+  version: 1,
+  series: "Recommender",
+  text: "<p>Volume is determined by the amplitude of the wave, such that waves with a large amplitude produce high-volume sound and waves with a small amplitude produce low-volume sounds. While volume is simple to understand and assess (we can all tell whether music is “loud” or “soft”), its significance in the creation of musical meaning cannot be overlooked. On the one hand, certain genres of music depend on volume for their identity. You cannot appreciate the impact of heavy metal by listening to it with the dial turned down, just as you cannot sing a baby to sleep at the top of your voice. Changes in volume can also communicate meaning in music. A gradual increase in volume can indicate growing excitement, while a sudden change in volume can indicate a dramatic mood shift.</p><p>A few terms will help us to talk about volume, which is also referred to as dynamic level. An increase in volume is referred to as a crescendo, while a decrease is termed a decrescendo or diminuendo. Musicians in orchestras, bands, and choirs describe volume using Italian terms including fortissimo (very loud), forte (loud), mezzo forte (medium loud), mezzo piano (medium soft), piano (soft), and pianissimo (very soft).</p>",
+  text_source: "Media, Society, Culture and You",
+  text_licence: "CC BY-SA",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/resonances-engaging-music-in-its-cultural-context",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "True or False?",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: false, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Decide if the information in the statement is True or False or not given according to the information in the text.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "Wavelength determines a sound's volume.",
+            correct: false,
+            feedback: "The correct answer is False because the text says ‘Volume is determined by the amplitude of the wave’"
+          },
+          {
+            text: "Volume determines all genres of music.",
+            correct: false,
+            feedback: "The correct answer is False because the text says ‘certain genres of music depend on volume for their identity’"
+          },
+          {
+            text: "There are several terms for volume.",
+            correct: true,
+            feedback: "The correct answer is True because the text says ‘A few terms will help us to talk about volume’\n"
+          },
+          {
+            text: "Musicians use French terms to describe volume.",
+            correct: false,
+            feedback: "The correct answer is False because the text says ‘Musicians in orchestras, bands, and choirs describe volume using Italian terms’"
+          }
+        ]
+      },
+      {
+        // Type 2, task 1
+        name: "Active vs. passive voice",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><strong>Choose correct form of the verb:</strong></p>\
+        <p> Volume _1_ by the amplitude of the wave, such that waves with a large amplitude \
+        _2_ high-volume sound and waves with a small amplitude \
+        _3_ low-volume sounds. While volume \
+        _4_ simple to understand and assess (we can all tell whether music is “loud” or “soft”), its significance in the creation of musical meaning cannot \
+        _5_. On the one hand, certain genres of music \
+        _6_ on volume for their identity. You cannot \
+        _7_ the impact of heavy metal by listening to it with the dial turned down, just as you cannot \
+        _8_ a baby to sleep at the top of your voice. Changes in volume can also \
+        _9_ meaning in music. A gradual increase in volume can \
+        _10_ growing excitement, while a sudden change in volume can \
+        _11_ a dramatic mood shift. </p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "determines",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is determined",
+              correct: true,
+              feedback: "That's correct. The passive voice is used when we focus on the object of the sentence."
+            },
+          ],
+          _2_: [
+            {
+              text: "are produced",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "produce",
+              correct: true,
+              feedback: "That's correct. The active voice is used when the subject of a sentence performs the action."
+            },
+          ],
+          _3_: [
+            {
+              text: "produce",
+              correct: true,
+              feedback: "That's correct. The active voice is used when the subject of a sentence performs the action."
+            },
+            {
+              text: "are produced",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _4_: [
+            {
+              text: "is been",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is",
+              correct: true,
+              feedback: "That's correct. The active voice is used when we focus on the subject of the sentence."
+            },
+          ],
+          _5_: [
+            {
+              text: "overlook",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "be overlooked",
+              correct: true,
+              feedback: "That's correct. The passive voice is used when we focus on the object of the sentence."
+            },
+          ],
+          _6_: [
+            {
+              text: "are depended",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "depend",
+              correct: true,
+              feedback: "That's correct. The active voice is used when we focus on the subject of the sentence."
+            },
+          ],
+          _7_: [
+            {
+              text: "be appreciated",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "appreciate",
+              correct: true,
+              feedback: "That's correct. The active voice is used when the subject of a sentence performs the action."
+            },
+          ],
+          _8_: [
+            {
+              text: "sing",
+              correct: true,
+              feedback: "That's correct. The active voice is used when the subject of a sentence performs the action."
+            },
+            {
+              text: "be sung",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _9_: [
+            {
+              text: "be communicated",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "communicate",
+              correct: true,
+              feedback: "That's correct. The active voice is used when the subject of a sentence performs the action."
+            },
+          ],
+          _10_: [
+            {
+              text: "be indicated",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "indicate",
+              correct: true,
+              feedback: "That's correct. The active voice is used when we focus on the subject of the sentence."
+            },
+          ],
+          _11_: [
+            {
+              text: "indicate",
+              correct: true,
+              feedback: "That's correct. The active voice is used when we focus on the subject of the sentence."
+            },
+            {
+              text: "be indicated",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ]
+        },
+      },
+      {
+        // Type 2, task 2
+        name: "Active vs. passive voice",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><strong>Choose correct form of the verb:</strong></p>\
+        <p> A few terms will help us to talk about volume, which \
+        _1_ to as dynamic level. An increase in volume \
+        _2_ to as a crescendo, while a decrease \
+        _3_ a decrescendo or diminuendo. Musicians in orchestras, bands, and choirs \
+        _4_ volume using Italian terms including fortissimo (very loud), forte (loud), mezzo forte (medium loud), mezzo piano (medium soft), piano (soft), and pianissimo (very soft).</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "is also referred",
+              correct: true,
+              feedback: "That's correct. The passive voice is used when we focus on the object of the sentence."
+            },
+            {
+              text: "also refer",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _2_: [
+            {
+              text: "refers",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is referred",
+              correct: true,
+              feedback: "That's correct. The passive voice is used when we focus on the object of the sentence."
+            },
+          ],
+          _3_: [
+            {
+              text: "is termed",
+              correct: true,
+              feedback: "That's correct. The passive voice is used when we focus on the object of the sentence."
+            },
+            {
+              text: "terms",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _4_: [
+            {
+              text: "are described",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "describe",
+              correct: true,
+              feedback: "That's correct. The active voice is used when the subject of a sentence performs the action."
+            },
+          ],
+        },
+      },
+      {
+        // Type 3, task 1
+        name: "Find the synonyms ",
+        type: "V",
+        interaction: "MARK",
+        primary: false,
+        show_lesson_text: false,
+        question: "In the text, find the synonyms to the following words:",
+        marktext: "Volume is determined by the amplitude of the wave, such that waves with a large amplitude produce \
+        high-volume sound and waves with a small amplitude produce low-volume sounds. While volume is simple to \
+        understand and assess (we can all tell whether music is “loud” or “soft”), its significance in the #2#creation of \
+        musical meaning cannot be overlooked. On the one hand, certain genres of music depend on volume for their \
+        identity. You cannot appreciate the #3#impact of heavy metal by listening to it with the dial turned down, just \
+        as you cannot sing a baby to sleep at the top of your voice. Changes in volume can also communicate meaning in \
+        music. A gradual increase in volume can indicate growing excitement, while a sudden change in volume can \
+        indicate a dramatic mood #1#shift.",
+        markers: {
+          '1': {
+            description: 'change',
+          },
+          '2': {
+            description: 'production',
+          },
+          '3': {
+            description: 'influence',
+          }
+        }
+      },
+      {
+        // Type 3, task 2
+        name: "Find the synonyms ",
+        type: "V",
+        interaction: "MARK",
+        primary: false,
+        show_lesson_text: false,
+        question: "In the text, find the synonyms to the following words:",
+        marktext: "Volume is determined by the amplitude of the wave, such that waves with a large amplitude produce \
+        high-volume sound and waves with a small amplitude produce low-volume sounds. While volume is simple to \
+        understand and assess (we can all tell whether music is “loud” or “soft”), its #3#significance in the creation of \
+        musical meaning cannot be #2#overlooked. On the one hand, certain genres of music depend on volume for their \
+        identity. You cannot #1#appreciate the impact of heavy metal by listening to it with the dial turned down, just \
+        as you cannot sing a baby to sleep at the top of your voice. Changes in volume can also communicate meaning in \
+        music. A gradual #4#increase in volume can indicate growing excitement, while a sudden change in volume can \
+        indicate a dramatic mood shift.",
+        markers: {
+          '1': {
+            description: 'to value',
+          },
+          '2': {
+            description: 'disregarded',
+          },
+          '3': {
+            description: 'importance',
+          },
+          '4': {
+            description: 'growth',
+          }
+        }
+      },
+    ] // end of tasks
+
+} // end of lesson
