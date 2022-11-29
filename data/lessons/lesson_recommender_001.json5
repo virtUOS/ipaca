@@ -1,16 +1,14 @@
-// Lesson ev-001
-// a new lesson 1.
 {
-  name: "Lesson Recommender 1",  // the name that's also shown to the users
+  name: "Media, Society, Culture and You - Part 1",  // the name that's also shown to the users
   id: "lesson-recommender-001",        // an internal id, will never be shown, but important to identify the lesson
   author: "Robin Gratz",    // used for documentation, will not be shown to the user
-  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  version: 2,                 // if you revise your lesson, give it a higher version number each time
   series: "Recommender",
   text: "<p><strong>A</strong> On social media platforms, media consumers have the ability to add their <strong>input</strong> and criticism, and this is an important function for users. Not only do we have a say as audience members in the content we would like to see, read and hear, but we also have an important role to play in society as voting citizens holding their elected officials <strong>accountable</strong>.</p>\
   <p><strong>B</strong> If social media platforms were only filled with mass media content, individual user comments, and their own homegrown content, digitally networked communication would be complex enough, but there are other forces at work. Rogue individuals, hacker networks and botnets — computers programmed to create false social media accounts, websites and other digital properties — can contribute content alongside messages produced by <strong>professionals</strong> and legitimate online community members. False presences on social media channels can <strong>amplify</strong> hate and misinformation and can stoke <strong>animosity</strong> between groups in a hyper-partisan media age.</p>\
   <p><strong>C</strong> Around the world, societies have democratized mass communication, but in many ways, agreeing on a shared narrative or even a shared list of facts is more difficult than ever. Users create filter bubbles for themselves where they mostly hear the voices and information that they want to hear. This has the potential to create <strong>opposing</strong> worldviews where users with different viewpoints not only have differing opinions, but they also have in mind completely different sets of facts creating different images about what is happening in the world and how society should operate.</p>",
   text_source: "Media, Society, Culture and You",
-  text_licence: "CC BY-SA",
+  text_licence: "CC BY 4.0",
   text_url: "https://press.rebus.community/mscy",
   tutor_mode: "S", // S = smart, N (or empty) = normal
     tasks: [  // the list of tasks for this lesson

@@ -1,0 +1,333 @@
+{
+  name: "Media, Society, Culture and You - Part 2",
+  id: "lesson-recommender-002",
+  author: "Kai Dönnebrink",
+  version: 1,
+  series: "Recommender",
+  text: "<p>As mass audiences are breaking up and voices from the fringe are garnering outsized <i>influence</i>, the various types of media (audio, video, text, animation and the industries they are tied to) have come together on global computer and mobile network platforms in a process called <i>convergence</i>. It is as though all media content is being tossed into a huge stew, <strong>one</strong> that surrounds and composes societies and cultures, and within this stew of information, people are reorganizing themselves according to the cultural and social concerns <strong>they</strong> hold most dear. According to one <i>hypothesis</i>, in a society dominated by digital <i>communication</i> networks, people gather around the information they recognize and want to believe because making sense of the vast <i>amount</i> of <i>information</i> now available is impossible.</p>",
+  text_source: "Media, Society, Culture and You",
+  text_licence: "CC BY 4.0",
+  text_url: "https://press.rebus.community/mscy/",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading, Scanning",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: false, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "The highlighted 'one' in the text refers to ...",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "media content",
+            correct: false,
+            feedback: "No, that's not correct."
+          },
+          {
+            text: "convergence",
+            correct: false,
+            feedback: "No, that's not correct."
+          },
+          {
+            text: "none of the above",
+            correct: true,
+            feedback: "The correct answer is C because the text says ‘all media content is being tossed into a huge stew, one that surrounds…’."
+          },
+        ]
+      },
+      {
+        // Type 1, task 2
+        name: "Reading, Scanning",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: false, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "The highlighted 'they' in the text refers to ...",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "cultural and social concerns",
+            correct: false,
+            feedback: "No, that's not correct."
+          },
+          {
+            text: "people",
+            correct: true,
+            feedback: "The correct answer is B because the text says ‘people are reorganizing themselves according to the cultural and social concerns they hold most dear’."
+          },
+          {
+            text: "societies and cultures",
+            correct: false,
+            feedback: "No, that's not correct."
+          },
+        ]
+      },
+      {
+        // Type 2, task 1
+        name: "Choose correct tense/form of the verb",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that applies:</p>\
+        <p> As mass audiences _1_ up and voices from the fringe \
+        _2_ outsized influence, the various types of media (audio, video, text, animation and the industries they are tied to \
+        _3_ together on global computer and mobile network platforms in a process called convergence. \
+        It is as though all media content _4_ into a huge stew, one that \
+        _5_ and _6_ societies and cultures, and within this stew of information, people \
+        _7_ themselves according to the cultural and social concerns they \
+        _8_ most dear. According to one hypothesis, in a society dominated by digital communication networks, people \
+        _9_ around the information they \
+        _10_ and _11_ to believe because making sense of the vast amount of information now available \
+        _12_ impossible.<br> </p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "is breaking",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are breaking",
+              correct: true,
+              feedback: "That's correct. We use the present continuous for developing situations."
+            },
+            {
+              text: "break",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _2_: [
+            {
+              text: "garner",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is garnering",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are garnering",
+              correct: true,
+              feedback: "That's correct. We use the present continuous for developing situations."
+            },
+          ],
+          _3_: [
+            {
+              text: "have came",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has come",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "have come",
+              correct: true,
+              feedback: "That's correct. We use subject + have/has + the 3d form of the verb to form the present perfect tense."
+            },
+          ],
+          _4_: [
+            {
+              text: "being tossed",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "be tossing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is being tossed",
+              correct: true,
+              feedback: "That's correct. The Passive Voice in the present continuous is formed by the verb be in the present continuous (am being, is being, or are being) + the 3d form of the verb."
+            },
+          ],
+          _5_: [
+            {
+              text: "surround",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "surrounds",
+              correct: true,
+              feedback: "That's correct because the formation of the present simple for a singular is subject + verb +s."
+            },
+            {
+              text: "are surrounding",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _6_: [
+            {
+              text: "are composing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "compose",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "composes",
+              correct: true,
+              feedback: "That's correct because the formation of the present simple for a singular is subject + verb +s."
+            },
+          ],
+          _7_: [
+            {
+              text: "is reorganizing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are reorganizing",
+              correct: true,
+              feedback: "That's correct. The formation of the present continuous for plural is subjects + are + verb +ing."
+            },
+            {
+              text: "reorganizes",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _8_: [
+            {
+              text: "have hold",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "holds",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "hold",
+              correct: true,
+              feedback: "That's correct. We use the present simple for general truths, permanent states."
+            },
+          ],
+          _9_: [
+            {
+              text: "gather",
+              correct: true,
+              feedback: "That's correct. We  use the present simple for repeated actions."
+            },
+            {
+              text: "gartering",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has gathered",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _10_: [
+            {
+              text: "have recognize",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "recognize",
+              correct: true,
+              feedback: "That's correct. We use the present simple for general truths."
+            },
+            {
+              text: "recognizes",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _11_: [
+            {
+              text: "want",
+              correct: true,
+              feedback: "That's correct. We use the present simple for general truths."
+            },
+            {
+              text: "wants",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are wanting",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _12_: [
+            {
+              text: "are",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is",
+              correct: true,
+              feedback: "That's correct. We use the present simple for general truths, permanent states."
+            },
+            {
+              text: "have been",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ]
+        },
+      },
+      {
+        // Type 2, task 2
+        name: "Phrasal verbs",
+        type: "GS",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Sort the words to make the correct phrases.</p><p>1. break <br>2. come <br>3. gather <br>4. make sense</p>",
+        paragraphs: ["up","together","around","of"],
+      },
+      {
+        // Type 3, task 1
+        name: "Phrasal verbs",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the definitions with their phrases.</p><p>1. break up <br>2. come together <br>3. gather around <br>4. make sense of</p>",
+        paragraphs: ["to divide into many pieces, or to divide something into many pieces","to unite","to form a group or a small crowd around something or someone","to understand someone or something"],
+      },
+      {
+        // Type 3, task 2
+        name: "Synonyms",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Match the definitions with their phrases.</p><p>1. influence <br>2. convergence <br>3. hypothesis <br>4. communication <br>5. amount <br>6. information</p>",
+        paragraphs: ["impact","merging","assumption","connection", "quantity", "news"],
+      },
+      {
+        // Type 3, task 3
+        name: "Prefixes",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the prefixes to the corresponding words.</p><p>1. voice <br>2. communication <br>3. information <br>4. process <br>5. dominate <br>6. sense <br>7. available</p>",
+        paragraphs: ["de-","mis-","dis-","multi-", "pre-", "non-", "un-"],
+      }
+    ] // end of tasks
+
+} // end of lesson
