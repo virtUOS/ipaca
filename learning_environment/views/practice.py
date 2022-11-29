@@ -13,33 +13,28 @@ from learning_environment.models import Task, ProfileSeriesLevel
 
 
 @login_required
-def practice(request: HttpRequest, redo: int = None) -> HttpResponse:
+def practice(request: HttpRequest) -> HttpResponse:
     """Display a task for practicing."""
     redirect_or_error_response = None
     context = {'mode': 'solve'}
 
     # start the lesson
     if request.method == 'POST' and 'start' in request.POST:
-        print('start lesson')
         redirect_or_error_response = _start_lesson(request, context)
 
     # finish a lesson
     elif request.method == 'POST' and 'finish' in request.POST:
-        print('finish lesson')
-        redirect_or_error_response = _finish_lesson(request, context)
+        redirect_or_error_response = _finish_lesson(request)
 
     # analyze a solution
     elif request.method == 'POST':
-        print('analyse solution')
         redirect_or_error_response = _analyze_solution(request, context)
 
     # show the current task again
-    elif redo is not None:
-        print('redo')
-        _redo_task(context, task_id=redo)
+    elif 'redo' in request.GET:
+        _redo_task(context, task_id=int(request.GET['redo']))
 
     else:
-        print('default case')
         _get_task(request, context)
 
     # Pass all information to template and display page
@@ -68,9 +63,9 @@ def _get_task(request: HttpRequest, context: Dict):
     context['lesson'] = lesson
 
 
-def _finish_lesson(request: HttpRequest, context: Dict):
+def _finish_lesson(request: HttpRequest):
     """Finishes a lesson."""
-    if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
+    if 'current_lesson_todo' not in request.session:  # if there's no todo, we have a corrupt state -> show start screen
         # TODO: message
         return redirect('myhome')
     if request.session['current_lesson_todo'][0] != 'WRAPUP':  # if we didn't finish a lesson, we have corrupt state

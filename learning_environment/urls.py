@@ -15,7 +15,6 @@ urlpatterns = [
     path('', home, name='home'),
     path('myhome/', myhome, name='myhome'),
     path('practice/', practice, name='practice'),
-    path('practice/<int:redo>', practice, name='practice'),
     path('signup/', SignUpView.as_view(), name='signup'),
 
     # Backstage
