@@ -35,12 +35,12 @@
                         {% for level in levels %}
                             <p class="card-text">
                                 {% if forloop.counter0 == current_level %}
-                                    <a class="btn btn-primary" href="{% url 'practice' %}" style="margin: 1vh">{{ level.lesson_id }}</a>
+                                    <a class="btn btn-primary" href="{% url 'practice' %}" style="margin: 1vh">{{ level.name }}</a>
                                 {% elif forloop.counter0 < current_level %}
                                 {% elif forloop.counter0 < current_level %}
-                                    <button class="btn btn-success" style="margin: 1vh">{{ level.lesson_id }}</button>
+                                    <button class="btn btn-success" style="margin: 1vh">{{ level.name }}</button>
                                 {% else %}
-                                    <button class="btn btn-outline-secondary" disabled style="margin: 1vh">{{ level.lesson_id }}</button>
+                                    <button class="btn btn-outline-secondary" disabled style="margin: 1vh">{{ level.name }}</button>
                                 {% endif %}
                             </p>
                         {% endfor %}
