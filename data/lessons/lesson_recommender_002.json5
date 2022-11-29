@@ -12,7 +12,7 @@
     tasks: [  // the list of tasks for this lesson
       {
         // Type 1, task 1
-        name: "Reading, Scanning",
+        name: "References",
         type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
         interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
         primary: false, // the primary task will be shown first, non-primary tasks are for repetition
@@ -38,7 +38,7 @@
       },
       {
         // Type 1, task 2
-        name: "Reading, Scanning",
+        name: "References",
         type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
         interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
         primary: false, // the primary task will be shown first, non-primary tasks are for repetition
@@ -64,7 +64,7 @@
       },
       {
         // Type 2, task 1
-        name: "Choose correct tense/form of the verb",
+        name: "Choose verb forms",
         type: "GS",
         interaction: "GAP",
         primary: false,
