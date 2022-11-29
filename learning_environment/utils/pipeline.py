@@ -11,15 +11,18 @@ from learning_environment.management.commands.read_lessons import Command
 import copy
 
 
-class AutomaticJson():
+class AutomaticJson:
+
     nlp_model = NLP_Model()
 
     @staticmethod
     def stop_word_removal(noun_phrases):
+        """
+        This function removes any unwanted stop words from the noun phrases and returns the filtered phrases.
+        """
         base = Path(__file__).parents[2]
         # Stop words were taken from www.countwordsfree.com
         path = '/learning_environment/utils/stop_words/stop_words_english.json'
-        # stopwords =json.load('stop_words/stop_words_english.json')
         with open(str(base) + path) as j:
             stop_words = json.load(j)
             filtered_nouns = [w for w in noun_phrases if not w in stop_words]
@@ -27,6 +30,9 @@ class AutomaticJson():
 
     @staticmethod
     def noun_phrase_extraction(text):
+        """
+        This function extracts noun phrases from a given text.
+        """
         text = TextBlob(text)
         nouns_cleaned = AutomaticJson.stop_word_removal(text.noun_phrases)
         return nouns_cleaned
@@ -34,23 +40,24 @@ class AutomaticJson():
     @staticmethod
     def generate_q_a(text, number_questions=3):
         """
-        Generates number_questions questions and answers and returns a list of tuples [(question,answer)... number_question]
+        Generates questions and answers and returns a list of tuples [(question,answer)... number_question]
         """
         AutomaticJson.text = text
         # extract noun phrases
         noun_phrases = [*set(AutomaticJson.noun_phrase_extraction(text))]
 
+        # take a random subset of the noun phrases as answers
         number_questions = len(noun_phrases) if len(noun_phrases) < number_questions else number_questions
-
         clean_answers = random.sample(noun_phrases, k=number_questions)
-        q_a = []
 
+        # generate questions based on the answers
+        q_a = []
         for a in clean_answers:
             answer = a
             question = AutomaticJson.nlp_model.get_question(answer=answer, context=text)
             question = question.strip("<pad>").strip('</s>').strip(' question: ')
-
             q_a.append((question, a))
+
         return q_a
 
     @classmethod
@@ -62,16 +69,15 @@ class AutomaticJson():
 
         template = copy.deepcopy(TEMPLATE)
 
+        # insert the data into lesson template
         template['text'] = data['text']
         template['name'] = data['name']
         template['id'] = data['name'].lower().replace(' ', '_')
-
         template['text_source'] = data["text_source"]
-
         template['text_licence'] = data['text_licence']
-
         template['text_url'] = data['text_url']
 
+        # insert data into task template
         primary = True
         for i,(q, a) in enumerate(data['tasks']):
             task = copy.deepcopy(TASK)
@@ -83,10 +89,10 @@ class AutomaticJson():
             template['tasks'].append(task)
             primary = False
 
+        # create Json5 file
         base = Path(__file__).parents[2]
         path = "/data/lessons/lesson_automatic_" + template['id'] + ".json5"
         filename = str(base) + path
-
         with open(filename, "w") as fp:
             json5.dump(template, fp,  indent=2)
 
