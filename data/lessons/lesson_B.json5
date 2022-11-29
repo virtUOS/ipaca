@@ -50,7 +50,7 @@
           feedback:  "True!"
         },
         {
-          text:  "Amanda felt upset because of not having phone",
+          text:  "Amara felt upset because of not having phone",
           correct: true,
           feedback:  "True!"
         },
@@ -60,7 +60,7 @@
           feedback:  "Wrong! There seems to be a big difference as claimed by the author",
         },
         {
-          text:  "Kids are more often tend to be rough on the Internet",
+          text:  "Kids more often tend to be rough on the Internet",
           correct: true,
           feedback:  "True",
         },
@@ -176,7 +176,7 @@
       interaction: "GAP",
       primary: true,
       show_lesson_text: false,
-      question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p> You look so tired. I _1_ my project for 4 hours. (to do) </p>",
+      question: "<p>Please fill in the gaps using the words in parentheses.</p><p>e.g. My teacher... (hate) me!</p><p>Answer: My teacher hates me!</p><p> You look so tired.</p> I _1_ my project for 4 hours. (to do) </p>",
       gaps: {
         mode: 'fillin',
         _1_: [

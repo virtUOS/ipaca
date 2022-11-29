@@ -67,7 +67,7 @@
           feedback:  "Wrong!",
         },
         {
-          text:  "In order to make sport programs more productive health promoters might adapt it to personality",
+          text:  "In order to make sport programs more productive, health promoters might adapt it to personality",
           correct: true,
           feedback:  "True!",
         },
@@ -116,7 +116,7 @@
             description: 'The quality of working hard and being careful',
           },
           '2': {
-            description: 'energetic people who enjoys being with other people', 
+            description: 'energetic people who enjoy being with other people', 
           },
           '3': {
             description: 'A feeling of extreme worry, sadness, or pain', 
@@ -172,7 +172,7 @@
         gaps: {
           mode: 'fillin',
           _1_: [
-            { text: 'would not', correct: true, feedback: "Correct!"},
+            { text: 'would not take', correct: true, feedback: "Correct!"},
           ],
         },
       },
@@ -202,7 +202,7 @@
         gaps: {
           mode: 'fillin',
           _1_: [
-            { text: 'had', correct: true, feedback: "Correct!"},
+            { text: 'had studied', correct: true, feedback: "Correct!"},
           ],
         },
       },
@@ -244,7 +244,7 @@
         primary: true,     
         show_lesson_text: false, 
         question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>I have been to Kyiv. (Never)</p>",  
-        answer: "I have never been to Kyiv."
+        answer: "I have never been to Kyiv"
       },  // end of task 10
 
       { // task 11: primary reading task
@@ -254,7 +254,7 @@
         primary: true,     
         show_lesson_text: false, 
         question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>Children do their homework without being reminded. (Seldom)</p>",  
-        answer: "Seldomly, children do their homework without being reminded."
+        answer: "Seldomly, children do their homework without being reminded"
       },  // end of task 11
 
       { // task 12: primary reading task
@@ -264,7 +264,7 @@
         primary: true,     
         show_lesson_text: false, 
         question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>I will buy this cake again. (Never)</p>",  
-        answer: "I will never buy this cake again."
+        answer: "I will never buy this cake again"
       },  // end of task 12
 
       { // task 13: primary reading task
@@ -274,7 +274,7 @@
         primary: true,     
         show_lesson_text: false, 
         question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>You should press this foremost button. (On no account)</p>",  
-        answer: "On no account should you press this foremost button."
+        answer: "On no account should you press this foremost button"
       },  // end of task 13
 
        { // task 14: primary reading task
@@ -284,7 +284,7 @@
         primary: true,     
         show_lesson_text: false, 
         question:  "<p>Paraphrase the last sentence. Use the words given in brackets.</p><p>You don't have to use punctuation marks at the end of the sentence.</p><p>e.g. She lives in a house. It's in front of the park. (near)</p><p>Answer: It's near the park</p><p>He had worked hard and managed to pass the exam. (Only by)</p>",  
-        answer: "Only by working hard did he manage to pass the exam."
+        answer: "Only by working hard did he manage to pass the exam"
       },  // end of task 14
     ] // end of tasks
 
