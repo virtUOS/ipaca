@@ -1,0 +1,299 @@
+                            {
+  name: "Learning Disabilities",  // the name that's also shown to the users
+  id: "lesson-recommender-006",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p>What is a learning disability? The spectrum disorders just described impact many areas of the child’s life. And if a child is mentally retarded, that child is typically slow in all areas of learning. However, a child with a learning disability has problems in a specific area or with a specific task or type of activity related to education. A learning difficulty refers to a deficit in a child’s ability to perform an expected academic skill (Berger, 2005). These difficulties are identified in school because this is when children’s academic abilities are being tested, compared, and measured. Consequently, once academic testing is no longer essential in that person’s life (as when they are working rather than going to school) these disabilities may no longer be noticed or relevant, depending on the person’s job and the extent of the disability.</p>\
+  <p>Dyslexia is one of the most commonly diagnosed disabilities and involves having difficulty in the area of reading. This diagnosis is used for a number of reading difficulties. For example, the child may reverse letters or have difficulty reading from left to right or may have problems associating letters with sounds. It appears to be rooted in some neurological problems involving the parts of the brain active in recognizing letters, verbally responding, or being able to manipulate sounds. Treatment typically involves altering teaching methods to accommodate the person’s particular problematic area.</p>\
+  <p>Attention Deficit Hyperactivity Disorder is considered a neurological and behavioral disorder in which a person has difficulty staying on task, screening out distractions, and inhibiting behavioral outbursts. The most commonly recommended treatment involves the use of medication, structuring the classroom environment to keep distractions at a minimum, tutoring, and teaching parents how to set limits and encourage age-appropriate behavior.</p>",
+  text_source: "Learning Disabilities",
+  text_licence: "CC BY 4.0",
+  text_url: "https://socialsci.libretexts.org/Bookshelves/Human_Development/Book%3A_Human_Development_Life_Span_(Overstreet)",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading",
+        type: "R",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Decide if the information in the statement is True or False according to the information in the text</p>\
+        <p>1. If a child is mentally retarded, that child is typically slow in all areas of learning. _1_</p>\
+        <p>2. A learning difficulty refers to a deficit in parental attention. _2_</p>\
+        <p>3. These difficulties are identified in adulthood because children’s academic abilities are never tested. _3_</p>\
+        <p>4. Once academic testing is no longer essential in that person’s life these disabilities become noticed more. _4_</p>\
+        <p>5. Dyslexia is one of the most commonly diagnosed disabilities and involves having difficulty in the area of reading. _5_</p>\
+        <p>6. Treatment typically involves altering teaching methods to accommodate the person’s particular problematic area. _6_</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True”."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True”."
+            }
+          ],
+          _2_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “True”."
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False”.“a learning difficulty refers to a deficit in a child’s ability to perform an expected academic skill.”"
+            }
+          ],
+          _3_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “True”."
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False”.“These difficulties are identified in school because this is when children’s academic abilities are being tested, compared, and measured.”"
+            }
+          ],
+          _4_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “True”."
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False”.“once academic testing is no longer essential in that person’s life (as when they are working rather than going to school) these disabilities may no longer be noticed or relevant, depending on the person’s job and the extent of the disability.”"
+            }
+          ],
+          _5_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True”."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True”."
+            }
+          ],
+          _6_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True”."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True”."
+            }
+          ]
+        },
+      },
+      {
+        // Type 2, task 1
+        name: "Grammar",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Fill in the blank with the correct answer</p><p>\
+        1. These difficulties _1_ in school because this is when children’s academic abilities _2_. <br>\
+        2. This diagnosis _3_ for a number of reading difficulties. <br>\
+        3. The child _4_ reverse letters or have difficulty reading from left to right or _5_ have problems associating letters with sound <br>\
+        4. It appears _6_ in some neurological problems involving the parts of the brain active in recognizing letters, verbally responding, or being able to manipulate sounds. <br>\
+        5. Attention Deficit Hyperactivity Disorder _7_ a neurological and behavioral disorder in which a person has difficulty staying on task, screening out distractions, and inhibiting behavioral outbursts.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "identify",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "identified",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are identified",
+              correct: true,
+              feedback: "That's correct. Passive voice is used when the focus is on the action.  It is not important or not known, however, who or what is performing the action. Object + “to be” + past participle (V3)\nPresent Continuous we use for: unfinished actions now; temporary situations, te,porery habits, annoying habits and definite future plans.\nThe Passive Voice in the present continuous is formed by the verb “to be” in the present continuous (am being, is being, or are being) + past participle (V3)"
+            },
+          ],
+          _2_: [
+            {
+              text: "are tested, compared, and measured",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are being tested, compared, and measured",
+              correct: true,
+              feedback: "That's correct. Passive voice is used when the focus is on the action.  It is not important or not known, however, who or what is performing the action. Object + “to be” + past participle (V3)\nPresent Continuous we use for: unfinished actions now; temporary situations, te,porery habits, annoying habits and definite future plans.\nThe Passive Voice in the present continuous is formed by the verb “to be” in the present continuous (am being, is being, or are being) + past participle (V3)"
+            },
+            {
+              text: "are testing, comparing, and measuring",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _3_: [
+            {
+              text: "is using",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "used",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "uses",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is used",
+              correct: true,
+              feedback: "That's correct. Passive voice is used when the focus is on the action.  It is not important or not known, however, who or what is performing the action. Object + “to be” + past participle (V3)"
+            }
+          ],
+          _4_: [
+            {
+              text: "may",
+              correct: true,
+              feedback: "That's correct. “May” is used to indicate possibility or probability.\n“Must” means that the obligation to do something comes from the speaker. In other words, it’s not a rule.\n“Should” is used to indicate obligation, duty, or correctness, typically when criticizing someone's actions.\nIf you say that something is going to happen, you mean that it will happen in the future, usually quite soon.\n"
+            },
+            {
+              text: "must",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "should",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is going to",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _5_: [
+            {
+              text: "may",
+              correct: true,
+              feedback: "That's correct. “May” is used to indicate possibility or probability.\n“Must” means that the obligation to do something comes from the speaker. In other words, it’s not a rule.\n“Should” is used to indicate obligation, duty, or correctness, typically when criticizing someone's actions.\nIf you say that something is going to happen, you mean that it will happen in the future, usually quite soon.\n"
+            },
+            {
+              text: "must",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "should",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is going to",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _6_: [
+            {
+              text: "to be rooted",
+              correct: true,
+              feedback: "That's correct. “To infinitive” as a Complex Subject is used here to indicate the speaker’s attitude to the future.\nPassive voice is used when the focus is on the action.  It is not important or not known, however, who or what is performing the action. Object + “to be” + past participle (V3)\n"
+            },
+            {
+              text: "to root",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "be rooting",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "rooting",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _7_: [
+            {
+              text: "is considering",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "considered",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is considered",
+              correct: true,
+              feedback: "That's correct. Passive voice is used when the focus is on the action. It is not important or not known, however, who or what is performing the action. Object + “to be” + past participle (V3)"
+            },
+            {
+              text: "considering",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+        },
+      },
+      {
+        // Type 3, task 1
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their synonyms.</p><p>\
+        1. impact <br>\
+        2. extent <br>\
+        3. to inhibit <br>\
+        4. to perform <br>\
+        5. to accommodate <br>\
+        6. to reverse</p>",
+        paragraphs: ["influence","distance","to prevent","to act","to adapt","to invert"],
+      },
+      {
+        // Type 3, task 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their definitions.</p><p>\
+        1. Something necessary, indispensable, or unavoidable <br>\
+        2. Pertaining to reactions made in response to social stimuli <br>\
+        3. Less advanced in mental, physical, or social development than is usual for one's age <br>\
+        4. Closely connected or appropriate to what is being done or considered <br>\
+        5. Firmly fixed or established; difficult to change</p>",
+        paragraphs: ["essential","behavioural","retarded","relevant","rooted"],
+      }
+    ] // end of tasks
+
+} // end of lesson
