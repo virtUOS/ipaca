@@ -1,0 +1,231 @@
+                            {
+  name: "An introduction to microbiomes",  // the name that's also shown to the users
+  id: "lesson-recommender-013",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p>Microorganisms represent the fundamentals of life and interact with almost every facet of it. Yet, for the majority of their existence they have been largely ignored, or rather unseen by humans. The unraveling of the complex interactions between all life forms is an endless duty and seems to generate more questions than answers. However, the cracks in knowledge produced by peering into the unknown offers insight into our life and the world around us. These minute creatures have shaped Earth’s evolution since their dawn almost three-and-a-half billion years ago, and continuously affect our environment and health. The importance of the planet’s collection of microbes is realized more and more each day, and our unceasing investigation of them will surely unlock secrets of life we could never imagine.</p>\
+  <p>The study of microbiomes is fairly novel in the context of understanding and applying their communal existence to ourselves and surroundings. Though scientists have recognized symbiotic relationships and traditionally focused on individual microbes and their interactions with human health, environmental impact, industrial applications, etc., their respective communities and influence as a whole in these areas have only just begun to be elucidated. That is in no small part due to the daunting task of cataloging the immense and complex interplay between the multitude of different microorganisms in a given environment, though rapid advances in technology have begun to ease analysis.</p>",
+  text_source: "An introduction to microbiomes",
+  text_licence: "CC BY 4.0",
+  text_url: "https://uta.pressbooks.pub/microbiomeshealthandtheenvironment/",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading, Scanning",
+        type: "R",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Decide if the information in the statement is True or False according to the information in the reading passage.</p>\
+        <p>1. Microorganisms represent the building blocks of life and interact with nearly all aspects of life. _1_</p>\
+        <p>2. Since the beginning of their existence, microorganisms have been studied by people. _2_</p>\
+        <p>3. Microorganisms do not affect our environment and health in any way. _3_</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True” because the text says “Microorganisms represent the fundamentals of life and interact with almost every facet of it.”."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True” because the text says “Microorganisms represent the fundamentals of life and interact with almost every facet of it.”."
+            }
+          ],
+          _2_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “False” because the text says “…for the majority of their existence they have been largely ignored, or rather unseen by humans.”."
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False” because the text says “…for the majority of their existence they have been largely ignored, or rather unseen by humans.”."
+            }
+          ],
+          _3_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “False” because the text says  “These minute creatures have shaped Earth’s evolution since their dawn almost three-and-a-half billion years ago, and continuously affect our environment and health.”."
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False” because the text says  “These minute creatures have shaped Earth’s evolution since their dawn almost three-and-a-half billion years ago, and continuously affect our environment and health.”."
+            }
+          ],
+        },
+      },
+      {
+        // Type 2, task 1
+        name: "Vocabulary Issues",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their definitions:</p><p>\
+        1. to cause something to exist <br>\
+        2. the act or process of examining a crime, problem, statement, etc. carefully, especially to discover the truth <br>\
+        3. the air, water, and land in or on which people, animals, and plants live <br>\
+        4. an occasion when two or more people or things communicate with or react to each other <br>\
+        5. the way in which living things change and develop over millions of years <br>\
+        6. a powerful effect that something, especially something new, has on a situation or person <br>\
+        7. to have an influence on someone or something, or to cause a change in someone or something</p>",
+        paragraphs: ["To generate","Investigation","Environment","Interaction","Evolution","Impact","To affect"],
+      },
+      {
+        // Type 3, task 1
+        name: "Grammar",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Fill in the blank with the correct answer</p><p>\
+        1. Microorganisms _1_ the fundamentals of life and _2_ with almost every facet of it. <br>\
+        2. For the majority of their existence they _3_ largely _4_, or rather unseen by humans <br>\
+        3. These minute creatures _5_ Earth’s evolution since their dawn almost three-and-a-half billion years ago, and continuously _6_ our environment and health. <br>\
+        4. The importance of the planet’s collection of microbes _7_ more and more each day, and our unceasing investigation of them _8_ surely unlock secrets of life we could never imagine.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "to represent",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "represent",
+              correct: true,
+              feedback: "That's correct, because we use the present simple for general truths and laws of nature."
+            },
+            {
+              text: "are representing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "have represented",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _2_: [
+            {
+              text: " to interact",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "interact",
+              correct: true,
+              feedback: "That's correct, because we use the present simple for general truths and laws of nature."
+            },
+            {
+              text: "are interacting",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "have interacted",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _3_: [
+            {
+              text: "have",
+              correct: true,
+              feedback: "That's correct, because we use the past perfect passive when the action itself is more important than the person who carries it out."
+            },
+            {
+              text: "has",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _4_: [
+            {
+              text: "ignored",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "been ignored",
+              correct: true,
+              feedback: "That's correct, because we use the past perfect passive when the action itself is more important than the person who carries it out."
+            },
+          ],
+          _5_: [
+            {
+              text: "have shaped",
+              correct: true,
+              feedback: "That's correct, because we use the present perfect for an action which has recently finished and whose result is visible in the present and we use the present simple for general truths and laws of nature."
+            },
+            {
+              text: "has shaped",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _6_: [
+            {
+              text: "affect",
+              correct: true,
+              feedback: "That's correct, because we use the present perfect for an action which has recently finished and whose result is visible in the present and we use the present simple for general truths and laws of nature."
+            },
+            {
+              text: "have affected",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are affecting",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _7_: [
+            {
+              text: "realized",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "has realized",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is realized",
+              correct: true,
+              feedback: "That's correct, because we use the past perfect passive when the action itself is more important than the person who carries it out and we use the future simple for promises"
+            }
+          ],
+          _8_: [
+            {
+              text: "will",
+              correct: true,
+              feedback: "That's correct, because we use the past perfect passive when the action itself is more important than the person who carries it out and we use the future simple for promises"
+            },
+            {
+              text: "would",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "would be",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ]
+        },
+      }
+    ] // end of tasks
+
+} // end of lesson

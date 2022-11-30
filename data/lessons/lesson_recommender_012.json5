@@ -78,6 +78,23 @@
         },
       },
       {
+        // Type 2, task 1
+        name: "Vocabulary Issues",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their definitions:</p><p>\
+        1. the way of life, especially the general customs and beliefs, of a particular group of people at a particular time <br>\
+        2. a number of similar events or people that happen, exist, etc. after each other <br>\
+        3. an idea or mental image of something <br>\
+        4. a formal statement of the rules on which a subject of study is based or of ideas that are suggested to explain a fact or event or, more generally, an opinion or explanation <br>\
+        5. existing as an idea, feeling, or quality, not as a material object <br>\
+        6. (the use of) a new idea or method <br>\
+        7. the use of words or pictures in books, films, paintings, etc. to describe ideas or situations</p>",
+        paragraphs: ["Culture","Succession","Vision","Theory","Abstract","Innovation","Imagery"],
+      },
+      {
         // Type 3, task 1
         name: "Main tenses",
         type: "GS",
