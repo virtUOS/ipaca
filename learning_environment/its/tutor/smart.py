@@ -4,6 +4,8 @@ from django.db.models import Count
 
 from learning_environment.its.tutor import BaseTutorModel
 from learning_environment.models import Task, Solution
+import time
+import random
 
 
 class SmartTutorModel(BaseTutorModel):
@@ -23,6 +25,7 @@ class SmartTutorModel(BaseTutorModel):
             user_levels = self._get_user_levels(next_type)
 
             current_user_level = 0
+
             for ind, user in enumerate(user_levels):
                 if user["id"] == self.learner.id:
                     current_user_level = ind / len(user_levels)
@@ -31,7 +34,14 @@ class SmartTutorModel(BaseTutorModel):
             # select task id accordingly to skill of user and estimated task difficulty
             index = int((1 - current_user_level) * len(task_difficulties) - 1)
             task_id = task_difficulties[index]["id"]
+            while not self._deteremine_task_probability(task_id, request.user):
+                if index + 1 > len(task_difficulties) - 1:
+                    break
+                index += 1
+                task_id = task_difficulties[index]["id"]
+
             task = Task.objects.get(pk=task_id)
+
 
         return next_type, task
 
@@ -51,6 +61,19 @@ class SmartTutorModel(BaseTutorModel):
 
         task_difficulties = sorted(task_difficulties, key=lambda x: x["share"])
         return task_difficulties
+
+    @staticmethod
+    def _deteremine_task_probability(task_id, user_id):
+        try:
+            last_solution = Solution.objects.filter(task=task_id, user=user_id).order_by('timestamp')[0]
+        except IndexError:
+            return True
+        timestamp = last_solution.timestamp
+        zEI_T = time.time() - 604800 # 1 week in seconds
+        timestamp = (timestamp - zEI_T) / 604800
+        if random.randint(0, 100) < 100 * timestamp:
+            return True
+        return False
 
     @staticmethod
     def _get_user_levels(next_type: str):
