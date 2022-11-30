@@ -1,0 +1,395 @@
+                            {
+  name: "Race",  // the name that's also shown to the users
+  id: "lesson-recommender-005",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p>In 1903, when W.E.B. DuBois wrote, the problem of the 20th century is the problem of the color line, he was writing about race relations in the United States and in the world system. Racism is woven into the fabric of American society. A race is a population that differs from others in the frequency of certain hereditary traits, which is also the definition of a species. However, all human beings are members of the same species, we all share the same DNA, and we share many physiological characteristics that cross the boundaries of skin color, hair texture, eye shape, and all of the other physical characteristics that we believe to define race. Biologically, there is no such things as race when it comes to human beings with the exception that we all members of the same species: Homo Sapiens Sapiens. Race, as we use the term on a day-to-day basis, is a social construct; it is categories of people who are set apart from others because of socially defined physical characteristics.</p>\
+  <p>For example, in the U.S., people of Chinese and Southern European heritage have been categorized as both black and white, depending upon the time period.</p>\
+  <p>Since earliest times, for hundreds of thousands of years, human beings have been moving across the face of the planet. From more than 75,000 years ago until the present, people have been meeting others different in physical appearance from themselves. Oftentimes these travelers have interbred with those whom they have encountered, creating a worldwide situation in which there are no pure races among human beings: we are all related, even if distantly, to one another, notwithstanding our superficial physical differences (phenotype)—the differences in phenotype are accounted for by 1 /10th of 1% (.1%=.0001) of our genotype (DNA). Sadly, many socially defined racial characteristics have become significant symbols of character and Thomas’s Theorem which states that “things perceived to be real are real in their consequences” explains to us that race and the way we define it matters significantly in American society. When W.E.B. DuBois wrote about this double consciousness this seeing one’s self through the eyes of the other world he was emphasizing the idea that race is defined by others, by the dominant group in any given society.</p>\
+  <p>In about 2001, in a class discussion of race, one of my students who is from Venezuela told the class about her experience emigrating to the US. On her application there was a space for race: she wrote “human.” The immigration officials at the airport where she entered the US were not amused and changed her response to “white.”</p>",
+  text_source: "Race",
+  text_licence: "CC BY 3.0",
+  text_url: "https://socialsci.libretexts.org/Bookshelves/Ethnic_Studies/Minority_Studies_(Dunn)",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading",
+        type: "R",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Decide if the information in the statement is True or False according to the information in the text</p>\
+        <p>1. The problem of the 20th century is the problem of the color line. _1_</p>\
+        <p>2. Racism is woven into the fabric of American society. _2_</p>\
+        <p>3. Human beings of different races belong to different species and have different DNA. _3_</p>\
+        <p>4. Race is a purely biological term and it distinguishes people purely by biological characteristics _4_</p>\
+        <p>5. In the U.S people of Chinese and Southern European heritage always have been categorized as white. _5_</p>\
+        <p>6. Travelers have created a worldwide situation in which there are no pure races among human beings: we are all related, even if distantly. _6_</p>\
+        <p>7. Thomas’s Theorem states that “things perceived to be real are real in their consequences” explains to us that race and the way we define it matters significantly in American society. _7_</p>\
+        <p>8. Race is defined by biologists. _8_</p>\
+        <p>9. The immigration officials at the airport were amused and accepted the application where in a space for race: she wrote “human.” _9_</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True”."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True”."
+            }
+          ],
+          _2_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True”."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True”."
+            }
+          ],
+          _3_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “False”.“all human beings are members of the same species, we all share the same DNA”"
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False”.“all human beings are members of the same species, we all share the same DNA”"
+            }
+          ],
+          _4_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “False”.“biologically, there is no such things as race when it comes to human beings”, “Race is a social construct; it is categories of people who are set apart from others because of socially defined physical characteristics”"
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False”.“biologically, there is no such things as race when it comes to human beings”, “Race is a social construct; it is categories of people who are set apart from others because of socially defined physical characteristics”"
+            }
+          ],
+          _5_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “False”.“in the U.S., people of Chinese and Southern European heritage have been categorized as both black and white, depending upon the time period”"
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False”.“in the U.S., people of Chinese and Southern European heritage have been categorized as both black and white, depending upon the time period”"
+            }
+          ],
+          _6_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True”."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True”."
+            },
+          ],
+          _7_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "The correct answer is “True”."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "The correct answer is “True”."
+            },
+          ],
+          _8_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “False”. “race is defined by others, by the dominant group in any given society”"
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False”. “race is defined by others, by the dominant group in any given society”"
+            },
+          ],
+          _9_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "The correct answer is “False”. “The immigration officials at the airport where she entered the US were not amused and changed her response to “white”.”"
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "The correct answer is “False”. “The immigration officials at the airport where she entered the US were not amused and changed her response to “white”.”"
+            },
+          ]
+        },
+      },
+      {
+        // Type 2, task 1
+        name: "Grammar",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Fill in the blank with the correct answer</p><p>\
+        1. It is categories of people _1_ are set apart from others because of socially defined physical characteristics <br>\
+        2. It is categories of people _2_ are set apart from others because of socially defined physical characteristics <br>\
+        3. Thomas’s Theorem _3_ states that “things perceived to be real are real in their consequences” explains to us that race and the way we define it matters significantly in American society. <br>\
+        4. We share many physiological characteristics _4_ cross the boundaries. <br>\
+        5. …, and all of the other physical characteristics that we believe _5_ race. <br>\
+        6. Racism _6_ into the fabric of American society. <br>\
+        7. In the U.S., people of Chinese and Southern European heritage _7_ as both black and white, depending upon the time period. <br>\
+        8. Since earliest times, for hundreds of thousands of years, human beings _8_ across the face of the planet. <br>\
+        9. From more than 75,000 years ago until the present, people _9_ others different in physical appearance from themselves.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "what",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "which",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "whom",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "who",
+              correct: true,
+              feedback: "That's correct. We use who as a relative pronoun to introduce a relative clause about people."
+            }
+          ],
+          _2_: [
+            {
+              text: "what",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "which",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "whom",
+              correct: true,
+              feedback: "That's correct. Whom is the object form of who. We use whom to refer to people when the person is the object of the verb. We use it more commonly in writing than in speaking. We use whom commonly with prepositions."
+            },
+            {
+              text: "who",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _3_: [
+            {
+              text: "what",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "which",
+              correct: true,
+              feedback: "That's correct. We use which in relative clauses to refer to animals and to things"
+            },
+            {
+              text: "whom",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "who",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "what",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "that",
+              correct: true,
+              feedback: "That's correct. We use that for both a person and a thing/idea. It should be noted, however, that who is preferred when referring to a particular person. When that is used, it usually refers to classes or types of people."
+            },
+            {
+              text: "whose",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "whom",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _5_: [
+            {
+              text: "defining",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "defined",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to define",
+              correct: true,
+              feedback: "That's correct. The infinitive as the object usually answers the question ‘to do what?’ When the infinitive is used after the verbs to find, to consider, to believe, to think, it may be preceded by the formal introductory object ‘it’\nAll of the other physical characteristics that we believe to define race = we believe all of the other physical characteristics (to do what?) to define race.\n"
+            },
+            {
+              text: "to being defined",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _6_: [
+            {
+              text: "is woven",
+              correct: true,
+              feedback: "That's correct. Passive voice is used when the focus is on the action. It is not important or not known, however, who or what is performing the action. Object + “to be” + past participle (V3)"
+            },
+            {
+              text: "is weaving",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "wove",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "woven",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _7_: [
+            {
+              text: "have categorized",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "have been categorized",
+              correct: true,
+              feedback: "The present perfect is a tense that usually describes something about the past that has a connection with the present. It can describe a past experience that has importance to now, or it can refer to an action that began in the past and continues in the present, or it can express a recent action that creates consequences in this moment. When we use the passive form, we focus attention on what or who receives an action (the object).\nStructure: Object + have been + past participle (V3)\n",
+            },
+            {
+              text: "is categorized",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "categorized",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _8_: [
+            {
+              text: "are moving",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "have moved",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "moved",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "have been moving",
+              correct: true,
+              feedback: "That's correct. We use the present perfect continuous to talk about repeated activities which started at a particular time in the past and are still continuing up until now."
+            }
+          ],
+          _9_: [
+            {
+              text: "met",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are meeting",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "have been meeting",
+              correct: true,
+              feedback: "That's correct. We use the present perfect continuous to talk about repeated activities which started at a particular time in the past and are still continuing up until now."
+            },
+            {
+              text: "have met",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ]
+        },
+      },
+      {
+        // Type 3, task 1
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Sort the words to the missing spots in the sentences.</p><p>\
+        1. Racism is _____ the fabric of American society. <br>\
+        2. We ___ many physiological characteristics that _____ the boundaries of skin color, hair texture, eye shape <br>\
+        3. People of Chinese and Southern European heritage have been categorized as both black and white, _________ the time period. <br>\
+        4. Since earliest times, for hundreds of thousands of years, human beings have been _______ the face of the planet.</p>",
+        paragraphs: ["woven into","share","cross","to act","depending upon","moving across"],
+      },
+      {
+        // Type 3, task 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their definitions.</p><p>\
+        1. a particular characteristic that can produce a particular type of behaviour <br>\
+        2. a set of animals or plants in which the members have similar characteristics to each other and can breed with each other <br>\
+        3. a person or thing that exists <br>\
+        4. the structure or parts of something <br>\
+        5. (of characteristics or diseases) passed from the genes of a parent to a child, or (of titles and positions in society) passed from parent to a child as a right</p>",
+        paragraphs: ["traits","species","being","fabric","hereditary"],
+      }
+    ] // end of tasks
+
+} // end of lesson

@@ -44,7 +44,7 @@
             {
               text: "True",
               correct: false,
-              feedback: "The correct answer is “True”."
+              feedback: "The correct answer is “False”.“a learning difficulty refers to a deficit in a child’s ability to perform an expected academic skill.”"
             },
             {
               text: "False",
@@ -56,7 +56,7 @@
             {
               text: "True",
               correct: false,
-              feedback: "The correct answer is “True”."
+              feedback: "The correct answer is “False”.“These difficulties are identified in school because this is when children’s academic abilities are being tested, compared, and measured.”"
             },
             {
               text: "False",
@@ -68,7 +68,7 @@
             {
               text: "True",
               correct: false,
-              feedback: "The correct answer is “True”."
+              feedback: "The correct answer is “False”.“once academic testing is no longer essential in that person’s life (as when they are working rather than going to school) these disabilities may no longer be noticed or relevant, depending on the person’s job and the extent of the disability.”"
             },
             {
               text: "False",
