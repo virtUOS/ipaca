@@ -1,0 +1,288 @@
+                            {
+  name: "Digital Games are Stories Users Co-Create",  // the name that's also shown to the users
+  id: "lesson-recommender-004",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p>When the “All your base” meme spread across the internet in late 2000 and early 2001, YouTube had not been invented yet. Web videos were slow to play when they played at all, and photoshopped images designed to create jokes or memes were relatively new. But something about the meme’s use of music, mashed-up photoshopped images and familiar real-world objects resonated with a generation of young adults who grew up with Japanese video games that sometimes had odd translations when they were reproduced for the American market. Users realized that the internet, a medium that functions as a convergence of all other media platforms, was capable of making us laugh and feel nostalgic. It was capable of transmitting culture.</p>\
+  <p>Zero Wing, the video game at the heart of the meme, was a popular arcade game that was “ported” to (that is, recoded for) the Sega Genesis video game system in 1991. It was not the most popular arcade or SEGA game by any means, and yet something about the “All Your Base” meme was familiar to kids who grew up playing early home systems. The graphics were familiar. The orange background flashes were commonplace, as was the look of the cyborg villain. The hastily-translated Japanese-to-English text was not unusual for games of that era. If you had grown up in the 1980s and 1990s, you would have felt like part of your childhood had come back. Only this time there was an electronic music soundtrack and a collection of photoshopped images. Millions got the reference in what was one of the first internet memes to gain mainstream media attention.</p>",
+  text_source: "Digital Games are Stories Users Co-Create",
+  text_licence: "CC BY 4.0",
+  text_url: "https://socialsci.libretexts.org/Bookshelves/Communication/Journalism_and_Mass_Communication/Book%3A_Media_Society_Culture_and_You_(Poepsel)",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading",
+        type: "R",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Put the events back in their chronological order.</p>",
+        paragraphs: [
+          "The Internet was invented.",
+          "The generation of young adults who grew up with Japanese video games was born.",
+          "Web videos were slow to play, and photoshopped images appeared.",
+          "Zero Wing recoded for the Sega Genesis video game system.",
+          "The “All your base” meme spread across the internet\n",
+          "YouTube was invented."
+        ]
+      },
+      {
+        // Type 2, task 1
+        name: "Grammar",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Fill in the blank with the correct answer</p><p>\
+        1. When the “All your base” meme spread across the internet in late 2000 and early 2001, YouTube _1_ yet. <br>\
+        2. Web videos _2_ when they played at all, and photoshopped images _3_ jokes or memes were relatively new. <br>\
+        3. Users realized that the internet, a medium that functions as a convergence of all other media platforms, _4_ us laugh and feel nostalgic. <br>\
+        4. If you _5_ up in the 1980s and 1990s, you _6_ like part of your childhood had come back. <br>\
+        5. Millions got the reference in what was one of the first internet memes _7_ mainstream media attention.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "had not been invented",
+              correct: true,
+              feedback: "That's correct. Sentences are written in Past perfect passive voice when we want to focus on the receiver of the action: when we want to talk about what or whom the doer of the action had acted upon.\nStructure: Object + had been + past participle (V3)\n"
+            },
+            {
+              text: "had not invented",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "was not invented",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "did not invented",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _2_: [
+            {
+              text: "were slow to playing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "were slow to play",
+              correct: true,
+              feedback: "That's correct. As an adverbial modifier of result or consequence the Infinitive is used to denote an action which became possible or impossible due to some action or state expressed by the words it refers to. It chiefly occurs after adjectives or adverbs modified by enough or too."
+            },
+            {
+              text: "were slow play",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "were slow playing",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _3_: [
+            {
+              text: "designed to creating",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "designed to create",
+              correct: true,
+              feedback: "That's correct. As an adverbial modifier of result or consequence the Infinitive is used to denote an action which became possible or impossible due to some action or state expressed by the words it refers to. It chiefly occurs after adjectives or adverbs modified by enough or too."
+            },
+            {
+              text: "designed create",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "designed creating",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "was capable to make",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "was capable make",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "was capable in making",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "was capable of making",
+              correct: true,
+              feedback: "To be capable of is one of the common prepositional combinations followed by gerund"
+            }
+          ],
+          _5_: [
+            {
+              text: "grew",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "had grown",
+              correct: true,
+              feedback: "That's correct. The third conditional is used to express the past consequence of an unrealistic action or situation in the past."
+            },
+            {
+              text: "grow",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _6_: [
+            {
+              text: "feel",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "would have felt",
+              correct: true,
+              feedback: "That's correct. The third conditional is used to express the past consequence of an unrealistic action or situation in the past."
+            },
+            {
+              text: "will feel",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _7_: [
+            {
+              text: "gain",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to gaining",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to gain",
+              correct: true,
+              feedback: "That's correct. The infinitive in the function of attribute immediately follows its headnoun and is used with the particle to.",
+            },
+            {
+              text: "of gaining",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+        },
+      },
+      {
+        // Type 3, task 1
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their synonyms.</p><p>\
+        1. to invent <br>\
+        2. to resonate <br>\
+        3. to reproduce <br>\
+        4. to port <br>\
+        5. to gain</p>",
+        paragraphs: ["to create","to inspire","to replicate","to transfer","to get"],
+      },
+      {
+        // Type 3, task 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their definitions.</p><p>\
+        1. The fact that two or more things, ideas, etc. become similar or come together <br>\
+        2. A character whose evil actions or motives are important to the plot <br>\
+        3. The action of mentioning or alluding to something <br>\
+        4. The circumstances or situation prevailing at a particular time or underlying a particular event <br>\
+        5. All of the people born and living at about the same time, regarded collectively</p>",
+        paragraphs: ["convergence","villain","reference","background","generation"],
+      },
+      {
+        // Type 3, task 3
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the right halves to make the correct phrases.</p><p>\
+        1. When the “All your base” meme spread _1_ the internet in late 2000 and early 2001 <br>\
+        2. It was capable _2_ transmitting culture. <br>\
+        3. Something about the “All Your Base” meme was familiar _3_ kids who grew up playing early home systems. <br>\
+        4. If you had grown _4_ in the 1980s and 1990s, you would have felt like part of your childhood had come back.\n</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "out",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "across",
+              correct: true,
+              feedback: "That's correct. Spread across means to disseminate information over the entirety or majority of some area or place; spread out means to open, arrange, or place (something) over a large area."
+            },
+          ],
+          _2_: [
+            {
+              text: "to",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "of",
+              correct: true,
+              feedback: "That's correct. To be capable of means having the ability, power, or qualities to be able to do something."
+            }
+          ],
+          _3_: [
+            {
+              text: "to",
+              correct: true,
+              feedback: "That's correct. Familiar to\" means recognizable; familiar with\" means well informed about or knowing thoroughly.\n"
+            },
+            {
+              text: "with",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "up",
+              correct: true,
+              feedback: "That's correct. Grow up means advancing to maturity; develop into an adult; grow into means become something as a result of natural development or gradual increase."
+            },
+            {
+              text: "into",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+        },
+      }
+    ] // end of tasks
+
+} // end of lesson
