@@ -1,7 +1,5 @@
 """ipaca Tutor Model
-
 The tutor model is able to determine appropriate actions for a given learner. (E.g. generate a 'next task')
-
 """
 
 import random
