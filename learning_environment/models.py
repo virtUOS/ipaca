@@ -47,7 +47,6 @@ class Lesson(models.Model):
     """
     A selected collection of task
     Comes which has a paragraph
-
     name: unique identifier
     paragraph: piece of written academic text to read
     tasks: tasks belonging to the lesson
@@ -60,8 +59,6 @@ class Lesson(models.Model):
     text_source = models.CharField(max_length=1024, null=True)
     text_licence = models.CharField(max_length=1024, null=True)
     text_url = models.URLField(null=True)
-    start = models.TextField(null=True)  # text to be displayed before the lesson starts
-    wrapup = models.TextField(null=True)  # text to be displyed after the lesson has been finished
     json5 = models.TextField(null=True)
 
     @classmethod
@@ -84,7 +81,7 @@ class Lesson(models.Model):
                 raise Json5ParseException('Field "{}" is empty'.format(lesson_field))
 
         # Optional fields must not be empty
-        for lesson_field in ['series', 'start', 'wrapup']:
+        for lesson_field in ["series"]:
             if lesson_field in lesson and not lesson[lesson_field]:
                 raise Json5ParseException('Field "{}" is empty'.format(lesson_field))
 
@@ -116,12 +113,7 @@ class Lesson(models.Model):
                      text_url=lesson["text_url"],
                      json5=lesson_json5)
         if 'series' in lesson:
-            lsn.series = str(lesson['series'])
-        if 'start' in lesson:
-            lsn.start = str(lesson['start'])
-        if 'wrapup' in lesson:
-            lsn.wrapup = str(lesson['wrapup'])
-
+            lsn.series = lesson['series']
         lsn.save()
 
 
@@ -135,8 +127,6 @@ class Task(models.Model):
     """
     There are multiple Tasks within a lesson
     The Tasks are subclassed according to their interaction type
-
-
     interaction: in what way does the Leaner give their answer
     type: which of the three different types does the task have, useful for later defining order
     title: the unique identifier of the Task
