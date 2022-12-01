@@ -1,0 +1,25 @@
+<div class="modal fade" id="bsmodals-confirm" tabindex="-1" role="dialog"
+    data-backdrop="static" aria-labelledby="bsmodals-confirm-title" 
+    aria-hidden="true">
+  <div class="modal-dialog {% if not not_centered %}modal-dialog-centered{% endif %}" 
+      role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="bsmodals-confirm-title"></h5>
+      </div>
+
+      <div class="modal-body">
+        <p id="bsmodals-confirm-body"></p>
+      </div>
+
+      <div class="modal-footer">
+        <button id="bsmodals-confirm-no" type="button" class="btn btn-secondary"
+          >{% if no_button_text %}{{no_button_text}}{% else %}No{% endif %}</button>
+        <button id="bsmodals-confirm-yes" type="button" 
+            class="btn btn-primary"
+          >{% if yes_button_text %}{{yes_button_text}}{% else %}Yes{% endif %}</button>
+      </div>
+    </div>
+  </div>
+</div>

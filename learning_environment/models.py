@@ -226,3 +226,9 @@ class Solution(models.Model):
 class LearnerStatus(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     current_lesson = models.ForeignKey(Lesson, null=True, on_delete=models.SET_NULL)
+
+
+class Task_Eval(models.Model):
+    task_id = models.IntegerField(null=True, default=1)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    task_eval = models.BooleanField(null=True)

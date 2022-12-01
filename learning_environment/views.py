@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 from django.views import generic
-from django.http import HttpResponseBadRequest, HttpResponseServerError
+from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseServerError
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormView
@@ -11,7 +11,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import *
-from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
+from .models import Lesson, Task, Task_Eval, Solution, Profile, ProfileSeriesLevel
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 import json
@@ -65,6 +65,17 @@ def practice(request):
             ProfileSeriesLevel.objects.create(user=request.user, series=current_lesson_series, level=1)
 
         return redirect('myhome')
+
+    # analyze a solution
+    elif request.method == 'POST' and 'task_eval' in request.POST:
+        try:
+            taskEval = Task_Eval.objects.create()
+            taskEval.task_id = int(request.POST['task_id'])
+            taskEval.task_eval = request.POST['task_eval'] == "true"
+            taskEval.save()
+            return HttpResponse("ok")
+        except (KeyError, Task.DoesNotExist):
+            return HttpResponseBadRequest("Invalid Task ID")
 
     # analyze a solution
     elif request.method == 'POST':

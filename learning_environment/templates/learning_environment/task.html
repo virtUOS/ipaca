@@ -6,6 +6,9 @@
 
 {% block content %}
 
+    {% include "bsmodals/confirm.html" %}
+
+
     <h1>
         {{ lesson.name }} {% if task %}&mdash; {{ task.get_type_display }} task {% endif %}
     </h1>
@@ -77,11 +80,50 @@
                                     {% endif %}
                                 </p>
                             {% endif %}
+
+                            <button id="do-confirm1" type="button" class="btn btn-primary">Evaluate This Task</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script src="/static/bsmodals/bsmodals.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        
+        
+        <script>
+            var task_id = "{{task.id}}";
+            var csrftoken = '{{ csrf_token }}';
+            jQuery(document).ready(function() {
+            
+                console.log("test1");
+                jQuery('#do-confirm1').click( function() {
+                    
+
+                    bsmodals_confirm('Did you like this task?', ' ', (result)=> {
+
+                        console.log(csrftoken);
+                        console.log(task_id);
+                        console.log(result);
+                        $.ajax({
+                            url: '',
+                            data: {
+                                'task_id': task_id,
+                                'task_eval': result,
+                                'csrfmiddlewaretoken': csrftoken
+                                },
+                            type: 'post',
+                            cache: false,
+                            success: function (returned_values) {
+                                // do whatever you want after success!                
+                                },
+                        });
+
+                    });
+                });
+            });
+        </script>
     {% endif %}
 {% endblock %}
 
