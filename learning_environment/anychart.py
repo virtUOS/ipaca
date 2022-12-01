@@ -6,7 +6,7 @@ def createBarChartConfig(container_name, series):
             "type": "column",
             "zIndex": 0,
             "enabled": True,
-            "title": "Test",
+            "title": "Overall User Activity",
             "baseline": 0,
             "barGroupsPadding": 0.8,
             "barsPadding": 0.4,

@@ -66,7 +66,7 @@ def practice(request):
 
         return redirect('myhome')
 
-    # analyze a solution
+    # User Evaluation (on demand)
     elif request.method == 'POST' and 'task_eval' in request.POST:
         try:
             taskEval = Task_Eval.objects.create()
@@ -228,15 +228,19 @@ def learner_dashboard(request):
 
 def task_stats(request, pk):
     task_id =  pk
-    print(Task.objects.filter(id=task_id).values())
-
-    solutions = Solution.objects.all()
-    print(solutions.values().filter(task_id=task_id).values("timestamp", "user_id"))
-    number_attempts = 10
-    average_attempts = 10
-    successful_users = 10
-    min_score = 10
-    max_score = 10
+    solutions = Solution.objects.all().order_by('timestamp').filter(task_id=task_id)  # all solutions
+    number_attempts = solutions.count()
+    users_tried= Solution.objects.values('user').filter(task_id=task_id).distinct().count()
+    if users_tried> 0:  # calculate percentage of correct tasks (or 0 if no tasks)
+        average_attempts = round (number_attempts / users_tried)
+    else:
+        average_attempts = 0.0
+    successful_users = Solution.objects.values('user').filter(solved=True, task_id=task_id).distinct().count()
+    evaluated = Task_Eval.objects.all().filter(task_id=task_id).count()
+    if evaluated> 0:  # calculate percentage of correct tasks (or 0 if no tasks)
+        user_likes = Task_Eval.objects.all().filter(task_id=task_id, task_eval = 1).count() / evaluated * 100.0
+    else:
+        user_likes = 'None'
     return render(request, 'learning_environment/task_stats.html', locals())  # pass all local variable to template
 
 
