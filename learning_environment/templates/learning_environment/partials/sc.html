@@ -34,7 +34,9 @@
                 {{ o.text }}
             </label>
             {% if forloop.counter0 == chosen %}
-                {% if o.feedback %}
+                {% if solved and o.feedback %}
+                    <br><p style="color:darkgreen;">{{ o.feedback }}</p>
+                {% elif o.feedback %}
                     <br><p style="color:red;">{{ o.feedback }}</p>
                 {% endif %}
             {% endif %}

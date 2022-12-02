@@ -11,7 +11,11 @@
         </div>
     </form>
 {% else %}
-    <p style="color:red; margin-bottom:2em;">The correct answer is: {{ task.content }}.</p>
+    {% if solved %}
+        <p style="color:darkgreen; margin-bottom:2em;">The correct answer is: {{ task.content }}.</p>
+    {% else %}
+        <p style="color:red; margin-bottom:2em;">The correct answer is: {{ task.content }}.</p>
+    {% endif %}
 {% endif %}
 
 

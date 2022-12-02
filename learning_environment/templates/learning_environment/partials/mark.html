@@ -24,7 +24,7 @@
             {{ feedback_text|safe }}
         </blockquote>
     </div>
-    <p style="color:red; margin-left:2em;">You correctly marked {{ num_correct }} of {{ num_total }} words.</p>
+    <p style="color:darkgreen; margin-left:2em;">You correctly marked {{ num_correct }} of {{ num_total }} words.</p>
     {% if num_additional > 0 %}
         <p style="color:red; margin-left:2em;">You incorrectly marked {{ num_additional }} word{% if num_additional != 1 %}s{% endif %}.</p>
     {% endif %}

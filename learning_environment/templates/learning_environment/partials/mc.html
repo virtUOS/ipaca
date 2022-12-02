@@ -32,8 +32,10 @@
             <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}" disabled="disabled">
                 {{ o.text }}
             {% if o.checked %}
-                {% if o.feedback %}
-                    <br><i>{{ o.feedback }}</i>
+                {% if solved and o.feedback %}
+                    <br><p style="color:darkgreen;">{{ o.feedback }}</p>
+                {% elif o.feedback %}
+                    <br><p style="color:red;">{{ o.feedback }}</p>
                 {% endif %}
             {% endif %}
             </label>

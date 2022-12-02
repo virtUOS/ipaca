@@ -80,7 +80,7 @@
 
                             <h5 class="card-title" style="margin:0;">{{ task.title }}</h5>
 
-                                 <div class="col-6 my-auto" style="background:white; min-height: 100vh;">
+                                 <div class="col-md-6 col-xs-12 my-auto" style="background:white; min-height: 100vh;">
                                     <div class="lesson-text" style="padding:30px; border:none; font-size:18px; border-radius:0;">
 
                                             {{ task.lesson.text | safe }}
@@ -91,7 +91,9 @@
                         <div class="col">
 
                         <div class="card-choice">
-                            {% if msg %}
+                            {% if solved and msg %}
+                                <p class="card-text" style="color: green;">{{ msg }}</p>
+                            {% elif msg %}
                                 <p class="card-text" style="color: red;">{{ msg }}</p>
                             {% endif %}
 
