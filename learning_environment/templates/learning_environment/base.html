@@ -50,11 +50,11 @@
 
 </head>
 
-<body id="base">
+<body>
 
 
 <main class="">
-    <div class=" ">
+    <div class="">
         {% block header %}{% endblock %}
     </div>
 
@@ -62,20 +62,7 @@
     {% block content %}No content{% endblock %}
     </div>
 
-    {% if request.user.is_superuser %}
-    <footer class="footer">
-        <div class="container-footer text-center bold" style="background-color:white; line-height: 1em; padding:1.5em;">
-            {% if request.user.is_authenticated %}
-                Commands:
-                <a href="{%  url 'tasklist' %}">List all tasks</a>  &middot;
-                <a href="{%  url 'lessoncreate' %}">Create new lesson</a>  &middot;
-                <a href="{%  url 'learner_dashboard' %}">Learner Dashboard</a>  &middot;
-                <a href="{%  url 'global_dashboard' %}">Global Dashboard</a>  &middot;
-                <a href="{%  url 'learner_reset' %}">Level reset</a>
-            {% endif %}
-        </div>
-    </footer>
-    {% endif %}
+
 
 </main>
 

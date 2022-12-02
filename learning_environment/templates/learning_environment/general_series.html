@@ -1,18 +1,14 @@
 {% extends "learning_environment/base.html" %}
 
 
-
-
-
-
 {% block content %}
 
-<body style="background-color:#f8f9fa;">
+<div style="background-color:#f8f9fa; min-height:100vh;">
 
    {% include "learning_environment/header.html" %}
 
 <div class="container-fluid" style="background: #F9F9FB;">
-    <div class="row">
+    <div class="row" style="height:100%;">
     <div class="row flex-nowrap">
 
         {% include "learning_environment/nav.html" %}
@@ -46,10 +42,8 @@
 
     </div>
 
+
     </div>
-
-
-    </body>
-
+{% include "learning_environment/footer.html" %}
 
 {% endblock %}
