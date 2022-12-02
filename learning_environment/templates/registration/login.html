@@ -7,20 +7,24 @@
 
 {% block content %}
 
-    <div class="row justify-content-evenly">
+    <div class="row flex-nowrap">
 
-        <div class="col" style="margin-left:50px;">
+        <div class="col-md-6 col-sm-0 hidden-xs" style="height:100vh;">
             {# space for left side content #}
-            <img src="/static/img/login_img.svg" class="img-fluid">
+            <div class="row" style="height:100%;">
+            <img class="img-fluid" src="/static/img/login_img.svg" >
+            </div>
         </div>
 
-        <div class="col-4" style="margin-right:10vw;">
+        <div class="col-md-6" style="height:100vh;">
             {# space for right side content #}
+            <div style="height:100%; padding-right:2.5em;">
             <div class="text-right" style="color: #0A125E; margin-top:1.3em;"> New to Ipaca?
                 <a class="link-secondary" href="{% url 'signup' %}" style="margin:1vw; color:#009A3F;"> Register now</a>
             </div>
 
-            <div class="card" style="background:transparent; border: none; margin-top: 22vh;">
+            <div class="card" style="background:transparent; border: none; height:90%;">
+                <div style="margin:auto 8%;">
                 <div class="card-header" style="border-bottom:none; background-color:transparent;" align="center">
                     <h2>Log In to IPACA</h2>
                     <span style="font-size: 18px;">Glad to see you again!</span>
@@ -35,8 +39,10 @@
                         </form>
                     </div>
                  </div>
+                    </div>
             </div>
 
+            </div>
         </div>
     </div>
     </div>
