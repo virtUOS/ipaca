@@ -109,7 +109,6 @@ body {
 
 /* Boostrap Buttons Styling */
 .btn-start {
-    font-size: 18px;
     color: #fff;
     padding: 16px 50px;
     margin: 20px;
@@ -193,17 +192,14 @@ body {
 
 
 h1 {
-    font-size: 72px;
     font-weight: bold;
     line-height:0.8;
     background: linear-gradient(111.7deg, #FF6E7F 13.82%, #1C009C 90.68%, #BFE9FF 164.4%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top:15vh;
 }
 
 h1-var {
-    font-size: 72px;
     font-weight: bold;
     line-height:0.8;
     background: linear-gradient(107.34deg, #FF6E7F -20.29%, #1C009C 42.26%, #BFE9FF 102.26%);

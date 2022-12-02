@@ -2,35 +2,36 @@
 
 {% block content %}
 
-    <div class="row justify-content-evenly">
+    <div class="row flex-nowrap">
             {# space for left side content #}
-        <div class="col-5" style="margin-left:50px;">
-            <img src="/static/img/logo.svg" class="img-fluid" alt="Responsive image">
+        <div class="col-md-6">
+            <img style="margin-left:1em; width:calc(5em + 3vw);" src="/static/img/logo.svg" class="img-fluid" alt="Responsive image">
+            <div class="card" style="background:transparent; border: none; width:100%; height:100vh; border:1px solid green;">
+                <div style="margin:auto 8%;">
+                         <span><h1 style="margin:0; font-size:calc(2.5rem + 3vw); "> LEARN</h1>
+                             <h1-var style="font-size:calc(2.5rem + 3vw);">ENGLISH</h1-var></span>
 
-             <div class="row-fluid">
-                 <span><h1> LEARN</h1>
-                     <h1-var>ENGLISH</h1-var></span>
+                        <div class="row">
+                            <div class="d-flex justify-content-between">
+                                <p class="text p-4" style="padding-top: 60px; margin-top: 30px; font-size:calc(1.25rem + 0.75vw);">Are you struggling to improve your academic English skills?  iPaca is here to help! With our carefully selected little tasks, you will be able to hone your skills and build confidence in your reading.</p>
+                            </div>
 
-                <div class="row">
-                    <div class="d-flex justify-content-center">
-                        <div class="d-flex flex-column">
-                            <p class="text align-self-left p-4" style="padding-top: 60px; margin-top: 30px; font-size: 16px;">Are you struggling to improve your academic English skills?  iPaca is here to help! With our carefully selected little tasks, you will be able to hone your skills and build confidence in your reading.</p>
+                        <div class="row">
+                         <div class="d-flex justify-content-start" style="margin-top: 30px;">
+                            <a class="btn btn-start" href="{% url 'login' %}">Start</a>
+                         </div>
                         </div>
-                    </div>
 
-                <div class="row">
-                 <div class="d-flex justify-content-start" style="margin-top: 30px;">
-                    <a class="btn btn-start" href="{% url 'signup' %}">START</a>
-                    <a class="btn continue-btn" href="{% url 'login' %}">CONTINUE</a>
-                 </div>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
 
-        <div class="col-6 vh-100">
+        <div class="col-md-6 col-sm-0 hidden-xs" style="height:100vh; border:1px solid red;">
                 {# space for right side content #}
+            <div class="row" style="height:100%;">
              <img src="/static/img/home_background_girl.svg" class="img-fluid">
+            </div>
         </div>
     </div>
 {% endblock %}
