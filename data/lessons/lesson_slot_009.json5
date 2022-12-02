@@ -226,22 +226,22 @@
          <em>“… uninformed workers causing costly workplace errors.”</em>",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
           {
-            text: "eduneducated, unknowledgeable, untaught, well-prepared",
+            text: "uneducated, unknowledgeable, untaught, well-prepared",
             correct: false,
             feedback: "No, that\'s not correct."
           },
           {
-            text: "eduneducated, untaught, schooled, unenlighten",
+            text: "uneducated, untaught, schooled, unenlightened",
             correct: false,
             feedback: "'No, that\'s not correct.'"
           },
           {
-            text: "unenlightend, eduneducated, knowledgeable, untaught",
+            text: "unenlightened, uneducated, knowledgeable, untaught",
             correct: false,
             feedback: "'No, that\'s not correct.'"
           },
           {
-            text: "unenlightend, eduneducated, unknowledgeable, untaught",
+            text: "unenlightened, uneducated, unknowledgeable, untaught",
             correct: true,
             feedback: "That is correct."
           },
