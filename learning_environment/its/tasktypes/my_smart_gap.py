@@ -197,10 +197,14 @@ class GapTask():
         user_answer_corr = full_sentence
         for i in range(len(tokenized_user_answer)):
             tok_word = tokenized_user_answer[i]
+            print("tok word: ")
+            print(tok_word)
             # if word is unknown, then it is not spelled correctly and hence will remain in the array
             if len(spell.unknown([tok_word])) > 0:
                 # replace the incorrect word with the `most likely` substitution
                 corr_word = spell.correction(tok_word)
+                print("corr word: ")
+                print(corr_word)
                 tokenized_user_answer[i] = corr_word
                 user_answer_corr = user_answer_corr.replace(tok_word, corr_word)
                 spelling_replacements[corr_word] = tok_word
