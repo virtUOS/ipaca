@@ -10,10 +10,12 @@
 
 {% block content %}
 
-
-    <h3 style="background:white; padding:20px; margin:0;">
+    <div style="background:white; padding: 5px 20px; margin:0;">
+    <h3 style="">
         {{ lesson.name }}{% if task %}: {{ task.get_type_display }} Task {% endif %}
     </h3>
+    <a style="color:lightgray;" href="{% url 'myhome' %}" class="link-dark rounded"> <i class="bi bi-arrow-left-circle"></i> Back to homepage</a>
+    </div>
 
     {# Display "Start lesson" screen #}
     {% if mode != 'result' and state == 'START' %}
