@@ -277,33 +277,35 @@ class GapTask():
     
         print("adj_used_feedback ")
         print(adj_used)
+        for i in range(len(self.task.content)):  # iterate over list of text parts and gaps
+            if 'name' in self.task.content[i]:
+                if sol != '---':
+                    if sum(errortypes.values()) == 0 :
+                        print("self task content: ")
+                        print(self.task.content[i])
+                        for o in self.task.content[i]['options']:
+                            o['feedback'] = "Congratulations! There was no mistake."
+                            context['success_feedback'] = o['feedback']
+                            analysis['solved'] = True
+                            gap_solved = True
 
-        if sol != '---':
-            
-            if sum(errortypes.values()) == 0 :
-                for o in self.task.content[i]['options']:
-                    o['feedback'] = "Congratulations! There was no mistake."
-                    context['success_feedback'] = o['feedback']
-                    analysis['solved'] = True
-                    gap_solved = True
+                            correct = True
+                            analysis['correct'] = correct
+                            context['correct'] = correct
+                        
+                    
+                    self.task.content[i]['solved'] = gap_solved  
+                    self.task.content[i]['solution'] = right_answer
 
-                    correct = True
-                    analysis['correct'] = correct
-                    context['correct'] = correct
-                
-            
-            self.task.content[i]['solved'] = gap_solved  
-            self.task.content[i]['solution'] = right_answer
+                    if not gap_solved:  
+                        analysis['solved'] = False
+                        context['mode'] = "result" 
+                        context['user_answer'] = full_sentence
+                        
+                        context['correct_feedback'] = "A correct solution would be '"+ right_answer + "'."
 
-            if not gap_solved:  
-                analysis['solved'] = False
-                context['mode'] = "result" 
-                context['user_answer'] = full_sentence
-                
-                context['correct_feedback'] = "A correct solution would be '"+ right_answer + "'."
-
-                correct = False
-                analysis['correct'] = correct
+                        correct = False
+                        analysis['correct'] = correct
 
         
 
