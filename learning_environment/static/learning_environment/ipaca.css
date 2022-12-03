@@ -275,7 +275,6 @@ textarea {
 .card-dashboard {
     height: 125px;
     width: 100%;
-    box-shadow: 0 13px 21px rgba(255, 129, 75, 0.2);
     border-radius: 30px;
 }
 
@@ -294,7 +293,7 @@ textarea {
 
 .card-dashboard:hover{
      transform: scale(1.05);
-     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+     box-shadow: 0 13px 21px rgba(255, 129, 75, 0.2);
 }
 
 .ul-3col {
