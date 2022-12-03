@@ -1,0 +1,75 @@
+// Testlet 1 for Difficulty=Medium in Panel=Vocabulary
+
+{
+  name: "The War of the Worlds", 
+  id: "testlet-vocabulary-medium-01",
+  author: "Anhelina Ivanchenko",
+  version: 1,
+
+  text: "<p>No one would have believed in the last years of the nineteenth century that this world was being watched keenly \
+        and closely by intelligences greater than man's and yet as mortal as his own; that as men busied themselves about their \
+        various concerns they were scrutinised and studied, perhaps almost as narrowly as a man with a microscope might scrutinise \
+        the transient creatures that swarm and multiply in a drop of water. With infinite complacency men went to and fro over this \
+        globe about their little affairs, serene in their assurance of their empire over matter. It is possible that the infusoria \
+        under the microscope do the same. No one gave a thought to the older worlds of space as sources of human danger, or thought \
+        of them only to dismiss the idea of life upon them as impossible or improbable. It is curious to recall some of the mental \
+        habits of those departed days. At most terrestrial men fancied there might be other men upon Mars, perhaps inferior to \
+        themselves and ready to welcome a missionary enterprise. Yet across the gulf of space, minds that are to our minds as ours \
+        are to those of the beasts that perish, intellects vast and cool and unsympathetic, regarded this earth with envious eyes, \
+        and slowly and surely drew their plans against us. And early in the twentieth century came the great disillusionment.</p>\
+        <p>The planet Mars, I scarcely need remind the reader, revolves about the sun at a mean distance of 140,000,000 miles, and \
+        the light and heat it receives from the sun is barely half of that received by this world. It must be, if the nebular \
+        hypothesis has any truth, older than our world; and long before this earth ceased to be molten, life upon its surface must \
+        have begun its course. The fact that it is scarcely one seventh of the volume of the earth must have accelerated its cooling \
+        to the temperature at which life could begin. It has air and water and all that is necessary for the support of animated \
+        existence.</p>\",
+  
+  text_source: "Compact Anthology of World Literature, Part Five: The Long Nineteenth Century",
+  text_licence: "Public Domain",
+  text_url: "https://alg.manifoldapp.org/read/compact-anthology-of-world-literature-part-five-the-long-nineteenth-century/section/fb1d975c-7ff1-4b2c-8107-ba087c4d4ad6",
+  
+  tasks: [  // the list of tasks for this lesson
+    { // TASK 1
+        name:  "Task 1 - Choose closest phrase meaning",
+        type: "G",          
+        interaction: "SC",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "What does 'slowly and surely' mean in context of the given text passage?",  
+        choices: [  
+          { text: "making slow but definite progress", correct: true, feedback: "Correct" },
+          { text: "do something slowly with confidence", correct: false, feedback: "False" },
+          { text: "making slowly progress with insufficient certain", correct: false, feedback: "False" },
+        ]
+    },  // end of task 1
+
+    { // TASK 2
+        name:  "Task 2 - Antonym",
+        type: "G",          
+        interaction: "MC",       // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "Choose the fitting antonym(s) of 'accelerated' in the context given by the text passage.",
+        choices: [  
+          { text: "deceive", correct: false, feedback: "False" },
+          { text: "decelerate", correct: true, feedback: "Correct" },
+          { text: "slow down", correct: true, feedback: "Correct" },
+        ]
+    }, // end of task 2
+
+    { // TASK 3
+        name:  "Task 3 - Synonym",
+        type: "G",          
+        interaction: "MC",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "Choose the fitting synonym(s) of 'enterprise' in the context given by the text passage.", 
+        choices: [  
+          { text: "undertaking", correct: true, feedback: "Correct" },
+          { text: "initiative", correct: false, feedback: "False" },
+          { text: "venture", correct: false, feedback: "False" },
+          { text: "intervention", correct: true, feedback: "Correct" },
+        ]
+    }, // end of task 3
+  ],  // end of list of tasks
+} // end of lesson

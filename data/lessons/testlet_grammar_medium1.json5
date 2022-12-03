@@ -1,0 +1,115 @@
+// Testlet 1 for Difficulty=Medium in Panel=Grammar
+
+{
+  name: "A Christmas Carol", 
+  id: "testlet-grammar-medium-01",
+  author: "Anhelina Ivanchenko",
+  version: 1,
+
+  text: "<p>Marley was dead, to begin with. There is no doubt whatever about that.\
+        The register of his burial was signed by the church, the clerk, the undertaker, \
+        and the chief mourner. Scrooge signed it. And Scrooge’s name was good for \
+        anything he chose to put his hand to.</p>\
+        <p>Old Marley was as dead as a door-nail.</p>\
+        <p>Scrooge knew he was dead? Of course he did. How could it be otherwise? \
+        Scrooge and he were business partners for I don’t know how many years. \
+        Scrooge was his only administrator, his only friend, his only mourner.</p>\
+        <p>Scrooge never painted out old Marley’s name, however. There it yet was, \
+        years afterwards, above the warehouse door — Scrooge and Marley. The firm was \
+        known as Scrooge and Marley. Sometimes people new to the business called him \
+        Scrooge, and sometimes they called him Marley. He answered to both names. \
+        It was all the same to him.</p>\
+        <p>Oh! But he was a tight-fisted hand at the grindstone, that Scrooge! a \
+        squeezing, wrenching, grasping, scraping, clutching, covetous old sinner! \
+        External heat and cold had little influence on him. No warmth could warm him, \
+        and no cold could cool him. No wind that blew was more bitter than he. Foul \
+        weather didn’t know what to do with him. The heaviest rain and snow and hail \
+        and sleet could brag of the advantage over him in only one respect — they often \
+        “came down” handsomely, and Scrooge never did.</p>\
+        <p>Nobody ever stopped him in the street to say, with friendly looks, “My \
+        dear Scrooge, how are you? When will you come to see me?” No beggars asked \
+        Scrooge for a few coins; no children asked him what time it was; no man or \
+        woman ever once in all his life inquired the way to such and such a place. But \
+        what did Scrooge care! It was the very thing he liked.</p>\",
+  
+  text_source: "A CHRISTMAS CAROL - MARLEY'S GHOST",
+  text_licence: "CC",
+  text_url: "https://openoregon.pressbooks.pub/achristmascarol/chapter/chapter-1/",
+  
+  tasks: [  // the list of tasks for this lesson
+    { // TASK 1
+        name:  "Task 1 - Choose the correct option",
+        type: "G",          
+        interaction: "SC",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "How ___ it be otherwise?",  
+        choices: [  
+          {
+            text: "might",
+            correct: false,
+            feedback: "False. We use might, may or could to say that we think something is possible but we're not sure. \
+                        They all have the same meaning, but may is more formal than might and could."
+          },
+          {
+            text: "may",
+            correct: false,
+            feedback: "False. We use might, may or could to say that we think something is possible but we're not sure. \
+                        They all have the same meaning, but may is more formal than might and could."
+          },
+          {
+            text: "could",
+            correct: true,
+            feedback: "Correct"
+          },
+        ]
+    },  // end of task 1
+
+    { // TASK 2
+        name:  "Task 2 - Complete the sentence with 'as', 'like', or none",
+        type: "G",          
+        interaction: "SC",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "The firm was known ___ Scrooge and Marley.",
+        choices: [  
+          {
+            text: "as",
+            correct: true,
+            feedback: "Correct"
+          },
+          {
+            text: "like",
+            correct: false,
+            feedback: "False. We can use as + noun to talk about a job or function."
+          },
+          {
+            text: "-",
+            correct: false,
+            feedback: "False. We can use as + noun to talk about a job or function."
+          },
+        ]
+    }, // end of task 2
+
+    { // TASK 3
+        name:  "Task 3 - Choose the correct verb form",
+        type: "G",          
+        interaction: "SC",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "There is no ___ whatever about that.", 
+        choices: [  
+          {
+            text: "doubting",
+            correct: false,
+            feedback: "False. The sentence expresses an opinion. It is a mental state, so we use present simple."
+          },
+          {
+            text: "doubt",
+            correct: true,
+            feedback: "Correct"
+          },
+        ]
+    }, // end of task 3
+  ],  // end of list of tasks
+} // end of lesson

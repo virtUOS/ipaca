@@ -1,0 +1,113 @@
+// Testlet 2 for Difficulty=Easy in Panel=Vocabulary
+
+{
+  name: "What Is Culture?", 
+  id: "testlet-vocab-easy-02",
+  author: "Adrian Babych",
+  version: 1,
+
+  text: "<p>Culture is a system of learned behavior patterns that are characteristic of the members of a society (Hoebel, 1958). \
+        Note the emphasis on the learning of behaviors or ways of doing things. Culture is learned, and individuals learn culture \
+        through an ongoing process of socialization. Parents, families, schools, peers, and workplaces, for example, all socialize \
+        individuals to ways of doing things. We find differences across cultures in dress, language, food preferences, and other \
+        behaviors in part because these are learned behaviors — not knowledge that is innate, instinctual, or determined by genetic programming.</p>\
+        <p>Cultural patterns are characteristic behaviors and often include a complex array of choices. A culture may afford more than \
+        one way of doing the same thing. Hence, diversity in behaviors may be found in some aspects of any culture.</p>\
+        <p>Culture is a complex whole that includes knowledge, belief, art, morals, law, customs, and any other capabilities and \
+        habits that members of a society acquire (Linton, 1936). Linton emphasized that culture is a complex whole — a network of \
+        behaviors related to all aspects of life. Dress is shaped by and reflects many characteristics in any culture, so dress is \
+        a complex map of cultural characteristics.</p>\",
+  
+  text_source: "Dress, Appearance, and Diversity in U.S. Society",
+  text_licence: "CC BY",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/dress-appearance-and-diversity-in-u-s-society",
+  
+  tasks: [  // the list of tasks for this lesson
+    { // TASK 1
+      name:  "Task 1 - Connect the words to its synonyms",
+      type: "V",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "The synonym of 'complex' is _1_ <br>\
+                  The synonym of 'include' is _2_ <br>\
+                  The synonym of 'emphasis' is _3_ ",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "combine", correct: false, feedback: "False"},
+          { text: "insistence", correct: false, feedback: "False"},
+          { text: "composite", correct: true, feedback: "Correct"},
+        ],
+        _2_: [
+          { text: "combine", correct: true, feedback: "Correct"},
+          { text: "insistence", correct: false, feedback: "False"},
+          { text: "composite", correct: false, feedback: "False"},
+        ],
+        _3_: [
+          { text: "combine", correct: false, feedback: "False"},
+          { text: "insistence", correct: true, feedback: "Correct"},
+          { text: "composite", correct: false, feedback: "False"},
+        ]
+      } // end of gaps  
+    },  // end of task 1
+
+    { // TASK 2
+      name:  "Task 2 - Connect the words to its antonyms",
+      type: "V",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "The antonym of 'capability' is _1_ <br>\
+                  The antonym of 'diversity' is _2_ <br>\
+                  The antonym of 'afford' is _3_ ",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "similarity", correct: false, feedback: "False"},
+          { text: "incapability", correct: true, feedback: "Correct"},
+          { text: "refuse", correct: false, feedback: "False"},
+        ],
+        _2_: [
+          { text: "similarity", correct: true, feedback: "Correct"},
+          { text: "incapability", correct: false, feedback: "False"},
+          { text: "refuse", correct: false, feedback: "False"},
+        ],
+        _3_: [
+          { text: "similarity", correct: false, feedback: "False"},
+          { text: "incapability", correct: false, feedback: "False"},
+          { text: "refuse", correct: true, feedback: "Correct"},
+        ]
+      } // end of gaps  
+    }, // end of task 2
+
+    { // TASK 3
+      name:  "Task 3 - Match the words to the descriptions",
+      type: "V",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "_1_ is a system of learned behavior patterns. <br>\
+                  _2_ is the action or reaction of any material under given circumstances.<br>\
+                  _3_ is something that is given great stress or importance.",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "Behavior", correct: false, feedback: "False"},
+          { text: "Emphasis", correct: false, feedback: "False"},
+          { text: "Culture", correct: true, feedback: "Correct"},
+        ],
+        _2_: [
+          { text: "Behavior", correct: true, feedback: "Correct"},
+          { text: "Emphasis", correct: false, feedback: "False"},
+          { text: "Culture", correct: false, feedback: "False"},
+        ],
+        _3_: [
+          { text: "Behavior", correct: false, feedback: "False"},
+          { text: "Emphasis", correct: true, feedback: "Correct"},
+          { text: "Culture", correct: false, feedback: "False"},
+        ]
+      } // end of gaps    
+    }, // end of task 3
+  ],  // end of list of tasks
+} // end of lesson

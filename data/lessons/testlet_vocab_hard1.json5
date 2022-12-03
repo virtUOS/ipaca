@@ -1,0 +1,126 @@
+// Testlet 1 for Difficulty=Hard in Panel=Vocabulary
+
+{
+  name: "What Is Beautiful?", 
+  id: "testlet-vocab-hard-01",
+  author: "Amina Mamaieva, Illya Reva",
+  version: 1,
+
+  text: "<p>What do you think is beautiful? Many of us may respond, beauty is in the eye of the beholder, as the old saying goes. \
+        [...] ‘the eye of the beholder’ is another way of thinking about the ‘theory of mind.’ One beholder thinks differently than \
+        another beholder. When thoughts, values, and perspectives on the world are very common within cultural groups, we call them norms. \
+        Norms about beauty are the idealizations and expectations of how people should look in a society: what ‘good looks’ are. \
+        BTW, we’re focused on beauty norms for physical appearance but they also relate to aesthetic qualities of things [...].</p>\
+        <p>Beauty norms or ideals for women often relate to facial and body features. Preferred characteristics become a shorthand for \
+        femininity. There are also cultural norms that reflect ideals for the appearance of men and masculinity. For example, if you went \
+        through an European or Euro-American educational system, it is very likely that you encountered imagery like Bust of a Youth by \
+        Francesco Mochi from 1630-1640 CE. Artworks like this are often used to illustrate primary school textbooks or public flyers \
+        because they exude many of the beauty norms of European and Euro-American societies. This marble sculpture represents a young man \
+        with lush curly hair, a symmetrical face, straight nose, plump cheeks, large open eyes, parted full lips, and strong chin in clean, \
+        polished white marble. With skill and precision, Mochi captured a portrait of a classically beautiful young man, according to \
+        long-established beauty ideals of the Western Canon.</p>\
+        <p>But, Mochi and other artists of the Renaissance and Baroque periods misunderstood something about Greek scultpure… \
+        it wasn’t ever meant to be seen as bare white marble. It was lavishly painted with bright colors! [...] \
+        Following from what Renaissance artists thought were Greco-Roman traditions, European beauty ideals often coalesced around qualities \
+        such as light complexion, facial symmetry, and straight noses. White marble came to offer an aura of ‘whiteness’ and normalized the \
+        relationship of whiteness to purity in the Western Canon and ideals of beauty.</p>\
+        <p>Such images and expected ways of representation reflect how people view others in their society. We all know that people look \
+        different and the vast majority of people in any culture do not ‘fit the mold’ of beauty ideals. Yet, we continue to set store by them. \
+        These ideals influence art and they become shorthand for not just good looks but ‘goodness’ in a society, as the discussion about \
+        the term “classical” in “Where Does Art Come From? An Introduction” demonstrates. What about global arts that do not fit the mold of \
+        classical beauty but focus on unique traditions developed without reference to ‘the classics’ of the Western Canon? \
+        This is one of the ways that art history has to reflect upon its biases. In this study of art, we are taking a global perspective and \
+        so must affirm the ‘theory of mind of cultures’ and be aware of the ways that beauty (as well as gender, sexuality, etc.) is relative.</p>\",
+  
+  text_source: "Where Does Art Come From?",
+  text_licence: "CC BY",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/where-does-art-come-from",
+  
+  tasks: [  // the list of tasks for this lesson
+    { // TASK 1
+      name:  "Task 1 - Definition",
+      type: "V",          
+      interaction: "SC",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "Which definition of 'establish' fits the passage in which it appears?",  
+      choices: [
+        {
+            text: "achieve permanent acceptance or recognition for",
+            correct: true,
+            feedback: "Correct. The sentence is about the recognition of established standards of beauty."
+        },
+        {
+            text: "initiate or bring about (contact or communication)",
+            correct: false,
+            feedback: "False. The sentence is about the recognition of established standards of beauty."
+        },
+        {
+            text: "to start a company or organization that will continue for a long time",
+            correct: false,
+            feedback: "False. The sentence is about the recognition of established standards of beauty."
+        },
+      ] // end of choices
+    }, // end of task 1
+    { // TASK 2
+      name:  "Task 2 - Match the nouns with their definitions",
+      type: "V",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "_1_ = an accepted standard or a way of behaving or doing things that most people agree with <br>\
+                _2_ = the main or central point of something, especially of attention or interest <br>\
+                _3_ = a particular way of considering something",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+            { text: "Perspective", correct: false, feedback: "False" },
+            { text: "Norm", correct: true, feedback: "Correct" },
+            { text: "Focus", correct: false, feedback: "False" },
+        ],
+        _2_: [
+            { text: "Perspective", correct: false, feedback: "False" },
+            { text: "Norm", correct: false, feedback: "False" },
+            { text: "Focus", correct: true, feedback: "Correct" },
+        ],
+        _3_: [
+            { text: "Perspective", correct: true, feedback: "Correct" },
+            { text: "Norm", correct: false, feedback: "False" },
+            { text: "Focus", correct: false, feedback: "False" },
+        ],
+      } // end of gaps
+    }, // end of task 2
+    { // TASK 3
+      name:  "Task 3 - Synonyms",
+      type: "V",          
+      interaction: "MC",       // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "Which of the following options could be used as synonyms for 'biases' in the context of its use in the reading passage?",  
+      choices: [
+        {
+            text: "neutrality",
+            correct: false,
+            feedback: "False"
+        },
+        {
+            text: "offset",
+            correct: true,
+            feedback: "Correct. 'Offset' means to balance one influence against an opposing influence, so that there is no great \
+                        difference as a result."
+        },
+        {
+            text: "drift",
+            correct: true,
+            feedback: "Correct. 'Drift' is used to say that you have left out information or your opinion from what you have just said, \
+                        but that you expect the person listening still to understand it."
+        },
+        {
+            text: "impartiality",
+            correct: false,
+            feedback: "False"
+        },
+      ] // end of choices
+    }, // end of task 3
+  ],  // end of list of tasks
+} // end of lesson

@@ -32,24 +32,104 @@
         This is one of the ways that art history has to reflect upon its biases. In this study of art, we are taking a global perspective and \
         so must affirm the ‘theory of mind of cultures’ and be aware of the ways that beauty (as well as gender, sexuality, etc.) is relative.</p>\",
   
-  text_source: "",
-  text_licence: "",
-  text_url: "",
+  text_source: "Where Does Art Come From?",
+  text_licence: "CC BY",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/where-does-art-come-from",
+  
   tasks: [  // the list of tasks for this lesson
     { // TASK 1
-      name:  "Task 1",
-      type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
-      interaction: "SHORT",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
-      primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
-      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
-      question:  "",  // the question to be displayed
-      answer: ""
+      name:  "Task 1 - Match the words with their antonyms",
+      type: "V",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "The antonym of 'group' is _1_ <br>\
+                  The antonym of 'large' is _2_ <br>\
+                  The antonym of 'relationship' is _3_ ",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "enmity", correct: false, feedback: "False"},
+          { text: "individual", correct: true, feedback: "Correct"},
+          { text: "small", correct: false, feedback: "False"},
+        ],
+        _2_: [
+          { text: "enmity", correct: false, feedback: "False"},
+          { text: "individual", correct: false, feedback: "False"},
+          { text: "small", correct: true, feedback: "Correct"},
+        ],
+        _3_: [
+          { text: "enmity", correct: true, feedback: "Correct"},
+          { text: "individual", correct: false, feedback: "False"},
+          { text: "small", correct: false, feedback: "False"},
+        ]
+      } // end of gaps
     },  // end of task 1
     { // TASK 2
-
+      name:  "Task 2 - Match the words to their definitions",
+      type: "V",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "_1_ is the degree of excellence of something <br>\
+                  _2_ is a boundless, deep, separate particle of the universe <br>\
+                  _3_ is a length of time",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "World", correct: false, feedback: "False"},
+          { text: "Period", correct: false, feedback: "False"},
+          { text: "Quality", correct: true, feedback: "Correct"},
+        ],
+        _2_: [
+          { text: "World", correct: true, feedback: "Correct"},
+          { text: "Period", correct: false, feedback: "False"},
+          { text: "Quality", correct: false, feedback: "False"},
+        ],
+        _3_: [
+          { text: "World", correct: false, feedback: "False"},
+          { text: "Period", correct: true, feedback: "Correct"},
+          { text: "Quality", correct: false, feedback: "False"},
+        ]
+      } // end of gaps
     }, // end of task 2
     { // TASK 3
-
-    }, // end of task 2
+      name:  "Task 3 - Match the adjectives and nouns",
+      type: "V",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "_1_ chapter <br>\
+                  _2_ - example <br>\
+                  _3_ - culture <br>\
+                  _4_ - system",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "National", correct: false, feedback: "False"},
+          { text: "Study", correct: false, feedback: "False"},
+          { text: "Substantive", correct: true, feedback: "Correct"},
+          { text: "Instructive", correct: false, feedback: "False"},
+        ],
+        _2_: [
+          { text: "National", correct: false, feedback: "False"},
+          { text: "Study", correct: false, feedback: "False"},
+          { text: "Substantive", correct: false, feedback: "False"},
+          { text: "Instructive", correct: true, feedback: "Correct"},
+        ],
+        _3_: [
+          { text: "National", correct: true, feedback: "Correct"},
+          { text: "Study", correct: false, feedback: "False"},
+          { text: "Substantive", correct: false, feedback: "False"},
+          { text: "Instructive", correct: false, feedback: "False"},
+        ],
+        _4_: [
+          { text: "National", correct: false, feedback: "False"},
+          { text: "Study", correct: true, feedback: "Correct"},
+          { text: "Substantive", correct: false, feedback: "False"},
+          { text: "Instructive", correct: false, feedback: "False"},
+        ]
+      } // end of gaps
+    }, // end of task 3
   ],  // end of list of tasks
 } // end of lesson

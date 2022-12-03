@@ -1,0 +1,114 @@
+// Testlet 1 for Difficulty=Hard in Panel=Grammar
+
+{
+  name: "What is Art?", 
+  id: "testlet-grammar-hard-01",
+  author: "Amina Mamaieva, Illya Reva",
+  version: 1,
+
+  text: "<p>Art is a highly diverse range of human activities engaged in creating visual, auditory, or performed artifacts — artworks — \
+        that express the author's imaginative or technical skill, and are intended to be appreciated for their beauty or emotional power.</p>\
+        <p>The oldest documented forms of art are visual arts, which include images or objects in fields like painting, sculpture, \
+        printmaking, photography, and other visual media. Architecture is often included as one of the visual arts; however, like the \
+        decorative arts, it involves the creation of objects where the practical considerations of use are essential, in a way that they \
+        usually are not in another visual art, like a painting.</p>\
+        <p>Despite the seemingly indefinable nature of art, there have always existed certain formal guidelines for its aesthetic \
+        judgment and analysis. Formalism is a concept in art theory in which an artwork's artistic value is determined solely by \
+        its form, or how it is made.</p>\
+        <p>Art is often examined through the interaction of the principles and elements of art. The principles of art include movement, \
+        unity, harmony, variety, balance, contrast, proportion and pattern. The elements include texture, form, space, shape, color, \
+        value and line.</p>\",
+  
+  text_source: "Boundless Art History - Thinking and Talking About Art",
+  text_licence: "CC BY-SA",
+  text_url: "https://www.coursehero.com/study-guides/boundless-arthistory/what-is-art/",
+  
+  tasks: [  // the list of tasks for this lesson
+    { // TASK 1
+      name:  "Task 1 - Choose the correct word",
+      type: "G",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "Out of all the art forms that _1_ to this day, the visual art form _2_ the oldest.<br>\
+                  The art _3_ the skill and creativity of the author.<br>\
+                  There _4_ certain formal guidelines in art.<br>\
+                  The principles of art _5_ movement, unity, harmony, variety, balance, contrast, proportion and pattern.",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "has been documented", correct: false, feedback: "False. The correct answer is'have been documented'. \
+            In the first part of the sentence, we use the passive construction in the present perfect tense, since it is not the \
+            subject that does the action, but the action is done on it, and we pay attention to the plural noun, which is why the \
+            correct form is 'have'."},
+          { text: "have been documented", correct: true, feedback: "Correct"},
+          { text: "been documented", correct: false, feedback: "False. The correct answer is'have been documented'. \
+            In the first part of the sentence, we use the passive construction in the present perfect tense, since it is not the \
+            subject that does the action, but the action is done on it, and we pay attention to the plural noun, which is why the \
+            correct form is 'have'."},
+        ],
+        _2_: [
+          { text: "is", correct: true, feedback: "Correct"},
+          { text: "are", correct: false, feedback: "False. The correct answer is 'is'. In the second part of the sentence, we use \
+            the present simple tense to indicate that the information is general truth."},
+          { text: "been", correct: false, feedback: "False. The correct answer is 'is'. In the second part of the sentence, we use \
+            the present simple tense to indicate that the information is general truth."},
+        ],
+        _3_: [
+          { text: "has always expressed", correct: true, feedback: "Correct"},
+          { text: "have always expressed", correct: false, feedback: "False. The correct answer is 'has always expressed'. \
+            In this sentence we use present perfect, which is created with the verb have/has and the past participle of a verb. \
+            It is also important to pay attention to the singular or plural noun."},
+          { text: "always expressed", correct: false, feedback: "False. The correct answer is 'has always expressed'. \
+            In this sentence we use present perfect, which is created with the verb have/has and the past participle of a verb. \
+            It is also important to pay attention to the singular or plural noun."},
+        ],
+        _4_: [
+          { text: "has always been", correct: false, feedback: "False. The correct answer is 'have always been'. In this sentence \
+            we use present perfect, which is created with the verb have/has and the past participle of a verb. It is also important \
+            to pay attention to the singular or plural noun."},
+          { text: "have always been", correct: right, feedback: "Correct"},
+          { text: "always been", correct: false, feedback: "False. The correct answer is 'have always been'. In this sentence \
+            we use present perfect, which is created with the verb have/has and the past participle of a verb. It is also important \
+            to pay attention to the singular or plural noun."},
+        ],
+        _5_: [
+          { text: "include", correct: right, feedback: "Correct"},
+          { text: "includes", correct: false, feedback: "False. The correct answer is 'include'. In this sentence, we use \
+            present simple to indicate that the information is general truth. It is also important to pay attention to the \
+            singular or plural noun."},
+          { text: "included", correct: false, feedback: "False. The correct answer is 'include'. In this sentence, we use \
+            present simple to indicate that the information is general truth. It is also important to pay attention to the \
+            singular or plural noun."},
+        ]
+      } // end of gaps  
+    },  // end of task 1
+
+    { // TASK 2
+        name:  "Task 2 - Correct tense",
+        type: "G",          
+        interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "But the words in brackets into the correct tense (active or passive voice): <br>\
+                    The oldest documented forms of art _1_ (to be) visual arts, which _2_ (include) images or objects in the fields \
+                    like painting, sculpture, printmaking, photography, and other visual media. Architecture _3_ (include often) \
+                    as one of the visual arts; however, like the decorative arts, it _4_ (involve) the creation of objects where \
+                    the practical considerations of use _5_ (to be) essential, in a way that they usually _6_ (to be not) in \
+                    another visual art, like a painting. Art _7_ (examine often) through the interaction of the principles and \
+                    elements of art. The principles of art _8_ (include) movement, unity, harmony, variety, balance, contrast, \
+                    proportion and pattern.",  
+        gaps: {
+        } // end of gaps  
+    }, // end of task 2
+
+    { // TASK 3
+      name:  "Task 3 - ...",
+      type: "G",          
+      interaction: "",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "",  
+    }, // end of task 3
+  ],  // end of list of tasks
+} // end of lesson

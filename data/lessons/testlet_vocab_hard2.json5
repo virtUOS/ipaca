@@ -1,0 +1,211 @@
+// Testlet 2 for Difficulty=Hard in Panel=Vocabulary
+
+{
+  name: "What Is Culture?", 
+  id: "testlet-vocab-hard-02",
+  author: "Adrian Babych",
+  version: 1,
+
+  text: "<p>Culture is a system of learned behavior patterns that are characteristic of the members of a society (Hoebel, 1958). \
+        Note the emphasis on the learning of behaviors or ways of doing things. Culture is learned, and individuals learn culture \
+        through an ongoing process of socialization. Parents, families, schools, peers, and workplaces, for example, all socialize \
+        individuals to ways of doing things. We find differences across cultures in dress, language, food preferences, and other \
+        behaviors in part because these are learned behaviors — not knowledge that is innate, instinctual, or determined by genetic programming.</p>\
+        <p>Cultural patterns are characteristic behaviors and often include a complex array of choices. A culture may afford more than \
+        one way of doing the same thing. Hence, diversity in behaviors may be found in some aspects of any culture.</p>\
+        <p>Culture is a complex whole that includes knowledge, belief, art, morals, law, customs, and any other capabilities and \
+        habits that members of a society acquire (Linton, 1936). Linton emphasized that culture is a complex whole — a network of \
+        behaviors related to all aspects of life. Dress is shaped by and reflects many characteristics in any culture, so dress is \
+        a complex map of cultural characteristics.</p>\",
+  
+  text_source: "Dress, Appearance, and Diversity in U.S. Society",
+  text_licence: "CC BY",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/dress-appearance-and-diversity-in-u-s-society",
+  
+  tasks: [  // the list of tasks for this lesson
+    { // TASK 1
+      name:  "Task 1 - Connect words with their synonyms",
+      type: "V",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "The synonym of 'demeanor' is _1_ <br>\
+                  The synonym of 'achieve' is _2_ <br>\
+                  The synonym of 'conduct' is _3_ <br>\
+                  The synonym of 'multitude' is _4_ ",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "behavior", correct: true, feedback: "Correct"},
+          { text: "acquire", correct: false, feedback: "False"},
+          { text: "array", correct: false, feedback: "False"},
+        ],
+        _2_: [
+          { text: "behavior", correct: false, feedback: "False"},
+          { text: "acquire", correct: true, feedback: "Correct"},
+          { text: "array", correct: false, feedback: "False"},
+        ],
+        _3_: [
+          { text: "behavior", correct: true, feedback: "Correct"},
+          { text: "acquire", correct: false, feedback: "False"},
+          { text: "array", correct: false, feedback: "False"},
+        ],
+        _4_: [
+          { text: "behavior", correct: false, feedback: "False"},
+          { text: "acquire", correct: false, feedback: "False"},
+          { text: "array", correct: true, feedback: "Correct"},
+        ]
+      } // end of gaps  
+    },  // end of task 1
+
+    { // TASK 2
+      name:  "Task 2 - Complete the sentences",
+      type: "V",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  " Cultural patterns are characteristic behaviors and often include a complex _1_ of choices.<br>\
+                  Linton emphasized that culture is a complex whole - a network of _2_ related to all aspects of life.<br>\
+                  Culture is learned, and individuals learn culture through an ongoing process of _3_ <br>\
+                  Dress is shaped by and _4_ many characteristics in any culture, so dress is a complex map of cultural characteristics.<br>\
+                  A culture may _5_ more than one way of doing the same thing.",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "socialization", correct: false, feedback: "False"},
+          { text: "afford", correct: false, feedback: "False"},
+          { text: "array", correct: true, feedback: "Correct"},
+          { text: "reflects", correct: false, feedback: "False"},
+          { text: "behaviors", correct: false, feedback: "False"},
+        ],
+        _2_: [
+          { text: "socialization", correct: false, feedback: "False"},
+          { text: "afford", correct: false, feedback: "False"},
+          { text: "array", correct: false, feedback: "False"},
+          { text: "reflects", correct: false, feedback: "False"},
+          { text: "behaviors", correct: true, feedback: "Correct"},
+        ],
+        _3_: [
+          { text: "socialization", correct: true, feedback: "Correct"},
+          { text: "afford", correct: false, feedback: "False"},
+          { text: "array", correct: false, feedback: "False"},
+          { text: "reflects", correct: false, feedback: "False"},
+          { text: "behaviors", correct: false, feedback: "False"},
+        ],
+        _4_: [
+          { text: "socialization", correct: false, feedback: "False"},
+          { text: "afford", correct: false, feedback: "False"},
+          { text: "array", correct: false, feedback: "False"},
+          { text: "reflects", correct: true, feedback: "Correct"},
+          { text: "behaviors", correct: false, feedback: "False"},
+        ],
+        _5_: [
+          { text: "socialization", correct: false, feedback: "False"},
+          { text: "afford", correct: true, feedback: "Correct"},
+          { text: "array", correct: false, feedback: "False"},
+          { text: "reflects", correct: false, feedback: "False"},
+          { text: "behaviors", correct: false, feedback: "False"},
+        ]
+      } // end of gaps   
+    }, // end of task 2
+    
+    { // TASK 3
+      name:  "Task 3 - Connect the words to their synonyms",
+      type: "V",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  " _1_ is the synonym of 'system'<br>\
+                  _2_ is the synonym of 'society'<br>\
+                  _3_ is the synonym of 'innate'<br>\
+                  _4_ is the synonym of 'aspect'<br>\
+                  _5_ is the synonym of 'morals'<br>\
+                  _6_ is the synonym of 'belief'<br>\
+                  _7_ is the synonym of 'emphasis'<br>\
+                  _8_ is the synonym of 'customs'",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "conviction", correct: false, feedback: "False"},
+          { text: "imposts", correct: false, feedback: "False"},
+          { text: "priority", correct: false, feedback: "False"},
+          { text: "ethic", correct: false, feedback: "False"},
+          { text: "form", correct: false, feedback: "False"},
+          { text: "inherent", correct: false, feedback: "False"},
+          { text: "community", correct: false, feedback: "False"},
+          { text: "structure", correct: true, feedback: "Correct"},
+        ],
+        _2_: [
+          { text: "conviction", correct: false, feedback: "False"},
+          { text: "imposts", correct: false, feedback: "False"},
+          { text: "priority", correct: false, feedback: "False"},
+          { text: "ethic", correct: false, feedback: "False"},
+          { text: "form", correct: false, feedback: "False"},
+          { text: "inherent", correct: false, feedback: "False"},
+          { text: "community", correct: true, feedback: "Correct"},
+          { text: "structure", correct: false, feedback: "False"},
+        ],
+        _3_: [
+          { text: "conviction", correct: false, feedback: "False"},
+          { text: "imposts", correct: false, feedback: "False"},
+          { text: "priority", correct: false, feedback: "False"},
+          { text: "ethic", correct: false, feedback: "False"},
+          { text: "form", correct: false, feedback: "False"},
+          { text: "inherent", correct: true, feedback: "Correct"},
+          { text: "community", correct: false, feedback: "False"},
+          { text: "structure", correct: false, feedback: "False"},
+        ],
+        _4_: [
+          { text: "conviction", correct: false, feedback: "False"},
+          { text: "imposts", correct: false, feedback: "False"},
+          { text: "priority", correct: false, feedback: "False"},
+          { text: "ethic", correct: false, feedback: "False"},
+          { text: "form", correct: true, feedback: "Correct"},
+          { text: "inherent", correct: false, feedback: "False"},
+          { text: "community", correct: false, feedback: "False"},
+          { text: "structure", correct: false, feedback: "False"},
+        ],
+        _5_: [
+          { text: "conviction", correct: false, feedback: "False"},
+          { text: "imposts", correct: false, feedback: "False"},
+          { text: "priority", correct: false, feedback: "False"},
+          { text: "ethic", correct: true, feedback: "Correct"},
+          { text: "form", correct: false, feedback: "False"},
+          { text: "inherent", correct: false, feedback: "False"},
+          { text: "community", correct: false, feedback: "False"},
+          { text: "structure", correct: false, feedback: "False"},
+        ],
+        _6_: [
+          { text: "conviction", correct: true, feedback: "Correct"},
+          { text: "imposts", correct: false, feedback: "False"},
+          { text: "priority", correct: false, feedback: "False"},
+          { text: "ethic", correct: false, feedback: "False"},
+          { text: "form", correct: false, feedback: "False"},
+          { text: "inherent", correct: false, feedback: "False"},
+          { text: "community", correct: false, feedback: "False"},
+          { text: "structure", correct: false, feedback: "False"},
+        ],
+        _7_: [
+          { text: "conviction", correct: false, feedback: "False"},
+          { text: "imposts", correct: false, feedback: "False"},
+          { text: "priority", correct: true, feedback: "Correct"},
+          { text: "ethic", correct: false, feedback: "False"},
+          { text: "form", correct: false, feedback: "False"},
+          { text: "inherent", correct: false, feedback: "False"},
+          { text: "community", correct: false, feedback: "False"},
+          { text: "structure", correct: false, feedback: "False"},
+        ],
+        _8_: [
+          { text: "conviction", correct: false, feedback: "False"},
+          { text: "imposts", correct: true, feedback: "Correct"},
+          { text: "priority", correct: false, feedback: "False"},
+          { text: "ethic", correct: false, feedback: "False"},
+          { text: "form", correct: false, feedback: "False"},
+          { text: "inherent", correct: false, feedback: "False"},
+          { text: "community", correct: false, feedback: "False"},
+          { text: "structure", correct: false, feedback: "False"},
+        ]
+      } // end of gaps 
+    }, // end of task 3
+  ],  // end of list of tasks
+} // end of lesson

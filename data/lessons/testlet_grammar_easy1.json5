@@ -1,0 +1,157 @@
+// Testlet 1 for Difficulty=Easy in Panel=Grammar
+
+{
+  name: "What is Art?", 
+  id: "testlet-grammar-easy-01",
+  author: "Amina Mamaieva, Illya Reva",
+  version: 1,
+
+  text: "<p>Art is a highly diverse range of human activities engaged in creating visual, auditory, or performed artifacts — artworks — \
+        that express the author's imaginative or technical skill, and are intended to be appreciated for their beauty or emotional power.</p>\
+        <p>The oldest documented forms of art are visual arts, which include images or objects in fields like painting, sculpture, \
+        printmaking, photography, and other visual media. Architecture is often included as one of the visual arts; however, like the \
+        decorative arts, it involves the creation of objects where the practical considerations of use are essential, in a way that they \
+        usually are not in another visual art, like a painting.</p>\
+        <p>Despite the seemingly indefinable nature of art, there have always existed certain formal guidelines for its aesthetic \
+        judgment and analysis. Formalism is a concept in art theory in which an artwork's artistic value is determined solely by \
+        its form, or how it is made.</p>\
+        <p>Art is often examined through the interaction of the principles and elements of art. The principles of art include movement, \
+        unity, harmony, variety, balance, contrast, proportion and pattern. The elements include texture, form, space, shape, color, \
+        value and line.</p>\",
+  
+  text_source: "Boundless Art History - Thinking and Talking About Art",
+  text_licence: "CC BY-SA",
+  text_url: "https://www.coursehero.com/study-guides/boundless-arthistory/what-is-art/",
+  
+  tasks: [  // the list of tasks for this lesson
+    { // TASK 1
+        name:  "Task 1 - Tense",
+        type: "G",          
+        interaction: "SC",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "What is the tense of the following sentence: 'Despite the seemingly indefinable nature of art, there have always \
+                existed certain formal guidelines for its aesthetic judgment and analysis.'",  
+        choices: [  
+          { text: "Present Perfect", correct: true, feedback: "Correct" },
+          { text: "Present Perfect Continuous", correct: false, feedback: "False. The tense is 'Present Perfect', which is formed from \
+                    the present tense of the verb have/has and the past participle of a verb." },
+          { text: "Past Perfect", correct: false, feedback: "False. The tense is 'Present Perfect', which is formed from \
+                    the present tense of the verb have/has and the past participle of a verb." },
+        ]
+    },  // end of task 1
+
+    { // TASK 2
+        name:  "Task 2 - Build a correct grammatical sentence from the given words",
+        type: "G",          
+        interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "(1) _1_ _2_ _3_ _4_ _5_ _6_ . <br>\
+                    (2) _7_ _8_ _9_ _10_",
+        gaps: {
+            mode: 'select',
+            _1_: [
+                { text: "visual arts", correct: false, feedback: "False"},
+                { text: "is", correct: false, feedback: "False"},
+                { text: "as one of", correct: false, feedback: "False"},
+                { text: "the", correct: false, feedback: "False"},
+                { text: "included", correct: false, feedback: "False"},
+                { text: "Architecture", correct: true, feedback: "Correct"},
+            ],
+            _2_: [
+                { text: "visual arts", correct: false, feedback: "False"},
+                { text: "is", correct: true, feedback: "Correct"},
+                { text: "as one of", correct: false, feedback: "False"},
+                { text: "the", correct: false, feedback: "False"},
+                { text: "included", correct: false, feedback: "False"},
+                { text: "Architecture", correct: false, feedback: "False"},
+            ],
+            _3_: [
+                { text: "visual arts", correct: false, feedback: "False"},
+                { text: "is", correct: false, feedback: "False"},
+                { text: "as one of", correct: false, feedback: "False"},
+                { text: "the", correct: false, feedback: "False"},
+                { text: "included", correct: true, feedback: "Correct"},
+                { text: "Architecture", correct: false, feedback: "False"},
+            ],
+            _4_: [
+                { text: "visual arts", correct: false, feedback: "False"},
+                { text: "is", correct: false, feedback: "False"},
+                { text: "as one of", correct: right, feedback: "Correct"},
+                { text: "the", correct: false, feedback: "False"},
+                { text: "included", correct: false, feedback: "False"},
+                { text: "Architecture", correct: false, feedback: "False"},
+            ],
+            _5_: [
+                { text: "visual arts", correct: false, feedback: "False"},
+                { text: "is", correct: false, feedback: "False"},
+                { text: "as one of", correct: false, feedback: "False"},
+                { text: "the", correct: true, feedback: "Correct"},
+                { text: "included", correct: false, feedback: "False"},
+                { text: "Architecture", correct: false, feedback: "False"},
+            ],
+            _6_: [
+                { text: "visual arts", correct: true, feedback: "Correct"},
+                { text: "is", correct: false, feedback: "False"},
+                { text: "as one of", correct: false, feedback: "False"},
+                { text: "the", correct: false, feedback: "False"},
+                { text: "included", correct: false, feedback: "False"},
+                { text: "Architecture", correct: false, feedback: "False"},
+            ],
+            _7_: [
+                { text: "The principles", correct: true, feedback: "Correct"},
+                { text: "include", correct: false, feedback: "False"},
+                { text: "of art", correct: false, feedback: "False"},
+                { text: "movement, unity, etc.", correct: false, feedback: "False"},
+            ],
+            _8_: [
+                { text: "The principles", correct: false, feedback: "False"},
+                { text: "include", correct: false, feedback: "False"},
+                { text: "of art", correct: true, feedback: "Correct"},
+                { text: "movement, unity, etc.", correct: false, feedback: "False"},
+            ],
+            _9_: [
+                { text: "The principles", correct: false, feedback: "False"},
+                { text: "include", correct: true, feedback: "Correct"},
+                { text: "of art", correct: false, feedback: "False"},
+                { text: "movement, unity, etc.", correct: false, feedback: "False"},
+            ],
+            _10_: [
+                { text: "The principles", correct: false, feedback: "False"},
+                { text: "include", correct: false, feedback: "False"},
+                { text: "of art", correct: false, feedback: "False"},
+                { text: "movement, unity, etc.", correct: true, feedback: "Correct"},
+            ]
+        } // end of gaps  
+    }, // end of task 2
+
+    { // TASK 3
+        name:  "Task 3 - Mark the mistake",
+        type: "G",          
+        interaction: "MARK",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "There is a mistake in each of the sentence. Mark it.", 
+        marktext: "(1) Art #1#are a highly diverse range of human activities.<br>\
+                    (2) The elements #2#includes texture, form, space, shape, color, value and line.<br>\
+                    (3) Art is often #3#examine through the interaction of the principles and elements of art.", 
+        markers: {
+          '1': {
+            description: 'Mistake - Sentence 1', feedback: "The mistake is 'are' because the subject in the sentence is singular, \
+                        so we should use 'is' instead. The correct version of the sentence is 'Art is a highly diverse range of human activities'."
+          },
+          '2': {
+            description: 'Mistake - Sentence 2', feedback: "The mistake is 'includes', instead of it we should have used 'include', \
+                        because the subject in the sentence is plural, so the ending 's' does not need to be added to the verb. \
+                        The correct version of the sentence is 'The elements include texture, form, space, shape, color, value and line'."
+          },
+          '3': {
+            description: 'Mistake - Sentence 3', feedback: "The mistake is 'examine', because this sentence is in the passive voice, \
+                        which is created with the verb to be and the past participle of the main verb. Therefore, it is correct to use 'examined'. \
+                        The correct version of the sentence is 'Art is often examined through the interaction of the principles and elements of art'."
+          }
+        } // end of markers list
+    }, // end of task 3
+  ],  // end of list of tasks
+} // end of lesson
