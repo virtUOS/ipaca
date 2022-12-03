@@ -1,8 +1,8 @@
 // Lesson ev-007a
 // a lesson 7a.
 {
-  name: "NAME OF LESSON 7a",  // the name that's also shown to the users
-  id: "lesson-slot-007a",        // an internal id, will never be shown, but important to identify the lesson
+  name: "NAME OF LESSON 7a test 3",  // the name that's also shown to the users
+  id: "lesson-slot-007a test 3",        // an internal id, will never be shown, but important to identify the lesson
   author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
   text: "<p> According to most widely accepted models of human memory and cognition, the content stored in people’s brains\
