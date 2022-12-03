@@ -237,7 +237,7 @@
         },
       },
       // paraphrasing tasks
-      { // task 10: primary reading task
+      { // task 10: Short task
         name:  "Paraphrase 01",
         type: "R",         
         interaction: "SHORT",  
@@ -247,7 +247,7 @@
         answer: "I have never been to Kyiv"
       },  // end of task 10
 
-      { // task 11: primary reading task
+      { // task 11: Short task
         name:  "Paraphrase 02",
         type: "R",         
         interaction: "SHORT",  
@@ -257,7 +257,7 @@
         answer: "Seldomly, children do their homework without being reminded"
       },  // end of task 11
 
-      { // task 12: primary reading task
+      { // task 12: Short task
         name:  "Paraphrase 03",
         type: "R",         
         interaction: "SHORT",  
@@ -267,7 +267,7 @@
         answer: "I will never buy this cake again"
       },  // end of task 12
 
-      { // task 13: primary reading task
+      { // task 13: Short task
         name:  "Paraphrase 04",
         type: "R",         
         interaction: "SHORT",  
@@ -277,7 +277,7 @@
         answer: "On no account should you press this foremost button"
       },  // end of task 13
 
-       { // task 14: primary reading task
+       { // task 14: Short task
         name:  "Paraphrase 05",
         type: "R",         
         interaction: "SHORT",  

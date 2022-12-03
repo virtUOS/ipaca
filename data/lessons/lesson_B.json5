@@ -230,7 +230,7 @@
         ],
       },
     },
-    { // task 10: primary reading task
+    { // task 10: Short task
       name: "10",
       type: "R",         
       interaction: "SHORT",  
@@ -240,17 +240,17 @@
       answer: "Stay here she said to me"
     },  // end of task 10
 
-    { // task 11: primary reading task
+    { // task 11: Short task
       name:  "11",
       type: "R",         
       interaction: "SHORT",  
       primary: true,     
       show_lesson_text: false, 
-      question:  "<p> Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets. </p><p>You don't have to use punctuation marks at the end of the sentence.</p><P> My mother is 55. She is into dancing. </p>",  
+      question:  "<p> Paraphrase the sentence. Use the inversion with negative adverbials. Use the words given in brackets. </p><p>You don't have to use punctuation marks at the end of the sentence.</p><P> My mother is 55. She is into dancing. (who) </p>",  
       answer: "My mother, who is 55, is into dancing"
     },  // end of task 11
 
-    { // task 12: primary reading task
+    { // task 12: Short task
       name:  "12",
       type: "R",         
       interaction: "SHORT",  
@@ -260,7 +260,7 @@
       answer: "Tom has been cooking an hour ago"
     },  // end of task 12
 
-    { // task 13: primary reading task
+    { // task 13: Short task
       name: "13",
       type: "R",         
       interaction: "SHORT",  
@@ -270,7 +270,7 @@
       answer: "He couldn't make a salad because he had forgotten to buy some tomatoes"
     },  // end of task 13
 
-     { // task 14: primary reading task
+     { // task 14: Short task
       name:  "14",
       type: "R",         
       interaction: "SHORT",  
