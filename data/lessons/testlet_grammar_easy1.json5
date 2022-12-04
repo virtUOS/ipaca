@@ -26,7 +26,7 @@
   tasks: [  // the list of tasks for this lesson
     { // TASK 1
         name:  "Task 1 - Tense",
-        type: "G",          
+        type: "GS",          
         interaction: "SC",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
         primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // We include testlet text on top of task
@@ -43,7 +43,7 @@
 
     { // TASK 2
         name:  "Task 2 - Build a correct grammatical sentence from the given words",
-        type: "G",          
+        type: "GS",          
         interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
         primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // We include testlet text on top of task
@@ -128,7 +128,7 @@
 
     { // TASK 3
         name:  "Task 3 - Mark the mistake",
-        type: "G",          
+        type: "GS",          
         interaction: "MARK",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
         primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // We include testlet text on top of task

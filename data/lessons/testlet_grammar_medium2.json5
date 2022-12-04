@@ -38,7 +38,7 @@
   tasks: [  // the list of tasks for this lesson
     { // TASK 1
       name:  "Task 1 - Choose the correct modal verb",
-      type: "G",          
+      type: "GS",          
       interaction: "GAP",         // SC = single choice, MC = multiple choice, GAP = gaps
       primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
       show_lesson_text: true,  // We include testlet text on top of task
@@ -64,7 +64,7 @@
 
     { // TASK 2
         name:  "Task 2 - Find the mistakes",
-        type: "G",          
+        type: "GS",          
         interaction: "MARK",      
         primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // We include testlet text on top of task
@@ -83,7 +83,7 @@
 
     { // TASK 3
       name:  "Task 3 - Change indirect speech to direct speech",
-      type: "G",          
+      type: "GS",          
       interaction: "SHORT",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
       primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
       show_lesson_text: true,  // We include testlet text on top of task
