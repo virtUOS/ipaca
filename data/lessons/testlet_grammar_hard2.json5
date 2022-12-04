@@ -37,32 +37,111 @@
   
   tasks: [  // the list of tasks for this lesson
     { // TASK 1
-      name:  "Task 1 - ...",
+      name:  "Task 1 - Make a correct sentence,
       type: "G",          
-      interaction: "",         // SC = single choice, MC = multiple choice, GAP = gaps
+      interaction: "SHORT", 
       primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
-      show_lesson_text: true,  // We include testlet text on top of task
-      question:  "",  
-       
+      show_lesson_text: true,  // We include testlet text on top of task 
+      question:  "These / game / the / the / are / 'rules' / scientific / that / plays / nature / of / laws",
+      answer: "These scientific laws are the 'rules' of the game that nature plays."
     },  // end of task 1
 
     { // TASK 2
-        name:  "Task 2 - ...",
-        type: "G",          
-        interaction: "",      // SC = single choice, MC = multiple choice, GAP = gaps
-        primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
-        show_lesson_text: true,  // We include testlet text on top of task
-        question:  "",  
-         
+      name:  "Task 2 - Fill the missing words",
+      type: "G",          
+      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAP = gaps
+      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+      show_lesson_text: true,  // We include testlet text on top of task
+      question:  "One important problem in _1_ scientific models has to do with the limitations of language. When we try _2_ complex \
+                  phenomena in everyday terms, _3_ words themselves may not _4_ adequate to do the job. For example, you may have heard \
+                  the structure of the atom likened to a miniature solar system. While some aspects of our modern model of the atom do \
+                  remind us of planetary orbits, many other of _5_ aspects _6_ fundamentally different.",
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "its", correct: false, feedback: "False"},
+          { text: "are", correct: false, feedback: "False"},
+          { text: "to describe", correct: false, feedback: "False"},
+          { text: "the", correct: false, feedback: "False"},
+          { text: "describing", correct: true, feedback: "Correct"},
+          { text: "be", correct: false, feedback: "False"},
+        ],
+        _2_: [
+          { text: "its", correct: false, feedback: "False"},
+          { text: "are", correct: false, feedback: "False"},
+          { text: "to describe", correct: true, feedback: "Correct"},
+          { text: "the", correct: false, feedback: "False"},
+          { text: "describing", correct: false, feedback: "False"},
+          { text: "be", correct: false, feedback: "False"},
+        ],
+        _3_: [
+          { text: "its", correct: false, feedback: "False"},
+          { text: "are", correct: false, feedback: "False"},
+          { text: "to describe", correct: false, feedback: "False"},
+          { text: "the", correct: true, feedback: "Correct"},
+          { text: "describing", correct: false, feedback: "False"},
+          { text: "be", correct: false, feedback: "False"},
+        ],
+        _4_: [
+          { text: "its", correct: false, feedback: "False"},
+          { text: "are", correct: false, feedback: "False"},
+          { text: "to describe", correct: false, feedback: "False"},
+          { text: "the", correct: false, feedback: "False"},
+          { text: "describing", correct: false, feedback: "False"},
+          { text: "be", correct: true, feedback: "Correct"},
+        ],
+        _5_: [
+          { text: "its", correct: true, feedback: "Correct"},
+          { text: "are", correct: false, feedback: "False"},
+          { text: "to describe", correct: false, feedback: "False"},
+          { text: "the", correct: false, feedback: "False"},
+          { text: "describing", correct: false, feedback: "False"},
+          { text: "be", correct: false, feedback: "False"},
+        ],
+        _6_: [
+          { text: "its", correct: false, feedback: "False"},
+          { text: "are", correct: true, feedback: "Correct"},
+          { text: "to describe", correct: false, feedback: "False"},
+          { text: "the", correct: false, feedback: "False"},
+          { text: "describing", correct: false, feedback: "False"},
+          { text: "be", correct: false, feedback: "False"},
+        ],
+      } // end of gaps   
     }, // end of task 2
 
     { // TASK 3
-      name:  "Task 3 - ...",
+      name:  "Task 3 - Choose the correct word form",
       type: "G",          
-      interaction: "",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      interaction: "GAP",     
       primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
       show_lesson_text: true,  // We include testlet text on top of task
-      question:  "",  
+      question:  "This problem _1_ the reason scientists often prefer to describe their models using equations rather than words. \
+                  In this book, which _2_ to introduce the field of astronomy, we _3_ mainly words to discuss what scientists have \
+                  learned. We avoid complex math, but if this course piques your interest and you go on in science, more and more of \
+                  your studies will _4_ the precise language of mathematics.",
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "is", correct: true, feedback: "Correct"},
+          { text: "are", correct: false, feedback: "False"},
+          { text: "were", correct: false, feedback: "False"},
+        ],
+        _2_: [
+          { text: "design", correct: false, feedback: "False"},
+          { text: "designed", correct: false, feedback: "False"},
+          { text: "is designed", correct: true, feedback: "Correct"},
+        ],
+        _3_: [
+          { text: "use", correct: true, feedback: "Correct"},
+          { text: "used", correct: false, feedback: "False"},
+          { text: "have been using", correct: false, feedback: "False"},
+        ],
+        _4_: [
+          { text: "involve", correct: true, feedback: "Correct"},
+          { text: "be involving", correct: false, feedback: "False"},
+          { text: "will have involved", correct: false, feedback: "False"},
+        ],
+      } // end of gaps 
     }, // end of task 3
   ],  // end of list of tasks
 } // end of lesson

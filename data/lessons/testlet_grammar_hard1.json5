@@ -25,63 +25,63 @@
   
   tasks: [  // the list of tasks for this lesson
     { // TASK 1
-      name:  "Task 1 - Choose the correct word",
-      type: "G",          
-      interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
-      primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
-      show_lesson_text: true,  // We include testlet text on top of task
-      question:  "Out of all the art forms that _1_ to this day, the visual art form _2_ the oldest.<br>\
-                  The art _3_ the skill and creativity of the author.<br>\
-                  There _4_ certain formal guidelines in art.<br>\
-                  The principles of art _5_ movement, unity, harmony, variety, balance, contrast, proportion and pattern.",  
-      gaps: {
-        mode: 'select',
-        _1_: [
-          { text: "has been documented", correct: false, feedback: "False. The correct answer is'have been documented'. \
-            In the first part of the sentence, we use the passive construction in the present perfect tense, since it is not the \
-            subject that does the action, but the action is done on it, and we pay attention to the plural noun, which is why the \
-            correct form is 'have'."},
-          { text: "have been documented", correct: true, feedback: "Correct"},
-          { text: "been documented", correct: false, feedback: "False. The correct answer is'have been documented'. \
-            In the first part of the sentence, we use the passive construction in the present perfect tense, since it is not the \
-            subject that does the action, but the action is done on it, and we pay attention to the plural noun, which is why the \
-            correct form is 'have'."},
-        ],
-        _2_: [
-          { text: "is", correct: true, feedback: "Correct"},
-          { text: "are", correct: false, feedback: "False. The correct answer is 'is'. In the second part of the sentence, we use \
-            the present simple tense to indicate that the information is general truth."},
-          { text: "been", correct: false, feedback: "False. The correct answer is 'is'. In the second part of the sentence, we use \
-            the present simple tense to indicate that the information is general truth."},
-        ],
-        _3_: [
-          { text: "has always expressed", correct: true, feedback: "Correct"},
-          { text: "have always expressed", correct: false, feedback: "False. The correct answer is 'has always expressed'. \
-            In this sentence we use present perfect, which is created with the verb have/has and the past participle of a verb. \
-            It is also important to pay attention to the singular or plural noun."},
-          { text: "always expressed", correct: false, feedback: "False. The correct answer is 'has always expressed'. \
-            In this sentence we use present perfect, which is created with the verb have/has and the past participle of a verb. \
-            It is also important to pay attention to the singular or plural noun."},
-        ],
-        _4_: [
-          { text: "has always been", correct: false, feedback: "False. The correct answer is 'have always been'. In this sentence \
-            we use present perfect, which is created with the verb have/has and the past participle of a verb. It is also important \
-            to pay attention to the singular or plural noun."},
-          { text: "have always been", correct: right, feedback: "Correct"},
-          { text: "always been", correct: false, feedback: "False. The correct answer is 'have always been'. In this sentence \
-            we use present perfect, which is created with the verb have/has and the past participle of a verb. It is also important \
-            to pay attention to the singular or plural noun."},
-        ],
-        _5_: [
-          { text: "include", correct: right, feedback: "Correct"},
-          { text: "includes", correct: false, feedback: "False. The correct answer is 'include'. In this sentence, we use \
-            present simple to indicate that the information is general truth. It is also important to pay attention to the \
-            singular or plural noun."},
-          { text: "included", correct: false, feedback: "False. The correct answer is 'include'. In this sentence, we use \
-            present simple to indicate that the information is general truth. It is also important to pay attention to the \
-            singular or plural noun."},
-        ]
-      } // end of gaps  
+        name:  "Task 1 - Choose the correct word",
+        type: "G",          
+        interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "Out of all the art forms that _1_ to this day, the visual art form _2_ the oldest.<br>\
+                    The art _3_ the skill and creativity of the author.<br>\
+                    There _4_ certain formal guidelines in art.<br>\
+                    The principles of art _5_ movement, unity, harmony, variety, balance, contrast, proportion and pattern.",  
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text: "has been documented", correct: false, feedback: "False. The correct answer is'have been documented'. \
+              In the first part of the sentence, we use the passive construction in the present perfect tense, since it is not the \
+              subject that does the action, but the action is done on it, and we pay attention to the plural noun, which is why the \
+              correct form is 'have'."},
+            { text: "have been documented", correct: true, feedback: "Correct"},
+            { text: "been documented", correct: false, feedback: "False. The correct answer is'have been documented'. \
+              In the first part of the sentence, we use the passive construction in the present perfect tense, since it is not the \
+              subject that does the action, but the action is done on it, and we pay attention to the plural noun, which is why the \
+              correct form is 'have'."},
+          ],
+          _2_: [
+            { text: "is", correct: true, feedback: "Correct"},
+            { text: "are", correct: false, feedback: "False. The correct answer is 'is'. In the second part of the sentence, we use \
+              the present simple tense to indicate that the information is general truth."},
+            { text: "been", correct: false, feedback: "False. The correct answer is 'is'. In the second part of the sentence, we use \
+              the present simple tense to indicate that the information is general truth."},
+          ],
+          _3_: [
+            { text: "has always expressed", correct: true, feedback: "Correct"},
+            { text: "have always expressed", correct: false, feedback: "False. The correct answer is 'has always expressed'. \
+              In this sentence we use present perfect, which is created with the verb have/has and the past participle of a verb. \
+              It is also important to pay attention to the singular or plural noun."},
+            { text: "always expressed", correct: false, feedback: "False. The correct answer is 'has always expressed'. \
+              In this sentence we use present perfect, which is created with the verb have/has and the past participle of a verb. \
+              It is also important to pay attention to the singular or plural noun."},
+          ],
+          _4_: [
+            { text: "has always been", correct: false, feedback: "False. The correct answer is 'have always been'. In this sentence \
+              we use present perfect, which is created with the verb have/has and the past participle of a verb. It is also important \
+              to pay attention to the singular or plural noun."},
+            { text: "have always been", correct: right, feedback: "Correct"},
+            { text: "always been", correct: false, feedback: "False. The correct answer is 'have always been'. In this sentence \
+              we use present perfect, which is created with the verb have/has and the past participle of a verb. It is also important \
+              to pay attention to the singular or plural noun."},
+          ],
+          _5_: [
+            { text: "include", correct: right, feedback: "Correct"},
+            { text: "includes", correct: false, feedback: "False. The correct answer is 'include'. In this sentence, we use \
+              present simple to indicate that the information is general truth. It is also important to pay attention to the \
+              singular or plural noun."},
+            { text: "included", correct: false, feedback: "False. The correct answer is 'include'. In this sentence, we use \
+              present simple to indicate that the information is general truth. It is also important to pay attention to the \
+              singular or plural noun."},
+          ]
+        } // end of gaps  
     },  // end of task 1
 
     { // TASK 2
@@ -99,16 +99,46 @@
                     elements of art. The principles of art _8_ (include) movement, unity, harmony, variety, balance, contrast, \
                     proportion and pattern.",  
         gaps: {
+          mode: 'fillin',
+            _1_: [
+              { text: "are"},
+            ],
+            _2_: [
+              { text: "include"},
+            ],
+            _3_: [
+              { text: "is often included"},
+            ],
+            _4_: [
+              { text: "involves"},
+            ],
+            _5_: [
+              { text: "are"},
+            ],
+            _6_: [
+              { text: "are not"},
+            ],
+            _7_: [
+              { text: "is often examined"},
+            ],
+            _8_: [
+              { text: "include"},
+            ],
         } // end of gaps  
     }, // end of task 2
 
     { // TASK 3
-      name:  "Task 3 - ...",
-      type: "G",          
-      interaction: "",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
-      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
-      show_lesson_text: true,  // We include testlet text on top of task
-      question:  "",  
+        name:  "Task 3 - Transform the active sentences into a passive ones using the word in brackets",
+        type: "G",          
+        interaction: "SHORT",
+        primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "<p>The oldest documented forms of art are visual arts. (consider + to be) </p>\
+                    <p>Visual art includes image or objects in fields like painting, sculpture, printmaking and photography. (include) </p>\
+                    <p>The artist always shows his inner world through art. (reveal) </p>",
+        answer: "The visual arts are considered to be the oldest documented forms of art. \
+                Images or objects in fields like painting, sculpture, printmaking and photography are included in visual art. \
+                The inner world of the artist is always revealed through art." 
     }, // end of task 3
   ],  // end of list of tasks
 } // end of lesson

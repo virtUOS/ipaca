@@ -37,32 +37,77 @@
   
   tasks: [  // the list of tasks for this lesson
     { // TASK 1
-      name:  "Task 1 - ...",
-      type: "G",          
-      interaction: "",         // SC = single choice, MC = multiple choice, GAP = gaps
-      primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
-      show_lesson_text: true,  // We include testlet text on top of task
-      question:  "",  
-       
-    },  // end of task 1
+        name:  "Task 1 - Enter the missing article",
+        type: "G",          
+        interaction: "GAP",         // SC = single choice, MC = multiple choice, GAP = gaps
+        primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "For example, you may have heard _1_ structure of _2_ atom likened to _3_ miniature solar system.",  
+        gaps: {
+            mode: 'select',
+            _1_: [
+              { text: "the", correct: true, feedback: "Correct"},
+              { text: "a", correct: false, feedback: "False. We use the article 'the' because we are talking about a concrete 'structure'."},
+            ],
+            _2_: [
+              { text: "the", correct: true, feedback: "Correct"},
+              { text: "a", correct: false, feedback: "False. We use the article 'the' because we are talking about a concrete 'atom'."},
+            ],
+            _3_: [
+              { text: "the", correct: false, feedback: "False. We use the article 'a' because we are describing any solar system, \
+                without concretizing to a particular solar system."},
+              { text: "a", correct: true, feedback: "Correct"},
+            ],
+        } // end of gaps 
+      },  // end of task 1
 
     { // TASK 2
-        name:  "Task 2 - ...",
+        name:  "Task 2 - Choose the correct word",
         type: "G",          
-        interaction: "",      // SC = single choice, MC = multiple choice, GAP = gaps
+        interaction: "GAP",      // SC = single choice, MC = multiple choice, GAP = gaps
         primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // We include testlet text on top of task
-        question:  "",  
-         
+        question:  "While _1_ aspects of our modern model of the atom do remind us _2_ planetary orbits, many \
+                   _3_ of its aspects are fundamentally different.",  
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text: "no", correct: false, feedback: "False. We use the word 'some' because there are obviously certain and specific aspects."},
+            { text: "some", correct: true, feedback: "Correct"},
+            { text: "any", correct: false, feedback: "False. We use the word 'some' because there are obviously certain and specific aspects."},
+          ],
+          _2_: [
+            { text: "a", correct: false, feedback: "False. We write 'remind of' because it is a regular expression used in the sense of 'to remind something'."},
+            { text: "the", correct: false, feedback: "False. We write 'remind of' because it is a regular expression used in the sense of 'to remind something'."},
+            { text: "of", correct: true, feedback: "Correct"},
+          ],
+          _3_: [
+            { text: "other", correct: true, feedback: "Correct"},
+            { text: "another", correct: false, feedback: "False, we use the word 'other'. The word 'another' is used only with singular nouns."},
+            { text: "the other", correct: false, feedback: "False, we use the word 'other'. The word 'the other' is used if it is clear that there are two objects."},
+          ],
+        } // end of gaps 
     }, // end of task 2
 
     { // TASK 3
-      name:  "Task 3 - ...",
-      type: "G",          
-      interaction: "",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
-      primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
-      show_lesson_text: true,  // We include testlet text on top of task
-      question:  "",  
+        name:  "Task 3 - Detect the tense of text passage excerpt",
+        type: "G",          
+        interaction: "SC",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // We include testlet text on top of task
+        question:  "Over centuries scientists have extracted various scientific laws from countless observations, hypotheses, and experiments.",  
+        choices: [  
+            { text: "Present Perfect", correct: true, feedback: "Correct" },
+            { text: "Past Perfect", correct: false, feedback: "False. The Present Perfect is used to convey the importance of the result \
+            of a past action in the present tense without specifying the exact time of the action. An action was performed sometime in \
+            the past (often recently) and the result of that action can be seen in the present tense." },
+            { text: "Present Perfect Continuous", correct: false, feedback: "False. The Present Perfect is used to convey the importance of the result \
+            of a past action in the present tense without specifying the exact time of the action. An action was performed sometime in \
+            the past (often recently) and the result of that action can be seen in the present tense." },
+            { text: "Past Perfect Continuous", correct: false, feedback: "False. The Present Perfect is used to convey the importance of the result \
+            of a past action in the present tense without specifying the exact time of the action. An action was performed sometime in \
+            the past (often recently) and the result of that action can be seen in the present tense." },
+          ],
     }, // end of task 3
   ],  // end of list of tasks
 } // end of lesson

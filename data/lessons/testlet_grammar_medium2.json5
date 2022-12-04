@@ -37,32 +37,61 @@
   
   tasks: [  // the list of tasks for this lesson
     { // TASK 1
-      name:  "Task 1 - ...",
+      name:  "Task 1 - Choose the correct modal verb",
       type: "G",          
-      interaction: "",         // SC = single choice, MC = multiple choice, GAP = gaps
+      interaction: "GAP",         // SC = single choice, MC = multiple choice, GAP = gaps
       primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
       show_lesson_text: true,  // We include testlet text on top of task
-      question:  "",  
-       
+      question:  "When we try to describe complex phenomena in everyday terms, the words themselves _1_ have to not be adequate to do the job.",  
+      gaps: {
+        mode: 'select',
+        _1_: [
+          { text: "can", correct: false, feedback: "False. The word 'can' is used to express the possibility of doing something, \
+          for facts, permissions or requests, doubt and to ask permission. This sentence does not include any of the above. \
+          The correct modal verb is 'may', because we use 'may' to express permission or prohibition, the possibility of something, \
+          uncertainty about something, reproach, wish and to indicate opportunity or permission."},
+          { text: "may", correct: true, feedback: "Correct"},
+          { text: "must", correct: false, feedback: "False. The word 'must' is used to express an order, the need to do something, \
+          or for an emotional transfer. This sentence does not include any of the above. The correct modal verb is 'may', because we \
+          use 'may' to express permission or prohibition, the possibility of something, uncertainty about something, reproach, wish \
+          and to indicate opportunity or permission."},
+          { text: "have to", correct: false, feedback: "False. The construction 'have to' expresses possibility, confidence in something. \
+          The correct modal verb is 'may', because we use 'may' to express permission or prohibition, the possibility of something, \
+          uncertainty about something, reproach, wish and to indicate opportunity or permission."},
+        ],
+      } // end of gaps 
     },  // end of task 1
 
     { // TASK 2
-        name:  "Task 2 - ...",
+        name:  "Task 2 - Find the mistakes",
         type: "G",          
-        interaction: "",      // SC = single choice, MC = multiple choice, GAP = gaps
+        interaction: "MARK",      
         primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // We include testlet text on top of task
-        question:  "",  
-         
+        question:  "There is a mistake in both sentences. Mark this mistake with the respective marker.",
+        marktext: "<p>(1) This is not to say that our current scientific models and laws #1#couldn't change.</p> \
+        <p>(2) Only the patient process of observing nature ever more carefully and precisely can #1#to demonstrate the validity \
+        of such new scientific models.</p>",
+        markers: {
+          '1': {
+            description: 'mistakes', feedback: "In sentence (1) it is grammatically correct to use 'cannot' instead of 'couldn't'. \
+            'Cannot' we use for present tense, and 'couldn't' for past tense. In sentence (2), we need to remove the word 'to', \
+            because it is not used in combination with modal words."
+          }
+        } // end of markers list  
     }, // end of task 2
 
     { // TASK 3
-      name:  "Task 3 - ...",
+      name:  "Task 3 - Change indirect speech to direct speech",
       type: "G",          
-      interaction: "",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+      interaction: "SHORT",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
       primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
       show_lesson_text: true,  // We include testlet text on top of task
-      question:  "",  
+      question:  "The general theory of relativity proposed by Albert Einstein is a perfect example of such a transformation that took \
+      place about a century ago; it led us to predict, and eventually to observe, a strange new class of objects that astronomers call \
+      black holes.",
+      answer: "Albert Einstein proposed, 'The general theory of relativity is a perfect example of such a transformation that took place \
+      about a century ago; it led us to predict, and eventually to observe, a strange new class of objects that astronomers call black holes.'"
     }, // end of task 3
   ],  // end of list of tasks
 } // end of lesson
