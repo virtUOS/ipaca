@@ -73,7 +73,8 @@ class TutormodelPretest:
         tasks = request.session.get("tasks", None)
         if not tasks and next_type != 'WRAPUP':
             next_type = "START" 
-            tasks = list(Task.objects.filter(lesson=lesson).values_list('id', flat=True))  # get list of task ids (we need ids becuse we cannot store a queryset in the session)
+            tasks = list(Task.objects.filter(lesson=lesson).values_list('id', flat=True))  # get list of task ids (we need ids because
+            # we cannot store a queryset in the session)
             request.session['tasks'] = tasks
         if next_type == 'START': # Start- und Endseite anzeigen
             return next_type, lesson, None
