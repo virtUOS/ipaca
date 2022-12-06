@@ -10,7 +10,7 @@
 
   discrimination: 2,
   difficulty: 0,
-  guessing: 1/9, 
+  guessing: 0.111, //estimation of 1/9
 
   text: "<p>No one would have believed in the last years of the nineteenth century that this world was being watched keenly \
         and closely by intelligences greater than man's and yet as mortal as his own; that as men busied themselves about their \

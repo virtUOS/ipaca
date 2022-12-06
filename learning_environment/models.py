@@ -55,9 +55,9 @@ class Lesson(models.Model):
     lesson_id = models.SlugField(max_length=64)
     series = models.CharField(max_length=255, default='General')
     author = models.CharField(max_length=256)
-    discrimination = 2 #new
-    difficulty = 0     #new
-    guessing = 0       #new
+    discrimination = 2. #new
+    difficulty = 0.     #new
+    guessing = 0.       #new
     text = models.TextField()
     text_source = models.CharField(max_length=1024, null=True)
     text_licence = models.CharField(max_length=1024, null=True)
