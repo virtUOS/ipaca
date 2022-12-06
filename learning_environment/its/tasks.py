@@ -10,6 +10,7 @@ To add a task type, you only need to:
 import learning_environment.its.tasktypes.sc as sc
 import learning_environment.its.tasktypes.mc as mc
 import learning_environment.its.tasktypes.gap as gap
+import learning_environment.its.tasktypes.gap2 as gap2
 import learning_environment.its.tasktypes.mark as mark
 import learning_environment.its.tasktypes.short as short
 
@@ -17,6 +18,7 @@ import learning_environment.its.tasktypes.short as short
 _TASK_TYPES = {'SC': sc.SCTask,
               'MC': mc.MCTask,
               'GAP': gap.GapTask,
+              'GAP2': gap2.Gap2Task,
               'MARK': mark.MarkTask,
               'SHORT': short.ShortTask}
 

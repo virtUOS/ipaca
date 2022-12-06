@@ -4,7 +4,8 @@
   name: "The Laws of Nature", 
   id: "testlet-grammar-hard-02",
   author: "Anastasiia Rukhlina",
-  version: 1,
+  version: 3,
+  series: "Pretest",
 
   text: "<p>Over centuries scientists have extracted various scientific laws from countless observations, hypotheses, and experiments. \
         These scientific laws are, in a sense, the 'rules' of the game that nature plays. One remarkable discovery about nature—one that \
@@ -29,7 +30,7 @@
         <p>This problem is the reason scientists often prefer to describe their models using equations rather than words. \
         In this book, which is designed to introduce the field of astronomy, we use mainly words to discuss what scientists have learned. \
         We avoid complex math, but if this course piques your interest and you go on in science, more and more of your studies will \
-        involve the precise language of mathematics.</p>\",
+        involve the precise language of mathematics.</p>",
   
   text_source: "Astronomy: The Sky and the Solar System - Science and the Universe: A Brief Tour",
   text_licence: "CC",
@@ -37,7 +38,7 @@
   
   tasks: [  // the list of tasks for this lesson
     { // TASK 1
-      name:  "Task 1 - Make a correct sentence,
+      name:  "Task 1 - Make a correct sentence",
       type: "GS",          
       interaction: "SHORT", 
       primary: true,           // the primary task will be shown first, non-primary tasks are for repitition

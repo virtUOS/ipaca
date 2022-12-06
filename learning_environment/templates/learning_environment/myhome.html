@@ -44,11 +44,18 @@
                                 {% endif %}
                             </p>
                         {% endfor %}
-                        <p>Switch series:
-                            {% for s in all_lesson_series %}
-                                <a href="?series={{ s }}">{{ s }}</a> {% if not forloop.last %}&middot;{% endif %}
-                            {% endfor %}
-                        </p>
+
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
+                                Switch series
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                {% for s in all_lesson_series %}
+                                    <li><a class="dropdown-item" href="?series={{ s }}">{{ s }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

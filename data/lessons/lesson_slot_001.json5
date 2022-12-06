@@ -1,8 +1,11 @@
- name: "NAME OF LESSON 1a",  // the name that's also shown to the users
+// Lesson tt-001
+// a test lesson, no meaningful content.
+{
+  name: "NAME OF LESSON 1a",  // the name that's also shown to the users
   id: "lesson-slot-001",        // an internal id, will never be shown, but important to identify the lesson
   author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
-  version: 1,                 // if you revise your lesson, give it a higher version number each time
-  series: "Pretest",
+  version: 3,                 // if you revise your lesson, give it a higher version number each time
+  series: "Academic English",
   text: "<p>Software systems are part of a world-wide economic system that has been rapidly evolving for several \
   hundred years; the factors driving economic growth are slowly starting to be understood. Analysis of changes in World\
   GDP have found cycles, or waves, of economic activity; Kondratieff waves are the longest, with a period of around 50 \

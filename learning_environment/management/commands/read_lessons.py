@@ -10,7 +10,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         num_lessons_created = 0
-        for filename in glob.glob("data/lessons/lesson_*.json5"):
+        for filename in glob.glob("data/lessons/*.json5"):
+            print("Lesson {}...\n".format(filename))
             with open(filename, "r", encoding="UTF-8") as f:
                 lesson_json5 = f.read()
                 try:

@@ -4,7 +4,8 @@
   name: "What Is Beautiful?", 
   id: "testlet-vocab-easy-01",
   author: "Amina Mamaieva, Illya Reva",
-  version: 1,
+  version: 2,
+  series: "Pretest",
 
   text: "<p>What do you think is beautiful? Many of us may respond, beauty is in the eye of the beholder, as the old saying goes. \
         [...] ‘the eye of the beholder’ is another way of thinking about the ‘theory of mind.’ One beholder thinks differently than \
@@ -30,7 +31,7 @@
         the term “classical” in “Where Does Art Come From? An Introduction” demonstrates. What about global arts that do not fit the mold of \
         classical beauty but focus on unique traditions developed without reference to ‘the classics’ of the Western Canon? \
         This is one of the ways that art history has to reflect upon its biases. In this study of art, we are taking a global perspective and \
-        so must affirm the ‘theory of mind of cultures’ and be aware of the ways that beauty (as well as gender, sexuality, etc.) is relative.</p>\",
+        so must affirm the ‘theory of mind of cultures’ and be aware of the ways that beauty (as well as gender, sexuality, etc.) is relative.</p>",
   
   text_source: "Where Does Art Come From?",
   text_licence: "CC BY",

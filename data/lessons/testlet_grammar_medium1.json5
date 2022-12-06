@@ -4,7 +4,8 @@
   name: "A Christmas Carol", 
   id: "testlet-grammar-medium-01",
   author: "Anhelina Ivanchenko",
-  version: 1,
+  version: 2,
+  series: "Pretest",
 
   text: "<p>Marley was dead, to begin with. There is no doubt whatever about that.\
         The register of his burial was signed by the church, the clerk, the undertaker, \
@@ -30,7 +31,7 @@
         dear Scrooge, how are you? When will you come to see me?” No beggars asked \
         Scrooge for a few coins; no children asked him what time it was; no man or \
         woman ever once in all his life inquired the way to such and such a place. But \
-        what did Scrooge care! It was the very thing he liked.</p>\",
+        what did Scrooge care! It was the very thing he liked.</p>",
   
   text_source: "A CHRISTMAS CAROL - MARLEY'S GHOST",
   text_licence: "CC",
