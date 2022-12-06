@@ -1,0 +1,357 @@
+// Lesson ev-001
+// a new lesson 1.
+{
+  name: "lesson Group-6.1 2",  // the name that's also shown to the users
+  id: "lesson-Group-6.1-2",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Group-6.1",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Academic English",
+  text: "<p>“The Raven” skyrocketed Poe from infamous critic to famous poet. But the literary recognition of his arguably \
+  most popular poem did not come with the paycheck one would expect. He only received $9 from The American Review for it, \
+  and Poe continued to struggle financially for the rest of his life. Debt and alcoholism weren’t the only demons haunting Poe. \
+  Death soon darkened his door yet again. In 1947, Virginia lost her battle with tuberculosis, devastating Poe. She was only 24 years old. \
+  After her death, Poe’s dependency on substances grew until, in 1849, he died at the age of 40 under suspicious circumstances. \
+  Some sources say he drank himself to death while others blame his death on drugs or rabies. No one is certain how Poe died, and it remains \
+  a mystery to this day, not unlike the gothic endings of some of his most celebrated works. Poe may have beaten Death in the end; \
+  his works are still recognized as an important part of the American Literature canon. Modern day readers have Poe to thank for \
+  detective fiction, a genre which some credit him for creating. Best known for his evocative storytelling and his gothic style, \
+  Poe continues to influence writers across the centuries from Sir Arthur Conan Doyle to Stephen King, who 616 Scott D. Peterson is \
+  quoted in a Mystery Scene magazine article as saying of Poe, “He wasn’t just a mystery/suspense writer. Hewasthefirst.”</p>",
+  text_source: "American literatures prior to 1865",
+  text_licence: "CC BY-SA",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/american-literatures-prior-to-1865",
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 2-1: primary reading task
+        name: "Reading Task2-1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Poe was a famous critic, but he did not manage to become a famous poet.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: " “The Raven” skyrocketed Poe from infamous critic to famous poet." },
+          { text: "False", correct: true, feedback: " “The Raven” skyrocketed Poe from infamous critic to famous poet." },
+        ]
+      }, //end of task 2-1
+      {
+        // task 2-2: primary reading task
+        name: "Reading Task2-2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "He received enough money to pay off his debts.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "He only received $9 from The American Review for it, and Poe continued to struggle financially for the rest of his life." },
+          { text: "False", correct: true, feedback: "He only received $9 from The American Review for it, and Poe continued to struggle financially for the rest of his life." },
+        ]
+      }, //end of task 2-2
+      {
+        // task 2-3: primary reading task
+        name: "Reading Task2-3",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Death were always near him during his life.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: true, feedback: "Death soon darkened his door yet again. Virginia lost her battle with tuberculosis." },
+          { text: "False", correct: false, feedback: "Death soon darkened his door yet again. Virginia lost her battle with tuberculosis." },
+        ]
+      }, //end of task 2-3
+      {
+        // task 2-4: primary reading task
+        name: "Reading Task2-4",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Without any doubts, Poe is the father of detective fiction.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: true, feedback: "Modern day readers have Poe to thank for detective fiction, a genre which some credit him for creating." },
+          { text: "False", correct: false, feedback: "Modern day readers have Poe to thank for detective fiction, a genre which some credit him for creating." },
+        ]
+      }, //end of task 2-4
+      {
+        // task 2-5: primary reading task
+        name: "Reading Task2-5",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Poe is famous for his easygoing and optimistic stories.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "Best known for his evocative storytelling and his gothic style." },
+          { text: "False", correct: true, feedback: "Best known for his evocative storytelling and his gothic style." },
+        ]
+      }, //end of task 2-5
+      {
+        // task 2-6: primary reading task
+        name: "Reading Task2-6",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Influence of Poe`s style we can find in works of such authors Sir Arthur Conan Doyle and Stephen King.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: true, feedback: "Poe continues to influence writers across the centuries from Sir Arthur Conan Doyle to Stephen King." },
+          { text: "False", correct: false, feedback: "Poe continues to influence writers across the centuries from Sir Arthur Conan Doyle to Stephen King." },
+        ]
+      }, //end of task 2-6
+      {
+        // task 2-7: gap filling for grammar
+        name: "Grammar Task2-7",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: true,
+        question: "<p> He died at the age of 40 under _1_ circumstances.</p>",
+        gaps: {
+          mode: 'fillin',
+          _1_: [
+              { text: "suspect", correct: false, feedback: "here we need an adverb formed from word suspect."},
+              { text: "suspicious", correct: true, feedback: "here we need an adverb formed from word suspect."},
+              { text: "suspicious", correct: true, feedback: "here we need an adverb formed from word suspect."},
+          ]
+        } // end of gaps
+      }, //end of task 2-7
+      {
+        // task 2-8: gap filling for grammar
+        name: "Grammar Task2-8",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: true,
+        question: "<p> Edgar Allan Poe was _1_ abandoned by both parents before the age of four.</p>",
+        gaps: {
+          mode: 'fillin',
+          _1_: [
+              { text: "swift", correct: false, feedback: "here we need an adverb formed from word swift."},
+              { text: "swiftly", correct: true, feedback: "here we need an adverb formed from word swift."},
+              { text: "swiftness", correct: true, feedback: "here we need an adverb formed from word swift."},
+          ]
+        } // end of gaps
+      }, //end of task 2-8
+      {
+        // task 2-9: gap filling for grammar
+        name: "Grammar Task2-9",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: true,
+        question: "<p> The Allans raised Poe as their own, though he was never _1_ adopted by the couple. </p>",
+        gaps: {
+          mode: 'fillin',
+          _1_: [
+              { text: "official", correct: false, feedback: "here we need an adverb formed from word official."},
+              { text: "officially", correct: true, feedback: "here we need an adverb formed from word official."},
+              { text: "officiality", correct: true, feedback: "here we need an adverb formed from word official."},
+          ]
+        } // end of gaps
+      }, //end of task 2-9
+      {
+        // task 2-10: gap filling for grammar
+        name: "Grammar Task2-10",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: true,
+        question: "<p> Poe took to poetry at a young age, which often caused a clash between himself and his _1_ father. </p>",
+        gaps: {
+          mode: 'fillin',
+          _1_: [
+              { text: "adopt", correct: false, feedback: "here we need an adverb formed from word official."},
+              { text: "adoptive", correct: true, feedback: "here we need an adverb formed from word official."},
+              { text: "adaptation", correct: true, feedback: "here we need an adverb formed from word official."},
+          ]
+        } // end of gaps
+      }, //end of task 2-10
+      {
+        // task 2-11: gap filling for grammar
+        name: "Grammar Task2-11",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: true,
+        question: "<p> It was while in the Army that Poe _1_ published his first collection,Tamerlane and Other Poems. </p>",
+        gaps: {
+          mode: 'fillin',
+          _1_: [
+              { text: "anonymous", correct: false, feedback: "here we need an adverb formed from word anonymous."},
+              { text: "anonymously", correct: true, feedback: "here we need an adverb formed from word anonymous."},
+              { text: "anonym", correct: true, feedback: "here we need an adverb formed from word anonymous."},
+          ]
+        } // end of gaps
+      }, //end of task 2-11
+      {
+        // task 2-12: gap filling for grammar
+        name: "Grammar Task2-12",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: true,
+        question: "<p> After winning a short story contest, Poe’s writing career picked up and he went on to publish more short stories in _1_ journals and magazines. </p>",
+        gaps: {
+          mode: 'fillin',
+          _1_: [
+              { text: "literature", correct: false, feedback: "here we need an adjective formed from word literature."},
+              { text: "literary", correct: true, feedback: "here we need an adjective formed from word literature."},
+              { text: "literize", correct: true, feedback: "here we need an adjective formed from word literature."},
+          ]
+        } // end of gaps
+      }, //end of task 2-12
+      { // task 2-13: primary vocabulary task
+        name:  "Vocabulary Task2-13",
+        type: "V",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question:  "Write the antonymous for 'Celebrated' ",  // the question to be displayed
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text:  "Obscure",
+            correct: true,
+            feedback:  "You got it! https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "famous",
+            correct: false,
+            feedback:  "https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "popular",
+            correct: false,
+            feedback:  "https://www.vocabulary.com/dictionary/young",
+          }
+        ]  // end of list of choices
+      },  // end of task 2-13
+      { // task 2-14: primary vocabulary task
+        name:  "Vocabulary Task2-14",
+        type: "V",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question:  "Write the antonymous for 'Young' ",  // the question to be displayed
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text:  "Old",
+            correct: true,
+            feedback:  "You got it! https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "pretty",
+            correct: false,
+            feedback:  "https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "juvenile",
+            correct: false,
+            feedback:  "https://www.vocabulary.com/dictionary/young",
+          }
+        ]  // end of list of choices
+      },  // end of task 2-14
+      { // task 2-15: primary vocabulary task
+        name:  "Vocabulary Task2-15",
+        type: "V",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question:  "Write the antonymous for 'Poverty' ",  // the question to be displayed
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text:  "Wealth",
+            correct: true,
+            feedback:  "You got it! https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "poor",
+            correct: false,
+            feedback:  "https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "penury",
+            correct: false,
+            feedback:  "https://www.vocabulary.com/dictionary/young",
+          }
+        ]  // end of list of choices
+      },  // end of task 2-15
+      { // task 2-16: primary vocabulary task
+        name:  "Vocabulary Task2-16",
+        type: "V",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question:  "Write the antonymous for 'Short' ",  // the question to be displayed
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text:  "Long",
+            correct: true,
+            feedback:  "You got it! https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "dark",
+            correct: false,
+            feedback:  "https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "small",
+            correct: false,
+            feedback:  "https://www.vocabulary.com/dictionary/young",
+          }
+        ]  // end of list of choices
+      },  // end of task 2-16
+      { // task 2-17: primary vocabulary task
+        name:  "Vocabulary Task2-17",
+        type: "V",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question:  "Write the antonymous for 'Drunk' ",  // the question to be displayed
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text:  "Sober",
+            correct: true,
+            feedback:  "You got it! https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "intelligent",
+            correct: false,
+            feedback:  "https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "creative",
+            correct: false,
+            feedback:  "https://www.vocabulary.com/dictionary/young",
+          }
+        ]  // end of list of choices
+      },  // end of task 2-17
+      { // task 2-18: primary vocabulary task
+        name:  "Vocabulary Task2-18",
+        type: "V",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC",  // Single choice task - options: SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        primary: true,      // the primary task will be shown first, non-primary tasks are for repitition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question:  "Write the antonymous for 'Often' ",  // the question to be displayed
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text:  "Never",
+            correct: false,
+            feedback:  "You got it! https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "seldom",
+            correct: false,
+            feedback:  "https://www.vocabulary.com/dictionary/young"
+          },
+          {
+            text:  "occasionally",
+            correct: true,
+            feedback:  "https://www.vocabulary.com/dictionary/young",
+          }
+        ]  // end of list of choices
+      }  // end of task 2-18
+
+    ] // end of tasks
+
+} // end of lesson
