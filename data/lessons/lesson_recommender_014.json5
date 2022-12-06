@@ -1,0 +1,272 @@
+                            {
+  name: "The Limits of Passion",  // the name that's also shown to the users
+  id: "lesson-recommender-014",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p>Some students will be impressed by Quentin Tarantino’s assertion, “I didn’t go to film school. I went to films.” It is tempting to think that all you need to know about filmmaking can be learned by watching films. That is certainly the start of developing a passion that can drive a career, but there is a case to be made for a formal education.</p>\
+  <p>College is where you learn how to think strategically. You learn how to work with other professionals-in-training. Working through college for four years or more, you gain stability and personal connections. You may not all end up as filmmakers or mass media professionals, but the critical thinking and problem-solving skills you learn from a liberal arts background prepare you to evaluate sources of information. You learn how to ask where people selling you a story got their information. If you learn how to learn, how to analyze media critically and how to make your own work as professional as possible, you will be prepared for shifts in the industry that might otherwise sap your passion.</p>\
+  <p>Passion is like a pit bull. It can be a friend, companion and protector — something to rely on when times are tough. Passion that is mistreated, ignored, or that knows only about the darker, more violent side of life, can get out of its owner’s control. There is no specific, perfect formula for cultivating your passion. Choose one and apply it in every college course you possibly can. If your education works for you, your passion can be tamed and it will always with you.</p>\
+  <p>Before he was known as a screenwriter and before he had directed anything, Quentin Tarantino was doing more than just watching movies. He worked with people who made films. His work at a production company enabled him to get his script for True Romance to film director Tony Scott. Without his production company experience, no one would have cared that he knew everything there was to know about kung fu movies and  westerns. He would have been a very knowledgeable video store clerk in a world where video stores were about to die.</p>",
+  text_source: "The Limits of Passion",
+  text_licence: "CC BY 4.0",
+  text_url: "https://press.rebus.community/mscy/chapter/chapter-4-film-and-bricolage",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading",
+        type: "R",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Read the text. Four sentences have been removed. Choose from the sentences from the one which fits each gap.:</p>\
+        <p>Some students will be impressed by Quentin Tarantino’s assertion, “I didn’t go to film school. I went to films.” It is tempting to think that all you need to know about filmmaking can be learned by watching films. _1_, but there is a case to be made for a formal education.</p>\
+        <p>College is where you learn how to think strategically. You learn how to work with other professionals-in-training. Working through college for four years or more, you gain stability and personal connections. You may not all end up as filmmakers or mass media professionals, but the critical thinking and problem-solving skills you learn from a liberal arts background prepare you to evaluate sources of information. You learn how to ask where people selling you a story got their information. If you learn how to learn, how to analyze media critically and how to make your own work as professional as possible, _2_.</p>\
+        <p>Passion is like a pit bull. It can be a friend, companion and protector — something to rely on when times are tough. Passion that is mistreated, ignored, or that knows only about the darker, more violent side of life, can get out of its owner’s control. There is no specific, perfect formula for cultivating your passion. Choose one and apply it in every college course you possibly can. _3_, your passion can be tamed and it will always with you.</p>\
+        <p>Before he was known as a screenwriter and before he had directed anything, Quentin Tarantino was doing more than just watching movies. _4_. His work at a production company enabled him to get his script for True Romance to film director Tony Scott. Without his production company experience, no one would have cared that he knew everything there was to know about kung fu movies and westerns. He would have been a very knowledgeable video store clerk in a world where video stores were about to die.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "That is certainly the start of developing a passion that can drive a career",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "you will be prepared for shifts in the industry that might otherwise sap your passion C If your education works for you",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "If your education works for you",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "He worked with people who made films",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _2_: [
+            {
+              text: "That is certainly the start of developing a passion that can drive a career",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "you will be prepared for shifts in the industry that might otherwise sap your passion C If your education works for you",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "If your education works for you",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "He worked with people who made films",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _3_: [
+            {
+              text: "That is certainly the start of developing a passion that can drive a career",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "you will be prepared for shifts in the industry that might otherwise sap your passion C If your education works for you",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "If your education works for you",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "He worked with people who made films",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "That is certainly the start of developing a passion that can drive a career",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "you will be prepared for shifts in the industry that might otherwise sap your passion C If your education works for you",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "If your education works for you",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "He worked with people who made films",
+              correct: true,
+              feedback: "That's correct."
+            }
+          ]
+        },
+      },
+      {
+        // Type 2, task 1
+        name: "Grammar",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the correct form of the verb.</p><p>\
+        Some students will be impressed by Quentin Tarantino’s assertion, “I didn’t go to film school. I went to films.” It is tempting to think that all you need to know about filmmaking can be learned _1_ films. That is certainly the start _2_ a passion that can drive a career, but there is a case to be made for a formal education. <br>\
+        College is where you learn how to think strategically. You learn how to work with other professionals-in- _3_ . Working through college for four years or more, you gain stability and personal connections. You may not all end up as filmmakers or mass media professionals, but the critical thinking and problem- _4_ skills you learn from a liberal arts background prepare you to evaluate sources of information. You learn how to ask where people _5_ you a story got their information. If you learn how to learn, how to analyze media critically and how to make your own work as professional as possible, you will be prepared for shifts in the industry that might otherwise sap your passion.\n <br>\
+        Passion is like a pit bull. It can be a friend, companion and protector — something to rely on when times are tough. Passion that is mistreated, ignored, or that knows only about the darker, more violent side of life, can get out of its owner’s control. There is no specific, perfect formula for _6_ your passion. Choose one and apply it in every college course you possibly can. If your education works for you, your passion can be tamed and it will always with you. <br>\
+        Before he was known as a screenwriter and before he had directed anything, Quentin Tarantino was doing more than just _7_ movies. He worked with people who made films. His work at a production company enabled him to get his script for True Romance to film director Tony Scott. Without his production company experience, no one would have cared that he knew everything there was to know about kung fu movies and westerns. He would have been a very knowledgeable video store clerk in a world where video stores were about to die.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "from watching",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "by watching",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "at watching",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+          ],
+          _2_: [
+            {
+              text: "of developing",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "at developing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "with developing",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _3_: [
+            {
+              text: "train",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "training",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "trained",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "solving",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "solve",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "solved",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _5_: [
+            {
+              text: "sale",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "sell",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "selling",
+              correct: true,
+              feedback: "That's correct."
+            }
+          ],
+          _6_: [
+            {
+              text: "cultivating",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "cultivated",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "cultivates",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _7_: [
+            {
+              text: "watches",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "watched",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "watching",
+              correct: true,
+              feedback: "That's correct."
+            }
+          ],
+        }
+      },
+      {
+        // Type 3, task 1
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Read the text and then match the synonyms to the following:</p><p>\
+        1. Motion picture production <br>\
+        2. Looking through <br>\
+        3. Creation <br>\
+        4. Conclusion/solution <br>\
+        5. Liquidation</p>",
+        paragraphs: ["filmmaking","watching","developing","solving","selling"],
+      },
+    ] // end of tasks
+
+} // end of lesson
