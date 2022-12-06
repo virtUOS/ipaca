@@ -55,6 +55,9 @@ class Lesson(models.Model):
     lesson_id = models.SlugField(max_length=64)
     series = models.CharField(max_length=255, default='General')
     author = models.CharField(max_length=256)
+    discrimination = 2 #new
+    difficulty = 0     #new
+    guessing = 0       #new
     text = models.TextField()
     text_source = models.CharField(max_length=1024, null=True)
     text_licence = models.CharField(max_length=1024, null=True)
@@ -114,6 +117,15 @@ class Lesson(models.Model):
                      json5=lesson_json5)
         if 'series' in lesson:
             lsn.series = lesson['series']
+        
+        #NEW: check for parameters in pretest lessons
+        if 'discrimination' in lesson:
+            lsn.discrimination = lesson['discrimination']
+        if 'difficulty' in lesson:
+            lsn.difficulty = lesson['difficulty']
+        if 'guessing' in lesson:
+            lsn.guessing = lesson['guessing']
+
         lsn.save()
 
 
