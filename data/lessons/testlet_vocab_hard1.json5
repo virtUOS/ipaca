@@ -3,8 +3,13 @@
 {
   name: "What Is Beautiful?", 
   id: "testlet-vocab-hard-01",
+  series: 'Pretest',
   author: "Amina Mamaieva, Illya Reva",
   version: 1,
+
+  discrimination: 2,
+  difficulty: 1,
+  guessing: 1/162,
 
   text: "<p>What do you think is beautiful? Many of us may respond, beauty is in the eye of the beholder, as the old saying goes. \
         [...] ‘the eye of the beholder’ is another way of thinking about the ‘theory of mind.’ One beholder thinks differently than \

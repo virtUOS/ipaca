@@ -3,8 +3,13 @@
 {
   name: "A Christmas Carol", 
   id: "testlet-grammar-medium-01",
+  series: 'Pretest',
   author: "Anhelina Ivanchenko",
   version: 1,
+
+  discrimination: 2,
+  difficulty: 0,
+  guessing: 1/18,
 
   text: "<p>Marley was dead, to begin with. There is no doubt whatever about that.\
         The register of his burial was signed by the church, the clerk, the undertaker, \

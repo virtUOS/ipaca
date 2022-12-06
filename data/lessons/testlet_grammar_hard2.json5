@@ -3,8 +3,13 @@
 {
   name: "The Laws of Nature", 
   id: "testlet-grammar-hard-02",
+  series: 'Pretest',
   author: "Anastasiia Rukhlina",
   version: 1,
+
+  discrimination: 2,
+  difficulty: 1,
+  guessing: 0, // task 1 is free-writing task
 
   text: "<p>Over centuries scientists have extracted various scientific laws from countless observations, hypotheses, and experiments. \
         These scientific laws are, in a sense, the 'rules' of the game that nature plays. One remarkable discovery about nature—one that \

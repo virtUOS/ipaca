@@ -3,8 +3,13 @@
 {
   name: "What is Art?", 
   id: "testlet-grammar-easy-01",
+  series: 'Pretest',
   author: "Amina Mamaieva, Illya Reva",
   version: 1,
+
+  discrimination: 2,
+  difficulty: -1,
+  guessing: 0,    // abgerundet von 1/(149 662 885 888)
 
   text: "<p>Art is a highly diverse range of human activities engaged in creating visual, auditory, or performed artifacts — artworks — \
         that express the author's imaginative or technical skill, and are intended to be appreciated for their beauty or emotional power.</p>\

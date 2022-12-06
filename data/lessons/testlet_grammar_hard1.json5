@@ -3,8 +3,13 @@
 {
   name: "What is Art?", 
   id: "testlet-grammar-hard-01",
+  series: 'Pretest',
   author: "Amina Mamaieva, Illya Reva",
   version: 1,
+
+  discrimination: 2,
+  difficulty: 1,
+  guessing: 0, // task 2 + 3 are free writing tasks -> no guessing probability
 
   text: "<p>Art is a highly diverse range of human activities engaged in creating visual, auditory, or performed artifacts — artworks — \
         that express the author's imaginative or technical skill, and are intended to be appreciated for their beauty or emotional power.</p>\
@@ -12,7 +17,7 @@
         printmaking, photography, and other visual media. Architecture is often included as one of the visual arts; however, like the \
         decorative arts, it involves the creation of objects where the practical considerations of use are essential, in a way that they \
         usually are not in another visual art, like a painting.</p>\
-        <p>Despite the seemingly indefinable nature of art, there have always existed certain formal guidelines for its aesthetic \
+        <p>Despite the see21mingly indefinable nature of art, there have always existed certain formal guidelines for its aesthetic \
         judgment and analysis. Formalism is a concept in art theory in which an artwork's artistic value is determined solely by \
         its form, or how it is made.</p>\
         <p>Art is often examined through the interaction of the principles and elements of art. The principles of art include movement, \

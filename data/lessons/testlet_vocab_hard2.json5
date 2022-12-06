@@ -3,8 +3,13 @@
 {
   name: "What Is Culture?", 
   id: "testlet-vocab-hard-02",
+  series: 'Pretest',
   author: "Adrian Babych",
   version: 1,
+
+  discrimination: 2,
+  difficulty: 1,
+  guessing: 0, // abgerundet von 1/(4 246 732 800 000)
 
   text: "<p>Culture is a system of learned behavior patterns that are characteristic of the members of a society (Hoebel, 1958). \
         Note the emphasis on the learning of behaviors or ways of doing things. Culture is learned, and individuals learn culture \
