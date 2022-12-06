@@ -1,0 +1,266 @@
+                            {
+  name: "The Academic Approach to Studying the Mass Media",  // the name that's also shown to the users
+  id: "lesson-recommender-016",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p>If you have been reading the chapters of this text in order, by this point you will be aware of the powerful role the mass media play in society, but you may not yet question whether society benefits from this arrangement. In general, the mass media could do a better job of representing all sorts of groups and group cultures. The mass media could also represent abstract concepts like love, trust and greed in more meaningful ways. This is not to say that the mass media have failed in this regard, but there is much room for improvement.</p>\
+  <p>As active audience members, as hybrid producer-users or “producers” (to <strong>use a term coined by</strong> Axel Bruns, you must not only be selective but also critical of what you consume. Whether you become media professionals or not, it will ultimately be your job as media consumers to remake the mass media in ways that better represent the depth of human experience.</p>\
+  <p>Whether your interest is a religion, a fandom, or an abstract concept like love (one of the greatest of abstractions), you have the power to participate in the media production redefining how others understand it.</p>\
+  <p>No, this is not a book about love. Yes, <strong>love and related concepts are commodified</strong> in the mass media; however, the disruption that has echoed in political spheres and often in the ways family and cultural group members speak to one another about politics also opens up space for critical thinking. That is, the same disruption described in Chapter 2 that allows for social upheaval also allows for a time of reflection and critical thinking about how society and its media function.</p>\
+  <p>This chapter gives you some tools developed by mass communication scholars to develop your critical eye when viewing messages as products in the mass media. If massive numbers of “produsers” can reshape the media landscape, we have to re-think the role of mass media professionals. Assisting people in the process of meaning-making — that is, making mass media with audiences instead of for them, and aiding them in their own communication efforts — could open up a new purpose and new industries for those <strong>who are mentally prepared</strong> and daring enough to take the lead.</p>\
+  <p>This chapter defines “media literacy” and touches on some key mass communication theories <strong>that are absolutely not meant to be left</strong> to molder in the digital cloud where this text ”book” lives. Take these theories out, apply them and see how they work. Find out how useful they can be and what their limitations are.</p>\
+  <p>This text presents an image of entire societies and cultures swimming in a sea of media. Consider these concepts your first set of snorkel and swim-fins.</p>",
+  text_source: "The Academic Approach to Studying the Mass Media",
+  text_licence: "CC BY 4.0",
+  text_url: "https://press.rebus.community/mscy/chapter/chapter-4-film-and-bricolage/",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading",
+        type: "R",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Decide if the information in the statement is True or False according to the information in the text:</p><p>\
+        1. The radio could also represent abstract concepts like love, trust and greed in more meaningful ways. _1_ <br>\
+        2. This chapter gives you some tools developed by mass communication scholars to develop your critical eye when viewing messages as products in the mass media. _2_ <br>\
+        3. Friendship and related concepts are commodified in the mass media; however, the disruption that has echoed in political spheres and often in the ways family and cultural group members speak to one another about politics also opens up space for critical thinking. _3_ <br>\
+        4. That is, the same disruption described in Chapter 3 that allows for social upheaval also allows for a time of reflection and critical thinking about how society and its media function. _4_ <br>\
+        5. This text presents an image of entire societies and cultures swimming in a sea of media. _5_ <br>\
+        6. Whether you become media professionals or not, it will ultimately be your job as media consumers to remake the mass media in ways that better represent the depth of human experience. _6_ </p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "No, that's not correct. “The mass media could also represent abstract concepts like love, trust and greed in more meaningful ways.”"
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "That's correct. “The mass media could also represent abstract concepts like love, trust and greed in more meaningful ways.”"
+            }
+          ],
+          _2_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "No, that's not correct. “the mass media could do a better job of representing all sorts of groups and group cultures.”"
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "That's correct. “the mass media could do a better job of representing all sorts of groups and group cultures.”"
+            }
+          ],
+          _3_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "No, that's not correct. “That is, the same disruption described in Chapter 1 that allows for social upheaval also allows for a time of reflection and critical thinking about how society and its media function.’"
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "That's correct. “That is, the same disruption described in Chapter 1 that allows for social upheaval also allows for a time of reflection and critical thinking about how society and its media function.’"
+            }
+          ],
+          _5_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _6_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ]
+        },
+      },
+      {
+        // Type 2, task 1
+        name: "Grammar",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Fill in the blank with the correct answer</p><p>\
+        1. Love and related concepts _1_ in the mass media; however, the disruption that has echoed in political spheres and often in the ways family and cultural group members speak to one another about politics also opens up space for critical thinking. <br>\
+        2. Assisting people in the process of meaning-making — that is, making mass media with audiences instead of for them, and aiding them in their own communication efforts — could open up a new purpose and new industries for those _2_ and daring enough to take the lead. <br>\
+        3. This chapter defines “media literacy” and touches on some key mass communication theories that are absolutely not meant to _3_ to molder in the digital cloud where this text ”book” lives. <br>\
+        4. This _4_ not a book about love <br>\
+        5. Friendship and related concepts _5_ in the mass media. </p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "are commodified",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "is commodified",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is being commodified",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "commodified",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _2_: [
+            {
+              text: "who are mentally prepared",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "which are mentally prepared",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "who is mentally prepared",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "which is mentally prepared",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _3_: [
+            {
+              text: "to be left",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "to left",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to leave",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "to be have left",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "are",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "am",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "be",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _5_: [
+            {
+              text: "is commodified",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are commodified",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "commodified",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "have commodified",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+        }
+      },
+      {
+        // Type 3, task 1
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their definitions.:</p><p>\
+        1. The aggregate of people living together in a more or less ordered community. <br>\
+        2. The state or condition of being a fan of someone or something. <br>\
+        3. A vigorous or determined attempt <br>\
+        4. Firm belief in the reliability, truth, or ability of someone or something.</p>",
+        paragraphs: ["Society","Fandom","Efforts","Trust"],
+      },
+      {
+        // Type 3, task 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their synonyms:</p><p>\
+        1. Concept <br>\
+        2. Number <br>\
+        3. To present <br>\
+        4. Member</p>",
+        paragraphs: ["Theory","Amount","To demonstrate","Participant"],
+      }
+    ] // end of tasks
+
+} // end of lesson
