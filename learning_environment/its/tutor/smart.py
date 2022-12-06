@@ -37,9 +37,15 @@ class SmartTutorModel(BaseTutorModel):
             task_id = task_difficulties[index]["id"]
 
             # check whether the task should repeated otherwise choose the next task
+            remaining_tasks = len(task_difficulties)
             while not self._should_task_be_repeated(task_id, request.user):
                 index = (index + 1) % len(task_difficulties)
                 task_id = task_difficulties[index]["id"]
+                remaining_tasks -= 1
+
+                if remaining_tasks <= 0:
+                    # it is very likely that all tasks have been completed recently
+                    break
 
             task = Task.objects.get(pk=task_id)
 
@@ -77,6 +83,7 @@ class SmartTutorModel(BaseTutorModel):
         try:
             last_solution = Solution.objects.filter(task=task_id, user=user_id).order_by('timestamp')[0]
         except IndexError:
+            # the user has not yet done the task
             return True
 
         # calculate the probability to repeat the task
