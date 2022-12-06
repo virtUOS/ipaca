@@ -1,0 +1,188 @@
+                            {
+  name: "Movies and Culture",  // the name that's also shown to the users
+  id: "lesson-recommender-015",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p>There are dozens of <strong>journals that examine</strong> the relationships between film and culture. <strong>Films influence</strong> popular culture, group culture and just about everyone’s personal culture. If your professor or instructor were to name an abstract emotion, a major industry or a popular sport, you could probably think of a <strong>film that deals</strong> with that aspect of culture or society. Think about gender norms, religious sensibilities, economic inequality, gay rights, militarism, environmentalism, family values, popular history, patriotism, cultural violence, liberty, race, global technology, artificial intelligence or sheep farming. There is a movie for almost every group culture. <strong>Social issues often drive</strong> filmmakers, but they may also pursue stories about popular issues to attract the broadest possible audience. <strong>Filmmakers often balance</strong> the desire to highlight the social and cultural issues <strong>they care</strong> about with the need to make money in a global cultural industry.</p>",
+  text_source: "Movies and Culture",
+  text_licence: "CC BY 4.0",
+  text_url: "https://press.rebus.community/mscy/chapter/chapter-4-film-and-bricolage",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading",
+        type: "R",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Put the events back in their chronological order.</p>",
+        paragraphs: [
+          "There are dozens of journals that examine the relationships between film and culture.",
+          "Films influence popular culture, group culture and just about everyone’s personal culture.",
+          "Think about gender norms, religious sensibilities, economic inequality, gay rights, militarism, environmentalism, family values, popular history, patriotism, cultural violence, liberty, race, global technology, artificial intelligence or sheep farming.",
+          "Social issues often drive filmmakers, but they may also pursue stories about popular issues to attract the broadest possible audience.",
+          "There is a movie for almost every group culture."
+        ]
+      },
+      {
+        // Type 2, task 1
+        name: "Grammar",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the correct form of the verb.</p><p>\
+        1. There _1_ dozens of journals that examine the relationships between film and culture. <br>\
+        2. Films _2_ popular culture, group culture and just about everyone’s personal culture. <br>\
+        3. If your professor or instructor were to name an abstract emotion, a major industry or a popular sport, you could probably think of a film that _3_ with that aspect of culture or society. <br>\
+        4. Social issues often _4_ filmmakers, but they may also pursue stories about popular issues to attract the broadest possible audience. <br>\
+        5. Filmmakers often _5_ the desire to highlight the social and cultural issues they care about with the need to make money in a global cultural industry.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "are",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "is",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "was",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "were",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _2_: [
+            {
+              text: "influences",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "influence",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "is influencing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "influenced",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _3_: [
+            {
+              text: "deals",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "deal",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "dealt",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "are dealing",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _4_: [
+            {
+              text: "drove",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "drives",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "drive",
+              correct: true,
+              feedback: "That's correct."
+            },
+            {
+              text: "is driving",
+              correct: false,
+              feedback: "No, that's not correct."
+            }
+          ],
+          _5_: [
+            {
+              text: "balanced",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "balances",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "is balancing",
+              correct: false,
+              feedback: "No, that's not correct."
+            },
+            {
+              text: "balance",
+              correct: true,
+              feedback: "That's correct."
+            }
+          ],
+        }
+      },
+      {
+        // Type 3, task 1
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their synonyms:</p><p>\
+        1. Popular <br>\
+        2. Examine <br>\
+        3. Liberty <br>\
+        4. Deal with <br>\
+        5. Issue</p>",
+        paragraphs: ["Widespread","Investigate","Independence","Cope with","Problem"],
+      },
+      {
+        // Type 3, task 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match the words with their definitions:</p><p>\
+        1. The relation between two expressions that are not equal. <br>\
+        2. Economic activity concerned with the processing of raw materials and manufacture of goods in factories. <br>\
+        3. Concern about and action aimed at protecting the environment.\n <br>\
+        4. The way in which two or more people or things are connected, or the state of being connected. <br>\
+        5. The theory and development of computer systems able to perform tasks normally requiring human intelligence, such as visual perception, speech recognition, decision-making, and translation between languages.</p>",
+        paragraphs: ["inequality","industry","environmentalism","relationships","artificial intelligence"],
+      }
+    ] // end of tasks
+
+} // end of lesson
