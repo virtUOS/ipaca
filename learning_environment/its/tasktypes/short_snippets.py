@@ -75,7 +75,7 @@ class ShortTask():
 
 
     def adj_to_rule(grammar_error_adj):
-        feedback_rule = 'no feedback rule was chosen'
+        feedback_rule = "no rule chosen "
 
 
         # 1. get the stem of the adjective
@@ -111,7 +111,8 @@ class ShortTask():
                 # 4. one syllable
                 if stem_adj.endswith('e'): # ends with e
                     feedback_rule = stem_adj + '-' + stem_adj + 'r-' + stem_adj + 'st'
-                    feedback_rule = "Adjectives with one syllable and ending with -e are formed by adding -r for comparatives and -st for superlatives, e.g. " + feedback_rule
+                    feedback_rule = """Adjectives with one syllable and ending with -e are formed by adding -r
+                                         for comparatives and -st for superlatives, e.g. """ + feedback_rule
                 else:
                     vowels = {'a','e','i','o','u'}
                     vow_count = 0
@@ -119,19 +120,23 @@ class ShortTask():
                         vow_count += stem_adj.count(v)
                     if (vow_count <= 1) and (stem_adj[-1] not in vowels) and (stem_adj[-2] in vowels): # one vowel and one consonant at end
                         feedback_rule = stem_adj + '-' + stem_adj + stem_adj[-1] + 'er-' + stem_adj + stem_adj[-1] + 'est'
-                        feedback_rule = "Adjectives with one vowel and ending with one consonant are formed by doubling the last consonant and adding -er for comparatives and -est for superlatives, e.g. " + feedback_rule
+                        feedback_rule = """Adjectives with one vowel and ending with one consonant are formed by doubling the last consonant and
+                                             adding -er for comparatives and -est for superlatives, e.g. """ + feedback_rule
                     else: # more than one vowel oder more than one consonant at end
                         feedback_rule = stem_adj + '-' + stem_adj + 'er-' + stem_adj + 'est'
-                        feedback_rule = "Adjectives with one syllable, not ending with -e and with more than one vowel or ending with more than one consonant are formed by adding -er for comparatives and -est for superlatives, e.g. " + feedback_rule
+                        feedback_rule = """Adjectives with one syllable, not ending with -e and with more than one vowel or ending with more than
+                                             one consonant are formed by adding -er for comparatives and -est for superlatives, e.g. """ + feedback_rule
 
             elif (syl_count >= 2):
                 # 5. two or more syllables
                 if stem_adj.endswith('y'): # ends with y
                     feedback_rule = stem_adj + '-' + stem_adj.replace('y', 'i') + 'er-' + stem_adj.replace('y', 'i') + 'est'
-                    feedback_rule = "Adjectives with more than one syllable and ending with -y are formed by replacing the y with an i and adding -er for comparatives and -est for superlatives, e.g. " + feedback_rule
+                    feedback_rule = """Adjectives with more than one syllable and ending with -y are formed by replacing the y with an i and
+                                         adding -er for comparatives and -est for superlatives, e.g. """ + feedback_rule
                 else:
                     feedback_rule = stem_adj + '-' + 'more ' + stem_adj + '-' + 'most ' + stem_adj 
-                    feedback_rule = "Adjectives with more than one syllable and not ending with -y are formed by prepending 'more' for comparatives and 'most' for superlatives, e.g. " + feedback_rule
+                    feedback_rule = """Adjectives with more than one syllable and not ending with -y are formed by prepending 'more' for comparatives 
+                                        and 'most' for superlatives, e.g. """ + feedback_rule
             else:
                 print('Something went wrong. The word stem has less than one syllable.')
 
@@ -169,7 +174,7 @@ class ShortTask():
     
         # tokenize: ["It", "is", "funnier", "task"]
         tokenized_user_answer = nltk.word_tokenize(user_answer)
-        print("Tokenized user answer: ")
+        print("tokenized user answer: ")
         print(tokenized_user_answer)
 
 
@@ -187,32 +192,22 @@ class ShortTask():
                 tokenized_user_answer[i] = corr_word
                 user_answer_corr = user_answer_corr.replace(tok_word, corr_word)
                 spelling_replacements[corr_word] = tok_word
-                print("replacements: ")
+                print("word replacements: ")
                 print(spelling_replacements)
-                print("user answer corr: ")
+                print("user answer with corrected spelling: ")
                 print(user_answer_corr)
                 spelling_array.append("You typed '" + tok_word + "' did you mean '" + corr_word + "'?")
                 errortypes['spelling'] += 1
                 s_error[tok_word] = 'spelling_error'
                 spelling_correction_feedback = ' '.join(spelling_array)
-                print("spelling correction feedback: ")
-                print(spelling_correction_feedback)
                 context ['spelling_correction_feedback'] = spelling_correction_feedback
-        #if errortypes['spelling'] == 0:
-        #   user_answer_corr = user_answer
-        #  print("user answer corr im else: ")
-        # print(user_answer_corr)
-
-        print("user answer corr nach if- else: ")
-        print(user_answer_corr)
+ 
 
         #generate right answer with happy transformer
         right_answer = self.happy_tt.generate_text(user_answer_corr, args=self.beam_settings).text
-        print("right answer: ")
+        print("right answer from happy transformer: ")
         print(right_answer)
         tokenized_right_answer = nltk.word_tokenize(right_answer)
-        print("tokenized right answer: ")
-        print(tokenized_right_answer)
 
         
 
@@ -226,7 +221,7 @@ class ShortTask():
                 right_word = tokenized_right_answer[i]
                 if right_word != user_word:
                     spelling_replacements[right_word] = user_word
-                    print("replacements: ")
+                    print("replacements due to length error: ")
                     print(spelling_replacements)    
                     errortypes['grammar'] += 1
                     s_error[user_word] = 'grammar_error'
@@ -297,39 +292,44 @@ class ShortTask():
         print(errortypes)
         print(s_error)
 
-
+        #adjective check 
         user_adj_sen = sp(right_answer)
         adj_exists = False
         for i in range(len(tokenized_right_answer)):
-            tag = spacy.explain(user_adj_sen[i].tag_)
-            print(user_adj_sen[i])
-            print(tag)
-            if(tag.split(",")[0] == "adjective"):
-                adj_exists = True
-                if len(spelling_replacements) > 0:
-                    if s_error[spelling_replacements[tokenized_right_answer[i]]] is not None:
-                        adj_feedback = ShortTask.adj_to_rule(tokenized_right_answer[i])
-                        context['adj_feedback'] = adj_feedback 
+            if(tokenized_right_answer[i] != "a" and tokenized_right_answer[i] != "the" and tokenized_right_answer[i] != "more"):
+                word = tokenized_right_answer[i]
+                tag = spacy.explain(user_adj_sen[i].tag_)
+                # find adjective in sentence 
+                if("adjective" in tag):  
+                    adj_exists = True
+                    if (word in spelling_replacements):
+                        adj_feedback = ShortTask.adj_to_rule(word) # determine grammar rule for this adj
+                        context['adj_feedback'] = adj_feedback
+
+
+                    """if len(spelling_replacements) > 0:
+                        if s_error[spelling_replacements[word]] is not None:
+                            adj_feedback = ShortTask.adj_to_rule(word)
+                            context['adj_feedback'] = adj_feedback 
                 else:
                     if s_error[tokenized_right_answer[i]] is not None:
                         adj_feedback = ShortTask.adj_to_rule(tokenized_right_answer[i])
-                        context['adj_feedback'] = adj_feedback 
+                        context['adj_feedback'] = adj_feedback """
 
         context['adj_exists_feedback'] = adj_exists 
+        print("adjective used?")
+        print(adj_exists)
 
 
 
         
         #lemmatize: 
         lemmatized_user_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_user_answer]
-        lemmatized_right_answer = [lemmatizer.lemmatize(w.lower()) for w in tokenized_right_answer]
 
-        print("lem right answer: ")
-        print(lemmatized_right_answer)
-        print("lem_user: ")
+        print("lemmatized user answer: ")
         print(lemmatized_user_answer)
 
-        #check whether all words in the solution are also in the user solution
+        #check whether at least three snippets are in the user sentence 
         snippets_in = 0
         enough_words_used = True
         for word in word_snippets:
@@ -341,7 +341,7 @@ class ShortTask():
 
 
     
-        print("enough words used? ")
+        print("enough snippets used? ")
         print(enough_words_used)
 
         
