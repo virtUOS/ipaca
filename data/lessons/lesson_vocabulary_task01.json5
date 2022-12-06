@@ -19,21 +19,21 @@
             show_lesson_text: false,
             question: "Match the idioms with their meanings and mark them by clicking on them after selecting one of the words.",
             marktext: "#1#to-have-bigger-fish-to-fry <br>\
-            #2#the-biggest-frog-in-the-puddle <br>\
-            #3#higher-than-a-cat-'-s-back  <br>\
+            #7#the-biggest-frog-in-the-puddle <br>\
+            #8#higher-than-a-cat-'-s-back  <br>\
             #4#the-greatest-thing-since-sliced-bread <br>\
             #5#best-of-a-bad-lot <br>\
-            #6#further-along-the-road <br>\
-            #7#elder-statesman <br>\
-            #8#at-(-one-'-s-)-earliest-convenience ",
+            #2#further-along-the-road <br>\
+            #6#elder-statesman <br>\
+            #3#at-(-one-'-s-)-earliest-convenience ",
             markers: {
             '1': {
                 description: "To have more important or more interesting things to do or attend to.",
             },
-            '2': {
+            '7': {
                 description: "The most powerful, influential, knowledgeable, or experienced person within a small group.",
             },
-            '3': {
+            '8': {
                 description: "Very expensive",
             },
             '4': {
@@ -42,13 +42,13 @@
             '5': {
                 description: "A person or thing in a group that is slightly better or more desirable than anything or anyone else in the group, even though none of the options available are desirable.",
             },
-            '6': {
+            '2': {
                 description: "In the future",
             },
-            '7': {
+            '6': {
                 description: "One who is experienced and successful in a particular area",
             },
-            '8': {
+            '3': {
                 description: "As soon as one is able to do something",
             }
             } // end of markers list
