@@ -5,7 +5,8 @@
   id: "testlet-grammar-easy-01",
   series: 'Pretest',
   author: "Amina Mamaieva, Illya Reva",
-  version: 1,
+  version: 3,
+  series: "Pretest",
 
   discrimination: 2,
   difficulty: -1,
@@ -22,7 +23,7 @@
         its form, or how it is made.</p>\
         <p>Art is often examined through the interaction of the principles and elements of art. The principles of art include movement, \
         unity, harmony, variety, balance, contrast, proportion and pattern. The elements include texture, form, space, shape, color, \
-        value and line.</p>\",
+        value and line.</p>",
   
   text_source: "Boundless Art History - Thinking and Talking About Art",
   text_licence: "CC BY-SA",
@@ -83,7 +84,7 @@
             _4_: [
                 { text: "visual arts", correct: false, feedback: "False"},
                 { text: "is", correct: false, feedback: "False"},
-                { text: "as one of", correct: right, feedback: "Correct"},
+                { text: "as one of", correct: true, feedback: "Correct"},
                 { text: "the", correct: false, feedback: "False"},
                 { text: "included", correct: false, feedback: "False"},
                 { text: "Architecture", correct: false, feedback: "False"},

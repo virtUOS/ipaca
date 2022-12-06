@@ -15,8 +15,7 @@
     <tr>
         <td>{{ task.id }}</td>
         <td>{{ task.name }}</td>
-        <td>{{ task.lesson.name }} (ID: {{ task.lesson.lesson_id }}) <a href="{% url 'lessondelete' task.lesson.id %}" class="btn btn-outline-danger btn-sm" 
-            onclick='if (confirm("Do you really want to delete the entire lesson {{task.lesson.name}}?") == false) this.preventDefault()'>Delete</a> </td>
+        <td>{{ task.lesson.name }} (ID: {{ task.lesson.lesson_id }})</td>
         <td>{{ task.interaction }}</td>
         <td>
             <a class="btn btn-secondary" href="{% url 'practice' %}?redo={{ task.id }}">Run</a>

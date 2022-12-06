@@ -5,7 +5,8 @@
   id: "testlet-vocab-easy-02",
   series: 'Pretest',
   author: "Adrian Babych",
-  version: 1,
+  version: 2,
+  series: "Pretest",
 
   discrimination: 2,
   difficulty: -1,
@@ -21,7 +22,7 @@
         <p>Culture is a complex whole that includes knowledge, belief, art, morals, law, customs, and any other capabilities and \
         habits that members of a society acquire (Linton, 1936). Linton emphasized that culture is a complex whole — a network of \
         behaviors related to all aspects of life. Dress is shaped by and reflects many characteristics in any culture, so dress is \
-        a complex map of cultural characteristics.</p>\",
+        a complex map of cultural characteristics.</p>",
   
   text_source: "Dress, Appearance, and Diversity in U.S. Society",
   text_licence: "CC BY",

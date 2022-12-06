@@ -5,7 +5,8 @@
   id: "testlet-vocabulary-medium-01",
   series: 'Pretest',
   author: "Anhelina Ivanchenko",
-  version: 1,
+  version: 3,
+  series: "Pretest",
 
   discrimination: 2,
   difficulty: 0,
@@ -27,7 +28,7 @@
         hypothesis has any truth, older than our world; and long before this earth ceased to be molten, life upon its surface must \
         have begun its course. The fact that it is scarcely one seventh of the volume of the earth must have accelerated its cooling \
         to the temperature at which life could begin. It has air and water and all that is necessary for the support of animated \
-        existence.</p>\",
+        existence.</p>",
   
   text_source: "Compact Anthology of World Literature, Part Five: The Long Nineteenth Century",
   text_licence: "Public Domain",
@@ -36,7 +37,7 @@
   tasks: [  // the list of tasks for this lesson
     { // TASK 1
         name:  "Task 1 - Choose closest phrase meaning",
-        type: "G",          
+        type: "GS",          
         interaction: "SC",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
         primary: true,           // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // We include testlet text on top of task
@@ -50,7 +51,7 @@
 
     { // TASK 2
         name:  "Task 2 - Antonym",
-        type: "G",          
+        type: "GS",          
         interaction: "MC",       // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
         primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // We include testlet text on top of task
@@ -64,7 +65,7 @@
 
     { // TASK 3
         name:  "Task 3 - Synonym",
-        type: "G",          
+        type: "GS",          
         interaction: "MC",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
         primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // We include testlet text on top of task

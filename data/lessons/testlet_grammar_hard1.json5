@@ -5,7 +5,8 @@
   id: "testlet-grammar-hard-01",
   series: 'Pretest',
   author: "Amina Mamaieva, Illya Reva",
-  version: 1,
+  version: 3,
+  series: "Pretest",
 
   discrimination: 2,
   difficulty: 1,
@@ -22,7 +23,7 @@
         its form, or how it is made.</p>\
         <p>Art is often examined through the interaction of the principles and elements of art. The principles of art include movement, \
         unity, harmony, variety, balance, contrast, proportion and pattern. The elements include texture, form, space, shape, color, \
-        value and line.</p>\",
+        value and line.</p>",
   
   text_source: "Boundless Art History - Thinking and Talking About Art",
   text_licence: "CC BY-SA",
@@ -72,13 +73,13 @@
             { text: "has always been", correct: false, feedback: "False. The correct answer is 'have always been'. In this sentence \
               we use present perfect, which is created with the verb have/has and the past participle of a verb. It is also important \
               to pay attention to the singular or plural noun."},
-            { text: "have always been", correct: right, feedback: "Correct"},
+            { text: "have always been", correct: true, feedback: "Correct"},
             { text: "always been", correct: false, feedback: "False. The correct answer is 'have always been'. In this sentence \
               we use present perfect, which is created with the verb have/has and the past participle of a verb. It is also important \
               to pay attention to the singular or plural noun."},
           ],
           _5_: [
-            { text: "include", correct: right, feedback: "Correct"},
+            { text: "include", correct: true, feedback: "Correct"},
             { text: "includes", correct: false, feedback: "False. The correct answer is 'include'. In this sentence, we use \
               present simple to indicate that the information is general truth. It is also important to pay attention to the \
               singular or plural noun."},
@@ -91,8 +92,8 @@
 
     { // TASK 2
         name:  "Task 2 - Correct tense",
-        type: ""GS,          
-        interaction: "GAP",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
+        type: "GS",          
+        interaction: "GAP2",      // SC = single choice, MC = multiple choice, GAPSEL = select options for gaps, GAPFILL = fill in the gaps
         primary: false,          // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // We include testlet text on top of task
         question:  "But the words in brackets into the correct tense (active or passive voice): <br>\
@@ -106,7 +107,7 @@
         gaps: {
           mode: 'fillin',
             _1_: [
-              { text: "are"},
+              { text: "are" },
             ],
             _2_: [
               { text: "include"},

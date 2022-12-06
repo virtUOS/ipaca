@@ -5,7 +5,8 @@
   id: "testlet-grammar-medium-02",
   series: 'Pretest',
   author: "Anastasiia Rukhlina",
-  version: 1,
+  version: 3,
+  series: "Pretest",
 
   discrimination: 2,
   difficulty: 0,
@@ -34,7 +35,7 @@
         <p>This problem is the reason scientists often prefer to describe their models using equations rather than words. \
         In this book, which is designed to introduce the field of astronomy, we use mainly words to discuss what scientists have learned. \
         We avoid complex math, but if this course piques your interest and you go on in science, more and more of your studies will \
-        involve the precise language of mathematics.</p>\",
+        involve the precise language of mathematics.</p>",
   
   text_source: "Astronomy: The Sky and the Solar System - Science and the Universe: A Brief Tour",
   text_licence: "CC",
