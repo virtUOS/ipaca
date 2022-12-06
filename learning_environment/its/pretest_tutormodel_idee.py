@@ -58,9 +58,9 @@ class Tutormodel:
         #TODO: Iterate over all possible next testlet options
         for option in testlet_options:
             #TODO: Get parameters from testlet
-            a = ???
-            b = ???
-            c = ???
+            a = ... #???
+            b = ... #???
+            c = ... #???
             #Get information amount by using the Item Information Function (= derivative of IRF)
             information_amount = -( (a*(c-1)*math.exp(a*(ability-b))) / ((math.exp(a*(ability-b))+1)**2) )
             info_testlet_options.append(information_amount)
@@ -79,7 +79,7 @@ class Tutormodel:
         #declare start stage
         current_stage = 0
         #TODO (adjust): provide start testlet
-        testlet = ???
+        testlet = ... #???
         #TODO: let user submit testlet
         #TODO (adjust): When submit-button pressed: evaluate correctness of testlet 
         evaluation = self.evaluate_testlet(testlet)
@@ -92,7 +92,7 @@ class Tutormodel:
         while current_stage < max_stage:
             #TODO (adjust): get next options
             testlet_options = [] #stores all lesson objects of new stage
-            ???
+            ...#???
             #select best next testlet
             testlet = self.select_next_testlet(testlet_options, new_ability)
             #TODO: Let user submit testlet
