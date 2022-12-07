@@ -1,0 +1,193 @@
+                            {
+  name: "Relevance Rules: Students In The Workplace Keep Industry And Academia On The Cutting Edge",  // the name that's also shown to the users
+  id: "lesson-recommender-017",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p>When college students can spend several months as top international firms like Goldman Sachs, they naturally <strong>come away with</strong> valuable <strong>résumé-building</strong> experience. But what’s often left out of the conversation is the value that students inject back into the business.</p>\
+  <p>Joseph Camarda, a managing director in private <strong>wealth management</strong> at Goldman Sachs in San Francisco, cited this mutually beneficial exchange when explaining why the company has partnered with Drexel University in Philadelphia to place 145 students in cooperative education positions at its U.S. offices since 2014. </p>\
+  <p>“They bring a young, vibrant, innovative mind to the team and that adds a value that we want to use <strong>over and over</strong>,” he said.</p>\
+  <p>By collaborating with businesses, colleges and universities can deliver on the promise of relevance for career-minded students. From <strong>co-ops</strong> and internships, to mentoring and research opportunities, they can also invigorate programs on campus and bring value to firms.</p>\
+  <p>Ashley Inman, a human resources expert who has worked with college interns in several industries, recalled one intern at a construction firm who developed an app for the company to better track inventory — a strategic innovation that helped streamline sales.</p>\
+  <p>“Organizations can <strong>get stuck in</strong> their ways,” she said. “The value that the students bring is a fresh perspective.”</p>\
+  <p>It’s part of the reason Goldman values its partnership with the university today — 13 years after the co-op relationship began with just a few students in the company’s Philadelphia office. A number of graduates since that time have gone on to work for Goldman <strong>full-time</strong>.</p>",
+  text_source: "Relevance Rules: Students In The Workplace Keep Industry And Academia On The Cutting Edge",
+  text_licence: "CC BY 4.0",
+  text_url: "https://www.forbes.com/sites/drexeluniversity/2019/01/07/relevance-rules-students-in-the-workplace-keep-industry-and-academia-on-the-cutting-edge/?sh=6c6359315b34",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading, Scanning",
+        type: "R",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Read the text and decide if the statements are true or false:</p><p>\
+        1. Collaborating with students has given innovations and new opportunities for business. _1_ <br>\
+        2. A managing director at Goldman Sachs remarked that engaging students in the workplace provides benefits for students. _2_ <br>\
+        3. The trainee has created a product marketing program. _3_ <br>\
+        4. By partnering with companies, colleges and universities can be more confident that there will be more opportunities for graduates to be employed. _4_ </p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "That's correct. The students bring a young, vibrant, innovative mind to the team and that adds a value that companies want to use over and over. (article 3)"
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "No, that's not correct. The students bring a young, vibrant, innovative mind to the team and that adds a value that companies want to use over and over. (article 3)"
+            }
+          ],
+          _2_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "No, that's not correct. Joseph Camarda, a managing director at Goldman Sachs, cited the mutually beneficial exchange. It isn’t stated about students’ avail. (article 2)"
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "That's correct. Joseph Camarda, a managing director at Goldman Sachs, cited the mutually beneficial exchange. It isn’t stated about students’ avail. (article 2)"
+            }
+          ],
+          _3_: [
+            {
+              text: "True",
+              correct: false,
+              feedback: "No, that's not correct. The intern at a construction firm developed an app to better track inventory. (article 5)"
+            },
+            {
+              text: "False",
+              correct: true,
+              feedback: "That's correct. The intern at a construction firm developed an app to better track inventory. (article 5)"
+            }
+          ],
+          _4_: [
+            {
+              text: "True",
+              correct: true,
+              feedback: "That's correct. By collaborating with businesses, colleges and universities can deliver on the promise of relevance for career-minded students. (article 4)"
+            },
+            {
+              text: "False",
+              correct: false,
+              feedback: "No, that's not correct. By collaborating with businesses, colleges and universities can deliver on the promise of relevance for career-minded students. (article 4)"
+            }
+          ]
+        },
+      },
+      {
+        // Type 2, task 1
+        name: "Grammar",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Fill in the blank with the correct answer</p>\
+        <p>When college students can spend several months as top international firms like Goldman Sachs, they naturally come away with valuable résumé-building experience. But what’s often left out of the conversation is the value _1_ students inject back into the business.</p>\
+        <p>Joseph Camarda, a managing director in private wealth management at Goldman Sachs in San Francisco, cited this mutually beneficial exchange when explaining why the company has partnered with Drexel University in Philadelphia to place 145 students in cooperative education positions at its U.S. offices since 2014.</p>\
+        <p>“They bring a young, vibrant, innovative mind to the team and that adds a value _2_ we want to use over and over,” he said.</p>\
+        <p>By collaborating with businesses, colleges and universities can deliver on the promise of relevance for career-minded students. From co-ops and internships, to mentoring and research opportunities, they can also invigorate programs on campus and bring value to firms.</p>\
+        <p>Ashley Inman, a human resources expert _3_ has worked with college interns in several industries, recalled one intern at a construction firm _4_ developed an app for the company to better track inventory — a strategic innovation _5_ helped streamline sales.</p>\
+        <p>“Organizations can get stuck in their ways,” she said. “The value _6_ the students bring is a fresh perspective.”</p>\
+        <p>It’s part of the reason Goldman values its partnership with the university today — 13 years after the co-op relationship began with just a few students in the company’s Philadelphia office. A number of graduates since that time have gone on to work for Goldman full-time.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "that",
+              correct: true,
+              feedback: "That's correct. The value is not a person. Use \"that\" for things."
+            },
+            {
+              text: "who",
+              correct: false,
+              feedback: "No, that's not correct. The value is not a person. Use \"that\" for things."
+            }
+          ],
+          _2_: [
+            {
+              text: "who",
+              correct: false,
+              feedback: "No, that's not correct. The value is not a person. Use \"which\" for things."
+            },
+            {
+              text: "which",
+              correct: true,
+              feedback: "That's correct. The value is not a person. Use \"which\" for things."
+            }
+          ],
+          _3_: [
+            {
+              text: "who",
+              correct: true,
+              feedback: "That's correct. Ashley Inman, a human resources expert is a person. Use \"who\" for people."
+            },
+            {
+              text: "which",
+              correct: false,
+              feedback: "No, that's not correct. Ashley Inman, a human resources expert is a person. Use \"who\" for people."
+            }
+          ],
+          _4_: [
+            {
+              text: "that",
+              correct: true,
+              feedback: "That's correct. One intern is a person. The article is informal. Use “that”, informally, for people."
+            },
+            {
+              text: "which",
+              correct: false,
+              feedback: "No, that's not correct. One intern is a person. The article is informal. Use “that”, informally, for people."
+            }
+          ],
+          _5_: [
+            {
+              text: "who",
+              correct: false,
+              feedback: "No, that's not correct. A strategic innovation is not a person. Use \"that\" for things."
+            },
+            {
+              text: "that",
+              correct: true,
+              feedback: "That's correct. A strategic innovation is not a person. Use \"that\" for things."
+            }
+          ],
+          _6_: [
+            {
+              text: "which",
+              correct: true,
+              feedback: "That's correct. The value is not a person. Use \"which\" for things."
+            },
+            {
+              text: "who",
+              correct: false,
+              feedback: "No, that's not correct. The value is not a person. Use \"which\" for things."
+            }
+          ]
+        }
+      },
+      {
+        // Type 3, task 1
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Match the phrases with their definitions.:</p><p>\
+        1. an investment advisory service that combines other financial services to address the needs of affluent clients <br>\
+        2. for all the hours of a week during which people normally work or study, rather than just for a part of it <br>\
+        3. an organization or business that is owned and managed by a group of people who also work in it <br>\
+        4. to start doing something in an enthusiastic way <br>\
+        5. to leave a place with a particular feeling or impression <br>\
+        6. repeating many times <br>\
+        7. something that includes your skills and abilities, and what qualifies you for position</p>",
+        paragraphs: ["wealth management","full-time","co-op","get stuck in","come away with","over and over","résumé-building"],
+      }
+    ] // end of tasks
+
+} // end of lesson
