@@ -40,7 +40,130 @@
           "collection and was restored twenty years later."
         ]
       },
-
+      {
+        // Type 2, task 1
+        name: "Grammar",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the correct passive form construction:</p>\
+        Milan is a bustling, working city that is home to roughly 1.5 million people. In the past decade, it _1_ into a thoroughly modern place that lives proudly on its reputation for being a world leader in contemporary style, art, and design. There _2_ frequent stores that _3_ only in Milan.<br>\
+        A Santa Lucia is a bustling yet comfortable restaurant which _4_ close to the Duomo with a no-nonsense menu, overlooked by the photos of 400 Italian celebrities who have dined there. Service is attentive, and the food is really, really good. Most of the customers are locals, plus a smattering of fashionistas and a few foreigners in the know.<br>\
+        Blissfully untainted by the hand or eye of an interior designer, the century-old Bar Jamaica is in the heart of the chic Brera district. This place _5_ by the Milanese luminaries of art, journalism, and photography for decades. Upstairs, basic eats _6_ by a tiny bistro into the night. It may not be the creative hub it once was, but it’s still a great spot for a sharp shot of Milanese espresso or an aperitivo.<br>\
+        The founder of Massimo Alba is a veteran at producing luxurious, interesting clothes, many of which _7_ by him with dyes to add depth. He is a champion of and passionate believer in slow fashion, and his mens- and womenswear is the sort of clothing that _8_ once and _9_ as if you’ve owned it—and loved it—for years. A current hot ready-to-wear buy is the fine needlecord “Sloop” suit he created for Daniel Craig for the opening sequence of No Time to Die.</p>",
+        gaps: {
+          mode: "select",
+          _1_: [
+            {
+              text: "has be transformed",
+              correct: false,
+              feedback: "No, that's not correct. “Has transformed” is the verb of the present perfect tense. We change it into passive by adding “been” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, “been” is the right form for present perfect tense. The verb “transformed” stays in past participle form."
+            },
+            {
+              text: "has been transformed",
+              correct: true,
+              feedback: "That's correct. “Has transformed” is the verb of the present perfect tense. We change it into passive by adding “been” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, “been” is the right form for present perfect tense. The verb “transformed” stays in past participle form."
+            }
+          ],
+          _2_: [
+            {
+              text: "been presented",
+              correct: false,
+              feedback: "No, that's not correct. “Present” is the verb of the present simple tense. We change it into passive by adding “am/is/are” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “are” because it is the right plural form for present simple tense in this case. Also we choose the past participle of “present” to create the third part of a passive voice construction - past participle of a transitive verb."
+            },
+            {
+              text: "are presented",
+              correct: true,
+              feedback: "That's correct. “Present” is the verb of the present simple tense. We change it into passive by adding “am/is/are” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “are” because it is the right plural form for present simple tense in this case. Also we choose the past participle of “present” to create the third part of a passive voice construction - past participle of a transitive verb."
+            }
+          ],
+          _3_: [
+            {
+              text: "can be find",
+              correct: false,
+              feedback: "No, that's not correct. “Can find” is the verb “find” combined with the modal verb “can”. When we have a modal verb we change the given phrase into passive by adding “be” after a modal verb. It is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “be” because it is the right form to combine with a modal verb in present simple tense. Also we choose the past participle of “find” to create the third part of a passive voice construction - past participle of a transitive verb."
+            },
+            {
+              text: "can be found",
+              correct: true,
+              feedback: "That's correct. “Can find” is the verb “find” combined with the modal verb “can”. When we have a modal verb we change the given phrase into passive by adding “be” after a modal verb. It is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “be” because it is the right form to combine with a modal verb in present simple tense. Also we choose the past participle of “find” to create the third part of a passive voice construction - past participle of a transitive verb."
+            }
+          ],
+          _4_: [
+            {
+              text: "has been opened",
+              correct: true,
+              feedback: "That's correct. “Has opened” is the verb of the present perfect tense. We change it into passive by adding “been” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, “been” is the right form for present perfect tense. The verb “opened” stays in past participle form."
+            },
+            {
+              text: "has being open",
+              correct: false,
+              feedback: "No, that's not correct. “Has opened” is the verb of the present perfect tense. We change it into passive by adding “been” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, “been” is the right form for present perfect tense. The verb “opened” stays in past participle form."
+            }
+          ],
+          _5_: [
+            {
+              text: "is been visited",
+              correct: false,
+              feedback: "No, that's not correct. “Was visiting” is the verb in the present continuous tense. We change it into passive by adding “being” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, “being” is the right form for present continuous tense. We should choose the past participle of “visit” to create the third part of a passive voice construction - past participle of a transitive verb."
+            },
+            {
+              text: "was being visited",
+              correct: true,
+              feedback: "That's correct. “Was visiting” is the verb in the present continuous tense. We change it into passive by adding “being” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, “being” is the right form for present continuous tense. We should choose the past participle of “visit” to create the third part of a passive voice construction - past participle of a transitive verb."
+            }
+          ],
+          _6_: [
+            {
+              text: "is served",
+              correct: false,
+              feedback: "No, that's not correct. “Serve” is the verb of the present simple tense. We change it into passive by adding “am/is/are” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “are” because it is the right plural form for present simple tense in this case. Also we choose the past participle of “serve” to create the third part of a passive voice construction - past participle of a transitive verb."
+            },
+            {
+              text: "are served",
+              correct: true,
+              feedback: "That's correct. “Serve” is the verb of the present simple tense. We change it into passive by adding “am/is/are” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “are” because it is the right plural form for present simple tense in this case. Also we choose the past participle of “serve” to create the third part of a passive voice construction - past participle of a transitive verb."
+            }
+          ],
+          _7_: [
+            {
+              text: "are hand-finished",
+              correct: true,
+              feedback: "That's correct. “Hand-finish” is the verb of the present simple tense. We change it into passive by adding “am/is/are” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “are” because it is the right plural form for present simple tense in this case. Also we choose the past participle of “hand-finish” to create the third part of a passive voice construction - past participle of a transitive verb."
+            },
+            {
+              text: "was hand-finished",
+              correct: false,
+              feedback: "No, that's not correct. “Hand-finish” is the verb of the present simple tense. We change it into passive by adding “am/is/are” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “are” because it is the right plural form for present simple tense in this case. Also we choose the past participle of “hand-finish” to create the third part of a passive voice construction - past participle of a transitive verb."
+            }
+          ],
+          _8_: [
+            {
+              text: "is putted on",
+              correct: false,
+              feedback: "No, that's not correct. “put on” is the verb of the present simple tense combined with the preposition “on”. We change it into passive by adding “am/is/are” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “is” because it is the right singular form for present simple tense in this case. Also we choose the past participle of “put” to create the third part of a passive voice construction - past participle of a transitive verb. Finaly, we put the preposition “on” to create the forth part of a passive voice construction - optional prepositional phrase."
+            },
+            {
+              text: "is put on",
+              correct: true,
+              feedback: "That's correct. “put on” is the verb of the present simple tense combined with the preposition “on”. We change it into passive by adding “am/is/are” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “is” because it is the right singular form for present simple tense in this case. Also we choose the past participle of “put” to create the third part of a passive voice construction - past participle of a transitive verb. Finaly, we put the preposition “on” to create the forth part of a passive voice construction - optional prepositional phrase."
+            }
+          ],
+          _9_: [
+            {
+              text: "is fall",
+              correct: false,
+              feedback: "No, that's not correct. “feel” is the verb of the present simple tense. We change it into passive by adding “am/is/are” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “is” because it is the right singular form for present simple tense in this case. Also we choose the past participle of “feel” to create the third part of a passive voice construction - past participle of a transitive verb."
+            },
+            {
+              text: "is felt",
+              correct: true,
+              feedback: "That's correct. “feel” is the verb of the present simple tense. We change it into passive by adding “am/is/are” because it is needed to create the correct second part of a passive voice construction – form of the verb “to be”. So, we choose “is” because it is the right singular form for present simple tense in this case. Also we choose the past participle of “feel” to create the third part of a passive voice construction - past participle of a transitive verb."
+            }
+          ]
+        }
+      },
       {
         // Type 3, task 1
         name: "Vocabulary",
