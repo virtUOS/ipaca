@@ -1,0 +1,65 @@
+                            {
+  name: "What to Eat, See, Drink, and Buy in Milan, Italy",  // the name that's also shown to the users
+  id: "lesson-recommender-018",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Robin Gratz",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Recommender",
+  text: "<p>Milan is a <strong>bustling</strong>, working city that is home to roughly 1.5 million people. In the past decade, it has been transformed into a thoroughly modern place that lives proudly on its reputation for being a world leader in <strong>contemporary</strong> style, art, and design. There are presented frequent stores that can be found only in Milan.</p>\
+  <p>A Santa Lucia is a bustling yet comfortable restaurant which has been opened close to the Duomo with a <strong>no-nonsense</strong> menu, overlooked by the photos of 400 Italian celebrities who have dined there. Service is attentive, and the food is really, really good. Most of the customers are locals, plus a smattering of fashionistas and a few foreigners in the know.</p>\
+  <p>Blissfully <strong>untainted</strong> by the hand or eye of an interior designer, the century-old Bar Jamaica is in the heart of the chic Brera district. It was for decades a popular meeting place for the Milanese luminaries of art, journalism, and photography. Upstairs, a tiny bistro serves basic eats into the night. It may not be the <strong>creative</strong> hub it once was, but it’s still a great spot for a sharp shot of Milanese espresso or an aperitivo.</p>\
+  <p>Amidst all the big-brand designer boutiques on Via Monte Napoleone, Milan’s most famous fashion street, an exciting new arrival is Sease, the performance-wear brand set up by brothers Franco and Giacomo Loro Piana that fuses high-tech functional design and <strong>old-school</strong> fabrics. Inspired by surfing, sailing, and skiing, the label takes performance sportswear and kicks it up a notch or three. A current collab with maverick environmental-campaign group Sea Shepherd offers pieces made from recycled plastic gathered from the oceans.</p>\
+  <p>The founder of Massimo Alba is a veteran at producing luxurious, interesting clothes, many of which he <strong>hand-finishes</strong> with dyes to add depth. He is a champion of and passionate believer in slow fashion, and his mens- and womenswear is the sort of clothing that you put on once and feel as if you’ve owned it—and loved it—for years. A current hot ready-to-wear buy is the fine needlecord “Sloop” suit he created for Daniel Craig for the opening sequence of No Time to Die.</p>\
+  <p>Fondazione Prada is a <strong>multiuse</strong> gallery located in a century-old distillery to display and promote contemporary art is one of the city’s biggest recent developments. It also has a Wes Anderson–designed café bar inspired by midcentury Milan cafés.</p>\
+  <p>Triennale Milano, named after the Milan Triennial, is an exhibition of art and design that ran from 1933 to 1996 and again in 2016, this modern museum devoted to art, design, and architecture features a <strong>permanent</strong> collection of Italian industrial design, from the Fiat 500 to the Olivetti typewriter.</p>",
+  text_source: "What to Eat, See, Drink, and Buy in Milan, Italy",
+  text_licence: "CC BY 4.0",
+  text_url: "https://www.esquire.com/lifestyle/a41176548/milan-italy-guide/",
+  tutor_mode: "S", // S = smart, N (or empty) = normal
+    tasks: [  // the list of tasks for this lesson
+      {
+        // Type 1, task 1
+        name: "Reading",
+        type: "R",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Read the text and sort the things each store is known for</p><p>\
+        Milan is a bustling, working city that is home to roughly 1.5 million people. In the past decade, it has been transformed into a thoroughly modern place that lives proudly on its reputation for being a world leader in contemporary style, art, and design. There are presented frequent stores that can be found only in Milan. <br>\
+        1. <strong>A Santa Lucia</strong> is a bustling yet comfortable restaurant which has been opened close to the Duomo with a no-nonsense menu, overlooked by the photos of 400 Italian celebrities who have dined there. Service is attentive, and the food is really, really good. Most of the customers are locals, plus a smattering of fashionistas and a few foreigners in the know. <br>\
+        2. Blissfully untainted by the hand or eye of an interior designer, the century-old <strong>Bar Jamaica</strong> is in the heart of the chic Brera district. It was for decades a popular meeting place for the Milanese luminaries of art, journalism, and photography. Upstairs, a tiny bistro serves basic eats into the night. It may not be the creative hub it once was, but it’s still a great spot for a sharp shot of Milanese espresso or an aperitivo. <br>\
+        3. Amidst all the big-brand designer boutiques on Via Monte Napoleone, Milan’s most famous fashion street, an exciting new arrival is <strong>Sease</strong>, the performance-wear brand set up by brothers Franco and Giacomo Loro Piana that fuses high-tech functional design and old-school fabrics. Inspired by surfing, sailing, and skiing, the label takes performance sportswear and kicks it up a notch or three. A current collab with maverick environmental-campaign group Sea Shepherd offers pieces made from recycled plastic gathered from the oceans. <br>\
+        4. The founder of <strong>Massimo Alba</strong> is a veteran at producing luxurious, interesting clothes, many of which he hand-finishes with dyes to add depth. He is a champion of and passionate believer in slow fashion, and his mens- and womenswear is the sort of clothing that you put on once and feel as if you’ve owned it—and loved it—for years. A current hot ready-to-wear buy is the fine needlecord “Sloop” suit he created for Daniel Craig for the opening sequence of No Time to Die. <br>\
+        5. <strong>Fondazione Prada</strong> is a multiuse gallery located in a century-old distillery to display and promote contemporary art is one of the city’s biggest recent developments. It also has a Wes Anderson–designed café bar inspired by midcentury Milan cafés. <br>\
+        6. <strong>Triennale Milano</strong>, named after the Milan Triennial, is an exhibition of art and design that ran from 1933 to 1996 and again in 2016, this modern museum devoted to art, design, and architecture features a permanent collection of Italian industrial design, from the Fiat 500 to the Olivetti typewriter. </p>",
+        paragraphs: [
+          "many famous people that have dined at this place.",
+          "its century-old history and the opportunity to have a snack at night.",
+          "ecological and extraordinarily made product.",
+          "timeless and special clothing.",
+          "popularizing modern art and located in an unusual place.",
+          "collection and was restored twenty years later."
+        ]
+      },
+
+      {
+        // Type 3, task 1
+        name: "Vocabulary",
+        type: "V",
+        interaction: "SORTPAR",
+        primary: false,
+        show_lesson_text: true,
+        question: "<p>Match the phrases with their synonyms.:</p><p>\
+        1. bustling <br>\
+        2. contemporary <br>\
+        3. no-nonsense <br>\
+        4. untainted <br>\
+        5. creative <br>\
+        6. old-school <br>\
+        7. hand-finish <br>\
+        8. multiuse <br>\
+        9. permanent</p>",
+        paragraphs: ["hectic","cutting-edge","stern","unblemished","imaginative","time-honored","decorate by hand","versatile","perpetual"],
+      }
+    ] // end of tasks
+
+} // end of lesson
