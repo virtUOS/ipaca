@@ -106,7 +106,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> He died at the age of 40 under _1_ circumstances.</p>",
+        question: "<p> Fill in the gaps with the correct form: He died at the age of 40 under _1_ circumstances.</p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -123,7 +123,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> Edgar Allan Poe was _1_ abandoned by both parents before the age of four.</p>",
+        question: "<p> Fill in the gaps with the correct form: Edgar Allan Poe was _1_ abandoned by both parents before the age of four.</p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -140,7 +140,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> The Allans raised Poe as their own, though he was never _1_ adopted by the couple. </p>",
+        question: "<p> Fill in the gaps with the correct form: The Allans raised Poe as their own, though he was never _1_ adopted by the couple. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -157,7 +157,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> Poe took to poetry at a young age, which often caused a clash between himself and his _1_ father. </p>",
+        question: "<p> Fill in the gaps with the correct form: Poe took to poetry at a young age, which often caused a clash between himself and his _1_ father. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -174,7 +174,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> It was while in the Army that Poe _1_ published his first collection,Tamerlane and Other Poems. </p>",
+        question: "<p> Fill in the gaps with the correct form: It was while in the Army that Poe _1_ published his first collection,Tamerlane and Other Poems. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -191,7 +191,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> After winning a short story contest, Poe’s writing career picked up and he went on to publish more short stories in _1_ journals and magazines. </p>",
+        question: "<p> Fill in the gaps with the correct form: After winning a short story contest, Poe’s writing career picked up and he went on to publish more short stories in _1_ journals and magazines. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [

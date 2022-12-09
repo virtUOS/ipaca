@@ -105,7 +105,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p>  Music is an auditory or aural art form that can be represented _1_ (visual) with notation.</p>",
+        question: "<p> Fill in the correct adjective or adverb derived from the word in brackets: Music is an auditory or aural art form that can be represented _1_ (visual) with notation.</p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -125,7 +125,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> It can be a challenging task—a direct word-for-word translation isn’t always _1_ (possibility) or useful, so a translator needs to think about how best to communicate to the reader. </p>",
+        question: "<p> Fill in the correct adjective or adverb derived from the word in brackets: It can be a challenging task—a direct word-for-word translation isn’t always _1_ (possibility) or useful, so a translator needs to think about how best to communicate to the reader. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -145,7 +145,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> _1_ (Similar), writing down sounds involves making decisions about what needs To be communicated and how. </p>",
+        question: "<p> Fill in the correct adjective or adverb derived from the word in brackets:  _1_ (Similar), writing down sounds involves making decisions about what needs To be communicated and how. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -163,7 +163,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> No system of notation could capture every aspect of sound in full detail and still be _1_ (use) or readable, so only some musical elements can be depicted. </p>",
+        question: "<p> Fill in the correct adjective or adverb derived from the word in brackets:  No system of notation could capture every aspect of sound in full detail and still be _1_ (use) or readable, so only some musical elements can be depicted. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -183,7 +183,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> Despite this, there are several advantages to _1_ (write) musical notation. </p>",
+        question: "<p> Fill in the correct adjective or adverb derived from the word in brackets: Despite this, there are several advantages to _1_ (write) musical notation. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -201,7 +201,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> _1_ (Additional) written notation makes musical works accessible to more people, since anyone who knows the notation system can learn a notated work on their own without the help of a teacher. </p>",
+        question: "<p> Fill in the correct adjective or adverb derived from the word in brackets: _1_ (Additional) written notation makes musical works accessible to more people, since anyone who knows the notation system can learn a notated work on their own without the help of a teacher. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [
@@ -221,7 +221,7 @@
         interaction: "GAP",
         primary: true,
         show_lesson_text: true,
-        question: "<p> Imagine inventing a way to write down a favorite song or _1_ (music) work so that a musician could perform it without ever having heard it before. </p>",
+        question: "<p> Fill in the correct adjective or adverb derived from the word in brackets: Imagine inventing a way to write down a favorite song or _1_ (music) work so that a musician could perform it without ever having heard it before. </p>",
         gaps: {
           mode: 'fillin',
           _1_: [

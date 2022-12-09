@@ -38,7 +38,7 @@
             {% if part.solution and part.solution != '---' %}
                 {% for o in part.options %}
                     {% if o.text == part.solution %}
-                        <span class="feedbackbox"><i>{% if part.solved %}✓{% else %}✗{% endif %} {{ o.feedback }}</i></span>
+                        <span class="feedbackbox"><i>{% if part.solved %}✓{% else %}✗{% endif %} {{ o.feedback|safe}}</i></span>
                     {% endif %}
                 {% endfor %}
             {% endif %}
