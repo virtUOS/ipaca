@@ -342,8 +342,7 @@ class ShortTask():
         print(enough_words_used)
 
         
-         
-       #error_feedback = "You had " + errortypes['spelling'] +" spelling errors and " + errortypes['grammar'] +" gramar errors."
+
         if sum(errortypes.values()) == 0 :
             success_feedback = "Congratulations! There was no mistake."
             context['success_feedback'] = success_feedback
@@ -354,8 +353,7 @@ class ShortTask():
             context['correct'] = correct
         
         else:  
-            #underlined_word = "\u0332".join(word + " ")
-            #feedback = "You had an error"
+           
             analysis['solved'] = False
             context['mode'] = "result" 
             context['user_answer'] = user_answer
@@ -365,10 +363,6 @@ class ShortTask():
             correct = False
             analysis['correct'] = correct
             context['correct'] = correct
-
-
-
-        #context['feedback'] = feedback # display to try again 
 
         return (analysis, context)
 
