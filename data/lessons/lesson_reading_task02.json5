@@ -3,7 +3,7 @@
   name: "Reading Group 6.2 Task 02",  // the name that's also shown to the users
   id: "lesson-slot-016",        // an internal id, will never be shown, but important to identify the lesson
   series: 'Academic English',
-  author: "Pauli",    // used for documentation, will not be shown to the user
+  author: "Pauline Beeck, Lena Brueggemann, Emilly Sidaine",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
   text: "<p><strong>Negative environmental impacts of tourism and ways to reduce them</strong></p>\
          <p>People have been travelling around the world throughout all of their history. Tourism and travelling have always\
