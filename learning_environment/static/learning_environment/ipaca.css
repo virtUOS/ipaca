@@ -107,7 +107,6 @@ body {
     align-items: center;
 }
 
-/* Boostrap Buttons Styling */
 .btn-start {
     color: #fff;
     padding: 16px 50px;
@@ -136,19 +135,6 @@ body {
     background: #1C009C;
 }
 
-.continue-btn {
-    font-size: 18px;
-    color: #000000;
-    border: 1px solid #000000;
-    padding: 16px 30px;
-    margin: 20px;
-    background: rgba(255, 255, 255, 0.01);
-}
-
-.continue-btn:hover {
-    background: #ef7e4b;
-    color:#FFFFFF;
-}
 
 .btn-login {
     font-size: 18px;
@@ -330,9 +316,8 @@ textarea {
   padding:10px;
   display:flex;
   align-items:center;
-
-         background: #393939;
-    border-radius: 15px;
+  background: #393939;
+  border-radius: 15px;
 }
 
 .date-card .day{
