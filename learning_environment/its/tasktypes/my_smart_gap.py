@@ -107,6 +107,9 @@ class GapTask():
 
 
     def adj_to_rule(grammar_error_adj):
+        """
+        determines which rule belongs to the adjective
+        """
         feedback_rule = 'no feedback rule was chosen'
 
 
@@ -171,6 +174,10 @@ class GapTask():
         return feedback_rule
 
     def analyze_solution(self, solution):
+        
+        """
+        corrects the user-answer provides feedback to the mistakes which have been made
+        """
         analysis = {'solved': True, 'solution': {}}
         context = {'mode': 'result'}
        
@@ -310,18 +317,6 @@ class GapTask():
         
 
 
-        """
-        if sol != '---':
-            for o in self.task.content[i]['options']:
-                o['text'] = right_answer
-                if o['text'] == sol and o['correct']:
-                    gap_solved = True
-                    break
-        self.task.content[i]['solved'] = gap_solved  # TODO: Find a proper solution, this is monkey patching...
-        self.task.content[i]['solution'] = sol  # TODO: Find a proper solution, this is monkey patching...
-        if not gap_solved:
-            analysis['solved'] = False
-        """
         return (analysis, context)
 
 
