@@ -6,6 +6,8 @@ from learning_environment.its.tasks import TaskTypeFactory
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 import json5
+import random
+from django_gamification.models import BadgeDefinition, Category
 
 
 class User(AbstractUser):
@@ -19,12 +21,20 @@ class Profile(models.Model):
     """A profile extends the djanog user class with additional fields, like a nickname"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     nickname = models.CharField(default="Llama", max_length=64)
+    gamification_active = models.BooleanField(default=False)
+    gamification_level = models.IntegerField(default=1)
+    total_XP = models.IntegerField(default=0)
+    streak_counter = models.IntegerField(default=1)
+    # badges = models.ForeignKey(Badge, on_delete=models.CASCADE) # make this a list?
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     """Automatically create a profile if a user is created"""
+    # randomly assign whether gamification is active or not
     if created:
-        Profile.objects.create(user=instance)
+        Profile.objects.create(user=instance,
+                               gamification_active=bool(random.randint(0, 1)))
+
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
@@ -40,7 +50,6 @@ class ProfileSeriesLevel(models.Model):
 
     class Meta:
         unique_together = ('user', 'series')  # ensure there's only one level per user per series
-
 
 
 class Lesson(models.Model):

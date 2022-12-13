@@ -180,13 +180,18 @@ class LessonCreateView(FormView):
 
 def learner_dashboard(request):
     """Prepare data for learner's own dashboard and show it."""
+    # NOT WORKING YET
+    player_level = Profile.gamification_level
+    current_XP = Profile.total_XP
+    daily_streak = Profile.streak_counter
     solutions = Solution.objects.filter(user=request.user).order_by('timestamp')  # all solutions from current user
-    num_tasks = solutions.count()  # how tasks did this user try
+    num_tasks = solutions.count()  # how many tasks did this user try
     correct_solutions = Solution.objects.filter(user=request.user, solved=True).count()  # how many of them were correct?
     if num_tasks > 0:  # calculate percentage of correct tasks (or 0 if no tasks)
         tasks_correctness = correct_solutions / num_tasks * 100.0
     else:
         tasks_correctness = 0.0
+
     return render(request, 'learning_environment/learner_dashboard.html', locals())  # pass all local variable to template
 
 def global_dashboard(request):
