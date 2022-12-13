@@ -69,6 +69,8 @@ class Lesson(models.Model):
     text_source = models.CharField(max_length=1024, null=True)
     text_licence = models.CharField(max_length=1024, null=True)
     text_url = models.URLField(null=True)
+    start = models.TextField(null=True)  # text to be displayed before the lesson starts
+    wrapup = models.TextField(null=True)  # text to be displyed after the lesson has been finished
     json5 = models.TextField(null=True)
 
     @classmethod
@@ -91,7 +93,7 @@ class Lesson(models.Model):
                 raise Json5ParseException('Field "{}" is empty'.format(lesson_field))
 
         # Optional fields must not be empty
-        for lesson_field in ["series"]:
+        for lesson_field in ['series', 'start', 'wrapup']:
             if lesson_field in lesson and not lesson[lesson_field]:
                 raise Json5ParseException('Field "{}" is empty'.format(lesson_field))
 
@@ -123,7 +125,12 @@ class Lesson(models.Model):
                      text_url=lesson["text_url"],
                      json5=lesson_json5)
         if 'series' in lesson:
-            lsn.series = lesson['series']
+            lsn.series = str(lesson['series'])
+        if 'start' in lesson:
+            lsn.start = str(lesson['start'])
+        if 'wrapup' in lesson:
+            lsn.wrapup = str(lesson['wrapup'])
+
         lsn.save()
 
 

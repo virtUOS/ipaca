@@ -57,7 +57,7 @@
         show_lesson_text: true,
         question: "Finish the sentence: ‘In statistics, you frequently deal with…..’",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          { text: "men and womean", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "men and women", correct: false, feedback: "No, that's incorrect. Read the text again." },
           { text: "average and proportion", correct: true, feedback: "Yes, this is the correct answer because the text says ‘Two words that come up often in statistics are average and proportion’." },
           { text: "schools and subjects", correct: false, feedback: "No, that's incorrect. Read the text again." },
           { text: "head and tails", correct: false, feedback: "No, that's incorrect. Read the text again." },

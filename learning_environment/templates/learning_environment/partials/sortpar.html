@@ -1,0 +1,28 @@
+{% load extras %}
+<p class="card-text">{{ task.question|safe }}</p>
+
+{% if mode == 'solve' %}
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="task" value="{{ task.id }}">
+        <input type="hidden" name="solution" id="solution" value="">
+        <ul id="sortlist">
+            {% for o in task.content.paragraphs|shuffle %}
+            <li data-paragraph-id="{{o.id}}">{{o.paragraph}}</li>
+            {% endfor %}
+        </ul>
+        <div style="margin-top: 2em">
+            <button type="submit" class="btn btn-secondary">Check!</button>
+        </div>
+    </form>
+{% else %}  {# show solution #}
+    <ul class="slist">
+        {% for o in solution %}
+            {% for p in task.content.paragraphs %}
+                {% if p.id == o %}  
+                    <li style="cursor:default">{{ p.paragraph }}</li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+{% endif %}

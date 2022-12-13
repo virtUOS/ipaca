@@ -6,8 +6,10 @@ from django.http import HttpResponseBadRequest, HttpResponseServerError
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormView
+from django.views.generic import View
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import *
 from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
@@ -70,9 +72,12 @@ def practice(request):
         analysis, learnermodel_context = learnermodel.update(task, request.POST)
         context.update(learnermodel_context)
         if analysis.get('solved', False):  # we solved a task, so we remove its type from the session todo list
-            request.session['current_lesson_todo'].pop(0)
+            context['solved'] = True
+            if 'current_lesson_todo' in request.session and len(request.session['current_lesson_todo']) > 0:
+                request.session['current_lesson_todo'].pop(0)
             request.session.modified = True
-
+        else:
+            context['solved'] = False
         lesson = task.lesson
         context['state'] = context['mode']
     elif 'redo' in request.GET:  # show a task again
@@ -163,7 +168,8 @@ class LessonDetailView(DetailView):
     """Show details for a single lesson (esp. JSON5)"""
     model = Lesson
 
-class LessonCreateView(FormView):
+
+class LessonCreateView(LoginRequiredMixin, FormView):
 
     def post(self, request):
         form = LessonCreationForm(request.POST)
@@ -174,9 +180,24 @@ class LessonCreateView(FormView):
         else:
             msg = form.errors
         return render(request, 'learning_environment/lesson_form.html', locals())
-    def get(self, reguest):
+    def get(self, request):
         form = LessonCreationForm()
-        return render(reguest, 'learning_environment/lesson_form.html', locals())
+        return render(request, 'learning_environment/lesson_form.html', locals())
+
+
+class LessonDeleteView(LoginRequiredMixin, View):
+
+    def get(self, request, pk):
+        try:
+            l = Lesson.objects.get(pk=pk)
+            name = l.lesson_id
+            l.delete()
+            messages.info(request, "Lesson {} successfully deleted.".format(name))
+        except Lesson.DoesNotExist:
+            messages.error(request, "Lesson {} not found.".format(pk))
+            pass
+        return redirect('tasklist')
+
 
 def learner_dashboard(request):
     """Prepare data for learner's own dashboard and show it."""
