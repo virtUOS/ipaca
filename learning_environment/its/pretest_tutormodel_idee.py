@@ -1,5 +1,6 @@
 """
-ipaca Tutor Model for adaptive pretest
+One attempt at a tutormodel for the adaptive pretest
+This one is essentially pseudocode and is one of the earliest versions.
 """
 
 import random

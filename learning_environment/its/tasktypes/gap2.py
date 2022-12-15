@@ -1,3 +1,7 @@
+"""
+A modification of the default gap task which accepts filling of multiple gaps.
+"""
+
 from learning_environment.its.base import Json5ParseException
 import re
 

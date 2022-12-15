@@ -1,0 +1,30 @@
+"""
+This is just pseudocode for the functionality of the pretest feature.
+"""
+   
+first_testlet = "testlet-grammar-medium-01" / "testlet-vocabulary-medium-01" 
+ability = 0 (medium)
+ability_update = 0
+
+item_response = guessing + ((1 - guessing) * np.exp(discrimination * (ability - difficulty)) 
+                                            / (1 + np.exp(discrimination *(ability - difficulty))))
+
+item_information = derivative(item_response)
+
+for 2 panels (grammar/ vocabulary):
+    for 2 following stages:
+        while user completes testlet (execution in views.py)
+            ability_update = + (1/3) for each correct task
+            ability_update = - (1/3) for each incorrect task
+
+        ability = ability + ability_update
+        
+        for all testlets of next stage (example: easy 1, medium 2, hard 1 in first stage ):
+            calculate item_information
+            add to dictionary (testlet : item_information)
+
+        next testlet = testlet with max(item_information) from dictionary
+        ability_update = 0
+
+show myhome_pretest_results HTML with estimations for ability grammar and vocabulary
+save ability estimation as user level
