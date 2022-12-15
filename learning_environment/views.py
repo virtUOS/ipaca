@@ -1,17 +1,29 @@
-from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.messages.views import SuccessMessageMixin
+from django.http import HttpResponseBadRequest, HttpResponseServerError
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
-from django.http import HttpResponseBadRequest, HttpResponseServerError
-from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormView
-from django.contrib import messages
-from django.contrib.messages.views import SuccessMessageMixin
+from django.views.generic.list import ListView
+
 from .forms import *
-from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
-from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
+from .its.tutormodel import Tutormodel, NoTaskAvailableError
+from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
+import plotly.graph_objects as go
+from django.db.models import Sum,Count
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
+import plotly.graph_objects as px
+import numpy as np
+import matplotlib.pyplot as plt
+import tkinter
+import matplotlib
+from matplotlib.pyplot import figure
+import mpld3
 
 
 class SignUpView(SuccessMessageMixin, generic.CreateView):
@@ -187,7 +199,126 @@ def learner_dashboard(request):
         tasks_correctness = correct_solutions / num_tasks * 100.0
     else:
         tasks_correctness = 0.0
+
     return render(request, 'learning_environment/learner_dashboard.html', locals())  # pass all local variable to template
+
+def solutions_chart(request):
+    """Prepare data for learner's own dashboard and show it."""
+    correct_solutions = Solution.objects.filter(user=request.user,solved=True).count()  # how many of them were correct?
+    wrong_solutions = Solution.objects.filter(user=request.user, solved=False).count()
+    fig = go.Figure(
+        data=[go.Bar(x=["correct solutions", "wrong solutions"], y=[correct_solutions, wrong_solutions])],
+        layout_title_text= str(request.user) + " Total correct/wrong solutions",
+
+    )
+    fig.show()
+
+    return render(request, 'learning_environment/learner_dashboard.html', locals())  # pass all local variable to template
+
+def progress_chart(request):
+    """Prepare data for learner's own dashboard and show it."""
+    progress = []
+    tasks = []
+    correct_counter = 0
+    tasks_counter = 0
+    solutions = Solution.objects.filter(user=request.user).order_by('timestamp')
+    for sol in solutions:
+        temp = 0.0
+        tasks_counter +=1
+        if sol.solved==True:
+            correct_counter +=1
+        temp = correct_counter/tasks_counter * 100.0
+        progress.append(temp)
+        tasks.append(tasks_counter)
+
+    fig = go.Figure(go.Scatter(
+        x=tasks,
+        y=progress,
+       ),
+        layout_title_text=str(request.user) + " Progress Chart")
+
+    fig.update_layout(
+        xaxis=dict(
+            tickmode='linear',
+            tick0=1,
+            dtick=1
+        )
+    )
+
+    fig.show()
+
+    return render(request, 'learning_environment/learner_dashboard.html', locals())  # pass all local variable to template
+
+def questions_chart(request):
+    """Prepare data for learner's own dashboard and show it."""
+    all_questions = Solution.objects.values('task_id').annotate(Count('task_id'))
+    print("all questions: "+str(all_questions))
+    correct_questions = Solution.objects.values('task_id').filter(solved=True).annotate(Count('solved'))
+    print("correct_questions: "+str(correct_questions))
+    wrong_questions = Solution.objects.values('task_id').filter(solved=False).annotate(Count('solved'))
+    print("wrong_questions: " + str(wrong_questions))
+
+
+    correct=[]
+    wrong=[]
+    all=[]
+
+    for a in all_questions:
+        task_id = a.get('task_id')
+        print("task_id: " + str(task_id))
+        all.append(task_id)
+        exists_correct_questions = False;
+        exists_wrong_questions = False;
+
+        for c in correct_questions:
+            if c.get('task_id') == task_id:
+                correct_count = c.get('solved__count')
+                print(str(task_id)+" correct_count: " + str(correct_count))
+                correct.append(correct_count)
+                exists_correct_questions = True;
+                print(" exists_correct_questions: " + str(exists_correct_questions))
+        if exists_correct_questions is False:
+            correct.append(0)
+            print("NOT exists_correct_questions: " + str(exists_correct_questions))
+
+        for r in wrong_questions:
+            if r.get('task_id') == task_id:
+                wrong_count = r.get('solved__count')
+                print(str(task_id)+" wrong_count: " + str(wrong_count))
+                wrong.append(wrong_count)
+                exists_wrong_questions = True;
+                print(" exists_wrong_questions: " + str(exists_wrong_questions))
+        if exists_wrong_questions is False:
+            wrong.append(0)
+            print("NOT exists_wrong_questions: " + str(exists_wrong_questions))
+
+    print("all: "+str(all))
+    print("correct_count: "+str(correct))
+    print("wrong_count: "+str(wrong))
+
+    fig = go.Figure(data=[go.Bar(
+        name = 'Correct Solutions',
+        x = all,
+        y = correct
+    ),
+    go.Bar(
+        name = 'Wrong Solutions',
+        x = all,
+        y = wrong
+   )
+    ],
+        layout_title_text="Solutions Analysis Chart"
+    )
+
+    fig.update_layout(barmode='stack', xaxis=dict(
+            tick0=1,
+            dtick=1))
+    fig.show()
+
+    return render(request, 'learning_environment/learner_dashboard.html', locals())  # pass all local variable to template
+
+def users_activity(request):
+    return render(request, 'learning_environment/learner_dashboard.html', locals())
 
 def global_dashboard(request):
     solutions = Solution.objects.all().order_by('timestamp')  # all solutions

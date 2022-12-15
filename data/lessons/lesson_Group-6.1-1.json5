@@ -107,7 +107,7 @@
         show_lesson_text: true,
         question: "<p> Fill in the correct adjective or adverb derived from the word in brackets: Music is an auditory or aural art form that can be represented _1_ (visual) with notation.</p>",
         gaps: {
-          mode: 'fillin',
+          mode: "fillin",
           _1_: [
               { text: "visually", correct: true, feedback: "We use an adverb, not an adjective to say how something happened or was done. Some adverbs are formed from an adjective + -ly: (happy- happily). \
                                                  There is an end position of an adverb – after a verb. Martin Hewings, Advanced Grammar in Use, Cambridge University Press \
@@ -127,7 +127,7 @@
         show_lesson_text: true,
         question: "<p> Fill in the correct adjective or adverb derived from the word in brackets: It can be a challenging task—a direct word-for-word translation isn’t always _1_ (possibility) or useful, so a translator needs to think about how best to communicate to the reader. </p>",
         gaps: {
-          mode: 'fillin',
+          mode: "fillin",
           _1_: [
               { text: "possible", correct: true, feedback: "Adjectives usually tell what kind, how many or which about nouns. Here we use an adjective to describe a noun “translation”. \
                                                  Many adjectives can be put following linking verbs such as appear, be, become, feel, get and seem.  Some adjectives are formed from verbs or nouns by adding prefixes or suffixes. (possibility – possible)\
@@ -147,7 +147,7 @@
         show_lesson_text: true,
         question: "<p> Fill in the correct adjective or adverb derived from the word in brackets:  _1_ (Similar), writing down sounds involves making decisions about what needs To be communicated and how. </p>",
         gaps: {
-          mode: 'fillin',
+          mode: "fillin",
           _1_: [
               { text: "similarly", correct: true, feedback: "In this case an adverb is formed from an adjective with the ending -ly. Most types of adverbs can go in the front position to make immediately clear and logical relation to the previous sentence.\
                                                   Martin Hewings, Advanced Grammar in Use, Cambridge University Press https://thebookssite.files.wordpress.com/2015/11/martin-hewings-advanced-grammar-in-use-cambridge-university-press-1999.pdf"},
@@ -165,7 +165,7 @@
         show_lesson_text: true,
         question: "<p> Fill in the correct adjective or adverb derived from the word in brackets:  No system of notation could capture every aspect of sound in full detail and still be _1_ (use) or readable, so only some musical elements can be depicted. </p>",
         gaps: {
-          mode: 'fillin',
+          mode: "fillin",
           _1_: [
               { text: "useful", correct: true, feedback: "Adjectives usually tell what kind, how many or which about nouns. Here we use an adjective to describe a noun “system of notation”. \
                                                Many adjectives can be put following linking verbs such as appear, be, become, feel, get and seem. Some adjectives are formed from verbs or nouns by adding prefixes or suffixes (use – useful) \
@@ -185,7 +185,7 @@
         show_lesson_text: true,
         question: "<p> Fill in the correct adjective or adverb derived from the word in brackets: Despite this, there are several advantages to _1_ (write) musical notation. </p>",
         gaps: {
-          mode: 'fillin',
+          mode: "fillin",
           _1_: [
               { text: "written", correct: true, feedback: "Some past participles of verbs can be used as adjectives. Most of these participle adjectives can be used before the noun they describe or following linking verbs. (broke – broken) \
                                                 Martin Hewings, Advanced Grammar in Use, Cambridge University Press https://thebookssite.files.wordpress.com/2015/11/martin-hewings-advanced-grammar-in-use-cambridge-university-press-1999.pdf"},
@@ -203,7 +203,7 @@
         show_lesson_text: true,
         question: "<p> Fill in the correct adjective or adverb derived from the word in brackets: _1_ (Additional) written notation makes musical works accessible to more people, since anyone who knows the notation system can learn a notated work on their own without the help of a teacher. </p>",
         gaps: {
-          mode: 'fillin',
+          mode: "fillin",
           _1_: [
               { text: "additionally", correct: true, feedback: "In this case the adverb is made from an adjective by adding -ly. Most types of adverbs can go in the front position to make immediately clear and logical relation to the previous sentence. \
                                                      To show that the adverbs apply to the whole sentence, we usually separate them from the rest of the sentence by a comma.\
@@ -223,7 +223,7 @@
         show_lesson_text: true,
         question: "<p> Fill in the correct adjective or adverb derived from the word in brackets: Imagine inventing a way to write down a favorite song or _1_ (music) work so that a musician could perform it without ever having heard it before. </p>",
         gaps: {
-          mode: 'fillin',
+          mode: "fillin",
           _1_: [
               { text: "musical", correct: true, feedback: "Many adjectives describe nouns before which they used. We can form adjectives from nouns by adding suffixes to a noun. Some of them are formed by adding the suffix -al (nature- natural).\
                                                 Martin Hewings, Advanced Grammar in Use, Cambridge University Press https://thebookssite.files.wordpress.com/2015/11/martin-hewings-advanced-grammar-in-use-cambridge-university-press-1999.pdf"},
