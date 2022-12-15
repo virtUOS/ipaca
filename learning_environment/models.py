@@ -18,13 +18,14 @@ class User(AbstractUser):
 
 
 class Profile(models.Model):
-    """A profile extends the djanog user class with additional fields, like a nickname"""
+    """A profile extends the django user class with additional fields, like a nickname"""
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     nickname = models.CharField(default="Llama", max_length=64)
     gamification_active = models.BooleanField(default=False)
     gamification_level = models.IntegerField(default=1)
     total_XP = models.IntegerField(default=0)
     streak_counter = models.IntegerField(default=1)
+    last_active = models.DateField(null=True)
     # badges = models.ForeignKey(Badge, on_delete=models.CASCADE) # make this a list?
 
 @receiver(post_save, sender=User)

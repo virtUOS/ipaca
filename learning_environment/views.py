@@ -201,10 +201,9 @@ class LessonDeleteView(LoginRequiredMixin, View):
 
 def learner_dashboard(request):
     """Prepare data for learner's own dashboard and show it."""
-    # NOT WORKING YET
-    player_level = Profile.gamification_level
-    current_XP = Profile.total_XP
-    daily_streak = Profile.streak_counter
+    player_level = request.user.profile.gamification_level
+    current_XP = request.user.profile.total_XP
+    daily_streak = request.user.profile.streak_counter
     solutions = Solution.objects.filter(user=request.user).order_by('timestamp')  # all solutions from current user
     num_tasks = solutions.count()  # how many tasks did this user try
     correct_solutions = Solution.objects.filter(user=request.user, solved=True).count()  # how many of them were correct?

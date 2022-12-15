@@ -10,16 +10,15 @@ from django_gamification.models import BadgeDefinition, Category
 
 # indicate how many XP are needed for which level up
 LEVEL_XP = {
-    '1': 0,
-    '2': 20,
-    '3': 40,
-    '4': 70,
-    '5': 100,
-    '6': 140,
-    '7': 180,
-    '8': 230,
-    '9': 280,
-    '10': 350,
+    '1': 20,
+    '2': 40,
+    '3': 70,
+    '4': 100,
+    '5': 140,
+    '6': 180,
+    '7': 230,
+    '8': 280,
+    '9': 350,
 }
 
 class Learnermodel:
@@ -41,35 +40,39 @@ class Learnermodel:
 
         analyzer = TaskTypeFactory.getObject(task)
         (analysis, context) = analyzer.analyze_solution(solution)
+        # add global variable LEVEL_XP
+        global LEVEL_XP
 
         # Save solution and analysis to database
         solution = Solution(user=self.learner, task=task, solved=analysis.get('solved', False), analysis=analysis)
         solution.save()
         
         # award XP for correct solutions, and a few XP for wrong solutions
-        # create message
         if analysis.get('solved', False):
-            # Update user XP
+            # award user XP
             currentUser = Profile.objects.get(user=self.learner)
             currentUser.total_XP += 10
-            # check if user has achieved enough XP for a level up
-            # NOT WORKING YET
-            try:
-                if currentUser.total_XP >= LEVEL_XP[currentUser.gamification_level] and currentUser.gamification_level < 10:
-                    currentUser.gamification_level += 1
-            except:
-                pass
+            # DAILY STREAK nach Aufgabe, HERE 
+            # last day genau einen Tag vor heute, if yes + daily streak und last day = heute
+            # last day IMMER auf heute, egal ob richtig oder falsch, streak + oder nicht 
+            # standard bib DATE TIME mit functions, time delta + django doc date field 
+
+            # check if user has enough XP to level up
+            if currentUser.gamification_level < 10 and currentUser.total_XP >= LEVEL_XP[str(currentUser.gamification_level)]:
+                # raise gamification level
+                currentUser.gamification_level += 1
+            # save current stats to user 
             currentUser.save()
             # Provide user feedback
             context['msg'] = "Congratulation! That's correct!"
         else:
             currentUser = Profile.objects.get(user=self.learner)
             currentUser.total_XP += 3
-            try:
-                if currentUser.total_XP >= LEVEL_XP[currentUser.gamification_level] and currentUser.gamification_level < 10:
-                    currentUser.gamification_level += 1
-            except:
-                pass
+            # check if user has enough XP to level up
+            if currentUser.gamification_level < 10 and currentUser.total_XP >= LEVEL_XP[str(currentUser.gamification_level)]:
+                # raise gamification level
+                currentUser.gamification_level += 1
+            # save current stats to user 
             currentUser.save()
             # provide user feedback
             context['msg'] = "Oh no, that's not correct."
