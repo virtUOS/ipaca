@@ -12,15 +12,6 @@ from happytransformer import HappyTextToText, TTSettings
 import spacy
 
 
-
-#TODO:
-# Fehler von Thelen für Präsi wegbekommen
-# kommentieren
-# code aufräumen
-# install dokument erstellen, vllt allg doku, requirements?
-# alle grammar errors ausgeben (auch wenn nicht adjektiv)
-
-
 # Definitions
 sp = spacy.load('en_core_web_sm')
 spell = SpellChecker()
@@ -75,6 +66,9 @@ class ShortTask():
 
 
     def adj_to_rule(grammar_error_adj):
+        """
+        determines which rule belongs to the adjective
+        """
         feedback_rule = "no rule chosen "
 
 
@@ -145,6 +139,9 @@ class ShortTask():
 
 
     def analyze_solution(self, solution):
+        """
+        corrects the user-answer provides feedback to the mistakes which have been made
+        """
         context = {}
         analysis = {}
 
@@ -345,8 +342,7 @@ class ShortTask():
         print(enough_words_used)
 
         
-         
-       #error_feedback = "You had " + errortypes['spelling'] +" spelling errors and " + errortypes['grammar'] +" gramar errors."
+
         if sum(errortypes.values()) == 0 :
             success_feedback = "Congratulations! There was no mistake."
             context['success_feedback'] = success_feedback
@@ -357,8 +353,7 @@ class ShortTask():
             context['correct'] = correct
         
         else:  
-            #underlined_word = "\u0332".join(word + " ")
-            #feedback = "You had an error"
+           
             analysis['solved'] = False
             context['mode'] = "result" 
             context['user_answer'] = user_answer
@@ -368,10 +363,6 @@ class ShortTask():
             correct = False
             analysis['correct'] = correct
             context['correct'] = correct
-
-
-
-        #context['feedback'] = feedback # display to try again 
 
         return (analysis, context)
 
