@@ -91,7 +91,13 @@ def practice(request, startlesson=None):
             return HttpResponseBadRequest("Error: No such ID")
         lesson = task.lesson
         context['state'] = context['mode']
+
     elif startlesson:
+        try:
+            lesson = Lesson.objects.get(pk=int(startlesson))
+        except KeyError:
+            return HttpResponseBadRequest("Error: No such Lesson")
+        context['state'] = context['mode']
 
     else:  # fetch new task and show it
 
