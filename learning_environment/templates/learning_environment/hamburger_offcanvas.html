@@ -1,0 +1,50 @@
+<div class="hamburger" style="background:transparent;">
+    <button class="" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+        <i class="bi bi-list" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+    </button>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" data-bs-keyboard="false" data-bs-backdrop="false" style="visibility: visible;" aria-modal="true" role="dialog">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body px-0">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="{% url 'myhome' %}" class="nav-item i-plain" aria-current="page">
+                        <i class="bi bi-house-door" style="font-size:22px;"></i>
+                    <span style="font-size:18px; color:black; vertical-align: middle; margin-left: 4px;"> My Home</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="i-plain" id='icon-book' data-bs-toggle="collapse" data-bs-target="#tasks-collapse" aria-expanded="false">
+                        <i class="bi-book" style="font-size:22px;"></i>
+                        <span style="font-size:18px; vertical-align: middle; color:black; margin-left: 4px;"> Lessons </span>
+                    </a>
+
+                    <div class="collapse" id="tasks-collapse" style="margin-left: 20px;">
+                        <div class="sub-item">
+                            <div><a href="{% url 'academic_series' %}" class="link-dark rounded">Academic</a></div>
+                            <div><a href="{% url 'general_series' %}" class="link-dark rounded">General</a></div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-item  i-plain" id='icon-trophy' data-bs-toggle="collapse" data-bs-target="#results-collapse" aria-expanded="false">
+                        <i class="bi bi-trophy" style="font-size:22px;"></i>
+                        <span style="font-size:18px; color: black; vertical-align: middle; margin-left: 4px;">Results</span>
+                    </a>
+
+                    <div class="collapse" id="results-collapse" style="margin-left: 20px;">
+                        <div class="sub-item">
+                            <div><a href="{% url 'learner_dashboard' %}" class="link-dark rounded">Personal</a></div>
+                            <div><a href="{% url 'global_dashboard' %}" class="link-dark rounded">Global</a></div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>

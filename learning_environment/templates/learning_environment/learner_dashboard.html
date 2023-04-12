@@ -2,24 +2,73 @@
 {% load bootstrap5 %}
 {% load static %}
 
-{% block content %}
-    <h1>Learner Dashboard</h1>
 
-    <p>You have worked on {{ num_tasks }} tasks so far.</p>
-    <p>Correctness: {{ tasks_correctness }} %</p>
-    <table class="table">
-        <tr><th>Timestamp</th>
-            <th>Task Name</th>
-            <th>Correct?</th>
-            <th>Analysis</th>
-        </tr>
-    {% for solution in solutions %}
-        <tr>
-            <td>{{ solution.timestamp }}</td>
-            <td>{{ solution.task.name }}</td>
-            <td>{{ solution.solved }}</td>
-            <td>{{ solution.analysis }}</td>
-        </tr>
-    {% endfor %}
-    </table>
+{% block content %}
+<div style="background-color:#f8f9fa;">
+
+         {% include "learning_environment/header.html" %}
+
+<div class="container-fluid" style="background: #F9F9FB;">
+    <div class="row">
+
+            {% include "learning_environment/nav.html" %}
+            {% include "learning_environment/hamburger_offcanvas.html" %}
+
+        <div class="col" style="margin-left: 18px; padding:0;">
+
+            {# Display Tasks #}
+
+
+            <div class="card" style="margin-top:10px; border-radius:15px; border: none;">
+
+                <div class="me-auto" style="padding:20px; font-weight: bold;">
+                    <p>You have worked on {{ num_tasks }} tasks so far.</p>
+                    <p>Correctness: {{ tasks_correctness }} %</p>
+                </div>
+
+                    <table class="table borderless">
+                        <tr><th>Timestamp</th>
+                            <th>Task Name</th>
+                            <th>Correct?</th>
+                            {# <th>Analysis</th> #}
+                        </tr>
+                    {% for solution in solutions %}
+                        <tr>
+                            <td>
+                                <div class="date-card">
+                                  <div class="day">{{ solution.timestamp.day}}</div>
+                                  <div>
+                                     <div class="month">{{ solution.timestamp.month}}</div>
+                                    <div class="year">{{ solution.timestamp.year}}</div>
+                                  </div>
+                                </div>
+                            </td>
+                            <td style="vertical-align: middle;">{{ solution.task.name }}</td>
+                            <td style="vertical-align: middle;">
+                                {% if solution.solved%}
+                                <i class="bi bi-check-circle-fill fa-2x" style="color:darkgreen;"></i>
+                                {% else %}
+                                <i class="bi bi-x-circle-fill fa-2x" style="color:darkred;"></i>
+                                {% endif %}
+                            </td>
+                       {#  <td style="text-align: center;vertical-align: middle;">{{ solution.analysis }}</td> #}
+                        </tr>
+                    {% endfor %}
+                    </table>
+            </div>
+        </div>
+</div>
+
+</div>
+
+
+
+
+ </div>
+    {% include "learning_environment/footer.html" %}
 {% endblock %}
+
+
+
+
+

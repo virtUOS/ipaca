@@ -23,12 +23,15 @@ class SignUpView(SuccessMessageMixin, generic.CreateView):
     success_message = "User was created successfully. You may now log in."
 
 @login_required
-def practice(request):
+def practice(request, startlesson=None):
     """Display a task for practicing."""
 
     context = {'mode': 'solve'}
 
     # start a lesson
+    if 'review' in request.GET:
+        context['review'] = True
+
     if request.method == 'POST' and 'start' in request.POST:
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             return redirect('myhome')
@@ -80,6 +83,7 @@ def practice(request):
             context['solved'] = False
         lesson = task.lesson
         context['state'] = context['mode']
+
     elif 'redo' in request.GET:  # show a task again
         try:
             task = Task.objects.get(pk=int(request.GET['redo']))
@@ -87,10 +91,21 @@ def practice(request):
             return HttpResponseBadRequest("Error: No such ID")
         lesson = task.lesson
         context['state'] = context['mode']
+    elif startlesson:
+
     else:  # fetch new task and show it
+
+        start_new_lesson = None
+        if 'lesson' in request.GET:  # explicitly start a specific lession by using the ?lesson=<id> parameter
+            try:
+                start_new_lesson = Lesson.objects.get(pk=int(request.GET['lesson']))
+            except KeyError:
+                return HttpResponseBadRequest("Error: No such Lesson")
+
         tutor = Tutormodel(request.user)
         try:
-            (state, lesson, task) = tutor.next_task(request)
+            # either continue with standard tutor model or explicitly start a specific lesson
+            (state, lesson, task) = tutor.next_task(request, start_new_lesson)
         except NoTaskAvailableError:
             return HttpResponseServerError("Error: No task available!")
         context['state'] = state
@@ -144,11 +159,34 @@ def myhome(request):
         series = 'General'
 
     # determine current level (and create if necessary)
-    psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series=series)
-    current_level = psl.level
+    # psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series=series)
+    # current_level = psl.level
 
     # pick all levels for chosen lesson series
-    levels = Lesson.objects.filter(series = series).order_by('lesson_id')
+    # levels = Lesson.objects.filter(series = series).order_by('lesson_id')
+    # levels = Lesson.objects.filter(series = series).order_by('lesson_id')
+
+
+    solutions = Solution.objects.filter(user=request.user).order_by('timestamp')  # all solutions from current user
+    num_tasks = solutions.count()  # how tasks did this user try
+    correct_solutions = Solution.objects.filter(user=request.user,
+                                                solved=True).count()  # how many of them were correct?
+    if num_tasks > 0:  # calculate percentage of correct tasks (or 0 if no tasks)
+        tasks_correctness = round(correct_solutions / num_tasks * 100.0, 2)
+    else:
+        tasks_correctness = 0.0
+
+    if Solution.objects.filter(user=request.user, solved=False).exists():
+        wrong_solutions = Solution.objects.filter(user=request.user, solved=False)
+        # get unique task id of wrong solutions
+        wrong_solutions_unique = [x['task'] for x in wrong_solutions.values('task').distinct()]
+        wrong_tasks = Task.objects.filter(id__in=wrong_solutions_unique)
+
+    else:
+        wrong_tasks = None
+    id_lessons = [s.task.lesson.lesson_id for s in solutions]
+
+    new_lessons = Lesson.objects.all().exclude(lesson_id__in=id_lessons).order_by('id')
 
     return render(request, 'learning_environment/myhome.html', locals())
 
@@ -199,13 +237,28 @@ class LessonDeleteView(LoginRequiredMixin, View):
         return redirect('tasklist')
 
 
+def academic_series(request):
+    psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series='Academic')
+    current_level = psl.level
+    lessons = Lesson.objects.filter(series='Academic English').order_by('lesson_id')
+    paginate_by = 25  # 25 entries max per page
+
+    return render(request, 'learning_environment/academic_series.html', locals())  # pass all local variable to template
+
+def general_series(request):
+    psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series='General')
+    current_level = psl.level
+    lessons = Lesson.objects.filter(series='General').order_by('lesson_id')
+    paginate_by = 25  # 25 entries max per page
+    return render(request, 'learning_environment/general_series.html', locals())  # pass all local variable to template
+
 def learner_dashboard(request):
     """Prepare data for learner's own dashboard and show it."""
     solutions = Solution.objects.filter(user=request.user).order_by('timestamp')  # all solutions from current user
     num_tasks = solutions.count()  # how tasks did this user try
     correct_solutions = Solution.objects.filter(user=request.user, solved=True).count()  # how many of them were correct?
     if num_tasks > 0:  # calculate percentage of correct tasks (or 0 if no tasks)
-        tasks_correctness = correct_solutions / num_tasks * 100.0
+        tasks_correctness = round(correct_solutions / num_tasks * 100.0,2)
     else:
         tasks_correctness = 0.0
     return render(request, 'learning_environment/learner_dashboard.html', locals())  # pass all local variable to template

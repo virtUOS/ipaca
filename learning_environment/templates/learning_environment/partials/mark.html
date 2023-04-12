@@ -1,30 +1,31 @@
-<p class="card-text"><b>{{ task.question }}</b></p>
+
+<p class="card-text" style="padding-right: 2rem;"><b>{{ task.question }}</b></p>
 {% for m in task.content.markers.items %}
-     <p class="card-text" {% if mode != 'solve' %}style='color:grey'{% endif %}><span class="choosemarker mark{{ m.0 }}" data-marker="{{ m.0 }}">&nbsp;</span> &nbsp; {{ m.1.description }}</p>
+     <div class="text"{% if mode != 'solve' %}style='color:grey;'{% endif %}><span class="choosemarker mark{{ m.0 }}" data-marker="{{ m.0 }}">&nbsp;</span> &nbsp; {{ m.1.description }}</div>
 {% endfor %}
 
 {% if mode == 'solve' %}
     <form method="post" class="form-inline">
         {% csrf_token %}
-        <div class="lesson-text">
+        <div class="lesson-text" style="margin:2em;">
             <blockquote class="marktext">
                 {{ task.content.marktext_html|safe }}
             </blockquote>
         </div>
         <input type="hidden" name="task" value="{{ task.id }}">
         <input type="hidden" name="solution" id="solution_dict">
-        <div style="margin-top: 2em">
-            <button type="submit" class="btn btn-secondary">Check!</button>
+               <div style="width:33%; margin:0 auto;">
+            <button type="submit" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(255, 110, 127, 0.8) -122.6%, rgba(28, 0, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);">Check!</button>
         </div>
     </form>
 {% else %}
-    <div class="lesson-text">
+    <div class="lesson-text" style="margin:2em;">
         <blockquote class="marktext">
             {{ feedback_text|safe }}
         </blockquote>
     </div>
-    <p>You correctly marked {{ num_correct }} of {{ num_total }} words.</p>
+    <p style="color:darkgreen; margin-left:2em;">You correctly marked {{ num_correct }} of {{ num_total }} words.</p>
     {% if num_additional > 0 %}
-        <p>You incorrectly marked {{ num_additional }} word{% if num_additional != 1 %}s{% endif %}.</p>
+        <p style="color:red; margin-left:2em;">You incorrectly marked {{ num_additional }} word{% if num_additional != 1 %}s{% endif %}.</p>
     {% endif %}
 {% endif %}

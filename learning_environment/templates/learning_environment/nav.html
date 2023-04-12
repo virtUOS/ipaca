@@ -1,0 +1,74 @@
+
+<nav class="col-3" style="background:white; margin-top: 0px; padding-top:12px;">
+    <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 25vw;">
+
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="{% url 'myhome' %}" class="nav-item i-plain" aria-current="page">
+                    <i class="bi bi-house-door" style="font-size:22px;"></i>
+                <span style="font-size:18px; color:black; vertical-align: middle; margin-left: 4px;"> My Home</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="i-plain" id='icon-book' data-bs-toggle="collapse" data-bs-target="#tasks-collapse" aria-expanded="false">
+                    <i class="bi-book" style="font-size:22px;"></i>
+                    <span style="font-size:18px; vertical-align: middle; color:black; margin-left: 4px;"> Lessons </span>
+                </a>
+
+                <div class="collapse" id="tasks-collapse" style="margin-left: 20px;">
+                    <div class="sub-item">
+                        <div><a href="{% url 'academic_series' %}" class="link-dark rounded">Academic</a></div>
+                        <div><a href="{% url 'general_series' %}" class="link-dark rounded">General</a></div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-item  i-plain" id='icon-trophy' data-bs-toggle="collapse" data-bs-target="#results-collapse" aria-expanded="false">
+                    <i class="bi bi-trophy" style="font-size:22px;"></i>
+                    <span style="font-size:18px; color: black; vertical-align: middle; margin-left: 4px;">Results</span>
+                </a>
+
+                <div class="collapse" id="results-collapse" style="margin-left: 20px;">
+                    <div class="sub-item">
+                        <div><a href="{% url 'learner_dashboard' %}" class="link-dark rounded">Personal</a></div>
+                        <div><a href="{% url 'global_dashboard' %}" class="link-dark rounded">Global</a></div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+
+
+<script>
+
+    $("#icon-book").click(function() {
+        $(this).find('i').toggleClass('bi-book-fill');
+        $(this).find('i').toggleClass('bi-book');
+    });
+
+    $("#icon-trophy").click(function() {
+        $(this).find('i').toggleClass('bi-trophy-fill');
+        $(this).find('i').toggleClass('bi-trophy');
+    });
+
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('bold');
+                $(this).parents('li').find($('span')).addClass('bold');
+                $(this).parents('li').find($('.i-plain')).addClass('nav-active');
+                $(this).parents('li').find($('.collapse')).addClass('show')
+
+                var oldClass = $(this).parents('li').find($('i')).attr('class');
+                var newClass = oldClass + '-fill'
+                $(this).parents('li').find($('i')).removeClass(oldClass);
+                $(this).parents('li').find($('i')).addClass(newClass);
+            }
+        });
+    });
+</script>
