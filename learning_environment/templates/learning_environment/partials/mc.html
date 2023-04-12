@@ -1,5 +1,4 @@
-
-<p class="card-text">{{ task.question }}</p>
+<p class="card-text">{{ task.question|safe }}</p>
 
 {% if mode == 'solve' %}
     <form method="post">
@@ -8,15 +7,13 @@
         {% for o in task.content %}
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" name="solution-{{ task.id }}-{{ forloop.counter0 }}" id="task-{{ task.id }}-{{ forloop.counter0 }}">
-                <div class="card-answer">
                 <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}">
                   {{ o.text }}
                 </label>
-                </div>
             </div>
         {% endfor %}
-        <div style="width:33%; margin:0 auto;">
-            <button type="submit" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(255, 110, 127, 0.8) -122.6%, rgba(28, 0, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);">Check!</button>
+        <div style="margin-top: 2em">
+            <button type="submit" class="btn btn-secondary">Check!</button>
         </div>
     </form>
 {% else %}
@@ -28,29 +25,14 @@
                    value="{{ forloop.counter0 }}"
                    disabled="disabled"
                    {% if o.checked %}checked="checked"{% endif %}>
-        <div class="card-answer">
             <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}" disabled="disabled">
                 {{ o.text }}
             {% if o.checked %}
-                {% if solved and o.feedback %}
-                    <br><p style="color:darkgreen;">{{ o.feedback }}</p>
-                {% elif o.feedback %}
-                    <br><p style="color:red;">{{ o.feedback }}</p>
+                {% if o.feedback %}
+                    <br><i>{{ o.feedback }}</i>
                 {% endif %}
             {% endif %}
             </label>
         </div>
-        </div>
     {% endfor %}
 {% endif %}
-
-
-
-<style>
-.form-check .form-check-input{
-        transform: scale(2);
-        margin:1em auto;
-}
-
-
-</style>
