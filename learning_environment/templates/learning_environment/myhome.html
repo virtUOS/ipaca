@@ -1,5 +1,5 @@
 {% extends "learning_environment/base.html" %}
-
+{% load static %}
 
 {% block content %}
 
@@ -87,11 +87,11 @@
                                         <ul class="ul-3col">
                                             <li class="list-group-item" style="border:none; padding:0; margin-left:1em;">
                                                 {% if task.type == 'GS' %}
-                                                    <span><img src="/static/img/icon_grammar.svg" class="img-fluid" style=" height:3em;"></span>
+                                                    <span><img src="{% static 'img/icon_grammar.svg' %}" class="img-fluid" style=" height:3em;"></span>
                                                 {% elif task.type == 'V' %}
-                                                    <span><img src="/static/img/icon_vocabulary.svg" class="img-fluid" style="height:3em;"></span>
+                                                    <span><img src="{%  static 'img/icon_vocabulary.svg' %}" class="img-fluid" style="height:3em;"></span>
                                                 {% elif task.type == 'R' %}
-                                                    <span><img src="/static/img/icon_reading.svg" class="img-fluid" style="height:3em;"></span>
+                                                    <span><img src="{%  static 'img/icon_reading.svg' %}" class="img-fluid" style="height:3em;"></span>
                                                 {% endif %}
                                                 {{ task.id }}</li>
                                             <li class="list-group-item" style="border:none; vertical-align: middle;">{{ task.name }}</li>
