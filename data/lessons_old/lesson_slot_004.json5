@@ -1,13 +1,14 @@
 // Lesson tt-004
 // a lesson 4.
 {
-  name: "Lesson 4",  // the name that's also shown to the users
-  id: "lesson-slot-004upd",        // an internal id, will never be shown, but important to identify the lesson
+  name: "NAME OF LESSON 4",  // the name that's also shown to the users
+  id: "lesson-slot-004",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
   author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
-  series: 'Academic English', // the series this lesson belongs to
   text: "<p> Businesses often sell items for cash as well as on account, where payment terms are extended for a period\
-   or time (for example, 30 to 45 days). _1_ . Under the cash basis of accounting, these transactions would not be\
+   or time (for example, 30 to 45 days). _1_ . Likewise, businesses often purchase items from suppliers ( also called\
+   vendors) for cash or, more likely, on account. Under the cash basis of accounting, these transactions would not be\
    recorded until the cash is exchanged. In contrast, under accrual accounting, the transactions are recorded when the \
   transaction occurs, regardless of when the cash is received or paid. <p> \
    </p> Even though we anticipate that companies will be in business 'forever', we are not going to own a company's stock \
@@ -17,16 +18,10 @@
   text_source: "Principles of Finance",
   text_licence: "OpenStax",
   text_url: "https://assets.openstax.org/oscms-prodcms/media/documents/PrinciplesofFinance-WEB.pdf",
-  start: "<h2>Focus of the lesson</h2>\
-    <p><b>In this lesson you will:</b>\
-    <p>Improve your background knowledge of financing\
-    <p>Extend your knowledge of Types of Verbs, viz. Transitive, Intransitive and Ditransitive verbs\
-    <p>Continue working on words and word combinations widely used in academic discourse", // OPTIONAL field, contains text to be displayed on the lesson's start page
-  wrapup: "Still not clear? Good to read://www.thefreedictionary.com/Transitive-and-Intransitive-Verbs.htm", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
     tasks: [  // the list of tasks for this lesson
       {
         // task 1: primary reading task
-        name: "Reading 4.1",
+        name: "NAME OF TASK 4.R.1",
         type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
         interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
         primary: true, // the primary task will be shown first, non-primary tasks are for repetition
@@ -47,7 +42,7 @@
       }, // end of task 1
       {
         // task 2: primary reading task
-        name: "Reading 4.2",
+        name: "NAME OF TASK 4.R.1",
         type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
         interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
         primary: true, // the primary task will be shown first, non-primary tasks are for repetition
@@ -67,21 +62,7 @@
             correct: false, feedback: "No, that's incorrect. Read the text again." },
         ]
       }, // end of task 2
-     {
-        // task 3: primary reading task
-        name: "CQ 4",
-        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
-        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
-        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
-        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
-        question: "Does the writer reach any conclusions?",
-        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          { text: "Yes",
-            correct: true, feedback: "You got it!Yes, the author concludes that modifying the dividend model is necessary to account for the finite period during which the stock is owned, and to price a finite amount of dividends and the future selling price of the stock. This modification changes the pricing model from infinite to finite and assumes a constant dividend." },
-          { text: "No, the writer does not reach any conclusions.",
-            correct: false, feedback: "No, that's incorrect. Try again." },
-        ]
-      }, // end of task CQ 4
+
       {
         // task 3: gap filling for Types of Verbs
         name: "Types of Verbs",
@@ -189,13 +170,13 @@
       },
 
       {
-        // task 7: Vocabulary Issues
+        // task 6: Vocabulary Issues
         name: "Vocabulary",
         type: "V",
         interaction: "GAP",
         primary: true,
         show_lesson_text: false,
-        question: "<p>Choose the best option to complete the text from the following list: <b> achievement, approaches, additional, estimation, terms,  to provide, observed, periods, exposed, claimed </b>. There are two extra words you don't need to use:</p>\
+        question: "<p>Choose the best option to complete the text. There are two extra words :</p>\
         <p>Difference-in-difference (DiD) _1_ are applied in situations when certain groups are _2_ to a treatment and\
          others are not. The logic of DiD is best explained with an example based on two groups and two _3_. In the  \
          first period, none of the groups is exposed to treatment. in the second period, only one of the groups gets \
@@ -204,34 +185,106 @@
          have _6_ afternoon lessons. DiD _7_ can then be used to estimate the effect of additional lessons in the \
          afternoon on student _8_ </p>",
         gaps: {
-          mode: 'fillin',
+          mode: 'select',
                  _1_: [
+                 { text: "achievement", correct: false, feedback: "Sorry, this is not correct." },
                  { text: "approaches", correct: true, feedback: "Yes. This is indeed approaches" },
+                 { text: "additional", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "estimation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "terms", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "To provide", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "observed", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "periods", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "exposed", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "claimed", correct: false, feedback: "Sorry, this is not correct." }
                  ],
                  _2_ : [
+                 { text: "achievement", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "approaches", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "additional", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "estimation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "terms", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "To provide", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "observed", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "periods", correct: false, feedback: "Sorry, this is not correct." },
                  { text: "exposed", correct: true, feedback: "Yes! You got it!" },
+                 { text: "claimed", correct: false, feedback: "Sorry, this is not correct." }
                  ],
                  _3_ : [
+                 { text: "achievement", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "approaches", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "additional", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "estimation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "terms", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "To provide", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "observed", correct: false, feedback: "Sorry, this is not correct." },
                  { text: "periods", correct: true, feedback: "Yes! This is indeed periods." },
+                 { text: "exposed", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "claimed", correct: false, feedback: "Sorry, this is not correct." }
                  ],
                  _4_ : [
+                 { text: "achievement", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "approaches", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "additional", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "estimation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "terms", correct: false, feedback: "Sorry, this is not correct." },
                  { text: "To provide", correct: true, feedback: "Yes! You got it!" },
+                 { text: "observed", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "periods", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "exposed", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "claimed", correct: false, feedback: "Sorry, this is not correct." }
                  ],
                  _5_ : [
+                 { text: "achievement", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "approaches", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "additional", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "estimation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "terms", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "To provide", correct: false, feedback: "Sorry, this is not correct." },
                  { text: "observed", correct: true, feedback: "Yes! This is correct!" },
+                 { text: "periods", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "exposed", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "claimed", correct: false, feedback: "Sorry, this is not correct." }
                  ],
                  _6_ : [
+                 { text: "achievement", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "approaches", correct: false, feedback: "Sorry, this is not correct." },
                  { text: "additional", correct: true, feedback: "Yes, this is correct!" },
+                 { text: "estimation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "terms", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "To provide", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "observed", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "periods", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "exposed", correct: false, feedback: "Sorry, this is not correct" },
+                 { text: "claimed", correct: false, feedback: "Sorry this is not correct." }
                  ],
                  _7_ : [
+                 { text: "achievement", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "approaches", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "additional", correct: false, feedback: "Sorry, this is not correct." },
                  { text: "estimation", correct: true, feedback: "Congratulations! This is correct!" },
+                 { text: "terms", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "To provide", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "observed", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "periods", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "exposed", correct: false, feedback: "Sorry,this is not correct. " },
+                 { text: "claimed", correct: false, feedback: "Sorry, this is not correct." }
                  ],
                  _8_ : [
                  { text: "achievement", correct: true, feedback: "Yes!Yes! Yes!" },
+                 { text: "approaches", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "additional", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "estimation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "terms", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "To provide", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "observed", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "periods", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "exposed", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "claimed", correct: false, feedback: "Sorry, this is not correct." }
                  ]
             }
         } // end of markers list
-        // end of task 7
+        // end of task 6
     ] // end of tasks
 
 } // end of lesson

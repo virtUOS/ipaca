@@ -6,7 +6,7 @@ from learning_environment.models import Lesson
 from learning_environment.its.base import Json5ParseException
 
 class Command(BaseCommand):
-    help = 'Closes the specified poll for voting'
+    help = 'Read all lesson files and create lessons'
 
     def handle(self, *args, **options):
         num_lessons_created = 0

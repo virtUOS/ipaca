@@ -1,0 +1,338 @@
+// Lesson ed-019
+// a lesson 19.
+{
+  name: "Lesson 19",  // the name that's also shown to the users
+  id: "lesson-slot-019upd",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p>Choose the supporting sentence that best fits the context flow of ideas in paragraphs. One sentence is extra.",
+  text_source: "Overcooling of offices reveals gender inequity in thermal comfort",
+  text_licence: "CC-BY",
+  text_url: " https://www.nature.com/articles/s41598-021-03121-1",
+  series: 'Academic English',
+  start: "<h2>Focus of the lesson</h2> \
+  <p><b>In this lesson you will:</b> \
+  <p>Learn about energy consumption and overcooling \
+  <p>Study up on how to best use Connecting Adverbs and  Conjunctions in a sentence \
+  <p>Work on words and word combinations widely used in academic discourse", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read  https://linguapress.com/grammar/conjunctive-adverbs.htm and  https://www.sjsu.edu/writingcenter/docs/handouts/Conjunctive%20Adverbs.pdf ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 19.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: true,
+        question: "<p> Choose the option that applies:</p>\
+        <p>The well-being and performance of office workers relies in part on satisfactory indoor environments. Delivering\
+        comfortable and healthy offices is too often done in an energy-intensive manner, leading to increasing  cooling\
+        demand globally. One way to reduce building energy consumption is to minimize heating, ventilation, and \
+        air-conditioning (HVAC) usage, which represents the largest source of energy use in buildings.</p>\
+        <p>Ranges of comfortable indoor temperatures are shaped by prevailing weather and differ across seasons and \
+        climates. _1_. For example, the dominant standard for thermal comfort suggests a summer comfort temperature range \
+        that is  approximately 1.5 °C warmer than the range in winter. Yet, paradoxically, indoor temperatures in US \
+        offices have been shown to be lower in summer than winter. Similar overcooling practices have been reported in \
+        tropical climates throughout Asia and the Middle East, and are forecast to increase in the future.  _2_.First,\
+        office buildings with suboptimal HVAC design and control strategies for their local climates. Second, the most \
+        popular model of human comfort for designing HVAC systems—the predicted mean vote or PMV model—tends to \
+        overestimate discomfort in warm temperatures. Advocates for cooler-than-comfortable offices point to expected \
+        performance improvements, but the empirical evidence  supporting that relationship is questionable. </p>\ ",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'The cause of overcooling is often attributed to two broad issues.',
+              correct: false,
+              feedback: 'No, that\'s not correct, try again'
+            },
+            {
+              text: 'This issue is known as overcooling and is estimated to cost $10B in wasted electricity annually.',
+              correct: false,
+              feedback: 'No, that\'s not correct, try again'
+            },
+            {
+              text: 'This means that comfort temperatures generally increase in summer and decrease in winter. ',
+              correct: true,
+              feedback: 'Yes, that\'s  correct because the text further compares  comfort temperatures in summer and \
+              winter and thus, continues the idea.'
+            }
+          ],
+          _2_: [
+            {
+              text: 'The cause of overcooling is often attributed to two broad issues.',
+              correct: true,
+              feedback: 'Yes, that\'s correct because the text then elaborates and provides the examples of two problems\
+              which cause overcooling.'
+            },
+            {
+              text: 'This issue is known as overcooling and is estimated to cost $10B in wasted electricity annually.',
+              correct: false,
+              feedback: 'No, that\'s not correct, try again'
+            },
+            {
+              text: 'This means that comfort temperatures generally increase in summer and decrease in winter. ',
+              correct: false,
+              feedback: 'No, that\'s not correct, try again'
+            }
+          ]
+        },
+      }, // end of task 1
+      {
+        // task 2: gap filling for Connecting Adverbs VS. Conjunctions
+        name: "Connecting Adverbs VS. Conjunctions",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that best completes the sentence:</p>\
+        <p>  _1_ , the dominant standard for thermal comfort suggests a summer comfort temperature range that is \
+        approximately 1.5 °C warmer than the range in winter.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'For example',
+              correct: true,
+              feedback: 'Yes! One of the functions of conjunctive adverbs is to transition from your point to the evidence \
+              you need. Here we use a conjunctive adverb ‘for example’ to show examples or evidence to back up our ideas.\
+              (https://grammar.yourdictionary.com/parts-of-speech/adverbs/con-adverb.html)'
+            },
+            {
+              text: 'When',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'Because',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ],
+        },
+      },
+      {
+        // task 3: gap filling for Connecting Adverbs VS. Conjunctions
+        name: "Connecting Adverbs VS. Conjunctions",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that best completes the sentence:</p>\
+        <p>Advocates for cooler-than-comfortable offices point to expected performance improvements, _1_ the empirical\
+        evidence supporting that relationship is questionable.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'and',
+              correct: false,
+              feedback: 'No, try again.'
+            },
+            {
+              text: 'but',
+              correct: true,
+              feedback: 'Yes! The correct answer is ‘but’ because here we use this conjunction to  begin a dependent\
+              clause (https://ted-ielts.com/subordinating-conjunction-vs-conjunctive-adverb/ )'
+            },
+            {
+              text: 'also',
+              correct: false,
+              feedback: 'No, try again.'
+            }
+          ],
+        },
+      },
+      {
+        // task 4: gap filling for Connecting Adverbs VS. Conjunctions
+        name: "Connecting Adverbs VS. Conjunctions",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that best completes the sentence:</p>\
+        <p> Attitudes aid in organizing information from the environment, _1_ they are not directly visible.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'although',
+              correct: true,
+              feedback: 'Yes, the correct answer is ‘although’ as we should use it at the beginning of a dependent clause.\
+               (https://ted-ielts.com/subordinating-conjunction-vs-conjunctive-adverb/ ).'
+            },
+            {
+              text: 'also',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'and',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 5: gap filling for Connecting Adverbs VS. Conjunctions
+        name: "Connecting Adverbs VS. Conjunctions",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that best completes the sentence:</p>\
+        <p>It is not possible to offer precise reasons for overcooling from our dataset. _1_ , prior research provides\
+         useful insight into the potential causes.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'However',
+              correct: true,
+              feedback: 'Yes, one of the functions of conjunctive adverbs is to demonstrate contrast. To form a \
+              relationship between two opposing ideas in this example, we use a conjunctive adverb ‘however’ to show\
+              examples or evidence to show contrast. (https://grammar.yourdictionary.com/parts-of-speech/adverbs/con-adverb.html)'
+            },
+            {
+              text: 'Unless',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Since',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+     {
+        // task 6: gap filling for vocabulary
+        name: "Vocabulary for Lesson 19",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that best completes the sentence:</p>\
+        <p>Prior research has reported lower thermal comfort for women in office buildings, but there is insufficient\
+        evidence to explain the _1_ for this disparity. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'reasons',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'causes',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+     {
+        // task 7: gap filling for vocabulary
+        name: "Vocabulary for Lesson 19",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that best completes the sentence:</p>\
+        <p>Survey responses show that _1_ temperatures are more likely to be cold than hot regardless of season. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'uncomfortable',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'inconvenient',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+           {
+        // task 8: gap filling for vocabulary
+        name: "Vocabulary for Lesson 19",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that best completes the sentence:</p>\
+        <p>Crowdsourced data _1_ that overcooling is a common problem in warm weather in offices across the US. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'offers',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'suggests',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+          ],
+        },
+      },
+           {
+        // task 9: gap filling for vocabulary
+        name: "Vocabulary for Lesson 19",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that best completes the sentence:</p>\
+        <p>Ranges of comfortable indoor temperatures are shaped by prevailing weather and  _1_ across seasons and climates.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'differ',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'differentiate',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+           {
+        // task 10: gap filling for vocabulary
+        name: "Vocabulary for Lesson 19",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that best completes the sentence:</p>\
+        <p>The cause of overcooling is often _1_ to two broad issues.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'accounted',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'attributed',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+          ],
+        },
+      }
+    ] // end of tasks
+
+} // end of lesson

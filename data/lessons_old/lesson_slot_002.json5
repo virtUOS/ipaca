@@ -1,11 +1,11 @@
 // Lesson tt-001
 // a test lesson, no meaningful content.
 {
-  name: "Lesson 2",  // the name that's also shown to the users
-  id: "lesson-slot-002upd",        // an internal id, will never be shown, but important to identify the lesson
+  name: "NAME OF LESSON 2",  // the name that's also shown to the users
+  id: "lesson-slot-002",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
   author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
-  series: 'Academic English', // the series this lesson belongs to
   text: "<p>Probability is the mathematical theory used to study uncertainty. It provides tools for the formalization \
          and quantification of the notion of uncertainty. In particular, it deals with the chance of an event \
          occurring. For example, if the different potential outcomes of an experiment are equally likely to occur \
@@ -30,22 +30,16 @@
          average score would be 84.3 to one decimal place). If, in your math class, there are 40 students \
          and 22 are men and 18 are women, then the proportion of men students is 22/40 and the proportion \
          of women students is 18/40.</p>",
-  text_source: "Introduction to Statistical Thinking by Benjamin Yakir",
-  text_licence: "CC-BY",
-  text_url: "https://open.umn.edu/opentextbooks/textbooks/1044",
-  start: "<h2>Focus of the lesson</h2><p>\
-    <b>In this lesson you will:</b> \
-    <p>Extend your background knowledge of probability and statistics\
-    <p>Revisit your understanding of Conditionals\
-    <p>Work on the vocabulary items widely used in academic discourse", // OPTIONAL field, contains text to be displayed on the lesson's start page
-  wrapup: "Want to revise this grammar topic? Good to read https://dictionary.cambridge.org/grammar/british-grammar/conditionals", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+  text_source: "unknown - TODO",
+  text_licence: "unknown - TODO",
+  text_url: "unknown - TODO",
     tasks: [  // the list of tasks for this lesson
       {
         // task 1: primary reading task
-        name: "Reading 2.1",
+        name: "NAME OF TASK 2.R.1",
         type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
-        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
-        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // Shall we show the lesson reading text? true/false
         question: "How many possible outcomes are there if you toss a coin?",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
@@ -56,7 +50,7 @@
         ]
       },
       {
-        name: "Reading 2.2",
+        name: "NAME OF TASK 2.R.2",
         type: "R",
         interaction: "SC",
         primary: false,
@@ -70,25 +64,13 @@
         ],
       }, // end of task 2
       {
-        name: "CQ 2",
-        type: "R",
-        interaction: "SC",
-        primary: false,
-        show_lesson_text: true,
-        question: "Does the author show any biases?",
-        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          { text: "Yes", correct: false, feedback: "No, that's incorrect. Read the text again." },
-          { text: "No", correct: true, feedback: "Great job!" },
-        ],
-      }, // end of task CQ 2
-      {
         // task 3: gap filling for conditionals
         name: "Conditionals",
         type: "GS",
         interaction: "GAP",
         primary: true,
         show_lesson_text: false,
-        question: "<p>Choose the option that applies:</p>\
+        question: "<p>Choose the optiona that applies:</p>\
         <p>If you _1_ the same coin 4,000 times, the outcomes will be close to 2,000 heads and 2,000 tails.</p>",
         gaps: {
           mode: 'select',
@@ -203,7 +185,7 @@
       },
 
       {
-        // task 7: Vocabulary for Lesson 2
+        // task 6: gap filling for conditionals
         name: "Vocabulary",
         type: "V",
         interaction: "GAP",
@@ -215,6 +197,16 @@
           mode: 'select',
           _1_: [
             {
+              text: 'uncertainty',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'data',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
               text: 'obtain',
               correct: true,
               feedback: 'Yes, that\'s correct'
@@ -230,7 +222,32 @@
               feedback: 'No, that\'s not correct'
             },
             {
+              text: 'average',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'similar',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
               text: 'potential',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consideration',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'overall',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'outcome',
               correct: false,
               feedback: 'No, that\'s not correct'
             },
@@ -242,8 +259,9 @@
           ]
         }
       },
+
       {
-        // task 8: Vocabulary for Lesson 2
+        // task 7: gap filling for conditionals
         name: "Vocabulary",
         type: "V",
         interaction: "GAP",
@@ -255,6 +273,16 @@
           mode: 'select',
           _1_: [
             {
+              text: 'uncertainty',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'data',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
               text: 'obtain',
               correct: false,
               feedback: 'No, that\'s not correct'
@@ -270,7 +298,32 @@
               feedback: 'No, that\'s not correct'
             },
             {
+              text: 'average',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'similar',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
               text: 'potential',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consideration',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'overall',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'outcome',
               correct: false,
               feedback: 'No, that\'s not correct'
             },
@@ -282,8 +335,9 @@
           ]
         }
       },
+
       {
-        // task 9: Vocabulary for Lesson 2
+        // task 8: gap filling for conditionals
         name: "Vocabulary",
         type: "V",
         interaction: "GAP",
@@ -295,6 +349,16 @@
           mode: 'select',
           _1_: [
             {
+              text: 'uncertainty',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'data',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
               text: 'obtain',
               correct: false,
               feedback: 'No, that\'s not correct'
@@ -310,87 +374,32 @@
               feedback: 'Yes, that\'s correct'
             },
             {
-              text: 'potential',
+              text: 'average',
               correct: false,
               feedback: 'No, that\'s not correct'
             },
             {
-              text: 'dealing with',
-              correct: false,
-              feedback: 'No, that\'s not correct'
-            },
-          ]
-        }
-      },
-      {
-        // task 10: Vocabulary for Lesson 2
-        name: "Vocabulary",
-        type: "V",
-        interaction: "GAP",
-        primary: false,
-        show_lesson_text: false,
-        question: "<p>Choose the option that applies:</p>\
-        <p>These patterns consist of distinct substantive concerns, risk perceptions, emotional responses, and preferred modes of conduct in coping with the  _1_ threat of GM foods.</p>",
-        gaps: {
-          mode: 'select',
-          _1_: [
-            {
-              text: 'obtain',
-              correct: false,
-              feedback: 'No, that\'s not correct'
-            },
-            {
-              text: 'unlikely',
-              correct: false,
-              feedback: 'No, that\'s not correct'
-            },
-            {
-              text: 'consistent',
+              text: 'similar',
               correct: false,
               feedback: 'No, that\'s not correct'
             },
             {
               text: 'potential',
-              correct: true,
-              feedback: 'Yes, that\'s correct'
-            },
-            {
-              text: 'dealing with',
-              correct: false,
-              feedback: 'No, that\'s not correct'
-            },
-          ]
-        }
-      },
-      {
-        // task 11: Vocabulary for Lesson 2
-        name: "Vocabulary",
-        type: "V",
-        interaction: "GAP",
-        primary: false,
-        show_lesson_text: false,
-        question: "<p>Choose the option that applies:</p>\
-        <p>It is highly _1_ or even illogical to happen in real life that Professor and his wife would ask Dr. Mercado to be their youngest child’s godmother if there was no close personal friendship between them.</p>",
-        gaps: {
-          mode: 'select',
-          _1_: [
-            {
-              text: 'obtain',
               correct: false,
               feedback: 'No, that\'s not correct'
             },
             {
-              text: 'unlikely',
-              correct: true,
-              feedback: 'Yes, that\'s correct'
-            },
-            {
-              text: 'consistent',
+              text: 'consideration',
               correct: false,
               feedback: 'No, that\'s not correct'
             },
             {
-              text: 'potential',
+              text: 'overall',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'outcome',
               correct: false,
               feedback: 'No, that\'s not correct'
             },

@@ -1,0 +1,229 @@
+// Lesson ev-017
+// lesson 17
+{
+  name: "Lesson 17",  // the name that's also shown to the users
+  id: "lesson-slot-017upd",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English',
+  text: "<p> A. Modern businesses seem to be so preoccupied with direct digital marketing strategies like social media \
+  advertising, pay-per-click, and website creation but often overlook the impact that traditional marketing channels can\
+  also have on conversion and organic search engine optimization. Most businesses today tend to stay away from traditional \
+  marketing strategies because digital marketing appears cheaper. However, that does not mean conventional marketing\
+  strategies are not effective anymore. In fact, traditional marketing strategies can also help you with your own small \
+  business SEO efforts.</p>\
+  </p> B. Your presence in the public square can create a good deal of buzz online. From the on and off-site promotion to \
+  the brand mentioned by those that attend the event. With more and more people commenting on their daily lives, sharing\
+  their experiences online - as well as their location - holding public events, exhibitions and shows, with your own\
+  branded exhibition display stands, products and services, can be a great way to create brand mention opportunities that\
+  wind up online and which Google will notice. This type of setting also allows representatives of the company to meet \
+  with prospective stakeholders in-person and answer any questions they might have.</p>\
+  </p> C. Telemarketing may be the most uncomfortable traditional marketing strategy to implement, but you can always hire \
+  someone else to call people for you. To make telemarketing more successful for your business, you need to obtain a\
+  high-quality list of leads. Make sure the leads are interested in the type of products or services that you are selling.\
+  Most people will ask for a website as a validator. This enables you to direct targeted traffic straight to your site, \
+  increasing traffic, time on site and page views, all of which can improve your site ranking. </p>",
+  text_source: "6 Traditional Marketing Strategies That Can Help Your SEO",
+  text_licence: "CC-BY",
+  text_url: "https://www.oercommons.org/courseware/lesson/63326/overview ",
+  start: "<h2>Focus of the lesson</h2> \
+  <p><b>In this lesson you will:</b> \
+  <p>Work on your paraphrasing skills as well as train your attentiveness while reading \
+  <p>Extend your background knowledge of marketing strategies \
+  <p>Revisit your understanding of hedging language, which is the language of caution or uncertainty. \
+  It is good to understand how a writer expresses certainty or uncertainty when it comes to academic writing \
+  <p>Work on the vocabulary items widely used in academic discourse", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read https://www.bristol.ac.uk/academic-language/media/BEAP/5.4/index.html ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 17.1",
+        type: "R",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: true,
+        question: "<p> Choose the correct headings (1,2,3) for paragraphs (A,B,C):</p>\
+        <p>1. Telemarketing _1_ </p> \
+        <p>2. Holding Exhibition _2_  </p> \
+        <p>3. Does traditional marketing matter today?  _3_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text: 'A', correct: false, feedback: 'Sorry, try again'},
+            { text: 'B', correct: false, feedback: 'Sorry, try again'},
+            { text: 'C', correct: true, feedback: 'Well done! This paragraph discusses telemarketing and related  issues.'}
+          ],
+          _2_: [
+            { text: "A", correct: false, feedback: "Sorry, try again" },
+            { text: "B", correct: true, feedback: "Well done! This paragraph discusses the benefits of public events \
+            including exhibitions and provides some pluses of this type of brand promotion." },
+            { text: 'C', correct: false, feedback: 'Sorry, try again'}
+          ],
+          _3_: [
+            { text:  "A", correct:  true, feedback:  "Well done! It states the main topic of the passage which is about \
+            traditional marketing and the usefulness of its strategies"},
+            { text:  "B", correct:  false, feedback:  "Sorry, try again"},
+            { text: 'C', correct: false, feedback: 'Sorry, try again'}
+          ],
+        }
+      },
+      {
+        name: "CQ 17",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "What information does the author assume is true?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "Due to the perceived cost savings of digital marketing, the majority of organizations nowadays seek\
+            to avoid using traditional marketing techniques.",
+            correct: true,
+            feedback: "The correct answer is True because the text says ‘Most businesses today tend to stay away from \
+            traditional marketing strategies because digital marketing appears cheaper.’"
+          },
+          {
+            text: "Holding public events is a good way  to generate brand mention possibilities.",
+            correct: true,
+            feedback: "The correct answer is True because The correct answer is TRUE because the text says : ‘...holding\
+            public events, exhibitions and shows, with your own branded exhibition display stands, products and services,\
+            can be a great way to create brand mention opportunities …’."
+          },
+          {
+            text: "The most challenging traditional marketing tactic to use may be telemarketing, because you should do\
+            all the job yourself.",
+            correct: false,
+            feedback: "The correct answer is FALSE because the text says : ‘Telemarketing may be the most uncomfortable \
+            traditional marketing strategy to implement, but you can always hire someone else to call people for you’."
+          },
+        ]
+      }, // end of task 2
+      {
+        // task 3: rewriting for hedging
+        name: "Hedging",
+        type: "GS", // grammar and style task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the sentence using the word in brackets:  'Modern businesses are preoccupied with direct \
+        digital marketing strategies'. (SEEM) ",
+        answer: "Modern businesses seem to be preoccupied with direct digital marketing strategies."
+      },
+      {
+        // task 4: rewriting for hedging
+        name: "Hedging",
+        type: "GS", // grammar and style task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the sentence using the word in brackets:  'Most businesses today stay away from traditional\
+         marketing strategies'. (TEND) ",
+        answer: "Most businesses today tend to stay away from traditional marketing strategies."
+      },
+      {
+        // task 5: rewriting for hedging
+        name: "Hedging",
+        type: "GS", // grammar and style task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the sentence using the word in brackets: 'Telemarketing is the most uncomfortable traditional\
+        marketing strategy to implement'. (EVIDENT)  ",
+        answer: "It is evident that telemarketing is the most uncomfortable traditional marketing strategy to implement."
+      },
+      {
+        // task 6: rewriting for hedging
+        name: "Hedging",
+        type: "GS", // grammar and style task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the sentence using the word in brackets: 'Your presence in the public square will probably \
+        create a good deal of buzz online'. (MIGHT)",
+        answer: "Your presence in the public square might create a good deal of buzz online."
+      },
+      {
+        // task 7: Vocabulary Issues
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Choose the best option to complete the text. There are two extra words you don't need to use:</p>\
+        <p>Direct mail advertising is the classic physical _1_ of email marketing and can be just as  _2_ as email\
+        marketing. A new business needs to think _3_ clicks. Anything that generates more traffic and more branded\
+        signals to your site is going to help lift your keywords in Google (all other things considered). It’s also going\
+        to have a _4_ positive impact on your conversion rate. Rather_5_ sending lots of emails to different people which\
+        often get deleted before they are read, try sending lots of printed letters, postcards, catalogues, and flyers\
+        through direct mail (also known as snail mail).If you make your direct mail advertisement attractive and \
+        eye-catching, then your recipients are more likely going to pay _6_ to it and not throw it away immediately. \
+        Consider adding QR codes are other similar gimmicks to your snail mail campaign so that people can get to your \
+        website even easier. </p>",
+        gaps: {
+          mode: 'select',
+                 _1_: [
+                 { text: "potentially", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "attention", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "that", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "effective", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "version", correct: true, feedback: "Yes! You got it!" },
+                 { text: "beyond", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "than", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "appearance", correct: false, feedback: "Sorry, this is not correct." },
+                 ],
+                 _2_ : [
+                 { text: "potentially", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "attention", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "that", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "effective", correct: true, feedback: "Yes! You got it!" },
+                 { text: "version", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "beyond", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "than", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "appearance", correct: false, feedback: "Sorry, this is not correct." }
+                 ],
+                 _3_ : [
+                 { text: "potentially", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "attention", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "that", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "effective", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "version", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "beyond", correct: true, feedback: "Yes! You got it!" },
+                 { text: "than", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "appearance", correct: false, feedback: "Sorry, this is not correct." }
+                 ],
+                 _4_ : [
+                 { text: "potentially", correct: true, feedback: "Yes! You got it!" },
+                 { text: "attention", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "that", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "effective", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "version", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "beyond", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "than", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "appearance", correct: false, feedback: "Sorry, this is not correct." }
+                 ],
+                 _5_ : [
+                 { text: "potentially", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "attention", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "that", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "effective", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "version", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "beyond", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "than", correct: true, feedback: "Yes! You got it!" },
+                 { text: "appearance", correct: false, feedback: "Sorry, this is not correct." }
+                 ],
+                 _6_ : [
+                 { text: "potentially", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "attention", correct: true, feedback: "Yes! You got it!" },
+                 { text: "that", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "effective", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "version", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "beyond", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "than", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "appearance", correct: false, feedback: "Sorry, this is not correct." }
+                 ],
+            }
+        } // end of markers list
+        // end of task 7
+
+    ] // end of tasks
+}// end of lesson

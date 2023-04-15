@@ -39,13 +39,11 @@
             {% if part.solution and part.solution != '---' %}
                 {% for o in part.options %}
                     {% if o.text == part.solution %}
-                        <span class="feedbackbox">
                         {% if part.solved %}
-                            <i style="color:darkgreen;"> ✓ {{ o.feedback }}</i>
+                            <span class="btn btn-success" style="display:inline" data-toggle="tooltip" data-placement="top" title="{{ o.feedback }}"> ✓ </span> &nbsp;
                         {% else %}
-                            <i style="color:red;"> ✗ {{ o.feedback }}</i>
+                            <span class="btn btn-danger" style="display:inline" data-toggle="tooltip" data-placement="top" title="{{ o.feedback }}"> ✗ </span> &nbsp;
                         {% endif %}
-                        </span>
                     {% endif %}
                 {% endfor %}
             {% endif %}
@@ -65,8 +63,6 @@
         border-radius: 2.5em;
         padding: 2em;
     }
-
-
 
     p{
         font-size:18px;

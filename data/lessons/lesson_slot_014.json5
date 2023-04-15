@@ -1,0 +1,876 @@
+// Lesson ev-014
+// lesson 14
+{
+  name: "Lesson 14",  // the name that's also shown to the users
+  id: "lesson-slot-014upd",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English', // the series this lesson belongs to
+  text: "<p>                          New information and remaining uncertainties</p>\
+         </p>  The key issue in predicting future rates of global sea level rise is to understand and predict how ice \
+         sheets in Greenland and Antarctica will react to a warming climate. Current projections of global sea level\
+         rise do not account for the complicated behaviour of these giant ice slabs as they interact with the atmosphere,\
+         the ocean and the land. Lack of knowledge about the ice sheets and their behaviour is the primary reason that\
+         projections of global sea level rise include such a wide range of plausible future conditions.</p>\
+         </p>  Early efforts at semi-empirical models suggested much higher rates of sea level rise (as much as 6 feet\
+         by 2100). More recent work suggests that a high end of 3 to 4 feet is more plausible. It is not clear, however,\
+         whether these statistical relationships will hold in the future or that they are appropriate in modelling past\
+         behaviour, thus calling their reliability into question. Some decision-makers may wish to consider a broader\
+         range of scenarios such as 8 inches or 6.6 feet by 2100 in the context of risk-based analysis.</p>",
+  text_source: "National Climate Assessment ",
+  text_licence: "Public Domain",
+  text_url: "https://www.oercommons.org/courses/2014-national-climate-assessment ",
+  start: "<h2>Focus of the lesson</h2>  \
+  <p><b>In this lesson you will:</b> \
+  <p>Extend your background knowledge of climate changes \
+  <p>Learn more about Countable and Uncountable Nouns as well as the nouns which can be used as both countable or uncountable, \
+  usually  with a difference in meaning (<a href='https://7esl.com/nouns-that-can-be-countable-or-uncountable/'>read more about this</a>)</p> \
+  <p>Work on abbreviations used in academic discourse</p>", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Still not sure? Good to read https://dictionary.cambridge.org/grammar/british-grammar/nouns-countable-and-uncountable?q=Countable+and+uncountable+nouns+with+different+meanings, https://www.englishclub.com/ref/Nouns_that_are_Count_and_Noncount/", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 14.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Understanding and projecting how Greenland's and Antarctica's ice sheets will respond to a warming\
+        climate is crucial to estimating future rates of global sea level rise.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: true, feedback: "Yes, that's correct because the text says ‘The key issue in \
+          predicting future rates of global sea level rise is to understand and predict how ice sheets in Greenland and\
+          Antarctica will react to a warming climate’." },
+          { text: "False", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "Not Given", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task 1
+      {
+        name: "Reading 14.2",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "There are other processes that affect sea level but are not associated with climate change.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "False", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "Not Given", correct: true, feedback: "Yes, that's correct because the text in general does not discuss\
+          the causes of sea level change even though presumably  they exist." },
+        ],
+      }, // end of task 2
+      {
+        name: "Reading 14.3",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "The main cause of the vast variety of probable future scenarios is a lack of knowledge about the seas and\
+         oceans.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "False", correct: true, feedback: "Yes, that's correct because the text says ‘...  Lack of knowledge\
+          about the ice sheets and their behaviour is the primary reason that projections of global sea level rise \
+          include such a wide range of plausible future conditions ’." },
+          { text: "Not Given", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task 3
+      {
+        name: "Reading 14.4",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Researchers predicted substantially faster rates of sea level rise.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: true, feedback: "Yes, that's correct because the text says ‘Early efforts at \
+          semi-empirical models suggested much higher rates of sea level rise’" },
+          { text: "False", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "Not Given", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task 4
+ {
+        name: "CQ 14",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "What is missing from the text?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Citing", correct: true, feedback: "Yes, that's correct because the text says 'More recent work suggests that a high end of 3 to 4 feet is more plausible’ but there's no citing. " },
+          { text: "Linking words", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task CQ 14
+
+      {
+        // task 6: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the abbreviations to their meaning:</p>\
+        <p> e.g. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote (Latin ibidem)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare (Latin confer)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'page/pages',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for example (Latin exempli gratia) ',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others (Latin at alli)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'note carefully (Latin nota bene)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is (Latin id est)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author (Latin opus citatum)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on (Latin et cetera)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 7: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the abbreviations to their meaning:</p>\
+        <p> op.cit. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote (Latin ibidem)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare (Latin confer)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'page/pages',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for example (Latin exempli gratia) ',
+              correct: false,
+              feedback: 'No, that\'s  not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others (Latin at alli)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'note carefully (Latin nota bene)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is (Latin id est)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author (Latin opus citatum)',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+             {
+              text: 'and so on (Latin et cetera)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 8: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the abbreviations to their meaning:</p>\
+        <p> vol. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote (Latin ibidem)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare (Latin confer)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'page/pages',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for example (Latin exempli gratia) ',
+              correct: false,
+              feedback: 'No, that\'s  not correct'
+            },
+            {
+              text: 'volume',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+             {
+              text: 'and others (Latin at alli)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'note carefully (Latin nota bene)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is (Latin id est)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author (Latin opus citatum)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on (Latin et cetera)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 9: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the abbreviations to their meaning:</p>\
+        <p> ibid. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote (Latin ibidem)',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'compare (Latin confer)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'page/pages',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for example (Latin exempli gratia) ',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others (Latin at alli)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'note carefully (Latin nota bene)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is (Latin id est)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author (Latin opus citatum)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on (Latin et cetera)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 10: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the abbreviations to their meaning:</p>\
+        <p> Cf _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote (Latin ibidem)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare (Latin confer)',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'page/pages',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for example (Latin exempli gratia) ',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others (Latin at alli)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'note carefully (Latin nota bene)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is (Latin id est)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author (Latin opus citatum)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on (Latin et cetera)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 11: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the abbreviations to their meaning:</p>\
+        <p> ed(s) _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote (Latin ibidem)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare (Latin confer)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'page/pages',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for example (Latin exempli gratia) ',
+              correct: false,
+              feedback: 'No, that\'s  not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others (Latin at alli)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'note carefully (Latin nota bene)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is (Latin id est)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author (Latin opus citatum)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on (Latin et cetera)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 12: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the abbreviations to their meaning:</p>\
+        <p> etc. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote (Latin ibidem)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare (Latin confer)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'page/pages',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for example (Latin exempli gratia) ',
+              correct: false,
+              feedback: 'No, that\'s  not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others (Latin at alli)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'note carefully (Latin nota bene)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is (Latin id est)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author (Latin opus citatum)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on (Latin et cetera)',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            }
+          ]
+        }
+      },
+            {
+        // task 13: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the abbreviations to their meaning:</p>\
+        <p> p./ pp. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote (Latin ibidem)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare (Latin confer)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'page/pages',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'for example (Latin exempli gratia) ',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others (Latin at alli)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'note carefully (Latin nota bene)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is (Latin id est)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author (Latin opus citatum)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on (Latin et cetera)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 14: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the abbreviations to their meaning:</p>\
+        <p> et al _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote (Latin ibidem)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare (Latin confer)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'page/pages',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for example (Latin exempli gratia) ',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others (Latin at alli)',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+             {
+              text: 'note carefully (Latin nota bene)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is (Latin id est)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author (Latin opus citatum)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on (Latin et cetera)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 15: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the abbreviations to their meaning:</p>\
+        <p> i.e. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote (Latin ibidem)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare (Latin confer)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'page/pages',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for example (Latin exempli gratia) ',
+              correct: false,
+              feedback: 'No, that\'s  not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others (Latin at alli)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'note carefully (Latin nota bene)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is (Latin id est)',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+             {
+              text: 'see previously quoted work by author (Latin opus citatum)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on (Latin et cetera)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 16: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the abbreviations to their meaning:</p>\
+        <p> NB _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote (Latin ibidem)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare (Latin confer)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'page/pages',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for example (Latin exempli gratia) ',
+              correct: false,
+              feedback: 'No, that\'s  not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others (Latin at alli)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'note carefully (Latin nota bene)',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+             {
+              text: 'that is (Latin id est)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author (Latin opus citatum)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on (Latin et cetera)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      }
+    ] // end of tasks
+}// end of lesson

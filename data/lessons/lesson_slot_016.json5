@@ -1,0 +1,281 @@
+// Lesson ed-016
+// lesson 16.
+{
+  name: "Lesson 16",  // the name that's also shown to the users
+  id: "lesson-slot-016upd",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English',
+  text: "<p> To address low standards of reporting, the ARRIVE (Animals in Research: Reporting In VivoExperiments)\
+   guidelines for reporting were published in 2010. The ARRIVE guidelines are summarized by a 20 item checklist that\
+   includes reporting of measures associated with bias (randomization, blinding, sample size calculation, data handling).\
+   Over 1000 journals have responded to publication of the guidelines by linking to it on their websites and in their\
+   instructions to authors.</p>\
+   <p> To our knowledge, there have been no studies comparing reporting standards between journals classified as ARRIVE \
+   guideline supporters and non-supporters. We hypothesized that papers published in supporting journals would have \
+   greater adherence to the guidelines, and therefore higher reporting standards, than those published in non-supporting\
+   journals. Additionally, we hypothesized that papers published in supporting journals would show a greater improvement \
+   in reporting standards since the guidelines became available. To test these hypotheses, the related subjects of \
+   anesthetic and analgesic efficacy and animal welfare were selected for study.</p>\
+   <p> Following a change in editorial policy in 2013, the Nature research journals now require that authors accompany\
+   accepted manuscripts with a completed checklist identifying inclusion of key items associated with quality of \
+   reporting and study design. This checklist has numerous items in common with those of the ARRIVE guidelines. In \
+   reviewing approximately 440 papers in each of two groups (those published in the Nature publishing journals and those\
+   from other publishers, before and after checklist implementation), the positive effect of the checklist was evident in \
+   that reporting of bias criteria (randomization, blinding, sample size calculation and data handling) improved \
+   significantly from 0 to 16.4%.</p>",
+  text_source: "ARRIVE has not ARRIVEd: Support for the ARRIVE (Animal Research: Reporting of in vivo Experiments) \
+  guidelines does not improve the reporting quality of papers in animal welfare, analgesia or anesthesia",
+  text_licence: "CC-BY",
+  text_url: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0197882 ",
+  start: "<h2>Focus of the lesson</h2>\
+    <p><b>In this lesson you will:</b>\
+     <p>Learn more about  the standards of reporting \
+     <p>Revisit your understanding  of Plurality \
+     <p>Do the exercises to brush up your skills of recognising the plural forms of the nouns", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Still need more reads on this topic? Good to read https://www.ef.com/wwen/english-resources/english-grammar/singular-and-plural-nouns/", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 16.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "How many journals linked the guidelines to their webpages? ",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "almost 1000", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "more than 1000", correct: true, feedback: "The correct answer is because the text says  ‘Over 1000\
+            journals have responded to publication of the guidelines’." },
+          { text: "nearly 1000", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ]
+      },
+      {
+        name: "Reading 16.2",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Finish the sentence: ‘The Nature research journals want authors to…..’ ",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "provide a completed checklist along with approved papers", correct: true, feedback: "Yes, this is the\
+          correct answer because because the text says ‘...the Nature research journals now require that authors accompany\
+          accepted manuscripts with a completed checklist…. ’." },
+          { text: "add new items to the checklist to improve it", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "provide evidence of positive effect of checklist implementation", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task 2
+            {
+        name: "CQ 16",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Does the author mostly state facts or opinions?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Facts", correct: true, feedback: "Yes! You got it!" },
+          { text: "Opinions", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task CQ 16
+      {
+        // task 3: gap filling for plurals
+        name: "Plurals",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Choose the option that applies:</p>\
+        <p> To test these _1_ the related subjects of anaesthetic and analgesic efficacy and animal welfare were \
+        selected for study. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'hypotheses',
+              correct: true,
+              feedback: 'Yes, that\'s  correct! '
+            },
+            {
+              text: 'hypothesis',
+              correct: false,
+              feedback: 'No, in this sentence we should use plural form as we have the determiner ‘these’.\
+              (https://dictionary.cambridge.org/dictionary/english/hypothesis )'
+            },
+          ]
+        }
+      },
+      {
+        // task 4: gap filling for plurals
+        name: "Plurals",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p> Choose the option that applies: </p>\
+        <p> In reviewing approximately 440 papers in each of two groups (those published in the Nature publishing \
+        journals and those from other publishers, before and after checklist implementation), the positive effect of the\
+        checklist was evident in that reporting of bias _1_ (randomization, blinding, sample size calculation and data \
+        handling) improved significantly from 0 to 16.4%. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'criterion',
+              correct: false,
+              feedback: 'No, here we need to use plural form as we speak about 4 items ‘randomization, blinding, sample \
+              size calculation and data handling‘. (https://dictionary.cambridge.org/dictionary/english/criterion).'
+            },
+            {
+              text: 'criteria',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+          ],
+        },
+      },
+      {
+        // task 5: gap filling plurals
+        name: "Plurals",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Choose the option that applies:</p>\
+        <p> Evaluation of adherence to the ARRIVE guidelines was performed independently by two authors (VL and FRB). \
+        The ARRIVE checklist of 20 items and 46 associated sub-items was operationalized and used as the _1_ for evaluation. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'basis',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'bases',
+              correct: false,
+              feedback: 'No, here we need to use singular form. (https://dictionary.cambridge.org/dictionary/english/basis)'
+            },
+          ],
+        },
+      },
+      {
+        // task 6: gap filling for plurals
+        name: "Plurals",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Choose the option that applies:</p>\
+        <p>  After initial screening, 271 papers were identified. Thirty-five papers were excluded following full text\
+        evaluation, leaving 236 papers included in the final  _1_ .</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'analyses',
+              correct: false,
+              feedback: 'No, that\'s not correct, we need a singular form here. \
+              (https://dictionary.cambridge.org/dictionary/english/analysis )'
+            },
+            {
+              text: 'analysis',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+          ],
+        },
+      },
+{ // task 7
+        name:  "Writing for Lesson 16",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the singular form of the word 'media'",
+        answer: "medium"
+      },
+{ // task 8
+        name:  "Writing for Lesson 16",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the singular form of the word 'phenomena'",
+        answer: "phenomenon"
+      },
+      { // task 9
+        name:  "Writing for Lesson 16",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the singular form of the word 'syllabi'",
+        answer: "syllabus"
+      },
+      { // task 10
+        name:  "Writing for Lesson 16",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the singular form of the word 'curricula'",
+        answer: "curriculum"
+      },
+      { // task 11
+        name:  "Writing for Lesson 16",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the singular form of the word 'formulae'",
+        answer: "formula"
+      },
+      { // task 12
+        name:  "Writing for Lesson 16",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the singular form of the word 'data'",
+        answer: "datum"
+      },
+      { // task 13
+        name:  "Writing for Lesson 16",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the singular form of the word 'analyses'",
+        answer: "analysis"
+      },
+      { // task 14
+        name:  "Writing for Lesson 16",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the singular form of the word 'bases'",
+        answer: "basis"
+      },
+      { // task 15
+        name:  "Writing for Lesson 16",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the singular form of the word 'hypotheses'",
+        answer: "hypothesis"
+      },
+      { // task 16
+        name:  "Writing for Lesson 16",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the singular form of the word 'criteria'",
+        answer: "criterion"
+      }
+    ] // end of tasks
+
+} // end of lesson

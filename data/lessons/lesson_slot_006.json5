@@ -1,0 +1,268 @@
+// Lesson ed-006
+// a lesson 6
+{
+  name: "Lesson 6",  // the name that's also shown to the users
+  id: "lesson-slot-006upd",      // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English', // the series this lesson belongs to
+  text: "Philosophical Ethics. A guidebook for beginners",
+  text_source: "Philosophical Ethics by George W. Matthews",
+  text_licence: "CC BY-SA",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/927",
+  start: "<h2>Focus of the lesson</h2>\
+  <p><b>In this lesson  you will:</b>\
+  <p>Re-order paragraphs to polish up your ability to understand the organisation and cohesion of an academic text\
+  <p>Revisit your understanding of philosophical ethics\
+  <p>Brush up your knowledge of Collocations\
+  <p>Work on the word forms\
+  <p style='font-size:80%'>Good to know: A collocation is a combination of two or more words which occurs repeatedly in text and can be instantly retrieved from memory by a competent native speaker (<i> Siepmann, D.,\
+  Gallagher, J.D., Hannay, M., & Mackenzie, J.L. (2011)  Writing in English: A Guide for Advanced Learners, p.272 </i>.).\
+  Collocations occur frequently in academic writing and speech.Knowing and using appropriate collocations can help to \
+  improve the clarity, accuracy, and fluency of academic writing,and also convey a more natural and sophisticated use of\
+  the language. Thus, an understanding of collocations is an essential aspect of developing proficiency in academic English.</p>", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Want to know more about effective paragraphs? Good to read://stlcc.edu/student-support/academic-success-and-tutoring/writing-center/writing-resources/topic-sentence-paragraph.aspx ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+  tasks: [  // the list of tasks for this lesson
+    { // task 1: primary reading task
+      name:  "Reading 6.1 ",
+      type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+      interaction: "SORTPAR",
+      primary: true,      // the primary task will be shown first, non-primary tasks are for repetition
+      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+      question: 'Arrange the text boxes in the right order  to form a well-built text:',
+      paragraphs: [
+        'For philosophers, arguments are just attempts to provide support for whatever it is that we might claim is true.',
+        'For example, maybe we think the death penalty is wrong, or the opposite, so we come up with an argument to show\
+         this. Or maybe we think that morality is a sham, nothing but a cover story for basically selfish motives. \
+         Once again, we can come up with an argument in support of this idea.',
+        'Conversely,  on an even more abstract level we might think that moral judgments are just matters of opinion and\
+         that it is therefore a waste of time to even argue about what is right and what is wrong. Since none of these\
+         claims are self-evidently true (even though some people may think some of these are obvious) we’ll need an \
+         argument to back them up, or at least to make explicit our reasons for making these claims.',
+        'In the end, we can think whatever we want.',
+        'That will, however, only get us so far – either others will agree with us or not, and either our thoughts will \
+         be true or not. But we can also offer reasons in support of our claims in the form of arguments. As we will be \
+         seeing, not all arguments are equally persuasive. There are, however, clear-cut and reliable ways of evaluating \
+         them to see which really provide the support we are after and which do not.'
+      ],
+      order: '1<5, 2<5, 3<5, 4<5'  // 1 before 2, 2 before 3, 3 before 4, 4 before 5 (order of 1 and 2 is not specified)
+    },  // end of task 1
+     {
+        // task 2: primary reading task
+        name: "CQ 6",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question: "Click  the topic sentence of the paragraph below.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "✓For philosophers, arguments are just attempts to provide support for whatever it is that we might claim is true.",
+            correct: true,
+            feedback: "Great job!"
+          },
+          {
+            text: "✓For example, maybe we think the death penalty is wrong, or the opposite, so we come up with an argument to show this.",
+            correct: false,
+            feedback: "Sorry, that's not right."
+          },
+          {
+            text: " ✓Or maybe we think that morality is a sham, nothing but a cover story for basically selfish motives. ",
+            correct: false,
+            feedback: "Sorry, that's not right."
+          },
+          {
+            text: "✓Once again, we can come up with an argument in support of this idea.",
+            correct: false,
+            feedback: "Sorry, that's not right."
+          }
+        ]
+      },
+      {
+        name: "Types of Collocations 1",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p> Choose the word to complete the phrase:</p> \
+        <p> Conversely,  on an even more abstract level we might think that  _1_  judgments are just _2_  of opinion and\
+        that it is therefore a  _3_ of time to even argue about what is right and what is wrong.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text:  "mortal", correct: false, feedback: "No, this word does not collocate with the word 'judgement'."},
+            { text:  "moral", correct: true, feedback: "Yes! That's correct! "},
+            ],
+          _2_: [
+            { text: "matters", correct: true, feedback: "Yes! That's correct!" },
+            { text: "manners", correct: false, feedback: "No, this word does not collocate with the phrase 'of opinion'." },
+          ],
+          _3_: [
+            { text:  "waste", correct:  true, feedback:  "Yes! That's correct!"},
+            { text:  "spending", correct:  false, feedback:  "No, this word does not collocate with the phrase 'of time'."},
+          ],
+        }, // end of gap list
+      }, // end of task 2
+          {
+        name: "Types of Collocations 2",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p> Choose the word to complete the phrase:</p> \
+        <p> Since none of these claims are self-evidently true  (even _1_  some people may think some of these are \
+        obvious) we’ll need an argument to back them up, or at _2_  to make explicit our reasons for  _3_ these claims.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text:  "through", correct: false, feedback: "No, it does not have the meaning ‘despite the fact that’. "},
+            { text:  "though", correct: true, feedback: "Yes! That's correct! "},
+            ],
+          _2_: [
+            { text: "less", correct: false, feedback: "No, try again. Here we need  to say that someone should do \
+            something small, even if they do nothing else" },
+            { text: "least", correct: true, feedback: "Yes! That's correct!" },
+          ],
+          _3_: [
+            { text:  "making", correct:  true, feedback:  "Yes! That's correct!"},
+            { text:  "doing", correct:  false, feedback:  "No, this word does not collocate with the word 'a claim'."},
+          ],
+        }, // end of gap list
+      }, // end of task 3
+          {
+        name: "Types of Collocations 3",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p> Choose the word to complete the phrase:</p> \
+        <p> But as we will be seeing, arguments are best looked at  one _1_  a time since each one  stands or falls on\
+         its own  _2_ . </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text:  "at", correct: true, feedback: "Yes! That's correct!"},
+            { text:  "in", correct: false, feedback: "No, in this case we will not get the meaning ‘during any one period’."},
+            ],
+          _2_: [
+            { text: "merits", correct: true, feedback: "Yes! That's correct!" },
+            { text: "values", correct: false, feedback: "No, we need another word to form the phrase with the  meaning \
+            ‘according to one's skills and one's good and bad qualities’." },
+          ],
+        }, // end of gap list
+      }, // end of task 4
+          {
+        name: "Types of Collocations 4",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p> Choose the word to complete the phrase:</p> \
+        <p> Animal nervous systems are the product of hundreds of millions of years of evolution, and are extremely \
+        useful   _1_  helping animals survive and flourish in a complex and  constantly _2_  environment. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text:  "of", correct: false, feedback: "No, this word does not collocate with the word 'useful'."},
+            { text:  "for", correct: true, feedback: "Yes! That's correct! "},
+            ],
+          _2_: [
+            { text: "changing", correct: true, feedback: "Yes! That's correct!" },
+            { text: "mobile", correct: false, feedback: "No, this word does not collocate with the word 'environment'." },
+          ],
+        }, // end of gap list
+      }, // end of task 5
+
+      { // task 6
+        name:  "Writing for Lesson 6",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the noun form of the adjective 'available'",
+        answer: "availability"
+      },
+          { // task 7
+        name:  "Writing for Lesson 6",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the noun form of the adjective 'evident'",
+        answer: "evidence"
+      },
+          { // task 8
+        name:  "Writing for Lesson 6",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the noun form of the adjective 'certain'",
+        answer: "certainty"
+      },
+          { // task 9
+        name:  "Writing for Lesson 6",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the noun form of the adjective 'necessary'",
+        answer: "necessity"
+      },
+          { // task 10
+        name:  "Writing for Lesson 6",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the noun form of the adjective 'relevant'",
+        answer: "relevance"
+      },
+          { // task 11
+        name:  "Writing for Lesson 6",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the noun form of the adjective 'unique'",
+        answer: "uniqueness"
+      },
+          { // task 12
+        name:  "Writing for Lesson 6",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the noun form of the adjective 'prominent'",
+        answer: "prominence"
+      },
+          { // task 13
+        name:  "Writing for Lesson 6",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the noun form of the adjective 'reliable'",
+        answer: "reliability"
+      },
+          { // task 14
+        name:  "Writing for Lesson 6",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the noun form of the adjective 'explicit'",
+        answer: "explicitness"
+      },
+          { // task 15
+        name:  "Writing for Lesson 6",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the noun form of the adjective 'available'",
+        answer: "availability"
+      }
+  ] // end of tasks
+
+} // end of lesson

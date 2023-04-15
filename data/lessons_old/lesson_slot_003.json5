@@ -1,11 +1,11 @@
 // Lesson tt-001
 // a test lesson, no meaningful content.
 {
-  name: "Lesson 3",  // the name that's also shown to the users
-  id: "lesson-slot-003upd",        // an internal id, will never be shown, but important to identify the lesson
+  name: "NAME OF LESSON 3",  // the name that's also shown to the users
+  id: "lesson-slot-003",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
   author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
-  series: 'Academic English', // the series this lesson belongs to
   text: "<p> Every country has laws regulating who can leave the country permanently and who can enter and stay.\
    In many countries, failure to comply with immigration laws is treated as a  crime, and a person can be sentences\
    to prison for violating the laws. Some countries welcome immigrants, while others actively discourage them. Though\
@@ -20,21 +20,15 @@
        endorse the term 'climate refugee' and notes that 'it is more accurate to refer to 'persons \
         displaced in the context of disasters and climate change'.</p>",
   text_source: "Introduction to Political_Science",
-  text_licence: "CC-BY",
-  text_url: "https://open.umn.edu/opentextbooks/textbooks/introduction-to-political-science",
-  start: "<h2>Focus of the lesson</h2>\
-    <p><b>In this lesson you will:</b> \
-    <p>Enlarge your background knowledge of political science\
-    <p>Review what you have learnt about Cohesive Devices and Adverbial clauses\
-    <p>Work on words and word combinations widely used in academic discourse", // OPTIONAL field, contains text to be displayed on the lesson's start page
-  wrapup: "Want to update your grammar level? Good to read https://www.thefreedictionary.com/Adverbial-Clauses.htm ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+  text_licence: "unknown - TODO",
+  text_url: "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Political_Science_-_WEB_r2t6Z8P.pdf ",
     tasks: [  // the list of tasks for this lesson
       {
         // task 1: primary reading task
-        name: "Reading 3.1",
+        name: "NAME OF TASK 3.R.1",
         type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
-        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
-        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/fillin gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repitition
         show_lesson_text: true,  // Shall we show the lesson reading text? true/false
         question: "Choose the most appropriate heading for the text",
         choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
@@ -47,20 +41,6 @@
           { text: "Climate Protection", correct: false, feedback: "No, that's incorrect. Read the text again." },
         ]
       }, // end of task 1
-      {
-        // task 2: primary reading task
-        name: "CQ 3",
-        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
-        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
-        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
-        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
-        question: "What conclusions does the writer reach?",
-        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
-          { text: "Immigration laws vary widely from country to country, and violation of these laws can result in criminal charges and imprisonment.", correct: true, feedback: "Yes, that's correct!" },
-          { text: "The Universal Declaration of Human Rights recognizes the right to migrate, thus, all countries foster the movement of people.", correct: false, feedback: "No,that's incorrect. Read the text again. " },
-          { text: "Climate change is likely to become a growing area of political and legal debate.", correct: true, feedback: "Yes, that's correct!." },
-        ]
-      }, // end of task CQ 3
       {
         // task 2: gap filling for Adverbial Clauses
         name: "Cohesive Devices, Adverbial Clauses",
@@ -294,7 +274,7 @@
         primary: true,
         show_lesson_text: false,
         question: "<p>Choose the option that applies:</p>\
-        <p>The measures of the improvement of road infrastructure  and the _1_ in the number of parking areas were also met with strong support.</p>",
+        <p>The measures of the improvement of road infractructure  and the _1_ in the number of parking areas were also met with strong support.</p>",
         gaps: {
           mode: 'select',
           _1_: [

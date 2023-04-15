@@ -1,0 +1,332 @@
+// Lesson ev-018
+// lesson 18
+{
+  name: "Lesson 18",  // the name that's also shown to the users
+  id: "lesson-slot-018upd",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English',
+  text: "<p>Puberty can be a difficult time for adolescents, but it is important for both parents and adolescents to \
+  understand what is happening chemically and physically during puberty. The better kids understand what is really\
+  happening to their bodies, the better they are going to be able to handle it and make the most out of a potentially \
+  difficult time. Parents can play a huge role in how their kids view puberty and how they are going to handle it.\
+  Knowing chemically what hormones are and how they affect the body can be important because it explains what the body \
+  is really going through as it is making these changes. Children and parents do not need to know every little effect \
+  that all the hormones might have throughout the body but having a basic understanding can help them be able to better\
+  respond to their situation. </p>\
+  </p>Parents need to be able to communicate this with their children which can be difficult because it is an awkward \
+  conversation and also they don’t have the same context of puberty as compared to adults. They don’t have the same \
+  context because they haven’t experienced it or been aware of what is happening when they have interacted with older \
+  kids experiencing it themselves. Another reason why it can be hard for parents to teach kids about puberty is that \
+  they probably have never heard of a hormone and didn’t know that the body had a whole list of chemicals that have a \
+  whole list of functions and properties. </p>",
+  text_source: "Puberty and the Importance of Parental Involvement ",
+  text_licence: "CC-BY",
+  text_url: "https://www.oercommons.org/courseware/lesson/60844/overview?section=1 ",
+  start: "<h2>Focus of the lesson</h2> \
+   <p><b>In this lesson you will:</b> \
+    <p>Study up on the topic of puberty and healthy growth \
+    <p>Brush up your knowledge of Prepositional phrases and do the exercises to practise using the prepositions correctly", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Still need help? You can find more examples of prepositions here https://www.eapfoundation.com/vocab/academic/acl/", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 18.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Decide if the information in the statement is True, False or Not Given:\
+        'It is crucial that parents are aware of the physiological and chemical changes that occur after puberty.'",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "False", correct: true, feedback: "The correct answer is False because the text says ‘.. it is\
+          important for both parents and adolescents to understand what is happening chemically and physically during puberty’. " },
+          { text: "Not Given", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task 1
+      {
+        name: "Reading 18.2",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Decide if the information in the statement is True, False or Not Given:\
+        'Hormones might have both positive and negative effects.' ",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "False", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "Not Given", correct: true, feedback: "Yes, because the text in general doesn’t discuss what kind of \
+          effect there can be. " },
+        ],
+      }, // end of task 2
+      {
+        name: "Reading 18.3",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Decide if the information in the statement is True, False or Not Given:\
+        'Parents can have a significant impact on how their children approach and deal with puberty.'",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: true, feedback: "The correct answer is True because the text says ‘Parents can play a\
+          huge role in how their kids view puberty and how they are going to handle it’." },
+          { text: "False", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "Not Given", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task 3
+      {
+        name: "Reading 18.4",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Decide if the information in the statement is True, False or Not Given:\
+        'Teaching children about puberty is easy for parents because they have the same context.'",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "False", correct: true, feedback: "Yes, that's correct ‘Parents need to be able to communicate this \
+          with their children which can be difficult because it is an awkward conversation and also they don’t have the\
+           same context of puberty as compared to adults’." },
+          { text: "Not Given", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task 4
+    {
+        // task 5: CQ 19
+        name: "CQ 6",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question: "Click  the topic sentence of the paragraph below.",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "✓Parents need to be able to communicate this with their children which can be difficult because it is an awkward conversation and also they don’t have the same context of puberty as compared to adults.",
+            correct: true,
+            feedback: "Great job!"
+          },
+          {
+            text: "✓They don’t have the same context because they haven’t experienced it or been aware of what is happening when they have interacted with older kids experiencing it themselves.",
+            correct: false,
+            feedback: "Sorry, that's not right."
+          },
+          {
+            text: " ✓Another reason why it can be hard for parents to teach kids about puberty is that they probably have never heard of a hormone and didn’t know that the body had a whole list of chemicals that have a whole list of functions and properties.  ",
+            correct: false,
+            feedback: "Sorry, that's not right."
+          },
+        ]
+      },
+      {
+        // task 5: gap fill for prepositional phrases
+        name: "Prepositional Phrases",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Choose the correct preposition:</p>\
+        <p>Parents need to be able to communicate this with their children which can be difficult because it is an\
+         awkward conversation and also they don’t have the same context of puberty as compared _1_ adults.",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'from',
+              correct: false,
+              feedback: 'No, that\'s not correct. '
+            },
+            {
+              text: 'to',
+              correct: true,
+              feedback: 'Yes, that\'s correct, it forms the prepositional phrase ‘as compared to’ '
+            },
+          ],
+        },
+      },
+      {
+        // task 6: gap fill for prepositional phrases
+        name: "Prepositional Phrases",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the correct preposition:</p>\
+        <p>Such practices were in contrast _1_ the views that had been adopted and instigated by the early Christian Church.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: ' to',
+              correct: true,
+              feedback: 'Yes, that\'s correct, it forms the prepositional phrase ‘in contrast to’.'
+            },
+            {
+              text: 'of',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 7: gap fill for prepositional phrases
+        name: "Prepositional Phrases",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the correct preposition:</p>\
+        <p>These are important notions in terms _1_ understanding the role of emotions in children.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'of',
+              correct: true,
+              feedback: 'Yes, it forms the prepositional phrase ‘in terms of’.'
+            },
+            {
+              text: 'off',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 8: gap fill for prepositional phrases
+        name: "Prepositional Phrases",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the correct preposition:</p>\
+        <p>It is _1_  virtue of representation that something, that is, forms, are born.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'by',
+              correct: true,
+              feedback: ' Yes, it forms the prepositional phrase ‘by virtue of’.'
+            },
+            {
+              text: 'with',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+        {
+        // task 9: rewriting for prepositions
+        name: "Vocabulary for Lesson 18",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Finish the prepositional phrase with the correct  preposition: 'for consideration_' ",
+        answer: "by"
+      },
+        {
+        // task 10: rewriting for prepositions
+        name: "Vocabulary for Lesson 18",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Finish the prepositional phrase with the correct  preposition: 'in tune_' ",
+        answer: "with"
+      },
+              {
+        // task 11: rewriting for prepositions
+        name: "Vocabulary for Lesson 18",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Finish the prepositional phrase with the correct  preposition: 'for ease_' ",
+        answer: "of"
+      },
+              {
+        // task 12: rewriting for prepositions
+        name: "Vocabulary for Lesson 18",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Finish the prepositional phrase with the correct  preposition: 'in combination_' ",
+        answer: "with"
+      },
+              {
+        // task 13: rewriting for prepositions
+        name: "Vocabulary for Lesson 18",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Finish the prepositional phrase with the correct  preposition: 'by analysis_' ",
+        answer: "of"
+      },
+              {
+        // task 14: rewriting for prepositions
+        name: "Vocabulary for Lesson 18",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Finish the prepositional phrase with the correct  preposition: 'without loss_' ",
+        answer: "of"
+      },
+              {
+        // task 15: rewriting for prepositions
+        name: "Vocabulary for Lesson 18",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Finish the prepositional phrase with the correct  preposition: 'by recourse_' ",
+        answer: "to"
+      },
+              {
+        // task 16: rewriting for prepositions
+        name: "Vocabulary for Lesson 18",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Finish the prepositional phrase with the correct preposition: 'at risk_(abuse/neglect/predators/invasion)' ",
+        answer: "from"
+      },
+              {
+        // task 17: rewriting for prepositions
+        name: "Vocabulary for Lesson 18",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Finish the prepositional phrase with the correct  preposition: 'by courtesy_' ",
+        answer: "of"
+      },
+              {
+        // task 18: rewriting for prepositions
+        name: "Vocabulary for Lesson 18",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Finish the prepositional phrase with the correct  preposition: 'in tandem_' ",
+        answer: "with"
+      },
+              {
+        // task 19: rewriting for prepositions
+        name: "Vocabulary for Lesson 18",
+        type: "V", // vocabulary task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Finish the prepositional phrase with the correct  preposition: 'in collaboration_' ",
+        answer: "with"
+      }
+    ] // end of tasks
+}// end of lesson

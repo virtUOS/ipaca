@@ -11,16 +11,17 @@
 
     {# Load CSS and JavaScript #}
     {% bootstrap_css %}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
     <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static 'learning_environment/ipaca.css' %}">
     <title>iPaca</title>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script src="{% static 'popper.min.js' %}"></script>
+    <script src="{% static 'jquery.min.js' %}"></script>
+    {% bootstrap_javascript %}
     <style>
 
     @media only screen and (min-width: 961px) {
@@ -72,6 +73,9 @@
 {% bootstrap_javascript %}
 
 <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
     {% block js %}
     {% endblock %}
 </script>
