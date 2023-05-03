@@ -167,7 +167,7 @@ class MarkTask():
                 if m in correct:
                     feedback_char = '✓'
                 else:
-                    feedback_char = '✗'
+                    feedback_char = '✗' 
                 feedback_text = re.sub(r"<span data-wordcnt='{}'>([\w-]+)</span>".format(m),
                                        r"<span data-wordcnt='{}' class='mark{}'>\1</span>&nbsp;{}".format(m, i, feedback_char),
                                        feedback_text)

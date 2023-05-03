@@ -7,21 +7,53 @@
 
 {% block content %}
 
-    <div class="card shadow rounded">
-        <div class="card-header">
-            <h2>Sign up</h2>
+     <div class="row flex-nowrap">
+        <div class="col-md-6 col-sm-0 hidden-xs" style="height:100vh;">
+            {# space for left side content #}
+            <div class="row" style="height:100%;">
+            <img src="/static/img/signup_img.svg" class="img-fluid">
+            </div>
         </div>
-        <div class="card-body">
 
-        </div>
-        <div class="container">
-            <form method="post">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button type="submit" class="btn btn-primary">Sign Up</button>
-            </form>
+        <div class="col-md-6" style="height:100vh;">
+            {# space for right side content #}
+            <div style="height:100%; padding-right:2.5em;">
+            <div class="text-right" style="color: #0A125E; margin-top:1.3em;"> Already a user?
+                <a class="link-secondary" href="{% url 'login' %}" style="margin:1vw; color:#009A3F;"> Log in here</a>
+            </div>
+
+            <div class="card" style="background:transparent; border: none; height:90%;">
+                <div style="margin:auto 8%;">
+                <div class="card-header" style="border-bottom:none; background-color:transparent;" align="center">
+                    <h2>Sign up to IPACA</h2>
+                    <span style="font-size: 18px;">Glad to meet you!</span>
+                </div>
+
+                <div class="card-body">
+                    <div class="container">
+                        <form method="post">
+                            {% csrf_token %}
+                            {% bootstrap_form form label_class='form-labels' %}
+                            <div class="form-group">
+                                  <button type="submit" class="btn btn-login btn-signup">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                 </div>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
 
+<style>
+   body{
+    background: url({% static 'img/background_green.svg'%}) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz--background-size:cover;
+    -o--background-size:cover;
+    background-size: cover;
+   }
+</style>
 
 {% endblock %}
