@@ -5,6 +5,7 @@ from learning_environment.its.tasks import TaskTypeFactory
 #from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django_gamification.models import GamificationInterface
 import json5
 
 
