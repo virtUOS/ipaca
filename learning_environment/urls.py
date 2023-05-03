@@ -15,6 +15,7 @@ urlpatterns = [
     path('practice/<int:startlesson>', views.practice, name='practice'),
     path("signup/", SignUpView.as_view(), name="signup"),
 
+
     # Backstage
     path('backstage/tasklist', views.TaskListView.as_view(), name='tasklist'),
     path('backstage/lesson/<int:pk>', views.LessonDetailView.as_view(), name='lessondetail'),
@@ -24,6 +25,8 @@ urlpatterns = [
     path('backstage/series/general', views.general_series, name='general_series'),
     path('backstage/dashboard/learner', views.learner_dashboard, name='learner_dashboard'),
     path('backstage/dashboard/global', views.global_dashboard, name='global_dashboard'),
+    path('backstage/series/academic', views.academic_series, name='academic_series'),
+    path('backstage/series/general', views.general_series, name='general_series'),
     path('backstage/reset', views.learner_reset, name='learner_reset'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

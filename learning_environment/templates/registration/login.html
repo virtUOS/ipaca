@@ -3,23 +3,59 @@
 {% load bootstrap5 %}
 {% load static %}
 
-{% block content %}
-    <div class="card shadow rounded">
-        <div class="card-header">
-            <h2>Log In</h2>
-        </div>
-        <div class="card-body">
 
+
+{% block content %}
+
+    <div class="row flex-nowrap">
+
+        <div class="col-md-6 col-sm-0 hidden-xs" style="height:100vh;">
+            {# space for left side content #}
+            <div class="row" style="height:100%;">
+            <img class="img-fluid" src="/static/img/login_img.svg" >
+            </div>
         </div>
-        <div class="container">
-            <form method="post">
-                {% csrf_token %}
-                {{ form|crispy }}
-                <button type="submit" class="btn btn-primary ">Log In</button>
-            </form>
+
+        <div class="col-md-6" style="height:100vh;">
+            {# space for right side content #}
+            <div style="height:100%; padding-right:2.5em;">
+            <div class="text-right" style="color: #0A125E; margin-top:1.3em;"> New to Ipaca?
+                <a class="link-secondary" href="{% url 'signup' %}" style="margin:1vw; color:#009A3F;"> Register now</a>
+            </div>
+
+            <div class="card" style="background:transparent; border: none; height:90%;">
+                <div style="margin:auto 8%;">
+                <div class="card-header" style="border-bottom:none; background-color:transparent;" align="center">
+                    <h2>Log In to IPACA</h2>
+                    <span style="font-size: 18px;">Glad to see you again!</span>
+                </div>
+
+                <div class="card-body">
+                    <div class="container">
+                        <form method="post">
+                            {% csrf_token %}
+                            {% bootstrap_form form label_class='form-labels' %}
+                            <button type="submit" class="btn btn-login">Log In</button>
+                        </form>
+                    </div>
+                 </div>
+                    </div>
+            </div>
+
+            </div>
         </div>
     </div>
+    </div>
 
-
+<style>
+   body{
+    background: url({% static 'img/background_purple.svg'%}) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz--background-size:cover;
+    -o--background-size:cover;
+    background-size: cover;
+   }
+</style>
 
 {% endblock %}
+
