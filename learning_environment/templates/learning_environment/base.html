@@ -62,11 +62,19 @@
     <div class="container-fluid" style="padding:0;">
     {% block content %}No content{% endblock %}
     </div>
-
-
-
 </main>
-
+    <footer class="footer">
+        <div class="container">
+            {% if request.user.is_authenticated %}
+                Commands:
+                <a href="{%  url 'tasklist' %}">List all tasks</a>  &middot;
+                <a href="{%  url 'lessoncreate' %}">Create new lesson</a>  &middot;
+                <a href="{%  url 'learner_dashboard' %}">Learner Dashboard</a>  &middot;
+                <a href="{%  url 'global_dashboard' %}">Global Dashboard</a>  &middot;
+                <a href="{%  url 'learner_reset' %}">Level reset</a>
+            {% endif %}
+        </div>
+    </footer>
 
 
 
