@@ -227,3 +227,7 @@ class Solution(models.Model):
 class LearnerStatus(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     current_lesson = models.ForeignKey(Lesson, null=True, on_delete=models.SET_NULL)
+
+class GamificationUser(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    interface = models.ForeignKey(GamificationInterface, on_delete=models.CASCADE)

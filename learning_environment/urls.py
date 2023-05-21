@@ -14,6 +14,7 @@ urlpatterns = [
     path('practice/', views.practice, name='practice'),
     path('practice/<int:startlesson>', views.practice, name='practice'),
     path("signup/", SignUpView.as_view(), name="signup"),
+    path('gamification/', views.gamification_view, name='gamification'),
 
 
     # Backstage
@@ -28,6 +29,7 @@ urlpatterns = [
     path('backstage/series/academic', views.academic_series, name='academic_series'),
     path('backstage/series/general', views.general_series, name='general_series'),
     path('backstage/reset', views.learner_reset, name='learner_reset'),
+
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

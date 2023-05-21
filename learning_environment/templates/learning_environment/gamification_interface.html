@@ -1,0 +1,35 @@
+{% extends "learning_environment/base.html" %}
+{% load bootstrap5 %}
+{% load static %}
+{% block content %}
+
+<div style="background-color:#f8f9fa;">
+
+
+<div>
+    <h1>
+        Leaderboard
+    </h1>
+
+    <table>
+        <tr>
+            <th>User</th>
+            <th>Badges</th>
+            <th>Points</th>
+        </tr>
+
+        {% for user in users %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.badges }}</td>
+            <td>{{ user.points }}</td>
+            <td>
+
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</div>
+
+{% endblock %}

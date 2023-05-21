@@ -11,9 +11,10 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import *
-from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel
+from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, GamificationUser
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
+from django_gamification.models import BadgeDefinition, Category, UnlockableDefinition, GamificationInterface
 
 
 class SignUpView(SuccessMessageMixin, generic.CreateView):
@@ -135,6 +136,7 @@ def myhome(request):
     page = 'myhome'  # for highlighting current page
     try:
         request.user.save()
+
     except Profile.DoesNotExist:
         p = Profile(user=request.user)
         p.save()
@@ -293,3 +295,22 @@ def learner_reset(request):
         return redirect("myhome")
     else:
         return redirect("home")
+
+def gamification_view(request):
+        GamificationUser.objects.create(user=request.user, interface=GamificationInterface.objects.create())
+        context={}
+        user_data = []
+        for user in GamificationUser.objects.all():
+            acquired_badges = user.interface.badge_set.filter(acquired=True, revoked=False)
+            award_badge_ids = [b.id for b in user.interface.badge_set.filter(acquired=False)]
+            revoke_badge_ids = [b.id for b in acquired_badges]
+
+            user_data.append({
+                'id': user.id,
+                'badges': ', '.join([b.name for b in acquired_badges]),
+                'points': user.interface.points,
+            })
+
+        context['users'] = user_data
+
+        return render(request, 'learning_environment/gamification_interface.html', context)
