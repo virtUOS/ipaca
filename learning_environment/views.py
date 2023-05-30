@@ -14,7 +14,7 @@ from .forms import *
 from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, GamificationUser
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
-from django_gamification.models import BadgeDefinition, Category, UnlockableDefinition, GamificationInterface
+from django_gamification.models import *
 
 
 class SignUpView(SuccessMessageMixin, generic.CreateView):
@@ -48,9 +48,10 @@ def practice(request, startlesson=None):
 
     # finish a lesson
     elif request.method == 'POST' and 'finish' in request.POST:
-        g_user = GamificationUser.objects.filter(user=request.user)
-        print(g_user.first().interface.points)
-        # g_user.first().interface.points += 100
+        #points for finishing a lesson
+        g_user = GamificationUser.objects.filter(user=request.user).first()
+        PointChange.objects.create(interface=g_user.interface, amount=100)
+
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             # TODO: message
             return redirect('myhome')
