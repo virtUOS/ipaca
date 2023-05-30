@@ -33,7 +33,7 @@ class Learnermodel:
 
         # create message
         if analysis.get('solved', False):
-            context['msg'] = "Congratulation! That's correct!"
+            context['msg'] = "Congratulations! That's correct!"
         else:
             context['msg'] = "Oh no, that's not correct."
         return analysis, context

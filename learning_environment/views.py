@@ -23,6 +23,7 @@ class SignUpView(SuccessMessageMixin, generic.CreateView):
     template_name = "registration/signup.html"
     success_message = "User was created successfully. You may now log in."
 
+
 @login_required
 def practice(request, startlesson=None):
     """Display a task for practicing."""
@@ -47,6 +48,9 @@ def practice(request, startlesson=None):
 
     # finish a lesson
     elif request.method == 'POST' and 'finish' in request.POST:
+        g_user = GamificationUser.objects.filter(user=request.user)
+        print(g_user.first().interface.points)
+        # g_user.first().interface.points += 100
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             # TODO: message
             return redirect('myhome')
@@ -141,6 +145,8 @@ def myhome(request):
         p = Profile(user=request.user)
         p.save()
 
+    if not GamificationUser.objects.filter(user=request.user).exists():
+        GamificationUser.objects.create(user=request.user, interface=GamificationInterface.objects.create())
     # delete chosen lesson from session
     try:
         del request.session['current_lesson']
@@ -297,13 +303,13 @@ def learner_reset(request):
         return redirect("home")
 
 def gamification_view(request):
-        GamificationUser.objects.create(user=request.user, interface=GamificationInterface.objects.create())
+
         context={}
         user_data = []
         for user in GamificationUser.objects.all():
             acquired_badges = user.interface.badge_set.filter(acquired=True, revoked=False)
-            award_badge_ids = [b.id for b in user.interface.badge_set.filter(acquired=False)]
-            revoke_badge_ids = [b.id for b in acquired_badges]
+           # award_badge_ids = [b.id for b in user.interface.badge_set.filter(acquired=False)]
+           # revoke_badge_ids = [b.id for b in acquired_badges]
 
             user_data.append({
                 'id': user.id,
