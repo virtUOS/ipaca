@@ -304,20 +304,21 @@ def learner_reset(request):
         return redirect("home")
 
 def gamification_view(request):
+    """Show user's gamificaition statistics."""
+    context = {}
+    user_data = []
+    for user in GamificationUser.objects.all():
+        acquired_badges = user.interface.badge_set.filter(acquired=True, revoked=False)
+       # award_badge_ids = [b.id for b in user.interface.badge_set.filter(acquired=False)]
+       # revoke_badge_ids = [b.id for b in acquired_badges]
+        level = ProfileSeriesLevel.objects.get(user=user.user).level
+        user_data.append({
+            'id': user.user.username,
+            'level': level,
+            'badges': ', '.join([b.name for b in acquired_badges]),
+            'points': user.interface.points,
+        })
 
-        context={}
-        user_data = []
-        for user in GamificationUser.objects.all():
-            acquired_badges = user.interface.badge_set.filter(acquired=True, revoked=False)
-           # award_badge_ids = [b.id for b in user.interface.badge_set.filter(acquired=False)]
-           # revoke_badge_ids = [b.id for b in acquired_badges]
+    context['users'] = user_data
 
-            user_data.append({
-                'id': user.id,
-                'badges': ', '.join([b.name for b in acquired_badges]),
-                'points': user.interface.points,
-            })
-
-        context['users'] = user_data
-
-        return render(request, 'learning_environment/gamification_interface.html', context)
+    return render(request, 'learning_environment/gamification_interface.html', context)

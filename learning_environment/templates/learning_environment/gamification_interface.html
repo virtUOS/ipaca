@@ -5,31 +5,55 @@
 
 <div style="background-color:#f8f9fa;">
 
+    {% include "learning_environment/header.html" %}
 
-<div>
-    <h1>
-        Leaderboard
-    </h1>
 
-    <table>
-        <tr>
-            <th>User</th>
-            <th>Badges</th>
-            <th>Points</th>
-        </tr>
+<div class="container-fluid" style="background: #F9F9FB;">
+    <div class="row">
 
-        {% for user in users %}
-        <tr>
-            <td>{{ user.id }}</td>
-            <td>{{ user.badges }}</td>
-            <td>{{ user.points }}</td>
-            <td>
-
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
+<div class="col-3" style="background:white; margin-top: 0px; padding-top:12px;">
+    <h2>
+        LEADERBOARD
+    </h2>
 </div>
+
+        <div class="col" style="margin-left: 18px; padding:0;">
+
+            <div class="card" style="margin-top:10px; border-radius:15px; border: none;">
+
+            <div class="card" style="border-radius:15px; width: auto; padding: 25px; border:none;">
+
+
+
+                <table class="table table-borderless">
+                    <tr>
+                        <th>User</th>
+                        <th>Level</th>
+                        <th>Points</th>
+                        <th>Badges</th>
+                    </tr>
+
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.level }}</td>
+                        <td>{{ user.points }}</td>
+                        <td>{{ user.badges }}</td>
+
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
 </div>
+
+</div>
+
+
+
+
+ </div>
+    {% include "learning_environment/footer.html" %}
+
 
 {% endblock %}
