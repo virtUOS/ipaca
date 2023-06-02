@@ -230,4 +230,5 @@ class LearnerStatus(models.Model):
 
 class GamificationUser(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    avatar = models.ImageField(default="avatarb.png")
     interface = models.ForeignKey(GamificationInterface, on_delete=models.CASCADE)
