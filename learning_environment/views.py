@@ -311,7 +311,10 @@ def gamification_view(request):
         acquired_badges = user.interface.badge_set.filter(acquired=True, revoked=False)
        # award_badge_ids = [b.id for b in user.interface.badge_set.filter(acquired=False)]
        # revoke_badge_ids = [b.id for b in acquired_badges]
-        level = ProfileSeriesLevel.objects.get(user=user.user).level
+        try:
+            level = ProfileSeriesLevel.objects.get(user=user.user, series='General').level
+        except ProfileSeriesLevel.DoesNotExist:
+            level = 0
         user_data.append({
             'id': user.user.username,
             'level': level,
@@ -320,5 +323,6 @@ def gamification_view(request):
         })
 
     context['users'] = user_data
+    context['star_counter'] = [1,2,3]
 
     return render(request, 'learning_environment/gamification_interface.html', context)

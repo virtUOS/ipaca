@@ -11,10 +11,11 @@
 <div class="container-fluid" style="background: #F9F9FB;">
     <div class="row">
 
-<div class="col-3" style="background:white; margin-top: 0px; padding-top:12px;">
+<div class="col-3" style="background-image: url('/static/img/gamification_background.svg'); margin-top: 0px; padding-top:12px;">
     <h2>
         LEADERBOARD
     </h2>
+
 </div>
 
         <div class="col" style="margin-left: 18px; padding:0;">
@@ -36,7 +37,15 @@
                     {% for user in users %}
                     <tr>
                         <td>{{ user.id }}</td>
-                        <td>{{ user.level }}</td>
+                        <td>
+                            {% for n in star_counter %}
+                                {% if n <= user.level %}
+                                    <i class="bi bi-star-fill fa-lg" style="color:gold"></i>
+                                    {% else %}
+                                    <i class="bi bi-star-fill fa-lg" style="color:lightgrey"></i>
+                                {% endif %}
+                            {% endfor %}
+                        </td>
                         <td>{{ user.points }}</td>
                         <td>{{ user.badges }}</td>
 
@@ -56,4 +65,6 @@
     {% include "learning_environment/footer.html" %}
 
 
+
 {% endblock %}
+
