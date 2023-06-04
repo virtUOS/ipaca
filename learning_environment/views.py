@@ -64,6 +64,7 @@ def practice(request, startlesson=None):
         try:
             psl = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series)
             psl.level += 1
+            # TODO: add points for completing a level + message
             psl.save()
         except ProfileSeriesLevel.DoesNotExist:
             ProfileSeriesLevel.objects.create(user=request.user, series=current_lesson_series, level=1)
@@ -148,6 +149,7 @@ def myhome(request):
 
     if not GamificationUser.objects.filter(user=request.user).exists():
         GamificationUser.objects.create(user=request.user, interface=GamificationInterface.objects.create())
+    xp = GamificationUser.objects.get(user=request.user).interface.points
     # delete chosen lesson from session
     try:
         del request.session['current_lesson']
@@ -323,6 +325,6 @@ def gamification_view(request):
         })
 
     context['users'] = user_data
-    context['star_counter'] = [1,2,3]
+    context['star_counter'] = [1, 2, 3]
 
     return render(request, 'learning_environment/gamification_interface.html', context)
