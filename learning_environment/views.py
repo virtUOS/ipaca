@@ -15,7 +15,7 @@ from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, Gamific
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 from django_gamification.models import *
-
+import sweetify
 
 class SignUpView(SuccessMessageMixin, generic.CreateView):
     form_class = CustomUserCreationForm
@@ -83,9 +83,11 @@ def practice(request, startlesson=None):
         context.update(learnermodel_context)
         if analysis.get('solved', False):  # we solved a task, so we remove its type from the session todo list
             context['solved'] = True
+            sweetify.success(request, 'You did it', timer=2500)
             if 'current_lesson_todo' in request.session and len(request.session['current_lesson_todo']) > 0:
                 request.session['current_lesson_todo'].pop(0)
             request.session.modified = True
+
         else:
             context['solved'] = False
         lesson = task.lesson

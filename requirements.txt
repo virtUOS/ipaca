@@ -6,5 +6,6 @@ django-crispy-forms
 json5
 fontawesomefree
 Pillow
+sweetify
 
 

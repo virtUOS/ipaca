@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'django_gamification',
+    'sweetify',
 ]
 
 MIDDLEWARE = [
@@ -61,6 +62,8 @@ ROOT_URLCONF = 'ipaca.urls'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+SWEETIFY_SWEETALERT_LIBRARY = 'sweetalert2'
 
 TEMPLATES = [
     {
