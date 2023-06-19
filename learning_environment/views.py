@@ -48,7 +48,7 @@ def practice(request, startlesson=None):
 
     # finish a lesson
     elif request.method == 'POST' and 'finish' in request.POST:
-        #points for finishing a lesson
+        # points for finishing a lesson
         g_user = GamificationUser.objects.filter(user=request.user).first()
         PointChange.objects.create(interface=g_user.interface, amount=100)
 
@@ -64,7 +64,9 @@ def practice(request, startlesson=None):
         try:
             psl = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series)
             psl.level += 1
-            # TODO: add points for completing a level + message
+            # add points for completing a level + congrats message
+            PointChange.objects.create(interface=g_user.interface, amount=250)
+            sweetify.success(request, 'You have unlocked Level '+ str(psl.level) + '!', timer=2500)
             psl.save()
         except ProfileSeriesLevel.DoesNotExist:
             ProfileSeriesLevel.objects.create(user=request.user, series=current_lesson_series, level=1)
@@ -83,7 +85,7 @@ def practice(request, startlesson=None):
         context.update(learnermodel_context)
         if analysis.get('solved', False):  # we solved a task, so we remove its type from the session todo list
             context['solved'] = True
-            sweetify.success(request, 'You did it', timer=2500)
+            sweetify.success(request, 'Well done! Keep up the good work! 🎉', timer=2500)
             if 'current_lesson_todo' in request.session and len(request.session['current_lesson_todo']) > 0:
                 request.session['current_lesson_todo'].pop(0)
             request.session.modified = True
