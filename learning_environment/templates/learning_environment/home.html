@@ -1,41 +1,38 @@
 {% extends "learning_environment/base.html" %}
+{% load static %}
 
 {% block content %}
 
-    <div class="container-fluid ">
-            <div class="d-flex justify-content-center">
-            </div>
-        <div class="card text-center shadow rounded">
-            <div class="card-header">
-                <h1> iPaca: learning academic english</h1>
-            </div>
-            <div class="card-body">
-                <p class="card-text">
-                    iPaca helps you to refine your academic english skills by providing you a carefully selected
-                    little tasks.
-                    By doing a task everyday you can significantly improve your academic english skills and have and
-                    easy
-                    way through your university career.
-                </p>
-                <p class="card-text">
-                    <b>Attention: This is a rudimentary test version that does not contain meaningful content yet!</b>
-                </p>
-            </div>
+    <div class="row flex-nowrap">
+            {# space for left side content #}
+        <div class="col-md-6">
+            <img style="margin-left:1em; width:calc(5em + 3vw);" src="{% static 'img/logo.svg' %}" class="img-fluid" alt="Responsive image">
+            <div class="card" style="background:transparent; border: none; width:100%; height:100vh;">
+                <div style="margin:auto 8%;">
+                         <span><h1 style="margin:0; font-size:calc(3rem + 3vw); "> LEARN</h1>
+                             <h1-var style="font-size:calc(3rem + 3vw);">ENGLISH</h1-var></span>
 
-                <div class="d-flex justify-content-center">
-                    <div class="card-body">
-                        <p class="card-text">
-                            <a class="btn btn-primary" href="{% url 'myhome' %}" style="margin: 1vh"> Begin</a>
-                        </p>
+                        <div class="row">
+                            <div class="d-flex justify-content-between">
+                                <p class="text p-4" style="padding-top: 60px; margin-top: 30px; font-size:calc(1.25rem + 0.5vw);">Are you struggling to improve your academic English skills?  iPaca is here to help! With our carefully selected little tasks, you will be able to hone your skills and build confidence in your reading.</p>
+                            </div>
+
+                        <div class="row">
+                         <div class="d-flex justify-content-start" style="margin-top: 30px;">
+                            <a class="btn btn-start" href="{% url 'login' %}">START</a>
+                         </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-
-
-
         </div>
 
-
-
-
+        <div class="col-md-6 col-sm-0 hidden-xs" style="height:100vh;">
+                {# space for right side content #}
+            <div class="row" style="height:100%;">
+             <img src="{% static 'img/home_background_girl.svg' %}" class="img-fluid">
+            </div>
+        </div>
+    </div>
 {% endblock %}

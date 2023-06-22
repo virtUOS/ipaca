@@ -27,7 +27,7 @@
                     <p>Your gamification level is {{ gamification_level }}.</p>
                     <p>Your active streak is {{ streak }}. </p>
                     {% endif %}
-                    <p>Correctness: {{ tasks_correctness }} </p>
+                    <p>Correctness: {{ tasks_correctness }} %</p>
                 </div>
 
                     <table class="table borderless">
@@ -76,21 +76,3 @@
 
 
 
-    <p>You have worked on {{ num_tasks }} tasks so far.</p>
-    <p>Correctness: {{ tasks_correctness }} %</p>
-    <table class="table">
-        <tr><th>Timestamp</th>
-            <th>Task Name</th>
-            <th>Correct?</th>
-            <th>Analysis</th>
-        </tr>
-    {% for solution in solutions %}
-        <tr>
-            <td>{{ solution.timestamp }}</td>
-            <td>{{ solution.task.name }}</td>
-            <td>{{ solution.solved }}</td>
-            <td>{{ solution.analysis }}</td>
-        </tr>
-    {% endfor %}
-    </table>
-{% endblock %}

@@ -1,0 +1,326 @@
+// Lesson ev-007a
+// a lesson 7a.
+{
+  name: "NAME OF LESSON 7a",  // the name that's also shown to the users
+  id: "lesson-slot-007a",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p> According to most widely accepted models of human memory and cognition, the content stored in people’s brains\
+   can be visualized as a network. Meme states (e.g., facts, memories) do not exist in isolation; rather, they are \
+   connected to one another. Thus, rather than thinking of memories or knowledge as filed in a mental “drawer”, it is more\
+   accurate to think of them as nodes (i.e., connection points) in a web.</p>\
+   </p> These connections are created when a meme or meme state is initially learned, or “encoded” into memory, which \
+   involves physiological changes in the brain (referred to as memory traces). The number and nature of connections \
+   between meme [states] can and does vary. Some meme states have many connections to other meme or meme states, while\
+   others have relatively few. For example, you probably have many different meme states (i.e., ideas, concepts, memories)\
+   connected to the meme of your hometown. In contrast, you probably have relatively few meme states connected to the\
+   meme of Capel, a town in Western Australia (unless that happens to be your hometown!). Generally, it is easier to \
+   access meme states that have more connections, as they have more possible paths leading to them.</p>",
+  text_source: "Message Processing: The Science of Creating Understanding",
+  text_licence: "CC BY",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/message-processing-the-science-of-creating-understanding",
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "NAME OF TASK 7.R.1a",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "In the first paragraph, the other tells us:",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "how memories are created", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "how memories are linked", correct: true, feedback: "The correct answer is B because the text tells us\
+            how memories are connected and stored: ‘it is more accurate to think of them (here: memories) as nodes \
+            (i.e., connection points) in a web’,  but there is nothing about the ways people create them." },
+          { text: "all of the above", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ]
+      }, // end of task 1
+      {
+        // task 2: primary reading task
+        name: "NAME OF TASK 7.R.2a",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "According to the author, meme states refer to:",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "ideas and concepts", correct: false, feedback: "No, this is not the only one correct option." },
+          { text: "facts and memories", correct: false, feedback: "No, this is not the only one correct option." },
+          { text: "all of the above", correct: true, feedback: "Yes! The correct answer is C because the text first\
+           defines meme states  as  ‘facts, memories’  and then, in the second paragraph,  adds ‘ideas, concepts,\
+           memories’ to their definition." },
+        ]
+      }, // end of task 2
+      {
+        // task 3: gap filling for connectives
+        name: "Cohesive Devices 1",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Choose an alternative connective to 'However' to complete the sentence:</p>\
+        <p>_1_ , we were not explicitly taught how to communicate — that is, to share ideas, thoughts, and feelings with\
+        other people through our behavior — just like we are not taught how to breathe.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Firstly',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Due to',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'Nevertheless',
+              correct: true,
+              feedback: 'Yes, that\'s correct!The correct answer is ‘nevertheless’  because both ‘however’ and ‘nevertheless’ are used in a sentence to show contrast. (https://www.merriam-webster.com/dictionary/nevertheless)'
+            },
+            {
+              text: 'In conclusion',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Overall',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'For instance',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'As a result',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Furthermore',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 4: gap filling for connectives
+        name: "Cohesive Devices 2",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose an alternative connective to 'Additionally' to complete the sentence:</p>\
+        <p>_1_ , the code model has received some degree of empirical support.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Firstly',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'Due to',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'Nevertheless',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'In conclusion',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Overall',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'For instance',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'As a result',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Furthermore',
+              correct: true,
+              feedback: 'You got it!The correct answer is  ’furthermore’ because both ‘additionally’ and ‘furthermore’ are used in a sentence to reinforce or add ideas   (https://www.merriam-webster.com/dictionary/furthermore ).'
+            }
+          ],
+        },
+      },
+      {
+        // task 5: gap filling for connectives
+        name: "Cohesive Devices 3",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose an alternative connective to 'For example' to complete the sentence:</p>\
+        <p> _1_ you probably have many different meme states (i.e., ideas, concepts, memories) connected to the meme of\
+        your hometown.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Firstly',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Due to',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'Nevertheless',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'In conclusion',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Overall',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'For instance',
+              correct: true,
+              feedback: 'That\'s correct because both ‘for example’ and ‘for instance’ are used in a sentence to  give examples (https://www.merriam-webster.com/dictionary/for%20instance ).'
+            },
+            {
+              text: 'As a result',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Furthermore',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 6: gap filling for connectives
+        name: "Cohesive Devices 4",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose an alternative connective to 'Consequently' to complete the sentence:</p>\
+        <p>_1_ , messaging in highly reciprocal and synchronous contexts tends to be more dynamic, while messaging in\
+          minimally reciprocal and asynchronous situations tends to be more static.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Firstly',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'Due to',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Nevertheless',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'In conclusion',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Overall',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'For instance',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'As a result',
+              correct: true,
+              feedback: 'Yes, that\'s correct!The correct answer is ‘as a result’ because both ‘consequently’ and ‘as a result’ are used in a sentence to show results (https://www.merriam-webster.com/dictionary/consequently )'
+            },
+            {
+              text: 'Furthermore',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+{  // task 7: mark the words
+        name: "Find the odd one out 1",
+        type: "V",
+        interaction: "MARK",
+        primary: true,
+        show_lesson_text: false,
+        question: "In each line, find the odd one out from the list and mark it by clicking on it:",
+        marktext: "<p>To show sequence we use: firstly, secondly, first, second, third, #1#briefly, then, finally.</p> \
+        <p>To reinforce or add ideas we use: moreover, #2#compared, besides, also, in addition, furthermore.</p>\
+        <p>To give examples we use: for instance, such as, in particular, #3#hence,  for example.</p> \
+        <p>To show cause we use: because, #4#accordingly, due to, as, since.</p> \
+        <p>To show results we use: as a result, consequently, therefore,#5#too.</p> \
+        <p>To show alternatives we use: #6#generally, alternatively, otherwise, instead.</p>\
+        <p>To show contrast we use: nevertheless, #7#similarly, however, nonetheless, on the other hand, in contrast. </p>\
+        <p>To emphasise we say: as a matter of fact,  in fact, #8#likewise, actually, indeed.</p> \
+        <p>To correct we say: rather, to be more precise, #9#notwithstanding.</p> ",
+        markers: {
+          '1': {
+            description: 'does not show sequence',
+          },
+          '2': {
+            description: 'does not add ideas',
+          },
+          '3': {
+            description: 'does not give examples',
+          },
+          '4': {
+            description: 'does not show cause',
+          },
+           '5': {
+            description: 'does not show results',
+          },
+           '6': {
+            description: 'does not show alternatives',
+          },
+           '7': {
+            description: 'does not show contrast',
+          },
+           '8': {
+            description: 'is not used for emphasis',
+          },
+           '9': {
+            description: 'is not used for correction',
+          }
+        } // end of markers list
+ } // end of task 7
+          ]// end of tasks
+
+} // end of lesson

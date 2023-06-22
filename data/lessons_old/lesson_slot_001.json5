@@ -1,0 +1,180 @@
+// Lesson ev-001
+// a new lesson 1.
+{
+  name: "NAME OF LESSON 1a",  // the name that's also shown to the users
+  id: "lesson-slot-001",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: "Academic English",
+  text: "<p>Software systems are part of a world-wide economic system that has been rapidly evolving for several \
+  hundred years; the factors driving economic growth are slowly starting to be understood. Analysis of changes in World\
+  GDP have found cycles, or waves, of economic activity; Kondratieff waves are the longest, with a period of around 50 \
+  years (data from more centuries may uncover a longer cycle), a variety of shorter cycles are also seen, such as the\
+  Kuznets swing of around 20 years. Five Kondratieff waves have been identified with major world economic cycles, e.g.,\
+  from the industrial revolution to information technology.</p> \
+         <p>Until the early 1980s most software systems were developed for large organizations, with over 50% of US \
+  government research funding for mathematics and computer science coming from the Department of Defense, an organization\
+  that built large systems, with time-frames of many years. As customers of software systems, these organizations\
+  promoted a customer orientated research agenda, e.g., focusing on minimizing customer costs and risks, with no interest\
+  in vendor profitability and risk factors. Also, the customer was implicitly assumed to be a large organization.</p>",
+  text_source: "Evidence-based Software Engineering",
+  text_licence: "CC BY-SA",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/evidence-based-software-engineering",
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "NAME OF TASK 1.R.1a",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Tick the correct sentence(s).",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "People have been aware of reasons for economic growth for centuries.",
+            correct: false,
+            feedback: "The correct answer is False because the text says ‘ the factors driving economic growth are slowly starting to be understood’."
+          },
+          {
+            text: "Economic activity cycles or waves have been discovered through analysis of fluctuations in global GDP.",
+            correct: true,
+            feedback: "The correct answer is True because the text says ‘Analysis of changes in World GDP have found cycles, or waves, of economic activity’."
+          },
+          {
+            text: "The Department of Defense is interested in short-term projects.",
+            correct: false,
+            feedback: "The correct answer is False because the text says that the Department of Defense is ‘an organization that built large systems, with time-frames of many years’."
+          },
+          {
+            text: "It was tacitly expected that the client was a major corporation.",
+            correct: true,
+            feedback: "The correct answer is True because the text says ‘the customer was implicitly assumed to be a large organization’."
+          },
+        ]
+      },
+      {
+        // task 2: gap filling for main tenses
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Choose the option that applies:</p>\
+        <p>Software systems are part of a world-wide economic system that _1_ for several hundred years.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'has been rapidly evolving',
+              correct: true,
+              feedback: 'The correct answer is ‘has been rapidly evolving’. In this sentence, Present Perfect Continuous is used and it consists of have/has+ been+ Verb+ing. (https://dictionary.cambridge.org/grammar/british-grammar/present-perfect-continuous-i-have-been-working?q=Present+perfect+continuous+%28I+have+been+working%29'
+            },
+            {
+              text: 'is rapidly evolving',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 3: gap filling for main tenses
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Choose the option that applies:</p>\
+        <p>Nowadays,  the factors driving economic growth_1_ to be understood.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'are slowly starting',
+              correct: true,
+              feedback: 'Yes! The Present Continuous is used when we describe current tendencies or gradual change. (https://dictionary.cambridge.org/grammar/british-grammar/present-continuous-i-am-working?q=Present+continuous+ ),'
+            },
+            {
+              text: 'slowly start',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 4: gap filling for main tenses
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Choose the option that applies:</p>\
+        <p>Software ecosystems have been continually disrupted by improvements to their host, the electronic computer, which_1_ infiltrating the human ecosystem 70+ years ago.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'began',
+              correct: true,
+              feedback: 'Yes! The Past Simple  is used when we speak about past events.  In this sentence, it is indicated by the adverbial phrase ‘70+ years ago’. (https://dictionary.cambridge.org/grammar/british-grammar/past-simple-i-worked?q=past+simple )'
+            },
+            {
+              text: 'begun',
+              correct: false,
+              feedback: 'No, that\'s not correct. This is past participle which is normally used with Perfect Tenses.'
+            },
+          ],
+        },
+      },
+      {
+        // task 5: gap filling for main tenses
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Choose the option that applies:</p>\
+        <p> _1_ today’s widely used languages continue to be reasonably as popular over the next decade? </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Will',
+              correct: true,
+              feedback: 'We use the Future Simple when we  make predictions and state facts about the future events.  In this sentence, it is indicated by the adverbial phrase ‘over the next decade’.  (https://dictionary.cambridge.org/grammar/british-grammar/future-will-and-shall ).'
+            },
+            {
+              text: 'Do',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {  // task 6: mark the words
+        name: "Find the words ",
+        type: "V",
+        interaction: "MARK",
+        primary: true,
+        show_lesson_text: false,
+        question: "In the text, find the words according to the following definitions:",
+        marktext: "Software is a product of human #1#cognitive labour, applying the skills and know-how  #2#acquired \
+        through personal practical experience; it is a craft activity. The expensive and error prone process of learning\
+        through personal experience needs to be replaced by an engineering #3#approach derived from the successes and \
+        mistakes of others.",
+        markers: {
+          '1': {
+            description: 'connected with thinking or conscious mental processes',
+          },
+          '2': {
+            description: 'gradually learnt or gained',
+          },
+          '3': {
+            description: 'a way of considering or doing something ',
+          }
+        } // end of markers list
+      } // end of task 6
+    ] // end of tasks
+
+} // end of lesson

@@ -1,0 +1,321 @@
+// Lesson ev-008
+// lesson 5
+{
+  name: "NAME OF LESSON 8",  // the name that's also shown to the users
+  id: "lesson-slot-008",        // an internal id, will never be shown, but important to identify the lesson
+  series: 'Academic English',
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p>The New Right sees what it calls cultural Marxism - that is, Gramsci's theory that culture must be weaponized\
+         against the upper classes - as one major danger. Many in the New Right feel that the culture has been weaponized\
+         against all they hold dear, just as many in the New Left feel that society has suppressed their values and \
+         principles.</p>\
+         </p>English author and social critic Os Guinness, for example, places special emphasis not only on Gramsci but\
+         also on German-American philosopher and political theorist Herbert Marcuse (1898–1979), who argues in his\
+         1964 book, One-Dimensional Man, that the working classes have become immersed in consumerist culture and,\
+         needing jobs to fulfill their consumerist appetites, have lost their ability to think in a revolutionary \
+         way about their oppression.  Marcuse argued that growing movements in the 1960s for sexual liberation and for\
+         more radical forms of social change represented the forces that could initiate a communist revolution, and he \
+         advocated for dramatic cultural change. As UCLA professor Douglas Kellner remarks, “Marcuse championed . . .\
+         minorities,outsiders, and radical intelligentsia [writers, professors, and artists] and attempted to nourish \
+         oppositional thought and behaviour through promoting radical thinking.” According to Marcuse, this radical\
+         thinking would galvanize calls for a revolutionary overthrow of capitalism — a feat that the working class was \
+         no longer able to effectuate. As a result, Marcuse became one of the most prominent champions of what in the \
+         1960s was termed the counterculture.</p>\
+         </p>Thinkers such as Os Guinness argue that the counterculture has come to represent the dominant ethos of such\
+         prominent and now mainstream culture-influencing arenas as Hollywood and social media, which they see as \
+         routinely mocking and belittling traditional values. Guinness views the use of this increasingly mainstream \
+         counterculture as an attempt to effectuate Marxist objectives. Such a movement, Guinness argues, has created \
+         only rapid cultural and moral decline.</p>\
+         <p>Other members of the New Right use the term cultural Marxism more metaphorically. For example, in a May 2021\
+         speech, the former attorney general for the Trump administration, William Barr, argued that critical race and \
+         gender theory share with Marxism a divisive “us versus them” mentality and an attachment to social change  call\
+         for a workers’ revolution. According to these social conservatives, these features make critical race and \
+         gender theory a socially destructive force, just like Marxism.</p>",
+  text_source: "Introduction to Political Science",
+  text_licence: "OpenStax",
+  text_url: "https://assets.openstax.org/oscms-prodcms/media/documents/Introduction_to_Political_Science_-_WEB_r2t6Z8P.pdf",
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "NAME OF TASK 8.R.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Who supported extremist ideas against particular political system?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Os Guinness", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "Herbert Marcuse", correct: true, feedback: "That's correct because  the text says that Marcuse ‘attempted to nourish oppositional thought and behavior through promoting radical thinking’ and  ‘.... this radical thinking would galvanize calls for a revolutionary overthrow of capitalism’. " },
+          { text: "William Barr", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task 1
+      {
+        name: "NAME OF TASK 8.R.2",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Who accentuated the views of two theorists?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Os Guinness", correct: true, feedback: "That's correct because the text says that Guinness ‘places special emphasis not only on Gramsci but also on German-American philosopher and political theorist Herbert Marcuse’." },
+          { text: "Herbert Marcuse", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "William Barr", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task 2
+      {
+        name: "NAME OF TASK 8.R.3",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Who was concerned about separation in the society?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Os Guinness", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "Herbert Marcuse", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "William Barr", correct: true, feedback: "Yes, that's correct because the text says that Barr  ‘argued that critical race and gender theory share with Marxism a divisive “us versus them ” ......   call for a workers’ revolution’." },
+        ],
+      }, // end of task 3
+      {
+        name: "NAME OF TASK 8.R.4",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "Who mentioned the negative effect of the counterculture?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Os Guinness", correct: true, feedback: "Yes, that's correct because the text says ‘Such a movement, Guinness argues, has created only rapid cultural and moral decline’." },
+          { text: "Herbert Marcuse", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "William Barr", correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ],
+      }, // end of task 4
+
+      {
+        // task 5: matching for parallel structures
+        name: "Parallel Structures",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Match to make a sentence:</p>\
+        <p>English author and social critic Os Guinness, for example, places special emphasis not only on Gramsci _1_ .</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'as many in the New Left feel that society has suppressed their values and principles.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'and began to support its ideas.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'and  have lost their ability to think in a revolutionary way about their oppression.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'and acting.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'but also on German-American philosopher and political theorist Herbert Marcuse. ',
+              correct: true,
+              feedback: 'Yes! This sentence is an example of such literary style as parallelism, in which coordinate ideas are arranged in phrases, sentences, and paragraphs that balance one element with another of equal importance and similar wording. https://www.britannica.com/art/parallelism-literature-and-rhetoric .'
+            },
+          ],
+        },
+      },
+      {
+        // task 6: matching for parallel structures
+        name: "Parallel Structures",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match to make a sentence:</p>\
+        <p>Herbert Marcuse argues that the working classes have become immersed in consumerist culture _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: ' as many in the New Left feel that society has suppressed their values and principles',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'and began to support its ideas',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'and  have lost their ability to think in a revolutionary way about their oppression',
+              correct: true,
+              feedback: 'Yes, that\'s correct because this sentence is another  example of such literary style as parallelism, in which coordinate ideas are arranged in phrases, sentences, and paragraphs that balance one element with another of equal importance and similar wording. https://www.britannica.com/art/parallelism-literature-and-rhetoric '
+            },
+            {
+              text: 'and acting',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'but also on German-American philosopher and political theorist Herbert Marcuse.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 7: matching for parallel structures
+        name: "Parallel Structures",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match to make a sentence:</p>\
+        <p>Many in the New Right feel that the culture has been weaponized against all they hold dear, just _1_ .</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'as many in the New Left feel that society has suppressed their values and principles.',
+              correct: true,
+              feedback: 'This is the correct one because this sentence is another  example of such literary style as parallelism, in which coordinate ideas are arranged in phrases, sentences, and paragraphs that balance one element with another of equal importance and similar wording. https://www.britannica.com/art/parallelism-literature-and-rhetoric.'
+            },
+            {
+              text: 'and began to support its ideas.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'and  have lost their ability to think in a revolutionary way about their oppression.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'and acting.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: ' but also on German-American philosopher and political theorist Herbert Marcuse.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 8: matching for parallel structures
+        name: "Parallel Structures",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Match to make a sentence:</p>\
+        <p>Community responsibilities go beyond thinking _1_ .</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'as many in the New Left feel that society has suppressed their values and principles',
+              correct: false,
+              feedback: ' No, that\'s not correct.'
+            },
+            {
+              text: 'and began to support its ideas.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'and  have lost their ability to think in a revolutionary way about their oppression',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'and acting',
+              correct: true,
+              feedback: 'Yes, that\'s correct because this sentence is another  example of such literary style as parallelism, in which coordinate ideas are arranged in phrases, sentences, and paragraphs that balance one element with another of equal importance and similar wording. https://www.britannica.com/art/parallelism-literature-and-rhetoric.'
+            },
+            {
+              text: 'but also on German-American philosopher and political theorist Herbert Marcuse. ',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+          {
+             // task 9: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p>Choose the option that applies:</p>\
+        <p>1.Political science focuses primarily _1_ these interactions as they involve governments.</p> \
+        <p>2.The lowest rates _2_ female participation in elections are found mainly in countries in the Middle East, \
+        North Africa, and Asia. </p> \
+        <p>3.In the paradox of the tragedy of the commons, those who seek to hoard resources _3_ have less even for themselves.</p> \
+        <p>4.People accepted or rejected these government restrictions depending _4_ the degree to which they accepted \
+        scientific explanations and on their views of individualism and communitarianism.</p> \
+        <p>5.It seeks to blend the common good and individual autonomy while not allowing either to take _5_ over the other.</p> \
+        <p>6.Decisions concerning what to wear, what to study in school, what career to _6_ and what religious beliefs to\
+        instill in one’s children are all privacy issues.</p> \
+        <p>7.Adherents of socialism promote transitioning to a socialist economy, arguing that any changes ushered in by \
+        the center left will be _7_ in a capitalist economic system.</p> \
+        <p>8.It is much safer, followers of Burke and Oakeshott argue, to test the consequences of innovations slowly and \
+        cautiously against the most _8_ insights that have developed among thinkers over the centuries.</p> \
+        <p>9.Still, it does mean there must be _9_ of sufficient harmful effects to justify any restraint.</p> \
+        <p>10.And because most campaign staff are overworked, the opportunities for _10_ and upward mobility are endless.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text: 'in', correct: false, feedback: 'Sorry, try again'},
+            { text: 'on', correct: true, feedback: 'Well done!'},
+          ],
+          _2_: [
+            { text: "of", correct: true, feedback: "Well done!" },
+            { text: "for", correct: false, feedback: "Sorry, try again." },
+          ],
+          _3_: [
+            { text:  "ultimate", correct:  false, feedback:  "Sorry, try again."},
+            { text:  "ultimately", correct:  true, feedback:  "Well done!"},
+          ],
+          _4_: [
+            { text:  "from", correct:  false, feedback: "Sorry, try again."},
+            { text:  "on", correct:  true, feedback: "Well done!"},
+          ],
+          _5_: [
+            { text:  "precedence", correct:  true, feedback: "Well done!"},
+            { text:  "precede", correct:  false, feedback: "Sorry, try again."},
+          ],
+          _6_: [
+            { text:  "pursue", correct:  true, feedback: "Well done!"},
+            { text:  "pursuit", correct:  false, feedback: "Sorry, try again."},
+          ],
+          _7_: [
+            { text:  "inadequately", correct:  false, feedback:  "Sorry, try again."},
+            { text:  "inadequate", correct:  true, feedback:  "Well done! "},
+          ],
+          _8_: [
+            { text:  "fundament", correct:  false, feedback: "Sorry, try again."},
+            { text:  "fundamental", correct:  true, feedback: "Well done!"},
+          ],
+          _9_: [
+            { text:  "proof", correct:  true, feedback: "Well done!"},
+            { text:  "prove", correct:  false, feedback: "Sorry, try again."},
+          ],
+          _10_: [
+            { text:  "grow", correct:  false, feedback: "Sorry, try again."},
+            { text:  "growth", correct:  true, feedback: "Well done!"},
+          ]
+        }
+      }
+    ] // end of tasks
+}// end of lesson

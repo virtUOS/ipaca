@@ -1,0 +1,147 @@
+// Lesson ed-015
+// a lesson 15
+{
+  name: "Lesson 15",  // the name that's also shown to the users
+  id: "lesson-slot-015upd",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English', // the series this lesson belongs to
+  text: "Solutions to Help You Become More Efficient and Productive",
+  text_source: "4 Must-Have Tools for Entrepreneurs",
+  text_licence: "CC-BY",
+  text_url: "https://www.oercommons.org/courseware/lesson/63610 ",
+  start: "<h2>Focus of the lesson</h2> \
+  <p><b>In this lesson  you will:</b> \
+  <p>Re-order paragraphs to polish up your ability to understand the organisation and cohesion of an academic text</p> \
+  <p>Update your understanding of entrepreneurship</p> \
+  <p>Brush up your knowledge of Phrasal Verbs</p> \
+  <p>Work on the key nouns in academic English  and their synonyms</p>", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Want to revise your knowledge on how to build up effective paragraphs? Good to read https://stlcc.edu/student-support/academic-success-and-tutoring/writing-center/writing-resources/topic-sentence-paragraph.aspx ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+  tasks: [  // the list of tasks for this lesson
+    { // task 1: primary reading task
+      name:  "Reading 15.1 ",
+      type: "R",          // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+      interaction: "SORTPAR",
+      primary: true,      // the primary task will be shown first, non-primary tasks are for repetition
+      show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+      question: 'Sort the paragraphs to get a logical order:',
+      paragraphs: [
+        'Being an entrepreneur is no easy task. You need to stay on top of everything to ensure the success of your\
+         business. From day one of operation, there could be a lot of responsibilities on your plate.',
+        'Almost all tasks such as hiring employees, marketing the business, dealing with finances, employee scheduling,\
+         as well as managing teams, may fall under the wide spectrum of entrepreneur’s responsibilities. Keeping up with\
+         the financial side of owning a small business can feel like a never-ending job. From invoices to expenses to \
+         day-to-day accounting and dealing with the IRS, it is a wonder that entrepreneurs ever find the time to deal\
+         with actually producing goods or providing services. Fortunately, there are numerous financing techniques such\
+         as factoring, crowdfunding, getting a personal loan for business, etc..',
+        'Entrepreneurs should take advantage of the tools that are available online. In this digital age, you are on top\
+         of your game if you know how to utilize technology for your benefit. Remember that not all online tools and \
+         software require a subscription. Many are available free of charge—so what are you waiting for?'
+      ],
+      order: '1<3, 2<3'  // 1 before 3 and 2 before 3 (order of 1 and 2 is not specified)
+    },  // end of task 1
+
+      {
+        name: "Phrasal Verbs 1",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p> Choose the correct phrasal verb having the similar meaning to the given word/phrase in brackets:</p> \
+        <p> Almost all tasks such as hiring employees, marketing the business, dealing with finances, employee \
+        scheduling, as well as managing teams, may _1_ the wide spectrum of entrepreneur’s responsibilities (be included).</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text:  "fall for", correct: false, feedback: "No, this phrasal verb has another meaning."},
+            { text:  "fall apart", correct: false, feedback: "No, this phrasal verb has another meaning."},
+            { text:  "fall under", correct: true, feedback: "Yes! That's correct! "},
+            ],
+        }, // end of gap list
+      }, // end of task 2
+          {
+        name: "Phrasal Verbs 2",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p> Choose the correct phrasal verb having the similar meaning to the given word/phrase in brackets:</p> \
+        <p> From invoices to expenses to day-to-day accounting, it's a wonder that entrepreneurs ever find the time to \
+        _1_  actually producing goods or providing services. (to handle) </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text:  "get on with", correct: false, feedback: "No, this phrasal verb has another meaning. "},
+            { text:  "come down with", correct: false, feedback: "No, this phrasal verb has another meaning."},
+            { text:  "deal with", correct: true, feedback: "Yes! That's correct! "},
+            ],
+        }, // end of gap list
+      }, // end of task 3
+          {
+        name: "Phrasal Verbs 3",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p> Choose the correct phrasal verb having the similar meaning to the given word/phrase in brackets:</p> \
+        <p>  _1_  the financial side of owning a small business can feel like a never-ending job. (Balancing) </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text:  "Keeping in with", correct: false, feedback: "No, this phrasal verb has another meaning."},
+            { text:  "Keeping up with", correct: true, feedback: "Yes! That's correct! "},
+            { text:  "Keeping away from", correct: false, feedback: "No, this phrasal verb has another meaning."},
+            ],
+        }, // end of gap list
+      }, // end of task 4
+          {
+        name: "Phrasal Verbs 4",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p> Choose the correct phrasal verb having the similar meaning to the given word/phrase in brackets:</p> \
+        <p>  Between meetings of the Commission, the Council shall make necessary decisions on the duties to be _1_ by\
+        the staff. (conducted) </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text:  "carried out", correct: true, feedback: "Yes! That's correct!"},
+            { text:  "carried away", correct: false, feedback: "No, this phrasal verb has another meaning."},
+            { text: "carried forward", correct: false, feedback: "No, this phrasal verb has another meaning." },
+          ],
+        }, // end of gap list
+      }, // end of task 5
+
+      {  // task 6: mark the words
+        name: "Find the synonyms",
+        type: "V",
+        interaction: "MARK",
+        primary: true,
+        show_lesson_text: false,
+        question: "In the text, find the synonyms for the following words. First, click the highlighted box, then click the word in the text",
+        marktext: "  Being an entrepreneur is no easy #1#task. You need to stay on top of everything to ensure the success\
+        of your business. From day one of #2#operation,  there could be a lot of responsibilities on your plate. \
+              Almost all tasks such as hiring employees, marketing the business, dealing with finances, employee \
+        scheduling, as well as managing teams, may fall under the wide #3#spectrum of entrepreneur’s responsibilities.\
+        Keeping up with the financial side of owning a small business can feel like a never-ending job.\
+              Entrepreneurs should take advantage of the tools that are available online. In this digital  #4#age, \
+        you are on top of your game if you know how to utilize technology for your benefit.",
+        markers: {
+          '1': {
+            description: 'assignment',
+          },
+          '2': {
+            description: 'activity',
+          },
+          '3': {
+            description: 'scope',
+          },
+          '4': {
+            description: 'era',
+          }
+        } // end of markers list
+      } // end of task 6
+    ] // end of tasks
+
+} // end of lesson

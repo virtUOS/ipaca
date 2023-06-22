@@ -9,9 +9,19 @@ import json5
 
 class CustomUserCreationForm(UserCreationForm):
 
+    password1 = forms.CharField(
+        widget=forms.PasswordInput(attrs={'style': 'border-radius: 40px;', 'placeholder': 'Password'})
+    )
+    password2 = forms.CharField(
+        widget=forms.PasswordInput(attrs={'style': 'border-radius: 40px;', 'placeholder': 'Password Confirmation'})
+    )
     class Meta:
         model = User
         fields = ('username', 'password1', 'password2')
+        widgets = {
+            'username': forms.TextInput(attrs={'style': 'border-radius: 40px;', 'placeholder': 'Username'}),
+        }
+
 
 class LessonCreationForm(forms.Form):
     json5 = forms.CharField(widget=forms.Textarea(attrs={'rows': 25}), label="JSON5 code")

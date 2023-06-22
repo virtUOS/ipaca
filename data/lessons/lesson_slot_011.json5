@@ -1,0 +1,225 @@
+// Lesson ed-011
+// a lesson 11.
+{
+  name: "Lesson 11",  // the name that's also shown to the users
+  id: "lesson-slot-011upd",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English', // the series this lesson belongs to
+  text: "<p> The 4 Connections is a research-based equity producing framework that focuses on building intentional \
+  relationships between students and faculty in ways that increase the number of student completions, reduce equity gaps,\
+  and ensure the quality of student learning. It identifies foundational principles faculty with high completion rates \
+  use to dramatically improve the quality of students' experiences in and outside the classroom: Interact with Students\
+  by Name, Check-In Regularly, Schedule 1-to-1 Meetings, Practice Paradox. _1_. Therefore, educators in this faculty \
+  learning community met frequently to learn from and with each other.  In addition to creating a shared understanding \
+  of each of the 4 Connections, members of this FLC intentionally developed the trust and mutual respect necessary to \
+  share the challenges and barriers they experienced. _2_. Along with improved completion rates in their courses, many \
+  members reported experiencing a renewed passion for their work, which they credited to the rejuvenating power of the\
+  relationships they created with their colleagues in the FLC and, of course, with their students! </p>",
+  text_source: "The 4 Connections",
+  text_licence: "CC-BY",
+  text_url: "https://www.oercommons.org/authoring/23053-4-connections/view ",
+  start: "<h2>Focus of the lesson</h2>\
+  <p><b>In this lesson  you will:</b>\
+  <p>Polish up your ability to understand the organisation and cohesion of an academic text \
+  <p>Learn how to improve learning experiences \
+  <p>Brush up your knowledge of Articles, Quantifiers, and Demonstratives \
+  <p>Work on the vocabulary items widely used in academic discourse</p>", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Want to know more about articles? Good to read https://www.butte.edu/departments/cas/tipsheets/grammar/articles.html", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 11.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Choose the supporting sentence for the first gap",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "As educators, our challenge is to use activities in a way that will motivate learners, and help them\
+          to achieve worthwhile learning outcomes. ",
+            correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "They  tested, implemented, and then refined their teaching and assessment practices under each\
+           category.",
+            correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "These four pillars are simple, but because fostering, maintaining, and strengthening relationships \
+          in ways that deepen learning is hard work, the practices are not always easy for faculty to implement.",
+            correct: true, feedback: "Yes, that's correct because it clearly develops the ideas provided in the\
+             first  sentence. Sentence C mentions ‘these four pillars’ and thus is connected with the abovementioned \
+             ideas." },
+        ]
+      }, // end of task 1
+      {
+        // task 2: primary reading task
+        name: "Reading 11.2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Choose the supporting sentence for the second gap",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "As educators, our challenge is to use activities in a way that will motivate learners, and help them\
+            to achieve worthwhile learning outcomes. ",
+            correct: false, feedback: "No, that's incorrect. Try again." },
+          { text: "They  tested, implemented, and then refined their teaching and assessment practices under each \
+            category.",
+            correct: true, feedback: "Yes, that's correct because the text previously mentions ‘members’ and then in \
+            sentence B it develops into  ‘They tested  <...>’. Also, the following sentence continues describing \
+            members’ experiences." },
+          { text: "These four pillars are simple, but because fostering, maintaining, and strengthening relationships \
+            in ways that deepen learning is hard work, the practices are not always easy for faculty to implement.",
+            correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ]
+      }, // end of task 2
+      {
+        // task 3: primary reading task
+        name: "CQ 11",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "What is the purpose of the text?",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "to introduce and explain the 4 Connections framework ",
+            correct: true, feedback: "Yes! You got it!" },
+          { text: "to promote the particular institution",
+            correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "to state that the 4 Connections is the only or best approach to improving  students’ outcomes",
+            correct: false, feedback: "No, that's incorrect. Read the text again." },
+        ]
+      }, // end of task CQ 11
+      {
+        // task 3: gap filling for Articles, Quantifiers, and Demonstratives
+        name: "Articles, Quantifiers, and Demonstratives",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that applies:</p>\
+        <p> The 4 Connections is _1_ research-based equity producing framework that focuses on building intentional\
+        relationships between students and faculty.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'a',
+              correct: true,
+              feedback: 'The correct answer is ‘a’ because because we use a/an with singular countable nouns, here -\
+              ‘framework’ : (https://dictionary.cambridge.org/grammar/british-grammar/a-an-and-the?q=When+do+we+use+articles ).'
+            },
+            {
+              text: 'no article',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ],
+        },
+      },
+      {
+        // task 4: gap filling for Articles, Quantifiers, and Demonstratives
+        name: "Articles, Quantifiers, and Demonstratives",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that applies:</p>\
+        <p>Initially, we replicated our findings of_1_ differential vulnerability in between-individual models.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'no article',
+              correct: true,
+              feedback: 'Yes, that is  correct because because here the noun ‘vulnerability’ is uncountable and is not\
+              used with indefinite articles. We  don’t need the indefinite article here because we do not make a \
+              specific reference.\
+              (https://dictionary.cambridge.org/grammar/british-grammar/a-an-and-the?q=When+do+we+use+articles ).'
+            },
+            {
+              text: 'a',
+              correct: false,
+              feedback: 'No, try again.'
+            },
+          ],
+        },
+      },
+      {
+        // task 5: gap filling for Articles, Quantifiers, and Demonstratives
+        name: "Articles, Quantifiers, and Demonstratives",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that applies:</p>\
+        <p>Beyond materials, we will support educators to advocate for the liberties and rights of learners from _1_ \
+        communities.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'this',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'these',
+              correct: true,
+              feedback: 'The correct answer is ‘these’ because  because ‘these‘ and ‘those‘ are the determines which \
+              are used with plural nouns: (https://dictionary.cambridge.org/grammar/british-grammar/this-that-these-those?q=This+and+these%2C+that+and+those%3A+uses ).'
+            },
+          ],
+        },
+      },
+      {
+        // task 6: gap filling for Articles, Quantifiers, and Demonstratives
+        name: "Articles, Quantifiers, and Demonstratives",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the option that applies:</p>\
+        <p>We have_1_ work to do, and we are identifying new ways to deepen our practices every day.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'a lot of',
+              correct: true,
+              feedback: 'Yes, that is correct because  here ‘work’ is uncountable and we use ‘much‘ or ‘a lot of‘ in \
+              this case. (https://dictionary.cambridge.org/grammar/british-grammar/much-many-a-lot-of-lots-of-quantifiers?q=Much%2C+many%2C+a+lot+of%2C+lots+of%3A+quantifiers ).'
+            },
+            {
+              text: 'many',
+              correct: false,
+              feedback: 'No, we can use ‘many‘ only with countable nouns.'
+            },
+          ],
+        },
+      },
+
+      {  // task 7: mark the words
+        name: "Vocabulary for Lesson 11",
+        type: "V",
+        interaction: "MARK",
+        primary: true,
+        show_lesson_text: false,
+        question: "In the text, find the opposites to the following words.First, click the highlighted box, then click the word from the text:",
+        marktext: "The 4 Connections is a research-based equity producing framework that focuses on building #1#intentional\
+        relationships between students and faculty in ways that increase the number of student completions, #2#reduce \
+        equity gaps, and ensure the quality of student learning. Therefore, educators in this faculty learning community\
+        met  #3#frequently to learn from each other.",
+        markers: {
+          '1': {
+            description: 'accidental',
+          },
+          '2': {
+            description: 'enlarge',
+          },
+          '3': {
+            description: 'rarely ',
+          },
+       }  // end of markers list
+      } // end of task 7
+    ] // end of tasks
+
+} // end of lesson

@@ -4,6 +4,6 @@ django-debug-toolbar
 crispy-bootstrap5
 django-crispy-forms
 json5
-django-gamification
+fontawesomefree
 
 

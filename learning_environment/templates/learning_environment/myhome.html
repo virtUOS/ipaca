@@ -1,63 +1,113 @@
 {% extends "learning_environment/base.html" %}
+{% load static %}
 
 {% block content %}
 
-    <div class="container-fluid ">
+<div id="myhome" style="background-color:#f8f9fa;">
 
+ {% include "learning_environment/header.html" %}
 
+    <div class="container-fluid" style="background: #F9F9FB;">
+        <div class="row flex-nowrap">
 
-            <div class="d-flex justify-content-center">
+        {% include "learning_environment/nav.html" %}
 
-            </div>
+            <div class="col" style="margin-left: 18px; margin-top: 18px; padding:0;">
 
+            {% include "learning_environment/hamburger_offcanvas.html" %}
 
+                {# Dashboard cards #}
+                <div class="card" style="border-radius:15px; padding: 25px; border:none;">
+                    <div class="row" >
+                        <div class="col-md-4 col-md-4 mt-md-0">
+                            <div class="d-flex card-dashboard gradient-yellow" style="width:auto; margin: auto;">
+                                {# card shadow-lg move-on-hover min-height-160 min-height-160 #}
+                                <div class="d-flex card-body align-items-center justify-content-center">
+                                    <span style="font-size: 40px; color: white; text-align: center;position: absolute;">{# TO DO num_hours #}</span>
+                                        <span style ="font-size: 20px; color: black; text-align:center; position: relative; padding-top: 70px;">Hours spent</span>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="card text-center shadow rounded">
-        <div class="card-header">
-            <h1> iPaca: learning academic english</h1>
-        </div>
-                <div class="card-body">
-                    <p class="card-text">
-                        iPaca helps you to refine your academic english skills by providing you a carefully selected
-                        little tasks.
-                        By doing a task everyday you can significantly improve your academic english skills and have and
-                        easy
-                        way through your university career.
-                    </p>
-                    <p class="card-text">
-                        <b>Attention: This is a rudimentary test version that does not contain meaningful content yet!</b>
-                    </p>
+                        <div class="col-md-4 mt-md-0 mt-4">
+                            <div class="d-flex card-dashboard gradient-purple" style="width:auto; margin:auto;">
+                                <div class="d-flex card-body align-items-center justify-content-center">
+                                    <span style="font-size: 40px; color: white; text-align: center; position: absolute;">{{ num_tasks}} </span>
+                                        <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Tasks completed</span>
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mt-md-0 mt-4">
+                            <div class="d-flex card-dashboard gradient-green" style="width:auto; margin:auto; ">
+                                <div class="d-flex card-body align-items-center justify-content-center" >
+                                    <span style="font-size: 40px; color: white; text-align: center; position:absolute;">{{ tasks_correctness }} % </span>
+                                        <span style ="font-size: 20px; color: white; text-align:center; position: relative; padding-top: 70px;">Correct Responses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="d-flex justify-content-center">
-                    <div class="card-body">
-                        <p class="card-text">You are in level {{ psl.level }} for series '{{ series }}'.</p>
-                        {% for level in levels %}
-                            <p class="card-text">
-                                {% if forloop.counter0 == current_level %}
-                                    <a class="btn btn-primary" href="{% url 'practice' %}" style="margin: 1vh">{{ level.lesson_id }}</a>
-                                {% elif forloop.counter0 < current_level %}
-                                {% elif forloop.counter0 < current_level %}
-                                    <button class="btn btn-success" style="margin: 1vh">{{ level.lesson_id }}</button>
-                                {% else %}
-                                    <button class="btn btn-outline-secondary" disabled style="margin: 1vh">{{ level.lesson_id }}</button>
-                                {% endif %}
-                            </p>
-                        {% endfor %}
-                        <p>Switch series:
-                            {% for s in all_lesson_series %}
-                                <a href="?series={{ s }}">{{ s }}</a> {% if not forloop.last %}&middot;{% endif %}
+                {# Display Tasks #}
+
+
+                <div class="card" style="margin-top:10px; border-radius:15px; border: none;">
+
+                    <div class="justify-content-between" >
+                            <div class="me-auto">
+                                <h4 style="padding:20px; font-weight: bold;"> New Lessons </h4>
+                            </div>
+
+                            {% for lesson in new_lessons %}
+
+                                <ul class="ul-3col">
+                                    <li class="list-group-item" style="border:none;">
+
+                                            <span> {{ lesson.id }} - {{ lesson.lesson_id }}</span>
+                                    </li>
+                                    <li class="list-group-item" style="border:none;">{{ lesson.name }}</li>
+                                    <li class="list-group-item" style="border:none;">
+                                        <a class='btn-new' href="{% url 'practice' %}?lesson={{ lesson.id }}" style="text-decoration:none; color: white;">Start</a>
+                                    </li>
+                                </ul>
+
                             {% endfor %}
-                        </p>
+
+                    </div>
+                    <div class="justify-content-between">
+                        <div class="me-auto">
+                            <h4 style="padding:20px; font-weight: bold;"> Review Mistakes </h4>
+                        </div>
+
+                        <div class="justify-content-between" >
+
+                                {% for task in wrong_tasks %}
+
+                                        <ul class="ul-3col">
+                                            <li class="list-group-item" style="border:none; padding:0; margin-left:1em;">
+                                                {% if task.type == 'GS' %}
+                                                    <span><img src="{% static 'img/icon_grammar.svg' %}" class="img-fluid" style=" height:3em;"></span>
+                                                {% elif task.type == 'V' %}
+                                                    <span><img src="{%  static 'img/icon_vocabulary.svg' %}" class="img-fluid" style="height:3em;"></span>
+                                                {% elif task.type == 'R' %}
+                                                    <span><img src="{%  static 'img/icon_reading.svg' %}" class="img-fluid" style="height:3em;"></span>
+                                                {% endif %}
+                                                {{ task.id }}</li>
+                                            <li class="list-group-item" style="border:none; vertical-align: middle;">{{ task.name }}</li>
+                                            <li class="list-group-item" style="border:none">
+                                                <a class='btn-redo' href="{% url 'practice' %}?redo={{ task.id }}&review=True" style="text-decoration:none; color: white;">Retry</a>
+                                            </li>
+                                        </ul>
+
+                                {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-
-
-
+        </div>
+{% include "learning_environment/footer.html" %}
+</div>
 
 {% endblock %}

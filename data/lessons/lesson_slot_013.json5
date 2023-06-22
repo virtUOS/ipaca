@@ -1,0 +1,478 @@
+// Lesson ed-013
+// a lesson 13
+{
+  name: "Lesson 13",  // the name that's also shown to the users
+  id: "lesson-slot-013upd",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English', // the series this lesson belongs to
+  text: "<p> A. Database management systems must provide the ability to define and enforce certain constraints to ensure\
+         that users enter valid information and maintain data integrity. A database constraint is a restriction or rule\
+         that dictates what can be entered or edited in a table such as a postal code using a certain format or adding\
+         a valid city in the City field. There are many types of database constraints. Data type, for example,\
+         determines the sort of data permitted in a field, for example numbers only. Data uniqueness such as the primary\
+         key ensures that no duplicates are entered. Constraints can be simple (field based) or complex (programming).</p>\
+         <p> B. Not all users of a database system will have the same accessing privileges. For example, one user might\
+         have read-only access (i.e., the ability to read a file but not make changes), while another might have read\
+         and write privileges, which is the ability to both read and modify a file. For this reason, a database\
+         management system should provide a security subsystem to create and control different types of user accounts \
+         and restrict unauthorized access. </p>\
+         <p> C. Another advantage of a database management system is how it allows for data independence. In other words,\
+         the system data descriptions or data describing data (metadata) are separated from the application programs. \
+         This is possible because changes to the data structure are handled by the database management system and are \
+         not embedded in the program itself. </p>",
+  text_source: "Database Design - 2nd Edition by Adrienne Watt and Nelson Eng",
+  text_licence: "CC-BY",
+  text_url: "https://www.oercommons.org/courses/database-design-2nd-edition-2/view",
+  start: "<h2>Focus of the lesson</h2> \
+    <p><b>In this lesson you will:</b> \
+    <p>Improve your background knowledge of database management systems \
+    <p>Brush up your understanding of Modals \
+    <p>Continue working on words and word combinations widely used in academic discourse", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Want to read more about this topic? Good to read https://writingcenter.unc.edu/tips-and-tools/modals/", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "CQ 13",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "Which of the following is NOT mentioned in the text? ",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Data independence", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "Data uniqueness", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "Data integrity", correct: false, feedback: "No, that's incorrect. Read the text again." },
+          { text: "Data analysis", correct: true, feedback: "Yes, the text does not mention any data analysis. It does\
+           mention data independence in the third paragraph, and data integrity and  data uniqueness in the first paragraph." },
+        ]
+      },
+       {  // task 2: mark the paragraphs
+        name: "Find the correct heading",
+        type: "R",
+        interaction: "MARK",
+        primary: true,
+        show_lesson_text: false,
+        question: "Match the correct headings for the paragraphs below. First, click the highlighted box, then click the letter in the text",
+        marktext: "#1#A.    Database management systems must provide the ability to define and enforce certain \
+        constraints to ensure that users enter valid information and maintain data integrity. A database constraint is\
+        a restriction or rule that dictates what can be entered or edited in a table such as a postal code using a \
+        certain format or adding a valid city in the City field. There are many types of database constraints. Data \
+        type, for example, determines the sort of data permitted in a field, for example numbers only. Data uniqueness \
+        such as the primary key ensures that no duplicates are entered. Constraints can be simple (field based) or \
+        complex (programming).\
+        #2#B.   Not all users of a database system will have the same accessing privileges. For example, one user might\
+        have read-only access (i.e., the ability to read a file but not make changes), while another might have read\
+        and write privileges, which is the ability to both read and modify a file. For this reason, a database\
+        management system should provide a security subsystem to create and control different types of user accounts \
+        and restrict unauthorized access.\
+        #3#C.   Another advantage of a database management system is how it allows for data independence. In other words,\
+        the system data descriptions or data describing data (metadata) are separated from the application programs. \
+        This is possible because changes to the data structure are handled by the database management system and are \
+        not embedded in the program itself.",
+        markers: {
+          '1': {
+            description: 'Data independence',
+          },
+          '2': {
+            description: 'Enforcement of integrity constraints',
+          },
+          '3': {
+            description: 'Restriction of unauthorized access',
+          },
+
+        } // end of markers list
+
+        }, // end of task 2
+      {
+        // task 3: multiple choice for modals
+        name: "Modals",
+        type: "GS", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question: "Choose ALL the options that apply (there can be more than ONE correct answer)",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "Database management systems must provide the ability to define and enforce certain constraints to \
+            ensure that users enter valid information and maintain data integrity.",
+            correct: true,
+            feedback: "Yes! The correct answers are  ‘must’ and ‘should’. Both modals are used to indicate obligation or advice"
+          },
+          {
+            text: "Database management systems should provide the ability to define and enforce certain constraints to\
+            ensure that users enter valid information and maintain data integrity.",
+            correct: true,
+            feedback: "Yes! The correct answers are  ‘must’ and ‘should’. Both modals are used to indicate obligation or advice."
+          },
+          {
+            text: "Database management systems has to provide the ability to define and enforce certain constraints to\
+            ensure that users enter valid information and maintain data integrity.",
+            correct: false,
+            feedback: "No, the form ‘has to’ cannot be used here because ‘systems’ are plural."
+          },
+        ]
+      },
+      {
+        // task 4: multiple choice for modals
+        name: "Modals",
+        type: "GS", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question: "Choose ALL the options that apply (there can be more than ONE correct answer)",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: " It is difficult for new applications to retrieve the appropriate data, which might be \
+            stored in various files.",
+            correct: true,
+            feedback: "Yes! All three are correct. We use these modals to indicate the degrees of possibility. "
+          },
+          {
+            text: " It is difficult for new applications to retrieve the appropriate data, which may be stored in \
+            various files.",
+            correct: true,
+            feedback: "Yes! All three are correct. We use these modals to indicate the degrees of possibility."
+          },
+          {
+            text: " It is difficult for new applications to retrieve the appropriate data, which could be stored in\
+            various files..",
+            correct: true,
+            feedback: "Yes! All three are correct. We use these modals to indicate the degrees of possibility."
+          },
+        ]
+      },
+      {
+        // task 5: multiple choice for modals
+        name: "Modals",
+        type: "GS", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question: "Choose ALL the options that apply (there can be more than ONE correct answer)",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "The axiom of augmentation says that every non-key attribute must being fully dependent on the PK.",
+            correct: false,
+            feedback: "No. We should use ‘zero’ (or ‘bare’) infinitive after ‘must’."
+          },
+          {
+            text: "The axiom of augmentation says that every non-key attribute must been fully dependent on the PK.",
+            correct: false,
+            feedback: "No. We should use ‘zero’ (or ‘bare’) infinitive after ‘must’. "
+          },
+          {
+            text: "The axiom of augmentation says that every non-key attribute must be fully dependent on the PK.",
+            correct: true,
+            feedback: "Yes! This is correct. "
+          },
+        ]
+      },
+      {
+        // task 6: multiple choice for modals
+        name: "Modals",
+        type: "GS", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false,  // Shall we show the lesson reading text? true/false
+        question: "Choose ALL the options that apply (there can be more than ONE correct answer)",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "Everything else should be derived from other tables.",
+            correct: true,
+            feedback: "Yes! That is correct"
+          },
+          {
+            text: "Everything else have to be derived from other tables.",
+            correct: false,
+            feedback: "No. ‘Everything’ is followed by a singular verb, so ‘have’ and ‘need’ cannot be used here.  "
+          },
+          {
+            text: "Everything else need to be derived from other tables.",
+            correct: false,
+            feedback: "No. ‘Everything’ is followed by a singular verb, so ‘have’ and ‘need’ cannot be used here.  "
+          },
+        ]
+      },
+      {
+        // task 7: vocabulary for lesson 13
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "Match the beginning and ending of the sentence:</p>\
+        <p> Data isolation is a property that determines when and how changes made by one operation become_1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'the information they hold. ',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'version, including the print-on-demand copy.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'role in this process as they overview the business, legal and ethical issues within the \
+              organization that impact on the data requirements.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'the task, examine the results, and then reset the job code to its original value.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'visible to other concurrent users and systems.',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'for making sure that the database is restored to its original state.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ]
+        }
+      },
+
+      {
+        // task 8: vocabulary for lesson 13
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the beginning and ending of the sentence:</p>\
+        <p> Because of the mechanical nature of databases, they have terrific power to manage and process _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'the information they hold.',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+            {
+              text: 'version, including the print-on-demand copy.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'role in this process as they overview the business, legal and ethical issues within the\
+              organization that impact on the data requirements.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'the task, examine the results, and then reset the job code to its original value.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'visible to other concurrent users and systems. ',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for making sure that the database is restored to its original state.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ]
+        }
+      },
+      {
+        // task 9: vocabulary for lesson 13
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the beginning and ending of the sentence:</p>\
+        <p> If a computer system fails in the middle of a complex update process, the recovery subsystem is \
+        responsible_1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'the information they hold.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'version, including the print-on-demand copy.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'role in this process as they overview the business, legal and ethical issues within the\
+              organization that impact on the data requirements.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'the task, examine the results, and then reset the job code to its original value.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'visible to other concurrent users and systems. ',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for making sure that the database is restored to its original state.',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+          ]
+        }
+      },
+      {
+        // task 10: vocabulary for lesson 13
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the beginning and ending of the sentence:</p>\
+        <p> The files on our website always reflect the most recent _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'the information they hold.',
+              correct: false,
+              feedback: 'No, that\'s not correct!'
+            },
+            {
+              text: 'version, including the print-on-demand copy.',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'role in this process as they overview the business, legal and ethical issues within the\
+              organization that impact on the data requirements.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'the task, examine the results, and then reset the job code to its original value.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'visible to other concurrent users and systems. ',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for making sure that the database is restored to its original state.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ]
+        }
+      },
+      {
+        // task 11: vocabulary for lesson 13
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the beginning and ending of the sentence:</p>\
+        <p> The data administrator plays a key _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'the information they hold.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'version, including the print-on-demand copy.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'role in this process as they overview the business, legal and ethical issues within the\
+              organization that impact on the data requirements.',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+            {
+              text: 'the task, examine the results, and then reset the job code to its original value.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'visible to other concurrent users and systems. ',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for making sure that the database is restored to its original state.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ]
+        }
+      },
+      {
+        // task 12: vocabulary for lesson 13
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p> Match the beginning and ending of the sentence:</p>\
+        <p> After you have completed_1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'the information they hold.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'version, including the print-on-demand copy.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'role in this process as they overview the business, legal and ethical issues within the\
+              organization that impact on the data requirements.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'the task, examine the results, and then reset the job code to its original value.',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+            {
+              text: 'visible to other concurrent users and systems. ',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'for making sure that the database is restored to its original state.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ]
+        }
+      },
+
+     ] // end of tasks
+
+} // end of lesson

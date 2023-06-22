@@ -3,33 +3,51 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+{% block header %}
+{% include "learning_environment/header.html" %}
+{% endblock %}
+
 
 {% block content %}
 
-    <h1>
-        {{ lesson.name }} {% if task %}&mdash; {{ task.get_type_display }} task {% endif %}
-    </h1>
+    <div style="background:white; padding: 5px 20px; margin:0;">
+    <h3 style="">
+        {{ lesson.name }}{% if task %}: {{ task.get_type_display }} Task {% endif %}
+    </h3>
+    <a style="color:lightgray;" href="{% url 'myhome' %}" class="link-dark rounded"> <i class="bi bi-arrow-left-circle"></i> Back to homepage</a>
+    </div>
 
     {# Display "Start lesson" screen #}
     {% if mode != 'result' and state == 'START' %}
-        <p>&nbsp;</p>
-        {% if lesson.start %}
-            <div>
-                {{lesson.start}}
+
+
+        <div class="row align-items-center justify-content-center" style="background:transparent;">
+        <div class="card-choice">
+            {% if lesson.start %}
+            <div style="text-align:center">
+                {{lesson.start|safe}}
             </div>
-        {% endif %}
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
+            {% endif %}
+            <h2 class="text-center">Are you ready? Let's get started!</h2>
+            <p>&nbsp;</p>
         <form method="post">
             {% csrf_token %}
             <input type="hidden" name="lesson" value="{{ lesson.id }}">
             <input type="hidden" name="start" value="start">
-            <button type="submit" class="btn btn-primary">Start lesson</button>
+            <div style="width:33%; margin:0 auto;">
+            <button type="submit" class="btn btn-primary btn-padding" style="width:100%;">Start lesson</button>
+            </div>
         </form>
+        </div>
+        </div>
+
+        <p>&nbsp;</p>
+
     {# Display "Lesson Finished" screen #}
     {% elif mode != 'result' and state == 'WRAPUP' %}
-        <h2>Congratulations! You finished the lesson!</h2>
+        <div class="row align-items-center justify-content-center" style="background:transparent;">
+        <div class="card-choice">
+        <h2 class="text-center">Congratulations! You finished the lesson!</h2>
         <p>&nbsp;</p>
         {% if lesson.wrapup %}
             <div>
@@ -37,52 +55,95 @@
             </div>
         {% endif %}
         <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
+
         <form method="post">
             {% csrf_token %}
             <input type="hidden" name="lesson" value="{{ lesson.id }}">
             <input type="hidden" name="finish" value="finish">
-            <button type="submit" class="btn btn-primary">Finish!</button>
+            <div style="width:33%; margin:0 auto;">
+            <button type="submit" class="btn btn-primary btn-padding" style="width:100%; background: linear-gradient(294.49deg, rgba(132, 110, 255, 0.8) -122.6%, rgba(0, 156, 2, 0.8) 91.23%, rgba(255, 191, 199, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);">Exit</button>
+            </div>
         </form>
+        </div>
+        </div>
     {% else %}
         {% if task.paragraph_shown %}
             {{ lesson.paragraph }}
         {% endif %}
-        <div class="container-fluid">
-            <div class="justify-content-center">
-                <div class="row">
-                    <div class="card " style=" margin-top: 5vh">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ task.title }} </h5>
-                            {% if msg %}
-                                <p class="card-text" style="color:red">{{ msg }}</p>
-                            {% endif %}
+
+            <div class="justify-content-center" style="background:transparent;">
+
+ {#                  <div class="card " style=" padding: 1em;">#}
+ {#                    <div class="card-body" style="margin: 0 auto;">#}
+
+                            {# LESSON TEXT #}
+                    <div class="row align-items-center" style="background:transparent;">
                             {% if task.show_lesson_text %}
-                                <div class="lesson-text">
-                                    <blockquote>
-                                        {{ task.lesson.text | safe }}
-                                        <cite>{{ task.lesson.text_source }}</cite>
-                                    </blockquote>
-                                </div>
-                                <h4>Lesson reading text</h4>
+
+                            <h5 class="card-title" style="margin:0;">{{ task.title }}</h5>
+
+                                 <div class="col-md-6 col-xs-12 my-auto" style="background:white; min-height: 100vh;">
+                                    <div class="lesson-text" style="padding:30px; border:none; font-size:18px; border-radius:0;">
+
+                                            {{ task.lesson.text | safe }}
+                                            <cite>{{ task.lesson.text_source }}</cite>
+                                    </div>
+                                 </div>
                             {% endif %}
+                        <div class="col">
+
+                        <div class="card-choice">
+                            {% if solved and msg %}
+                                <p class="card-text" style="color: green;">{{ msg }}</p>
+                            {% elif msg %}
+                                <p class="card-text" style="color: red;">{{ msg }}</p>
+                            {% endif %}
+
                             {% include task.get_template %}
+
                             {% if mode == 'result' %}
-                                <p style="margin-top: 2em">
+                                <div style="width:33%; margin:0 auto;">
+                                {% if review %}
                                     {% if not solved %}
-                                        <a href="{% url 'practice' %}" class="btn btn-primary">Try again</a> &nbsp;
+                                        <a href="{% url 'practice' %}?redo={{ task.id }}&review=True" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(110, 255, 114, 0.8) -122.6%, rgba(0, 151, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);">Try again</a> &nbsp;
                                     {% else %}
-                                        <a href="{% url 'practice' %}" class="btn btn-primary">Go on!</a>
+                                        <a href="{% url 'myhome' %}" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(132, 110, 255, 0.8) -122.6%, rgba(0, 156, 2, 0.8) 91.23%, rgba(255, 191, 199, 0.8) 175.87%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);">Back</a>
                                     {% endif %}
-                                </p>
+                                {% else %}
+                                    {% if not solved %}
+                                        <a href="{% url 'practice' %}?redo={{ task.id }}" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(110, 255, 114, 0.8) -122.6%, rgba(0, 151, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);">Try again</a> &nbsp;
+                                    {% else %}
+                                        <a href="{% url 'practice' %}" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(132, 110, 255, 0.8) -122.6%, rgba(0, 156, 2, 0.8) 91.23%, rgba(255, 191, 199, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);">Go on</a>
+                                    {% endif %}
+                                {% endif %}
+                                </div>
                             {% endif %}
+                        </div>
+
+                        </div>
+
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
     {% endif %}
+
+<style>
+   body{
+    background: url({% static 'img/task_background.svg'%}) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz--background-size:cover;
+    -o--background-size:cover;
+    background-size: cover;
+   }
+
+</style>
+
 {% endblock %}
 
 {% block js %}

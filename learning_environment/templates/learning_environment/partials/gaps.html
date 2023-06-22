@@ -1,4 +1,5 @@
-{% if mode == 'solve' %}
+
+    {% if mode == 'solve' %}
     <form method="post" class="form-inline">
         {% csrf_token %}
         <input type="hidden" name="task" value="{{ task.id }}">
@@ -18,8 +19,8 @@
                 {{ part.text|safe }}
             {% endif %}
         {% endfor %}
-        <div style="margin-top: 2em">
-            <button type="submit" class="btn btn-secondary">Check!</button>
+        <div style="width:33%; margin:0 auto;">
+            <button type="submit" class="btn" style="width: 100%; color: white; background: linear-gradient(294.49deg, rgba(255, 110, 127, 0.8) -122.6%, rgba(28, 0, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);">Check!</button>
         </div>
     </form>
 {% else %}
@@ -38,7 +39,11 @@
             {% if part.solution and part.solution != '---' %}
                 {% for o in part.options %}
                     {% if o.text == part.solution %}
-                        <span class="feedbackbox"><i>{% if part.solved %}✓{% else %}✗{% endif %} {{ o.feedback }}</i></span>
+                        {% if part.solved %}
+                            <span class="btn btn-success" style="display:inline" data-toggle="tooltip" data-placement="top" title="{{ o.feedback }}"> ✓ </span> &nbsp;
+                        {% else %}
+                            <span class="btn btn-danger" style="display:inline" data-toggle="tooltip" data-placement="top" title="{{ o.feedback }}"> ✗ </span> &nbsp;
+                        {% endif %}
                     {% endif %}
                 {% endfor %}
             {% endif %}
@@ -48,3 +53,28 @@
     {% endfor %}
 
 {% endif %}
+
+
+<style>
+    .card-choice{
+        width: 80%;
+        margin: 8% auto;
+        height: fit-content;
+        border-radius: 2.5em;
+        padding: 2em;
+    }
+
+    p{
+        font-size:18px;
+    }
+
+    .form-select{
+        max-width:fit-content;
+        border-radius: 2em;
+        font-size: 16px;
+        
+    }
+
+
+
+</style>

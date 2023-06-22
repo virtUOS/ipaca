@@ -28,6 +28,12 @@ class ShortTask():
         else:
             analysis['solved'] = False
 
+# Levenshtein Distance
+# Question: "Tim has drawn a picture."
+# answer: "The picture !was! !drawn! by Tim."
+
+# Short Answer Grading
+        context['feedback'] = "hallo"
         context['mode'] = "result"  # display to try again
         return (analysis, context)
 
