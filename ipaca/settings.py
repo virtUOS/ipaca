@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'debug_toolbar',
     "crispy_forms",
     "crispy_bootstrap5",
-    "django_gamification",
 ]
 
 MIDDLEWARE = [

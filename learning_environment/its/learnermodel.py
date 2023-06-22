@@ -47,10 +47,6 @@ class Learnermodel:
         global LEVEL_XP
         global today
 
-        # add global variables
-        global LEVEL_XP
-        global today
-
         # Save solution and analysis to database
         solution = Solution(user=self.learner, task=task, solved=analysis.get('solved', False), analysis=analysis)
         solution.save()
