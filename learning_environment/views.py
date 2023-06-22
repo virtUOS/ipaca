@@ -205,7 +205,11 @@ def learner_dashboard(request):
     current_XP = request.user.profile.total_XP
     daily_streak = request.user.profile.streak_counter
     solutions = Solution.objects.filter(user=request.user).order_by('timestamp')  # all solutions from current user
-    num_tasks = solutions.count()  # how many tasks did this user try
+    num_tasks = solutions.count()  # how tasks did this user try
+    total_XP = Profile.objects.get(user=request.user).total_XP
+    gamification_level = Profile.objects.get(user=request.user).gamification_level
+    gamification_active = Profile.objects.get(user=request.user).gamification_active
+    streak = Profile.objects.get(user=request.user).streak_counter
     correct_solutions = Solution.objects.filter(user=request.user, solved=True).count()  # how many of them were correct?
     if num_tasks > 0:  # calculate percentage of correct tasks (or 0 if no tasks)
         tasks_correctness = correct_solutions / num_tasks * 100.0

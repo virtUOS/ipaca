@@ -7,8 +7,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 import json5
 import random
-from django_gamification.models import BadgeDefinition, Category
-
+import datetime
 
 class User(AbstractUser):
     """
@@ -26,16 +25,15 @@ class Profile(models.Model):
     total_XP = models.IntegerField(default=0)
     streak_counter = models.IntegerField(default=1)
     last_active = models.DateField(null=True)
-    # badges = models.ForeignKey(Badge, on_delete=models.CASCADE) # make this a list?
-
+    
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     """Automatically create a profile if a user is created"""
     # randomly assign whether gamification is active or not
     if created:
         Profile.objects.create(user=instance,
-                               gamification_active=bool(random.randint(0, 1)))
-
+                               gamification_active=bool(random.randint(0, 1)),
+                               last_active=datetime.date.today())
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):

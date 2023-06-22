@@ -6,7 +6,6 @@ The learner model maintains a model about a given learner's competencies.
 
 from .tasks import TaskTypeFactory
 from learning_environment.models import Solution, Profile
-from django_gamification.models import BadgeDefinition, Category
 import datetime
 from datetime import timedelta, date
 
@@ -48,10 +47,13 @@ class Learnermodel:
         global LEVEL_XP
         global today
 
+        # add global variables
+        global LEVEL_XP
+        global today
+
         # Save solution and analysis to database
         solution = Solution(user=self.learner, task=task, solved=analysis.get('solved', False), analysis=analysis)
         solution.save()
-        
         # award XP for correct solutions, and a few XP for wrong solutions
         if analysis.get('solved', False):
             # award user XP
@@ -60,14 +62,6 @@ class Learnermodel:
 
             # check if the last solution was handed in yesterday, if yes increase the daily streak counter by 1
             # if no, set the last active time to now and reset the daily streak to 1
-
-            #if today - currentUser.last_active > timedelta(days=1) and today - currentUser.last_active < timedelta(days=0):
-                #currentUser.last_active = datetime.date.today()
-                #currentUser.streak_counter = 1
-
-            #elif today - currentUser.last_active == timedelta(days=1):
-                #currentUser.last_active = datetime.date.today()
-                #currentUser.streak_counter += 1
 
             if currentUser.last_active + timedelta(days=1) == today:
                 currentUser.last_active = datetime.date.today()
