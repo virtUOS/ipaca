@@ -401,6 +401,12 @@ nav .nav-active {
     border-radius: 60px;
 }
 
+.progress-icon{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+}
+
 p .card-text{
     font-weight: bold;
     font-size: 18px;

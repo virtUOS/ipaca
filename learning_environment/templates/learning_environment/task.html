@@ -131,12 +131,12 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);">Try again</a> &nbsp;
 </div>
                             <div class="col-1" style="margin:auto;">
 
-<div class="progress-container d-flex flex-column justify-content-between" style="justify-content: center;align-items: center;padding: 20px 10px;width: 40px;height: 305px;background: rgba(255, 255, 255, 0.7);border-radius: 60px;">
+<div class="progress-container d-flex flex-column justify-content-between">
     {% for n in request.session.ntask_todo %}
         {% if n in request.session.current_lesson_todo %}
-      <div class="progress-icon" style="width: 1.5em;height: 1.5em;background: #FFFFFF; border-radius: 50%; margin:auto;"></div>
+            <div class="progress-icon" style="background: #FFFFFF;"></div>
         {% else %}
-            <div class="progress-icon" style="width: 1.5em;height: 1.5em;background: linear-gradient(294.49deg, rgba(228, 255, 110, 0.8) -122.6%, rgba(0, 156, 2, 0.8) 91.23%, rgba(255, 191, 199, 0.8) 175.87%), linear-gradient(0deg, #8E8E8E, #8E8E8E), #FFFFFF;; border-radius: 50%; margin:auto;"></div>
+            <div class="progress-icon" style="background: linear-gradient(294.49deg, rgba(228, 255, 110, 0.8) -122.6%, rgba(0, 156, 2, 0.8) 91.23%, rgba(255, 191, 199, 0.8) 175.87%), linear-gradient(0deg, #8E8E8E, #8E8E8E), #FFFFFF;;"></div>
         {% endif %}
     {% endfor %}
 
