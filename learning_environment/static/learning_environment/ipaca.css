@@ -390,6 +390,17 @@ nav .nav-active {
     margin: 1em auto;
 }
 
+.progress-container{
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+
+    width: 40px;
+    height: 305px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 60px;
+}
+
 p .card-text{
     font-weight: bold;
     font-size: 18px;

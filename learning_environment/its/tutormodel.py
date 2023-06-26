@@ -44,6 +44,7 @@ class Tutormodel:
                 lesson = start_new_lesson  # start the lesson expicitly passed
             request.session['current_lesson'] = lesson.id
             request.session['current_lesson_todo'] = order[:]
+            request.session['ntask_todo'] = order[1:-1]
             request.session.modified = True
 
         # pick a task

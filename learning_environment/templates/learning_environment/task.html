@@ -96,7 +96,8 @@
                                  </div>
                             {% endif %}
                         <div class="col">
-
+                        <div class="row">
+                        <div class="col">
                         <div class="card-choice">
                             {% if solved and msg %}
                                 <p class="card-text" style="color: green;">{{ msg }}</p>
@@ -127,7 +128,22 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);">Try again</a> &nbsp;
                                 </div>
                             {% endif %}
                         </div>
+</div>
+                            <div class="col-1" style="margin:auto;">
 
+<div class="progress-container d-flex flex-column justify-content-between" style="justify-content: center;align-items: center;padding: 20px 10px;width: 40px;height: 305px;background: rgba(255, 255, 255, 0.7);border-radius: 60px;">
+    {% for n in request.session.ntask_todo %}
+        {% if n in request.session.current_lesson_todo %}
+      <div class="progress-icon" style="width: 1.5em;height: 1.5em;background: #FFFFFF; border-radius: 50%; margin:auto;"></div>
+        {% else %}
+            <div class="progress-icon" style="width: 1.5em;height: 1.5em;background: linear-gradient(294.49deg, rgba(228, 255, 110, 0.8) -122.6%, rgba(0, 156, 2, 0.8) 91.23%, rgba(255, 191, 199, 0.8) 175.87%), linear-gradient(0deg, #8E8E8E, #8E8E8E), #FFFFFF;; border-radius: 50%; margin:auto;"></div>
+        {% endif %}
+    {% endfor %}
+
+</div>
+
+
+                        </div>
                         </div>
 
                         </div>
@@ -135,6 +151,7 @@ linear-gradient(0deg, #FFFFFF, #FFFFFF);">Try again</a> &nbsp;
                     </div>
                 </div>
             </div>
+
 
     {% endif %}
 

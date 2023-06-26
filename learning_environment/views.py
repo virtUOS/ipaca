@@ -29,7 +29,7 @@ def practice(request, startlesson=None):
     """Display a task for practicing."""
 
     context = {'mode': 'solve'}
-
+    context['ntask'] = request.session['ntask_todo']
     # start a lesson
     if 'review' in request.GET:
         context['review'] = True
