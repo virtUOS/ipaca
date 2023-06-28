@@ -6,7 +6,7 @@ from learning_environment.its.tasks import TaskTypeFactory
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django_gamification.models import GamificationInterface
-from datetime import datetime, timedelta
+from django.utils import timezone
 import json5
 
 
@@ -231,8 +231,8 @@ class LearnerStatus(models.Model):
 
 class Streak(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    start_date = models.DateTimeField()
-    last_update = models.DateTimeField(null=True)
+    start_date = models.DateField()
+    last_update = models.DateField(default=timezone.now)
     streak_count = models.IntegerField(default=0)
 
 
@@ -242,21 +242,21 @@ class GamificationUser(models.Model):
     interface = models.ForeignKey(GamificationInterface, on_delete=models.CASCADE)
 
     def update_streak(self):
+        current = timezone.now().date()
         try:
-            streak = Streak.objects.get(user=self)
-            current = datetime.now()
+            streak = Streak.objects.filter(user=self.user).latest('last_update')
             delta = current - streak.last_update
             if delta == 0:
                 return
-            if delta == timedelta(1):
+            if delta == timezone.timedelta(days=1):
                 streak.streak_count += 1
+                streak.last_update = current
+                streak.save()
             else:
-                streak.streak_count = 1
-            streak.last_update = current
-            streak.save()
+                Streak.objects.create(user=self.user, start_date=current, streak_count=1)
 
         except Streak.DoesNotExist:
-            streak = Streak.objects.create(user=self.user, start_date=current)
+            Streak.objects.create(user=self.user, start_date=current, streak_count=1)
 
         return True
 

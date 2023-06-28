@@ -11,7 +11,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import *
-from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, GamificationUser
+from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, GamificationUser, Streak
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 from django_gamification.models import *
@@ -50,6 +50,7 @@ def practice(request, startlesson=None):
         # points for finishing a lesson
         g_user = GamificationUser.objects.filter(user=request.user).first()
         PointChange.objects.create(interface=g_user.interface, amount=100)
+        g_user.update_streak()
 
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             # TODO: message
