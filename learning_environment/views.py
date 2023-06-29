@@ -336,6 +336,7 @@ def gamification_view(request):
 
 def streak_record(request):
     """Show the streak record of the user."""
+    streak_show = [x for x in range(7)]
     streaks = Streak.objects.filter(user=request.user) # streak records from current user
     latest_streak = streaks.latest('last_update')  # get the latest streak
     max_streak = streaks.order_by('streak_count')[0].streak_count

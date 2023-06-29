@@ -11,11 +11,21 @@
 {% block content %}
 
      <div class="row align-items-center justify-content-center" style="background:transparent;">
+
         <div class="card-choice">
         <h2 class="text-center"> {{ latest_streak.streak_count }} Day Streak!🎉 </h2>
-
-
-
+        <p class="text-center" style="padding:1.5em;"> Keep up the good work!</p>
+        <div class="container d-flex flex-row justify-content-between" style="background: rgba(255, 206, 81, 0.2); border-radius:50px;">
+    {% for n in streak_show %}
+        {% if n < latest_streak.streak_count %}
+            <img src="/static/img/icon_streak.svg" style="width:3em; height:3em;">
+        {% else %}
+            <div style="width:3em; height:3em; border-radius:50%; background:#FFFFFF"></div>
+        {% endif %}
+    {% endfor %}
+        </div>
+        <p class="text-center" style="color: darkgray; padding:3em;"> Complete a lesson every day to build your streak!</p>
+    <a class="btn" style="background: #FFFFFF; margin-left:45%; margin-right:45%;" href="{% url 'myhome' %}" > BACK </a>
 <style>
    body{
     background: url({% static 'img/task_background.svg'%}) no-repeat center center fixed;
