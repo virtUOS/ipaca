@@ -1,0 +1,30 @@
+{% extends "learning_environment/base.html" %}
+{% load bootstrap5 %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block header %}
+{% include "learning_environment/header.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+     <div class="row align-items-center justify-content-center" style="background:transparent;">
+        <div class="card-choice">
+        <h2 class="text-center"> {{ latest_streak.streak_count }} Day Streak!🎉 </h2>
+
+
+
+<style>
+   body{
+    background: url({% static 'img/task_background.svg'%}) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz--background-size:cover;
+    -o--background-size:cover;
+    background-size: cover;
+   }
+
+</style>
+
+{% endblock %}

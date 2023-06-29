@@ -15,6 +15,7 @@ urlpatterns = [
     path('practice/<int:startlesson>', views.practice, name='practice'),
     path("signup/", SignUpView.as_view(), name="signup"),
     path('gamification/', views.gamification_view, name='gamification'),
+    path('gamification/streaks', views.streak_record, name='streak'),
 
 
     # Backstage

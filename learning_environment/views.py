@@ -60,6 +60,7 @@ def practice(request, startlesson=None):
             return redirect('myhome')
 
         # increase level for current series
+        # TODO: modify the level up
         current_lesson_series = request.session.get('lesson_series', 'General')
         try:
             psl = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series)
@@ -71,7 +72,7 @@ def practice(request, startlesson=None):
         except ProfileSeriesLevel.DoesNotExist:
             ProfileSeriesLevel.objects.create(user=request.user, series=current_lesson_series, level=1)
 
-        return redirect('myhome')
+        return redirect('streak')
 
     # analyze a solution
     elif request.method == 'POST':
@@ -332,3 +333,11 @@ def gamification_view(request):
     context['star_counter'] = [1, 2, 3]
 
     return render(request, 'learning_environment/gamification_interface.html', context)
+
+def streak_record(request):
+    """Show the streak record of the user."""
+    streaks = Streak.objects.filter(user=request.user) # streak records from current user
+    latest_streak = streaks.latest('last_update')  # get the latest streak
+    max_streak = streaks.order_by('streak_count')[0].streak_count
+
+    return render(request, 'learning_environment/streak_record.html', locals())  # pass all local variable to template
