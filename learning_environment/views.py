@@ -15,6 +15,7 @@ from .models import Lesson, Task, Solution, Profile, ProfileSeriesLevel, Gamific
 from .its.tutormodel import Tutormodel, NoTaskAvailableError
 from .its.learnermodel import Learnermodel
 from django_gamification.models import *
+from django.utils import timezone
 import sweetify
 
 class SignUpView(SuccessMessageMixin, generic.CreateView):
@@ -209,6 +210,7 @@ def myhome(request):
     id_lessons = [s.task.lesson.lesson_id for s in solutions]
 
     new_lessons = Lesson.objects.all().exclude(lesson_id__in=id_lessons).order_by('id')
+
 
     return render(request, 'learning_environment/myhome.html', locals())
 

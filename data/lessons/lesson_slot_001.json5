@@ -2,7 +2,7 @@
 // a new lesson 1.
 {
   name: "Lesson 1",  // the name that's also shown to the users
-  id: "lesson-slot-01upd",        // an internal id, will never be shown, but important to identify the lesson
+  id: "lesson-slot-001upd",        // an internal id, will never be shown, but important to identify the lesson
   author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
   version: 1,                 // if you revise your lesson, give it a higher version number each time
   series: 'Academic English', // the series this lesson belongs to
