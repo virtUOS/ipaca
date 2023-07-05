@@ -47,4 +47,9 @@ class Migration(migrations.Migration):
                 "unique_together": {("user", "series")},
             },
         ),
+        migrations.AlterField(
+            model_name='profileserieslevel',
+            name='series',
+            field=models.CharField(default='Academic English', max_length=256),
+        ),
     ]

@@ -62,7 +62,7 @@ def practice(request, startlesson=None):
 
         # increase level for current series
         # TODO: modify the level up
-        current_lesson_series = request.session.get('lesson_series', 'General')
+        current_lesson_series = request.session.get('lesson_series', 'Academic English')
         try:
             psl = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series)
             psl.level += 1
@@ -178,8 +178,8 @@ def myhome(request):
     try:
         series = request.session['lesson_series']
     except KeyError:
-        request.session['lesson_series'] = 'General'
-        series = 'General'
+        request.session['lesson_series'] = 'Academic English'
+        series = 'Academic English'
 
     # determine current level (and create if necessary)
     # psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series=series)
@@ -300,7 +300,7 @@ def global_dashboard(request):
 
 def learner_reset(request):
     if request.user.is_authenticated:
-        current_lesson_series = request.session.get('lesson_series', 'General')
+        current_lesson_series = request.session.get('lesson_series', 'Academic English')
         try:
             psl = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series)
             psl.level = 0
@@ -321,7 +321,7 @@ def gamification_view(request):
        # award_badge_ids = [b.id for b in user.interface.badge_set.filter(acquired=False)]
        # revoke_badge_ids = [b.id for b in acquired_badges]
         try:
-            level = ProfileSeriesLevel.objects.get(user=user.user, series='General').level
+            level = ProfileSeriesLevel.objects.get(user=user.user, series='Academic English').level
         except ProfileSeriesLevel.DoesNotExist:
             level = 0
         user_data.append({

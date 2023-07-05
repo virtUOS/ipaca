@@ -37,7 +37,7 @@ def save_user_profile(sender, instance, **kwargs):
 class ProfileSeriesLevel(models.Model):
     """A user's level within a series"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    series = models.CharField(max_length=256, default='General')
+    series = models.CharField(max_length=256, default='Academic English')
     level = models.IntegerField(default=0)
 
     class Meta:
@@ -56,7 +56,7 @@ class Lesson(models.Model):
     """
     name = models.CharField(max_length=255)
     lesson_id = models.SlugField(max_length=64)
-    series = models.CharField(max_length=255, default='General')
+    series = models.CharField(max_length=255, default='Academic English')
     author = models.CharField(max_length=256)
     text = models.TextField()
     text_source = models.CharField(max_length=1024, null=True)

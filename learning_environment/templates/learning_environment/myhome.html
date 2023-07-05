@@ -21,12 +21,16 @@
                 <div class="container-fluid">
                     <div class="row justify-content-evenly">
                         <div class="col-md-4">
-                           <div class="card-choice" style="padding:2em;">
-                                <div class="d-flex gradient-yellow align-items-center justify-content-center" style="color:black;font-weight:semi-bold; font-size:1.5em; border-radius:0.5em; padding:0.1em;">
+                            <div class="card-choice" style="padding:2em;">
+                                <div class="d-flex gradient-yellow align-items-center justify-content-center" style="color:white;font-weight:semi-bold; font-size:1.5em; border-radius:0.5em; padding:0.1em;">
                                     Section 1
                                 </div>
-                                <img src="/static/img/section1.svg" class="img-fluid" style="margin-top: 2em;" alt="" height="">
+                                <img src="/static/img/section1.svg" class="card-img-top" style="margin-top: 2em;" alt="" height="">
                               <div class="card-body">
+
+
+                                    <a class="btn btn-primary" href="{% url 'practice' %}" style="margin: 1vh">{{ level.lesson_id }}</a>
+
 
                               </div>
                             </div>
@@ -36,7 +40,7 @@
                                 <div class="d-flex gradient-green align-items-center justify-content-center" style="color:white;font-weight:semi-bold; font-size:1.5em; border-radius:0.5em; padding:0.1em;">
                                     Section 2
                                 </div>
-                                <img src="/static/img/section2.svg" class="img-fluid" style="margin-top: 2em;" alt="" height="">
+                                <img src="/static/img/section2.svg" class="card-img-top" style="margin-top: 2em;" alt="" height="">
                               <div class="card-body">
 
                               </div>
