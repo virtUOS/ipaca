@@ -182,12 +182,12 @@ def myhome(request):
         series = 'Academic English'
 
     # determine current level (and create if necessary)
-    # psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series=series)
-    # current_level = psl.level
+    psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series=series)
+    current_level = psl.level
 
     # pick all levels for chosen lesson series
     # levels = Lesson.objects.filter(series = series).order_by('lesson_id')
-    # levels = Lesson.objects.filter(series = series).order_by('lesson_id')
+    n_levels = Lesson.objects.filter(series=series).count()
 
 
     solutions = Solution.objects.filter(user=request.user).order_by('timestamp')  # all solutions from current user

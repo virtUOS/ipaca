@@ -26,9 +26,9 @@
                                     Section 1
                                 </div>
                                 <img src="/static/img/section1.svg" class="card-img-top" style="margin-top: 2em;" alt="" height="">
-                                <div class="btn">
+                                <div id="iconElement1" class="btn">
                                     <a href="{% url 'practice' %}">
-                                    <i class="bi bi-arrow-right-circle fa-3x" style="color:;"></i>
+                                    <i class="bi bi-arrow-right-circle fa-3x" style="display:flex;"></i>
                                     </a>
                                 </div>
                             </div>
@@ -39,9 +39,9 @@
                                     Section 2
                                 </div>
                                 <img src="/static/img/section2.svg" class="card-img-top" style="margin-top: 2em;" alt="" height="">
-                              <div class="btn">
+                              <div id="iconElement2" class="btn">
                                     <a href="{% url 'practice' %}">
-                                    <i class="bi bi-arrow-right-circle fa-3x"></i>
+                                    <i class="bi bi-arrow-right-circle fa-3x" style="display:flex;"></i>
                                     </a>
                               </div>
                             </div>
@@ -52,9 +52,9 @@
                                     Section 3
                                 </div>
                                 <img src="/static/img/section3.svg" class="card-img-top" style="margin-top: 2em;" alt="" height="">
-                              <div class="btn">
-                                    <a href="{% url 'practice' %}">
-                                    <i class="bi bi-arrow-right-circle fa-3x"></i>
+                              <div id="iconElement3" class="btn">
+                                    <a >
+                                    <i class="bi fa-3x" style="display:flex;"><img src="/static/img/icon_lock.svg"></i>
                                     </a>
                               </div>
                             </div>
@@ -71,5 +71,41 @@
         </div>
 {% include "learning_environment/footer.html" %}
 </div>
+<script>
+    var iconElement1 = document.getElementById("iconElement1");
+    var iconElement2 = document.getElementById("iconElement2");
+    var iconElement3 = document.getElementById("iconElement3");
+    var current_level = {{ current_level }};
+    var n_levels = {{ n_levels }};
 
+    iconElement3.addEventListener("click", function() {
+  // Display SweetAlert alert when the icon is clicked
+  Swal.fire({
+    title: 'Section locked!',
+    text: 'Level up to unlock the section!',
+    icon: 'info',
+    confirmButtonText: 'OK'
+  });});
+if ( current_level <= n_levels/3) {
+  // Change the icon based on the condition
+    iconElement2.querySelector("i").classList.remove("bi-arrow-right-circle"); // Remove the class for the lock icon
+    iconElement2.querySelector("i").innerHTML = '<img src="/static/img/icon_lock.svg">';
+    iconElement2.querySelector("a").removeAttribute("href");
+    iconElement2.addEventListener("click", function() {
+  // Display SweetAlert alert when the icon is clicked
+  Swal.fire({
+    title: 'Section locked!',
+    text: 'Level up to unlock the section!',
+    icon: 'info',
+    confirmButtonText: 'OK'
+  });
+});
+
+} else if (current_level <= (n_levels/3)*2){
+    iconElement1.querySelector("i").classList.remove("bi-arrow-right-circle");
+    iconElement1.querySelector("i").classList.add("bi bi-check-circle");
+    iconElement1.querySelector("i").setAttribute("style", "color:green;");
+}
+
+</script>
 {% endblock %}
