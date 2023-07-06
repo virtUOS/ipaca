@@ -53,7 +53,7 @@
                                 </div>
                                 <img src="/static/img/section3.svg" class="card-img-top" style="margin-top: 2em;" alt="" height="">
                               <div id="iconElement3" class="btn">
-                                    <a >
+                                    <a>
                                     <i class="bi fa-3x" style="display:flex;"><img src="/static/img/icon_lock.svg"></i>
                                     </a>
                               </div>
@@ -61,10 +61,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
                 </div>
             </div>
         </div>
@@ -78,34 +74,45 @@
     var current_level = {{ current_level }};
     var n_levels = {{ n_levels }};
 
-    iconElement3.addEventListener("click", function() {
-  // Display SweetAlert alert when the icon is clicked
-  Swal.fire({
-    title: 'Section locked!',
-    text: 'Level up to unlock the section!',
-    icon: 'info',
-    confirmButtonText: 'OK'
-  });});
-if ( current_level <= n_levels/3) {
+    function lockMsg() {
+   // Display SweetAlert alert when the icon is clicked
+      Swal.fire({
+        title: 'Section locked!',
+        text: 'Level up to unlock the section!',
+        icon: 'info',
+        confirmButtonText: 'OK'
+      });
+    }
+    iconElement3.addEventListener("click", lockMsg);
+if ( current_level <= n_levels/3) { //
   // Change the icon based on the condition
-    iconElement2.querySelector("i").classList.remove("bi-arrow-right-circle"); // Remove the class for the lock icon
+    iconElement2.querySelector("i").classList.remove("bi-arrow-right-circle");
     iconElement2.querySelector("i").innerHTML = '<img src="/static/img/icon_lock.svg">';
     iconElement2.querySelector("a").removeAttribute("href");
-    iconElement2.addEventListener("click", function() {
-  // Display SweetAlert alert when the icon is clicked
-  Swal.fire({
-    title: 'Section locked!',
-    text: 'Level up to unlock the section!',
-    icon: 'info',
-    confirmButtonText: 'OK'
-  });
-});
+    iconElement2.addEventListener("click", lockMsg);
 
 } else if (current_level <= (n_levels/3)*2){
     iconElement1.querySelector("i").classList.remove("bi-arrow-right-circle");
-    iconElement1.querySelector("i").classList.add("bi bi-check-circle");
-    iconElement1.querySelector("i").setAttribute("style", "color:green;");
-}
+    iconElement1.querySelector("i").classList.add("bi-check-circle");
+    iconElement1.querySelector("i").setAttribute("style", "display:flex; color:green;");
+    iconElement1.querySelector("a").removeAttribute("href");
+    iconElement1.setAttribute("style", "cursor:auto;");
 
+} else {
+    iconElement1.querySelector("i").classList.remove("bi-arrow-right-circle");
+    iconElement1.querySelector("i").classList.add("bi-check-circle");
+    iconElement1.querySelector("i").setAttribute("style", "display:flex; color:green;");
+    iconElement1.querySelector("a").removeAttribute("href");
+    iconElement1.setAttribute("style", "cursor:auto;");
+    iconElement2.querySelector("i").classList.remove("bi-arrow-right-circle");
+    iconElement2.querySelector("i").classList.add("bi-check-circle");
+    iconElement2.querySelector("i").setAttribute("style", "display:flex; color:green;");
+    iconElement2.querySelector("a").removeAttribute("href");
+    iconElement2.setAttribute("style", "cursor:auto;");
+    iconElement3.querySelector("i").classList.add("bi-arrow-right-circle");
+    iconElement3.querySelector("a").setAttribute("href", "{% url 'practice' %}");
+    iconElement3.querySelector("img").remove();
+    iconElement3.removeEventListener("click", lockMsg);
+}
 </script>
 {% endblock %}
