@@ -29,7 +29,7 @@ class Tutormodel:
 
         # determine the current lesson series
         series = request.session.get('lesson_series', 'Academic English')
-        print(series)
+
         # pick a lesson
         current_lesson_id = request.session.get('current_lesson', None)
         if current_lesson_id and not start_new_lesson:  # go on with a running lesson

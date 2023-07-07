@@ -44,7 +44,9 @@ def practice(request, startlesson=None):
             (state, lesson, task) = tutor.next_task(request)
         except NoTaskAvailableError:
             return HttpResponseServerError("Error: No task available!")
+
         context['state'] = state
+
 
     # finish a lesson
     elif request.method == 'POST' and 'finish' in request.POST:
@@ -131,6 +133,9 @@ def practice(request, startlesson=None):
 
     context['task'] = task
     context['lesson'] = lesson
+    progress = round(len(Lesson.objects.order_by('lesson_id')[:lesson.id])*100/Lesson.objects.count(),2)
+    context['progress'] = progress
+
     # Pass all information to template and display page
     return render(request, 'learning_environment/task.html', context=context)
 
@@ -184,6 +189,8 @@ def myhome(request):
     # determine current level (and create if necessary)
     psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series=series)
     current_level = psl.level
+    next_level = current_level+1
+
 
     # pick all levels for chosen lesson series
     # levels = Lesson.objects.filter(series = series).order_by('lesson_id')

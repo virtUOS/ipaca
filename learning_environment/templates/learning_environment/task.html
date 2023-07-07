@@ -20,8 +20,13 @@
     {# Display "Start lesson" screen #}
     {% if mode != 'result' and state == 'START' %}
 
+        <div class="progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: {{ progress }}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
 
         <div class="row align-items-center justify-content-center" style="background:transparent;">
+
         <div class="card-choice">
             {% if lesson.start %}
             <div>
@@ -35,6 +40,7 @@
             <input type="hidden" name="lesson" value="{{ lesson.id }}">
             <input type="hidden" name="start" value="start">
             <div style="width:33%; margin:0 auto;">
+
             <button type="submit" class="btn btn-primary btn-padding" style="width:100%;">Start lesson</button>
             </div>
         </form>

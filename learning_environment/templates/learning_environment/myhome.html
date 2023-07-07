@@ -20,9 +20,16 @@
 
                 <div class="container-fluid">
                     <div class="row justify-content-evenly">
+                        <div class="d-flex align-items-center justify-content-center" style="color: #101010:semi-bold; font-size:1.3em; border-radius:0.5em; padding:0.1em;">
+                             <i style="display:flex; margin-right:0.8em;"><img src="/static/img/icon_goal.svg"></i>
+                            Daily Quest: Complete Lesson {{ next_level }}
+                        </div>
+
+                    </div>
+                    <div class="row justify-content-evenly">
                         <div class="col-md-4">
                             <div class="card-choice" style="padding:2em;">
-                                <div class="d-flex gradient-yellow align-items-center justify-content-center" style="color:;font-weight:semi-bold; font-size:1.5em; border-radius:0.5em; padding:0.1em;">
+                                <div class="d-flex gradient-yellow align-items-center justify-content-center" style="font-weight:semi-bold; font-size:1.5em; border-radius:0.5em; padding:0.1em;">
                                     Section 1
                                 </div>
                                 <img src="/static/img/section1.svg" class="card-img-top" style="margin-top: 2em;" alt="" height="">
@@ -35,7 +42,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="card-choice" style="padding:2em;">
-                                <div class="d-flex gradient-green align-items-center justify-content-center" style="color:white;font-weight:semi-bold; font-size:1.5em; border-radius:0.5em; padding:0.1em;">
+                                <div class="d-flex gradient-purple align-items-center justify-content-center" style="color:white;font-weight:semi-bold; font-size:1.5em; border-radius:0.5em; padding:0.1em;">
                                     Section 2
                                 </div>
                                 <img src="/static/img/section2.svg" class="card-img-top" style="margin-top: 2em;" alt="" height="">
@@ -48,7 +55,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="card-choice" style="padding:2em;">
-                                <div class="d-flex gradient-purple align-items-center justify-content-center" style="color:white;font-weight:semi-bold; font-size:1.5em; border-radius:0.5em; padding:0.1em;">
+                                <div class="d-flex gradient-green align-items-center justify-content-center" style="color:white;font-weight:semi-bold; font-size:1.5em; border-radius:0.5em; padding:0.1em;">
                                     Section 3
                                 </div>
                                 <img src="/static/img/section3.svg" class="card-img-top" style="margin-top: 2em;" alt="" height="">
@@ -60,6 +67,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 </div>
             </div>
@@ -71,8 +79,8 @@
     var iconElement1 = document.getElementById("iconElement1");
     var iconElement2 = document.getElementById("iconElement2");
     var iconElement3 = document.getElementById("iconElement3");
-    var current_level = {{ current_level }};
-    var n_levels = {{ n_levels }};
+    var current_level = Number({{ current_level }});
+    var n_levels = Number({{ n_levels }});
 
     function lockMsg() {
    // Display SweetAlert alert when the icon is clicked
