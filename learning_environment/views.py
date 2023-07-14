@@ -55,6 +55,11 @@ def practice(request, startlesson=None):
         PointChange.objects.create(interface=g_user.interface, amount=100)
         g_user.update_streak()
 
+        # award badges
+        # TODO: define badges and conditions
+        Badge.objects.create(interface=g_user.interface, badge_definition=BadgeDefinition.objects.get(name='Badge of Awesome'))
+
+
         if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             # TODO: message
             return redirect('myhome')
