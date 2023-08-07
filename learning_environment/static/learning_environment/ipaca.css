@@ -419,3 +419,34 @@ div .card-text{
     padding-bottom: 0;
 }
 
+
+/* custom swal styles */
+.swal2-button {
+  margin: auto;
+  font-size: 12px;
+  border: none;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.swal2-popup {
+  border-radius: 1em;
+}
+
+.swal2-header {
+
+}
+
+.swal2-title {
+  font-size: 24px;
+}
+
+.swal2-content {
+  color: #333;
+}
+
+.swal2-styled.swal2-confirm {
+  border-radius:50px;
+  border:none;
+}
+
+

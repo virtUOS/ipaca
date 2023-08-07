@@ -84,11 +84,11 @@
 
     function lockMsg() {
    // Display SweetAlert alert when the icon is clicked
-      Swal.fire({
+      swal.fire({
         title: 'Section locked!',
         text: 'Level up to unlock the section!',
         icon: 'info',
-        confirmButtonText: 'OK'
+        confirmButtonText: 'OK',
       });
     }
     iconElement3.addEventListener("click", lockMsg);
