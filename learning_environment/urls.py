@@ -10,7 +10,8 @@ urlpatterns = [
 
     # Selfmade
     path('', views.home, name='home'),
-    path('myhome/', views.myhome, name='myhome'),
+    path('myhome/', views.overview, name='myhome'),
+    path('overview/', views.overview, name='overview'),
     path('practice/', views.practice, name='practice'),
     path('practice/<int:startlesson>', views.practice, name='practice'),
     path("signup/", SignUpView.as_view(), name="signup"),

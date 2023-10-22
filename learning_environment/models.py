@@ -209,6 +209,7 @@ class Task(models.Model):
 class UserLesson(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+    available = models.BooleanField(default=False)
     started = models.DateTimeField(auto_now_add=True)
     finished = models.DateTimeField(null=True)
 

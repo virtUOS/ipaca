@@ -47,11 +47,11 @@
     {% elif mode != 'result' and state == 'WRAPUP' %}
         <div class="row align-items-center justify-content-center" style="background:transparent;">
         <div class="card-choice">
-        <h2 class="text-center">Congratulations! You finished the lesson!</h2>
+        <h2 class="text-center">Congratulations! You have finished the lesson!</h2>
         <p>&nbsp;</p>
         {% if lesson.wrapup %}
-            <div>
-                {{lesson.wrapup}}
+            <div class="text-center">
+                {{lesson.wrapup|safe}}
             </div>
         {% endif %}
         <p>&nbsp;</p>

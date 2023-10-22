@@ -23,9 +23,11 @@
                    type="radio" name="solution-{{ task.id }}"
                    id="task-{{ task.id }}-{{ forloop.counter0 }}"
                    value="{{ forloop.counter0 }}"
-                   disabled="disabled"
-                   {% if forloop.counter0 == chosen %}checked="checked"{% endif %}>
-            <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}" disabled="disabled">
+                   {% if forloop.counter0 == chosen %}checked="checked"
+                   {% else %}
+                       disabled="disabled"
+                   {% endif %}>
+            <label class="form-check-label" for="task-{{ task.id }}-{{ forloop.counter0 }}">
                 {{ o.text }}
             {% if forloop.counter0 == chosen %}
                 {% if o.feedback %}

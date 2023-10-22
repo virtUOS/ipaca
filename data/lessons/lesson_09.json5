@@ -1,0 +1,276 @@
+// Lesson ed-009
+// a new lesson 9
+{
+  name: "Lesson 9",  // the name that's also shown to the users
+  id: "Level 1, Lesson 9",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English', // the series this lesson belongs to
+  text: "<p>By the standards of other high-income economies, the natural rate of unemployment in the U.S. economy appears\
+          relatively low. Through good economic years and bad, European economies have had unemployment rates hovering \
+          near 10%, or even higher, since the 1970s. European rates of unemployment have been higher not because \
+          recessions in Europe have been deeper, but rather because the conditions underlying supply and demand for \
+          labor have been different rope, in a way that has created a much higher natural rate of unemployment.</p>\
+          </p>Many European countries have a combination of generous welfare and unemployment benefits, together with \
+          nests of rules that impose additional costs on businesses when they hire. In addition, many countries have laws\
+          that require firms to give workers months of notice before laying them off and to provide substantial severance\
+          or retraining packages after laying them off. However, when companies know that it will be difficult to fire or\
+          lay off workers, they also become hesitant about hiring in the first place.</p>\
+         </p>Should we count everyone without a job as unemployed? Of course not. For example, we should not count \
+          children as unemployed. Surely, we should not count the retired as unemployed. Many full-time college students\
+          have only a part-time job, or no job at all, but it seems inappropriate to count them as suffering the pains of\
+          unemployment. Some people are not working because they are rearing children, ill, on vacation, or on parental \
+          leave.</p>",
+  text_source: "Principles of Macroeconomics",
+  text_licence: "OpenStax",
+  text_url: "https://assets.openstax.org/oscms-prodcms/media/documents/APMacroeconomics2e-OP_7sE2Bz3.pdf ",
+  start: "<h2>Focus of the lesson</h2>\
+    <p><b>In this lesson you will:</b></p>\
+    <p>Enlarge your background knowledge of macroeconomics\
+    <p>Review what you have learnt about the Types of Complements of Link Verbs, Use of Adverbs and Adjectives\
+    <p>Work on words and word combinations widely used in academic discourse", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read <a href='https://www.grammar-monster.com/glossary/subject_complement.htm and https://www.math-english.com/english-beginner/structure-of-sentence/linking-verb-and-subject-complement/'>ore about this</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 9.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>The deep recession in Europe influenced the level of unemployment.</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, that's incorrect. The correct answer is False because the text says ‘European rates of unemployment have been higher not because recessions in Europe have been deeper’" },
+          { text: "False", correct: true, feedback: "Great job!" },
+          { text: "Not Given", correct: false, feedback: "No, that's incorrect. The correct answer is False because the text says ‘European rates of unemployment have been higher not because recessions in Europe have been deeper’" },
+        ],
+      }, // end of task 1
+      {
+        name: "Reading 9.2",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>In some countries, employers must give  the workers advance notice about layoff.</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: true, feedback: "Well done!" },
+          { text: "False", correct: false, feedback: "No, that's incorrect. The correct answer is True because the text says ‘..many countries have laws that require firms to give workers months of notice before laying them off’." },
+          { text: "Not Given", correct: false, feedback: "No, that's incorrect. The correct answer is True because the text says ‘..many countries have laws that require firms to give workers months of notice before laying them off’." },
+        ],
+      }, // end of task 2
+      {
+        name: "Reading 9.3",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>Part-time students are allowed to have full-time jobs.</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, that's incorrect. The correct answer is Not Given because the text doesn't mention job opportunities for part-time students and only discusses full-time ones." },
+          { text: "False", correct: false, feedback: "No, that's incorrect. The correct answer is Not Given because the text doesn't mention job opportunities for part-time students and only discusses full-time ones." },
+          { text: "Not Given", correct: true, feedback: "Great job!" },
+        ],
+      }, // end of task 3
+      {
+        // task 4: gap fill for verb complements
+        name: "Verb Complements",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the appropriate adverb or adjective to complete the sentence:</b></p>\
+        <p>By the standards of other high-income economies, the natural rate of unemployment in the U.S. economy doesn't\
+         appear _1_ .</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'high.',
+              correct: true,
+              feedback: 'Yes, that\'s correct! In clauses with linking verbs (be, seem, appear, become etc), complements which follow the verb and which add information about the subject are called subject complements, and here we should  use an adjective to modify the subject.'
+            },
+            {
+              text: 'highly.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 5: gap fill for verb complements
+        name: "Verb Complements",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the appropriate adverb or adjective to complete the sentence:</b></p>\
+        <p>However, when companies know that it will be difficult to fire or lay off workers, they also become _1_ about hiring in the first place.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: ' hesitantly',
+              correct: false,
+              feedback: 'No, that\'s not correct. In clauses with linking verbs (be, seem, appear, become etc), complements which follow the verb and which add information about the subject are called subject complements, and here we should  use an adjective to modify the subject.'
+            },
+            {
+              text: 'hesitant',
+              correct: true,
+              feedback: 'Yes, that\'s correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 6: gap fill for verb complements
+        name: "Verb Complements",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the appropriate adverb or adjective to complete the sentence:</b></p>\
+        <p>Many full-time college students have only a part-time job, or no job at all, but it seems _1_ to count them as suffering the pains of unemployment.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'inappropriate',
+              correct: true,
+              feedback: 'Great job!'
+            },
+            {
+              text: 'inappropriately.',
+              correct: false,
+              feedback: 'No, that\'s not correct. In clauses with linking verbs (be, seem, appear, become etc), complements which follow the verb and which add information about the subject are called subject complements, and here we should  use an adjective to modify the subject.'
+            },
+          ],
+        },
+      },
+      {
+        // task 7: gap fill for verb complements
+        name: "Verb Complements",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the appropriate adverb or adjective to complete the sentence:</b></p>\
+        <p>The Industrial Revolution led to increasing inequality among nations. Some economies took off, whereas others, like many of those in Africa or Asia, remained _1_ to a subsistence standard of living.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'close',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+            {
+              text: 'closely.',
+              correct: false,
+              feedback: 'No, that\'s not correct. In clauses with linking verbs (be, seem, appear, become etc), complements which follow the verb and which add information about the subject are called subject complements, and here we should  use an adjective to modify the subject.'
+            },
+          ],
+        },
+      },
+          {
+             // task 8-14: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies. There are TWO words you don’t need to use:</b></p>\
+        <p>1. Most retrieval software systems allow _1_ to several dictionaries, though only one can be active at any \
+        one time.</p> \
+        <p>2. Table 2 contains a brief _2_ of how I arrived at the reference codes used for each participant.</p> \
+        <p>3. The panel included 30 carefully _3_ representatives of academia, of industry associations, and other experts.</p> \
+        <p>4. Anonymous language varieties and features of speech do not draw _4_ to themselves.</p>\
+        <p>5. It tried to promote regional businesses, for example, by closing the gap between the educational _5_ and \
+        business and industry.</p> \
+        <p>6. However, according to the results both methods are highly _6_ and superiority for either group could not\
+        be shown.</p> \
+        <p>7. Our mental vocabulary is so deeply _7_ in our actual life practices that the concepts would become \
+        meaningless if they were detached from their everyday context.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            { text: 'efficient', correct: false, feedback: 'Sorry, try again'},
+            { text: 'access', correct: true, feedback: 'Well done!'},
+            { text: 'motivation', correct: false, feedback: 'Sorry, try again'},
+            { text: 'description', correct: false, feedback: 'Sorry, try again'},
+            { text: 'selected', correct: false, feedback: 'Sorry, try again'},
+            { text: 'attention', correct: false, feedback: 'Sorry, try again'},
+            { text: 'embedded', correct: false, feedback: 'Sorry, try again'},
+            { text: 'demand', correct: false, feedback: 'Sorry, try again'},
+            { text: 'system', correct: false, feedback: 'Sorry, try again'},
+          ],
+          _2_: [
+            { text: 'efficient', correct: false, feedback: 'Sorry, try again'},
+            { text: 'access', correct: false, feedback: 'Sorry, try again'},
+            { text: 'motivation', correct: false, feedback: 'Sorry, try again'},
+            { text: 'description', correct: true, feedback: 'Well done!'},
+            { text: 'selected', correct: false, feedback: 'Sorry, try again'},
+            { text: 'attention', correct: false, feedback: 'Sorry, try again'},
+            { text: 'embedded', correct: false, feedback: 'Sorry, try again'},
+            { text: 'demand', correct: false, feedback: 'Sorry, try again'},
+            { text: 'system', correct: false, feedback: 'Sorry, try again'},
+          ],
+          _3_: [
+            { text: 'efficient', correct: false, feedback: 'Sorry, try again'},
+            { text: 'access', correct: false, feedback: 'Sorry, try again'},
+            { text: 'motivation', correct: false, feedback: 'Sorry, try again'},
+            { text: 'description', correct: false, feedback: 'Sorry, try again'},
+            { text: 'selected', correct: true, feedback: 'Well done!'},
+            { text: 'attention', correct: false, feedback: 'Sorry, try again'},
+            { text: 'embedded', correct: false, feedback: 'Sorry, try again'},
+            { text: 'demand', correct: false, feedback: 'Sorry, try again'},
+            { text: 'system', correct: false, feedback: 'Sorry, try again'},
+          ],
+          _4_: [
+            { text: 'efficient', correct: false, feedback: 'Sorry, try again'},
+            { text: 'access', correct: false, feedback: 'Sorry, try again'},
+            { text: 'motivation', correct: false, feedback: 'Sorry, try again'},
+            { text: 'description', correct: false, feedback: 'Sorry, try again'},
+            { text: 'selected', correct: false, feedback: 'Sorry, try again'},
+            { text: 'attention', correct: true, feedback: 'Well done!'},
+            { text: 'embedded', correct: false, feedback: 'Sorry, try again'},
+            { text: 'demand', correct: false, feedback: 'Sorry, try again'},
+            { text: 'system', correct: false, feedback: 'Sorry, try again'},
+          ],
+          _5_: [
+            { text: 'efficient', correct: false, feedback: 'Sorry, try again'},
+            { text: 'access', correct: false, feedback: 'Sorry, try again'},
+            { text: 'motivation', correct: false, feedback: 'Sorry, try again'},
+            { text: 'description', correct: false, feedback: 'Sorry, try again'},
+            { text: 'selected', correct: false, feedback: 'Sorry, try again'},
+            { text: 'attention', correct: false, feedback: 'Sorry, try again'},
+            { text: 'embedded', correct: false, feedback: 'Sorry, try again'},
+            { text: 'demand', correct: false, feedback: 'Sorry, try again'},
+            { text: 'system', correct: true, feedback: 'Well done!'},
+          ],
+          _6_: [
+            { text: 'efficient', correct: true, feedback: 'Well done!'},
+            { text: 'access', correct: false, feedback: 'Sorry, try again'},
+            { text: 'motivation', correct: false, feedback: 'Sorry, try again'},
+            { text: 'description', correct: false, feedback: 'Sorry, try again'},
+            { text: 'selected', correct: false, feedback: 'Sorry, try again'},
+            { text: 'attention', correct: false, feedback: 'Sorry, try again'},
+            { text: 'embedded', correct: false, feedback: 'Sorry, try again'},
+            { text: 'demand', correct: false, feedback: 'Sorry, try again'},
+            { text: 'system', correct: false, feedback: 'Sorry, try again'},
+          ],
+          _7_: [
+            { text: 'efficient', correct: false, feedback: 'Sorry, try again'},
+            { text: 'access', correct: false, feedback: 'Sorry, try again'},
+            { text: 'motivation', correct: false, feedback: 'Sorry, try again'},
+            { text: 'description', correct: false, feedback: 'Sorry, try again'},
+            { text: 'selected', correct: false, feedback: 'Sorry, try again'},
+            { text: 'attention', correct: false, feedback: 'Sorry, try again'},
+            { text: 'embedded', correct: true, feedback: 'Well done!'},
+            { text: 'demand', correct: false, feedback: 'Sorry, try again'},
+            { text: 'system', correct: false, feedback: 'Sorry, try again'},
+          ],
+        }
+      }
+    ] // end of tasks
+}// end of lesson

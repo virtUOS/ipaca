@@ -5,5 +5,8 @@ crispy-bootstrap5
 django-crispy-forms
 json5
 fontawesomefree
+django-debug-toolbar
+django-extensions
+
 
 

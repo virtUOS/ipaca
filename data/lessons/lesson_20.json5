@@ -1,0 +1,156 @@
+// Lesson ed-020
+// a new lesson 20
+{
+  name: "Lesson 20",  // the name that's also shown to the users
+  id: "Level 2, Lesson 20",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English',
+  text: "<p> Over the ages many approaches to understanding mental disorders have been developed that helped us gain \
+  further insight to their etiology. The neuropsychosocial model combines some of these approaches by examining genetics\
+   and biology (development of our bodies), psychological factors (personal experiences and perceptions in behavior,\
+   cognition, and emotion), and social influences in the etiology of mental disorders. </p>\
+   <p> In using the neuropsychosocial approach, it is widely understood by abnormal psychologists that each three factors\
+   influence each other. This interinfluence is commonly known as the neuropsychosocial feedback loop. If an individual\
+   is influenced by oppression, their neurotransmitters and hormones affect their psychological mental state, or if an \
+   individual has thoughts that the world is going to end, these thoughts can prevent them from finding work, which\
+   eventually affects their nutritional intake. Taking the neuropsychosocial model into account in understanding the \
+   etiology and treatment of mental disorders provides researchers and clinicians tools in applied psychology.</p>",
+  text_source: "Abnormal Psychology",
+  text_licence: "CC-BY",
+  text_url: "https://www.oercommons.org/courseware/lesson/71834/overview?section=1 ",
+  start: "<h2>Focus of the lesson</h2> \
+  <p><b>In this lesson  you will:</b> \
+   <p>Enlarge your background knowledge of approaches to understanding mental disorders \
+   <p>Know about Dangling Modifier, which occurs when the intended subject of the modifier (which describes or \
+   qualifies another part of a sentence)  is missing from the sentence, and another subject takes its place. \
+   Basically, dangling modifiers often take the form of an introductory phrase that is connected to the wrong thing \
+   <p>Work on the key nouns in academic English and their antonyms", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read <a href='https://www.scribbr.com/sentence-structure/dangling-modifier/'>more about this</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 20.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>Choose the best title for the reading passage:</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Development of Mental Illnesses", correct: false, feedback: "No, that's incorrect because the text mostly discusses the neuropsychosocial approach and its components, but it doesn’t develop the  ideas of why mental illnesses develop or how they are treated." },
+          { text: "Neuropsychosocial Approach to Mental Disorders", correct: true, feedback: "Perfect!" },
+          { text: "Treatment of Mental Disorders", correct: false, feedback: "No, that's incorrect because the text mostly discusses the neuropsychosocial approach and its components, but it doesn’t develop the  ideas of why mental illnesses develop or how they are treated." },
+        ]
+      },
+      {
+        name: "Reading 20.2",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>Finish the sentence: ‘The neuropsychosocial feedback loop is… .</b>’ ",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "a type of interaction", correct: true, feedback: "Super!" },
+          { text: "a type of  mental disorder", correct: false, feedback: "No, that's incorrect because the text says ‘....‘it is widely understood by abnormal psychologists that each three factors influence each other.  This interinfluence is commonly known as the neuropsychosocial feedback loop’" },
+          { text: " a type of treatment", correct: false, feedback: "No, that's incorrect because the text says ‘....‘it is widely understood by abnormal psychologists that each three factors influence each other. This interinfluence is commonly known as the neuropsychosocial feedback loop’" },
+        ],
+      }, // end of task 2
+          {
+        name: "Reading 20.3",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>Does the author show any biases?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "No", correct: true, feedback: "Yes, that's it!" },
+          { text: "Yes", correct: false, feedback: "No, that's incorrect, the text is written in a neutral tone presenting the information objectively without expressing personal opinions or biases" },
+        ],
+      }, // end of task 3
+      {
+        // task 4: writing for dangling modifier
+        name: "Dangling Modifier",
+        type: "GS",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the sentence using the word in brackets: 'To improve their results, the experiment was done\
+        once again. (THEY)'",
+        answer: "To improve their results, they did the experiment again."
+      },
+      {
+        // task 5: writing for dangling modifier
+        name: "Dangling Modifier",
+        type: "GS",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the sentence using the word in brackets: 'In using the neuropsychosocial approach, it is \
+        widely understood that each three factors influence each other. (PSYCHOLOGISTS)'",
+        answer: "In using the neuropsychosocial approach, psychologists widely understand that each three factors influence each other."
+      },
+      {
+        // task 6: writing for dangling modifier
+        name: "Dangling Modifier",
+        type: "GS",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the sentence using the word in brackets: 'Having considered the data and information above, \
+        it was concluded that  questionnaires should be collected from an additional 150 people. (WE) ",
+        answer: "Having considered the data and information above, we concluded that questionnaires should be collected from an additional 150 people."
+      },
+      {
+        // task 7: writing for dangling modifier
+        name: "Dangling Modifier",
+        type: "GS",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the sentence using the word in brackets: 'To see well, the lights in this lab have to be \
+        adjusted. (YOU)'",
+        answer: "To see well, you have to adjust the lights in this lab."
+      },
+      {  // task 8: mark the words
+        name: "Antonyms for Lesson 20 ",
+        type: "V",
+        interaction: "MARK",
+        primary: true,
+        show_lesson_text: false,
+        question: "<b>Substitute the highlighted words with their antonyms in the text:</b>",
+        marktext: "More than  half a million years ago societies like in #1#modern Egypt and Mesopotamia believed that evil\
+        spirits possessed a person due as punishment for some wrongdoing, revenge by a sorcerer or ancestral spirits.\
+        Healers attempted to use exorcism and trephining (puncturing a hole in the skull) to allow the evil spirits to \
+        #2#enter the body. Over the ages #3#few approaches to understanding  #4#physical disorders have been developed that helped\
+        us #5#lose further insight to their etiology. The neuropsychosocial model combines some of these approaches by \
+        examining genetics and biology (development of our bodies), psychological factors  (#6#public experiences and\
+        perceptions in behavior, cognition, and emotion), and social influences in the etiology of mental disorders. \
+        Since Mendel’s experimentation with the pea plant and Darwin’s publication of On the Origins of Species, we have\
+        looked to our #7#descendants, parents, and genes to explain our biology and behavior.",
+        markers: {
+          '1': {
+            description: 'ancient',
+          },
+          '2': {
+            description: 'exit',
+          },
+          '3': {
+            description: 'many',
+          },
+          '4': {
+            description: 'mental',
+          },
+             '5': {
+            description: 'gain',
+          },
+             '6': {
+            description: 'personal',
+          },
+             '7': {
+            description: 'ancestors',
+          }
+        } // end of markers list
+      } // end of task 8-14
+    ] // end of tasks
+
+} // end of lesson

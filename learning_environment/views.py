@@ -23,6 +23,87 @@ class SignUpView(SuccessMessageMixin, generic.CreateView):
     success_message = "User was created successfully. You may now log in."
 
 @login_required
+def overview(request):
+    page = 'myhome'  # for highlighting current page
+    try:
+        request.user.save()
+    except Profile.DoesNotExist:
+        p = Profile(user=request.user)
+        p.save()
+
+    # delete chosen lesson from session
+#    try:
+#        del request.session['current_lesson']
+#    except KeyError:
+#        pass
+#    try:
+#        del request.session['current_lesson_todo']
+#    except KeyError:
+#        pass
+
+    # Lesson series
+    all_lesson_series = sorted([x['series'] for x in Lesson.objects.values('series').distinct()])
+
+    # set series from GET parameter (if valid)
+    if 'series' in request.GET:
+        s = request.GET['series']
+        if s in all_lesson_series:
+            request.session['lesson_series'] = s
+
+    try:
+        series = request.session['lesson_series']
+    except KeyError:
+        request.session['lesson_series'] = 'General'
+        series = 'General'
+
+    # determine current level (and create if necessary)
+    # psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series=series)
+    # current_level = psl.level
+
+    # pick all levels for chosen lesson series
+    # levels = Lesson.objects.filter(series = series).order_by('lesson_id')
+    # levels = Lesson.objects.filter(series = series).order_by('lesson_id')
+
+
+    solutions = Solution.objects.filter(user=request.user).order_by('timestamp')  # all solutions from current user
+    num_tasks = solutions.count()  # how tasks did this user try
+    correct_solutions = Solution.objects.filter(user=request.user,
+                                                solved=True).count()  # how many of them were correct?
+    if num_tasks > 0:  # calculate percentage of correct tasks (or 0 if no tasks)
+        tasks_correctness = round(correct_solutions / num_tasks * 100.0, 2)
+    else:
+        tasks_correctness = 0.0
+
+    if Solution.objects.filter(user=request.user, solved=False).exists():
+        wrong_solutions = Solution.objects.filter(user=request.user, solved=False)
+        # get unique task id of wrong solutions
+        wrong_solutions_unique = [x['task'] for x in wrong_solutions.values('task').distinct()]
+        wrong_tasks = Task.objects.filter(id__in=wrong_solutions_unique)
+    else:
+        wrong_tasks = None
+
+    current_lesson_series = 'General'
+    try:
+        user_level = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series).level
+    except ProfileSeriesLevel.DoesNotExist:
+        user_level = 0
+
+    # hard coded lessons
+    lessons = [None for x in range(31)]
+    for idx in range(1, 31):
+        try:
+            lessons[idx] = Lesson.objects.get(name='Lesson {}'.format(idx))
+            if user_level + 1 >= idx:
+                lessons[idx].locked = False
+            else:
+                lessons[idx].locked = True
+        except Lesson.DoesNotExist:
+            pass
+
+    return render(request, 'learning_environment/overview.html', locals())
+
+
+@login_required
 def practice(request, startlesson=None):
     """Display a task for practicing."""
 
@@ -57,7 +138,10 @@ def practice(request, startlesson=None):
         current_lesson_series = request.session.get('lesson_series', 'General')
         try:
             psl = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series)
-            psl.level += 1
+            # HACK! Get level from name...
+            thislevel = int(request.session['current_lesson'].name.split(' ')[1])
+            if thislevel > psl.level:
+                psl.level = thislevel
             psl.save()
         except ProfileSeriesLevel.DoesNotExist:
             ProfileSeriesLevel.objects.create(user=request.user, series=current_lesson_series, level=1)
@@ -193,6 +277,10 @@ def myhome(request):
     id_lessons = [s.task.lesson.lesson_id for s in solutions]
 
     new_lessons = Lesson.objects.all().exclude(lesson_id__in=id_lessons).order_by('id')
+
+    # hard coded lessons
+    lessons = [None for x in range(31)]
+    lessons[1] = Lesson.objects.get(name='Lesson 1')
 
     return render(request, 'learning_environment/myhome.html', locals())
 

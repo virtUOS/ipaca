@@ -9,11 +9,16 @@
         <div class="dropdown ms-auto" style="display:flex; margin-right:25px;">
             <strong style="padding-left:2em; padding-right:1em; padding-top:0.5em;">Hello, {{ user.username }}!</strong>
             <img src="{% static 'img/profile_avatar.svg' %}" style="width: 32px; height:32px; margin-right:3px;" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src = "{% static 'img/drop_down_icon.svg' %}" data-bs-toggle="dropdown" aria-expanded="false">
 
-          <ul class="dropdown-menu text-small shadow" style="border-radius: 10px;" aria-labelledby="dropdownUser2">
-            <li><a class="logout" href="{% url 'logout' %}" style=" margin: 15px; border-radius: 50px !important; color:white;"><img src="{% static 'img/exit_icon.svg' %}" > Logout</a></li>
-          </ul>
+            <!--
+            <img src = "{% static 'img/drop_down_icon.svg' %}" data-bs-toggle="dropdown" aria-expanded="false">
+
+            <ul class="dropdown-menu text-small shadow" style="border-radius: 10px;" aria-labelledby="dropdownUser2">
+              <li><a class="logout" href="{% url 'logout' %}" style=" margin: 15px; border-radius: 50px !important; color:white;"><img src="{% static 'img/exit_icon.svg' %}" > Logout</a></li>
+            </ul>
+            -->
+            <a class="logout" href="{% url 'logout' %}">Logout</a>
+
         </div>
 
 </header>

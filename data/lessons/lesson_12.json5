@@ -1,0 +1,225 @@
+// Lesson ed-012
+// a new  lesson 12
+{
+  name: "Lesson 12",  // the name that's also shown to the users
+  id: "Level 2, Lesson 12",      // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English', // the series this lesson belongs to
+  text: "<p> Open science does not refer to one set of specific rules; instead, it is a collection of several research \
+         practices that variously manifest themselves in different research contexts (Corker, 2018). Open science \
+         practices are valuable not only because they are transparent but also because they help improve the quality \
+         and accumulation of scientific knowledge. The first source highlighted in this paper provides a skilled overview\
+         of open science and related topics concerning reproducibility and replicability. </p>\
+         <p> The credibility of evidence depends in part on its reproducibility; given the same quantitative evidence \
+         (i.e., data) and the same statistical analysis, can the same result be obtained? The credibility of scientific\
+         claims also depends in part on their replicability; if an experiment is repeated with the same procedures, \
+         therefore generating new data, will the same result be obtained? Neither reproducibility nor replicability can \
+         be evaluated without both transparency and accessibility of the research process and the evidence generated \
+         from it. Thus, open science practices are crucial to the most basic aspects of the scientific process.</p>",
+  text_source: "7 Easy Steps to Open Science: An Annotated Reading List",
+  text_licence: "CC-BY",
+  text_url: "https://www.oercommons.org/courses/7-easy-steps-to-open-science-an-annotated-reading-list/view ",
+  start: "<h2>Focus of the lesson</h2>\
+    <p><b>In this lesson  you will:</b>\
+    <p>Revisit your understanding of research practices \
+    <p>Review what you've learned about Passive Voice \
+    <p>Test your understanding of  parts of speech</p>", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Want to read more about this topic? Good to read <a href='https://www.ef.edu/english-resources/english-grammar/passive-voice/'>more about this</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 12.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>What is the passage mainly about?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Open Data", correct: false, feedback: "No, that's incorrect. The correct answer is B because it represents\
+           the main idea of the text which is about Open Science and its practices. The text only partly mentions the \
+           accessibility of the research process and does not mention Open Data at all" },
+          { text: "Open Science", correct: true, feedback: "Well done!" },
+          { text: "Open Access", correct: false, feedback: "No, that's incorrect. The correct answer is B because it \
+          represents the main idea of the text which is about Open Science and its practices. The text only partly mentions \
+          the accessibility of the research process and does not mention Open Data at all" },
+        ]
+      },
+      {
+        name: "Reading 12.2",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>What is the primary  purpose of the text?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "To inform the reader", correct: true, feedback: "Yes, this is the correct answer!" },
+          { text: "To instruct the reader", correct: false, feedback: "No, that's incorrect, the text does not provide any instructions." },
+          { text: "To entertain the reader", correct: false, feedback: "No, that's incorrect, the text does not contain any amusing content." },
+        ],
+      }, // end of task Reading 12.2
+      {
+        name: "Reading 12.3",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>According to the text, what is the relationship between reproducibility, replicability, and the credibility of scientific claims?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Reproducibility and replicability are not relevant to the credibility of scientific claims.", correct: false, feedback: "Sorry, but reproducibility refers to obtaining the same result when given the same data and statistical analysis, while replicability involves repeating an experiment with the same procedures and generating new data to obtain the same result. Both reproducibility and replicability are essential for evaluating the credibility of scientific claims." },
+          { text: "Reproducibility and replicability are important for assessing the transparency of the research process.", correct: false, feedback: "Sorry, but reproducibility refers to obtaining the same result when given the same data and statistical analysis, while replicability involves repeating an experiment with the same procedures and generating new data to obtain the same result. Both reproducibility and replicability are essential for evaluating the credibility of scientific claims." },
+          { text: "The credibility of scientific claims depends on both reproducibility and replicability.", correct: true, feedback: "Great job!" },
+          { text: "Reproducibility and replicability are interchangeable terms used to evaluate scientific claims.", correct: false, feedback: "Sorry, but reproducibility refers to obtaining the same result when given the same data and statistical analysis, while replicability involves repeating an experiment with the same procedures and generating new data to obtain the same result. Both reproducibility and replicability are essential for evaluating the credibility of scientific claims." },
+        ],
+      }, // end of task Reading 12.3
+      {
+        // task 4: gap filling for passives
+        name: "Passive voice",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p> Although many of these threats _1_ for decades, reforms in psychology have only recently begun to address \
+        them more widely. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'have known',
+              correct: false,
+              feedback: 'No, that\'s not correct. In this sentence, we should use Present Perfect Passive. There is  an adverb phrase ‘for \
+              decades’ which indicates the Perfect tense. Passive Voice formula in this case is have+been+Past Participle'
+            },
+            {
+              text: 'have been known',
+              correct: true,
+              feedback: 'Yes! Well done!'
+            },
+            {
+              text: 'are being known',
+              correct: false,
+              feedback: 'No, that\'s not correct. In this sentence, we should use Present Perfect Passive. There is  an adverb phrase ‘for \
+              decades’ which indicates the Perfect tense. Passive Voice formula in this case is have+been+Past Participle'
+            },
+          ]
+        }
+      },
+      {
+        // task 5: gap filling for passives
+        name: "Passive Voice",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p> Such factors may include flexibility in statistical analysis or post hoc hypothesising, when hypotheses _1_ \
+        to better fit the results found. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'are changed',
+              correct: true,
+              feedback: 'Yes! Perfect!'
+            },
+            {
+              text: 'change',
+              correct: false,
+              feedback: 'No, that\'s not correct. In this sentence, as it describes general truth, we should use Present Simple Passive.\
+              ‘Hypotheses’  is plural, so Passive formula here is:  ‘are + Past Participle’'
+            },
+            {
+              text: 'is changed',
+              correct: false,
+              feedback: 'No, that\'s not correct. In this sentence, as it describes general truth, we should use Present Simple Passive.\
+              ‘Hypotheses’  is plural, so Passive formula here is:  ‘are + Past Participle’'
+            },
+          ],
+        },
+      },
+      {
+        // task 6: gap filling passives
+        name: "Passive Voice",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p> Below, we highlight two instances identified by Munafò et al. where progress _1_ : 1) developing and\
+        refining new tools to protect researchers against threats to credibility, and 2) creating new incentive structures\
+        that reward researchers for being transparent.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'is being made',
+              correct: true,
+              feedback: 'Yes! Great job! '
+            },
+            {
+              text: 'is making',
+              correct: false,
+              feedback: 'No, in this sentence, we should use Present Continuous Passive, to form it we need am/is/are+\
+              being+ Past Participle'
+            },
+            {
+              text: 'have been made',
+              correct: false,
+              feedback: 'No. We cannot use ‘have’ with ‘progress’ in this sentence as it is singular.'
+            },
+          ],
+        },
+      },
+      {
+        // task 7: gap filling for passives
+        name: "Passive Voice",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p> Neither reproducibility nor replicability _1_ without both transparency and accessibility of the research\
+         process.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'can be evaluate',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'can evaluated',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'can be evaluated',
+              correct: true,
+              feedback: 'Yes! The correct answer is ‘can be evaluated’ because after modals we should use be+ \
+              Past Participle if we describe the situation in present.'
+            },
+          ],
+        },
+      },
+      { // task 8-14: mark the words
+        name: "Parts of speech",
+        type: "V",
+        interaction: "MARK",
+        primary: true,
+        show_lesson_text: false,
+        question: "<b>Tick the words which can be both a noun and a verb. First, tick the highlighted box, then the words:</b>",
+        marktext: "#1#reason, refer, #1#attribute, collect, #1#research, improve, #1#concern, #1#exhibit, evaluate, #1#process, #1#measure.",
+        markers: {
+          '1': {
+            description: '✓',
+          },
+          } // end of markers list
+
+        } // end of task 8-14
+
+
+    ] // end of tasks
+
+} // end of lesson

@@ -137,6 +137,12 @@ AUTH_USER_MODEL = 'learning_environment.User'
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
+INTERNAL_IPS = [  # for debug toolbar
+    # ...
+    "127.0.0.1",
+    # ...
+]
+
 from os.path import exists
 if exists('ipaca/production_settings.py'):
     from ipaca.production_settings import *

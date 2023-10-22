@@ -1,0 +1,244 @@
+// Lesson ed-001
+// a new lesson 1
+{
+  name: "Lesson 1",  // the name that's also shown to the users
+  id: "Level 1, Lesson 1",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English', // the series this lesson belongs to
+  text: "<p>Software systems are part of a world-wide economic system that has been rapidly evolving for several \
+  hundred years; the factors driving economic growth are slowly starting to be understood. Analysis of changes in World\
+  GDP have found cycles, or waves, of economic activity; Kondratieff waves are the longest, with a period of around 50 \
+  years (data from more centuries may uncover a longer cycle), a variety of shorter cycles are also seen, such as the\
+  Kuznets swing of around 20 years. Five Kondratieff waves have been identified with major world economic cycles, e.g.,\
+  from the industrial revolution to information technology.</p> \
+         <p>Until the early 1980s most software systems were developed for large organizations, with over 50% of US \
+  government research funding for mathematics and computer science coming from the Department of Defense, an organization\
+  that built large systems, with time-frames of many years. As customers of software systems, these organizations\
+  promoted a customer orientated research agenda, e.g., focusing on minimizing customer costs and risks, with no interest\
+  in vendor profitability and risk factors. Also, the customer was implicitly assumed to be a large organization.</p>",
+  text_source: "Evidence-based Software Engineering by Derek M. Jones",
+  text_licence: "CC BY-SA",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/evidence-based-software-engineering",
+  start: "<h2>Focus of the lesson</h2> <p><b>In this lesson  you will:</b>\
+  <p>Enlarge your background knowledge of the history of software systems\
+  <p>Brush up your knowledge of the Verb Tenses\
+  <p>Work on the vocabulary items widely used in academic discourse", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "(<a href='https://www.bbau.ac.in/Docs/FoundationCourse/TM/MPDC105/TENSES%20(1).pdf'>Good to read!</a>)", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 1.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "MC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>Tick the correct sentence(s):</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "People have been aware of reasons for economic growth for centuries.",
+            correct: false,
+            feedback: "It is False because the text says ‘the factors driving economic growth are slowly starting to be understood’."
+          },
+          {
+            text: "Economic activity cycles or waves have been discovered through analysis of fluctuations in global GDP.",
+            correct: true,
+            feedback: "It is True because the text says ‘Analysis of changes in World GDP have found cycles, or waves, of economic activity’."
+          },
+          {
+            text: "The Department of Defense is interested in short-term projects.",
+            correct: false,
+            feedback: "It is False because the text says that the Department of Defense is ‘an organization that built large systems, with time-frames of many years’."
+          },
+          {
+            text: "It was tacitly expected that the client was a major corporation.",
+            correct: true,
+            feedback: "It is True because the text says ‘the customer was implicitly assumed to be a large organization’."
+          },
+        ]
+      },
+      {
+        // task 2: primary reading task
+        name: "Reading 1.2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>Is the author stating facts or opinions?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "Opinions",
+            correct: false,
+            feedback: "Sorry, that's not right. The text refers to the facts."
+          },
+          {
+            text: "Facts",
+            correct: true,
+            feedback: "Great job!"
+          },
+        ]
+      },
+            {
+        // task 3: primary reading task
+        name: "Reading 1.3",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>What is the best title for the text?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          {
+            text: "The History of Kondratieff Waves",
+            correct: false,
+            feedback: "Sorry, that's not right. The text only partially discusses Kondratieff Waves."
+          },
+          {
+            text: "The Role of Software Systems in Economic Growth",
+            correct: true,
+            feedback: "Great job!"
+          },
+          {
+            text: "The Impact of Small Organizations on Software Systems Development",
+            correct: false,
+            feedback: "Sorry, that's not right. The text only mentions large organizations."
+          }
+        ]
+      },
+      {
+        // task 4: gap filling for main tenses
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p>Software systems are part of a world-wide economic system that _1_ for several hundred years.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'has been rapidly evolving',
+              correct: true,
+              feedback: 'Yes! The correct answer is ‘has been rapidly evolving’.'
+            },
+            {
+              text: 'is rapidly evolving',
+              correct: false,
+              feedback: 'No, that\'s not correct. The correct answer is ‘has been rapidly evolving’. In this sentence, Present Perfect Continuous is used and it consists of have/has+ been+ Verb+ing. (<a href=’https://dictionary.cambridge.org/grammar/british-grammar/present-perfect-continuous-i-have-been-working?q=Present+perfect+continuous+%28I+have+been+working%29)>read more about this</a>'
+            },
+          ],
+        },
+      },
+      {
+        // task 5: gap filling for main tenses
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p>Nowadays,  the factors driving economic growth_1_ to be understood.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'are slowly starting',
+              correct: true,
+              feedback: 'Yes! Good job!'
+            },
+            {
+              text: 'slowly start',
+              correct: false,
+              feedback: 'No, that\'s not correct, we need Present Continuous which is used when we describe current tendencies or gradual change. (https://dictionary.cambridge.org/grammar/british-grammar/present-continuous-i-am-working?q=Present+continuous+)'
+            },
+          ],
+        },
+      },
+      {
+        // task 6: gap filling for main tenses
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p>Software ecosystems have been continually disrupted by improvements to their host, the electronic computer, which_1_ infiltrating the human ecosystem 70+ years ago.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'began',
+              correct: true,
+              feedback: 'Yes! Well done!'
+            },
+            {
+              text: 'begun',
+              correct: false,
+              feedback: 'No, that\'s not correct. This is past participle which is normally used with Perfect Tenses but here we need Past Simple.'
+            },
+          ],
+        },
+      },
+      {
+        // task 7: gap filling for main tenses
+        name: "Main Tenses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p> _1_ today’s widely used languages continue to be reasonably as popular over the next decade?</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Will',
+              correct: true,
+              feedback: 'Yes! Well done!'
+            },
+            {
+              text: 'Do',
+              correct: false,
+              feedback: 'No, that\'s not correct. We use the Future Simple when we  make predictions and state facts about the future events. In this sentence, it is indicated by the adverbial phrase ‘over the next decade’. (https://dictionary.cambridge.org/grammar/british-grammar/future-will-and-shall )'
+            },
+          ],
+        },
+      },
+      {  // task 8: mark the words
+        name: "Find the words",
+        type: "V",
+        interaction: "MARK",
+        primary: true,
+        show_lesson_text: false,
+        question: "<b>In the text, find the words according to the definitions below. First, click the definition, then click the word from the text:<b>",
+        marktext: "Software is a product of #1#human #2#cognitive labour, applying the skills and know-how  #3#acquired \
+        through personal #4#practical experience; it is a craft activity. The #5#expensive and error #6#prone process of learning\
+        through personal experience needs to be replaced by an engineering approach #7#derived from the successes and \
+        mistakes of others.",
+        markers: {
+          '1': {
+            description: 'being, relating to, or belonging to a person or to people as opposed to animals',
+          },
+          '2': {
+            description: 'connected with thinking or conscious mental processes',
+          },
+          '3': {
+            description: 'gradually learnt or gained',
+          },
+          '4': {
+            description: 'relating to experience, real situations',
+          },
+          '5': {
+            description: 'costing a lot of money',
+          },
+          '6': {
+            description: 'likely to do, get, or suffer from something',
+          },
+          '7': {
+            description: 'coming from or caused by something else',
+          }
+        } // end of markers list
+      } // end of task 8
+    ] // end of tasks
+
+} // end of lesson

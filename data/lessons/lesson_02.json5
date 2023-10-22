@@ -1,0 +1,558 @@
+// Lesson ed-002
+// a new lesson 2
+{
+  name: "Lesson 2",  // the name that's also shown to the users
+  id: "Level 1, Lesson 2",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English', // the series this lesson belongs to
+  text: "<p>Probability is the mathematical theory used to study uncertainty. It provides tools for the formalization \
+         and quantification of the notion of uncertainty. In particular, it deals with the chance of an event \
+         occurring. For example, if the different potential outcomes of an experiment are equally likely to occur \
+         then the probability of each outcome is taken to be one divided by the number of potential outcomes.</p>\
+         <p>As an illustration, consider tossing a fair coin. There are two possible outcomes – a head or a tail – \
+         and the probability of each outcome is 1/2. If you toss a fair coin 4 times, the outcomes may not necessarily \
+         be 2 heads and 2 tails. However, if you toss the same coin 4,000 times, the outcomes will be close to \
+         2,000 heads and 2,000 tails. It is very unlikely to obtain more than 2,060 tails and it is similarly \
+         unlikely to obtain less than 1,940 tails. This is consistent with the expected theoretical probability \
+         of heads in any one toss. Even though the outcomes of a few repetitions are uncertain, there is a regular \
+         pattern of outcomes when the number of repetitions is large. Statistics exploits this pattern regularity \
+         in order to make extrapolations from the observed sample to the entire population.</p>\
+         <p>In statistics, we generally want to study a population. If you wished to compute the overall grade \
+         point average at your school, it would make sense to select a sample of students who attend the school. \
+         The data collected from the sample would be the students’ grade point averages.</p>\
+         <p>From the sample data, we can calculate a statistic. A statistic is a number that is a property of \
+         the sample. For example, if we consider one math class to be a sample of the population of all math \
+         classes, then the average number of points earned by students in that one math class at the end of \
+         the term is an example of a statistic. Two words that come up often in statistics are average and \
+         proportion. If you were to take three exams in your math classes and obtained scores of 86, 75, and \
+         92, you calculate your average score by adding the three exam scores and dividing by three (your \
+         average score would be 84.3 to one decimal place). If, in your math class, there are 40 students \
+         and 22 are men and 18 are women, then the proportion of men students is 22/40 and the proportion \
+         of women students is 18/40.</p>",
+  text_source: "Introduction to Statistical Thinking by Benjamin Yakir",
+  text_licence: "CC-BY",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/1044",
+  start: "<h2>Focus of the lesson</h2><p>\
+    <b>In this lesson you will:</b> \
+    <p>Extend your background knowledge of probability and statistics\
+    <p>Revisit your understanding of Conditionals\
+    <p>Work on the vocabulary items widely used in academic discourse", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Want to revise this grammar topic? <a href='https://dictionary.cambridge.org/grammar/british-grammar/conditionals'</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 2.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: " <b>How many possible outcomes are there if you toss a coin?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "1", correct: false, feedback: "No, that's incorrect. The text says ‘There are two possible outcomes – a head or a tail" },
+          { text: "2", correct: true, feedback: "Yes, that's correct! Great job!" },
+          { text: "4", correct: false, feedback: "No, that's incorrect. The text says ‘There are two possible outcomes – a head or a tail" },
+          { text: "4.000", correct: false, feedback: "No, that's incorrect. The text says ‘There are two possible outcomes – a head or a tail" },
+        ]
+      },
+      {
+        name: "Reading 2.2",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: " <b>Finish the sentence: ‘In statistics, you frequently deal with….. </b>’",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "men and women", correct: false, feedback: "No, that's incorrect because the text says ‘Two words that come up often in statistics are average and proportion’" },
+          { text: "average and proportion", correct: true, feedback: "Yes! Well done!" },
+          { text: "schools and subjects", correct: false, feedback: "No, that's incorrect because the text says ‘Two words that come up often in statistics are average and proportion’" },
+          { text: "head and tails", correct: false, feedback: "No, that's incorrect because the text says ‘Two words that come up often in statistics are average and proportion’" },
+        ],
+      }, // end of task 2
+      {
+        name: "Reading 2.3",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: " <b>Does the author show any biases?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Yes", correct: false, feedback: "No, that's incorrect, the text is written in a neutral tone presenting the information objectively without expressing personal opinions or biases" },
+          { text: "No", correct: true, feedback: "Great job!" },
+        ],
+      }, // end of task 3
+      {
+        // task 4: gap filling for conditionals
+        name: "Conditionals",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p> <b>Choose the option that applies: </b></p>\
+        <p>If you _1_ the same coin 4,000 times, the outcomes will be close to 2,000 heads and 2,000 tails.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'will toss',
+              correct: false,
+              feedback: 'No, that\'s not correct. The correct answer is ‘toss’ because here we use the first conditional  which is used to talk about the result of an imagined future situation, when we believe the imagined situation is quite likely.  [imagined future situation] If the taxi doesn’t come soon, [future result] I’ll drive you myself. To form this, we use if + present simple in the conditional clause, and  modal verb with future meaning (shall/should/will/would/can/could/may/might) in the main clause.'
+            },
+            {
+              text: 'toss',
+              correct: true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'would toss',
+              correct: false,
+              feedback: 'No, that\'s not correct. The correct answer is ‘toss’ because here we use the first conditional  which is used to talk about the result of an imagined future situation, when we believe the imagined situation is quite likely.  [imagined future situation] If the taxi doesn’t come soon, [future result] I’ll drive you myself. To form this, we use if + present simple in the conditional clause, and  modal verb with future meaning (shall/should/will/would/can/could/may/might) in the main clause.'
+            },
+          ],
+        },
+      },
+      {
+        // task 5: gap filling for conditionals
+        name: "Conditionals",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p>If you wished to compute the overall grade point average at your school, it _1_ sense to select a sample of students who attend the school.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'will make',
+              correct: false,
+              feedback: 'No, that\'s not correct. The correct answer is’ would make’ because here we use the second conditional  which is used to talk about the possible result of an imagined situation in the present or future. We say what the conditions must be for the present or future situation to be different, If people complained, things would change. (People don’t complain at the moment.) To form this, we use if + past simple in the conditional clause, and  modal verb with modal verb with future-in-the-past meaning (should/would/might/could) in the main clause.'
+            },
+            {
+              text: 'would make',
+              correct: true,
+              feedback: 'Great job!'
+            },
+            {
+              text: 'would have made',
+              correct: false,
+              feedback: 'No, that\'s not correct.The correct answer is’ would make’ because here we use the second conditional  which is used to talk about the possible result of an imagined situation in the present or future. We say what the conditions must be for the present or future situation to be different, If people complained, things would change. (People don’t complain at the moment.) To form this, we use if + past simple in the conditional clause, and  modal verb with modal verb with future-in-the-past meaning (should/would/might/could) in the main clause.'
+            },
+          ],
+        },
+      },
+      {
+        // task 6: gap filling for conditionals
+        name: "Conditionals",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p>If you _1_ a fair coin 4 times, the outcomes may not necessarily be 2 heads and 2 tails.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'are tossing',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'toss',
+              correct: true,
+              feedback: 'The correct answer is ‘toss’ because here we use the zero conditional  which is used to talk about things that are generally true, especially for laws and rules.  To form this, we use if + present simple in the conditional clause, and present simple in the main clause.'
+            },
+            {
+              text: 'tossed',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 7: gap filling for conditionals
+        name: "Conditionals",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p>Had we collected a different subset of 100 individuals, we _1_ different numerical value for the estimate.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'would have obtained',
+              correct: true,
+              feedback: 'Yes! Great job!'
+            },
+            {
+              text: 'would obtain',
+              correct: false,
+              feedback: 'No, that\'s not correct.The correct answer is ‘would have obtained’ because here we use the third conditional  which is used when we imagine a different past, where something did or did not happen, and we imagine a different result:If I had played better, I would have won. (I didn’t play well and I didn’t win.) To form this, we use if + past perfect  in the conditional clause, and modal verb with future-in-the-past meaning (should/would/might/could) + have + -ed form in the main clause.'
+            },
+            {
+              text: 'obtained',
+              correct: false,
+              feedback: 'No, that\'s not correct. The correct answer is ‘would have obtained’ because here we use the third conditional  which is used when we imagine a different past, where something did or did not happen, and we imagine a different result:If I had played better, I would have won. (I didn’t play well and I didn’t win.) To form this, we use if + past perfect  in the conditional clause, and modal verb with future-in-the-past meaning (should/would/might/could) + have + -ed form in the main clause.'
+            },
+          ],
+        },
+      },
+
+      {
+        // task 8: Vocabulary for Lesson 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the best option:</b></p>\
+        <p>Several allometric biomass models were used in study to _1_ independent estimates of LAI.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'obtain',
+              correct: true,
+              feedback: 'Yes, that\'s correct'
+            },
+            {
+              text: 'unlikely',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consistent',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'potential',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'data',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consideration',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'dealing with',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ]
+        }
+      },
+      {
+        // task 9: Vocabulary for Lesson 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the best option:</b></p>\
+        <p>Although contradictions are not a theoretical problem in the analysis, a strategy was needed for _1_ them.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'obtain',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'unlikely',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consistent',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'potential',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'data',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consideration',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'dealing with',
+              correct: true,
+              feedback: 'Yes, that\'s correct'
+            },
+          ]
+        }
+      },
+      {
+        // task 10: Vocabulary for Lesson 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the best option:</b></p>\
+        <p>This is _1_ with a hypothesis developed by the roles of agriculture project of the FAO (2007) that the indirect roles of agriculture including environmental service are perceived to vary in the course of different stages in economic development of a country.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'obtain',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'unlikely',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consistent',
+              correct: true,
+              feedback: 'Yes, that\'s correct'
+            },
+            {
+              text: 'potential',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'data',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consideration',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'dealing with',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ]
+        }
+      },
+      {
+        // task 11: Vocabulary for Lesson 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the best option:</b></p>\
+        <p>These patterns consist of distinct substantive concerns, risk perceptions, emotional responses, and preferred modes of conduct in coping with the  _1_ threat of GM foods.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'obtain',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'unlikely',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consistent',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'potential',
+              correct: true,
+              feedback: 'Yes, that\'s correct'
+            },
+            {
+              text: 'data',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consideration',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'dealing with',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ]
+        }
+      },
+      {
+        // task 12: Vocabulary for Lesson 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the best option:</b>:</p>\
+        <p>It seeks to reduce social behaviour to the mechanical application of categorical rules, without _1_ of context, consequence, or the substantive merits of the behaviour in question.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'obtain',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'unlikely',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consistent',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'potential',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'data',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consideration',
+              correct: true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'dealing with',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ]
+        }
+      },
+      {
+        // task 13: Vocabulary for Lesson 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the best option:</b></p>\
+        <p>In continuous measurement systems the sensor is installed permanently to a desired location and usually connected by wire to a datalogger that collects the _1_ from the connected sensors at a speciﬁed time interval.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'obtain',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'unlikely',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consistent',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'potential',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'data',
+              correct: true,
+              feedback: 'Yes! Great job!'
+            },
+            {
+              text: 'consideration',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'dealing with',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ]
+        }
+      },
+
+      {
+        // task 14: Vocabulary for Lesson 2
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the best option:</b></p>\
+        <p>It is highly _1_ or even illogical to happen in real life that the Professor and his wife would ask Dr. Mercado to be their youngest child’s godmother if there was no close personal friendship between them.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'obtain',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'unlikely',
+              correct: true,
+              feedback: 'Yes, that\'s correct'
+            },
+            {
+              text: 'consistent',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'potential',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'data',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'consideration',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'dealing with',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+          ]
+        }
+      }
+    ] // end of tasks
+
+} // end of lesson

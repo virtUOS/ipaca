@@ -1,0 +1,541 @@
+// Lesson ed-021
+// a new lesson 21
+{
+  name: "Lesson 21",  // the name that's also shown to the users
+  id: "Level 3, Lesson 21",     // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English',
+  text: "<p><b>Choose the supporting sentence that best fits the context flow of ideas in paragraphs. One sentence is extra.</b></p>",
+  text_source: "More than 50 long-term effects of COVID-19: a systematic review and meta-analysis",
+  text_licence: "CC-BY",
+  text_url: "https://www.nature.com/articles/s41598-021-95565-8",
+  start: "<h2>Focus of the lesson</h2> \
+  <p><b>In this lesson you will:</b> \
+   <p>Deepen your familiarity with the topic of COVID-19 \
+   <p>Learn how to use adjectives and adverbs in academic context properly \
+   <p>Work on the key adverbs and their antonyms in academic English", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read <a href='https://www.thefreedictionary.com/Evaluative-Adverbs.htm'>more about this</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 21.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: true,
+        question: "<p><b>Choose the option that applies</b>:</p>\
+        <p>The severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) was detected in China in December 2019. \
+        Since then, more than 175 million people worldwide have been infected after a year, and over 3.8 million people\
+        have died from the coronavirus disease 2019 (COVID-19). Symptoms, signs, or abnormal clinical parameters persisting\
+        two or more weeks after COVID-19 onset that do not return to a healthy baseline can potentially be considered \
+        long-term effects of the disease. _1_. However, it has not yet been established how sex, gender, age, ethnicity,\
+        underlying health conditions, viral dose, or progression of COVID-19 significantly affect the risk of developing\
+        long-term effects of COVID-19.</p>\
+        <p>The terminology has been confusing and not standardized. Different authors have used several terms to describe \
+        prolonged symptoms following COVID-19 illness, such as “Long COVID-19”, “post-acute COVID-19”, “persistent COVID-19 \
+        symptoms”, “chronic COVID-19”, “post-COVID-19 manifestations”, “long-term COVID-19 effects”, “post COVID-19 syndrome”, \
+        “ongoing COVID-19”, “long-term sequelae”, or “long-haulers” as synonyms. Most recently, the term “post-acute sequelae\
+        of SARS-CoV-2 infection” (PASC), “long-COVID-19”, and “post-acute COVID-19”, has been utilised.</p>\
+        <p> Since first reported, there has been a vast amount of social media patient groups, polls, comments, and scientific\
+        articles aiming to describe the chronicity of COVID-19._2_. However, a broad overview of all the possible longstanding\
+        effects of COVID-19 is still needed.</p>\ ",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'This systematic review and meta-analysis aims to identify studies assessing the long-term effects of COVID-19.',
+              correct: false,
+              feedback: 'No, that\'s not correct because the text previously mentions ‘Symptoms, signs, or abnormal clinical parameters … that do not return to a healthy baseline’ and then elaborates the idea starting with  ‘such alteration’. '
+            },
+            {
+              text: 'Although such alteration is mainly reported in severe and critical disease survivors, the lasting effects also occur in individuals with a mild infection who did not require hospitalization.',
+              correct: true,
+              feedback: 'Great job!'
+            },
+            {
+              text: 'In parallel, hundreds of scientific publications, including cohorts studying specific effects of the disease and lists of case reports, have been described. ',
+              correct: false,
+              feedback: 'No, that\'s not correct because the text previously mentions ‘Symptoms, signs, or abnormal clinical parameters … that do not return to a healthy baseline’ and then elaborates the idea starting with ‘such alteration’.'
+            }
+          ],
+          _2_: [
+            {
+              text: 'This systematic review and meta-analysis aims to identify studies assessing the long-term effects of COVID-19.',
+              correct: false,
+              feedback: 'No, that\'s not correct because this sentence does not continue the above mentioned flow of ideas.'
+            },
+            {
+              text: 'Although such alteration is mainly reported in severe and critical disease survivors, the lasting effects also occur in individuals with a mild infection who did not require hospitalization.',
+              correct: false,
+              feedback: 'No, that\'s not correct because this sentence does not continue the above mentioned flow of ideas.'
+            },
+            {
+              text: 'In parallel, hundreds of scientific publications, including cohorts studying specific effects of the disease and lists of case reports, have been described. ',
+              correct: true,
+              feedback: 'Well done!'
+            }
+          ]
+        },
+      }, // end of task 1
+      {
+        name: "Reading 21.2",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question: "<b><p>What is the purpose of this text?</b></p>\
+        <p>The severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) was detected in China in December 2019.\
+        Since then, more than 175 million people worldwide have been infected after a year, and over 3.8 million people \
+        have died from the coronavirus disease 2019 (COVID-19). Symptoms, signs, or abnormal clinical parameters persisting \
+        two or more weeks after COVID-19 onset that do not return to a healthy baseline can potentially be considered\
+        long-term effects of the disease. Although such alteration is mainly reported in severe and critical disease survivors,\
+        the lasting effects also occur in individuals with a mild infection who did not require hospitalization. However,\
+        it has not yet been established how sex, gender, age, ethnicity, underlying health conditions, viral dose, or\
+        progression of COVID-19 significantly affect the risk of developing long-term effects of COVID-19. The terminology\
+        has been confusing and not standardized. Different authors have used several terms to describe prolonged symptoms\
+        following COVID-19 illness, such as “Long COVID-19”, “post-acute COVID-19”, “persistent COVID-19 symptoms”, \
+        “chronic COVID-19”, “post-COVID-19 manifestations”, “long-term COVID-19 effects”, “post COVID-19 syndrome”, \
+        “ongoing COVID-19”, “long-term sequelae”, or “long-haulers” as synonyms. Most recently, the term “post-acute\
+        sequelae of SARS-CoV-2 infection” (PASC), “long-COVID-19”, and “post-acute COVID-19”, has been utilised.\
+        Since first reported, there has been a vast amount of social media patient groups, polls, comments, and scientific \
+        articles aiming to describe the chronicity of COVID-19. In parallel, hundreds of scientific publications, including\
+        cohorts studying specific effects of the disease and lists of case reports, have been described. However, a broad\
+        overview of all the possible longstanding effects of COVID-19 is still needed. </p>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "to inform the reader", correct: true, feedback: "Super!Great job" },
+          { text: "to instruct the reader", correct: false, feedback: "No, that's incorrect, the text does not provide any instructions." },
+          { text: "to entertain the reader", correct: false, feedback: "No, that's incorrect, the text does not contain any amusing content." },
+        ],
+      }, // end of task 2
+ {
+        name: "Reading 21.3",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: false,
+        question: "<b><p>What is missing from the text?</b></p>\
+        <p>The severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) was detected in China in December 2019.\
+        Since then, more than 175 million people worldwide have been infected after a year, and over 3.8 million people \
+        have died from the coronavirus disease 2019 (COVID-19). Symptoms, signs, or abnormal clinical parameters persisting \
+        two or more weeks after COVID-19 onset that do not return to a healthy baseline can potentially be considered\
+        long-term effects of the disease. Although such alteration is mainly reported in severe and critical disease survivors,\
+        the lasting effects also occur in individuals with a mild infection who did not require hospitalization. However,\
+        it has not yet been established how sex, gender, age, ethnicity, underlying health conditions, viral dose, or\
+        progression of COVID-19 significantly affect the risk of developing long-term effects of COVID-19. The terminology\
+        has been confusing and not standardized. Different authors have used several terms to describe prolonged symptoms\
+        following COVID-19 illness, such as “Long COVID-19”, “post-acute COVID-19”, “persistent COVID-19 symptoms”, \
+        “chronic COVID-19”, “post-COVID-19 manifestations”, “long-term COVID-19 effects”, “post COVID-19 syndrome”, \
+        “ongoing COVID-19”, “long-term sequelae”, or “long-haulers” as synonyms. Most recently, the term “post-acute\
+        sequelae of SARS-CoV-2 infection” (PASC), “long-COVID-19”, and “post-acute COVID-19”, has been utilised.\
+        Since first reported, there has been a vast amount of social media patient groups, polls, comments, and scientific \
+        articles aiming to describe the chronicity of COVID-19. In parallel, hundreds of scientific publications, including\
+        cohorts studying specific effects of the disease and lists of case reports, have been described. However, a broad\
+        overview of all the possible longstanding effects of COVID-19 is still needed. </p>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Citing", correct: true, feedback: "Yes, that's correct!" },
+          { text: "Linking words", correct: false, feedback: "No, that's incorrect, linking words are there but the text says 'More recent work suggests that a high end of 3 to 4 feet is more plausible’ but there's no citing. " },
+        ],
+      }, // end of task 21.3
+      {
+        // task 4: writing for adverbs and adjectives
+        name: "Adverbs and Adjectives",
+        type: "GS",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the underlined part using an adverb so that it has similar meaning. Mind the punctuation: \
+        '<u>It is important that our study</u> is aimed to perform a systematic review and meta-analysis of peer-reviewed \
+        studies to estimate the prevalence of all the symptoms, signs, or abnormal laboratory parameters.",
+        answer: "Importantly, our study"
+      },
+      {
+        // task 5: writing for adverbs and adjectives
+        name: "Adverbs and Adjectives",
+        type: "GS",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the underlined part using an adverb so that it has similar meaning. Mind the punctuation:\
+        '<u>It is significant that multi-disciplinary teams</u> are crucial to developing preventive measures, \
+        rehabilitation techniques, and clinical management strategies with whole-patient perspectives designed to address long COVID-19 care.",
+        answer: "Significantly, multi-disciplinary teams"
+      },
+      {
+        // task 6: writing for adverbs and adjectives
+        name: "Adverbs and Adjectives",
+        type: "GS",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the underlined part using an adverb so that it has similar meaning. Mind the punctuation: \
+        '<u>It is surprising that seven of the studies</u> did not describe the system used to record the symptoms in \
+        detail, and most were self-reported retrospectively.",
+        answer: "Surprisingly, seven of the studies"
+      },
+      {
+        // task 7: writing for adverbs and adjectives
+        name: "Adverbs and Adjectives",
+        type: "GS",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the underlined part using an adverb so that it has similar meaning. Mind the punctuation: \
+        '<u>It is interesting that this could be</u> partially explained by host-controlled factors that influence the \
+        outcome of the viral infection, including genetic susceptibility, age of the host when infected, and dose and \
+        route of infection.",
+        answer: "Interestingly, this could be"
+      },
+       {
+         // task 8: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the adjective from the list. Take the opposite in brackets as a hint:</b></p>\
+        <p>To obtain more _1_ meta-analyses, there is an urgent need to have a standard definition of long-COVID-19. (VAGUE)</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'prospective',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'heterogeneous',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'common',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'longstanding',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'difficult',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'accurate',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'acute',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ]
+        }
+      },
+             {
+         // task 9: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the adjective from the list. Take the opposite in brackets as a hint:</b></p>\
+        <p>The severe _1_ respiratory syndrome coronavirus 2 (SARS-CoV-2) was detected in China in December 2019. (MILD)</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'prospective',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'heterogeneous',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'common',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'longstanding',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'difficult',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'accurate',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'acute',
+              correct: true,
+              feedback: 'Perfect!'
+            }
+          ]
+        }
+      },
+             {
+         // task 10: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the adjective from the list. Take the opposite in brackets as a hint:</b></p>\
+        <p>Limitations of this systematic review and meta-analyses include the small sample size for some outcomes, making it _1_ to generalize these results to the general population. (FACILE)</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'prospective',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'heterogeneous',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'common',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'longstanding',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'difficult',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'accurate',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'acute',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ]
+        }
+      },
+             {
+         // task 11: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the adjective from the list. Take the opposite in brackets as a hint:</b></p>\
+        <p>However, a broad overview of all the possible _1_ effects of COVID-19 is still needed. (IMPERMANENT)</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'prospective',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'heterogeneous',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'common',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'longstanding',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'difficult',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'accurate',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'acute',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ]
+        }
+      },
+             {
+         // task 12: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the adjective from the list. Take the opposite in brackets as a hint:</b></p>\
+        <p>For example, several studies that used a self-reported questionnaire could result in reporting bias. In addition, the studies were very _1_ mainly due to the follow-up time references and the mixture of patients who had moderate and severe COVID-19. (HOMOGENEOUS)</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'prospective',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'heterogeneous',
+              correct: true,
+              feedback: 'Yes! You got it!'
+            },
+            {
+              text: 'common',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'longstanding',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'difficult',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'accurate',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'acute',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ]
+        }
+      },
+             {
+         // task 13: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the adjective from the list. Take the opposite in brackets as a hint:</b></p>\
+        <p>In the following paragraphs, we will discuss the most _1_ symptoms to illustrate how complex each one can be. (ABNORMAL)</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'prospective',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'heterogeneous',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'common',
+              correct: true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'longstanding',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'difficult',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'accurate',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'acute',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ]
+        }
+      },
+             {
+         // task 14: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Complete the sentence with the adjective from the list. Take the opposite in brackets as a hint:</b></p>\
+        <p>There is a need for more information about _1_ studies to better evaluate the natural course of COVID-19 infection and define the long- COVID-19 syndrome. (PRIOR)</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'prospective',
+              correct: true,
+              feedback: 'Excellent!'
+            },
+            {
+              text: 'heterogeneous',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'common',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'longstanding',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'difficult',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'accurate',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'acute',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ]
+        }
+      }
+    ] // end of tasks
+
+} // end of lesson

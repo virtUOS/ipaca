@@ -22,6 +22,7 @@
     <script src="{% static 'popper.min.js' %}"></script>
     <script src="{% static 'jquery.min.js' %}"></script>
     {% bootstrap_javascript %}
+
     <style>
 
     @media only screen and (min-width: 961px) {
@@ -63,6 +64,7 @@
     {% block content %}No content{% endblock %}
     </div>
 </main>
+
     <footer class="footer">
         <div class="container">
             {% if request.user.is_authenticated %}

@@ -1,0 +1,526 @@
+// Lesson ed-005
+// a new lesson 5
+{
+  name: "Lesson 5",  // the name that's also shown to the users
+  id: "Level 1, Lesson 5",     // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English', // the series this lesson belongs to
+  text: "<p> Economics, and its offspring, Finance, are abstract (social) sciences. In order to study economics, it is\
+   essential that one understands what an abstraction is. An abstraction is an idea, intended to mirror reality in \
+   its simplest form. The world is a very complicated place; there are many variables or inputs, some identifiable, \
+   others not, that affect an outcome, and which we endeavor to identify. In order to understand the outcome which is\
+   generally true, but not necessarily absolutely or always so, one must engage in a process of simplification that \
+   requires removing minor variables from a general idea in order to reduce the notion to its essential characteristics.\
+   Indeed, the Latin word, “abstract,” comes from “drawing” or “taking away from.”</p>\
+   <p>In this process, one is able to derive a broad, general conclusion, based on first principles from which is derived\
+   a general idea or rule. In economics, this requires a ceteris paribus assumption, that is to say, holding “all else \
+   equal.” Initially, it is assumed that no other variables matter and are thus ignored away. It takes some discipline\
+   to do this at first, but it quickly becomes easy; you must merely keep it in mind.</p>",
+  text_source: "Introduction to Financial Analysis by Kenneth S. Bigel",
+  text_licence: "CC - BY",
+  text_url: "https://open.umn.edu/opentextbooks/textbooks/introduction-to-financial-analysis ",
+  start: "<h2>Focus of the lesson</h2>\
+   <p><b>In this lesson you will:</b> \
+   <p>Extend your background knowledge of economics and financial analysis</p>\
+   <p>Study up on the topic of  Gradability of Adjectives and Adverbs</p>\
+   <p>Keep working  on words and word combinations widely used in academic discourse</p>", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Want to know more about this topic? Good to read <a href='https://learnenglish.britishcouncil.org/grammar/b1-b2-grammar/adjectives-gradable-non-gradable'</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 5.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>What is the writer's main purpose?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "to provide specific examples of abstraction in economics", correct: false, feedback: "No, that's incorrect. The text defines what abstraction is and why it is necessary for the study of economics, while there are no specific examples of abstraction as well as no particular theories mentioned." },
+          { text: "to explain the importance of understanding what an abstraction is in order to study economics", correct: true, feedback: "Yes! Great job!" },
+          { text: "to advocate for a particular economic theory", correct: false, feedback: "No, that's incorrect. The text defines what abstraction is and why it is necessary for the study of economics, while there are no specific examples of abstraction as well as no particular theories mentioned." },
+        ]
+      },
+      {
+        // task 2: primary reading task
+        name: "Reading 5.2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>In the second paragraph, what does ‘this’ (line 2) refer to?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "A. to the process of deriving a broad, general conclusion based on first principles", correct: true, feedback: "Great!" },
+          { text: "B. to the ceteris paribus assumption in economics", correct: false, feedback: "No, the correct answer is A because ‘this’ in line 2 specifically refers to the process of deriving a broad, general conclusion based on first principles" },
+          { text: "C. to the assumption that variables can change independently", correct: false, feedback: "No, the correct answer is A because ‘this’ in line 2 specifically refers to the process of deriving a broad, general conclusion based on first principles" },
+        ]
+      },
+      {
+        name: "Reading 5.3",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>What information does the author assume is true? Tick the correct option.</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "An abstraction refers to a concept that is designed to represent reality in a simplified manner.", correct: true, feedback: "Yes, you got it!" },
+          { text: "One needs to simplify and distill the idea by eliminating fundamental features and focusing on its minor variables.", correct: false, feedback: "No, that's incorrect. The text says 'An abstraction is an idea, intended to mirror reality in its simplest form' " },
+        ],
+      }, // end of task Reading 5.3
+      {
+        // task 4: gap filling for gradability
+        name: "Gradability of Adjectives and Adverbs",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Decide if the adverb can be used in a sentence. If not, choose '-':</b></p>\
+        <p>It is_1_ disappointing that only 6,000 new social homes were built last year.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: '-',
+              correct: false,
+              feedback: 'No, that\'s not correct. We can say ‘dreadfully disappointing’ because ‘disappointing’ is a gradable adjective and thus, can be used with a grading adverb. You can read the rule here https://www.englishclub.com/grammar/adjectives-gradability.htm'
+            },
+            {
+              text: 'dreadfully',
+              correct: true,
+              feedback: 'Well done!'
+            },
+          ],
+        },
+      },
+      {
+        // task 5: gap filling for gradability
+        name: "Gradability",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Decide if the adverb can be used in a sentence. If not, choose '-':</b></p>\
+        <p>On the other hand, some studies reveal _1_ positive environmental externalities, including biodiversity \
+        conservation,creating and shaping rural landscape with more aesthetic value .</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: '-',
+              correct: false,
+              feedback: 'No, that\'s not correct. We can use ’fairly positive’ as ‘positive’ is a gradable adjective and thus, can be used with a grading adverb. You can read the rule here https://www.englishclub.com/grammar/adjectives-gradability.htm'
+            },
+            {
+              text: 'fairly',
+              correct: true,
+              feedback: 'Yes! Great job!'
+            },
+          ],
+        },
+      },
+      {
+        // task 6: gap filling for gradability
+        name: "Gradability",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Decide if the adverb can be used in a sentence. If not, choose '-':</b></p>\
+        <p>It is another example of the Prime Minister creating _1_ impossible expectations.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: '-',
+              correct: true,
+              feedback: 'Great job!'
+            },
+            {
+              text: 'very',
+              correct: false,
+              feedback: 'No, that\'s not correct. ‘Impossible’ is non-gradable and cannot be used with grading adverbs.You can read the rule here https://www.englishclub.com/grammar/adjectives-gradability.htm'
+            },
+          ],
+        },
+      },
+      {
+        // task 7: gap filling for gradability
+        name: "Gradability",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Decide if the adverb can be used in a sentence. If not, choose '-':</b></p>\
+        <p>The technology is there, but it requires _1_ digital innovators to work with interested university \
+        departments to see this as a good social project and invest.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'entirely',
+              correct: false,
+              feedback: ' No, that\'s not correct. The adjective ‘digital’ is  non-gradable and cannot be used with grading adverbs. You can read the rule here https://www.englishclub.com/grammar/adjectives-gradability.htm.'
+            },
+            {
+              text: '-',
+              correct: true,
+              feedback: 'Well done!'
+            },
+          ],
+        },
+      },
+          {
+             // task 8: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Match the beginnings and endings of the sentences:</b></p>\
+        <p>Communicative competence results from the acquisition of the mother tongue, which is intrinsically linked to\
+         the development of an individual's cognitive_1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acceptable and environmentally friendly exploration, extraction and processing technologies will boost the efficient use of resources.',
+              correct: false,
+              feedback: 'Sorry, try again'
+            },
+            {
+              text: 'audience (population of relevant Member States or segments of the population, e.g. end users of different age and gender) to comprehend the communication.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'ability to interpret the world and relate to others.',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'assigned to a position in the exposure system in order to reduce potential positional effects, including slight variations in temperature, light intensity, etc.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'advantage over its rivals.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'knowledge during their audit task, in accordance with the rules applicable to that information and data.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'aware of such developments shall provide the other Contracting Party with all the relevant information.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+            },
+            {
+             // task 9: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Match the beginnings and endings of the sentences:</b></p>\
+        <p>Developing and deploying economically viable, socially_1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acceptable and environmentally friendly exploration, extraction and processing technologies will boost the efficient use of resources.',
+              correct: true,
+              feedback: 'Yes! You got it!'
+            },
+            {
+              text: 'audience (population of relevant Member States or segments of the population, e.g. end users of different age and gender) to comprehend the communication.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'ability to interpret the world and relate to others.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned to a position in the exposure system in order to reduce potential positional effects, including slight variations in temperature, light intensity, etc.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'advantage over its rivals.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'knowledge during their audit task, in accordance with the rules applicable to that information and data.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'aware of such developments shall provide the other Contracting Party with all the relevant information.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+            },
+            {
+             // task 10: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Match the beginnings and endings of the sentences:</b></p>\
+        <p>Those persons shall ensure that they respect the confidentiality of the information and protect the data of\
+         which they acquire_1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acceptable and environmentally friendly exploration, extraction and processing technologies will boost the efficient use of resources.',
+              correct: false,
+              feedback: 'Sorry! Try again!'
+            },
+            {
+              text: 'audience (population of relevant Member States or segments of the population, e.g. end users of different age and gender) to comprehend the communication.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'ability to interpret the world and relate to others.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned to a position in the exposure system in order to reduce potential positional effects, including slight variations in temperature, light intensity, etc.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'advantage over its rivals.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'knowledge during their audit task, in accordance with the rules applicable to that information and data.',
+              correct: true,
+              feedback: 'Congratulations!'
+            },
+            {
+              text: 'aware of such developments shall provide the other Contracting Party with all the relevant information.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+            },
+            {
+             // task 11: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Match the beginnings and endings of the sentences:<b/></p>\
+        <p>In markets where innovation is important, coordination may be more difficult since innovations, particularly\
+        significant ones, may allow one firm to gain a major_1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acceptable and environmentally friendly exploration, extraction and processing technologies will boost the efficient use of resources.',
+              correct: false,
+              feedback: 'Sorry!Try again!'
+            },
+            {
+              text: 'audience (population of relevant Member States or segments of the population, e.g. end users of different age and gender) to comprehend the communication.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'ability to interpret the world and relate to others.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned to a position in the exposure system in order to reduce potential positional effects, including slight variations in temperature, light intensity, etc.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'advantage over its rivals.',
+              correct: true,
+              feedback: 'Yes! You got it!'
+            },
+            {
+              text: 'knowledge during their audit task, in accordance with the rules applicable to that information and data.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'aware of such developments shall provide the other Contracting Party with all the relevant information.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+            },
+            {
+             // task 12: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Match the beginnings and endings of the sentences:</b></p>\
+        <p>The treatment tanks should be randomly _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acceptable and environmentally friendly exploration, extraction and processing technologies will boost the efficient use of resources.',
+              correct: false,
+              feedback: 'No!No!No!'
+            },
+            {
+              text: 'audience (population of relevant Member States or segments of the population, e.g. end users of different age and gender) to comprehend the communication.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'ability to interpret the world and relate to others.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned to a position in the exposure system in order to reduce potential positional effects, including slight variations in temperature, light intensity, etc.',
+              correct: true,
+              feedback: 'Yes, that\'s  correct.'
+            },
+            {
+              text: 'advantage over its rivals.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'knowledge during their audit task, in accordance with the rules applicable to that information and data.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'aware of such developments shall provide the other Contracting Party with all the relevant information.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+            },
+            {
+             // task 13: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Match the beginnings and endings of the sentences:</b></p>\
+        <p>Marketing communications shall take into account the capacity of the target _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acceptable and environmentally friendly exploration, extraction and processing technologies will boost the efficient use of resources.',
+              correct: false,
+              feedback: 'No!No!No!'
+            },
+            {
+              text: 'audience (population of relevant Member States or segments of the population, e.g. end users of different age and gender) to comprehend the communication.',
+              correct: true,
+              feedback: 'Yes! You got it!'
+            },
+            {
+              text: 'ability to interpret the world and relate to others.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned to a position in the exposure system in order to reduce potential positional effects, including slight variations in temperature, light intensity, etc.',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'advantage over its rivals.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'knowledge during their audit task, in accordance with the rules applicable to that information and data.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'aware of such developments shall provide the other Contracting Party with all the relevant information.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+      {
+             // task 14: gap filling for vocabulary
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Match the beginnings and endings of the sentences:</b></p>\
+        <p>Where new methods or techniques are developed, the Contracting Party that becomes _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acceptable and environmentally friendly exploration, extraction and processing technologies will boost the efficient use of resources.',
+              correct: false,
+              feedback: 'No!No!No!'
+            },
+            {
+              text: 'audience (population of relevant Member States or segments of the population, e.g. end users of different age and gender) to comprehend the communication.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'ability to interpret the world and relate to others.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned to a position in the exposure system in order to reduce potential positional effects, including slight variations in temperature, light intensity, etc.',
+              correct: false,
+              feedback: 'Sorry, try again.'
+            },
+            {
+              text: 'advantage over its rivals.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'knowledge during their audit task, in accordance with the rules applicable to that information and data.',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'aware of such developments shall provide the other Contracting Party with all the relevant information.',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            }
+          ]
+        }
+      }
+    ] // end of tasks
+}// end of lesson

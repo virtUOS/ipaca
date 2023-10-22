@@ -1,0 +1,433 @@
+// Lesson ed-014
+// a new lesson 14
+{
+  name: "Lesson 14",  // the name that's also shown to the users
+  id: "Level 2, Lesson 14",        // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English', // the series this lesson belongs to
+  text: "<p>                          New information and remaining uncertainties</p>\
+         </p>  The key issue in predicting future rates of global sea level rise is to understand and predict how ice \
+         sheets in Greenland and Antarctica will react to a warming climate. Current projections of global sea level\
+         rise do not account for the complicated behaviour of these giant ice slabs as they interact with the atmosphere,\
+         the ocean and the land. Lack of knowledge about the ice sheets and their behaviour is the primary reason that\
+         projections of global sea level rise include such a wide range of plausible future conditions.</p>\
+         </p>  Early efforts at semi-empirical models suggested much higher rates of sea level rise (as much as 6 feet\
+         by 2100). More recent work suggests that a high end of 3 to 4 feet is more plausible. It is not clear, however,\
+         whether these statistical relationships will hold in the future or that they are appropriate in modelling past\
+         behaviour, thus calling their reliability into question. Some decision-makers may wish to consider a broader\
+         range of scenarios such as 8 inches or 6.6 feet by 2100 in the context of risk-based analysis.</p>",
+  text_source: "National Climate Assessment ",
+  text_licence: "Public Domain",
+  text_url: "https://www.oercommons.org/courses/2014-national-climate-assessment ",
+  start: "<h2>Focus of the lesson</h2>  \
+  <p><b>In this lesson you will:</b> \
+  <p>Extend your background knowledge of climate changes \
+  <p>Learn more about Countable and Uncountable Nouns as well as the nouns which can be used as both countable or uncountable, \
+  usually  with a difference in meaning (<a href='https://7esl.com/nouns-that-can-be-countable-or-uncountable/'>read more about this</a>)</p> \
+  <p>Work on abbreviations used in academic discourse</p>", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Still not sure? Good to read <a href='https://dictionary.cambridge.org/grammar/british-grammar/nouns-countable-and-uncountable?q=Countable+and+uncountable+nouns+with+different+meanings'>more about this</a>, or  <a href='https://www.englishclub.com/ref/Nouns_that_are_Count_and_Noncount/>here</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 14.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>Understanding and projecting how Greenland's and Antarctica's ice sheets will respond to a warming\
+        climate is crucial to estimating future rates of global sea level rise.</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: true, feedback: "Perfect!" },
+          { text: "False", correct: false, feedback: "No, that's incorrect because the text says ‘The key issue in \
+           predicting future rates of global sea level rise is to understand and predict how ice sheets in Greenland and\
+            Antarctica will react to a warming climate’." },
+          { text: "Not Given", correct: false, feedback: "No, that's incorrect because the text says ‘The key issue in \
+          predicting future rates of global sea level rise is to understand and predict how ice sheets in Greenland and\
+          Antarctica will react to a warming climate’." },
+        ],
+      }, // end of task 1
+      {
+        name: "Reading 14.2",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>There are other processes that affect sea level but are not associated with climate change.</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, that's incorrect because the text in general does not discuss\
+          the causes of sea level change even though presumably  they exist." },
+          { text: "False", correct: false, feedback: "No, that's incorrect because the text in general does not discuss\
+          the causes of sea level change even though presumably  they exist." },
+          { text: "Not Given", correct: true, feedback: "Well done!" },
+        ],
+      }, // end of task 2
+ {
+        name: "Reading 14.3",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>What is missing from the text?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Citing", correct: true, feedback: "Yes, that's correct!" },
+          { text: "Linking words", correct: false, feedback: "No, that's incorrect, linking words are there but the text says 'More recent work suggests that a high end of 3 to 4 feet is more plausible’ but there's no citing. " },
+        ],
+      }, // end of task 14.3
+            {
+        // task 8: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match the abbreviations to their meaning:</b></p>\
+        <p> op.cit. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'page/pages',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author',
+              correct: true,
+              feedback: 'Yes, that\'s correct!(Latin opus citatum)'
+            },
+          ]
+        }
+      },
+            {
+        // task 9: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b> Match the abbreviations to their meaning:</b></p>\
+        <p> vol. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'volume',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+             {
+              text: 'and others',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 10: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b> Match the abbreviations to their meaning:</b></p>\
+        <p> ibid. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!(Latin ibidem)'
+            },
+            {
+              text: 'compare',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 11: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b> Match the abbreviations to their meaning:</b></p>\
+        <p> Cf _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare',
+              correct: true,
+              feedback: 'Yes, that\'s correct!(Latin confer)'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 12: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b> Match the abbreviations to their meaning:</b></p>\
+        <p> ed(s) _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 13: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b> Match the abbreviations to their meaning:</b></p>\
+        <p> et al _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others',
+              correct: true,
+              feedback: 'Yes, that\'s correct! (Latin at alli)'
+            },
+             {
+              text: 'see previously quoted work by author',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and so on',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ]
+        }
+      },
+            {
+        // task 14: vocabulary for lesson 14
+        name: "Vocabulary",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b> Match the abbreviations to their meaning:</b></p>\
+        <p> i.e. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'in the same place as the preceding footnote',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'compare',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'editor(s)',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'volume',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'and others',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'see previously quoted work by author ',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+             {
+              text: 'that is',
+              correct: true,
+              feedback: 'Yes! (Latin id est)'
+            }
+          ]
+        }
+      },
+    ] // end of tasks
+}// end of lesson

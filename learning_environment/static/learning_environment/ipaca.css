@@ -28,8 +28,8 @@ body {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   width: 100%;
   min-height: 60px; /* Set the fixed height of the footer here */
   background-color: #f5f5f5;
@@ -67,13 +67,14 @@ body {
 
 .lesson-text blockquote {
     font-family: Georgia, serif;
-    font-size: 18px;
+    font-size: 22px;
     font-style: italic;
     margin: 0.25em 0;
     padding: 0.35em 40px;
     line-height: 1.45;
     position: relative;
     color: #383838;
+    cursor: pointer;
 }
 
 .lesson-text blockquote:before {
@@ -174,6 +175,18 @@ body {
     height: 40px;
     margin: 20px;
     background: linear-gradient(294.49deg, rgba(110, 255, 114, 0.8) -122.6%, rgba(0, 151, 156, 0.8) 91.23%, rgba(191, 233, 255, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+}
+
+.btn-locked {
+    color: #FFFFF;
+    border-radius: 80px;
+    font-size: 18px;
+    padding: 4px 28px;
+    gap: 10px;
+    width: 150px;
+    height: 40px;
+    margin: 20px;
+    background: linear-gradient(294.49deg, rgba(150, 150, 150, 0.8) -122.6%, rgba(170, 170, 170, 0.8) 91.23%, rgba(200, 200, 200, 0.8) 175.87%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
 }
 
 

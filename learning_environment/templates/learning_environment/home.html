@@ -18,9 +18,14 @@
                             </div>
 
                         <div class="row">
-                         <div class="d-flex justify-content-start" style="margin-top: 30px;">
-                            <a class="btn btn-start" href="{% url 'login' %}">START</a>
-                         </div>
+                             <div class="d-flex justify-content-start" style="margin-top: 30px;">
+                                 <p><a class="btn btn-start" href="{% url 'signup' %}">SIGN UP</a></p>
+                             </div>
+                        </div>
+                        <div class="row">
+                             <div class="d-flex justify-content-start" style="margin-top: 30px;">
+                                 <p class="text p-4" style="padding-top: 60px; margin-top: 30px; font-size:calc(1.25rem + 0.5vw);">You have an account already? Then directly <a href="{% url 'login' %}"><b>login</b>.</p>
+                             </div>
                         </div>
 
                     </div>
