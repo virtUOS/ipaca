@@ -1,0 +1,316 @@
+// Lesson ed-025
+// a new lesson 25
+{
+  name: "Lesson 25",  // the name that's also shown to the users
+  id: "Level 3, Lesson 25",     // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p><b>Choose the supporting sentence that best fits the context flow of ideas in paragraphs. One sentence is extra.</b></p>",
+  text_source: "Public speaking training in front of a supportive audience in Virtual Reality improves performance in real-life",
+  text_licence: "CC-BY",
+  text_url: "https://www.nature.com/articles/s41598-023-41155-9 ",
+  series: 'Academic English',
+  start: "<h2>Focus of the lesson</h2> \
+  <p><b>In this lesson you will:</b> \
+  <p>Broaden your background knowledge of Public speaking training VR tools \
+  <p>Know  about the position of participle in a sentence \
+  <p>Work on the key participle forms  in academic vocabulary relevant for C1 level", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read  <a href='https://ell.stackexchange.com/questions/274110/placement-of-participle-in-a-sentence'> more about this </a> ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // tasks 1 and 2 : primary reading task
+        name: "Reading 25.1 and 2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: true,
+        question: "<p><b>Choose the option that applies</b>:</p>\
+        <p>Social anxiety disorder (SAD) is characterized by the fear of negative evaluation by others and a fear of public\
+        embarrassment or humiliation. For people suffering from social anxiety disorder, public speaking is highly anxiety-evoking\
+        and is typically avoided. Fear of public speaking, however, is also common in non-clinical samples and has been \
+        correlated with decreased public speaking performance. Exposure to public speaking as a component of cognitive \
+        behavioral therapy is an effective treatment of social anxiety and the fear of public speaking. However, as \
+        mentioned above, opportunities for public speaking may be difficult to realize within a therapeutic session. \
+        Therefore, Virtual Reality exposure therapy has been suggested as a tool to present reproducible and controlled \
+        public speaking situations in virtuo. While several studies have demonstrated that VRET can be an effective treatment\
+        for SAD and the fear of public speaking, there are still mixed results regarding the question whether exposure in \
+        virtuo can be as effective as exposure in vivo. _1_. For instance, Owens and Beidel found that giving a speech \
+        in front of a virtual audience compared to a real audience elicited less physiological arousal, while another \
+        study found similar physiological reactions between real and virtual public speaking scenarios. \
+        Differential reactions towards real-world and VR scenarios could also be linked to presence, i.e. the feeling of\
+        being in a virtual environment, and more specifically social presence, i.e. the feeling of being in the virtual \
+        environment together with other persons. A recent study demonstrated that social presence influenced the degree \
+        to which audience behavior affected participants’ emotional experience in a public speaking scenario. Overall, \
+        VRET can be effective in the treatment of SAD fear of public speaking, but more studies are required to investigate\
+        the contributing mechanisms.</p>\
+        <p> The audience is the most important component of every public speaking situation. Audience behavior, i.e.\
+        visual or auditory reactions of the audience, serve as a social feedback for the person giving the speech and can\
+        be seen as an evaluation of a speaker’s performance. The evaluative nature of audience behavior makes it also \
+        highly relevant with respect to the fear of public speaking. Previous studies have investigated which behaviors \
+        are linked to specific characteristics of a virtual audience. Using both screen-based as well as immersive \
+        paradigms, several nonverbal cues could be identified that are linked to particular audience attitudes. These \
+        studies demonstrate that manipulating behavior influences perceived engagement and valence of a virtual audience.\
+        Another line of research has focused on the effects that such audience behaviors evoke in the speaker. A VR study \
+        compared supportive, neutral, and unsupportive audience behavior and found that fear of public speaking was mostly\
+        influenced by unsupportive (i.e. disinterested) audience behavior. _2_. The latter finding was interpreted by the\
+        authors in terms of an increase in speakers’ effort that was triggered by the positive audience feedback. It \
+        remains unclear whether supportive audience behavior in Virtual Reality might be less effective in realizing the\
+        feeling of a positive social evaluation indicated by a supportive audience. On a perceptual level, however, \
+        speakers seem to be able to differentiate supportive and unsupportive audience behavior in VR. </p>\ ",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Other studies, however, which compared supportive and unsupportive audience behavior in real-life public speaking scenarios found similar physiological responses to both audience behaviors or even increased physiological reactivity to supportive behavior.',
+              correct: false,
+              feedback: 'No, that\'s not correct because it does not provide a direct explanation for the mixed results observed in studies comparing the effectiveness of Virtual Reality exposure therapy (VRET) to exposure in real-life situations (in vivo).'
+            },
+            {
+              text: 'This has been explained by the challenge of creating realistic and immersive social scenarios in Virtual Reality.',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'This is also supported by a recent study, where public speaking training with an interactive compared to a passive virtual audience was found to increase motivation and engagement, even though no direct effects of audience feedback were found on behavioral performance. ',
+              correct: false,
+              feedback: 'Sorry, that\'s  not correct, it does not provide a direct explanation for the mixed results observed in studies comparing the effectiveness of Virtual Reality exposure therapy (VRET) to exposure in real-life situations (in vivo).'
+            }
+          ],
+          _2_: [
+            {
+              text: 'Other studies, however, which compared supportive and unsupportive audience behavior in real-life public speaking scenarios found similar physiological responses to both audience behaviors or even increased physiological reactivity to supportive behavior.',
+              correct: true,
+              feedback: 'Yes, that\'s correct!'
+            },
+            {
+              text: 'This has been explained by the challenge of creating realistic and immersive social scenarios in Virtual Reality.',
+              correct: false,
+              feedback: 'No, that\'s not correct because it does not presents a contrasting perspective to the initial VR study. In the VR study mentioned earlier, fear of public speaking was predominantly influenced by unsupportive audience behavior, suggesting that negative audience feedback had a significant impact. However, the sentence introduces a counterpoint by referencing real-life studies that found different results.'
+            },
+            {
+              text: 'This is also supported by a recent study, where public speaking training with an interactive compared to a passive virtual audience was found to increase motivation and engagement, even though no direct effects of audience feedback were found on behavioral performance. ',
+              correct: false,
+              feedback: 'No, that\'s not correct because it does not present a contrasting perspective to the initial VR study. In the VR study mentioned earlier, fear of public speaking was predominantly influenced by unsupportive audience behavior, suggesting that negative audience feedback had a significant impact. However, the sentence introduces a counterpoint by referencing real-life studies that found different results. '
+            }
+          ]
+        },
+      }, // end of tasks 1 and 2
+       {
+        // task 3: primary reading task
+        name: "Reading 25.3",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false, // Shall we show the lesson reading text? true/false
+         question: "<b><p> What is one of the challenges associated with using Virtual Reality exposure therapy (VRET) for treating social anxiety disorder (SAD) and the fear of public speaking, as mentioned in the text?</b></p>\
+        <p>Social anxiety disorder (SAD) is characterized by the fear of negative evaluation by others and a fear of public\
+        embarrassment or humiliation. For people suffering from social anxiety disorder, public speaking is highly anxiety-evoking\
+        and is typically avoided. Fear of public speaking, however, is also common in non-clinical samples and has been \
+        correlated with decreased public speaking performance. Exposure to public speaking as a component of cognitive\
+        behavioral therapy is an effective treatment of social anxiety and the fear of public speaking. However, as \
+        mentioned above, opportunities for public speaking may be difficult to realize within a therapeutic session. \
+        Therefore, Virtual Reality exposure therapy has been suggested as a tool to present reproducible and controlled \
+        public speaking situations in virtuo. While several studies have demonstrated that VRET can be an effective treatment\
+        for SAD and the fear of public speaking, there are still mixed results regarding the question whether exposure in\
+        virtuo can be as effective as exposure in vivo. This has been explained by the challenge of creating realistic and\
+        immersive social scenarios in Virtual Reality. </p>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Limited availability of VR headsets", correct: false, feedback: "That's not  correct. The text says 'While several studies have demonstrated that VRET can be an effective treatment for SAD and the fear of public speaking, there are still mixed results regarding the question whether exposure in virtuo can be as effective as exposure in vivo. This has been explained by the challenge of creating realistic and immersive social scenarios in Virtual Reality.' " },
+          { text: "Difficulty creating realistic VR scenarios", correct: true, feedback: "Perfect!" },
+          { text: "High cost of virtual therapy", correct: false, feedback: "That's not  correct. The text says 'While several studies have demonstrated that VRET can be an effective treatment for SAD and the fear of public speaking, there are still mixed results regarding the question whether exposure in virtuo can be as effective as exposure in vivo. This has been explained by the challenge of creating realistic and immersive social scenarios in Virtual Reality.' " },
+          { text: "Incompatibility with traditional therapy methods", correct: false, feedback: "That's not  correct. The text says 'While several studies have demonstrated that VRET can be an effective treatment for SAD and the fear of public speaking, there are still mixed results regarding the question whether exposure in virtuo can be as effective as exposure in vivo. This has been explained by the challenge of creating realistic and immersive social scenarios in Virtual Reality.'" }
+        ],
+      }, // end of task 3
+      {
+        // task 4: gap filling for Position of Participles
+        name: "Position of Participles",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that best completes the sentence:</b></p>\
+        <p> These instructions were provided by a male virtual agent _1_ next to the participant. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'stood',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'who standing',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'standing',
+              correct: true,
+              feedback: 'Perfect!'
+            }
+          ],
+        },
+      },
+           {
+        // task 5: gap filling for Position of Participles
+        name: "Position of Participles",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that best completes the sentence:</b></p>\
+        <p> A sensitivity analysis was conducted _1_ MorePower. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'using',
+              correct:true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'used',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'because using',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ],
+        },
+      },
+            {
+        // task 6: gap filling for Position of Participles
+        name: "Position of Participles",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that best completes the sentence:</b></p>\
+        <p> Disinterest behaviors, like averted gaze, have been shown to result in low evaluations of audience arousal and might therefore account for the present finding of _1_  social presence in the unsupportive group. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'having reduced',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'reduced',
+              correct: true,
+              feedback: 'Wonderful!'
+            },
+            {
+              text: 'reduce',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ],
+        },
+      },
+           {
+        // task 7: gap filling for Position of Participles
+        name: "Position of Participles",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that best completes the sentence:</b></p>\
+        <p> Audience behavior, i.e. visual or auditory reactions of the audience, serve as a social feedback for the person _1_ the speech and can be seen as an evaluation of a speaker’s performance. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'gave',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'giving',
+              correct: true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'given',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            }
+          ],
+        },
+      },
+     {
+        // task 8: writing for Lesson 25
+        name: "Vocabulary for Lesson 25",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the Present Participle and Past Participle forms of the given verb separated by comma (e.g. doing, done): <u>arise</u> ",
+        answer: "arising, arisen"
+      },
+          {
+        // task 9: writing for Lesson 25
+        name: "Vocabulary for Lesson 25",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the Present Participle and Past Participle forms of the given verb separated by comma (e.g. doing, done): <u>beat</u> ",
+        answer: "beating, beaten"
+      },
+           {
+        // task 10: writing for Lesson 25
+        name: "Vocabulary for Lesson 25",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the Present Participle and Past Participle forms of the given verb separated by comma (e.g. doing, done): <u>lie</u> ",
+        answer: "lying, lain"
+      },
+           {
+        // task 11: writing for Lesson 25
+        name: "Vocabulary for Lesson 25",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the Present Participle and Past Participle forms of the given verb separated by comma (e.g. doing, done): <u>lay</u> ",
+        answer: "laying, laid"
+      },
+           {
+        // task 12: writing for Lesson 25
+        name: "Vocabulary for Lesson 25",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the Present Participle and Past Participle forms of the given verb separated by comma (e.g. doing, done): <u>shrink</u> ",
+        answer: "shrinking, shrunk"
+      },
+           {
+        // task 13: writing for Lesson 25
+        name: "Vocabulary for Lesson 25",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the Present Participle and Past Participle forms of the given verb separated by comma (e.g. doing, done): <u>stride</u> ",
+        answer: "striding, stridden"
+      },
+      {
+        // task 14: writing for Lesson 25
+        name: "Vocabulary for Lesson 25",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Write the Present Participle and Past Participle forms of the given verb separated by comma (e.g. doing, done): <u>strive</u> ",
+        answer: "striving, striven"
+      }
+    ] // end of tasks
+
+} // end of lesson

@@ -9,6 +9,16 @@
             <button type="submit" class="btn btn-secondary">Check!</button>
         </div>
     </form>
+    {% if CHEAT %}
+        <form method="post" class="form-inline">
+            {% csrf_token %}
+            <input type="hidden" name="task" value="{{ task.id }}">
+            <input type="hidden" name="CHEAT" value="1">
+             <div style="width:100px; margin:0 auto;">
+                <button type="submit" class="btn" style="width: 100%; color: white; background: darkred;">Cheat!</button>
+            </div>
+        </form>
+    {% endif %}
 {% else %}
     <p>The correct answer is: {{ task.content }}.</p>
 {% endif %}

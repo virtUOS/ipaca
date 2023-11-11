@@ -1,0 +1,582 @@
+// Lesson ed-028
+// a new lesson 28
+{
+  name: "Lesson 28",  // the name that's also shown to the users
+  id: "Level 3, Lesson 28",     // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p>Despite the fact that chatbots today can demonstrate remarkable human-like qualities, their effectiveness is\
+  significantly reduced when the human end-user becomes aware that they are interacting with a machine and not a human. \
+  Why would this be the case? First, people penalize algorithms, a form of machine intelligence, more than humans when \
+  errors are committed, which in turn deteriorates the extent to which a person is willing to rely on the algorithm over\
+  time. As chatbots are bound to display service failures at one point or another, it follows that the human end-users\
+  will penalize the chatbots more severely when compared with a human operator, reducing the customers’ willingness to \
+  cooperate with it. In further support of our line of reasoning, other research has also shown that humans have a tendency\
+  in general to trust other humans more than they trust machines, and that the more trust customers are willing to give, \
+  the more effective the communication that takes place will be. Therefore, when it comes to service provision, humans \
+  prefer human agents over machine-based agents, and this is particularly true when they inevitably err.</p>\
+  <p>All of this suggests that when the technology is at a level where chatbots are indistinguishable from humans, \
+  organizations will face a strong temptation to deceive their customers. As the example of LaMDA illustrates, this stage\
+  of technological sophistication is a reality. As such, organizations are now in a position to hide from their customers\
+  that chatbots are handling their customer inquiries. Such an approach is obviously problematic because deceiving \
+  customers, if found out, is likely to bounce back and result in customers evaluating the organization in negative ways.\
+  Of course, any organization will prefer to foster positive customer perceptions, but the fact that automating service \
+  delivery has the enormous potential to bring significant financial gains may motivate acts of deception, nonetheless. \
+  As such, deceptive tactics have the potential to harm the reputation of the organization, possibly beyond repair. It is \
+  therefore crucial for organizations to understand how customers will react when the deceptive use of chatbots is revealed. \
+  In this research, we capture the reputation of an employee and organization through perceptions of trust and ethics, \
+  as trustworthiness and perceived ethicality are critical inputs when judgments about a person/organization’s reputation\
+  are formed. In addition, we define reputational consequences as behavioral outcomes that result from the negative \
+  reputation (unethical and untrustworthy) of an employee/organization. We focus explicitly on employees’ desire to leave \
+  the organization  and recruiters’ hiring decisions as reputational consequences of deceptive chatbot use. </p> \
+  <p>Understanding how an organization’s potential customer base reacts to deceptive chatbot use is critically important\
+  for the organization’s reputation. Additionally, choosing not to disclose the use of a chatbot is an act of deception\
+  and although there are a myriad of ways in which trust can be violated, deception is a particularly potent way to do\
+  this. Of course, organizations that deceive will wish that their transgressions are not known publicly, but these\
+  acts — for example due to whistleblowing — can become public knowledge. When these deceptive actions become public \
+  knowledge, this has been shown to negatively affect relationships, trigger retaliatory responses, and produce negative\
+  emotions. And, although research shows that reparations can be made when trust has been violated, a violation of trust\
+  that involves intentional deception has been shown to produce an enduring harm to trust which may well be beyond repair.</p>",
+  text_source: "The reputational and ethical consequences of deceptive chatbot use",
+  text_licence: "CC-BY",
+  text_url: "https://www.nature.com/articles/s41598-023-41692-3",
+  series: 'Academic English',
+  start: "<h2>Focus of the lesson</h2> \
+  <p><b>In this lesson you will:</b> \
+  <p>Learn more about chatbot use and its consequences if used inappropriately\
+  <p>Extend your knowledge about noun clauses and how to use them \
+  <p>Work on the key academic collocations specific for C1 level", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read <a href='https://openoregon.pressbooks.pub/synthesis/chapter/6-3-grammar-using-noun-clauses/'> more about this </a> ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 28.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false, // Shall we show the lesson reading text? true/false
+         question: "<b>When chatbots display service failures, human end-users penalize them more severely than they would a human operator, reducing their willingness to cooperate with chatbots. </b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: true, feedback: "Perfect!" },
+          { text: "False", correct: false, feedback: "No, the passage mentions that people penalize algorithms more than humans when errors are committed, which reduces their willingness to rely on the algorithm (chatbot) over time. This supports the statement that chatbots are penalized more severely for service failures compared to human operators." },
+        ],
+      }, // end of task 1
+       {
+        // task 2: primary reading task
+        name: "Reading 28.2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false, // Shall we show the lesson reading text? true/false
+         question: "<b>Deception involving chatbots is unlikely to harm an organization's reputation if it remains undisclosed to the public. </b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, the text suggests that even if organizations engage in deceptive practices with chatbots and manage to keep them undisclosed to the public, such actions can still negatively impact an organization's reputation when they become public knowledge." },
+          { text: "False", correct: true, feedback: "Wonderful!" },
+        ],
+      }, // end of task 2
+       {
+        // task 3: primary reading task
+        name: "Reading 28.3",
+         type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>What kind of evidence does the writer give to back up the statements?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "statistics", correct: false, feedback: "No, the writer uses examples to illustrate the points being made - he mentions the example of LaMDA, a technology that illustrates the level of technological sophistication where chatbots are indistinguishable from humans. " },
+          { text: "quotes from experts", correct: false, feedback: "No, the writer uses examples to illustrate the points being made - he mentions the example of LaMDA, a technology that illustrates the level of technological sophistication where chatbots are indistinguishable from humans." },
+          { text: "examples", correct: true, feedback: "Well done!" },
+        ],
+      }, // end of task 3
+      {
+        // task 4: gap filling for noun clauses
+        name: "Noun Clauses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Match two halves to form a sentence with a noun clause:</b></p>\
+        <p>It is therefore crucial for organizations to understand _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'turned out to be rather valuable.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'demonstrated exceptional skill and expertise.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'how customers will react when the deceptive use of chatbots is revealed. ',
+              correct: true,
+              feedback: 'Great job!'
+            },
+            {
+              text: 'one does not want to be truthful.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+            {
+        // task 5: gap filling for noun clauses
+        name: "Noun Clauses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Match two halves to form a sentence with a noun clause:</b></p>\
+        <p>As such, this action carries significant ethical weight and communicates that _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'turned out to be rather valuable.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'demonstrated exceptional skill and expertise.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'how customers will react when the deceptive use of chatbots is revealed. ',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'one does not want to be truthful.',
+              correct: true,
+              feedback: 'Well done!'
+            }
+          ],
+        },
+      },
+      {
+        // task 6: gap filling for noun clauses
+        name: "Noun Clauses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Match two halves to form a sentence with a noun clause:</b></p>\
+        <p>What the chatbot provided in terms of information and assistance _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'turned out to be rather valuable.',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'demonstrated exceptional skill and expertise.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'how customers will react when the deceptive use of chatbots is revealed. ',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'one does not want to be truthful.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+            {
+        // task 7: gap filling for noun clauses
+        name: "Noun Clauses",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Match two halves to form a sentence with a noun clause:</b></p>\
+        <p>In the realm of artificial intelligence, whoever engineered this chatbot  _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'turned out to be rather valuable.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'demonstrated exceptional skill and expertise.',
+              correct: true,
+              feedback: 'Wonderful!'
+            },
+            {
+              text: 'how customers will react when the deceptive use of chatbots is revealed. ',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'one does not want to be truthful.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 8: gap filling for vocabulary
+        name: "Vocabulary for Lesson 28",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match two halves to form a sentence. Mind the proper collocation:</b></p>\
+        <p>Experimental groups were blinded and randomly _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'disciplines, and this diversity should be taken into account when evaluating research outputs across fields.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'motif of a given set of attachment sites.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'the development of an electrical–molecular communication tool was multipronged.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned before the start of behavioral experiments and remained blinded until all data were collected.',
+              correct: true,
+              feedback: 'Wonderful!'
+            },
+            {
+              text: 'effects of osmotic stress in moldavian balm.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'evidence that predation selects on both females and males, the joint action of selection on the sexes is frequently investigated independently.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'explicit the implied absences.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 9: gap filling for vocabulary
+        name: "Vocabulary for Lesson 28",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match two halves to form a sentence. Mind the proper collocation:</b></p>\
+        <p>The strategy to fulfil  _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'disciplines, and this diversity should be taken into account when evaluating research outputs across fields.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'motif of a given set of attachment sites.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'the development of an electrical–molecular communication tool was multipronged.',
+              correct: true,
+              feedback: 'Wonderful!'
+            },
+            {
+              text: 'assigned before the start of behavioral experiments and remained blinded until all data were collected.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'effects of osmotic stress in moldavian balm.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'evidence that predation selects on both females and males, the joint action of selection on the sexes is frequently investigated independently.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'explicit the implied absences.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 10: gap filling for vocabulary
+        name: "Vocabulary for Lesson 28",
+               type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match two halves to form a sentence. Mind the proper collocation:</b></p>\
+        <p>We posited that we could expand interception synthetic memory via modifying the central _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'disciplines, and this diversity should be taken into account when evaluating research outputs across fields.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'motif of a given set of attachment sites.',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'the development of an electrical–molecular communication tool was multipronged.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned before the start of behavioral experiments and remained blinded until all data were collected.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'effects of osmotic stress in moldavian balm.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'evidence that predation selects on both females and males, the joint action of selection on the sexes is frequently investigated independently.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'explicit the implied absences.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 11: gap filling for vocabulary
+        name: "Vocabulary for Lesson 26",
+              type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match two halves to form a sentence. Mind the proper collocation:</b></p>\
+        <p>However, it is essential to recognize that publishing and citation practices vary significantly between different academic _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'disciplines, and this diversity should be taken into account when evaluating research outputs across fields.',
+              correct: true,
+              feedback: 'Great job!'
+            },
+            {
+              text: 'motif of a given set of attachment sites.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'the development of an electrical–molecular communication tool was multipronged.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned before the start of behavioral experiments and remained blinded until all data were collected.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'effects of osmotic stress in moldavian balm.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'evidence that predation selects on both females and males, the joint action of selection on the sexes is frequently investigated independently.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'explicit the implied absences.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 12: gap filling for vocabulary
+        name: "Vocabulary for Lesson 26",
+               type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match two halves to form a sentence. Mind the proper collocation:</b></p>\
+        <p>This leads to a reduction in the adverse _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'disciplines, and this diversity should be taken into account when evaluating research outputs across fields.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'motif of a given set of attachment sites.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'the development of an electrical–molecular communication tool was multipronged.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned before the start of behavioral experiments and remained blinded until all data were collected.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'effects of osmotic stress in moldavian balm.',
+              correct: true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'evidence that predation selects on both females and males, the joint action of selection on the sexes is frequently investigated independently.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'explicit the implied absences.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 13: gap filling for vocabulary
+        name: "Vocabulary for Lesson 26",
+              type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match two halves to form a sentence. Mind the proper collocation:</b></p>\
+        <p>Nonetheless, while there is ample _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'disciplines, and this diversity should be taken into account when evaluating research outputs across fields.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'motif of a given set of attachment sites.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'the development of an electrical–molecular communication tool was multipronged.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned before the start of behavioral experiments and remained blinded until all data were collected.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'effects of osmotic stress in moldavian balm.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'evidence that predation selects on both females and males, the joint action of selection on the sexes is frequently investigated independently.',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'explicit the implied absences.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 14: gap filling for vocabulary
+        name: "Vocabulary for Lesson 26",
+             type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match two halves to form a sentence. Mind the proper collocation:</b></p>\
+        <p>Because the BioTIME database only includes abundances for species present during a given sampling occasion, we zero-filled data where appropriate to make  _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'disciplines, and this diversity should be taken into account when evaluating research outputs across fields.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'motif of a given set of attachment sites.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'the development of an electrical–molecular communication tool was multipronged.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'assigned before the start of behavioral experiments and remained blinded until all data were collected.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'effects of osmotic stress in moldavian balm.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'evidence that predation selects on both females and males, the joint action of selection on the sexes is frequently investigated independently.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'explicit the implied absences.',
+              correct: true,
+              feedback: 'Great!'
+            }
+          ],
+        },
+      }
+    ] // end of tasks
+} // end of lesson

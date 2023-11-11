@@ -125,8 +125,10 @@ class Lesson(models.Model):
         lsn.save()
 
 
+        idx = 0
         for task in lesson["tasks"]:
-            Task.create_from_json5(task, lsn)
+            Task.create_from_json5(task, lsn, idx)
+            idx += 1
 
         return lsn
 
@@ -150,6 +152,7 @@ class Task(models.Model):
 
     name = models.CharField(max_length=256)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
+    order = models.IntegerField(default=0)
     interaction = models.CharField(max_length=10)
     type = models.CharField(max_length=100, choices=TASK_TYPE)
     primary = models.BooleanField(default=True)
@@ -183,7 +186,7 @@ class Task(models.Model):
         return True
 
     @classmethod
-    def create_from_json5(cls, task, lesson):
+    def create_from_json5(cls, task, lesson, idx):
         content = TaskTypeFactory.getClass(task['interaction']).get_content_from_json5(task)
         t = Task(name=task["name"],
                  type=task["type"],
@@ -192,7 +195,8 @@ class Task(models.Model):
                  show_lesson_text=task["show_lesson_text"],
                  question=task["question"],
                  content=content,
-                 lesson=lesson
+                 lesson=lesson,
+                 order=idx
                  )
         t.save()
         return t

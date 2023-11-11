@@ -1,0 +1,589 @@
+// Lesson ed-029
+// a new lesson 29
+{
+  name: "Lesson 29",  // the name that's also shown to the users
+  id: "Level 3, Lesson 29",     // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p>A long-term goal of artificial intelligence (AI) research is to devise cognitive systems that exhibit the \
+  capability of abstract reasoning, thus far deemed a distinctive characteristic of human intelligence. Not only is this\
+  a quest to improve our understanding of the nature of intelligence, but also may enable AI to assist humans in solving\
+  abstract complex tasks of repetitive nature or scale beyond the grasp of humans. In recent years, as deep learning has\
+  become more prominent, machine learning models have outperformed humans in several fields, including image classification\
+  and playing strategic games, albeit relying on unsustainably increasing model sizes. The energy requirements of these\
+  models are in stark contrast to ≈20 W required by the human brain, whose principles of operation may provide crucial\
+  inspiration for improvements in AI, reducing the environmental footprint of existing solutions and enabling new low-power\
+  applications at the edge. Moreover, taking inspiration from the brain's operation during versatile tasks, such as those\
+  where abstract or relational reasoning capabilities are required, will pave the way for the development of novel and \
+  valuable AI architectures. The interest in demonstrating applicability of artificial neural networks for reasoning has\
+  recently grown as more demanding tasks are being considered and large datasets are being created.</p> \
+  <p>Another important class of tasks requiring analytic intelligence is the so-called visual oddity, first introduced \
+  as part of a neuroscientific experiment to study the knowledge of core conceptual principles of geometry. This specific\
+  visual oddity task is defined on geometrical objects and consists of 45 distinct riddles designed to discover which\
+  basic concepts of geometry such as points, lines, parallelism, and symmetry, are understood by the participants of the\
+  study. Each riddle contains six frames, five of which include a geometrical concept being tested. One of the frames \
+  violates the geometrical concept and is called the oddity. The goal is to classify which one of the six frames is the\
+  oddity. The task was originally presented to two different groups of people: Americans and Munduruku, an Amazonian \
+  indigenous group. Individual riddle accuracies of both groups were recorded for children and adults. The results showed\
+  no significant difference in accuracies between the American and the Munduruku children. This suggests that the core\
+  knowledge of geometry required for solving the abstract problem of the visual oddity tasks is accessible to children \
+  also in the absence of schooling and experience with graphic symbols and geometrical terms. Simultaneously, while the \
+  results of Munduruku adults remained indistinguishable from those of Munduruku children, educated American adults scored\
+  significantly higher. The participants from the Munduruku population solved on average 66.8% riddles, performing well\
+  with the core concepts of topology, Euclidean geometry, and basic geometrical figures. Recognizing the oddity within \
+  geometrical transformations turned out to be significantly more challenging, thus suggesting that such transformations\
+  may represent inherently more difficult concepts that through the process of education become accessible to American\
+  adults solving ≈84.8% riddles. These results render the visual oddity task as an appealing abstract reasoning task to\
+  assess the accessibility of the visual abstract concepts in AI systems.</p> \
+  <p>As mentioned earlier, the visual oddity task evaluates the capability of making analogies by relying on geometric \
+  concepts such as points, lines, and angles. Therefore, the detection of similarities is key to solving the riddles. \
+  For humans, abstract reasoning is crucial to find a correct answer, as no two images are the same and there are several\
+  ways to detect an odd image. In fact, to succeed, the participants must infer the geometrical relationship between the\
+  array of images. Therefore, the challenge for neural networks lies in whether they can infer the abstract geometrical\
+  relationships between the images. Training different neural network architectures to solve the visual oddity task\
+  provides an insight into their relation-forming capabilities.</p>",
+  text_source: "On the visual analytic intelligence of neural networks",
+  text_licence: "CC-BY",
+  text_url: "https://www.nature.com/articles/s41467-023-41566-2",
+  series: 'Academic English',
+  start: "<h2>Focus of the lesson</h2> \
+  <p><b>In this lesson you will:</b> \
+  <p>Deepen your familiarity with the topic of the visual analytic intelligence of neural networks \
+  <p>Learn how to report back and forward \
+  <p>Work on the key C1 verbs used in academic English", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read <a href='https://students.unimelb.edu.au/academic-skills/resources/editing-your-writing/improving-cohesion'> more about this </a> ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 29.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>Choose the most appropriate heading for the text: </b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Challenges and Potential of AI in Abstract Reasoning Tasks", correct: true, feedback: "Wonderful!" },
+          { text: "The Impact of Cultural Background on Visual Oddity Task Performance", correct: false, feedback: "No, because the text briefly mentions the performance of two groups (Americans and Munduruku) in the visual oddity task as part of an experiment and does not extensively explore the impact of cultural background." },
+          { text: "The History of Geometry and its Influence on AI", correct: false, feedback: "Sorry, the text does not primarily focus on the history of geometry or its influence on AI." },
+        ],
+      }, // end of task 1
+      {
+        // task 2: primary reading task
+        name: "Reading 29.2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>What does the visual oddity task primarily evaluate?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "The ability to recognize images accurately.", correct: false, feedback: "Sorry,that's not correct, the text discusses that the visual oddity task evaluates the capability of making analogies by relying on geometric concepts such as points, lines, and angles. Therefore, the primary focus is on analogical reasoning using geometry." },
+          { text: "The capability of making analogies using geometric concepts.", correct: true, feedback: "Perfect!" },
+          { text: "The speed at which participants can solve riddles.", correct: false, feedback:"Sorry, that's not correct, the text discusses that the visual oddity task evaluates the capability of making analogies by relying on geometric concepts such as points, lines, and angles. Therefore, the primary focus is on analogical reasoning using geometry." },
+          { text: "The knowledge of complex mathematical principles.", correct: false, feedback: "Sorry,that's not correct, the text discusses that the visual oddity task evaluates the capability of making analogies by relying on geometric concepts such as points, lines, and angles. Therefore, the primary focus is on analogical reasoning using geometry." }
+        ],
+      }, // end of task 2
+       {
+        // task 3: primary reading task
+        name: "Reading 29.3",
+         type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>Is the author stating facts or opinions?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Facts", correct: true, feedback: "Yes, this is the correct answer!" },
+          { text: "Opinions", correct: false, feedback: "No, the author presents facts and observations rather than expressing personal opinions. The text discusses research goals, experimental results, and the challenges involved in AI systems' ability to perform abstract reasoning tasks." },
+        ],
+      }, // end of task Reading 29.3
+      {
+        // task 4: gap filling for referring back and forward
+        name: "Referring Back and Forward",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Read the sentences and pay attention to the highlighted parts. Then, match them with the appropriate function:</b></p>\
+        <p><i>As mentioned earlier</i>, the visual oddity task evaluates the capability of making analogies by relying on geometric concepts such as points, lines, and angles. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Refers to in vitro neural networks.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Refers to the results of the study previously discussed.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+              {
+              text: 'Refers to all of the earlier information about what visual oddity evaluates and how it’s done.',
+              correct: true,
+              feedback: 'Wonderful!'
+            },
+              {
+              text: 'Refers to new information for the reader and makes a smooth transition from one point to another.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 5: gap filling for referring back and forward
+        name: "Referring Back and Forward",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Read the sentences and pay attention to the highlighted parts. Then, match them with the appropriate function:</b></p>\
+        <p><i>These results</i> render the visual oddity task as an appealing abstract reasoning task to assess the accessibility of the visual abstract concepts in AI systems. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Refers to in vitro neural networks.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Refers to the results of the study previously discussed.',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+              {
+              text: 'Refers to all of the earlier information about what visual oddity evaluates and how it’s done.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+              {
+              text: 'Refers to new information for the reader and makes a smooth transition from one point to another.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 6: gap filling for referring back and forward
+        name: "Referring Back and Forward",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Read the sentences and pay attention to the highlighted parts. Then, match them with the appropriate function:</b></p>\
+        <p><i>The following concepts</i> have been examined in the research study: cognitive systems, artificial intelligence, and abstract reasoning. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Refers to in vitro neural networks.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Refers to the results of the study previously discussed.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+              {
+              text: 'Refers to all of the earlier information about what visual oddity evaluates and how it’s done.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+              {
+              text: 'Refers to new information for the reader and makes a smooth transition from one point to another.',
+              correct: true,
+              feedback: 'Amazing!'
+            }
+          ],
+        },
+      },
+      {
+        // task 7: gap filling for referring back and forward
+        name: "Referring Back and Forward",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Read the sentences and pay attention to the highlighted parts. Then, match them with the appropriate function:</b></p>\
+        <p>We showed that energy minimisation may predict the self-organisation of in vitro neural networks, in terms of quantitative neuronal responses and plasticity. It then predicted <i>their</i> performance when suddenly finding solution for source separation problems, incl. their speed and accuracy. _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Refers to in vitro neural networks.',
+              correct: true,
+              feedback: 'Amazing!'
+            },
+            {
+              text: 'Refers to the results of the study previously discussed.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+              {
+              text: 'Refers to all of the earlier information about what visual oddity evaluates and how it’s done.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+              {
+              text: 'Refers to new information for the reader and makes a smooth transition from one point to another.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 8: gap filling for vocabulary
+        name: "Vocabulary for Lesson 29",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence. There’s a definition in brackets to help you: </b></p>\
+        <p> We aim _1_ a series of challenging questions about the fundamental principles of quantum mechanics and their implications for our understanding of the quantum world. (<i>to cause something, especially a problem or difficulty</i>) </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'to trigger',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to sustain',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to pose',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'to unite',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to view',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to worsen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to absorb',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 9: gap filling for vocabulary
+        name: "Vocabulary for Lesson 29",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence. There’s a definition in brackets to help you: </b></p>\
+        <p> Students are encouraged _1_ the fundamental concepts in our course to ensure a strong understanding of the subject matter. (<i>to understand facts or ideas completely and remember them</i>) </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'to trigger',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to sustain',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to pose',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to unite',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to view',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to worsen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to absorb',
+              correct: true,
+              feedback: 'Well done!'
+            }
+          ],
+        },
+      },
+       {
+        // task 10: gap filling for vocabulary
+        name: "Vocabulary for Lesson 29",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence. There’s a definition in brackets to help you: </b></p>\
+        <p> The ongoing conflict in the eastern region has the potential _1_ the humanitarian crisis in the western parts (<i>to become worse or to make something become worse</i>) </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'to trigger',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to sustain',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to pose',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to unite',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to view',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to worsen',
+              correct: true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'to absorb',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 11: gap filling for vocabulary
+        name: "Vocabulary for Lesson 29",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence. There’s a definition in brackets to help you: </b></p>\
+        <p> As a scholar, you are expected to _1_ peer-reviewed publications as the gold standard to be used for credible research. (<i>to have a particular opinion or way of thinking about someone or something</i>) </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'to trigger',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to sustain',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to pose',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to unite',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to view',
+              correct: true,
+              feedback: 'Amazing!'
+            },
+            {
+              text: 'to worsen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to absorb',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 12: gap filling for vocabulary
+        name: "Vocabulary for Lesson 29",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence. There’s a definition in brackets to help you: </b></p>\
+        <p> Our results indicate that individuals living with subjective experiences of economic scarcity are more inclined to value whether someone helped a member of their family or worked _1_ a community when they decide on whether something is right or wrong. (<i>to join together as a group, or to make people join together as a group; to combine</i>) </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'to trigger',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to sustain',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to pose',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to unite',
+              correct: true,
+              feedback: 'Yes, you got it!'
+            },
+            {
+              text: 'to view',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to worsen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to absorb',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 13: gap filling for vocabulary
+        name: "Vocabulary for Lesson 29",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence. There’s a definition in brackets to help you: </b></p>\
+        <p> Receptors on the plasma membrane recognize the signals _1_ appropriate cellular responses during plant growth and development. (<i>to cause something to start</i>) </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'to trigger',
+              correct: true,
+              feedback: 'Wonderful!'
+            },
+            {
+              text: 'to sustain',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to pose',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to unite',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to view',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to worsen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to absorb',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 14: gap filling for vocabulary
+        name: "Vocabulary for Lesson 29",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence. There’s a definition in brackets to help you: </b></p>\
+        <p> We have conducted this comprehensive review of case studies for areas where pastoralists have already begun shifting from cattle to goats and camels  _1_ their livelihood activities amid changing environmental conditions. (<i>to cause or allow something to continue for a period of time</i>) </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'to trigger',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to sustain',
+              correct: true,
+              feedback: 'Super!'
+            },
+            {
+              text: 'to pose',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to unite',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to view',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to worsen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'to absorb',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      }
+    ] // end of tasks
+} // end of lesson

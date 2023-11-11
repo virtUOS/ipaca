@@ -1,7 +1,8 @@
 from learning_environment.its.base import Json5ParseException
+from django.conf import settings
 
 class ShortTask():
-    """A single choice task."""
+    """A short answer task."""
 
     template = 'learning_environment/partials/short.html'
 
@@ -22,7 +23,13 @@ class ShortTask():
         context = {}
         analysis = {}
 
-        given_answer = solution.get('answer', None)
+        is_cheating = (settings.CHEAT and 'CHEAT' in solution)
+
+        if is_cheating:
+            given_answer = self.task.content
+        else:  # not cheating, full analysis
+            given_answer = solution.get('answer', None)
+
         if self.task.content == given_answer:
             analysis['solved'] = True
         else:

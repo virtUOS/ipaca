@@ -1,6 +1,7 @@
 from learning_environment.its.base import Json5ParseException
 import re
 import json
+from django.conf import settings
 
 class MarkTask():
     """A mark-the-word(s) task.
@@ -109,12 +110,18 @@ class MarkTask():
         analysis = {'solved': False, 'solution': {}}
         context = {'mode': 'result'}
 
+        is_cheating = (settings.CHEAT and 'CHEAT' in solution)
+
         # either empty (nothing clicked) or a JSON dictionary with clicked word numbers, e.g.
         # { 1: [67, 123],   # for marker 1, words with index 67 and 123 were marked
         #   2: [],          # for marker 2, no ward was marked
         #   3: [5],         # for marker 3, word with index 5 was marked
         #   ...
-        sol = solution.get('solution')
+        if is_cheating:
+            # pseudo solution, only has to pass checks, will not be evaluated
+            sol = '{"1":[1], "2": [2], "3": [3], "4": [4], "5": [5], "6": [6], "7": [7], "8": [8], "9": [9]}'
+        else: # not cheating, full analysis
+            sol = solution.get('solution')
 
         # empty solution: nothing clicked at all
         if sol == '':
@@ -122,12 +129,17 @@ class MarkTask():
             context['msg'] = "You didn't mark any words, please try again."
             return analysis, context
 
+        print("goes on: {}".format(is_cheating))
+
         # parse json structure
         try:
             soldict = json.loads(sol)
         except ValueError as e:
             context['msg'] = "JSON parse error! {}".format(e)
             return analysis, context
+
+        print("goes on: {}".format(is_cheating))
+
 
         # check if it's a dict
         if not isinstance(soldict, dict):
@@ -144,6 +156,7 @@ class MarkTask():
             context['msg'] = "You didn't mark any words, please try again."
             return analysis, context
 
+        print("goes on")
         # analyse solution
         solved = True
         num_correct = 0
@@ -153,8 +166,11 @@ class MarkTask():
         feedback_text = self.task.content['marktext_html']
         for i in range(1, 10):  # check all 9 possible markers
             # compare list of words marked for that group
-            chosen = set(soldict[str(i)])
             correct = set(self.task.content['marks'][str(i)])
+            if is_cheating:
+                chosen = correct
+            else:
+                chosen = set(soldict[str(i)])
             num_total += len(correct)
             if correct == chosen:  # if not identical
                 num_correct += len(correct)

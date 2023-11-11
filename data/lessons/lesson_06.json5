@@ -21,7 +21,7 @@
   Collocations occur frequently in academic writing and speech.Knowing and using appropriate collocations can help to \
   improve the clarity, accuracy, and fluency of academic writing,and also convey a more natural and sophisticated use of\
   the language. Thus, an understanding of collocations is an essential aspect of developing proficiency in academic English.</p>", // OPTIONAL field, contains text to be displayed on the lesson's start page
-  wrapup: "Want to know more about effective paragraphs? Good to read:<a href='https://stlcc.edu/student-support/academic-success-and-tutoring/writing-center/writing-resources/topic-sentence-paragraph.aspx >more about this</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+  wrapup: "Want to know more about effective paragraphs? Good to read: <a href='https://stlcc.edu/student-support/academic-success-and-tutoring/writing-center/writing-resources/topic-sentence-paragraph.aspx'>more about this</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
   tasks: [  // the list of tasks for this lesson
     { // task 1: primary reading task
       name:  "Reading 6.1 ",

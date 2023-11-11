@@ -26,7 +26,7 @@
   <p>Learn more about Countable and Uncountable Nouns as well as the nouns which can be used as both countable or uncountable, \
   usually  with a difference in meaning (<a href='https://7esl.com/nouns-that-can-be-countable-or-uncountable/'>read more about this</a>)</p> \
   <p>Work on abbreviations used in academic discourse</p>", // OPTIONAL field, contains text to be displayed on the lesson's start page
-  wrapup: "Still not sure? Good to read <a href='https://dictionary.cambridge.org/grammar/british-grammar/nouns-countable-and-uncountable?q=Countable+and+uncountable+nouns+with+different+meanings'>more about this</a>, or  <a href='https://www.englishclub.com/ref/Nouns_that_are_Count_and_Noncount/>here</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+  wrapup: "Still not sure? Good to read <a href='https://dictionary.cambridge.org/grammar/british-grammar/nouns-countable-and-uncountable?q=Countable+and+uncountable+nouns+with+different+meanings'>more about this</a>, or  <a href='https://www.englishclub.com/ref/Nouns_that_are_Count_and_Noncount'>here</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
     tasks: [  // the list of tasks for this lesson
       {
         // task 1: primary reading task

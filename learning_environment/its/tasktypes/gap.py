@@ -1,5 +1,6 @@
 from learning_environment.its.base import Json5ParseException
 import re
+from django.conf import settings
 
 class GapTask():
     """A fill-in-the-gap task."""
@@ -66,6 +67,20 @@ class GapTask():
         analysis = {'solved': True, 'solution': {}}
         context = {'mode': 'result'}
 
+        is_cheating = (settings.CHEAT and 'CHEAT' in solution)
+
+        if is_cheating:
+            for i in range(len(self.task.content)):
+                if 'name' in self.task.content[i]:  # if it's a gap
+                    for o in self.task.content[i]['options']:
+                        if o['correct']:
+                            self.task.content[i]['solved'] = True  # TODO: Find a proper solution, this is monkey patching...
+                            self.task.content[i]['solution'] = o['text']  # TODO: Find a proper solution, this is monkey patching...
+                            analysis['solution'][self.task.content[i]['name']] = o['text']
+                            break
+            return analysis, context
+
+        # not cheating, full analysis
         for i in range(len(self.task.content)):  # iterate over list of text parts and gaps
             if 'name' in self.task.content[i]:  # if it's a gap
                 sol = solution.get('solution-{}-{}'.format(self.task.id, self.task.content[i]['name']), ['---'])

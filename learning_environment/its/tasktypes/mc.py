@@ -1,4 +1,5 @@
 from learning_environment.its.base import Json5ParseException
+from django.conf import settings
 
 class MCTask():
     """A multiple choice task."""
@@ -12,12 +13,16 @@ class MCTask():
         analysis = {'solved': True, 'solution':{} }
         context = {'mode': 'result'}
 
+        is_cheating = (settings.CHEAT and 'CHEAT' in solution)
+
         for i in range(len(self.task.content)):  # check all choices from task
-            checked = 'solution-{}-{}'.format(self.task.id, i) in solution  # a field was chosen?
+            if is_cheating:
+                checked = self.task.content[i]['correct']
+            else:
+                checked = 'solution-{}-{}'.format(self.task.id, i) in solution  # a field was chosen?
             analysis['solution'][i] = checked  # save for later reference
             self.task.content[i]['checked'] = checked  # TODO: Find a proper solution, this is monkey patching...
             if checked != self.task.content[i]['correct']:
-                print(checked," ungleich ",self.task.content[i]['correct'])
                 analysis['solved'] = False
 
         return (analysis, context)

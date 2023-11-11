@@ -1,0 +1,204 @@
+// Lesson ed-027
+// a new lesson 27
+{
+  name: "Lesson 27",  // the name that's also shown to the users
+  id: "Level 3, Lesson 27",     // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p> Water is essential for life: it provides the environment for all life processes and transports oxygen, \
+  nutrients and metabolites. If the loss of water is not compensated by the intake of fluids, it leads to a decrease in \
+  the amount of water in the body. The clinical term for deficiency of total body water is dehydration. Maintaining the \
+  proper hydration status has important implications for health. Improper hydration status may have an impact on \
+  cognition, kidney stone risk and weight management, among other consequences. For workers, dehydration can affect not \
+  only their health but also the productivity and safety of their work. It was previously shown that an improper hydration\
+  status in workers is common both before and after work. Therefore it is crucial to ensure proper hydration among workers\
+  and to monitor the amount of fluids they consume. </p>\
+  <p> According to the recommendations of the European Food Safety Authority [EFSA], women should consume 2000 ml of water, \
+  and men 2500 ml of water from drinks and meals. However, the requirement for water depends on many factors (diet, body\
+  composition, age, intensity and duration of work, environmental conditions, clothing, etc.); therefore even meeting the \
+  recommendations does not guarantee that workers consume enough fluids to maintain proper hydration. Perrier et al. \
+  reported that low drinkers (fluid intake ≤ 1200 ml/day) had lower urine volume, higher urine specific gravity \
+  and urine osmolality, as well as darker urine than high drinkers (fluid intake 2000–4000 ml/day). Urine hydration \
+  indices may vary according to the volume of fluid intake. On the other hand, plasma osmolality was similar between the\
+  low and high volume drinkers. This result may suggest that plasma osmolality was preserved by physiological adaptations\
+  despite low fluid intake and may be a good marker of acute or critical dehydration, but not of mild dehydration. Thus, \
+  there is no sufficient single hydration index for all situations.</p>\
+  <p>Some studies have described the amount of fluid intake at work. The studies showed large discrepancies in the amount\
+  of fluids consumed by workers. It should be noted that studies most often concerned only on the amount of fluid intake,\
+  while studies of the type of beverages (drinks) drunk at work have been conducted very generally. The authors \
+  emphasized that studies on hydration status should also take into account the type of fluids consumed, not only the amount.</p> \
+ <p> Diet-related diseases are the leading cause of death and disability worldwide. One of the components of the diet is \
+ water. Beverages are the main source of water intake, therefore their composition has a significant impact on health and\
+ disease development. Depending on the content of sugar and other constituents, beverages may have different health effects.\
+ High consumption of sugar-sweetened beverages (SSB) may contribute to an increase in daily energy intake, and may also\
+ reduce the quality of the diet and intake of essential nutrients. In addition, the consumption of SSB is associated \
+ with an increased risk of e.g. type 2 diabetes, obesity, certain cancers or cardiovascular diseases. In turn, the \
+ consumption of other beverages (e.g. coffee or water) in appropriate amounts has a health-promoting effect by reducing \
+ the risk of mortality, obesity, type 2 diabetes or cardiovascular diseases. For this reason, some beverages are recommended\
+ for regular and others for occasional consumption. Despite the important role of beverages in promoting or harming health,\
+ there is relatively little research on beverage consumption trends.</p>",
+  text_source: "Fluid intake at work in foresters working in different thermal conditions",
+  text_licence: "CC-BY",
+  text_url: "https://www.nature.com/articles/s41598-023-41652-x",
+  series: 'Academic English',
+  start: "<h2>Focus of the lesson</h2>\
+  <p><b>In this lesson you will:</b>\
+  <p>Enlarge your background knowledge of fluid intake and its role in healthy well-being\
+  <p>Study up on how to best use reporting verbs\
+  <p>Continue developing your vocabulary by working on the  C1 adjectives in academic English", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read <a href='https://academic-englishuk.com/reporting-verbs/'> about this </a> ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 26.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>What conclusions does the writer reach?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "The writer mentions a lack of research on beverage consumption trends and suggests that all beverages have health benefits.", correct: false, feedback: "No, it is incorrect because it misinterprets the writer's conclusions. The writer actually discusses the health impact of different types of beverages, highlighting the negative effects of sugar-sweetened beverages and the health-promoting effects of certain other beverages like coffee and water." },
+          { text: "The writer stresses the importance of proper hydration for health and the need to consider both the type and amount of fluids consumed.", correct: true, feedback: "Perfect!" },
+          { text: "The writer recommends meeting daily water intake recommendations and using plasma osmolality as a dehydration marker.", correct: false, feedback: "No, it is incorrect because it oversimplifies the writer's  conclusions. While the writer mentions the recommended daily intake, they also stress that various factors can affect an individual's hydration needs, and plasma osmolality may not be suitable for mild dehydration." },
+        ],
+      }, // end of task 1
+       {
+        // task 2: primary reading task
+        name: "Reading 26.2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true, // Shall we show the lesson reading text? true/false
+         question: "<b>Finish the sentence based on the information presented in the text:</b> <i>‘Individuals concerned about their hydration should....’</i>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "drink water without considering other factors, as recommended intake amounts are sufficient.", correct: false, feedback: "Sorry, meeting recommended water intake amounts alone may not guarantee proper hydration because it depends on various factors. Therefore, individuals concerned about their hydration should consider these additional factors for a more accurate assessment of their hydration status. " },
+          { text: "rely solely on urine hydration indices to determine their hydration status.", correct: false, feedback: "Sorry, meeting recommended water intake amounts alone may not guarantee proper hydration because it depends on various factors. Therefore, individuals concerned about their hydration should consider these additional factors for a more accurate assessment of their hydration status. " },
+          { text: "consider factors such as diet, body composition, and environmental conditions, in addition to recommended water intake amounts.", correct: true, feedback: "That's correct!" },
+          { text: "ignore the type of beverages they consume and focus solely on the quantity.", correct: false, feedback: "Sorry, meeting recommended water intake amounts alone may not guarantee proper hydration because it depends on various factors. Therefore, individuals concerned about their hydration should consider these additional factors for a more accurate assessment of their hydration status." }
+        ],
+      }, // end of task 2
+       {
+        // task 3: primary reading task
+        name: "Reading 26.3",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>Does the author show any biases?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Yes", correct: false, feedback: "No, that's not correct, the author does not appear to show any significant biases in this text. The information presented is primarily factual and evidence-based, discussing the importance of proper hydration, factors influencing hydration status, and the impact of beverages on health." },
+          { text: "No", correct: true, feedback: "Well done!" },
+        ],
+      }, // end of task 3
+       {
+        // task 4: writing for Reporting
+     name: "Reporting",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the underlined part of a sentence using a corresponding noun instead of the verb: <u>The authors emphasize</u> that studies on hydration status should also take into account the type of fluids consumed, not only the amount. ",
+        answer: "The authors put the emphasis"
+      },
+       {
+         // task 5: writing for Reporting
+     name: "Reporting",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the underlined part of a sentence using a corresponding noun instead of the verb: <u>Perro demonstrated</u> how seasonal changes influence drinking habits.",
+        answer: "Perro provided a demonstration of"
+      },
+       {
+         // task 6: writing for Reporting
+     name: "Reporting",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the underlined part of a sentence using a corresponding noun instead of the verb: <u>Malik observed</u> that in the general population in Spain the total water intake differed between summer and winter",
+        answer: "Malik’s observation is"
+      },
+       {
+         // task 7: writing for Reporting
+     name: "Reporting",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "Rewrite the underlined part of a sentence using a corresponding noun instead of the verb: <u>Parker described</u> the influence of season on the types of drinks consumed by workers in his previous paper. ",
+        answer: "Parker gave a description of"
+      },
+      {
+        // task 8: writing for Vocabulary 26
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+       interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Form a noun from the given verb:</b> <u>imply</u>",
+        answer: "implication"
+      },
+      {
+        // task 9: writing for Vocabulary 26
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+       interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Form a noun from the given verb:</b> <u>assert</u>",
+        answer: "assertion"
+      },
+      {
+        // task 10: writing for Vocabulary 26
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+       interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Form a noun from the given verb:</b> <u>demonstrate</u>",
+        answer: "demonstration"
+      },
+      {
+        // task 11: writing for Vocabulary 26
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+       interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Form a noun from the given verb:</b> <u>observe</u>",
+        answer: "observation"
+      },
+      {
+        // task 12: writing for Vocabulary 26
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+       interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Form a noun from the given verb:</b> <u>acknowledge</u>",
+        answer: "acknowledgement"
+      },
+      {
+        // task 13: writing for Vocabulary 26
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+       interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Form a noun from the given verb:</b> <u>instruct</u>",
+        answer: "instruction"
+      },
+      {
+        // task 14: writing for Vocabulary 26
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+       interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Form a noun from the given verb:</b> <u>allege</u>",
+        answer: "allegation"
+      }
+    ] // end of tasks
+} // end of lesson

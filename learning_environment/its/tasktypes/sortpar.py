@@ -1,5 +1,6 @@
 from learning_environment.its.base import Json5ParseException
 import random
+from django.conf import settings
 
 class SortParTask():
     """A sortable paragraph task.
@@ -54,6 +55,13 @@ class SortParTask():
         analysis: dictionary with keys solved (was the task solved correct?) and solution (representation of solution provided for database storage),
         contect:  dictionary to be passed to the template, will containt mode:result (show evaluation) or mode:solve (display for solving again).
         """
+
+        is_cheating = (settings.CHEAT and 'CHEAT' in solution)
+        if is_cheating:
+            sol = [x['id'] for x in self.task.content['paragraphs']]
+            analysis = {'solved': True, 'solution': sol}
+            context = {'mode': 'result', 'solution': sol}
+            return (analysis, context)
 
         # solution is expected to be a comma delimited string of numerical paragraph ids
         solution = solution['solution']

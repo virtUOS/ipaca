@@ -1,4 +1,5 @@
 from learning_environment.its.base import Json5ParseException
+from django.conf import settings
 
 class SCTask():
     """A single choice task."""
@@ -37,7 +38,16 @@ class SCTask():
         context = {}
         analysis = {}
 
-        chosen = int(solution.get('solution-{}'.format(self.task.id), -1))
+        is_cheating = (settings.CHEAT and 'CHEAT' in solution)
+
+        if is_cheating:
+            for i in range(len(self.task.content)):
+                if self.task.content[i]['correct']:
+                    chosen = i
+                    break
+        else:  # not cheating, full analysis
+            chosen = int(solution.get('solution-{}'.format(self.task.id), -1))
+
         analysis['solution'] = chosen
         context['chosen'] = chosen
         if chosen == -1:

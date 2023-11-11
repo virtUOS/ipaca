@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'learning_environment.context_processors.cheating'
             ],
         },
     },
@@ -142,6 +143,8 @@ INTERNAL_IPS = [  # for debug toolbar
     "127.0.0.1",
     # ...
 ]
+
+CHEAT = True
 
 from os.path import exists
 if exists('ipaca/production_settings.py'):

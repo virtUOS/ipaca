@@ -1,0 +1,450 @@
+// Lesson ed-023
+// a new lesson 23
+{
+  name: "Lesson 23",  // the name that's also shown to the users
+  id: "Level 3, Lesson 23",     // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p>Tinnitus is a common and distressing auditory symptom that affects individuals across various age groups and\
+  populations. It is characterized by the perception of sound in the absence of an external stimulus, and it can \
+  significantly impact an individual's quality of life.</p>\
+  <p> The recent increase in internet usage has made medical information more accessible to individuals with tinnitus, \
+  with YouTube emerging as a popular and convenient source for obtaining medical information. YouTube is a \
+  video-based social media platform that has gained tremendous popularity due to its open environment that allows interactive \
+  communication, and is currently ranked as the second most commonly accessed website with an estimated 30 million users \
+  accessing it on a daily basis. In South Korea as well, according to an update from Google's advertising resources, as \
+  of early 2023, the number of YouTube users in South Korea was estimated at 46 million, representing 88.8% of the total \
+  population. A recent systematic review postulated that YouTube has emerged as a platform for promoting unscientific\
+  therapies and drugs that lack approval from appropriate regulatory processes. Likewise, although the number of YouTube\
+  videos about tinnitus has increased significantly, the reliability and accuracy of these videos have not been thoroughly\
+  evaluated, indicating a need for careful assessment of the information presented by YouTube.</p>\
+  <p> Various medical information is being provided through YouTube videos, and patients can easily access these video \
+  clips. In the otolaryngology fields, the educational benefit of YouTube videos about cholesteatoma, tonsillectomy, \
+  ventilation tubes for serous otitis media, rhinoplasty, and thyroid cancer had been examined. A recent study analyzing\
+  YouTube videos related to cholesteatoma revealed that the educational level of these videos was extremely low, and the\
+  content was reported to lack evidence-based information. Regarding pediatric tonsillectomy, there was a range of\
+  information available from highly valuable to unhelpful or misleading. It is noteworthy that anecdotal evidence of\
+  unproven alternative therapies and biased negative reporting of medically proven therapies are widely available to \
+  patients with YouTube videos, and if they rely solely on this information to make decisions on treatment, significant\
+  safety consequences may ensue. And previous studies also postulated that physicians need to be aware of the possible \
+  impact these video websites may have on patient perceptions.</p>",
+  text_source: "A content analysis of YouTube videos on tinnitus in South Korea",
+  text_licence: "CC-BY",
+  text_url: "https://www.nature.com/articles/s41598-023-40523-9",
+  series: 'Academic English',
+  start: "<h2>Focus of the lesson</h2>\
+  <p><b>In this lesson you will:</b>\
+  <p>Broaden your knowledge base on what effect could YouTube videos on medical topics have on patients\
+  <p>Improve your mastery of using delexical verbs in academic context properly", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read <a href='https://learnenglish.britishcouncil.org/grammar/english-grammar-reference/delexical-verbs-have-take-make-give-go-do#:~:text=We%20often%20use%20common%20verbs,(%3D%20I%20showered.)'> about this </a> ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 23.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>Choose the most appropriate heading for the text:</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Advancements in Otolaryngology Procedures and Online Information", correct: false, feedback: "No, this title does not accurately reflect the main focus of the text, which is the impact of YouTube on medical information seeking for tinnitus. The text discusses the influence of YouTube on individuals seeking information about tinnitus and is not primarily about advancements in otolaryngology procedures." },
+          { text: "The Impact of YouTube on Medical Information Seeking for Tinnitus", correct: true, feedback: "Perfect!" },
+          { text: "Medical Information Access and Internet Usage Trends in South Korea", correct: false, feedback: "No, this title does not encompass the broader theme of the impact of YouTube on tinnitus-related information. The text discusses the potential drawbacks of relying on YouTube for medical information, which goes beyond just describing internet usage trends in a specific country." },
+        ],
+      }, // end of task 1
+       {
+        // task 2: primary reading task
+        name: "Reading 23.2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>What conclusions does the writer reach?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Tinnitus is the only medical condition discussed on YouTube videos.", correct: false, feedback: "No, that's not correct. The text discusses the concerns about the reliability and accuracy of medical information on YouTube." },
+          { text: "Physicians should encourage patients to avoid all online medical information and rely solely on traditional medical sources.", correct: false, feedback: "No, that's not correct. This conclusion oversimplifies the issue and does not align with the text's nuanced discussion. The text highlights the challenges posed by unreliable information on YouTube but doesn't suggest complete avoidance of online sources." },
+          { text: "YouTube is the best source for medical information, given its popularity and accessibility", correct: false, feedback: "No, it misrepresents the main argument of the text, which is about the potential drawbacks and unreliability of medical information on YouTube." },
+          { text: "There is a significant concern about the reliability and accuracy of the medical information provided in YouTube videos.", correct: true, feedback: "Well done!" },
+        ],
+      }, // end of task 2
+       {
+        // task 3: primary reading task
+        name: "Reading 23.3",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true, // Shall we show the lesson reading text? true/false
+         question: "<b>Finish the sentence based on the information presented in the text:</b> <i>‘Patients seeking medical information on YouTube should....’</i>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "rely solely on the information provided in YouTube videos.", correct: false, feedback: "No, it emphasizes the need for patients to critically assess the information presented in the videos rather than relying solely on them or avoiding them altogether. " },
+          { text: "carefully evaluate the reliability and accuracy of the videos.", correct: true, feedback: "That's correct!" },
+          { text: "avoid watching any medical videos on YouTube altogether.", correct: false, feedback: "No, it emphasizes the need for patients to critically assess the information presented in the videos rather than relying solely on them or avoiding them altogether." }
+        ],
+      }, // end of task 3
+       {
+        // task 4: gap filling for Delexical Verbs
+        name: "Delexical Verbs",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the correct synonym. Be attentive to the prepositions:</p>\
+        <p>Note that participants wore medical masks during all assessments as data acquisition  _1_ (TOOK PLACE) during the COVID-19 pandemic (summer and autumn 2020, Germany). </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'happened',
+              correct: true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'ran',
+              correct: false,
+              feedback: 'Sorry, check the meaning in the dictionary.'
+            },
+            {
+              text: 'passed',
+              correct: false,
+              feedback: 'Sorry, check the meaning in the dictionary.'
+            }
+          ],
+        },
+      },
+      {
+        // task 5: gap filling for Delexical Verbs
+        name: "Delexical Verbs",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the correct synonym. Be attentive to the prepositions:</p>\
+        <p> It is noteworthy that anecdotal evidence of unproven alternative therapies and biased negative reporting of medically proven therapies are widely available to patients with YouTube videos, and if they rely solely on this information to _1_ (MAKE DECISIONS) on treatment, significant safety consequences may ensue. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'create',
+              correct: false,
+              feedback: 'Sorry, check the meaning in the dictionary.'
+            },
+            {
+              text: 'decide',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'design',
+              correct: false,
+              feedback: 'Sorry, check the meaning in the dictionary.'
+            }
+          ],
+        },
+      },
+      {
+        // task 6: gap filling for Delexical Verbs
+        name: "Delexical Verbs",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the correct synonym. Be attentive to the prepositions:</p>\
+        <p> Only participants who completed the retrospective assessment and passed all three embedded attention checks (N = 268) were invited to  _1_ (TAKE PART) in the experience sampling study. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'participate',
+              correct: true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'partake',
+              correct: false,
+              feedback: 'Sorry, check the meaning in the dictionary.'
+            },
+            {
+              text: 'compete',
+              correct: false,
+              feedback: 'Sorry, check the meaning in the dictionary.'
+            }
+          ],
+        },
+      },
+      {
+        // task 7: gap filling for Delexical Verbs
+        name: "Delexical Verbs",
+        type: "GS",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p>Choose the correct synonym. Be attentive to the prepositions:</p>\
+        <p>Beyond this point, gas prices do not _1_ (HAVE A MAJOR IMPACT) on the dispatch of gas-fired power stations, but power-sector developments dominate.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'contribute',
+              correct: false,
+              feedback: 'Sorry, check the meaning in the dictionary.'
+            },
+            {
+              text: 'impact',
+              correct: true,
+              feedback: 'Great job!'
+            },
+            {
+              text: 'change',
+              correct: false,
+              feedback: 'Sorry, check the meaning in the dictionary.'
+            }
+          ],
+        },
+      },
+      {
+        // task 8: gap filling for vocabulary
+        name: "Vocabulary for Lesson 23",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Finish the phrase with ‘give’, ‘have’, ‘make’ or ‘take’:</b></p>\
+        <p>To _1_ a presentation </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'give',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'have',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'make',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'take',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+{
+        // task 9: gap filling for vocabulary
+        name: "Vocabulary for Lesson 23",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Finish the phrase with ‘give’, ‘have’, ‘make’ or ‘take’:</b></p>\
+        <p>To _1_ limitations </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'give',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'have',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'make',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'take',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+     {
+        // task 10: gap filling for vocabulary
+        name: "Vocabulary for Lesson 23",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Finish the phrase with ‘give’, ‘have’, ‘make’ or ‘take’:</b></p>\
+        <p>To _1_ explicit </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'give',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'have',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'make',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'take',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 11: gap filling for vocabulary
+        name: "Vocabulary for Lesson 23",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Finish the phrase with ‘give’, ‘have’, ‘make’ or ‘take’:</b></p>\
+        <p>To _1_ consent </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'give',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'have',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'make',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'take',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+     {
+        // task 12: gap filling for vocabulary
+        name: "Vocabulary for Lesson 23",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Finish the phrase with ‘give’, ‘have’, ‘make’ or ‘take’:</b></p>\
+        <p>To _1_ aware </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'give',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'have',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'make',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'take',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+{
+        // task 13: gap filling for vocabulary
+        name: "Vocabulary for Lesson 23",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Finish the phrase with ‘give’, ‘have’, ‘make’ or ‘take’:</b></p>\
+        <p>To _1_ part in smth </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'give',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'have',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'make',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'take',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            }
+          ],
+        },
+      },
+     {
+        // task 14: gap filling for vocabulary
+        name: "Vocabulary for Lesson 23",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Finish the phrase with ‘give’, ‘have’, ‘make’ or ‘take’:</b></p>\
+        <p>To _1_ a tendency </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'give',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'have',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'make',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'take',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      }
+    ] // end of tasks
+} // end of lesson

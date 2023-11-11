@@ -1,0 +1,316 @@
+// Lesson ed-022
+// a new lesson 22
+{
+  name: "Lesson 22",  // the name that's also shown to the users
+  id: "Level 3, Lesson 22",     // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p>Against our expectations, participants exhibited only slight impairment when intercepting second-order motion\
+  targets without looking directly at them. We initially hypothesized that hand movements could become accurate when \
+  accompanied by an eye movement as that would allow for a better analysis of the second order-motion target. However,\
+  the difference in the results obtained in the Isolated Eye and Isolated Hand movement conditions opens interesting \
+  additional possibilities for coordinated eye and hand movements: will the pattern of results be the same when executing\
+  coordinated rather than isolated eye and hand movements, or is there an interaction between the two movements that could\
+  help improve eye movements accuracy? Results show that indeed, the pattern of results is qualitatively comparable for\
+  isolated and combined movements. Movement latencies were again longer for second- compared to first-order motion \
+  targets, and also clearly longer for hand than for eye movements. Regarding movement endpoints, we also observed a \
+  similar pattern to the one presented in the Isolated Eye and Isolated Hand movements conditions. When moving towards \
+  first-order motion targets, both eye and hand movements landed close to the actual position of the target. However, \
+  when aiming at second-order motion targets saccades still landed closer to the position where targets were 100 ms \
+  before movement offset but hand movements were accurate. </p>",
+  text_source: "The effect of impaired velocity signals on goal-directed eye and hand movements",
+  text_licence: "CC-BY",
+  text_url: "https://www.nature.com/articles/s41598-023-40394-0",
+  series: 'Academic English',
+  start: "<h2>Focus of the lesson</h2> \
+  <p><b>In this lesson you will:</b> \
+  <p>Learn more about  why velocity is essential to predict where moving targets will be in the future \
+  <p>Find out how to best use participial phrases in your writing assignments\
+  <p>Continue working on the vocabulary items widely used in academic discourse", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read <a href='https://pressbooks.pub/iagtm/chapter/grammar-skills-participle-phrases/'> about this </a> ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 22.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>Choose the best summary for the text:</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Participants showed slight impairment when intercepting second-order motion targets without direct \
+          gaze, contrary to expectations. Combining eye and hand movements didn't significantly improve accuracy, revealing\
+          an interesting dynamic between these movements.", correct: false, feedback: "No, that's incorrect. It's is \
+          relatively concise, but it doesn't clearly explain the significance of the finding or its implications. It lacks\
+          detail about the comparison between isolated and coordinated movements and how that informs our understanding." },
+          { text: "Participants performed less accurately when intercepting second-order motion targets without looking \
+          directly at them. The hypothesis that combining eye and hand movements would enhance accuracy wasn't supported \
+          by results, which showed a consistent pattern across isolated and coordinated movements.", correct: false, feedback: "No, \
+          that's incorrect. It is relatively clear but is more focused on the lack of support for the hypothesis. It also\
+          misses the opportunity to emphasize the unexpected nature of the findings and the potential significance of the\
+         pattern seen in both isolated and coordinated movements. It doesn't provide a strong link to the broader implications \
+          of the study's findings either." },
+          { text: "Against expectations, participants had only slight impairment in intercepting second-order motion\
+          targets without direct gaze. The study explored combining eye and hand movements for improved accuracy, but \
+          results indicated a comparable pattern between isolated and combined movements, unveiling complexities in motion \
+          tracking and coordination.", correct: true, feedback: "Perfect! It captures the unexpected finding, the hypothesis,\
+          the comparison between isolated and coordinated movements, and the implications of the results. " },
+        ],
+      }, // end of task 1
+       {
+        // task 2: primary reading task
+        name: "Reading 22.2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>What did the study find about the accuracy of hand movements when intercepting second-order motion targets without direct gaze?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Hand movements were accurate when combined with eye movements.", correct: false, feedback: "No, that's not correct. Try again" },
+          { text: "Hand movements were impaired compared to eye movements.", correct: false, feedback: "No, that's not correct. Try again" },
+          { text: "Hand movements were significantly accurate without requiring eye movements.", correct: true, feedback: "Perfect!" },
+          { text: "Hand movements showed inconsistency without clear patterns.", correct: false, feedback: "No, that's not correct. Try again" },
+        ],
+      }, // end of task 2
+       {
+        // task 3: primary reading task
+        name: "Reading 22.3",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: false, // Shall we show the lesson reading text? true/false
+         question: "<b>In the study, participants exhibited greater impairment when intercepting second-order motion \
+         targets without looking directly at them compared to first-order motion targets. </b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, the text mentions that participants exhibited longer movement \
+          latencies for second-order motion targets compared to first-order motion targets. This indicates that participants\
+          had more delay in responding to second-order motion targets. Therefore, the statement that participants exhibited\
+          greater impairment when intercepting second-order motion targets is true." },
+          { text: "False", correct: true, feedback: "That's correct!" },
+        ],
+      }, // end of task 3
+      {
+        // task 4: Writing for Participial phrases
+        name: "Grammar for Lesson 22",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Combine the sentences together into one sentence using the word in brackets. You may add or remove words.  \
+        Put a phrase that begins with an -ed word or an -ing word right before the person or thing the phrase is describing. Don’t forget to use a comma!</b>\
+        <i>Respondents were asked to score the reliability of the item between one and ten. They gave it an average of 8.5. (WHEN) </i>",
+        answer: "When asked to score the reliability of the item between one and ten, respondents gave it an average of 8.5."
+      },
+      {
+        // task 5: Writing for Participial phrases
+        name: "Grammar for Lesson 22",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Combine the sentences together into one sentence using the word in brackets. You may add or remove words.  \
+        Put a phrase that begins with an -ed word or an -ing word right before the person or thing the phrase is describing. Don’t forget to use a comma!</b>\
+        <i>Participants gave their informed and written consent. Then they performed a graded maximal exercise stress test to determine their eligibility to participate in the intervention aspects of this study. (AFTER) </i>",
+        answer: "After giving their informed and written consent, participants performed a graded maximal exercise stress test to determine their eligibility to participate in the intervention aspects of this study."
+      },
+      {
+        // task 6: Writing for Participial phrases
+        name: "Grammar for Lesson 22",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Combine the sentences together into one sentence using the word in brackets. You may add or remove words.  \
+        Put a phrase that begins with an -ed word or an -ing word right before the person or thing the phrase is describing. Don’t forget to use a comma!</b>\
+        <i>Both eye and hand movements were moving towards first-order motion targets. Then they  landed close to the actual position of the target. (WHEN) </i>",
+        answer: "When moving towards first-order motion targets, both eye and hand movements landed close to the actual position of the target."
+      },
+      {
+        // task 7: Writing for Participial phrases
+        name: "Grammar for Lesson 22",
+        type: "GS", // grammar task
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Combine the sentences together into one sentence using the word in brackets. You may add or remove words.  \
+        Put a phrase that begins with an -ed word or an -ing word right before the person or thing the phrase is describing. Don’t forget to use a comma!</b>\
+        <i>First, an initial filtering step was performed to ignore probable image patches. After this, the dataset to the proposed detection model was fed. (BEFORE)</i>",
+        answer: "Before feeding the dataset to the proposed detection model, an initial filtering step was performed to ignore probable image patches."
+      },
+      {
+        // task 8: gap filling for vocabulary
+        name: "Vocabulary for Lesson 22",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence:</b></p>\
+        <p>This block performs specialized transformations to the boosted channels to capture the _1_ between them and extract the most relevant information.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'correlation',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'combination',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 9: gap filling for vocabulary
+        name: "Vocabulary for Lesson 22",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence:</b></p>\
+        <p>In this regard, we have combined the feature maps of two auxiliary learners based on the idea of feature space-based knowledge transfer to analyze multiple image-specific patterns before taking the fina _1_ by acquiring enriched feature space.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'verdict',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'decision',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+          ],
+        },
+      },
+      {
+        // task 10: gap filling for vocabulary
+        name: "Vocabulary for Lesson 22",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence:</b></p>\
+        <p>To explore the _1_ of different components including auxiliary learners, fusion block, and fusion method in our proposed BCF-Lym-Detector, we performed a set of ablation experiments on the lymphocyte detection datasets.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'supplement',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'contribution',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+          ],
+        },
+      },
+      {
+        // task 11: gap filling for vocabulary
+        name: "Vocabulary for Lesson 22",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence:</b></p>\
+        <p>It suggests that the diverse feature extraction and _1_ feature selection enhanced the feature learning capacity of the proposed network.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'dynamic',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'lively',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 12: gap filling for vocabulary
+        name: "Vocabulary for Lesson 22",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence:</b></p>\
+        <p>This initialization provided a valuable starting point for our model to learn from the limited medical _1_ .</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'illustrations',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'samples',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+          ],
+        },
+      },
+      {
+        // task 13: gap filling for vocabulary
+        name: "Vocabulary for Lesson 22",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence:</b></p>\
+        <p>It _1_ the model to focus on more contributing channels.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'allows',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+            {
+              text: 'tolerates',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 14: gap filling for vocabulary
+        name: "Vocabulary for Lesson 22",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Choose the most suitable word to complete the sentence:</b></p>\
+        <p>RPN is translational invariant, thus it _1_ robustness against translational modifications.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'blends',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'incorporates',
+              correct: true,
+              feedback: 'Yes, that\'s  correct!'
+            },
+          ],
+        },
+      }
+    ] // end of tasks
+} // end of lesson

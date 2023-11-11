@@ -1,0 +1,340 @@
+// Lesson ed-024
+// a new lesson 24
+{
+  name: "Lesson 24",  // the name that's also shown to the users
+  id: "Level 3, Lesson 24",     // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  series: 'Academic English',
+  text: "<p>There is a general consensus between educators and students that the use of ChatGPT in school work should be\
+  acknowledged, and that it will increase the competitiveness of students who are non-native English speakers. Additionally,\
+  there is a consensus among students that, in their future job, they will be able to outsource mundane tasks to ChatGPT,\
+  allowing them to focus on substantive and creative work. Interestingly, the majority of surveyed students expressed \
+  their intention to use ChatGPT despite ethical considerations. For example, students in India think the use of ChatGPT\
+  in homework is unethical and should not be allowed, while those in Brazil think it is ethical and should be allowed,\
+  yet in both countries, the vast majority of surveyed students (94%) indicated that they would use it to assist with \
+  their homework and assignments in the coming semester. The negative implications of this finding go beyond the university,\
+  as studies have demonstrated that academic misconduct in school is highly correlated to dishonesty and with similar \
+  decision-making patterns in the workplace. </p>\
+  </p>The NYUAD survey allowed us to examine whether there exists a descriptive norm among students backed by injunctive\
+  norms regarding the use of ChatGPT, and among professors with regards to treating ChatGPT’s use as plagiarism. More \
+  specifically, we investigate whether individuals prefer to conform to these behaviours on the condition that they expect\
+  the majority of their peers would also conform to them. Our results indicate that the majority of students plan to use\
+  ChatGPT to assist with their assignments, and believe their peers would approve of its use, implying that the use of \
+  ChatGPT is likely to emerge as a norm among students. Similarly, we find that the majority of professors plan to treat\
+  the use of ChatGPT as a plagiarism tool, and believe their peers would approve of treating it as such, implying that \
+  the treatment of ChatGPT as plagiarism is likely to emerge as a norm among professors. The inherent conflict between\
+  these two could create an environment where students’ incentives suggest they should hide the use of ChatGPT while \
+  professors are eager to detect its use (and may expect their colleagues to do the same). This poses a major challenge\
+  for educational institutions to craft appropriate academic integrity policies related to generative AI broadly, and \
+  ChatGPT specifically. </p>\
+  </p>When comparing ChatGPT’s performance to that of students across university-level courses, the results indicate a \
+  clear need to take “AI-plagiarism” seriously. Specifically, ChatGPT’s performance was comparable, if not superior, to \
+  students’ performance on 12 (38%) out of the 32 courses considered in our analysis. These findings, coupled with the \
+  clear ease with which students can avoid detection by current AI-text classifiers as demonstrated in our study, \
+  suggests that educational institutions are facing a serious threat with regards to current student evaluation frameworks.\
+  To date, it is unclear whether to integrate ChatGPT into academic and educational policies, and if so, how to enforce\
+  its usage. While several school districts, and even an entire country in the case of China, have already banned access \
+  to the tool, the degree to which these measures can be effectively enforced remains unknown. Treating the use of ChatGPT \
+  as plagiarism is likely to be the most common approach to counter its usage. However, as we have shown, current measures\
+  to detect its usage are futile. Other universities have opted to change their evaluative processes to combat the tool’s\
+  usage, by returning to in-person hand-written and oral assessments — a step that may undo decades of advancements aimed\
+  at deploying alternatives to high stakes examinations that disadvantage some categories of students and minorities.</p>",
+  text_source: "Perception, performance, and detectability of conversational artificial intelligence across 32 university courses",
+  text_licence: "CC-BY",
+  text_url: "https://www.nature.com/articles/s41598-023-38964-3",
+  start: "<h2>Focus of the lesson</h2> \
+   <p><b>In this lesson you will:</b> \
+    <p>Boost  your insight into the effect  the usage of ChatGPT has  in educational institutions \
+    <p>Revisit your understanding of Pronoun Use and Misuse\
+    <p>Work on the key C1 vocabulary used in academic English", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Still need help? You can find more information here <a href='https://blog.prepscholar.com/pronoun-agreement-on-act-english-tips-and-practice'>and know more about this</a>", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 24.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>Decide if the information in the statement is True, False or Not Given according to the information in the reading passage.</b>:\
+        <i>'The majority of surveyed students expressed their intention to use ChatGPT and view it as ethically acceptable for assisting with their homework and assignments, regardless of ethical considerations.'</i>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: true, feedback: "Perfect!" },
+          { text: "False", correct: false, feedback: "No, that's incorrect. The text states that despite ethical considerations, the majority of surveyed students (94%) indicated their intention to use ChatGPT to assist with their homework and assignments in the coming semester." },
+          { text: "Not Given", correct: false, feedback: "No, that's incorrect. The text states that despite ethical considerations, the majority of surveyed students (94%) indicated their intention to use ChatGPT to assist with their homework and assignments in the coming semester." },
+        ],
+      }, // end of task 1
+      {
+        name: "Reading 24.2",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>Decide if the information in the statement is True, False or Not Given according to the information in the reading passage.</b>:\
+        <i>'According to the study's findings, educational institutions are effectively detecting and preventing the use of ChatGPT for academic purposes, ensuring the integrity of student evaluations.'</i>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, that's incorrect because the text suggests that current measures to detect ChatGPT's usage are futile and that educational institutions are facing a serious threat with regards to current student evaluation frameworks due to the ease with which students can avoid detection by current AI-text classifiers." },
+          { text: "False", correct: true, feedback: "Well done!" },
+          { text: "Not Given", correct: false, feedback: "Sorry, the text suggests that current measures to detect ChatGPT's usage are futile and that educational institutions are facing a serious threat with regards to current student evaluation frameworks due to the ease with which students can avoid detection by current AI-text classifiers." },
+        ],
+      }, // end of task 2
+      {
+        name: "Reading 24.3",
+        type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>Is the widespread intention among students to use ChatGPT for assignments, leading to its emergence as a norm, a significant challenge for maintaining academic integrity and formulating appropriate policies in educational institutions?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "Yes", correct: true, feedback: "Well done!" },
+          { text: "No", correct: false, feedback: "No, reread the text again, please." },
+        ],
+      }, // end of task 3
+      {
+        // task 4: gap fill for pronoun usage
+        name: "Pronoun Usage",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Read the sentence carefully, pay attention to the pronoun and match it to the problem described:</b></p>\
+        <p>The researchers conducted extensive studies using ChatGPT, and <b>our</b> analysis revealed that the quality of the generated content remains a primary concern. _1_",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Wrong usage of third-person singular pronouns, they cannot be gender-neutral',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Not clear noun antecedent (An antecedent is the noun a pronoun replaces. You may also have heard these called referents)',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+             {
+              text: 'The object of reference is not distinct, a demonstrative is not followed by a noun that explicates the main idea (e.g. discrepancy)',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+             {
+              text: 'Inconsistency of pronouns. If you use a first-person pronoun in a sentence, then you should not continue with writing third-person pronouns.',
+              correct: true,
+              feedback: 'Perfect!'
+            }
+          ],
+        },
+      },
+  {
+        // task 5: gap fill for pronoun usage
+        name: "Pronoun Usage",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Read the sentence carefully, pay attention to the pronoun and match it to the problem described:</b></p>\
+        <p>The inherent conflict between these two could create an environment where students’ incentives suggest they should hide the use of ChatGPT while professors are eager to detect its use (and may expect their colleagues to do the same). <b>This</b> poses a major challenge for educational institutions to craft appropriate academic integrity policies related to generative AI broadly, and ChatGPT specifically. _1_",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Wrong usage of third-person singular pronouns, they cannot be gender-neutral',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Not clear noun antecedent (An antecedent is the noun a pronoun replaces. You may also have heard these called referents)',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+             {
+              text: 'The object of reference is not distinct, a demonstrative is not followed by a noun that explicates the main idea (e.g. discrepancy)',
+              correct: true,
+              feedback: 'Great job!'
+            },
+             {
+              text: 'Inconsistency of pronouns. If you use a first-person pronoun in a sentence, then you should not continue with writing third-person pronouns.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 6: gap fill for pronoun usage
+        name: "Pronoun Usage",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Read the sentence carefully, pay attention to the pronoun and match it to the problem described:</b></p>\
+        <p>When a user encounters difficulties in using ChatGPT, <b>he</b> can become frustrated and on the verge of seeking alternative solutions. _1_",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Wrong usage of third-person singular pronouns, they cannot be gender-neutral',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'Not clear noun antecedent (An antecedent is the noun a pronoun replaces. You may also have heard these called referents)',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+             {
+              text: 'The object of reference is not distinct, a demonstrative is not followed by a noun that explicates the main idea (e.g. discrepancy)',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+             {
+              text: 'Inconsistency of pronouns. If you use a first-person pronoun in a sentence, then you should not continue with writing third-person pronouns.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 7: gap fill for pronoun usage
+        name: "Pronoun Usage",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Read the sentence carefully, pay attention to the pronoun and match it to the problem described:</b></p>\
+        <p>Higher education, in particular, is susceptible to disruption by ChatGPT because <b>it makes it</b> very difficult to verify if students actually have the skills and competencies their grades reflect. _1_",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Wrong usage of third-person singular pronouns, they cannot be gender-neutral',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'Not clear noun antecedent (An antecedent is the noun a pronoun replaces. You may also have heard these called referents)',
+              correct: true,
+              feedback: 'Wonderful!'
+            },
+             {
+              text: 'The object of reference is not distinct, a demonstrative is not followed by a noun that explicates the main idea (e.g. discrepancy)',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+             {
+              text: 'Inconsistency of pronouns. If you use a first-person pronoun in a sentence, then you should not continue with writing third-person pronouns.',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+     {
+        // task 8-14: Vocabulary Issues
+        name: "Vocabulary for Lesson 24",
+        type: "V",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the best option to complete the text. There are two extra words you don't need to use:</b></p>\
+        <p>The emergence of large language models has led to the development of powerful tools such as ChatGPT that can\
+        produce text indistinguishable from human-generated work. With the increasing accessibility of such technology,\
+        students across the globe may utilize it to help with their school work—a possibility that has sparked _1_ discussion\
+        on the integrity of student _2_ processes in the age of artificial intelligence (AI). To date, it is unclear how\
+        such tools perform compared to students on university-level courses across various disciplines. Further, students’\
+        _3_ regarding the use of such tools in school work, and educators’ perspectives on treating their use as plagiarism,\
+        remain unknown. Here, we compare the performance of the _4_ tool, ChatGPT, against that of students on 32 \
+        university-level courses. We also assess the degree to which its use can be detected by two classifiers designed \
+        _5_ for this purpose. Additionally, we conduct a global survey across five countries, as well as a more in-depth\
+        survey at the authors’ institution, to discern students’ and educators’ perceptions of ChatGPT’s use in school work.\
+        We find that ChatGPT’s performance is comparable, if not _6_, to that of students in a multitude of courses. \
+        Moreover, current AI-text classifiers cannot reliably _7_ ChatGPT’s use in school work, due to both their propensity\
+        to classify human-written answers as AI-generated, as well as the relative ease with which AI-generated text can \
+        be edited to evade detection. Finally, there seems to be an emerging consensus among students to use the tool, \
+        and among educators to treat its use as plagiarism. </p>",
+        gaps: {
+          mode: 'select',
+                 _1_: [
+                 { text: "detect", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "perspectives", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "before", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "superior", correct: false, feedback: "Sorry, this is not correct." },
+                   { text: "ample", correct: true, feedback: "Perfect!" },
+                 { text: "state-of-the-art", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "evaluation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "specifically", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "delete", correct: false, feedback: "Sorry, this is not correct." },
+                 ],
+                 _2_ : [
+                  { text: "detect", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "perspectives", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "before", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "superior", correct: false, feedback: "Sorry, this is not correct." },
+                   { text: "ample", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "state-of-the-art", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "evaluation", correct: true, feedback: "Wonderful!" },
+                 { text: "specifically", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "delete", correct: false, feedback: "Sorry, this is not correct." }
+                 ],
+                 _3_ : [
+                  { text: "detect", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "perspectives", correct: true, feedback: "Well done!" },
+                 { text: "before", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "superior", correct: false, feedback: "Sorry, this is not correct." },
+                   { text: "ample", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "state-of-the-art", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "evaluation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "specifically", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "delete", correct: false, feedback: "Sorry, this is not correct." }
+                 ],
+                 _4_ : [
+                  { text: "detect", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "perspectives", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "before", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "superior", correct: false, feedback: "Sorry, this is not correct." },
+                   { text: "ample", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "state-of-the-art", correct: true, feedback: "Super!" },
+                 { text: "evaluation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "specifically", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "delete", correct: false, feedback: "Sorry, this is not correct." }
+                 ],
+                 _5_ : [
+                  { text: "detect", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "perspectives", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "before", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "superior", correct: false, feedback: "Sorry, this is not correct." },
+                   { text: "ample", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "state-of-the-art", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "evaluation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "specifically", correct: true, feedback: "Great job!" },
+                 { text: "delete", correct: false, feedback: "Sorry, this is not correct." }
+                 ],
+                 _6_ : [
+                 { text: "detect", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "perspectives", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "before", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "superior", correct: true, feedback: "Amazing!" },
+                   { text: "ample", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "state-of-the-art", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "evaluation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "specifically", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "delete", correct: false, feedback: "Sorry, this is not correct." }
+                 ],
+                 _7_ : [
+                 { text: "detect", correct: true, feedback: "Yes, you got it!" },
+                 { text: "perspectives", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "before", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "superior", correct: false, feedback: "Sorry, this is not correct." },
+                   { text: "ample", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "state-of-the-art", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "evaluation", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "specifically", correct: false, feedback: "Sorry, this is not correct." },
+                 { text: "delete", correct: false, feedback: "Sorry, this is not correct." }
+                 ],
+            }
+        } // end of markers list
+        // end of task 8-14
+    ] // end of tasks
+}// end of lesson

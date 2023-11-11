@@ -65,20 +65,6 @@
     </div>
 </main>
 
-    <footer class="footer">
-        <div class="container">
-            {% if request.user.is_authenticated %}
-                Commands:
-                <a href="{%  url 'tasklist' %}">List all tasks</a>  &middot;
-                <a href="{%  url 'lessoncreate' %}">Create new lesson</a>  &middot;
-                <a href="{%  url 'learner_dashboard' %}">Learner Dashboard</a>  &middot;
-                <a href="{%  url 'global_dashboard' %}">Global Dashboard</a>  &middot;
-                <a href="{%  url 'learner_reset' %}">Level reset</a>
-            {% endif %}
-        </div>
-    </footer>
-
-
 
 {% bootstrap_javascript %}
 

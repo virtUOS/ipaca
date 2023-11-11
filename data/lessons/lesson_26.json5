@@ -1,0 +1,542 @@
+// Lesson ed-026
+// a new lesson 26
+{
+  name: "Lesson 26",  // the name that's also shown to the users
+  id: "Level 3, Lesson 26",     // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p>Widespread use of the internet by learners of all ages has democratized the development and accessibility of\
+  educational materials. The COVID-19 pandemic further solidified digital communication as a primary medium for information \
+  exchange among educators and learners. Indeed, K-12 students are digital natives who use various online platforms such\
+  as YouTube to complete academic assignments, with varying degrees of judgement for the reliability of the sources. The\
+  amount of time children eight years old or less spent on YouTube has doubled between 2017 and 2020, portending an\
+  increased reliance on online media for even the youngest learners. Social media and other online information sources \
+  have also facilitated lifelong education for continued professional and personal development. However, the proliferation\
+  of misinformation on social media and other platforms raises the risk of exposure to deliberately misleading educational\
+  content.</p> \
+  <p>The consequences of exposure to online misinformation range in severity and scale, often depending on context. While\
+  many types of misinformation exist outside of the mainstream, misinformation on science, technology, engineering, and\
+  math (STEM) related topics such as climate change and vaccines have had major public policy repercussions. Social media\
+  and modern communication methods facilitate the rapid dissemination of misinformation, amplifying these impacts. \
+  Misinformation campaigns tend to rely on undermining the consensus, highlighting uncertainty, undermining the credibility\
+  of leading figures and institutions, and disseminating pseudoscientific alternatives.</p> \
+  <p>The availability of open-source artificial intelligence (AI) algorithms has significantly lowered the barriers to \
+  altering videos and images in order to produce highly realistic, manipulated digital content (e.g., deepfakes). Generative \
+  neural networks (GNNs) are a class of deep neural network models that represent the state-of-the-art technique that can\
+  be leveraged to democratize the mass synthesis of manipulated digital content. They have been used to fabricate images \
+  by training them to encode human features, to manipulate images via replacing specific components of a digital image or\
+  video, and to create videos via animation of a still image with the characteristics of a source video. </p>",
+  text_source: "Deepfakes and scientific knowledge dissemination",
+  text_licence: "CC-BY",
+  text_url: "https://www.nature.com/articles/s41598-023-39944-3",
+  series: 'Academic English',
+  start: "<h2>Focus of the lesson</h2> \
+  <p><b>In this lesson you will:</b> \
+  <p>Enhance your comprehension of what deepfake is \
+  <p>Study up on how to best use Infinitives and Gerunds in a sentence\
+  <p>Work on the key C1 verbs in academic English and their synonyms", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read <a href='https://dictionary.cambridge.org/grammar/british-grammar/verb-patterns-verb-infinitive-or-verb-ing'> this </a> and <a href='https://www.bbc.com/learningenglish/english/course/towards-advanced/unit-9/tab/grammar'>more</a> ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [  // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 26.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>Read the extract and then choose the best summary for it:</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "The text discusses the internet's impact on education, accelerated by COVID-19. It mentions K-12 \
+          students' use of online platforms like YouTube. It explores the risks of misinformation in STEM fields and the\
+          role of AI in creating manipulated content.", correct: true, feedback: "Perfect! " },
+          { text: "The text discusses the evolution of internet technology and its impact on global communication. It\
+          mentions the widespread use of social media platforms and the popularity of online gaming. It briefly touches\
+          on the concept of misinformation and the role of AI in producing digital content.", correct: false, feedback: "No, \
+          that's incorrect. It misinterprets the text by focusing on the history of the internet and YouTube without\
+          discussing key aspects like misinformation and AI algorithms." },
+          { text: "This text looks at online education's evolution due to COVID-19. It emphasizes students' reliance on \
+          YouTube and the risks of misinformation. It briefly mentions AI's role in digital content.", correct: false, feedback:"Sorry, \
+          it is irrelevant as this summary misinterprets the text by emphasizing the evolution of online education and \
+          the pandemic's role without delving into the details of misinformation and AI algorithms." },
+        ],
+      }, // end of task 1
+       {
+        // task 2: primary reading task
+        name: "Reading 26.2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>Choose the most appropriate heading for the text: </b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "The Future of Social Media", correct: false, feedback: "No, that's not correct, the text covers a broader range of topics than just social media." },
+          { text: "The Challenges of Digital Transformation", correct: true, feedback: "Perfect" },
+          { text: "The Joy of Learning Online", correct: false, feedback: "Sorry, that's  incorrect because it suggests an emphasis on the positive aspects of online learning and enjoyment. While the text mentions online learning, it also discusses the challenges and risks associated with digital communication and misinformation. " },
+        ],
+      }, // end of task 2
+       {
+        // task 3: primary reading task
+        name: "Reading 26.3",
+         type: "R",
+        interaction: "SC",
+        primary: false,
+        show_lesson_text: true,
+        question: "<b>What is the primary  purpose of the text?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "To instruct the reader", correct: true, feedback: "Yes, this is the correct answer!" },
+          { text: "To persuade the reader", correct: false, feedback: "No, that's incorrect, the text is primarily focused on providing factual information and educating the reader on various subjects such as the widespread use of the internet, the impact of digital communication on education, the risks of misinformation, and the development of manipulated digital content using AI algorithms. It presents facts, statistics, and explanations, which are characteristic of instructional or educational content." },
+          { text: "To entertain the reader", correct: false, feedback: "No, that's incorrect, the text is primarily focused on providing factual information and educating the reader on various subjects such as the widespread use of the internet, the impact of digital communication on education, the risks of misinformation, and the development of manipulated digital content using AI algorithms. It presents facts, statistics, and explanations, which are characteristic of instructional or educational content" },
+        ],
+      }, // end of task Reading 26.3
+      {
+        // task 4: gap filling for infinitive and gerund
+        name: "Infinitive and Gerund",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p>In contrast to prior studies, we did not tell participants the probability of _1_ to a deepfake because stakeholders would not be privy to such information when encountering deepfakes in real-life.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'being exposed',
+              correct: true,
+              feedback: 'Wonderful!'
+            },
+            {
+              text: 'to be exposed',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+      {
+        // task 5: gap filling for infinitive and gerund
+        name: "Infinitive and Gerund",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p> Adults were 39 percentage points less likely to _1_ the deepfake video compared to the authentic video. </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'have correctly identified',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'had correctly identified',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+          ],
+        },
+      },
+       {
+        // task 6: gap filling for infinitive and gerund
+        name: "Infinitive and Gerund",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p> More research needs to _1_ to understand the drivers of this heterogeneity in effects, though overall our results show that no population in our study was immune to deepfake video deception.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'being done',
+              correct: false,
+              feedback: 'Sorry, that\'s not correct.'
+            },
+            {
+              text: 'be done',
+              correct: true,
+              feedback: 'Amazing!'
+            },
+          ],
+        },
+      },
+       {
+        // task 7: gap filling for infinitive and gerund
+        name: "Infinitive and Gerund",
+        type: "GS",
+        interaction: "GAP",
+        primary: true,
+        show_lesson_text: false,
+        question: "<p><b>Choose the option that applies:</b></p>\
+        <p> _1_ the audio quality of the videos was not associated with higher rates of correctly identifying deepfakes videos but did lead to 13–22% point improvements in correctly identifying authentic videos by adults, principals, and middle school students.</p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'Analyzed',
+              correct: false,
+              feedback: 'Sorry, that\'s not correct.'
+            },
+            {
+              text: 'Analyzing',
+              correct: true,
+              feedback: 'Great job!'
+            },
+          ],
+        },
+      },
+      {
+        // task 8: gap filling for vocabulary
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each verb with its synonym:</b></p>\
+        <p> To advocate _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'To formulate, to clear up',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To preface, to foreshadow',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To demonstrate, to depict',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To defend, to support',
+              correct: true,
+              feedback: 'Wonderful!'
+            },
+            {
+              text: 'To decrease, to lessen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To enforce, to establish',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To disregard, to ignore',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+      {
+        // task 9: gap filling for vocabulary
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each verb with its synonym:</b></p>\
+        <p> To clarify _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'To formulate, to clear up',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'To preface, to foreshadow',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To demonstrate, to depict',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To defend, to support',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To decrease, to lessen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To enforce, to establish',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To disregard, to ignore',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+        {
+        // task 10: gap filling for vocabulary
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each verb with its synonym:</b></p>\
+        <p> To diminish _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'To formulate, to clear up',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To preface, to foreshadow',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To demonstrate, to depict',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To defend, to support',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To decrease, to lessen',
+              correct: true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'To enforce, to establish',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To disregard, to ignore',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 11: gap filling for vocabulary
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each verb with its synonym:</b></p>\
+        <p> To exemplify _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'To formulate, to clear up',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To preface, to foreshadow',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To demonstrate, to depict',
+              correct: true,
+              feedback: 'Great!'
+            },
+            {
+              text: 'To defend, to support',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To decrease, to lessen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To enforce, to establish',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To disregard, to ignore',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 12: gap filling for vocabulary
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each verb with its synonym:</b></p>\
+        <p> To impose _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'To formulate, to clear up',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To preface, to foreshadow',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To demonstrate, to depict',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To defend, to support',
+              correct: false,
+              feedback: 'No, that\'s not correct'
+            },
+            {
+              text: 'To decrease, to lessen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To enforce, to establish',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'To disregard, to ignore',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 13: gap filling for vocabulary
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each verb with its synonym:</b></p>\
+        <p> To neglect _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'To formulate, to clear up',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To preface, to foreshadow',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To demonstrate, to depict',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To defend, to support',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To decrease, to lessen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To enforce, to establish',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To disregard, to ignore',
+              correct: true,
+              feedback: 'Wonderful!'
+            }
+          ],
+        },
+      },
+      {
+        // task 14: gap filling for vocabulary
+        name: "Vocabulary for Lesson 26",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each verb with its synonym:</b></p>\
+        <p> To precede _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'To formulate, to clear up',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To preface, to foreshadow',
+              correct: true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'To demonstrate, to depict',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To defend, to support',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To decrease, to lessen',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To enforce, to establish',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'To disregard, to ignore',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      }
+    ] // end of tasks
+} // end of lesson

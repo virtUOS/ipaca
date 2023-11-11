@@ -6,6 +6,7 @@ The learner model maintains a model about a given learner's competencies.
 
 from .tasks import TaskTypeFactory
 from learning_environment.models import Solution
+from django.conf import settings
 
 class Learnermodel:
 

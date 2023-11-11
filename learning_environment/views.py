@@ -31,16 +31,6 @@ def overview(request):
         p = Profile(user=request.user)
         p.save()
 
-    # delete chosen lesson from session
-#    try:
-#        del request.session['current_lesson']
-#    except KeyError:
-#        pass
-#    try:
-#        del request.session['current_lesson_todo']
-#    except KeyError:
-#        pass
-
     # Lesson series
     all_lesson_series = sorted([x['series'] for x in Lesson.objects.values('series').distinct()])
 
@@ -55,15 +45,6 @@ def overview(request):
     except KeyError:
         request.session['lesson_series'] = 'General'
         series = 'General'
-
-    # determine current level (and create if necessary)
-    # psl, created = ProfileSeriesLevel.objects.get_or_create(user=request.user, series=series)
-    # current_level = psl.level
-
-    # pick all levels for chosen lesson series
-    # levels = Lesson.objects.filter(series = series).order_by('lesson_id')
-    # levels = Lesson.objects.filter(series = series).order_by('lesson_id')
-
 
     solutions = Solution.objects.filter(user=request.user).order_by('timestamp')  # all solutions from current user
     num_tasks = solutions.count()  # how tasks did this user try
@@ -84,16 +65,16 @@ def overview(request):
 
     current_lesson_series = 'General'
     try:
-        user_level = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series).level
+        user_level = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series).level + 1
     except ProfileSeriesLevel.DoesNotExist:
-        user_level = 0
+        user_level = 1
 
     # hard coded lessons
     lessons = [None for x in range(31)]
     for idx in range(1, 31):
         try:
             lessons[idx] = Lesson.objects.get(name='Lesson {}'.format(idx))
-            if user_level + 1 >= idx:
+            if user_level >= idx:
                 lessons[idx].locked = False
             else:
                 lessons[idx].locked = True
@@ -114,9 +95,9 @@ def practice(request, startlesson=None):
         context['review'] = True
 
     if request.method == 'POST' and 'start' in request.POST:
-        if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
+        if not 'current_lesson' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             return redirect('myhome')
-        request.session['current_lesson_todo'].pop(0)  # remove the start item
+        request.session['current_lesson']['todo'].pop(0)  # remove the start item
         request.session.modified = True
         tutor = Tutormodel(request.user)
         try:
@@ -127,10 +108,10 @@ def practice(request, startlesson=None):
 
     # finish a lesson
     elif request.method == 'POST' and 'finish' in request.POST:
-        if not 'current_lesson_todo' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
+        if not 'current_lesson' in request.session:  # if there's no todo, we have a corrupt state -> show start screen
             # TODO: message
             return redirect('myhome')
-        if request.session['current_lesson_todo'][0] != 'WRAPUP':  # if we didn't finish a lesson, we have corrupt state
+        if request.session['current_lesson']['todo'][0] != 'WRAPUP':  # if we didn't finish a lesson, we have corrupt state
             # TODO: message
             return redirect('myhome')
 
@@ -139,12 +120,15 @@ def practice(request, startlesson=None):
         try:
             psl = ProfileSeriesLevel.objects.get(user=request.user, series=current_lesson_series)
             # HACK! Get level from name...
-            thislevel = int(request.session['current_lesson'].name.split(' ')[1])
+            l = Lesson.objects.get(pk=request.session['current_lesson']['id'])
+            thislevel = int(l.name.split(' ')[1])
             if thislevel > psl.level:
                 psl.level = thislevel
             psl.save()
         except ProfileSeriesLevel.DoesNotExist:
             ProfileSeriesLevel.objects.create(user=request.user, series=current_lesson_series, level=1)
+        request.session['current_lesson'] = None
+        request.session.modified = True
 
         return redirect('myhome')
 

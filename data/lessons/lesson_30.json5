@@ -1,0 +1,481 @@
+// Lesson ed-030
+// a new lesson 30
+{
+  name: "Lesson 30",  // the name that's also shown to the users
+  id: "Level 3, Lesson 30",     // an internal id, will never be shown, but important to identify the lesson
+  author: "Ella Dovhaniuk",    // used for documentation, will not be shown to the user
+  version: 1,                 // if you revise your lesson, give it a higher version number each time
+  text: "<p> What people eat and drink is one of the most important determinants of health as well as health equity. In\
+  2019, poor dietary habits, overweight/obesity, and undernutrition contributed to 14%, 10%, and 5% of deaths in females,\
+  respectively; and 15%, 8%, and 5% of deaths in males. Most of these diet-related health burdens were due to cardiometabolic\
+  diseases, including cardiovascular disease (CVD), type 2 diabetes (T2D), and cancer. These diet-related conditions not\
+  only reduce quality of life and productivity but are also leading risk factors for worse clinical outcomes from COVID-19.\
+  Therefore, improving diets to reduce deaths, complications, and economic and equity burdens from cardiometabolic diseases\
+  should be a global priority.</p>\
+  <p>Sugar-sweetened beverages (SSBs) are a priority concern given their relationship with obesity, CVD, T2D, cancer, \
+  and dental caries; absence of any offsetting nutritional benefits; intensive marketing to traditionally marginalized \
+  populations; and contribution to health disparities. Yet, for the vast majority of nations, recent national estimates \
+  of SSB intake are unavailable, preventing an analysis of the evolving (and potentially nonlinear) trends in intake in\
+  recent decades. Furthermore, prior global estimates have not evaluated SSB intake subnationally by important sociodemographic\
+  factors such as education or urbanicity. This lack of evidence limits the ability to design and measure the impact of \
+  interventions aimed at decreasing SSB intake, as well as the capacity to identify populations where such interventions\
+  are needed the most.</p>\
+  <p>In an investigation based on 2010 data, 184,000 global deaths were estimated to be attributable to SSB intake, \
+  including 72.3% from T2D, 24.2% from CVD, and 3.5% from obesity-related cancers. Since that time, national and subnational\
+  dietary data from a handful of high-income nations suggest that SSB intake has decreased in selected high-income Western\
+  countries and Brazil. However, energy contribution from SSBs remains high in these nations; and SSB intake may be \
+  increasing, based on limited national intake and sales reports, in non-Western countries such as Korea and India. More\
+  recent, harmonized, and subnationally stratified data on SSB intakes are needed to inform intervention, surveillance, \
+  and policy actions. To address these knowledge gaps, we investigated SSB intakes in adults aged 20+ years in 1990, 2005,\
+  and 2018 in 185 countries, jointly stratified subnationally by age, sex, education, and area of residence, based on new\
+  data from the Global Dietary Database (GDD).</p>\
+  <p>It was found that intakes were higher in male vs. female, younger vs. older, more vs. less educated, and urban vs.\
+  rural adults, and that variations by education and urbanicity were largest in Sub-Saharan Africa. SSB intakes increased\
+  between 1990 and 2018 by +0.37 servings/week (+0.29, +0.47), with the largest increase in Sub-Saharan Africa, and an \
+  overall decrease in Latin America/Caribbean. These new findings on global SSB intakes, trends, and inequities inform \
+  intervention, surveillance, and policy actions worldwide, highlighting the growing problem of SSBs for public health \
+  in Sub-Saharan Africa. </p>",
+  text_source: "Sugar-sweetened beverage intakes among adults between 1990 and 2018 in 185 countries",
+  text_licence: "CC-BY",
+  text_url: "https://www.nature.com/articles/s41467-023-41269-8",
+  series: 'Academic English',
+  start: "<h2>Focus of the lesson</h2>\
+  <p><b>In this lesson you will:</b>\
+  <p>Extend your background knowledge of drinking habits among adults \
+  <p>Study up on the topic of Cleft and Pseudo-cleft Sentences\
+  <p>Keep working on nouns specific for C1-C2 levels", // OPTIONAL field, contains text to be displayed on the lesson's start page
+  wrapup: "Good to read <a href='https://www.eltconcourse.com/training/inservice/phrases_clauses_sentences/clefts.htm'>  and  <a href='https://www.grammaring.com/pseudo-cleft-sentences'>  about this </a> ", // OPTIONAL field, contains text to be displayed on the lesson's wrapup page
+    tasks: [ // the list of tasks for this lesson
+      {
+        // task 1: primary reading task
+        name: "Reading 30.1",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true, // Shall we show the lesson reading text? true/false
+         question: "<b>Finish the sentence based on the information presented in the text:</b> <i>‘Individuals concerned about their dietary habits should...’</i>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "neglect diet's impact on health equity.", correct: false, feedback: "Sorry, the text emphasizes the importance of what people eat and drink on their health and health equity. It mentions that poor dietary habits contribute to health issues like cardiometabolic diseases, which affect both health and health equity." },
+          { text: "focus solely on cardiometabolic risks.", correct: false, feedback: "Sorry, the text emphasizes the importance of what people eat and drink on their health and health equity. It mentions that poor dietary habits contribute to health issues like cardiometabolic diseases, which affect both health and health equity." },
+          { text: "assess role of diet in health and health equity.", correct: true, feedback: "That's correct!" },
+        ],
+      }, // end of task 1
+         {
+        // task 2: primary reading task
+        name: "Reading 30.2",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>The text highlights that sugar-sweetened beverages (SSBs) have no relationship with health disparities.</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "True", correct: false, feedback: "No, that's not correct because the text clearly states that sugar-sweetened beverages (SSBs) are a priority concern due to their relationship with various health issues, including obesity, cardiovascular disease (CVD), type 2 diabetes (T2D), cancer, and dental caries." },
+          { text: "False", correct: true, feedback: "Well done!" },
+        ],
+      }, // end of task 2
+      {
+        // task 3: primary reading task
+        name: "Reading 30.3",
+        type: "R", // Reading task - options: R = reading, GS = grammar/style, V = vocabulary
+        interaction: "SC", // Single choice task - options: SC = single choice, MC = multiple choice, GAP = select/filling gaps
+        primary: true, // the primary task will be shown first, non-primary tasks are for repetition
+        show_lesson_text: true,  // Shall we show the lesson reading text? true/false
+        question: "<b>What kind of evidence does the writer give to back up the statements?</b>",
+        choices: [  // a list of options displayed to be selected (single choice: only one, multiple choice: more than one possible)
+          { text: "statistics", correct: true, feedback: "Perfect!" },
+          { text: "quotes from experts", correct: false, feedback: "Sorry, the writer uses statistics" },
+          { text: "anecdotes", correct: false, feedback: "Sorry, the writer uses statistics" },
+        ],
+      }, // end of task 3
+       {
+        // task 4: writing for pseudo-cleft
+        name: "Pseudo-cleft",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Rewrite the sentences according to the  model:</b> (e.g. <i>Trust and open communication between partners matters most in a fulfilling relationship. What matters most in a fulfilling relationship is the trust and open communication between partners.</i>) <p>One of the most important determinants of health as well as health equity is what people eat and drink.</p>",
+        answer: "What people eat and drink is one of the most important determinants of health as well as health equity."
+      },
+      {
+        // task 5: writing for pseudo-cleft
+        name: "Pseudo-cleft",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Rewrite the sentences according to the  model:</b>(e.g. <i>Trust and open communication between partners matters most in a fulfilling relationship. What matters most in a fulfilling relationship is the trust and open communication between partners.</i>) <p>A key factor in maintaining optimal health and wellness is how we handle our dietary decisions.</p>",
+        answer: "How we handle our dietary decisions is a key factor in maintaining optimal health and wellness."
+      },
+      {
+        // task 6: writing for pseudo-cleft
+        name: "Pseudo-cleft",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Rewrite the sentences according to the  model:</b>(e.g. <i>Trust and open communication between partners matters most in a fulfilling relationship. What matters most in a fulfilling relationship is the trust and open communication between partners.</i>) <p>A fundamental determinant of overall well-being is where individuals source their food.</p>",
+        answer: "Where individuals source their food is a fundamental determinant of overall well-being."
+      },
+       {
+        // task 7: writing for pseudo-cleft
+        name: "Pseudo-cleft",
+        type: "V",
+        interaction: "SHORT", // open answer field for short free answers
+        primary: true,
+        show_lesson_text: false,
+        question:  "<b>Rewrite the sentences according to the  model:</b>(e.g. <i>Trust and open communication between partners matters most in a fulfilling relationship. What matters most in a fulfilling relationship is the trust and open communication between partners.</i>) <p>One of the proactive steps towards better health and longevity is when people make informed dietary choices.</p>",
+        answer: "When people make informed dietary choices is one of the proactive steps towards better health and longevity."
+      },
+     {
+        // task 8: gap filling for vocabulary
+        name: "Vocabulary for Lesson 30",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each adjective with its antonym:</b></p>\
+        <p> widespread _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acquired',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'limited',
+              correct: true,
+              feedback: 'Well done!'
+            },
+            {
+              text: 'superior',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'subsequent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'intermittent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'unshared',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'planned',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 9: gap filling for vocabulary
+        name: "Vocabulary for Lesson 30",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each adjective with its antonym:</b></p>\
+        <p> prior _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acquired',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'limited',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'superior',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'subsequent',
+              correct: true,
+              feedback: 'Great job!'
+            },
+            {
+              text: 'intermittent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'unshared',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'planned',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 10: gap filling for vocabulary
+        name: "Vocabulary for Lesson 30",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each adjective with its antonym:</b></p>\
+        <p> stable _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acquired',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'limited',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'superior',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'subsequent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'intermittent',
+              correct: true,
+              feedback: 'Great job!'
+            },
+            {
+              text: 'unshared',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'planned',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 11: gap filling for vocabulary
+        name: "Vocabulary for Lesson 30",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each adjective with its antonym:</b></p>\
+        <p> random _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acquired',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'limited',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'superior',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'subsequent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'intermittent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'unshared',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'planned',
+              correct: true,
+              feedback: 'Wonderful!'
+            }
+          ],
+        },
+      },
+       {
+        // task 12: gap filling for vocabulary
+        name: "Vocabulary for Lesson 30",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each adjective with its antonym:</b></p>\
+        <p> mutual _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acquired',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'limited',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'superior',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'subsequent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'intermittent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'unshared',
+              correct: true,
+              feedback: 'Amazing!'
+            },
+            {
+              text: 'planned',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 13: gap filling for vocabulary
+        name: "Vocabulary for Lesson 30",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each adjective with its antonym:</b></p>\
+        <p> inherent _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acquired',
+              correct: true,
+              feedback: 'Super!'
+            },
+            {
+              text: 'limited',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'superior',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'subsequent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'intermittent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'unshared',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'planned',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      },
+       {
+        // task 14: gap filling for vocabulary
+        name: "Vocabulary for Lesson 30",
+        type: "V",
+        interaction: "GAP",
+        primary: false,
+        show_lesson_text: false,
+        question: "<p><b>Match each adjective with its antonym:</b></p>\
+        <p> inferior _1_ </p>",
+        gaps: {
+          mode: 'select',
+          _1_: [
+            {
+              text: 'acquired',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'limited',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'superior',
+              correct: true,
+              feedback: 'Perfect!'
+            },
+            {
+              text: 'subsequent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'intermittent',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'unshared',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            },
+            {
+              text: 'planned',
+              correct: false,
+              feedback: 'No, that\'s not correct.'
+            }
+          ],
+        },
+      }
+    ] // end of tasks
+} // end of lesson
