@@ -65,6 +65,20 @@
     </div>
 </main>
 
+{% if request.user.is_superuser %}
+
+    <footer class="footer" style=" position:relative; bottom: 0;width: 100%;min-height: 60px;background-color: #f5f5f5;">
+        <div class="container text-center bold" style="padding-top:1.5em; padding-bottom:0.5em;">
+                Commands:
+                <a href="{%  url 'tasklist' %}">List all tasks</a>  &middot;
+                <a href="{%  url 'lessoncreate' %}">Create new lesson</a>  &middot;
+                <a href="{%  url 'learner_dashboard' %}">Learner Dashboard</a>  &middot;
+                <a href="{%  url 'global_dashboard' %}">Global Dashboard</a>  &middot;
+                <a href="{%  url 'learner_reset' %}">Level reset</a>
+        </div>
+    </footer>
+
+{% endif %}
 
 {% bootstrap_javascript %}
 
